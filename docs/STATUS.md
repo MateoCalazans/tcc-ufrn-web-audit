@@ -2,13 +2,13 @@
 
 > Atualizado ao fim de cada sessão (o `/fim-de-sessao` faz isso).
 
-**Última atualização:** 2026-10-15
+**Última atualização:** 2026-10-19
 **Fase atual:** 0 — Fundação
-**Próxima sessão:** S00
+**Próxima sessão:** S01
 
 | Sessão | Situação | Data | Diário | Commits/tag |
 |---|---|---|---|---|
-| S00 | ⬜ | | | |
+| S00 | ✅ | 2026-10-19 | [s00](diario/2026-10-19-s00.md) | (a commitar) |
 | S01 | ⬜ | | | |
 | S02 | ⬜ | | | |
 | S03 | ⬜ | | | |
