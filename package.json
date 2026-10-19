@@ -1,0 +1,30 @@
+{
+  "name": "tcc-ufrn-web-audit",
+  "version": "0.1.0",
+  "description": "Análise automatizada de performance e semântica HTML em portais institucionais da UFRN (TCC EAJ/UFRN).",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "triage": "tsx --env-file-if-exists=.env src/triage/index.ts",
+    "collect": "tsx --env-file-if-exists=.env src/collect/index.ts",
+    "analyze": "tsx --env-file-if-exists=.env src/analyze/index.ts",
+    "recommend": "tsx --env-file-if-exists=.env src/recommend/index.ts",
+    "validate": "tsx --env-file-if-exists=.env src/validate/index.ts",
+    "report": "tsx --env-file-if-exists=.env src/report/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.5",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vitest": "5.0.5"
+  },
+  "dependencies": {
+    "p-limit": "7.3.3"
+  }
+}
