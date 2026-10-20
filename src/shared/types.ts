@@ -28,6 +28,7 @@ export interface ToolVersions {
 // ---------------------------------------------------------------------------
 
 export type ExclusionReason =
+  | "infra"
   | "dns"
   | "timeout"
   | "4xx"
