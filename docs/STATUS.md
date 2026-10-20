@@ -4,14 +4,14 @@
 
 **Última atualização:** 2026-10-20
 **Fase atual:** 1 — Triagem
-**Próxima sessão:** S03
+**Próxima sessão:** S04
 
 | Sessão | Situação | Data | Diário | Commits/tag |
 |---|---|---|---|---|
 | S00 | ✅ | 2026-10-19 | [s00](diario/2026-10-19-s00.md) | (a commitar) |
 | S01 | ✅ | 2026-10-19 | [s01](diario/2026-10-19-s01.md) | (a commitar) |
 | S02 | ✅ | 2026-10-20 | [s02](diario/2026-10-20-s02.md) | (a commitar) |
-| S03 | ⬜ | | | |
+| S03 | ✅ | 2026-10-20 | [s03](diario/2026-10-20-s03.md) | (a commitar) |
 | S04 | ⬜ | | | v0.1-triagem |
 | S05 | ⬜ | | | |
 | S06 | ⬜ | | | |
@@ -32,7 +32,9 @@
 Legenda: ⬜ pendente · 🟨 em andamento · ✅ concluída · ✂️ cortada (ver ADR)
 
 ## Pendências para o orientador
--
+- `data/interim/` não está no `.gitignore` e `normalized.csv` já foi commitado na S02 (contradiz o diário da S02). Decidir: versionar o interim de propósito ou ignorá-lo. (ver diário S03)
+- Confirmar o contato definitivo do User-Agent (`CONTACT_EMAIL`); hoje está com o gmail do autor no `.env` local.
+- Avaliar se `timeout` deve distinguir "conexão recusada" / "redirect-loop" como código próprio no ADR 002 (hoje só a coluna `detalhe` distingue).
 
 ## Bloqueios
 -
