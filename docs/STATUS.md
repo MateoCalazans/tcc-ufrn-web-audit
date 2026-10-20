@@ -4,12 +4,12 @@
 
 **Última atualização:** 2026-10-19
 **Fase atual:** 0 — Fundação
-**Próxima sessão:** S01
+**Próxima sessão:** S02
 
 | Sessão | Situação | Data | Diário | Commits/tag |
 |---|---|---|---|---|
 | S00 | ✅ | 2026-10-19 | [s00](diario/2026-10-19-s00.md) | (a commitar) |
-| S01 | ⬜ | | | |
+| S01 | ✅ | 2026-10-19 | [s01](diario/2026-10-19-s01.md) | (a commitar) |
 | S02 | ⬜ | | | |
 | S03 | ⬜ | | | |
 | S04 | ⬜ | | | v0.1-triagem |

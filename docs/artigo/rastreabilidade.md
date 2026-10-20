@@ -6,7 +6,7 @@ do TCC/artigo onde é discutido. Se uma linha não tem evidência, o objetivo n�
 | # | Objetivo específico | Sessões | Evidência (arquivos, tags) | Seção do TCC | Seção do artigo |
 |---|---|---|---|---|---|
 | OE1 | Construir e filtrar o corpus a partir da lista de domínios | S02–S04 | `data/corpus.csv`, `docs/resultados/triagem.md`, ADR 001, ADR 002, tag v0.1-triagem | Metodologia 3.x | Método — Corpus |
-| OE2 | Coletar HTML bruto, DOM renderizado e relatórios Lighthouse | S05–S08 | `docs/resultados/coleta.md`, `docs/ambiente/hashes.md` | Metodologia 3.x; Cap. 5 | Método — Coleta |
+| OE2 | Coletar HTML bruto, DOM renderizado e relatórios Lighthouse | S01, S05–S08 | `docs/ambiente/ambiente-2026-10-19.json` (S01), `docs/resultados/coleta.md`, `docs/ambiente/hashes.md` | Metodologia 3.x; Cap. 5 | Método — Coleta |
 | OE3 | Definir e calcular métricas de semântica HTML | S10–S12 | `src/analyze/semantics.ts`, testes, ADR 003, `dataset.csv`, tag v0.2-analise | Fundamentação; Metodologia | Método — Métricas |
 | OE4 | Relatórios individuais e panorama consolidado | S13 | `reports/`, `analysis/diagnostico.ipynb`, `docs/resultados/figuras/` | Resultados — Diagnóstico | Resultados (RQ1) |
 | OE5 | Recomendações por regras + LLM | S14–S16 | `src/recommend/`, `docs/artigo/catalogo-regras.md`, `docs/prompts/`, tag v0.3 | Cap. 5 | Abordagem |
