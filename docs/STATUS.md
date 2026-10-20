@@ -2,15 +2,15 @@
 
 > Atualizado ao fim de cada sessão (o `/fim-de-sessao` faz isso).
 
-**Última atualização:** 2026-10-19
-**Fase atual:** 0 — Fundação
-**Próxima sessão:** S02
+**Última atualização:** 2026-10-20
+**Fase atual:** 1 — Triagem
+**Próxima sessão:** S03
 
 | Sessão | Situação | Data | Diário | Commits/tag |
 |---|---|---|---|---|
 | S00 | ✅ | 2026-10-19 | [s00](diario/2026-10-19-s00.md) | (a commitar) |
 | S01 | ✅ | 2026-10-19 | [s01](diario/2026-10-19-s01.md) | (a commitar) |
-| S02 | ⬜ | | | |
+| S02 | ✅ | 2026-10-20 | [s02](diario/2026-10-20-s02.md) | (a commitar) |
 | S03 | ⬜ | | | |
 | S04 | ⬜ | | | v0.1-triagem |
 | S05 | ⬜ | | | |
