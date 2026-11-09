@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Fixture — conteúdo inserido por JS</title>
+</head>
+<body>
+<h1>Página de teste</h1>
+<script>
+  // Simula um site que monta parte do conteúdo depois do carregamento.
+  setTimeout(function () {
+    var main = document.createElement("main");
+    main.id = "inserido-por-js";
+    main.textContent = "conteúdo montado no navegador";
+    document.body.appendChild(main);
+  }, 50);
+</script>
+</body>
+</html>
