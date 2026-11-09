@@ -6,7 +6,7 @@ do TCC/artigo onde é discutido. Se uma linha não tem evidência, o objetivo n�
 | # | Objetivo específico | Sessões | Evidência (arquivos, tags) | Seção do TCC | Seção do artigo |
 |---|---|---|---|---|---|
 | OE1 | Construir e filtrar o corpus a partir da lista de domínios | S02–S04 | `src/triage/normalize.ts` + testes (S02, funil 1290→1288→1100→1050), `src/triage/probe.ts` + testes (S03, sondagem DNS/HTTP/robots, motivos do ADR 002; S04, causa exata das falhas, certificado inválido, `--retry`), `src/triage/classify.ts` + `src/triage/corpus.ts` + testes (S04, tecnologia e tipo com evidência), `data/corpus.csv` (S04: 1.100 linhas, 242 incluídos, sondagem de 2026-11-04), `docs/resultados/triagem.md` (S04, funil e contagens), `docs/resultados/revisao-classificacao.csv` e `revisao-ressondagem.csv` (S04, amostras geradas; revisão não feita), ADR 001, ADR 002, ADR 005 (S04, certificado inválido, rede da triagem, classificação não validada), tag v0.1-triagem | Metodologia 3.x | Método — Corpus |
-| OE2 | Coletar HTML bruto, DOM renderizado e relatórios Lighthouse | S01, S05–S08 | `docs/ambiente/ambiente-2026-10-19.json` (S01), `docs/resultados/coleta.md`, `docs/ambiente/hashes.md` | Metodologia 3.x; Cap. 5 | Método — Coleta |
+| OE2 | Coletar HTML bruto, DOM renderizado e relatórios Lighthouse | S01, S05–S08 | `docs/ambiente/ambiente-2026-10-19.json` (S01), `src/collect/page.ts` + `src/collect/index.ts` + testes (S05: HTML bruto, DOM renderizado, screenshot, HAR, `metaRefresh`; piloto 10/10 completos), ADR 006 (S05, parâmetros da coleta renderizada), `docs/resultados/coleta.md`, `docs/ambiente/hashes.md` | Metodologia 3.x; Cap. 5 | Método — Coleta |
 | OE3 | Definir e calcular métricas de semântica HTML | S10–S12 | `src/analyze/semantics.ts`, testes, ADR 003, `dataset.csv`, tag v0.2-analise | Fundamentação; Metodologia | Método — Métricas |
 | OE4 | Relatórios individuais e panorama consolidado | S13 | `reports/`, `analysis/diagnostico.ipynb`, `docs/resultados/figuras/` | Resultados — Diagnóstico | Resultados (RQ1) |
 | OE5 | Recomendações por regras + LLM | S14–S16 | `src/recommend/`, `docs/artigo/catalogo-regras.md`, `docs/prompts/`, tag v0.3 | Cap. 5 | Abordagem |
@@ -26,5 +26,6 @@ do TCC/artigo onde é discutido. Se uma linha não tem evidência, o objetivo n�
 | Interna | Cópia local ≠ site real (recursos externos) | Comparar cópia × cópia; documentar recursos ausentes | S17 |
 | Construto | Índice de semântica com pesos arbitrários | Indicadores brutos no dataset; análise de sensibilidade | ADR 003 |
 | Externa | Só página inicial | Declarado no escopo | ADR 001 |
+| Interna | DOM capturado após `networkidle` com teto de 30 s; bruto e renderizado vêm de 2 requisições; nosso User-Agent em vez de um móvel real | `networkidleTimeout` e `metaRefresh` registrados por site | ADR 006, S05 (diário) |
 | Externa | Só UFRN; sites mudam | Data da coleta; dados arquivados com hash | S08 |
 | Conclusão | Amostra de validação pequena | Teste não paramétrico; reportar tamanho de efeito | ADR 004 |

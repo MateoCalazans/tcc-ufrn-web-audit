@@ -97,6 +97,7 @@ LLM vira trabalho futuro. **Nunca cortar coleta nem diagnóstico.**
 ### S08 · Coleta completa e congelamento
 *(sessão curta, mais operacional)*
 > Avise a STI/SINFO antes (e-mail; guarde a cópia em `docs/ambiente/`).
+> **Antes de rodar:** apague as pastas do piloto da S05 em `data/raw/` (10 sites + `creation.ufrn.br`, coletados com `gitDirty: true`) e confirme que o working tree está limpo, para a coleta oficial sair com `gitDirty: false`.
 > **Prompt:** Rode a coleta completa com `--resume`. Ao final: gere `docs/resultados/coleta.md` (sucessos, falhas, duração), compacte `data/raw/` em .zip, calcule SHA-256 e grave em `docs/ambiente/hashes.md`.
 
 **Pronto quando:** coleta congelada; a partir daqui **nunca mais** se coleta de novo.
