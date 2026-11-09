@@ -4,7 +4,7 @@
 
 **Última atualização:** 2026-11-09
 **Fase atual:** 2 — Coleta
-**Próxima sessão:** S06
+**Próxima sessão:** S07
 
 | Sessão | Situação | Data | Diário | Commits/tag |
 |---|---|---|---|---|
@@ -14,7 +14,7 @@
 | S03 | ✅ | 2026-10-20 | [s03](diario/2026-10-20-s03.md) | (a commitar) |
 | S04 | ✅ | 2026-11-04 / 11-09 | [s04](diario/2026-11-04-s04.md) | (a commitar) · v0.1-triagem |
 | S05 | ✅ | 2026-11-09 | [s05](diario/2026-11-09-s05.md) | cf5a554 9b106c8 |
-| S06 | ⬜ | | | |
+| S06 | ✅ | 2026-11-09 | [s06](diario/2026-11-09-s06.md) | 2a9eda5 854148c |
 | S07 | ⬜ | | | |
 | S08 | ⬜ | | | coleta congelada |
 | S09 | ⬜ | | | |
@@ -39,11 +39,14 @@ Legenda: ⬜ pendente · 🟨 em andamento · ✅ concluída · ✂️ cortada (
 - **(S04)** Revisão manual da classificação não feita, por decisão do autor: a taxa de acerto não foi medida (ameaça à validade, ADR 005). Placeholders ("Site em Construção", "Página de Teste"…) ficaram no corpus.
 - **(S04)** 37 sites `*.ct.ufrn.br` redirecionam para `api-boreas.ct.ufrn.br`, que não existe no DNS. Avisar a unidade? Criar código de exclusão próprio?
 - **(S04)** Pedir à STI/SINFO a liberação do nosso User-Agent (servidores que derrubam a conexão ou respondem 403, como `acervo.ufrn.br`).
-- **(S06)** Sites com `tls_invalido` exigem Lighthouse com `--ignore-certificate-errors`.
-- **(S08)** Apagar os dados do piloto da S05 em `data/raw/` (11 pastas, `gitDirty: true`) antes da coleta oficial.
+- **(S08)** Apagar os dados do piloto da S05 e da S06 em `data/raw/` (11 pastas com `collect.json`, `lh*.json` e `lighthouse.json`, todos com `gitDirty: true`) antes da coleta oficial.
 - **(S05)** Validar o [ADR 006](decisoes/006-parametros-da-coleta-renderizada.md) (proposto): parâmetros da coleta renderizada.
 - **(S05)** `pingifes.ufrn.br` redireciona por meta refresh para uma tela de login (regra 4) e `comunica.ufrn.br` para um stream de áudio: corrigir o corpus antes da S08?
-- **(S06/S10)** 23 incluídos usam meta refresh (bruto ≠ renderizado). Decidir o tratamento no Lighthouse e na análise (talvez emenda ao ADR 006).
+- **(S10)** 23 incluídos usam meta refresh (bruto ≠ renderizado). O Lighthouse segue o redirecionamento e mede a página de destino (S06, `acervus`). Falta decidir o tratamento na análise.
+
+- **(S06)** Validar o [ADR 007](decisoes/007-parametros-do-lighthouse.md) (proposto): parâmetros do Lighthouse.
+- **(S06)** Variabilidade do Lighthouse no piloto: amplitude da nota de performance de até 32 pontos (mediana 8). Manter 3 execuções (regra 6) ou subir para 5?
+- **(S06/S09)** O critério da mediana (nota) e o `computeMedianRun` (FCP/TTI) escolhem a mesma execução em só 4 de 11 sites. Comparar no corpus inteiro.
 
 ## Bloqueios
 -
