@@ -6,21 +6,23 @@ import { readCsvObjects } from "../shared/csv.js";
 import { buildUserAgent, defaultLimiter } from "../shared/http.js";
 import { createLogger } from "../shared/logger.js";
 import { buildMeta } from "../shared/meta.js";
-import { alreadyCollected, collectPage, sitesFromCorpus } from "./page.js";
+import { alreadyMeasured, collectLighthouse } from "./lighthouse.js";
+import { alreadyCollected, collectPage, type SiteToCollect, sitesFromCorpus } from "./page.js";
 
 /**
- * Módulo 1 — Coleta (S05: só a etapa `page`; Lighthouse entra na S06 e a
- * orquestração retomável na S07).
+ * Módulo 1 — Coleta (S05: etapa `page`; S06: etapa `lighthouse`; a
+ * orquestração retomável das duas entra na S07).
  *
- *   npm run collect -- [--limit N] [--site <id>] [--only page]
+ *   npm run collect -- [--limit N] [--site <id>] [--only page|lighthouse]
  *
  * Lê os incluídos de `data/corpus.csv` e grava em `data/raw/<id>/`. Sites já
- * coletados (com `collect.json`) são pulados — dados brutos são imutáveis.
- * Sites são processados um de cada vez (ADR 006).
+ * coletados (com `collect.json` / `lighthouse.json`) são pulados — dados
+ * brutos são imutáveis. Sites são processados um de cada vez (ADR 006/007).
  */
 const CORPUS_PATH = "data/corpus.csv";
 const RAW_DIR = "data/raw";
-const ETAPAS = ["page"] as const;
+const ETAPAS = ["page", "lighthouse"] as const;
+type Etapa = (typeof ETAPAS)[number];
 
 const log = createLogger("collect");
 
@@ -46,6 +48,8 @@ async function main(): Promise<void> {
   const userAgent = buildUserAgent();
   const sites = sitesFromCorpus(readCsvObjects(CORPUS_PATH), { limit, site: values.site });
   if (sites.length === 0) throw new Error("nenhum site incluído corresponde aos filtros");
+
+  if ((only as Etapa) === "lighthouse") return runLighthouseStage(sites, userAgent, { limit, site: values.site });
 
   const browser = await chromium.launch();
   const { generatedAt: _ignorado, ...base } = buildMeta();
@@ -95,6 +99,57 @@ async function main(): Promise<void> {
   }
   const duracaoS = Math.round((Date.now() - t0) / 1000);
   log.info("fim", { ...resumo, duracaoS });
+  out(`fim: ${resumo.completos} completos, ${resumo.incompletos} incompletos, ${resumo.pulados} pulados (${duracaoS} s)`);
+}
+
+/** Etapa `lighthouse` (ADR 007): 3 execuções por site, um Chrome por vez. */
+async function runLighthouseStage(
+  sites: SiteToCollect[],
+  userAgent: string,
+  filtros: { limit?: number; site?: string },
+): Promise<void> {
+  const chromePath = chromium.executablePath();
+  const { generatedAt: _ignorado, ...baseMeta } = buildMeta();
+  log.info("inicio", { etapa: "lighthouse", sites: sites.length, ...filtros, chromePath, toolVersions: baseMeta.toolVersions });
+  out(`${sites.length} site(s), etapa lighthouse, Lighthouse ${baseMeta.toolVersions.lighthouse}, Chromium do Playwright`);
+
+  const resumo = { completos: 0, incompletos: 0, pulados: 0 };
+  const t0 = Date.now();
+  for (const [i, site] of sites.entries()) {
+    const prefixo = `${i + 1}/${sites.length} ${site.id}`;
+    if (alreadyMeasured(RAW_DIR, site.id)) {
+      resumo.pulados++;
+      log.info("pulado: ja medido", { id: site.id });
+      out(`${prefixo}: já medido, pulado`);
+      continue;
+    }
+    try {
+      const r = await collectLighthouse(site, { rawDir: RAW_DIR, userAgent, chromePath, baseMeta, limiter: defaultLimiter });
+      if (r.completo) resumo.completos++;
+      else resumo.incompletos++;
+      const notas = r.execucoes.map((e) => e.notas.performance ?? e.runtimeError?.code ?? e.erro);
+      const fields = {
+        id: site.id,
+        completo: r.completo,
+        notasPerformance: notas,
+        mediana: r.mediana.n,
+        medianaFcpTti: r.mediana.nFcpTti,
+        variacao: r.variacaoPerformance,
+        chromium: r.meta.toolVersions.chromium,
+      };
+      (r.completo ? log.info : log.warn)("site medido", fields);
+      out(
+        `${prefixo}: ${r.completo ? "ok" : "INCOMPLETO"} (performance ${notas.join("/")}, ` +
+          `mediana lh${r.mediana.n ?? "-"}, amplitude ${r.variacaoPerformance.amplitude ?? "-"})`,
+      );
+    } catch (err) {
+      resumo.incompletos++;
+      log.error("falha inesperada", { id: site.id, erro: String(err) });
+      out(`${prefixo}: ERRO ${String(err)}`);
+    }
+  }
+  const duracaoS = Math.round((Date.now() - t0) / 1000);
+  log.info("fim", { etapa: "lighthouse", ...resumo, duracaoS });
   out(`fim: ${resumo.completos} completos, ${resumo.incompletos} incompletos, ${resumo.pulados} pulados (${duracaoS} s)`);
 }
 
