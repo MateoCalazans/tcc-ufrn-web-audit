@@ -12,6 +12,8 @@
 
 import { lookup } from "node:dns/promises";
 
+import { Agent, fetch as undiciFetch } from "undici";
+
 import { buildUserAgent, defaultLimiter, DEFAULT_TIMEOUT_MS, type HostLimiter } from "../shared/http.js";
 import type { ExclusionReason } from "../shared/types.js";
 
@@ -56,6 +58,23 @@ export interface ProbeResult {
   motivoExclusao: ExclusionReason | null;
   /** Evidência/detalhe do veredito (código HTTP, sinal de login, etc.). */
   detalhe: string;
+  /**
+   * HTML da página final, **só para incluídos** (S04: insumo da classificação,
+   * sem nova requisição). `null` para excluídos — inclusive por robots, cujo
+   * HTML não é guardado.
+   */
+  html: string | null;
+  /**
+   * Problema de certificado contornado para ler a página (ex.: `cert-expirado`),
+   * ou `""` se o TLS estava válido / o site foi lido por http. O site continua
+   * **incluído**: o conteúdo é público e o navegador permite acessá-lo.
+   */
+  tlsInvalido: string;
+}
+
+export interface RequestOptions {
+  /** Aceita certificado inválido (só usado após uma falha de certificado). */
+  insecure?: boolean;
 }
 
 /** Dependências de IO injetáveis (reais em produção, simuladas nos testes). */
@@ -63,7 +82,7 @@ export interface ProbeDeps {
   /** Resolve `true` se o host tem registro DNS; `false` caso contrário. */
   resolveDns(host: string): Promise<boolean>;
   /** Faz **um** hop HTTP (sem seguir redirects). Lança em timeout/erro de rede. */
-  request(url: string): Promise<SingleResponse>;
+  request(url: string, options?: RequestOptions): Promise<SingleResponse>;
 }
 
 /** Erro de timeout, distinguido de erros de conexão para o motivo de exclusão. */
@@ -161,6 +180,75 @@ export function classifyResponse(params: {
 
 function excluded(motivo: ExclusionReason, detalhe: string) {
   return { incluido: false, motivo, detalhe };
+}
+
+/**
+ * Decodifica o corpo respeitando o charset declarado (header `Content-Type`,
+ * senão `<meta charset>`/`http-equiv` nos primeiros 2 KB); padrão UTF-8.
+ * Sem isso, páginas ISO-8859-1 viram "PÃ³s-Graduação" e quebram a heurística
+ * de título da classificação (S04). Charset desconhecido → UTF-8.
+ */
+export function decodeBody(bytes: Uint8Array, contentType: string | undefined): string {
+  let charset = /charset\s*=\s*["']?([\w-]+)/i.exec(contentType ?? "")?.[1];
+  if (charset === undefined) {
+    const head = new TextDecoder("latin1").decode(bytes.subarray(0, 2048));
+    charset = /<meta[^>]+charset\s*=\s*["']?([\w-]+)/i.exec(head)?.[1];
+  }
+  try {
+    return new TextDecoder(charset ?? "utf-8").decode(bytes);
+  } catch {
+    return new TextDecoder("utf-8").decode(bytes);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Causa de falhas de rede
+// ---------------------------------------------------------------------------
+
+/** Códigos de erro TLS de certificado → rótulo da causa. */
+const CAUSAS_CERT: Record<string, string> = {
+  CERT_HAS_EXPIRED: "cert-expirado",
+  CERT_NOT_YET_VALID: "cert-ainda-nao-valido",
+  UNABLE_TO_VERIFY_LEAF_SIGNATURE: "cert-cadeia-incompleta",
+  UNABLE_TO_GET_ISSUER_CERT_LOCALLY: "cert-cadeia-incompleta",
+  UNABLE_TO_GET_ISSUER_CERT: "cert-cadeia-incompleta",
+  DEPTH_ZERO_SELF_SIGNED_CERT: "cert-autoassinado",
+  SELF_SIGNED_CERT_IN_CHAIN: "cert-autoassinado",
+  ERR_TLS_CERT_ALTNAME_INVALID: "cert-nome-divergente",
+};
+
+/** Códigos de erro de conexão → rótulo da causa. */
+const CAUSAS_REDE: Record<string, string> = {
+  UND_ERR_CONNECT_TIMEOUT: "connect-timeout",
+  ETIMEDOUT: "connect-timeout",
+  ECONNREFUSED: "conexao-recusada",
+  ECONNRESET: "conexao-fechada",
+  UND_ERR_SOCKET: "conexao-fechada",
+  EHOSTUNREACH: "host-inalcancavel",
+  ENETUNREACH: "rede-inalcancavel",
+  ENOTFOUND: "dns",
+  EAI_AGAIN: "dns",
+};
+
+/**
+ * Traduz um erro de requisição na **causa** gravada no CSV, para auditar cada
+ * exclusão URL por URL (antes ficava só "fetch failed"). `cert = true` quando
+ * a falha é de certificado: o servidor respondeu, mas o TLS foi recusado.
+ */
+export function describeFetchError(err: unknown): { causa: string; cert: boolean } {
+  if (err instanceof TimeoutError) return { causa: err.message, cert: false };
+  // undici embrulha a causa real em `err.cause` (às vezes em dois níveis).
+  let atual: unknown = err;
+  for (let i = 0; i < 3 && atual !== null && typeof atual === "object"; i++) {
+    const code = (atual as { code?: unknown }).code;
+    if (typeof code === "string") {
+      if (code in CAUSAS_CERT) return { causa: CAUSAS_CERT[code]!, cert: true };
+      if (code in CAUSAS_REDE) return { causa: CAUSAS_REDE[code]!, cert: false };
+      return { causa: `outro:${code}`, cert: false };
+    }
+    atual = (atual as { cause?: unknown }).cause;
+  }
+  return { causa: `outro:${(err as Error)?.message ?? String(err)}`, cert: false };
 }
 
 // ---------------------------------------------------------------------------
@@ -279,13 +367,24 @@ function matchesRobotsPath(pattern: string, path: string): boolean {
 async function follow(
   startUrl: string,
   deps: ProbeDeps,
+  options: RequestOptions,
 ): Promise<{ resp: SingleResponse; chain: RedirectHop[] }> {
   let url = startUrl;
   const chain: RedirectHop[] = [];
   const visitados = new Set<string>([url]);
 
   for (let i = 0; i <= MAX_REDIRECTS; i++) {
-    const resp = await deps.request(url);
+    let resp: SingleResponse;
+    try {
+      resp = await deps.request(url, options);
+    } catch (err) {
+      // Falha num destino de redirect: anota a URL, para o `detalhe` mostrar
+      // onde quebrou (ex.: redirect para um host que não existe no DNS).
+      if (url !== startUrl && err !== null && typeof err === "object") {
+        (err as { urlFalha?: string }).urlFalha = url;
+      }
+      throw err;
+    }
     const isRedirect = resp.status >= 300 && resp.status < 400 && resp.location !== null;
     if (!isRedirect) return { resp, chain };
 
@@ -305,6 +404,7 @@ async function follow(
 async function checkRobots(
   finalUrl: string,
   deps: ProbeDeps,
+  options: RequestOptions,
 ): Promise<{ allowed: boolean; detalhe: string }> {
   let origin: string;
   try {
@@ -313,7 +413,7 @@ async function checkRobots(
     return { allowed: true, detalhe: "" };
   }
   try {
-    const resp = await deps.request(`${origin}/robots.txt`);
+    const resp = await deps.request(`${origin}/robots.txt`, options);
     if (resp.status !== 200 || resp.body.trim() === "") {
       return { allowed: true, detalhe: "" };
     }
@@ -338,6 +438,8 @@ function excludedResult(
     incluido: false,
     motivoExclusao: motivo,
     detalhe,
+    html: null,
+    tlsInvalido: "",
   };
 }
 
@@ -345,6 +447,15 @@ function excludedResult(
  * Sonda um host: DNS → `https://` (com fallback para `http://`) → redirects →
  * classificação → robots. Nunca lança: todo erro vira um `ProbeResult` com
  * motivo de exclusão (o lote não pode ser derrubado por um site).
+ *
+ * **Certificado inválido** (expirado, cadeia incompleta, autoassinado…): o
+ * servidor respondeu e o navegador deixa o usuário seguir, então o site não
+ * está fora do ar. A partir da primeira falha de certificado, as tentativas
+ * seguintes (inclusive redirects e robots) aceitam o certificado, e a causa
+ * fica registrada em `tlsInvalido`.
+ *
+ * Em falha de rede, `detalhe` grava a **causa** de cada esquema tentado (ex.:
+ * `https: connect-timeout; http: connect-timeout`), para revisão URL por URL.
  */
 export async function probeHost(host: string, deps: ProbeDeps): Promise<ProbeResult> {
   let resolved: boolean;
@@ -355,13 +466,20 @@ export async function probeHost(host: string, deps: ProbeDeps): Promise<ProbeRes
   }
   if (!resolved) return excludedResult(host, "dns", "não resolve");
 
-  const schemes: Array<"https" | "http"> = ["https", "http"];
-  let ultimoErro = "";
+  // Tentativas em ordem; uma falha de certificado insere um retry inseguro do
+  // mesmo esquema antes de seguir para o próximo.
+  const fila: Array<{ scheme: "https" | "http"; insecure: boolean }> = [
+    { scheme: "https", insecure: false },
+    { scheme: "http", insecure: false },
+  ];
+  const causas: string[] = [];
+  let tlsInvalido = "";
 
-  for (const scheme of schemes) {
+  while (fila.length > 0) {
+    const { scheme, insecure } = fila.shift()!;
     const startUrl = `${scheme}://${host}/`;
     try {
-      const { resp, chain } = await follow(startUrl, deps);
+      const { resp, chain } = await follow(startUrl, deps, { insecure });
       const verdict = classifyResponse({
         finalUrl: resp.url,
         status: resp.status,
@@ -371,7 +489,7 @@ export async function probeHost(host: string, deps: ProbeDeps): Promise<ProbeRes
 
       let { incluido, motivo, detalhe } = verdict;
       if (incluido) {
-        const robots = await checkRobots(resp.url, deps);
+        const robots = await checkRobots(resp.url, deps, { insecure });
         if (!robots.allowed) {
           incluido = false;
           motivo = "robots";
@@ -388,36 +506,52 @@ export async function probeHost(host: string, deps: ProbeDeps): Promise<ProbeRes
         incluido,
         motivoExclusao: motivo,
         detalhe,
+        html: incluido ? resp.body : null,
+        tlsInvalido: insecure ? tlsInvalido : "",
       };
     } catch (err) {
-      const isTimeout = err instanceof TimeoutError;
-      ultimoErro = isTimeout ? (err as Error).message : `erro de conexão: ${(err as Error).message}`;
-      if (scheme === "http") {
-        // Ambos os esquemas falharam: site fora do ar na data da triagem.
-        return excludedResult(host, "timeout", ultimoErro);
+      const { causa, cert } = describeFetchError(err);
+      const urlFalha = (err as { urlFalha?: string } | null)?.urlFalha;
+      causas.push(
+        `${scheme}${insecure ? " (sem verificar cert)" : ""}: ${causa}${urlFalha ? ` em ${urlFalha}` : ""}`,
+      );
+      if (cert && !insecure) {
+        // Falha de certificado (inclusive num redirect http→https): repete o
+        // mesmo esquema aceitando o certificado, e as tentativas seguintes também.
+        tlsInvalido = causa;
+        for (const t of fila) t.insecure = true;
+        fila.unshift({ scheme, insecure: true });
       }
-      // https falhou → tenta http.
     }
   }
 
-  // Inalcançável (o laço sempre retorna), mas o TS exige um retorno.
-  return excludedResult(host, "timeout", ultimoErro || "sem resposta");
+  // Todos os esquemas falharam: site fora do ar na data da triagem (ADR 002).
+  return excludedResult(host, "timeout", causas.join("; "));
 }
 
 // ---------------------------------------------------------------------------
 // Dependências reais (rede)
 // ---------------------------------------------------------------------------
 
+/** Tempo extra, além do timeout de conexão, para a resposta completa chegar. */
+export const RESPONSE_MARGIN_MS = 5_000;
+
 export interface RealProbeDepsOptions {
   timeoutMs?: number;
   limiter?: HostLimiter;
 }
 
-/** Monta as `ProbeDeps` reais: DNS do SO + fetch com limitador e User-Agent. */
+/**
+ * Monta as `ProbeDeps` reais: DNS do SO + `undici` com limitador e User-Agent.
+ * O timeout de **conexão** do undici é alinhado ao nosso (`timeoutMs`): o
+ * padrão dele (10 s) era menor e cortava servidores lentos antes da hora.
+ */
 export function createRealProbeDeps(options: RealProbeDepsOptions = {}): ProbeDeps {
   const timeoutMs = options.timeoutMs ?? DEFAULT_TIMEOUT_MS;
   const limiter = options.limiter ?? defaultLimiter;
   const userAgent = buildUserAgent();
+  const seguro = new Agent({ connect: { timeout: timeoutMs } });
+  const inseguro = new Agent({ connect: { timeout: timeoutMs, rejectUnauthorized: false } });
 
   return {
     async resolveDns(host: string): Promise<boolean> {
@@ -429,26 +563,30 @@ export function createRealProbeDeps(options: RealProbeDepsOptions = {}): ProbeDe
       }
     },
 
-    async request(url: string): Promise<SingleResponse> {
+    async request(url: string, opts: RequestOptions = {}): Promise<SingleResponse> {
       const host = new URL(url).host;
       return limiter.schedule(host, async () => {
         const controller = new AbortController();
-        const timer = setTimeout(() => controller.abort(), timeoutMs);
+        // Margem sobre o timeout de conexão: assim uma conexão nunca aceita
+        // sai como `connect-timeout`, e só uma resposta lenta vira `timeout`.
+        const timer = setTimeout(() => controller.abort(), timeoutMs + RESPONSE_MARGIN_MS);
         try {
-          const res = await fetch(url, {
+          const res = await undiciFetch(url, {
             redirect: "manual",
             signal: controller.signal,
             headers: { "User-Agent": userAgent },
+            dispatcher: opts.insecure ? inseguro : seguro,
           });
           const status = res.status;
           const isRedirect = status >= 300 && status < 400;
+          const contentType = res.headers.get("content-type") ?? undefined;
           // Não baixa o corpo em redirects (economia; o Location basta).
-          const body = isRedirect ? "" : await res.text();
+          const body = isRedirect ? "" : decodeBody(new Uint8Array(await res.arrayBuffer()), contentType);
           return {
             url,
             status,
             location: res.headers.get("location"),
-            contentType: res.headers.get("content-type") ?? undefined,
+            contentType,
             body,
           };
         } catch (err) {

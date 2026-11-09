@@ -2,6 +2,8 @@ import { describe, expect, it } from "vitest";
 
 import {
   classifyResponse,
+  decodeBody,
+  describeFetchError,
   detectDefaultPage,
   detectLogin,
   isHtmlContentType,
@@ -219,5 +221,162 @@ describe("probeHost", () => {
     const r = await probeHost("x.ufrn.br", deps);
     expect(r.incluido).toBe(false);
     expect(r.motivoExclusao).toBe("robots");
+    expect(r.html).toBeNull(); // HTML de site proibido por robots não é guardado
+  });
+
+  it("devolve o HTML final só para incluídos (insumo da classificação)", async () => {
+    const deps = fakeDeps({
+      "https://cb.ufrn.br/": resp({ url: "https://cb.ufrn.br/", status: 200, body: "<title>CB</title>" }),
+      "https://cb.ufrn.br/robots.txt": resp({ url: "https://cb.ufrn.br/robots.txt", status: 404, body: "" }),
+      "https://sigaa.ufrn.br/": resp({ url: "https://sigaa.ufrn.br/", status: 200 }),
+    });
+    expect((await probeHost("cb.ufrn.br", deps)).html).toBe("<title>CB</title>");
+    expect((await probeHost("sigaa.ufrn.br", deps)).html).toBeNull();
+  });
+});
+
+/** Erro no formato do undici: `TypeError("fetch failed")` com a causa em `cause`. */
+function undiciErr(code: string): Error {
+  const cause = Object.assign(new Error(code), { code });
+  return Object.assign(new TypeError("fetch failed"), { cause });
+}
+
+describe("describeFetchError", () => {
+  it.each([
+    ["UND_ERR_CONNECT_TIMEOUT", "connect-timeout", false],
+    ["ECONNREFUSED", "conexao-recusada", false],
+    ["UND_ERR_SOCKET", "conexao-fechada", false],
+    ["CERT_HAS_EXPIRED", "cert-expirado", true],
+    ["UNABLE_TO_VERIFY_LEAF_SIGNATURE", "cert-cadeia-incompleta", true],
+    ["DEPTH_ZERO_SELF_SIGNED_CERT", "cert-autoassinado", true],
+    ["ERR_TLS_CERT_ALTNAME_INVALID", "cert-nome-divergente", true],
+  ])("%s → %s", (code, causa, cert) => {
+    expect(describeFetchError(undiciErr(code))).toEqual({ causa, cert });
+  });
+
+  it("código desconhecido e timeout próprio", () => {
+    expect(describeFetchError(undiciErr("EWHATEVER")).causa).toBe("outro:EWHATEVER");
+    expect(describeFetchError(new TimeoutError("redirect-loop"))).toEqual({ causa: "redirect-loop", cert: false });
+  });
+});
+
+describe("probeHost — causas e certificado inválido", () => {
+  /** Fake que distingue requisições seguras e inseguras (aceitando cert inválido). */
+  function certDeps(seguro: Record<string, () => SingleResponse>, inseguro: Record<string, SingleResponse>): ProbeDeps {
+    return {
+      async resolveDns() {
+        return true;
+      },
+      async request(url, opts) {
+        if (opts?.insecure) {
+          const r = inseguro[url];
+          if (r === undefined) throw new TimeoutError();
+          return r;
+        }
+        const f = seguro[url];
+        if (f === undefined) throw undiciErr("UND_ERR_CONNECT_TIMEOUT");
+        return f();
+      },
+    };
+  }
+
+  it("grava a causa de cada esquema quando tudo falha", async () => {
+    const r = await probeHost("kraken.ufrn.br", certDeps({}, {}));
+    expect(r.motivoExclusao).toBe("timeout");
+    expect(r.detalhe).toBe("https: connect-timeout; http: connect-timeout");
+  });
+
+  it("cert expirado: inclui lendo sem verificar e marca tlsInvalido", async () => {
+    const deps = certDeps(
+      {
+        "https://x.ufrn.br/": () => {
+          throw undiciErr("CERT_HAS_EXPIRED");
+        },
+      },
+      {
+        "https://x.ufrn.br/": resp({ url: "https://x.ufrn.br/", status: 200 }),
+        "https://x.ufrn.br/robots.txt": resp({ url: "https://x.ufrn.br/robots.txt", status: 404, body: "" }),
+      },
+    );
+    const r = await probeHost("x.ufrn.br", deps);
+    expect(r).toMatchObject({ incluido: true, scheme: "https", tlsInvalido: "cert-expirado" });
+    expect(r.html).not.toBeNull();
+  });
+
+  it("cert inválido no destino de um redirect http→https também é contornado", async () => {
+    const deps = certDeps(
+      {
+        "http://prometeu.ufrn.br/": () =>
+          resp({ url: "http://prometeu.ufrn.br/", status: 301, location: "https://obeduc.ufrn.br/" }),
+        "https://obeduc.ufrn.br/": () => {
+          throw undiciErr("UNABLE_TO_VERIFY_LEAF_SIGNATURE");
+        },
+      },
+      {
+        "http://prometeu.ufrn.br/": resp({ url: "http://prometeu.ufrn.br/", status: 301, location: "https://obeduc.ufrn.br/" }),
+        "https://obeduc.ufrn.br/": resp({ url: "https://obeduc.ufrn.br/", status: 200 }),
+      },
+    );
+    const r = await probeHost("prometeu.ufrn.br", deps);
+    expect(r).toMatchObject({
+      incluido: true,
+      scheme: "http",
+      urlFinal: "https://obeduc.ufrn.br/",
+      tlsInvalido: "cert-cadeia-incompleta",
+    });
+  });
+
+  it("falha no destino de um redirect registra a URL onde quebrou", async () => {
+    const deps = certDeps(
+      {
+        "https://evento.ct.ufrn.br/": () =>
+          resp({ url: "https://evento.ct.ufrn.br/", status: 301, location: "https://api-boreas.ct.ufrn.br/" }),
+        "http://evento.ct.ufrn.br/": () =>
+          resp({ url: "http://evento.ct.ufrn.br/", status: 301, location: "https://api-boreas.ct.ufrn.br/" }),
+        "https://api-boreas.ct.ufrn.br/": () => {
+          throw undiciErr("ENOTFOUND");
+        },
+      },
+      {},
+    );
+    const r = await probeHost("evento.ct.ufrn.br", deps);
+    expect(r.motivoExclusao).toBe("timeout");
+    expect(r.detalhe).toBe(
+      "https: dns em https://api-boreas.ct.ufrn.br/; http: dns em https://api-boreas.ct.ufrn.br/",
+    );
+  });
+
+  it("TLS válido não marca tlsInvalido", async () => {
+    const deps = certDeps(
+      {
+        "https://cb.ufrn.br/": () => resp({ url: "https://cb.ufrn.br/", status: 200 }),
+        "https://cb.ufrn.br/robots.txt": () => resp({ url: "https://cb.ufrn.br/robots.txt", status: 404, body: "" }),
+      },
+      {},
+    );
+    expect((await probeHost("cb.ufrn.br", deps)).tlsInvalido).toBe("");
+  });
+});
+
+describe("decodeBody", () => {
+  // "Pós" em ISO-8859-1: P=0x50, ó=0xF3, s=0x73
+  const latin1 = new Uint8Array([0x50, 0xf3, 0x73]);
+
+  it("usa o charset do Content-Type", () => {
+    expect(decodeBody(latin1, "text/html; charset=ISO-8859-1")).toBe("Pós");
+  });
+
+  it("cai para o <meta charset> quando o header não declara", () => {
+    const html = new Uint8Array([
+      ...new TextEncoder().encode('<meta charset="iso-8859-1">'),
+      ...latin1,
+    ]);
+    expect(decodeBody(html, "text/html")).toBe('<meta charset="iso-8859-1">Pós');
+  });
+
+  it("padrão UTF-8; charset inválido não lança", () => {
+    const utf8 = new TextEncoder().encode("Pós");
+    expect(decodeBody(utf8, undefined)).toBe("Pós");
+    expect(decodeBody(utf8, "text/html; charset=nao-existe")).toBe("Pós");
   });
 });
