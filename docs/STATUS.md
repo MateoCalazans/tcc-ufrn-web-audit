@@ -4,7 +4,7 @@
 
 **Última atualização:** 2026-11-10
 **Fase atual:** 3 — Análise (coleta congelada em 2026-11-09)
-**Próxima sessão:** S10
+**Próxima sessão:** S11
 
 | Sessão | Situação | Data | Diário | Commits/tag |
 |---|---|---|---|---|
@@ -18,7 +18,7 @@
 | S07 | ✅ | 2026-11-09 | [s07](diario/2026-11-09-s07.md) | f2677fe db15943 |
 | S08 | ✅ | 2026-11-09 / 11-10 | [s08](diario/2026-11-10-s08.md) | 1e9e659 91cbfc5 78a1f86 f85a63d 01b9829 · coleta congelada (sem tag) |
 | S09 | ✅ | 2026-11-10 | [s09](diario/2026-11-10-s09.md) | bc8350f 682cecd |
-| S10 | ⬜ | | | |
+| S10 | ✅ | 2026-11-10 | [s10](diario/2026-11-10-s10.md) | cd869e6 8af959c 0818cac |
 | S11 | ⬜ | | | |
 | S12 | ⬜ | | | v0.2-analise |
 | S13 | ⬜ | | | |
@@ -41,7 +41,10 @@ Legenda: ⬜ pendente · 🟨 em andamento · ✅ concluída · ✂️ cortada (
 - **(S04)** Pedir à STI/SINFO a liberação do nosso User-Agent (servidores que derrubam a conexão ou respondem 403, como `acervo.ufrn.br`).
 - **(S05)** Validar o [ADR 006](decisoes/006-parametros-da-coleta-renderizada.md) (proposto): parâmetros da coleta renderizada.
 - **(S05/S08/S09)** `pingifes.ufrn.br` (login) e `comunica.ufrn.br` (`NOT_HTML`) excluídos na análise com motivo: registrado no [ADR 009](decisoes/009-metricas-de-performance-na-analise.md) (proposto, validar).
-- **(S10)** 23 incluídos usam meta refresh (bruto ≠ renderizado). O Lighthouse segue o redirecionamento e mede a página de destino (S06, `acervus`). Falta decidir o tratamento na análise.
+- **(S10)** 23 incluídos usam meta refresh (bruto ≠ renderizado). O Lighthouse segue o redirecionamento e mede a página de destino (S06, `acervus`). Na S10 (ADR 010) viraram as flags `metaRefresh`/`renderedComRefresh`: em **10** sites (9 no conjunto principal) o `rendered.html` é o stub. O tratamento (manter, separar, excluir) fica para a S12/S13.
+- **(S10)** Validar o [ADR 010](decisoes/010-indicadores-semanticos-parte-1.md) (proposto): definições de div+span, landmarks (HTML-AAM) e títulos. Detalhes acrescentados sem consulta: `svg`/`math`, `noscript` na flag, primeiro título não comparado, status `vazio`.
+- **(S10)** `enterpriseenrollment.ufrn.br` cai na tela de login da Microsoft (Intune): excluir com motivo `login` (regra 4)? Pergunta feita ao autor, sem resposta; hoje está no conjunto principal.
+- **(S10)** 4 páginas idênticas "Página de Teste de Hospedagem Web" da STI (`eject.ect`, `farmacia.ccs`, `gmag.fisica`, `histed.ce`) com `body` vazio: sem indicadores semânticos, mas no conjunto principal de performance. Decidir na S12.
 
 - **(S06)** Validar o [ADR 007](decisoes/007-parametros-do-lighthouse.md) (proposto): parâmetros do Lighthouse.
 - **(S06)** Variabilidade do Lighthouse no piloto: amplitude da nota de performance de até 32 pontos (mediana 8). Manter 3 execuções (regra 6) ou subir para 5?
