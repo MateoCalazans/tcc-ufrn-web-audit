@@ -41,11 +41,21 @@ npm run collect -- --only page|lighthouse --resume
   `--resume`**. Para uma coleta nova, apague as pastas antes.
 - `Ctrl+C` uma vez: termina o site atual e para. Duas vezes: para na hora (a etapa
   em andamento é refeita no próximo `--resume`). Se a máquina cair, basta rodar
-  `--resume` de novo.
+  `--resume` de novo. **No Windows**, o `Ctrl+C` chega também ao npm e ao Chrome
+  e o processo morre na hora (como uma queda): os dados não se corrompem, e a
+  etapa em andamento é refeita no `--resume` (ADR 008, adendo).
+- Num processo longo, a memória do node se acumula. Na coleta oficial, ele caiu
+  por falta de memória no site 87. Para o corpus inteiro, rode com mais heap:
+  `NODE_OPTIONS=--max-old-space-size=8192` (PowerShell: `$env:NODE_OPTIONS="--max-old-space-size=8192"`).
+- Não rode nada pesado na máquina durante a coleta: a carga de CPU altera o
+  `benchmarkIndex` e o throttling simulado do Lighthouse.
+- O relatório `docs/resultados/coleta.md` é gerado a partir do disco com `npm run collect:report`.
 - Progresso e tempo estimado no terminal. Tudo em `logs/collect-<data>.jsonl`. A
   linha `"msg":"fim"` traz o resumo (completos, com falha, pendentes e falhas por motivo),
   calculado a partir do disco.
-- No piloto, cada site levou cerca de 45–70 s. O corpus inteiro leva várias horas.
+- No piloto, cada site levou cerca de 45–70 s. A coleta oficial (242 sites) levou
+  cerca de 3h41 de execução (1h19 até a queda + 2h22 na retomada), ou 4h37 do
+  primeiro ao último registro, contando a pausa entre a queda e a retomada (`docs/resultados/coleta.md`).
 
 ### Rodando de madrugada
 

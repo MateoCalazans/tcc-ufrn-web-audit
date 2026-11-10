@@ -48,3 +48,29 @@ Lighthouse isola a medição, coerente com o "um Chrome por vez" do ADR 007.
 
 ## Onde aparece no TCC
 Metodologia (procedimento de coleta) · Ameaças à validade (falhas passageiras).
+
+## Adendo (2026-11-09, S08): o que aconteceu na coleta oficial
+- **Queda por memória.** A primeira execução (início 18:06:36Z) caiu no site 87/242
+  (`artefatos.imd.ufrn.br`) às 19:25:31Z com `JavaScript heap out of memory` (heap
+  de ~4 GB), na 2ª execução do Lighthouse. A 1ª execução do mesmo site tinha
+  terminado, o que aponta memória acumulada no processo (o Lighthouse roda
+  dentro do node) somada a um site pesado. Ficaram 86 sites completos e o
+  `artefatos` sem `lighthouse.json`.
+- **Retomada.** `npm run collect -- --resume` com `NODE_OPTIONS=--max-old-space-size=8192`
+  (20:21:58Z → 22:44:20Z, 156 sites, sem nova queda). Pela decisão 1a, o
+  Lighthouse do `artefatos` foi refeito do zero. O limite de heap do node não
+  entra na configuração do Lighthouse nem no throttling, então não altera as
+  medições.
+- **Mesma proveniência.** O código do relatório (ainda sem commit) foi guardado
+  com `git stash` durante a retomada: os 484 registros saíram do commit
+  `3b2ba91` com `gitDirty: false`.
+- **`Ctrl+C` no Windows não para de forma limpa.** No teste antes da coleta, o
+  primeiro `Ctrl+C` foi recebido ("termino o site atual e paro"), mas o
+  processo morreu logo depois (código 1, sem resumo), provavelmente porque o
+  sinal chega a todo o grupo do console (npm, Chrome do Lighthouse). O efeito
+  é o de uma queda forçada: a etapa em andamento fica sem registro e é refeita
+  na retomada, sem dado corrompido.
+- **Carga na máquina.** Durante o Lighthouse do 2º site (`4cnienssup.ufrn.br`)
+  rodaram `npm test` e `tsc`. A `lh2` teve `benchmarkIndex` 2616, contra 2794 e
+  2827,5 das outras, e nota 66, contra 65 e 66. O registro foi mantido (regra 8).
+  Para a validação (módulo 4): nada pesado na máquina durante medições.
