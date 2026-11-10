@@ -7,7 +7,7 @@ import type { Meta, ToolVersions } from "./types.js";
 const require = createRequire(import.meta.url);
 
 /** Ferramentas cujas versões são registradas em toda saída (regra 6/10). */
-const TRACKED_TOOLS = ["lighthouse", "playwright"] as const;
+const TRACKED_TOOLS = ["lighthouse", "playwright", "cheerio"] as const;
 
 /**
  * Versão de um pacote instalado, lendo o `version` do package.json dele.
