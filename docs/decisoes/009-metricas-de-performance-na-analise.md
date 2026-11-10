@@ -83,3 +83,15 @@ dessa mesma lista.
 ## Onde aparece no TCC
 Metodologia (análise de performance; critérios de exclusão) e Ameaças à
 validade.
+
+## Adendo (2026-11-10, S10): exclusão do `enterpriseenrollment`
+Na verificação da S10, `enterpriseenrollment.ufrn.br` apareceu redirecionando
+para o Intune da Microsoft (`https://intune.microsoft.com/`) e terminando na
+tela de login do Azure (título *"Sign in to Microsoft Azure"*). Pela regra 4
+(só páginas públicas, sem login), o autor decidiu excluí-lo da análise com
+motivo `login` (*"Sim pode remover"*), do mesmo jeito que o `pingifes` (item 4).
+Os dados brutos ficam como estão (regra 8).
+
+Com isso, o **conjunto principal passa de 218 para 217 sites**. A mediana da
+nota de performance continua 61, a de LCP passa de 8.983 ms para 9.019 ms, e
+a de auditorias com falha por site continua 17 (`npx tsx scripts/performance-check.ts`).
