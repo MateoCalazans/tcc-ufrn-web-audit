@@ -4,7 +4,7 @@
 
 **Última atualização:** 2026-11-10
 **Fase atual:** 3 — Análise (coleta congelada em 2026-11-09)
-**Próxima sessão:** S09
+**Próxima sessão:** S10
 
 | Sessão | Situação | Data | Diário | Commits/tag |
 |---|---|---|---|---|
@@ -17,7 +17,7 @@
 | S06 | ✅ | 2026-11-09 | [s06](diario/2026-11-09-s06.md) | 2a9eda5 854148c |
 | S07 | ✅ | 2026-11-09 | [s07](diario/2026-11-09-s07.md) | f2677fe db15943 |
 | S08 | ✅ | 2026-11-09 / 11-10 | [s08](diario/2026-11-10-s08.md) | 1e9e659 91cbfc5 78a1f86 f85a63d 01b9829 · coleta congelada (sem tag) |
-| S09 | ⬜ | | | |
+| S09 | ✅ | 2026-11-10 | [s09](diario/2026-11-10-s09.md) | bc8350f 682cecd |
 | S10 | ⬜ | | | |
 | S11 | ⬜ | | | |
 | S12 | ⬜ | | | v0.2-analise |
@@ -40,14 +40,15 @@ Legenda: ⬜ pendente · 🟨 em andamento · ✅ concluída · ✂️ cortada (
 - **(S04)** 37 sites `*.ct.ufrn.br` redirecionam para `api-boreas.ct.ufrn.br`, que não existe no DNS. Avisar a unidade? Criar código de exclusão próprio?
 - **(S04)** Pedir à STI/SINFO a liberação do nosso User-Agent (servidores que derrubam a conexão ou respondem 403, como `acervo.ufrn.br`).
 - **(S05)** Validar o [ADR 006](decisoes/006-parametros-da-coleta-renderizada.md) (proposto): parâmetros da coleta renderizada.
-- **(S05/S08)** `pingifes.ufrn.br` (meta refresh para login, regra 4) e `comunica.ufrn.br` (stream de áudio, Lighthouse `NOT_HTML`) ficaram no corpus e foram coletados. Decisão A do autor: excluir na análise, com motivo. **Falta um ADR** (S09/S10).
+- **(S05/S08/S09)** `pingifes.ufrn.br` (login) e `comunica.ufrn.br` (`NOT_HTML`) excluídos na análise com motivo: registrado no [ADR 009](decisoes/009-metricas-de-performance-na-analise.md) (proposto, validar).
 - **(S10)** 23 incluídos usam meta refresh (bruto ≠ renderizado). O Lighthouse segue o redirecionamento e mede a página de destino (S06, `acervus`). Falta decidir o tratamento na análise.
 
 - **(S06)** Validar o [ADR 007](decisoes/007-parametros-do-lighthouse.md) (proposto): parâmetros do Lighthouse.
 - **(S06)** Variabilidade do Lighthouse no piloto: amplitude da nota de performance de até 32 pontos (mediana 8). Manter 3 execuções (regra 6) ou subir para 5?
 - **(S07)** Validar o [ADR 008](decisoes/008-coleta-retomavel-sem-nova-tentativa.md) (proposto): coleta retomável, sites com falha não são tentados de novo.
 - **(S08)** `Ctrl+C` testado no Windows: não para de forma limpa (o processo morre na hora, código 1), mas equivale a uma queda e não corrompe os dados (adendo ao ADR 008).
-- **(S06/S09)** O critério da mediana (nota) e o `computeMedianRun` (FCP/TTI) **divergem em 132 de 225 sites** no corpus (`coleta.md`). Decidir em ADR, na S09, qual execução alimenta as métricas.
+- **(S09)** Validar o [ADR 009](decisoes/009-metricas-de-performance-na-analise.md) (proposto): métricas da execução mediana pela nota (132 de 225 divergem do `computeMedianRun`, que vira coluna de sensibilidade); falha = `score < 0.9` fora dos grupos `metrics`/`hidden`; 6 sites `parcial` (1 execução válida) fora do conjunto principal (218 sites).
+- **(S09)** Nenhum objetivo específico da rastreabilidade cobre as métricas de performance (OE3 é só semântica): criar OE ou ampliar o OE3?
 
 - **(S08)** Validar o adendo ao [ADR 008](decisoes/008-coleta-retomavel-sem-nova-tentativa.md): coleta em 2 execuções (queda por memória no site 87, retomada com heap de 8 GB, 56 min de pausa).
 - **(S08)** 25 sites com falha (10,3%): 13 `NO_FCP`, 6 `NO_NAVSTART`, 2 `bruto:AbortError`, 2 `ERRORED_DOCUMENT_REQUEST`, 1 `NOT_HTML`, 1 `sem-nota`. Olhar os `NO_FCP`/`NO_NAVSTART` na análise.
