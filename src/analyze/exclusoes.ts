@@ -13,6 +13,10 @@ export const EXCLUSOES_ANALISE: Readonly<Record<string, { motivo: ExclusionReaso
     motivo: "nao-html",
     detalhe: "stream de áudio; Lighthouse NOT_HTML nas 3 execuções (diário S08)",
   },
+  "enterpriseenrollment.ufrn.br": {
+    motivo: "login",
+    detalhe: "redireciona para o Intune da Microsoft e cai na tela de login do Azure (regra 4); ver diário S10",
+  },
 };
 
 export function exclusaoDaAnalise(id: string): { motivo: ExclusionReason; detalhe: string } | null {
