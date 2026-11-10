@@ -2,9 +2,9 @@
 
 > Atualizado ao fim de cada sessão (o `/fim-de-sessao` faz isso).
 
-**Última atualização:** 2026-11-09
-**Fase atual:** 2 — Coleta
-**Próxima sessão:** S08
+**Última atualização:** 2026-11-10
+**Fase atual:** 3 — Análise (coleta congelada em 2026-11-09)
+**Próxima sessão:** S09
 
 | Sessão | Situação | Data | Diário | Commits/tag |
 |---|---|---|---|---|
@@ -16,7 +16,7 @@
 | S05 | ✅ | 2026-11-09 | [s05](diario/2026-11-09-s05.md) | cf5a554 9b106c8 |
 | S06 | ✅ | 2026-11-09 | [s06](diario/2026-11-09-s06.md) | 2a9eda5 854148c |
 | S07 | ✅ | 2026-11-09 | [s07](diario/2026-11-09-s07.md) | f2677fe db15943 |
-| S08 | ⬜ | | | coleta congelada |
+| S08 | ✅ | 2026-11-09 / 11-10 | [s08](diario/2026-11-10-s08.md) | 1e9e659 91cbfc5 78a1f86 f85a63d 01b9829 · coleta congelada (sem tag) |
 | S09 | ⬜ | | | |
 | S10 | ⬜ | | | |
 | S11 | ⬜ | | | |
@@ -39,16 +39,21 @@ Legenda: ⬜ pendente · 🟨 em andamento · ✅ concluída · ✂️ cortada (
 - **(S04)** Revisão manual da classificação não feita, por decisão do autor: a taxa de acerto não foi medida (ameaça à validade, ADR 005). Placeholders ("Site em Construção", "Página de Teste"…) ficaram no corpus.
 - **(S04)** 37 sites `*.ct.ufrn.br` redirecionam para `api-boreas.ct.ufrn.br`, que não existe no DNS. Avisar a unidade? Criar código de exclusão próprio?
 - **(S04)** Pedir à STI/SINFO a liberação do nosso User-Agent (servidores que derrubam a conexão ou respondem 403, como `acervo.ufrn.br`).
-- **(S08)** Apagar os dados do piloto da S05, da S06 e da S07 em `data/raw/` (13 pastas: as 11 do piloto + `caene.ufrn.br` e `caus.ufrn.br` do teste de retomada da S07; todas com `collect.json`, `lh*.json` e `lighthouse.json` e `gitDirty: true`) antes da coleta oficial.
 - **(S05)** Validar o [ADR 006](decisoes/006-parametros-da-coleta-renderizada.md) (proposto): parâmetros da coleta renderizada.
-- **(S05)** `pingifes.ufrn.br` redireciona por meta refresh para uma tela de login (regra 4) e `comunica.ufrn.br` para um stream de áudio: corrigir o corpus antes da S08?
+- **(S05/S08)** `pingifes.ufrn.br` (meta refresh para login, regra 4) e `comunica.ufrn.br` (stream de áudio, Lighthouse `NOT_HTML`) ficaram no corpus e foram coletados. Decisão A do autor: excluir na análise, com motivo. **Falta um ADR** (S09/S10).
 - **(S10)** 23 incluídos usam meta refresh (bruto ≠ renderizado). O Lighthouse segue o redirecionamento e mede a página de destino (S06, `acervus`). Falta decidir o tratamento na análise.
 
 - **(S06)** Validar o [ADR 007](decisoes/007-parametros-do-lighthouse.md) (proposto): parâmetros do Lighthouse.
 - **(S06)** Variabilidade do Lighthouse no piloto: amplitude da nota de performance de até 32 pontos (mediana 8). Manter 3 execuções (regra 6) ou subir para 5?
 - **(S07)** Validar o [ADR 008](decisoes/008-coleta-retomavel-sem-nova-tentativa.md) (proposto): coleta retomável, sites com falha não são tentados de novo.
-- **(S07)** Testar no terminal a parada limpa com `Ctrl+C` antes da S08 (só a queda forçada foi testada).
-- **(S06/S09)** O critério da mediana (nota) e o `computeMedianRun` (FCP/TTI) escolhem a mesma execução em só 4 de 11 sites. Comparar no corpus inteiro.
+- **(S08)** `Ctrl+C` testado no Windows: não para de forma limpa (o processo morre na hora, código 1), mas equivale a uma queda e não corrompe os dados (adendo ao ADR 008).
+- **(S06/S09)** O critério da mediana (nota) e o `computeMedianRun` (FCP/TTI) **divergem em 132 de 225 sites** no corpus (`coleta.md`). Decidir em ADR, na S09, qual execução alimenta as métricas.
+
+- **(S08)** Validar o adendo ao [ADR 008](decisoes/008-coleta-retomavel-sem-nova-tentativa.md): coleta em 2 execuções (queda por memória no site 87, retomada com heap de 8 GB, 56 min de pausa).
+- **(S08)** 25 sites com falha (10,3%): 13 `NO_FCP`, 6 `NO_NAVSTART`, 2 `bruto:AbortError`, 2 `ERRORED_DOCUMENT_REQUEST`, 1 `NOT_HTML`, 1 `sem-nota`. Olhar os `NO_FCP`/`NO_NAVSTART` na análise.
+- **(S08)** Variação do Lighthouse no corpus: mediana da amplitude de 2, máxima de 35, 27 sites com ≥ 10 pontos (ameaça à validade; a coleta está congelada).
+- **(S08)** Aviso à STI/SINFO não enviado, por decisão do autor (desvio do roteiro).
+- **(S08)** Guardar cópia do `data/raw-coleta-2026-11-09.zip` (1,07 GB, SHA-256 em `docs/ambiente/hashes.md`) fora deste PC. Decidir sobre a tag de congelamento.
 
 ## Bloqueios
 -
