@@ -3,8 +3,8 @@
 > Atualizado ao fim de cada sessão (o `/fim-de-sessao` faz isso).
 
 **Última atualização:** 2026-11-11
-**Fase atual:** 3 — Análise (coleta congelada em 2026-11-09)
-**Próxima sessão:** S12
+**Fase atual:** 4 — Relatórios e panorama (S13); análise fechada na tag v0.2-analise
+**Próxima sessão:** S13
 
 | Sessão | Situação | Data | Diário | Commits/tag |
 |---|---|---|---|---|
@@ -20,7 +20,7 @@
 | S09 | ✅ | 2026-11-10 | [s09](diario/2026-11-10-s09.md) | bc8350f 682cecd |
 | S10 | ✅ | 2026-11-10 | [s10](diario/2026-11-10-s10.md) | cd869e6 8af959c 0818cac |
 | S11 | ✅ | 2026-11-10 / 11-11 | [s11](diario/2026-11-11-s11.md) | d34033b 6a4af1a 239c8bd |
-| S12 | ⬜ | | | v0.2-analise |
+| S12 | ✅ | 2026-11-11 | [s12](diario/2026-11-11-s12.md) | 18ad216 870aa71 ffb7132 f44cf53 · v0.2-analise |
 | S13 | ⬜ | | | |
 | S14 | ⬜ | | | |
 | S15 | ⬜ | | | |
@@ -49,7 +49,10 @@ Legenda: ⬜ pendente · 🟨 em andamento · ✅ concluída · ✂️ cortada (
 - **(S11)** vnu executado (JDK 24 via `JAVA_HOME`, `vnu-jar` 26.10.12) sobre o `rendered.html`, o DOM serializado, e não o HTML de origem: 205 de 213 sites com erro, mediana 16. Basta validar o DOM ou validar também o `raw.html`?
 - **(S11)** O diretório `c:\` minúsculo quebra o vitest no Windows (25 arquivos falham); com `C:\` passa. Registrar como cuidado de reprodutibilidade?
 - **(S11)** Conferir as referências do ADR 011 citadas de memória (WCAG H67, F46, H51; eMAG 3.1, 3.6, 6.2).
-- **(S11)** Interativos falsos (5 sites) e obsoletos (4 sites) quase não variam: considerar no ADR 003 (S12).
+- **(S12)** Validar o [ADR 003](decisoes/003-indice-de-semantica.md) (proposto): pesos 20/20/15/15/10/10/5/5 e pontos de corte. A WebAIM #10 sustenta o peso dos títulos (71,6% começam por eles), mas não o dos landmarks (3,7%). Sensibilidade: ρ = 0,984 entre os rankings. Detalhes sem consulta: saltos / (`total` − 1), interativos N/A sem `onclick`, layout declarada penalizada.
+- **(S12)** Subnotas pouco informativas: campos (mediana 0), interativos (só 5 sites, todos 0), metadados e obsoletos (quase constantes). Manter as 8 ou simplificar?
+- **(S12)** Validar o [ADR 012](decisoes/012-dataset-e-tratamentos.md) (proposto): `metrics.json` fora do `data/raw/`; os 9 stubs de meta refresh e os 6 `vazio` ficam no dataset, com flags (resolve as pendências S10 de meta refresh e das páginas de teste da STI quanto ao dataset; a análise com e sem eles fica para a S13).
+- **(S12)** Reprodutibilidade: `gitDirty` conta arquivos fora do git (apagar as saídas antes de regenerar); o git converte LF para CRLF no checkout do Windows, o que muda o SHA-256 do `dataset.csv`. Criar `.gitattributes`?
 
 - **(S06)** Validar o [ADR 007](decisoes/007-parametros-do-lighthouse.md) (proposto): parâmetros do Lighthouse.
 - **(S06)** Variabilidade do Lighthouse no piloto: amplitude da nota de performance de até 32 pontos (mediana 8). Manter 3 execuções (regra 6) ou subir para 5?
