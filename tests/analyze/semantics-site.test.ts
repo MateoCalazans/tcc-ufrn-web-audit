@@ -38,6 +38,31 @@ describe("analisarSemanticaDoSite", () => {
     expect(s.indicadores?.divSpan).toEqual({ div: 1, span: 1, total: 9, proporcao: 2 / 9 });
     expect(s.indicadores?.landmarks).toEqual({ banner: 1, navigation: 1, main: 1, contentinfo: 1 });
     expect(s.indicadores?.titulos).toMatchObject({ total: 2, h1: 1, saltos: 1, maiorSalto: 2 });
+    // Parte 2 (S11, ADR 011) entra no mesmo objeto.
+    expect(s.indicadores?.metadados).toEqual({
+      lang: "pt-BR",
+      temTitle: true,
+      titleComprimento: 6,
+      temViewport: false,
+      temDescription: false,
+    });
+    expect(s.indicadores?.estrutura).toEqual({ article: 0, section: 0, aside: 0, figure: 0, ul: 0, ol: 0 });
+    expect(s.indicadores?.obsoletas.whatwg).toBe(0);
+    expect(s.vnu).toBeNull();
+  });
+
+  it("com --vnu e Java incompatível, cada site leva o motivo e a análise segue", () => {
+    const s = analisarSemanticaDoSite(join(SITES, "ok.exemplo.ufrn.br"), META, { disponivel: false, motivo: "Java 8 < 17 (exigido pelo vnu.jar)" });
+    expect(s.vnu).toEqual({ status: "indisponivel", motivo: "Java 8 < 17 (exigido pelo vnu.jar)" });
+    expect(s.indicadores).not.toBeNull();
+  });
+
+  it("com --vnu disponível, valida o rendered.html; sem arquivo, vnu fica null", () => {
+    const arquivos: string[] = [];
+    const vnu = { disponivel: true as const, versao: "x", validar: (f: string) => (arquivos.push(f), { status: "ok" as const, versao: "x", erros: 3, avisos: 0 }) };
+    expect(analisarSemanticaDoSite(join(SITES, "ok.exemplo.ufrn.br"), META, vnu).vnu).toMatchObject({ erros: 3 });
+    expect(arquivos).toEqual([join(SITES, "ok.exemplo.ufrn.br", "rendered.html")]);
+    expect(analisarSemanticaDoSite(join(SITES, "sem-arquivo.exemplo.ufrn.br"), META, vnu).vnu).toBeNull();
   });
 
   it("stub de redirecionamento: renderedComRefresh sim, indicadores do stub", () => {

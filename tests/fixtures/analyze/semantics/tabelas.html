@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="pt-BR"><head><title>Tabelas</title></head>
+<body>
+  <!-- 1: layout heurística (aninhada) que contém 2: indeterminada -->
+  <table id="t1"><tr><td><table id="t2"><tr><td>menu</td></tr></table></td><td>conteúdo</td></tr></table>
+  <!-- 3: layout heurística (div na célula) -->
+  <table id="t3"><tr><td><div class="box">bloco</div></td></tr></table>
+  <!-- 4: dados (th) -->
+  <table id="t4"><tr><th>Ano</th><th>Vagas</th></tr><tr><td><p>2026</p></td><td>40</td></tr></table>
+  <!-- 5: dados (caption) -->
+  <table id="t5"><caption>Horários</caption><tr><td>8h</td></tr></table>
+  <!-- 6: layout declarada -->
+  <table id="t6" role="presentation"><tr><td><th>x</th></td></tr></table>
+  <!-- 7: dados (role grid) -->
+  <table id="t7" role="grid"><tr><td><div>x</div></td></tr></table>
+  <!-- 8: layout heurística: o th é da tabela aninhada (9: dados), não dela -->
+  <table id="t8"><tr><td><table id="t9"><thead><tr><th>h</th></tr></thead></table></td></tr></table>
+  <!-- 10: indeterminada (só texto) -->
+  <table id="t10"><tr><td>a</td><td>b</td></tr></table>
+  <!-- oculta: não conta -->
+  <div hidden><table><tr><td>x</td></tr></table></div>
+</body></html>

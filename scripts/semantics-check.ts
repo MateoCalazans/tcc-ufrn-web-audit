@@ -1,16 +1,17 @@
 /**
- * Verificação da S10: roda `analisarSemanticaDoSite` em todos os sites de
+ * Verificação da S10/S11: roda `analisarSemanticaDoSite` em todos os sites de
  * `data/raw/` e imprime contagens. Só leitura; não grava nada (o
  * `metrics.json`/`dataset.csv` ficam para a S12). O conjunto principal é o
  * da S09 (performance `completo` e não excluído, ADR 009).
  *
- * Uso: npx tsx scripts/semantics-check.ts
+ * Uso: npx tsx scripts/semantics-check.ts [--vnu [--vnu-jar <arquivo>]]
  */
 import { existsSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 
 import { analisarPerformanceDoSite } from "../src/analyze/performance.js";
 import { analisarSemanticaDoSite, type SemanticaSite } from "../src/analyze/semantics.js";
+import { opcoesVnu, prepararVnu, type Vnu } from "../src/analyze/vnu.js";
 import { buildMeta } from "../src/shared/meta.js";
 
 const RAW = join("data", "raw");
@@ -18,12 +19,14 @@ const meta = buildMeta();
 const sites: SemanticaSite[] = [];
 const principalIds = new Set<string>();
 const erros: string[] = [];
+const optVnu = opcoesVnu(process.argv.slice(2), process.env);
+const vnu: Vnu | undefined = optVnu === null ? undefined : prepararVnu(optVnu);
 
 for (const id of readdirSync(RAW).sort()) {
   const dir = join(RAW, id);
   if (!existsSync(join(dir, "collect.json"))) continue;
   try {
-    sites.push(analisarSemanticaDoSite(dir, meta));
+    sites.push(analisarSemanticaDoSite(dir, meta, vnu));
     if (existsSync(join(dir, "lighthouse.json"))) {
       const p = analisarPerformanceDoSite(dir, meta);
       if (p.status === "completo" && p.exclusao === null) principalIds.add(id);
@@ -82,7 +85,63 @@ const out = {
       comPeloMenos1Salto: ind.filter((i) => i.titulos.saltos > 0).length,
       primeiroNivel: contar(ind.map((i) => i.titulos.primeiroNivel ?? "sem")),
     },
+    estrutura: Object.fromEntries(
+      (["article", "section", "aside", "figure", "ul", "ol"] as const).map((t) => [
+        t,
+        { sitesComPeloMenos1: ind.filter((i) => i.estrutura[t] > 0).length, porSite: quantis(ind.map((i) => i.estrutura[t])) },
+      ]),
+    ),
+    interativosFalsos: {
+      sitesComPeloMenos1: ind.filter((i) => i.interativosFalsos.falsos > 0).length,
+      porSite: quantis(ind.map((i) => i.interativosFalsos.falsos)),
+      sitesComOnclick: ind.filter((i) => i.interativosFalsos.comOnclick > 0).length,
+    },
+    metadados: {
+      semLang: ind.filter((i) => i.metadados.lang === null).length,
+      lang: contar(ind.map((i) => (i.metadados.lang ?? "sem").toLowerCase())),
+      semTitle: ind.filter((i) => !i.metadados.temTitle).length,
+      semViewport: ind.filter((i) => !i.metadados.temViewport).length,
+      semDescription: ind.filter((i) => !i.metadados.temDescription).length,
+    },
+    imagens: {
+      sitesComImagem: ind.filter((i) => i.imagens.total > 0).length,
+      sitesComPeloMenos1SemAlt: ind.filter((i) => i.imagens.semAlt > 0).length,
+      totalImg: ind.reduce((a, i) => a + i.imagens.total, 0),
+      totalSemAlt: ind.reduce((a, i) => a + i.imagens.semAlt, 0),
+      totalAltVazio: ind.reduce((a, i) => a + i.imagens.altVazio, 0),
+      totalSemAltComAlternativa: ind.reduce((a, i) => a + i.imagens.semAltComAlternativa, 0),
+      proporcaoSemAltPorSite: quantis(ind.filter((i) => i.imagens.total > 0).map((i) => i.imagens.semAlt / i.imagens.total)),
+    },
+    campos: {
+      sitesComCampo: ind.filter((i) => i.campos.total > 0).length,
+      sitesComPeloMenos1SemLabel: ind.filter((i) => i.campos.semLabel > 0).length,
+      totalCampos: ind.reduce((a, i) => a + i.campos.total, 0),
+      totalSemLabel: ind.reduce((a, i) => a + i.campos.semLabel, 0),
+      totalSemLabelComPlaceholderOuTitle: ind.reduce((a, i) => a + i.campos.semLabelComPlaceholderOuTitle, 0),
+    },
+    obsoletas: {
+      sitesComRoteiro: ind.filter((i) => i.obsoletas.roteiro > 0).length,
+      sitesComWhatwg: ind.filter((i) => i.obsoletas.whatwg > 0).length,
+      porTag: ind.reduce<Record<string, number>>((acc, i) => {
+        for (const [t, n] of Object.entries(i.obsoletas.porTag)) acc[t] = (acc[t] ?? 0) + n;
+        return acc;
+      }, {}),
+      sitesPorTag: ind.reduce<Record<string, number>>((acc, i) => {
+        for (const t of Object.keys(i.obsoletas.porTag)) acc[t] = (acc[t] ?? 0) + 1;
+        return acc;
+      }, {}),
+    },
+    tabelas: {
+      sitesComTabela: ind.filter((i) => i.tabelas.total > 0).length,
+      sitesComLayout: ind.filter((i) => i.tabelas.layoutDeclarada + i.tabelas.layoutHeuristica > 0).length,
+      sitesComLayoutHeuristica: ind.filter((i) => i.tabelas.layoutHeuristica > 0).length,
+      totais: (["total", "layoutDeclarada", "layoutHeuristica", "dados", "indeterminada"] as const).reduce<Record<string, number>>(
+        (acc, k) => ((acc[k] = ind.reduce((a, i) => a + i.tabelas[k], 0)), acc),
+        {},
+      ),
+    },
   },
+  vnu: vnu === undefined ? "flag --vnu não usada" : vnu.disponivel ? { versao: vnu.versao, status: contar(sites.map((s) => s.vnu?.status ?? "sem-arquivo")) } : { indisponivel: vnu.motivo },
 };
 
 process.stdout.write(JSON.stringify(out, null, 2) + "\n");
