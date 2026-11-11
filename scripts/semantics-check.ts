@@ -141,7 +141,22 @@ const out = {
       ),
     },
   },
-  vnu: vnu === undefined ? "flag --vnu não usada" : vnu.disponivel ? { versao: vnu.versao, status: contar(sites.map((s) => s.vnu?.status ?? "sem-arquivo")) } : { indisponivel: vnu.motivo },
+  vnu: vnu === undefined ? "flag --vnu não usada" : vnu.disponivel ? {
+          versao: vnu.versao,
+          java: vnu.java,
+          status: contar(sites.map((s) => s.vnu?.status ?? "sem-arquivo")),
+          falhas: sites.filter((s) => s.vnu !== null && s.vnu.status !== "ok").map((s) => `${s.id}: ${s.vnu && "motivo" in s.vnu ? s.vnu.motivo : ""}`),
+          noConjuntoPrincipal: (() => {
+            const v = principal.flatMap((s) => (s.status === "ok" && s.vnu?.status === "ok" ? [s.vnu] : []));
+            return {
+              n: v.length,
+              semErros: v.filter((x) => x.erros === 0).length,
+              erros: quantis(v.map((x) => x.erros)),
+              avisos: quantis(v.map((x) => x.avisos)),
+              totalErros: v.reduce((a, x) => a + x.erros, 0),
+            };
+          })(),
+        } : { indisponivel: vnu.motivo },
 };
 
 process.stdout.write(JSON.stringify(out, null, 2) + "\n");

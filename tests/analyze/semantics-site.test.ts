@@ -59,7 +59,7 @@ describe("analisarSemanticaDoSite", () => {
 
   it("com --vnu disponível, valida o rendered.html; sem arquivo, vnu fica null", () => {
     const arquivos: string[] = [];
-    const vnu = { disponivel: true as const, versao: "x", validar: (f: string) => (arquivos.push(f), { status: "ok" as const, versao: "x", erros: 3, avisos: 0 }) };
+    const vnu = { disponivel: true as const, versao: "x", java: 24, validar: (f: string) => (arquivos.push(f), { status: "ok" as const, versao: "x", erros: 3, avisos: 0 }) };
     expect(analisarSemanticaDoSite(join(SITES, "ok.exemplo.ufrn.br"), META, vnu).vnu).toMatchObject({ erros: 3 });
     expect(arquivos).toEqual([join(SITES, "ok.exemplo.ufrn.br", "rendered.html")]);
     expect(analisarSemanticaDoSite(join(SITES, "sem-arquivo.exemplo.ufrn.br"), META, vnu).vnu).toBeNull();

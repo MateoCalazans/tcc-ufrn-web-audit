@@ -1,3 +1,5 @@
+import { join } from "node:path";
+
 import { describe, expect, it } from "vitest";
 
 import { type Executar, lerSaidaVnu, opcoesVnu, prepararVnu, versaoPrincipalJava } from "../../src/analyze/vnu.js";
@@ -54,9 +56,20 @@ describe("opcoesVnu", () => {
   });
 
   it("--vnu-jar vale mais que VNU_JAR", () => {
-    expect(opcoesVnu(["--vnu", "--vnu-jar", "a.jar"], { VNU_JAR: "b.jar" })).toEqual({ jar: "a.jar" });
-    expect(opcoesVnu(["--vnu"], { VNU_JAR: "b.jar" })).toEqual({ jar: "b.jar" });
-    expect(opcoesVnu(["--vnu"], {})).toEqual({ jar: null });
+    expect(opcoesVnu(["--vnu", "--vnu-jar", "a.jar"], { VNU_JAR: "b.jar" })?.jar).toBe("a.jar");
+    expect(opcoesVnu(["--vnu"], { VNU_JAR: "b.jar" })?.jar).toBe("b.jar");
+    expect(opcoesVnu(["--vnu"], {}, () => null)?.jar).toBeNull();
+  });
+
+  it("sem flag nem VNU_JAR, usa o jar do pacote vnu-jar", () => {
+    expect(opcoesVnu(["--vnu"], {}, () => "pkg/vnu.jar")?.jar).toBe("pkg/vnu.jar");
+    expect(opcoesVnu(["--vnu"], { VNU_JAR: "b.jar" }, () => "pkg/vnu.jar")?.jar).toBe("b.jar");
+  });
+
+  it("Java: --vnu-java, senão JAVA_HOME/bin/java, senão o java do PATH", () => {
+    expect(opcoesVnu(["--vnu", "--vnu-java", "C:/jdk/bin/java"], { JAVA_HOME: "C:/outro" })?.java).toBe("C:/jdk/bin/java");
+    expect(opcoesVnu(["--vnu"], { JAVA_HOME: "C:/jdk-24" })?.java).toBe(join("C:/jdk-24", "bin", "java"));
+    expect(opcoesVnu(["--vnu"], {})?.java).toBe("java");
   });
 });
 
@@ -86,7 +99,15 @@ describe("prepararVnu", () => {
     const v = prepararVnu({ jar: "vnu.jar" }, javaFalso(JAVA17, chamadas), existe);
     expect(v.disponivel).toBe(true);
     if (!v.disponivel) return;
+    expect(v.java).toBe(17);
     expect(v.validar("data/raw/x/rendered.html")).toEqual({ status: "ok", versao: "26.4.11", erros: 2, avisos: 1 });
     expect(chamadas.at(-1)).toEqual(["java", "-jar", "vnu.jar", "--format", "json", "--stdout", "data/raw/x/rendered.html"]);
+  });
+
+  it("usa o executável do Java informado em todas as chamadas", () => {
+    const chamadas: string[][] = [];
+    const v = prepararVnu({ jar: "vnu.jar", java: "C:/jdk-24/bin/java" }, javaFalso('java version "24.0.1" 2025-04-15', chamadas), existe);
+    if (v.disponivel) v.validar("a.html");
+    expect(chamadas.map((c) => c[0])).toEqual(["C:/jdk-24/bin/java", "C:/jdk-24/bin/java", "C:/jdk-24/bin/java"]);
   });
 });
