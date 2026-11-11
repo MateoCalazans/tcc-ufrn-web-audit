@@ -80,27 +80,41 @@ flag. Em cada item há escolhas que mudam os números.
    atributos de apresentação (`width`, `cellpadding`, `border="0"`), que
    também aparecem em tabelas de dados antigas; e usar o tamanho da tabela,
    que pede CSS computado.
-8. **Validação HTML com vnu (opcional).** Atrás da flag `--vnu`; o caminho do
-   `vnu.jar` vem de `--vnu-jar <arquivo>` ou da variável `VNU_JAR`, e o `.jar`
-   **não** é dependência do projeto. O README do validator/validator exige
-   **Java 17 ou mais novo**. A máquina da S11 tem Java 1.8.0_481
-   (`java -version`). Por isso:
-   - o adaptador (`src/analyze/vnu.ts`) verifica o Java e o `.jar` uma vez por
+8. **Validação HTML com vnu (opcional).** Atrás da flag `--vnu`. O README do
+   validator/validator exige **Java 17 ou mais novo**.
+   - **`.jar`:** vem de `--vnu-jar <arquivo>`, senão de `VNU_JAR`, senão do
+     pacote npm **`vnu-jar` 26.10.12** (devDependency com versão exata,
+     registrada em `toolVersions`; SHA-256 do `.jar` em
+     `docs/ambiente/hashes.md`). Escolheu-se o pacote npm porque o GitHub do
+     validator só publica o `.jar` avulso no build contínuo `latest`, sem
+     número de versão. O `postinstall` do pacote, que baixaria um Java
+     próprio, ficou bloqueado pelo npm e não é usado.
+   - **Java:** vem de `--vnu-java <executável>`, senão de
+     `$JAVA_HOME/bin/java`, senão do `java` do PATH. Na máquina da S11, o PATH
+     achava primeiro o Java 1.8.0_481 (`java8path` da Oracle), e o
+     `JAVA_HOME` apontava para o JDK 24.0.1. A ordem acima usa o JDK 24 sem
+     mexer no PATH do sistema.
+   - O adaptador (`src/analyze/vnu.ts`) verifica o Java e o `.jar` uma vez por
      lote; se não servirem, cada site recebe
-     `{ status: "indisponivel", motivo }` e a análise segue;
-   - com Java compatível, roda `java -jar vnu.jar --format json --stdout
-     <rendered.html>` e conta `error` e `info/warning`. O código de saída 1
-     (há erros) não é falha de execução;
-   - o adaptador foi testado com um `java` simulado. **A execução real não foi
-     feita** e fica cortada por enquanto (o roteiro marca o vnu como
-     cortável). Ela pode ser feita depois sem mudar código, instalando o Java
-     17 e baixando o `vnu.jar`.
+     `{ status: "indisponivel", motivo }` e a análise segue.
+   - Roda `java -jar vnu.jar --format json --stdout <rendered.html>` e conta
+     as mensagens `error` e `info/warning`. O código de saída 1 (há erros) não
+     é falha de execução.
+   - **O que é validado é o `rendered.html`, o DOM serializado pelo
+     Chromium, e não o HTML enviado pelo servidor.** O parser do navegador já
+     corrigiu os erros de sintaxe (tags não fechadas, aninhamento inválido),
+     então os erros contados são sobretudo de modelo de conteúdo e de
+     atributos. Validar o `raw.html` mediria outra coisa e fica como
+     possibilidade, não implementada.
 
 ## Decisão
 Itens 1–8 como acima. Definições centrais aprovadas pelo autor no plano da S11
 (*"aprovado"*): `alt=""` válido, `placeholder`/`title` não aceitos como
 rótulo, a heurística de tabela e o vnu atrás da flag com registro de
-indisponibilidade.
+indisponibilidade. Depois, o autor pediu para atualizar o Java (*"Vamos
+atualizar o java"*). O uso do JDK 24 já instalado (via `JAVA_HOME`) e do pacote
+`vnu-jar` foi decisão do Claude, relatada ao autor, que autorizou rodar a
+validação (*"Permito"*).
 
 Detalhes acrescentados durante a implementação, sem nova consulta:
 - `role` vazio conta como sem `role` (item 2);
@@ -133,7 +147,8 @@ Detalhes acrescentados durante a implementação, sem nova consulta:
   - `lang` não é validado (BCP 47);
   - a heurística de tabela não foi validada manualmente em amostra; a classe
     `indeterminada` é ambígua por construção;
-  - sem validação HTML (vnu) na coleta atual, por falta de Java 17;
+  - a validação HTML (vnu) é sobre o DOM serializado, não sobre o HTML de
+    origem (item 8);
   - mesmas limitações do ADR 010 (sem CSS computado, stubs de meta refresh).
 
 ## Onde aparece no TCC

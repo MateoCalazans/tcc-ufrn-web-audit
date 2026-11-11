@@ -2,9 +2,9 @@
 
 > Atualizado ao fim de cada sessão (o `/fim-de-sessao` faz isso).
 
-**Última atualização:** 2026-11-10
+**Última atualização:** 2026-11-11
 **Fase atual:** 3 — Análise (coleta congelada em 2026-11-09)
-**Próxima sessão:** S11
+**Próxima sessão:** S12
 
 | Sessão | Situação | Data | Diário | Commits/tag |
 |---|---|---|---|---|
@@ -19,7 +19,7 @@
 | S08 | ✅ | 2026-11-09 / 11-10 | [s08](diario/2026-11-10-s08.md) | 1e9e659 91cbfc5 78a1f86 f85a63d 01b9829 · coleta congelada (sem tag) |
 | S09 | ✅ | 2026-11-10 | [s09](diario/2026-11-10-s09.md) | bc8350f 682cecd |
 | S10 | ✅ | 2026-11-10 | [s10](diario/2026-11-10-s10.md) | cd869e6 8af959c 0818cac |
-| S11 | ⬜ | | | |
+| S11 | ✅ | 2026-11-10 / 11-11 | [s11](diario/2026-11-11-s11.md) | d34033b 6a4af1a 239c8bd |
 | S12 | ⬜ | | | v0.2-analise |
 | S13 | ⬜ | | | |
 | S14 | ⬜ | | | |
@@ -45,6 +45,11 @@ Legenda: ⬜ pendente · 🟨 em andamento · ✅ concluída · ✂️ cortada (
 - **(S10)** Validar o [ADR 010](decisoes/010-indicadores-semanticos-parte-1.md) (proposto): definições de div+span, landmarks (HTML-AAM) e títulos. Detalhes acrescentados sem consulta: `svg`/`math`, `noscript` na flag, primeiro título não comparado, status `vazio`.
 - **(S10)** `enterpriseenrollment.ufrn.br` (tela de login da Microsoft/Intune) excluído da análise com motivo `login` (regra 4), por decisão do autor: adendo ao ADR 009. Conjunto principal: **217** sites (era 218).
 - **(S10)** 4 páginas idênticas "Página de Teste de Hospedagem Web" da STI (`eject.ect`, `farmacia.ccs`, `gmag.fisica`, `histed.ce`) com `body` vazio: sem indicadores semânticos, mas no conjunto principal de performance. Decidir na S12.
+- **(S11)** Validar o [ADR 011](decisoes/011-indicadores-semanticos-parte-2.md) (proposto): heurística de tabela de layout (não validada em amostra), `alt=""` válido, `placeholder`/`title` não aceitos como rótulo (103 de 145 campos sem rótulo têm só isso) e 6 detalhes acrescentados sem consulta.
+- **(S11)** vnu executado (JDK 24 via `JAVA_HOME`, `vnu-jar` 26.10.12) sobre o `rendered.html`, o DOM serializado, e não o HTML de origem: 205 de 213 sites com erro, mediana 16. Basta validar o DOM ou validar também o `raw.html`?
+- **(S11)** O diretório `c:\` minúsculo quebra o vitest no Windows (25 arquivos falham); com `C:\` passa. Registrar como cuidado de reprodutibilidade?
+- **(S11)** Conferir as referências do ADR 011 citadas de memória (WCAG H67, F46, H51; eMAG 3.1, 3.6, 6.2).
+- **(S11)** Interativos falsos (5 sites) e obsoletos (4 sites) quase não variam: considerar no ADR 003 (S12).
 
 - **(S06)** Validar o [ADR 007](decisoes/007-parametros-do-lighthouse.md) (proposto): parâmetros do Lighthouse.
 - **(S06)** Variabilidade do Lighthouse no piloto: amplitude da nota de performance de até 32 pontos (mediana 8). Manter 3 execuções (regra 6) ou subir para 5?
