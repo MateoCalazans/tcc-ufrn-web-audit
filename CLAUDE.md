@@ -23,7 +23,7 @@ artigo. Por isso, reprodutibilidade e registro valem tanto quanto o código func
 |---|--------|---------|---------|-------|
 | 0 | Triagem | `npm run triage` | `data/input/registros-ufrn.txt` | `data/corpus.csv` |
 | 1 | Coleta | `npm run collect -- --limit N` | `data/corpus.csv` | `data/raw/<site>/` |
-| 2 | Análise | `npm run analyze` | `data/raw/` | `data/raw/<site>/metrics.json`, `data/processed/dataset.csv` |
+| 2 | Análise | `npm run analyze` | `data/raw/` | `data/processed/sites/<site>/metrics.json` (ADR 012), `data/processed/dataset.csv` |
 | 3 | Recomendação | `npm run recommend -- --site <id>` | métricas + HTML | `recommendations.json`, `fix.diff`, `fixed.html` |
 | 4 | Validação | `npm run validate -- --sample <arquivo>` | original + corrigido | `validation.json` |
 | — | Relatórios | `npm run report` | dataset + validações | `reports/` |
