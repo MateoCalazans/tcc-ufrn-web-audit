@@ -2,9 +2,9 @@
 
 > Atualizado ao fim de cada sessão (o `/fim-de-sessao` faz isso).
 
-**Última atualização:** 2026-11-11
-**Fase atual:** 4 — Relatórios e panorama (S13); análise fechada na tag v0.2-analise
-**Próxima sessão:** S13
+**Última atualização:** 2026-11-12
+**Fase atual:** 4 — Recomendação (S14); diagnóstico da S13 concluído
+**Próxima sessão:** S14
 
 | Sessão | Situação | Data | Diário | Commits/tag |
 |---|---|---|---|---|
@@ -21,7 +21,7 @@
 | S10 | ✅ | 2026-11-10 | [s10](diario/2026-11-10-s10.md) | cd869e6 8af959c 0818cac |
 | S11 | ✅ | 2026-11-10 / 11-11 | [s11](diario/2026-11-11-s11.md) | d34033b 6a4af1a 239c8bd |
 | S12 | ✅ | 2026-11-11 | [s12](diario/2026-11-11-s12.md) | 18ad216 870aa71 ffb7132 f44cf53 · v0.2-analise |
-| S13 | ⬜ | | | |
+| S13 | ✅ | 2026-11-12 | [s13](diario/2026-11-12-s13.md) | 0beff4c cb16291 a4dbc32 39eafb5 |
 | S14 | ⬜ | | | |
 | S15 | ⬜ | | | |
 | S16 | ⬜ | | | v0.3-recomendacao |
@@ -66,6 +66,11 @@ Legenda: ⬜ pendente · 🟨 em andamento · ✅ concluída · ✂️ cortada (
 - **(S08)** Variação do Lighthouse no corpus: mediana da amplitude de 2, máxima de 35, 27 sites com ≥ 10 pontos (ameaça à validade; a coleta está congelada).
 - **(S08)** Aviso à STI/SINFO não enviado, por decisão do autor (desvio do roteiro).
 - **(S08)** Guardar cópia do `data/raw-coleta-2026-11-09.zip` (1,07 GB, SHA-256 em `docs/ambiente/hashes.md`) fora deste PC. Decidir sobre a tag de congelamento.
+
+- **(S13)** Validar o [ADR 013](decisoes/013-plano-de-analise-estatistica.md) (proposto): Holm por família, limiar de 10 sites por grupo de tecnologia (`outro` = joomla + outro-cms, 11 sites), análise com e sem os stubs. Correlações com n < 10 ou constantes ficam fora (só no notebook; acrescentar ao ADR?).
+- **(S13)** Circularidade semântica × acessibilidade (ρ = 0,47): conferir na documentação do Lighthouse quais auditorias de acessibilidade se sobrepõem às subnotas do índice. Referências estatísticas do ADR 013 citadas de memória.
+- **(S13)** `docs/resultados/tabelas/meta.json` registra `gitCommit` `39d2832` (o notebook foi commitado depois, em `a4dbc32`): rodar de novo? `scikit-posthocs` 0.17.1 instalado no Python global, sem `requirements.txt`. `reports/index.html` (panorama) fora do git: versionar?
+- **(S13)** Cronograma cerca de 1,5 semana atrás do recalibrado: discutir a ordem de cortes.
 
 ## Bloqueios
 -
