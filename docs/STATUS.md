@@ -3,8 +3,8 @@
 > Atualizado ao fim de cada sessão (o `/fim-de-sessao` faz isso).
 
 **Última atualização:** 2026-11-12
-**Fase atual:** 4 — Recomendação (S14); diagnóstico da S13 concluído
-**Próxima sessão:** S14
+**Fase atual:** 4 — Recomendação (S15); motor e 3 regras da S14 concluídos
+**Próxima sessão:** S15
 
 | Sessão | Situação | Data | Diário | Commits/tag |
 |---|---|---|---|---|
@@ -22,7 +22,7 @@
 | S11 | ✅ | 2026-11-10 / 11-11 | [s11](diario/2026-11-11-s11.md) | d34033b 6a4af1a 239c8bd |
 | S12 | ✅ | 2026-11-11 | [s12](diario/2026-11-11-s12.md) | 18ad216 870aa71 ffb7132 f44cf53 · v0.2-analise |
 | S13 | ✅ | 2026-11-12 | [s13](diario/2026-11-12-s13.md) | 0beff4c cb16291 a4dbc32 39eafb5 |
-| S14 | ⬜ | | | |
+| S14 | ✅ | 2026-11-12 | [s14](diario/2026-11-12-s14.md) | d609114 d64373f bb9e380 |
 | S15 | ⬜ | | | |
 | S16 | ⬜ | | | v0.3-recomendacao |
 | S17 | ⬜ | | | |
@@ -71,6 +71,9 @@ Legenda: ⬜ pendente · 🟨 em andamento · ✅ concluída · ✂️ cortada (
 - **(S13)** Circularidade semântica × acessibilidade (ρ = 0,47): conferir na documentação do Lighthouse quais auditorias de acessibilidade se sobrepõem às subnotas do índice. Referências estatísticas do ADR 013 citadas de memória.
 - **(S13)** `reports/index.html` (panorama) fora do git: versionar? (Resolvido depois da S13: `analysis/requirements.txt` criado e notebook reexecutado com o `meta.json` apontando para o commit que já tem o notebook.)
 - **(S13)** Cronograma cerca de 1,5 semana atrás do recalibrado: discutir a ordem de cortes.
+- **(S14)** Validar o [ADR 014](decisoes/014-motor-de-regras-e-correcoes.md) (proposto): correções sobre o HTML bruto, edições nas posições de origem, `lang="pt-BR"` fixo, dimensões intrínsecas do HAR, meta viewport depois do charset. Severidades e a dimensão do achado de zoom bloqueado (`performance`) ficaram fora do ADR. Referências citadas de memória.
+- **(S14)** Fins de linha: o git converterá LF → CRLF nas fixtures de `tests/fixtures/recommend/`; num clone novo no Windows os testes da `meta-viewport` e o `fixed.esperado.html` devem falhar (não verificado). Criar `.gitattributes` (resolve também a pendência da S12).
+- **(S14)** Escopo de acessibilidade: o autor manteve o roteiro (sem ARIA/WCAG além das regras previstas). Declarar no texto que o sistema não audita conformidade WCAG; justificar as regras pela frequência das falhas no diagnóstico (não feito).
 
 ## Bloqueios
 -
