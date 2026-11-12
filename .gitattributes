@@ -1,2 +1,14 @@
 # Manifestos de hash: sempre LF, para o SHA-256 registrado em docs/ambiente/hashes.md bater em qualquer SO
 *.sha256 text eol=lf
+
+# Fins de linha fixos (reprodutibilidade, S14): LF no repositório e no checkout,
+# em qualquer sistema. Sem isto, o checkout no Windows (core.autocrlf) troca
+# para CRLF, o que muda o SHA-256 do dataset.csv (S12) e quebra as fixtures
+# de tests/fixtures/recommend/ (S14).
+* text=auto eol=lf
+
+# Bytes intactos (sem conversão):
+# - entrada original da triagem, guardada com CRLF desde a S02;
+data/input/registros-ufrn.txt -text
+# - fixture que testa CRLF de propósito.
+tests/fixtures/recommend/meta-viewport/xhtml-crlf.html -text
