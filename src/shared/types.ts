@@ -4,6 +4,8 @@
  * Mantidos juntos aqui para servir de contrato entre os módulos.
  */
 
+import type { CheerioAPI } from "cheerio";
+
 /** Metadados obrigatórios em toda saída JSON (regra 10 do CLAUDE.md). */
 export interface Meta {
   /** ISO 8601, UTC, momento da geração. */
@@ -75,7 +77,24 @@ export interface SiteMetrics {
 export type Severidade = "info" | "baixa" | "media" | "alta";
 export type Dimensao = "performance" | "semantica";
 
+/**
+ * Edição pontual sobre o texto do HTML de entrada (ADR 014): troca
+ * `html.slice(inicio, fim)` por `texto`. Inserção = `inicio === fim`.
+ */
+export interface Edicao {
+  inicio: number;
+  fim: number;
+  texto: string;
+}
+
+/** Posição no HTML de entrada (1-based), para o mantenedor achar o trecho. */
+export interface Posicao {
+  linha: number;
+  coluna: number;
+}
+
 export interface Recommendation {
+  /** `<regra>-<n>`, determinístico na ordem do documento. */
   id: string;
   /** id da regra que a gerou. */
   regra: string;
@@ -83,10 +102,17 @@ export interface Recommendation {
   dimensao: Dimensao;
   /** trecho/seletor que embasa a recomendação. */
   evidencia: string;
-  /** se a regra consegue aplicar a correção automaticamente. */
+  /** `null` quando o trecho não existe no arquivo (tag inferida pelo parser). */
+  posicao: Posicao | null;
+  /** se a correção foi aplicada no `fixed.html`. */
   correcaoAutomatica: boolean;
   mensagem: string;
+  /** edições aplicadas (vazio se `correcaoAutomatica` é `false`). */
+  edicoes: Edicao[];
 }
+
+/** O que uma regra devolve; o motor atribui `id` e `regra`. */
+export type Achado = Omit<Recommendation, "id" | "regra" | "correcaoAutomatica">;
 
 /**
  * Contrato de uma regra de recomendação (um arquivo por regra em
@@ -99,14 +125,35 @@ export interface Rule {
   /** Descrição curta do que a regra verifica. */
   descricao: string;
   /**
-   * Avalia o HTML e devolve as recomendações encontradas. Função pura em
-   * relação à entrada: não escreve em disco nem muta o HTML recebido.
+   * Avalia o HTML e devolve os achados. Função pura em relação à entrada: não
+   * escreve em disco nem muta o documento. A correção, se houver, vem como
+   * `edicoes` sobre `contexto.html` (ADR 014).
    */
-  avaliar(contexto: RuleContext): Recommendation[] | Promise<Recommendation[]>;
+  avaliar(contexto: RuleContext): Achado[] | Promise<Achado[]>;
 }
 
 export interface RuleContext {
   siteId: string;
-  /** HTML (bruto ou renderizado, conforme a regra). */
+  /** URL da página (para resolver URLs relativas). */
+  url: string;
+  /** HTML de entrada: `index.html`, o bruto (ADR 014). */
   html: string;
+  /** Documento parseado com posições de origem (`sourceCodeLocationInfo`). */
+  $: CheerioAPI;
+  /** HAR da coleta, se existir. */
+  har?: Har;
+}
+
+/** Subconjunto do HAR 1.2 usado pelas regras. */
+export interface Har {
+  log: {
+    entries: Array<{
+      request: { url: string };
+      response: {
+        status: number;
+        redirectURL?: string;
+        content: { mimeType?: string; text?: string; encoding?: string };
+      };
+    }>;
+  };
 }
