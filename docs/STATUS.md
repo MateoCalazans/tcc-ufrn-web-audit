@@ -67,9 +67,9 @@ Legenda: ⬜ pendente · 🟨 em andamento · ✅ concluída · ✂️ cortada (
 - **(S08)** Aviso à STI/SINFO não enviado, por decisão do autor (desvio do roteiro).
 - **(S08)** Guardar cópia do `data/raw-coleta-2026-11-09.zip` (1,07 GB, SHA-256 em `docs/ambiente/hashes.md`) fora deste PC. Decidir sobre a tag de congelamento.
 
-- **(S13)** Validar o [ADR 013](decisoes/013-plano-de-analise-estatistica.md) (proposto): Holm por família, limiar de 10 sites por grupo de tecnologia (`outro` = joomla + outro-cms, 11 sites), análise com e sem os stubs. Correlações com n < 10 ou constantes ficam fora (só no notebook; acrescentar ao ADR?).
+- **(S13)** Validar o [ADR 013](decisoes/013-plano-de-analise-estatistica.md) (proposto): Holm por família, limiar de 10 sites por grupo de tecnologia (`outro` = joomla + outro-cms, 11 sites), análise com e sem os stubs. Correlações com n < 10 ou variável constante ficam fora do Holm (acrescentado ao ADR depois da S13; só `sub_interativos`, n = 5).
 - **(S13)** Circularidade semântica × acessibilidade (ρ = 0,47): conferir na documentação do Lighthouse quais auditorias de acessibilidade se sobrepõem às subnotas do índice. Referências estatísticas do ADR 013 citadas de memória.
-- **(S13)** `docs/resultados/tabelas/meta.json` registra `gitCommit` `39d2832` (o notebook foi commitado depois, em `a4dbc32`): rodar de novo? `scikit-posthocs` 0.17.1 instalado no Python global, sem `requirements.txt`. `reports/index.html` (panorama) fora do git: versionar?
+- **(S13)** `reports/index.html` (panorama) fora do git: versionar? (Resolvido depois da S13: `analysis/requirements.txt` criado e notebook reexecutado com o `meta.json` apontando para o commit que já tem o notebook.)
 - **(S13)** Cronograma cerca de 1,5 semana atrás do recalibrado: discutir a ordem de cortes.
 
 ## Bloqueios

@@ -53,6 +53,19 @@ ADR 010 (1a) e do ADR 012 (2).
 
      Cada teste traz ρ, p bruto, p ajustado (Holm) e n. O ρ é interpretado
      pelo tamanho, e não só pela significância.
+
+     **Testes não calculados.** Cada correlação usa só os sites em que as duas
+     variáveis existem: uma subnota N/A (ADR 003) sai do par. Um teste não é
+     calculado, e fica fora da correção de Holm, quando:
+     - alguma das variáveis é **constante** no par. Nesse caso o ρ de Spearman
+       não é definido (variância zero), e o motivo é matemático;
+     - o par tem **n < 10**. É um limiar escolhido pelo autor: com tão poucos
+       pontos, um único site decide o sinal do ρ.
+
+     O teste aparece na tabela com ρ e p vazios e com o `motivo`. Na coleta
+     de 2026-11-09, só `sub_interativos` × `nota_performance` foi afetado:
+     n = 5, e os 5 sites tiram 0. Esse teste cairia pelos dois critérios.
+     Assim, a família secundária tem 9 testes, e o Holm corrige 8.
 3. **Comparação por tecnologia (Kruskal-Wallis)**
    - a) Os 5 grupos como estão. Contras: Joomla tem n = 2, e o teste fica
      dominado pelos grupos grandes, com postos instáveis no grupo pequeno.
