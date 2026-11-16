@@ -2,16 +2,19 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { createRequire } from "node:module";
 import { join } from "node:path";
 
+import { escolherExecucao } from "../analyze/performance.js";
+import { LH_RECORD, type LighthouseRecord, lhRunFile } from "../collect/lighthouse.js";
 import { createLogger } from "../shared/logger.js";
 import { buildMeta } from "../shared/meta.js";
-import type { Har } from "../shared/types.js";
+import type { Har, LhrRegras } from "../shared/types.js";
 import { codificar, decodificar } from "./encoding.js";
 import { aplicarRegras } from "./engine.js";
 import { REGRAS } from "./rules/index.js";
 
 /**
  * Módulo 3 — Recomendação (S14, ADR 014). Lê `data/raw/<id>/` (imutável,
- * regra 8): `index.html` (bruto), `collect.json` (URL) e `page.har`. Grava em
+ * regra 8): `index.html` (bruto), `collect.json` (URL), `page.har` e, desde a
+ * S15, o `lh<n>.json` da execução mediana (ADR 009). Grava em
  * `data/processed/sites/<id>/`: `recommendations.json`, `fixed.html`, `fix.diff`.
  *
  * Uso: npm run recommend -- --site <id> [--site <id> ...]
@@ -50,7 +53,19 @@ for (const id of ids) {
     const harPath = join(dir, "page.har");
     const har = existsSync(harPath) ? (JSON.parse(readFileSync(harPath, "utf8")) as Har) : undefined;
 
-    const r = await aplicarRegras({ siteId: id, url, html: fonte.texto, har }, REGRAS);
+    // Relatório do Lighthouse da execução mediana (ADR 009); sem execução válida, as
+    // regras que dependem dele não acusam nada.
+    let lighthouse: LhrRegras | undefined;
+    let lhArquivo: string | null = null;
+    if (existsSync(join(dir, LH_RECORD))) {
+      const { execucao } = escolherExecucao(JSON.parse(readFileSync(join(dir, LH_RECORD), "utf8")) as LighthouseRecord);
+      if (execucao !== null && existsSync(join(dir, lhRunFile(execucao)))) {
+        lhArquivo = lhRunFile(execucao);
+        lighthouse = JSON.parse(readFileSync(join(dir, lhArquivo), "utf8")) as LhrRegras;
+      }
+    }
+
+    const r = await aplicarRegras({ siteId: id, url, html: fonte.texto, har, lighthouse }, REGRAS);
 
     const destino = join(PROCESSED, id);
     mkdirSync(destino, { recursive: true });
@@ -58,7 +73,14 @@ for (const id of ids) {
       meta,
       id,
       url,
-      fonte: { html: "index.html", codificacao: fonte.codificacao, bom: fonte.bom, har: har !== undefined },
+      fonte: {
+        html: "index.html",
+        codificacao: fonte.codificacao,
+        bom: fonte.bom,
+        har: har !== undefined,
+        lighthouse: lhArquivo,
+        lighthouseVersion: lighthouse?.lighthouseVersion ?? null,
+      },
       regras: REGRAS.map((x) => ({ id: x.id, dimensao: x.dimensao, descricao: x.descricao })),
       resumo: r.resumo,
       recommendations: r.recommendations,

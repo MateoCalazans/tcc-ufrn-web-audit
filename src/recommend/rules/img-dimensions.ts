@@ -10,7 +10,8 @@ import { type Dimensoes, dimensoesDaImagem } from "../image-size.js";
  * atributo não numérico → só recomenda.
  */
 
-const ATRIBUTOS_LAZY = ["data-src", "data-srcset", "data-lazy-src", "data-original"];
+/** Atributos de bibliotecas de carregamento tardio por script (o `src` é provisório). */
+export const ATRIBUTOS_LAZY = ["data-src", "data-srcset", "data-lazy-src", "data-original"];
 const MAX_REDIRECTS = 5;
 
 /** Declarações de um `style` inline (propriedade → valor, minúsculos). */

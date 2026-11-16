@@ -142,6 +142,14 @@ export interface RuleContext {
   $: CheerioAPI;
   /** HAR da coleta, se existir. */
   har?: Har;
+  /** Relatório do Lighthouse da execução mediana (ADR 009), se houver execução válida. */
+  lighthouse?: LhrRegras;
+}
+
+/** Subconjunto do relatório do Lighthouse usado pelas regras (S15). */
+export interface LhrRegras {
+  lighthouseVersion?: string;
+  audits: Record<string, { score: number | null; details?: { items?: unknown[] } }>;
 }
 
 /** Subconjunto do HAR 1.2 usado pelas regras. */

@@ -1,6 +1,6 @@
 import { createTwoFilesPatch, FILE_HEADERS_ONLY } from "diff";
 
-import type { Dimensao, Edicao, Har, Recommendation, Rule } from "../shared/types.js";
+import type { Dimensao, Edicao, Har, LhrRegras, Recommendation, Rule } from "../shared/types.js";
 import { parsear } from "./html.js";
 
 /**
@@ -14,6 +14,7 @@ export interface EntradaMotor {
   url: string;
   html: string;
   har?: Har;
+  lighthouse?: LhrRegras;
 }
 
 export interface ResultadoMotor {

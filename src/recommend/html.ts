@@ -61,6 +61,49 @@ export function inserirAtributo(el: Element, loc: LocTag, nome: string, valor: s
   return { inicio: pos, fim: pos, texto: ` ${nome}="${valor}"` };
 }
 
+/**
+ * Edição que acrescenta ` nome="valor"` logo depois do nome da tag. Usada
+ * quando outra regra já insere depois do último atributo da mesma tag: duas
+ * inserções no mesmo ponto conflitam no motor (ADR 014).
+ */
+export function inserirAtributoAposNome(el: Element, loc: LocTag, nome: string, valor: string): Edicao {
+  const pos = loc.startOffset + 1 + el.tagName.length;
+  return { inicio: pos, fim: pos, texto: ` ${nome}="${valor}"` };
+}
+
+/** Tag de fechamento no arquivo, ou `null` se implícita (o parser a inferiu). */
+export function locFim(el: Element): { startOffset: number; endOffset: number } | null {
+  const loc = (el as Element & { sourceCodeLocation?: { endTag?: { startOffset: number; endOffset: number } } | null })
+    .sourceCodeLocation;
+  return loc?.endTag ?? null;
+}
+
+/** `true` se o elemento ou um ancestral tem `hidden` (ADR 010, item 5). */
+export function oculto($: CheerioAPI, el: Element): boolean {
+  return $(el as never).closest("[hidden]").length > 0;
+}
+
+/** URL base do documento: `<base href>` resolvido contra a URL da página. */
+export function urlBase($: CheerioAPI, url: string): string {
+  const href = ($("base[href]")[0] as Element | undefined)?.attribs.href;
+  try {
+    return href === undefined ? url : new URL(href, url).href;
+  } catch {
+    return url; // base inválido: usa a URL da página
+  }
+}
+
+/** URL absoluta sem fragmento, ou `null` se não for resolvível. */
+export function resolverUrl(ref: string, base: string): string | null {
+  try {
+    const u = new URL(ref.trim(), base);
+    u.hash = "";
+    return u.href;
+  } catch {
+    return null;
+  }
+}
+
 /** Quebra de linha predominante do arquivo (para inserções de linha inteira). */
 export function quebraDeLinha(html: string): string {
   return html.includes("\r\n") ? "\r\n" : "\n";
