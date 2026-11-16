@@ -1,7 +1,7 @@
 # Índice de evidências
 
 > Gerado por `npx tsx scripts/indice-evidencias.ts`. Não editar à mão: rodar o script de novo.
-> Gerado em 2026-11-16T20:31:38.982Z no commit `422a2d275ebe11b9536d2f143a226ade1dff791c`.
+> Gerado em 2026-11-16T20:39:47.412Z no commit `d0f16a9bf6fe25b49e7807dad55d912503eb90fd`.
 
 Lista das decisões (ADRs), dos marcos de código (tags) e das entradas do diário,
 com o resumo do uso do Claude Code tirado das tabelas "Avaliação do que o Claude produziu".
@@ -41,7 +41,7 @@ Números sem arquivo: ADR 017 (reservado para a S20, interface visual; ver `docs
 | `v1.0` | `eb3d69d` | 2026-11-16 | v1.0: pipeline completo (triagem, coleta, análise, recomendação, validação), código congelado na S18 |
 | `v1.0.1-regras` | `84ca81d` | 2026-11-16 | v1.0.1-regras: guarda de renderização na img-dimensions (adendo ADR 014) e landmarks-v2 (adendo ADR 016); análise posterior da validação (S18b) |
 
-## Diário (20 entradas)
+## Diário (21 entradas)
 
 | Sessão | Data | Título | Sessão do roteiro | Ferramenta | Itens avaliados |
 |---|---|---|---|---|---|
@@ -65,19 +65,20 @@ Números sem arquivo: ADR 017 (reservado para a S20, interface visual; ver `docs
 | [S17](../diario/2026-11-16-s17.md) | 2026-11-16 | Cópia local servível | S17 | Claude Code (Opus 5.5) | 8 |
 | [S18](../diario/2026-11-16-s18.md) | 2026-11-16 | Amostra e antes/depois | S18 | Claude Code (Opus 5.5) | 11 |
 | [S18b](../diario/2026-11-16-s18b.md) | 2026-11-16 | Guarda de imagens e LLM v2 (análise posterior) | fora do roteiro | Claude Code (Opus 5.5) | 8 |
+| [S19](../diario/2026-11-16-s19.md) | 2026-11-16 | Pacote de reprodutibilidade | S19 | Claude Code (Opus 5.5) | 7 |
 
 ## Uso do Claude Code (declaração de uso de IA)
 
-20 sessões com diário, 161 itens na tabela de avaliação. Desses, 34 não têm decisão registrada (sessões S00, S01, S02, S03, S04, com `?` na coluna); os percentuais abaixo sobre os 127 itens com decisão registrada:
+21 sessões com diário, 168 itens na tabela de avaliação. Desses, 34 não têm decisão registrada (sessões S00, S01, S02, S03, S04, com `?` na coluna); os percentuais abaixo sobre os 134 itens com decisão registrada:
 
-- Aceito: 45 (35,4%)
-- Aceito (inferido): 30 (23,6%)
-- Alterado: 50 (39,4%)
-- Rejeitado: 2 (1,6%)
+- Aceito: 45 (33,6%)
+- Aceito (inferido): 33 (24,6%)
+- Alterado: 54 (40,3%)
+- Rejeitado: 2 (1,5%)
 
 "Aceito (inferido)" é o item que o autor não comentou na sessão; a aceitação foi registrada pelo Claude por inferência e fica separada da aceitação explícita.
 
-Modelos registrados no campo "Ferramenta": Opus 4.8 (S00, S01, S02, S03, S04); Opus 5.5 (S04, S05, S06, S07, S08, S09, S10, S11, S12, S13, S14, S15, S16, S17, S18, S18b).
+Modelos registrados no campo "Ferramenta": Opus 4.8 (S00, S01, S02, S03, S04); Opus 5.5 (S04, S05, S06, S07, S08, S09, S10, S11, S12, S13, S14, S15, S16, S17, S18, S18b, S19).
 
 | Sessão | Itens | Aceito | Aceito (inferido) | Alterado | Rejeitado | Não registrado |
 |---|---|---|---|---|---|---|
@@ -101,5 +102,6 @@ Modelos registrados no campo "Ferramenta": Opus 4.8 (S00, S01, S02, S03, S04); O
 | S17 | 8 | 2 | 2 | 4 | 0 | 0 |
 | S18 | 11 | 2 | 3 | 6 | 0 | 0 |
 | S18b | 8 | 2 | 3 | 3 | 0 | 0 |
-| **Total** | **161** | **45** | **30** | **50** | **2** | **34** |
-| % do total | | 28,0% | 18,6% | 31,1% | 1,2% | 21,1% |
+| S19 | 7 | 0 | 3 | 4 | 0 | 0 |
+| **Total** | **168** | **45** | **33** | **54** | **2** | **34** |
+| % do total | | 26,8% | 19,6% | 32,1% | 1,2% | 20,2% |
