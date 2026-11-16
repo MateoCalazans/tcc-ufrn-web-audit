@@ -43,6 +43,14 @@ describe("reescreverUrls", () => {
     expect(r(`src="http://cdn.exemplo.com/x.js"`)).toBe(`src="/_ext/cdn.exemplo.com/x.js"`);
     expect(r(`src="//cdn.exemplo.com/x.js"`)).toBe(`src="/_ext/cdn.exemplo.com/x.js"`);
   });
+  it("barra dupla depois do host principal vira /.// (caminho local, não host `assets`)", () => {
+    expect(r(`href="https://exemplo.ufrn.br//assets/a.css"`)).toBe(`href="/.//assets/a.css"`);
+    expect(r(`"https:\\/\\/exemplo.ufrn.br\\/\\/assets\\/a.js"`)).toBe(`"\\/.\\/\\/assets\\/a.js"`);
+    // O navegador resolve /.//x como o caminho //x no mesmo servidor.
+    expect(new URL("/.//assets/a.css", "http://127.0.0.1:8080/p/").href).toBe("http://127.0.0.1:8080//assets/a.css");
+    // host externo com barra dupla continua um caminho sob /_ext/
+    expect(r(`src="https://cdn.exemplo.com//lib.js"`)).toBe(`src="/_ext/cdn.exemplo.com//lib.js"`);
+  });
   it("host sem caminho ganha a barra", () => {
     expect(r(`href="https://exemplo.ufrn.br"`)).toBe(`href="/"`);
     expect(r(`href="https://cdn.exemplo.com?x=1"`)).toBe(`href="/_ext/cdn.exemplo.com/?x=1"`);

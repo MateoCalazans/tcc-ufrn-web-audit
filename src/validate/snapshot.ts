@@ -114,12 +114,19 @@ export function reescreverUrls(texto: string, hostPrincipal: string, hostsExtern
   // Sem esquema, o `//` não pode vir colado a palavra, `/`, `:` ou `\` (ex.: `/foo//h`).
   const re = new RegExp(String.raw`(?:https?:|(?<![\w/:\\]))(\\?/\\?/)(${alternativa})(?=([/\\?#"'\s)<>,;]|$))`, "gi");
   const principal = hostPrincipal.toLowerCase();
-  return texto.replace(re, (_m, barras: string, host: string, seguinte: string | undefined) => {
+  return texto.replace(re, (m: string, barras: string, host: string, seguinte: string | undefined, pos: number, todo: string) => {
     const escapado = barras.includes("\\");
     const barra = escapado ? "\\/" : "/";
     const temBarraDepois = seguinte === "/" || seguinte === "\\";
     const h = host.toLowerCase();
-    if (h === principal) return temBarraDepois ? "" : barra;
+    if (h === principal) {
+      if (!temBarraDepois) return barra;
+      // `https://h//x` (barra dupla no caminho): sem o host, `//x` viraria URL de
+      // protocolo relativo com host `x`. `/.//x` é resolvido pelo navegador como o
+      // caminho `//x` no servidor local, que é a chave do manifesto.
+      const resto = todo.slice(pos + m.length);
+      return resto.startsWith(barra + barra) ? `${barra}.` : "";
+    }
     const destino = `${barra}_ext${barra}${h}`;
     return temBarraDepois ? destino : `${destino}${barra}`;
   });
