@@ -172,3 +172,48 @@ LLM vira trabalho futuro. **Nunca cortar coleta nem diagnóstico.**
 ### S19 · Pacote de reprodutibilidade
 **Prompt:**
 > Atualize o README com "como reproduzir" do zero. Verifique que `docs/artigo/rastreabilidade.md` tem todas as linhas preenchidas com links para arquivos reais. Liste ADRs, tags e entradas do diário em `docs/artigo/indice-evidencias.md`. Gere um resumo do uso do Claude a partir dos diários (nº de sessões, aceitos/alterados/rejeitados) para a seção de declaração de uso de IA.
+
+---
+
+## Fase 7 — Interface visual (depois do fechamento, fora do congelamento da `v1.0`)
+
+Pedido do autor (2026-11-16): uma interface amigável para colar o link de um site
+(da UFRN ou qualquer outro) e ver métricas, problemas e recomendações, ligada ao
+sistema existente. Ela vem depois da S19 e não altera o código congelado na `v1.0`
+nem os dados do TCC. Está dividida em 2 sessões pela regra "uma sessão = uma tarefa
+pequena".
+
+### S20 · Interface: ADR + serviço que roda o pipeline para uma URL
+**Prompt:**
+> Rascunhe o ADR 017 (interface visual). O ADR cobre:
+> - análises avulsas gravadas em `data/avulsos/<site>/<data>/`, nunca no `dataset.csv`, no
+>   `llm-runs.csv` do TCC nem em `data/raw/`;
+> - as regras invioláveis 1–5 continuam valendo (robots, User-Agent, pausas, só a página
+>   inicial e pública);
+> - o LLM é opcional por análise, com o teto de gasto;
+> - a ferramenta roda só localmente (`127.0.0.1`), e o ADR registra os riscos de
+>   publicá-la (SSRF, abuso contra terceiros).
+>
+> Depois, implemente `src/ui/server.ts`: um servidor HTTP local que recebe uma URL,
+> enfileira a análise (1 por vez) e roda triagem → coleta → análise → recomendação
+> chamando os módulos existentes como processos filhos, sem reescrever a lógica. O
+> servidor expõe o progresso por etapa (SSE) e serve os JSON resultantes. Para os sites
+> do corpus, ele só lê `data/processed/` (sem nova coleta). Testes do servidor com os
+> módulos mockados.
+
+### S21 · Interface: telas
+**Prompt:**
+> Implemente a interface web (React + Vite, em `ui/`) consumindo o servidor da S20:
+> - **campo de URL** com o progresso por etapa;
+> - **painel do site**: índice composto e notas de performance e semântica, com os
+>   indicadores brutos;
+> - **recomendações** agrupadas por severidade, com motivo, referência e o diff de cada
+>   correção (lado a lado);
+> - **screenshots** antes × depois quando houver;
+> - **lista dos sites da UFRN** do corpus, com filtro e ordenação.
+>
+> Os textos são em pt-BR e a interface deve ser acessível: ela também tem landmarks e
+> títulos corretos, e passa no axe. O comando é `npm run ui`.
+
+**Pronto quando:** tag `v1.1-interface`; demonstração gravada para a defesa.
+**Alimenta:** apêndice ou seção "Ferramenta" do TCC; demonstração na banca.
