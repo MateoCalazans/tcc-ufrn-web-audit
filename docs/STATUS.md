@@ -3,8 +3,8 @@
 > Atualizado ao fim de cada sessão (o `/fim-de-sessao` faz isso).
 
 **Última atualização:** 2026-11-16
-**Fase atual:** 5 — Validação; cópia local servível concluída (S17)
-**Próxima sessão:** S18
+**Fase atual:** 6 — Fechamento; validação concluída e código congelado (`v1.0`, S18)
+**Próxima sessão:** S19
 
 | Sessão | Situação | Data | Diário | Commits/tag |
 |---|---|---|---|---|
@@ -26,7 +26,7 @@
 | S15 | ✅ | 2026-11-16 | [s15](diario/2026-11-16-s15.md) | 1ab9a18 80c0990 72953b6 5e3aa37 7389348 |
 | S16 | ✅ | 2026-11-16 | [s16](diario/2026-11-16-s16.md) | e9dd3a5 d9164c9 914d1a2 042b0d7 a7e9e93 · v0.3-recomendacao |
 | S17 | ✅ | 2026-11-16 | [s17](diario/2026-11-16-s17.md) | 4a40fd0 f6c2886 e0c9f47 c54f0ff |
-| S18 | ⬜ | | | v1.0 |
+| S18 | ✅ | 2026-11-16 | [s18](diario/2026-11-16-s18.md) | a25cb65 27a9111 4e3711b cb33eb3 f05a2e0 900d1d5 345ee72 eb3d69d · v1.0 |
 | S19 | ⬜ | | | |
 | S20 | ⬜ | | | (Fase 7, interface) |
 | S21 | ⬜ | | | v1.1-interface |
@@ -90,6 +90,13 @@ Legenda: ⬜ pendente · 🟨 em andamento · ✅ concluída · ✂️ cortada (
 - **(S17)** Verificar a fidelidade da cópia também nos sites da amostra da S18? Sem limiar global de "fiel" (hoje: acima/abaixo do ruído por site).
 - **(S17)** Relógio real no Lighthouse da S18: páginas que dependem da data mostram o conteúdo de hoje (igual nas duas variantes).
 - **(S17)** `scripts/landmarks-validacao.ts` não foi reexecutado depois da extração do `compare.ts` (só passou no `tsc`).
+
+- **(S18)** Validar o [ADR 004](decisoes/004-amostra-e-protocolo-da-validacao.md) (proposto): amostra intencional (os 3 piores de cada grupo de tecnologia, n = 12), estratos por tecnologia (e não tipo × tecnologia), janela de 2 × k acrescentada antes das medições, Wilcoxon pareado com Holm. Resultado: nenhum desfecho principal significativo (índice de semântica p = 0,031 bruto, 0,156 com Holm).
+- **(S18)** 3 dos 12 primeiros "piores" estavam fora do escopo: `socrates.ct` e `secacademica.ect` (login, regra 4) e `artefatos.imd` (JFrog, ferramenta: critério novo, sem ADR próprio). Foram trocados na amostra por decisão do autor, mas continuam no conjunto principal do diagnóstico. Varrer o corpus atrás de outras telas de login e ferramentas?
+- **(S18)** A regra `img-dimensions` distorce imagens quando o CSS fixa só uma dimensão (`image-aspect-ratio` reprovada em 4 de 12 sites). O autor decidiu relatar e não mexer. Corrigir como trabalho futuro?
+- **(S18)** A `landmarks-llm` corrigiu 1 de 12 sites (`materialpublic`). Ela só renomeia `div`s, e nos piores sites o conteúdo é formado por irmãos soltos ou montado por JS. Estender para inserir *wrapper*?
+- **(S18)** Tag `v1.0` criada com os ADRs 004 e 018 como "proposto". Mudança de código pedida pelo orientador exigiria `v1.0.1`.
+- **(S18)** Os `validation.json` registram `gitCommit` `107f56e` e `gitDirty` (medidos antes dos commits). O relógio fixo da verificação trava animações (`materialpublic`, falso positivo). O Wilcoxon descarta pares com delta 0 (n efetivo de 5 a 12): manter ou usar Pratt?
 
 ## Bloqueios
 -
