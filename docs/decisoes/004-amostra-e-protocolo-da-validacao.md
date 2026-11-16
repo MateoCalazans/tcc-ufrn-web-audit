@@ -204,6 +204,66 @@ tipo × tecnologia:
   - Nenhum desfecho principal significativo com Holm: LCP p = 0,027 bruto e 0,107
     com Holm; índice p = 0,016 bruto e 0,078 com Holm.
 
+## Adendo (censo, 2026-11-16): antes/depois em todos os elegíveis
+Pré-registro, escrito e commitado **antes** de qualquer medição do censo.
+
+- **Por quê.** Com n = 12, o poder é baixo e a amostra dos piores não se generaliza
+  (ver as consequências acima). O autor pediu medir todos os elegíveis.
+- **Status.** **Análise secundária, não confirmatória.** O resultado principal continua
+  sendo a rodada da `v1.0` (`validation-v1.0.csv`). O texto apresenta os dois: os piores
+  (confirmatório) e o corpus elegível (complementar).
+- **Universo.** Os elegíveis da seção 2, sem a janela nem o limite por grupo da seção 4:
+  **134 sites** (71 estático, 19 framework-js, 35 wordpress, 9 `outro`). Lista em
+  `data/validation/censo.csv`, gerada por `npx tsx scripts/amostra-validacao.ts --censo`.
+  Ordem do arquivo: soma dos postos crescente (a posição alterna a variante que abre,
+  seção 6).
+- **Exclusões (14).** Antes de medir, o autor e o Claude conferiram os screenshots da
+  coleta dos elegíveis suspeitos. Os suspeitos vieram de um campo de senha no DOM
+  renderizado (14 sites) ou de um título com cara de ferramenta. Critério: a página
+  inicial **não é um portal institucional público**. Entram nessa definição:
+  - **Login como conteúdo principal** (regra 4): `socrates.ct`, `secacademica.ect`
+    (da S18), `nuplamhomolog.imd`, `sigeventos`, `rap-sign-producao.info`.
+  - **Ferramenta técnica:** `artefatos.imd` (da S18), Swagger de API
+    (`dermatologia.pntd.telessaude`, `backend.baobah.ceres`) e painel de controle de
+    robô (`lar.ect`, `controleura.lar.ect`).
+  - **Sem conteúdo:** listagem de diretório (`kasan.imd`, `ecaan1.ect`), placeholder
+    (`gpc.ect`) e página de erro "Acesso negado" (`paje`).
+
+  Um campo de senha sozinho não exclui: os eventos do CCSA, o `repositorio` e
+  laboratórios em WordPress têm um botão "Entrar", mas são públicos. Também ficam
+  `docente.ufrn.br` (busca pública do SIGAA), calendários públicos (`agenda.ect`,
+  `reservas.cchla`) e o `shiny.estatistica` (vitrine de aplicações). A lista fica em
+  `EXCLUIDOS_CENSO` (`scripts/amostra-validacao.ts`), com o motivo de cada site no
+  `censo.meta.json`. Ela vale só para o censo: a amostra da `v1.0` não muda. Os 14
+  continuam no diagnóstico (`dataset.csv` da `v0.2`).
+- **Variante corrigida.** Módulo 3 na versão da S18b (tag `v1.0.1-regras`: guarda de
+  imagens e `landmarks-v2`), com `--llm`. O código dos módulos 3 e 4 não mudou desde
+  então (só `src/ui/` e `src/evidencias/`).
+- **Reaproveitamento.** Os 12 sites da amostra já têm `validation.json` dessa versão
+  (rodada da S18b) e não são medidos de novo. Na S18b, a variante que abre seguiu a
+  posição no `amostra.csv`, não no `censo.csv`. Todos os outros sites têm o
+  `recommend` refeito, inclusive os 4 com `recommendations.json` de versões anteriores
+  (`argec`, `bibliotecadigital.sedis`, `grafica.cchla`, `quimica`).
+- **Medição.** Protocolo da seção 6 sem mudança. Consolidado em
+  `data/processed/validation-censo.csv` (`npm run validate -- run --sample
+  data/validation/censo.csv --saida validation-censo`). Não sobrescreve o
+  `validation.csv`.
+- **Análise.**
+  - Mesma família da seção 7: Wilcoxon pareado bilateral e Holm em nota de
+    performance, LCP, CLS, TBT e índice de semântica, com mediana das diferenças e
+    rank-bisserial.
+  - Também descritivo por grupo de tecnologia. Sem teste por grupo, porque `outro`
+    tem n = 9.
+  - Sites com falha de medição (sem execução válida numa variante) saem do teste do
+    desfecho afetado, e a contagem é relatada.
+- **Limitações.**
+  - O efeito médio mistura sites com 1 correção e sites com dezenas (seção
+    "Correções desiguais").
+  - A triagem visual dos 14 foi feita depois da análise da `v1.0`, mas antes de
+    qualquer delta do censo.
+  - Outras telas fora do escopo podem ter escapado, porque só os suspeitos foram
+    conferidos.
+
 ## Onde aparece no TCC
 Metodologia (desenho da validação: amostra e protocolo) e Resultados (RQ2: antes/depois).
 A amostra intencional e o n vão para "Ameaças à validade".
