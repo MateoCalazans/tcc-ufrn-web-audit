@@ -227,6 +227,28 @@ Lighthouse.
   algumas das mesmas coisas que o índice (ADR 013).
 - **Páginas com mais elementos tendem a ser mais lentas** (ρ = −0,26, relação fraca).
 
+### O que o sistema recomendou (conjunto principal)
+(`data/processed/sites/<site>/recommendations.json`, contado em 2026-11-16)
+
+O módulo de recomendação rodou em **207 dos 217 sites**. Ficaram de fora 8 páginas que
+não são portais públicos e 2 sem os arquivos da coleta. Foram **4.422 recomendações**,
+com mediana de 12 por site. Dessas, **2.491 (56%) foram corrigidas automaticamente**;
+as demais são orientações para quem mantém o site.
+
+| Regra | O que aponta | Recomendações | Corrigidas sozinhas | Sites |
+|---|---|---:|---:|---:|
+| `img-dimensions` | imagem sem largura e altura | 1.491 | 1.104 | 121 |
+| `render-blocking-hint` | arquivo que trava o carregamento | 1.311 | 0 | 173 |
+| `img-lazy` | imagem que podia carregar depois | 1.213 | 1.213 | 104 |
+| `landmarks-llm` | região da página sem marcação (via LLM) | 119 | 108 | 70 |
+| `heading-skip` | salto na hierarquia de títulos | 116 | 0 | 49 |
+| `html-lang` | idioma da página ausente ou inválido | 99 | 40 | 99 |
+| `meta-viewport` | página não adaptada ao celular | 48 | 24 | 48 |
+| `fake-button` | `div` fazendo papel de botão | 13 | 0 | 4 |
+| `obsolete-tags` | tags HTML obsoletas | 12 | 2 | 4 |
+
+Custo total da LLM em todo o trabalho: **US$ 0,07** (`data/processed/llm-runs.csv`).
+
 **Como explicar o ρ (Spearman) em uma frase:** "mede se duas coisas tendem a subir
 juntas (perto de 1), em sentidos opostos (perto de −1) ou se não têm relação (perto de
 0)".
