@@ -81,14 +81,23 @@ export async function aplicarRegras(entrada: EntradaMotor, regras: readonly Rule
     });
   }
 
-  const fixedHtml = aplicarEdicoes(html, aceitas.map((x) => x.edicao));
-  const diff = fixedHtml === html ? "" : createTwoFilesPatch("a/index.html", "b/fixed.html", html, fixedHtml, "", "", { context: 3, headerOptions: FILE_HEADERS_ONLY });
-  return { recommendations, fixedHtml, diff, resumo: resumir(regras, recommendations) };
+  return montarResultado(html, regras.map((r) => r.id), recommendations);
 }
 
-function resumir(regras: readonly Rule[], recs: Recommendation[]): Resumo {
+/**
+ * HTML corrigido, diff e resumo a partir das recomendações (as edições já sem
+ * conflito). Usada também depois da guarda de imagens (S18b), que desfaz
+ * correções e remonta o resultado.
+ */
+export function montarResultado(html: string, idsRegras: readonly string[], recommendations: Recommendation[]): ResultadoMotor {
+  const fixedHtml = aplicarEdicoes(html, recommendations.flatMap((r) => r.edicoes));
+  const diff = fixedHtml === html ? "" : createTwoFilesPatch("a/index.html", "b/fixed.html", html, fixedHtml, "", "", { context: 3, headerOptions: FILE_HEADERS_ONLY });
+  return { recommendations, fixedHtml, diff, resumo: resumir(idsRegras, recommendations) };
+}
+
+function resumir(idsRegras: readonly string[], recs: Recommendation[]): Resumo {
   const porRegra: Resumo["porRegra"] = {};
-  for (const r of regras) porRegra[r.id] = { total: 0, corrigidas: 0 };
+  for (const id of idsRegras) porRegra[id] = { total: 0, corrigidas: 0 };
   const porDimensao: Record<Dimensao, number> = { performance: 0, semantica: 0 };
   for (const r of recs) {
     porRegra[r.regra]!.total++;
