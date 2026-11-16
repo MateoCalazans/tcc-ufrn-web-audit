@@ -29,6 +29,7 @@
 | S18 | ✅ | 2026-11-16 | [s18](diario/2026-11-16-s18.md) | a25cb65 27a9111 4e3711b cb33eb3 f05a2e0 900d1d5 345ee72 eb3d69d · v1.0 |
 | S18b | ✅ | 2026-11-16 | [s18b](diario/2026-11-16-s18b.md) | f24dfe3 a9e403d 4406460 55034ba 1cbd00f 6d89fde d8024b6 · fora do roteiro: guarda de imagens e LLM v2 |
 | S19 | ✅ | 2026-11-16 | [s19](diario/2026-11-16-s19.md) | 3372e84 eb0b846 a9dd18c 422a2d2 3f39119 |
+| S19b | ✅ | 2026-11-16 | [s19b](diario/2026-11-16-s19b.md) | 213a363 8730eb8 1b072fd 528eee3 cd5581d 92b73da 9f402ec 82fe903 b52d6de · fora do roteiro: censo do antes/depois (134 sites) e guia de escrita |
 | S20 | ✅ | 2026-11-16 | [s20](diario/2026-11-16-s20.md) | 1ea9108 dfbe975 0b85fe3 · (Fase 7, interface) |
 | S21 | ⬜ | | | v1.1-interface |
 
@@ -105,6 +106,9 @@ Legenda: ⬜ pendente · 🟨 em andamento · ✅ concluída · ✂️ cortada (
 - **(S19)** Reprodutibilidade do `dataset.csv` a partir dos brutos não foi retestada na S19 (base: S14). O `CLAUDE.md` diz que os commits levam `Co-Authored-By`, mas só 2 de 109 levam: alinhar.
 
 - **(S20)** Validar o [ADR 017](decisoes/017-interface-visual.md) (proposto): análises avulsas isoladas por cwd em `data/avulsos/`, fila de 1, teto global da LLM, só `127.0.0.1` e bloqueio de IP interno. Fora do ADR: a checagem de Host/Origin e o fato de a checagem de DNS não cobrir o destino de redirecionamentos. Teste de fumaça: `mat.ufrn.br` em 77 s, notas iguais às do TCC, salvo a de performance (50 contra 49).
+- **(S19b)** Validar o adendo do censo ao [ADR 004](decisoes/004-amostra-e-protocolo-da-validacao.md): análise secundária com 134 elegíveis e 14 exclusões por conferência visual. Resultado com Holm: nota de performance (52 × 20, p = 0,020), LCP (106 × 28) e índice de semântica (63 × 2) melhoram; CLS e TBT sem diferença. A `v1.0` (n = 12, nada confirmado) continua sendo o resultado principal.
+- **(S19b)** Pioras reais no censo: CLS em 8 sites (`img-lazy` em imagens sem dimensões depois da guarda; `meta-viewport` inserida) e landmark errado no `grafica.cchla` (o modelo disse "não válida como main" e a troca passou). Decisão do autor: trabalho futuro, sem nova rodada; o desenvolvimento para e o foco passa para a escrita. O orientador concorda?
+- **(S19b)** `recommend --llm` rodado em mais 87 sites sem ADR (cobertura do diagnóstico e da interface): 207 de 217 do conjunto principal com recomendações. Origem da lista `registros-ufrn.txt` não descrita nos documentos.
 
 ## Bloqueios
 -
