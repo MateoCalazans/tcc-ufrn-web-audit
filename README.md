@@ -14,15 +14,20 @@ User-Agent: `TCC-EAJ-UFRN-Audit`. Contato: <e-mail>.
 ```bash
 npm install && npx playwright install chromium
 npm run env                       # registra versões das ferramentas
-npm run triage                    # data/corpus.csv
+npm run triage                    # normalização da lista (data/interim/)
+npm run triage -- --probe         # sondagem DNS/HTTP/robots (rede)
+npm run triage -- --classify      # data/corpus.csv (offline)
 npm run collect -- --limit 10     # piloto
 npm run collect -- --resume       # corpus completo
-npm run analyze                   # data/processed/dataset.csv
-npm run recommend -- --site <id>
-npm run validate -- --sample data/processed/amostra.csv
-npm run report
+npm run analyze -- --vnu          # data/processed/dataset.csv
+npm run report                    # reports/ (fora do git)
+npm run recommend -- --site <id> [--llm]
+npm run validate -- run --sample data/validation/amostra.csv
 npm test
 ```
+
+O passo a passo completo, com versões e conferência de hashes, está em
+[Como reproduzir](#como-reproduzir).
 
 ## Coleta (módulo 1): como rodar e retomar
 
@@ -99,4 +104,119 @@ Se cair, rode o mesmo comando de novo: ele continua do site onde parou.
 - `docs/artigo/` — rastreabilidade e esqueleto do artigo
 
 ## Como reproduzir
-(preencher na S19)
+
+Há dois caminhos.
+- **A — a partir dos brutos arquivados.** Refaz a análise, os relatórios e a estatística
+  sobre a mesma coleta do TCC (2026-11-09). O `dataset.csv` sai idêntico, byte a byte.
+- **B — do zero.** Refaz a triagem e a coleta nos sites de hoje. O pipeline é o mesmo,
+  mas os números mudam, porque os sites mudam (ver "Ameaças à validade" em
+  [rastreabilidade.md](docs/artigo/rastreabilidade.md)).
+
+Os resultados do TCC são os da tag `v1.0`. A tag `v1.0.1-regras` é a análise posterior
+da S18b ([adendo ao ADR 004](docs/decisoes/004-amostra-e-protocolo-da-validacao.md)).
+Onde estão as evidências: [índice de evidências](docs/artigo/indice-evidencias.md).
+
+### 1. Ambiente
+
+Versões usadas (registro completo em [`docs/ambiente/`](docs/ambiente/)):
+
+| Ferramenta | Versão | Observação |
+|---|---|---|
+| Node.js | 24.19.0 (mínimo 20) | `npm run env` grava as versões em `docs/ambiente/ambiente-<data>.json` |
+| Chrome | 155.0.8059.80 | Lighthouse 13.5.0, via `chrome-launcher` |
+| Chromium do Playwright | 156.0.8078.4 | `npx playwright install chromium` (Playwright 1.64.1) |
+| Java | JDK 24.0.1 | só para o `--vnu` (`vnu-jar` 26.10.12). O código usa o `JAVA_HOME`, não o `java` do PATH |
+| Python | 3.13.5 | só para os notebooks: `analysis/requirements.txt` |
+| Máquina da coleta | Windows 11, Intel Core Ultra 7 155H, 32 GB | o throttling simulado do Lighthouse depende da CPU (`benchmarkIndex`) |
+
+```bash
+git clone <repo> && cd tcc-ufrn-web-audit
+git checkout v1.0                       # ou v1.0.1-regras, para a análise posterior
+npm ci && npx playwright install chromium
+python -m pip install -r analysis/requirements.txt
+cp .env.example .env                    # CONTACT_EMAIL (User-Agent); ANTHROPIC_API_KEY só para --llm
+npm test                                # mais de 400 testes; ver nota do Windows abaixo
+```
+
+**Windows: dois cuidados.**
+- **Letra do disco.** Rode tudo de `C:\…`, com C maiúsculo. Com o caminho `c:\…`, o vitest falha em 25 arquivos de teste. O `npx vitest` às vezes reintroduz o `c:` minúsculo. Se acontecer, use `node node_modules/vitest/vitest.mjs run`.
+- **Fins de linha.** O `.gitattributes` grava os arquivos com LF. Se o `core.autocrlf` estiver ativo, confira o hash do `dataset.csv` direto do git (passo A.3).
+
+### Caminho A — a partir dos brutos arquivados
+
+1. **Obter os brutos.** `data/raw/` fica fora do git (cerca de 1 GB). Peça ao autor o
+   `raw-coleta-2026-11-09.zip`, coloque-o em `data/` e confira o hash:
+   ```bash
+   sha256sum data/raw-coleta-2026-11-09.zip   # 9b0516b9…07e6 (docs/ambiente/hashes.md)
+   cd data && unzip raw-coleta-2026-11-09.zip && cd ..   # no Windows: tar -xf raw-coleta-2026-11-09.zip
+   cd data/raw && sha256sum -c ../../docs/ambiente/raw-manifesto-2026-11-09.sha256 && cd ../..
+   ```
+   O corpus da coleta (`data/corpus.csv`, sondagem de 2026-11-04) está no git.
+2. **Análise (módulo 2).** Rode com a árvore limpa e sem saídas anteriores. Se já existir um
+   `data/processed/sites/`, apague-o antes: o `gitDirty` conta arquivos fora do git.
+   ```bash
+   npm run analyze -- --vnu      # grava metrics.json por site e data/processed/dataset.csv
+   ```
+3. **Conferir o dataset.** Compare com o hash da S12 (`f00b6dd9…8775`, em
+   [`docs/ambiente/hashes.md`](docs/ambiente/hashes.md)):
+   ```bash
+   sha256sum data/processed/dataset.csv
+   git show v0.2-analise:data/processed/dataset.csv | sha256sum   # referência, independente do checkout
+   ```
+4. **Relatórios e estatística do diagnóstico.**
+   ```bash
+   npm run report                                                  # reports/ (HTML por site + panorama)
+   python -m jupyter nbconvert --to notebook --execute --inplace analysis/diagnostico.ipynb
+   ```
+   O notebook regrava `docs/resultados/tabelas/` e `docs/resultados/figuras/`. Confira com `git diff`.
+5. **Recomendação (módulo 3) na amostra da validação.**
+   ```bash
+   npx tsx scripts/amostra-validacao.ts          # data/validation/amostra.csv (determinístico)
+   npm run recommend -- --site <id> [--site <id> ...]          # só regras: determinístico, sem custo
+   npm run recommend -- --site <id> [--site <id> ...] --llm    # + landmarks-llm (API da Anthropic, custo)
+   ```
+   Os 12 sites estão na coluna `id` de `data/validation/amostra.csv`. A `landmarks-llm`
+   roda sem temperatura 0, então as propostas podem variar entre rodadas (ADR 016). As
+   execuções do TCC estão em `data/processed/llm-runs.csv`, com o prompt, o modelo e o custo.
+6. **Validação (módulo 4) e estatística.**
+   ```bash
+   npm run validate -- run --sample data/validation/amostra.csv
+   python -m jupyter nbconvert --to notebook --execute --inplace analysis/validacao.ipynb
+   ```
+   Original e corrigido são cópias locais montadas do `page.har` da coleta, servidas pelo
+   mesmo servidor, com a rede externa bloqueada (regra 7, ADR 018). As medições do
+   Lighthouse variam entre rodadas, então os números não saem idênticos aos do TCC. O
+   protocolo e o teste (Wilcoxon pareado com Holm) são os mesmos. Os resultados do TCC
+   estão em `data/processed/validation-v1.0.csv` (`v1.0`) e `data/processed/validation.csv`
+   (rodada posterior, S18b).
+
+### Caminho B — do zero
+
+Antes de começar, leia as regras éticas da coleta em `CLAUDE.md`: no máximo 2 hosts em
+paralelo, `robots.txt` respeitado e só a página inicial pública. Preencha o `CONTACT_EMAIL`
+no `.env`, porque ele vai no User-Agent.
+
+```bash
+npm run env                                  # registra o ambiente
+npm run triage                               # data/input/registros-ufrn.txt → data/interim/
+npm run triage -- --probe                    # DNS/HTTP/robots (acessa a rede)
+npm run triage -- --classify                 # data/corpus.csv
+npm run collect -- --limit 10                # piloto
+npm run collect -- --resume                  # corpus inteiro; ver "Coleta (módulo 1)" acima
+npm run collect:report                       # docs/resultados/coleta.md
+```
+
+Depois disso, siga o caminho A a partir do passo 2. A lista de entrada
+(`data/input/registros-ufrn.txt`) está no git, com o hash em `docs/ambiente/hashes.md`.
+A sondagem depende da rede de onde ela roda: a triagem oficial foi feita de fora da UFRN (ADR 005).
+
+### O que é e o que não é reprodutível byte a byte
+
+| Saída | Byte a byte? | Por quê |
+|---|---|---|
+| `data/processed/dataset.csv` (a partir dos brutos) | Sim | análise pura sobre `data/raw/` (regra 8) |
+| `data/validation/amostra.csv` | Sim | determinística sobre o dataset e as regras |
+| `fixed.html` / `fix.diff` só com regras, na `v1.0` | Sim | regras determinísticas sobre o bruto. Na `v1.0.1-regras`, a guarda de imagens mede o tamanho exibido no navegador (adendo ao ADR 014), e isso não foi testado quanto à repetibilidade |
+| Propostas da `landmarks-llm` | Não | LLM sem temperatura 0 (ADR 016) |
+| Medições do Lighthouse (coleta e validação) | Não | variação entre execuções; por isso 3 execuções e a mediana (ADR 007, ADR 009) |
+| Triagem e coleta (caminho B) | Não | os sites mudam, e a rede de origem afeta a sondagem |
