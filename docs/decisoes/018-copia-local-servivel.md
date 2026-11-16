@@ -176,5 +176,37 @@ as alterações da S17 ainda não commitadas.
     tolerância "acima do ruído" é por site, sem limiar global.
   - **O gzip uniforme pode diferir da compressão dos servidores originais.**
 
+## Adendo (S18, 2026-11-16): barra dupla e verificação na amostra
+- **Defeito corrigido na reescrita.** `https://h//assets/x.css` (barra dupla depois
+  do host) virava `//assets/x.css`. O navegador lia isso como URL de protocolo
+  relativo, com o host `assets`, e a rede bloqueada barrava o pedido. A página saía
+  sem CSS nem JS.
+  - Achado no `materialpublic.imd`: 99,9% de diferença para a coleta, com 14
+    externas bloqueadas.
+  - Agora a reescrita gera `/.//assets/x.css`, que o navegador resolve como o
+    caminho `//assets/x.css` no servidor local, igual à chave do manifesto.
+  - O padrão aparece em 3 sites do corpus (`ebs.ect`, `maap.nac`,
+    `materialpublic.imd`).
+  - A medição do `materialpublic` foi refeita com a cópia corrigida.
+- **A verificação da S17 foi refeita nos sites da amostra da S18** (pendência da
+  S17). Os resultados por site estão no diário da S18. As diferenças acima do
+  ruído foram conferidas no screenshot:
+  - carrossel em outro slide (`profletras`);
+  - fundo animado (`agir`);
+  - logo de host interno não trazido (`secacademica`, `http://storage/...`).
+- **O relógio fixo pode congelar animações na verificação.** Mesmo com a barra
+  dupla corrigida, o `materialpublic` deu 99,96% de diferença: o véu do modal
+  "Termo de uso" ficava parado no início e o modal não aparecia. Uma captura do
+  mesmo servidor **sem** `setFixedTime` ficou igual à coleta, com o modal aberto.
+  O `Date.now()` congelado trava a animação de abertura (Materialize).
+  - Na verificação, isso é falso positivo.
+  - O Lighthouse roda com o relógio real e não é afetado.
+  - A semântica é medida no DOM, onde o modal existe nos dois casos.
+  - Fica como limitação da decisão 7: o relógio fixo resolve páginas que dependem
+    da data (`agenda.ect`), mas pode travar animações que medem tempo com `Date`.
+- **O `run` reaproveita a cópia em dia** (`copiaEmDia`: existe e é mais nova que
+  o `fixed.html`). Refazê-la apagava a verificação. Uma mudança no código da cópia
+  não invalida esse critério, e por isso a cópia afetada foi refeita à mão.
+
 ## Onde aparece no TCC
 Metodologia — Validação (cópia local, regra 7); Ameaças à validade (fidelidade da cópia).
