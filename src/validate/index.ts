@@ -16,7 +16,10 @@ import { BLOQUEIO_DE_REDE, verificarSnapshot } from "./verify.js";
  * Módulo 4 — Validação.
  *
  *   npm run validate -- snapshot --site <id> [--site <id> ...] [--verificar]
- *   npm run validate -- run --sample <amostra.csv> [--refazer]
+ *   npm run validate -- run --sample <amostra.csv> [--refazer] [--saida <nome>]
+ *
+ * `--saida` muda o nome do CSV consolidado (padrão `validation`; o censo do
+ * adendo do censo ao ADR 004 usa `validation-censo`).
  *
  * `snapshot` (S17, ADR 018): lê `data/raw/<id>/` (imutável) e o `fixed.html`
  * do módulo 3; grava `data/processed/sites/<id>/snapshot/`. Com `--verificar`,
@@ -43,7 +46,7 @@ const comando = argv[0];
 if (!((comando === "snapshot" && ids.length > 0) || (comando === "run" && arqAmostra !== undefined))) {
   process.stderr.write(
     "Uso: npm run validate -- snapshot --site <id> [--site <id> ...] [--verificar]\n" +
-      "     npm run validate -- run --sample <amostra.csv> [--refazer]\n",
+      "     npm run validate -- run --sample <amostra.csv> [--refazer] [--saida <nome>]\n",
   );
   process.exit(1);
 }
@@ -177,10 +180,13 @@ async function rodarAmostra(arquivo: string): Promise<void> {
     }
     linhas.push(linhaValidacao(JSON.parse(readFileSync(f, "utf8")) as ValidacaoSite));
   }
-  const saida = join("data", "processed", "validation.csv");
+  const iSaida = argv.indexOf("--saida");
+  const base = iSaida >= 0 && argv[iSaida + 1] ? argv[iSaida + 1]! : "validation";
+  if (!/^[\w.-]+$/.test(base)) throw new Error(`--saida inválida: ${base} (só o nome, sem pasta nem extensão)`);
+  const saida = join("data", "processed", `${base}.csv`);
   writeCsv(saida, colunasValidacao(), linhas);
   writeFileSync(
-    join("data", "processed", "validation.meta.json"),
+    join("data", "processed", `${base}.meta.json`),
     JSON.stringify({ meta, amostra: arquivo, linhas: linhas.length, faltando, adr: "docs/decisoes/004-amostra-e-protocolo-da-validacao.md" }, null, 2) + "\n",
     "utf8",
   );
