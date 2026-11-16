@@ -3,8 +3,8 @@
 > Atualizado ao fim de cada sessão (o `/fim-de-sessao` faz isso).
 
 **Última atualização:** 2026-11-16
-**Fase atual:** 6 — Fechamento; validação concluída e código congelado (`v1.0`, S18)
-**Próxima sessão:** S19
+**Fase atual:** 6 — Fechamento concluído (pacote de reprodutibilidade, S19); a seguir, Fase 7 (interface)
+**Próxima sessão:** S20
 
 | Sessão | Situação | Data | Diário | Commits/tag |
 |---|---|---|---|---|
@@ -28,7 +28,7 @@
 | S17 | ✅ | 2026-11-16 | [s17](diario/2026-11-16-s17.md) | 4a40fd0 f6c2886 e0c9f47 c54f0ff |
 | S18 | ✅ | 2026-11-16 | [s18](diario/2026-11-16-s18.md) | a25cb65 27a9111 4e3711b cb33eb3 f05a2e0 900d1d5 345ee72 eb3d69d · v1.0 |
 | S18b | ✅ | 2026-11-16 | [s18b](diario/2026-11-16-s18b.md) | f24dfe3 a9e403d 4406460 55034ba 1cbd00f 6d89fde d8024b6 · fora do roteiro: guarda de imagens e LLM v2 |
-| S19 | ⬜ | | | |
+| S19 | ✅ | 2026-11-16 | [s19](diario/2026-11-16-s19.md) | 3372e84 eb0b846 a9dd18c 422a2d2 3f39119 |
 | S20 | ⬜ | | | (Fase 7, interface) |
 | S21 | ⬜ | | | v1.1-interface |
 
@@ -100,6 +100,9 @@ Legenda: ⬜ pendente · 🟨 em andamento · ✅ concluída · ✂️ cortada (
 - **(S18)** Os `validation.json` registram `gitCommit` `107f56e` e `gitDirty` (medidos antes dos commits). O relógio fixo da verificação trava animações (`materialpublic`, falso positivo). O Wilcoxon descarta pares com delta 0 (n efetivo de 5 a 12): manter ou usar Pratt?
 
 - **(S18b)** A `img-dimensions` ganhou uma guarda de renderização (adendo ao [ADR 014](decisoes/014-motor-de-regras-e-correcoes.md)), e a `landmarks-llm` usa o prompt `landmarks-v2`, com `section`/`article` (adendo ao [ADR 016](decisoes/016-llm-para-landmarks.md)). Na rodada posterior da mesma amostra, nenhuma imagem distorcida (era 4 de 12 sites) e a LLM corrigiu 3 sites (era 1). É análise posterior: a `v1.0` continua sendo o resultado principal. Como apresentar no texto? (adendo ao ADR 004)
+
+- **(S19)** Declaração de uso de IA ([declaracao-uso-ia.md](artigo/declaracao-uso-ia.md)): faltam a orientação da UFRN e do curso, o item sobre a redação do texto e a confirmação da revisão dos diários (pendências do autor). As classificações aceito/alterado/rejeitado foram rascunhadas pelo assistente: basta declarar isso como limite? Os 34 itens de S00–S04 ficaram sem decisão registrada.
+- **(S19)** Reprodutibilidade do `dataset.csv` a partir dos brutos não foi retestada na S19 (base: S14). O `CLAUDE.md` diz que os commits levam `Co-Authored-By`, mas só 2 de 109 levam: alinhar.
 
 ## Bloqueios
 -
