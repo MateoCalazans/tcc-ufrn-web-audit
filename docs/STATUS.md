@@ -3,8 +3,8 @@
 > Atualizado ao fim de cada sessão (o `/fim-de-sessao` faz isso).
 
 **Última atualização:** 2026-11-16
-**Fase atual:** 4 — Recomendação (S16); motor e 8 regras (S14–S15) concluídos
-**Próxima sessão:** S16
+**Fase atual:** 5 — Validação; módulo 3 concluído (tag `v0.3-recomendacao`)
+**Próxima sessão:** S17
 
 | Sessão | Situação | Data | Diário | Commits/tag |
 |---|---|---|---|---|
@@ -24,10 +24,12 @@
 | S13 | ✅ | 2026-11-12 | [s13](diario/2026-11-12-s13.md) | 0beff4c cb16291 a4dbc32 39eafb5 |
 | S14 | ✅ | 2026-11-12 | [s14](diario/2026-11-12-s14.md) | d609114 d64373f bb9e380 3d1d445 20e27f2 |
 | S15 | ✅ | 2026-11-16 | [s15](diario/2026-11-16-s15.md) | 1ab9a18 80c0990 72953b6 5e3aa37 7389348 |
-| S16 | ⬜ | | | v0.3-recomendacao |
+| S16 | ✅ | 2026-11-16 | [s16](diario/2026-11-16-s16.md) | e9dd3a5 d9164c9 914d1a2 042b0d7 a7e9e93 · v0.3-recomendacao |
 | S17 | ⬜ | | | |
 | S18 | ⬜ | | | v1.0 |
 | S19 | ⬜ | | | |
+| S20 | ⬜ | | | (Fase 7, interface) |
+| S21 | ⬜ | | | v1.1-interface |
 
 Legenda: ⬜ pendente · 🟨 em andamento · ✅ concluída · ✂️ cortada (ver ADR)
 
@@ -78,6 +80,11 @@ Legenda: ⬜ pendente · 🟨 em andamento · ✅ concluída · ✂️ cortada (
 - **(S15)** Validar o [ADR 015](decisoes/015-regras-da-s15-e-criterio-de-escolha.md) (proposto): critério de escolha (viabilidade + frequência), limiar de 3 imagens da `img-lazy` (não validado; sem auditoria no Lighthouse 13 para medir a frequência), severidades das 8 regras (resolve as pendências da S14 sobre severidades e critério). Referências citadas de memória.
 - **(S15)** `fake-button` (2,3% dos sites) e `obsolete-tags` (1,8%) mantidas como demonstração do motor, por decisão do autor; saem junto se as subnotas `sub_interativos`/`sub_obsoletos` forem retiradas (pendência S12). CSS incluído na `render-blocking-hint` (adendo ao ADR 015).
 - **(S15)** `npx vitest` reintroduz o `c:` minúsculo no Windows (pendência S11); `node node_modules/vitest/vitest.mjs run` funciona. Registrar em `docs/ambiente/` ou ajustar o `npm test`?
+
+- **(S16)** Validar o [ADR 016](decisoes/016-llm-para-landmarks.md) (proposto): Haiku 5.5 sem temperatura 0 (propostas variam entre rodadas), esqueleto de candidatos, troca só se texto, landmarks e CSS não mudam, teto de US$ 4,50. Gasto total da amostra: US$ 0,0038. Qualidade da escolha não medida. Referências citadas de memória.
+- **(S16)** As 13 linhas do `llm-runs.csv` registram `git_commit = ea5af13` (executado antes do commit `d9164c9`). Rodar de novo (cerca de US$ 0,001) ou manter a anotação?
+- **(S16)** Cobertura da `landmarks-llm`: age no bruto, então SPA e listagens ficam de fora (estimativa: 107 de 240 sites com candidato).
+- **(S16)** Apagar a chave da API no Console ao fim do projeto.
 
 ## Bloqueios
 -
