@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T21:03:00.378Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12"
+    },
+    "gitCommit": "0b85fe3610ecdbbdcac96fc8d2667a741de8bb2b",
+    "gitDirty": true
+  },
+  "adr": "docs/decisoes/004-amostra-e-protocolo-da-validacao.md",
+  "parametros": {
+    "censo": true,
+    "regras": [
+      "html-lang",
+      "meta-viewport",
+      "img-dimensions",
+      "img-lazy",
+      "obsolete-tags",
+      "heading-skip",
+      "fake-button",
+      "render-blocking-hint"
+    ],
+    "llm": false
+  },
+  "fonte": {
+    "dataset": "data/processed/dataset.csv",
+    "raw": "data\\raw"
+  },
+  "linhasNoDataset": 242,
+  "excluidos": {
+    "socrates.ct.ufrn.br": "login (regra 4): tela de carregamento do Portainer, que pede login",
+    "secacademica.ect.ufrn.br": "login (regra 4): página inicial é o formulário de login",
+    "artefatos.imd.ufrn.br": "ferramenta de infraestrutura (JFrog Artifactory), não é portal institucional; decisão do autor",
+    "nuplamhomolog.imd.ufrn.br": "login (regra 4): página inicial é o formulário de login do SIGNUPLAM",
+    "sigeventos.ufrn.br": "login (regra 4): página inicial é o formulário de login do SIGEventos",
+    "rap-sign-producao.info.ufrn.br": "login (regra 4): autenticação por certificado digital",
+    "dermatologia.pntd.telessaude.ufrn.br": "ferramenta: documentação Swagger de API",
+    "backend.baobah.ceres.ufrn.br": "ferramenta: documentação Swagger de API",
+    "lar.ect.ufrn.br": "ferramenta: painel de controle de robô (URA)",
+    "controleura.lar.ect.ufrn.br": "ferramenta: painel de controle de robô (URA)",
+    "kasan.imd.ufrn.br": "listagem de diretório (Index of /)",
+    "ecaan1.ect.ufrn.br": "listagem de diretório (Index of /)",
+    "gpc.ect.ufrn.br": "placeholder: \"Site em Desenvolvimento\"",
+    "paje.ufrn.br": "página de erro: \"Acesso negado\""
+  },
+  "inelegiveis": {
+    "fora-do-conjunto-principal": 25,
+    "excluido-na-validacao": 14,
+    "semantica-nao-ok": 4,
+    "meta-refresh": 17,
+    "sem-nota-ou-indice": 0,
+    "tecnologia-sem-grupo": 0,
+    "sem-copia-local": 2,
+    "sem-correcao": 46
+  },
+  "elegiveis": 134,
+  "elegiveisPorGrupo": {
+    "estatico": 71,
+    "framework-js": 19,
+    "wordpress": 35,
+    "outro": 9
+  },
+  "censo": 134
+}
