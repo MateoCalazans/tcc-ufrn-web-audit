@@ -3,8 +3,8 @@
 > Atualizado ao fim de cada sessão (o `/fim-de-sessao` faz isso).
 
 **Última atualização:** 2026-11-16
-**Fase atual:** 5 — Validação; módulo 3 concluído (tag `v0.3-recomendacao`)
-**Próxima sessão:** S17
+**Fase atual:** 5 — Validação; cópia local servível concluída (S17)
+**Próxima sessão:** S18
 
 | Sessão | Situação | Data | Diário | Commits/tag |
 |---|---|---|---|---|
@@ -25,7 +25,7 @@
 | S14 | ✅ | 2026-11-12 | [s14](diario/2026-11-12-s14.md) | d609114 d64373f bb9e380 3d1d445 20e27f2 |
 | S15 | ✅ | 2026-11-16 | [s15](diario/2026-11-16-s15.md) | 1ab9a18 80c0990 72953b6 5e3aa37 7389348 |
 | S16 | ✅ | 2026-11-16 | [s16](diario/2026-11-16-s16.md) | e9dd3a5 d9164c9 914d1a2 042b0d7 a7e9e93 · v0.3-recomendacao |
-| S17 | ⬜ | | | |
+| S17 | ✅ | 2026-11-16 | [s17](diario/2026-11-16-s17.md) | 4a40fd0 f6c2886 e0c9f47 c54f0ff |
 | S18 | ⬜ | | | v1.0 |
 | S19 | ⬜ | | | |
 | S20 | ⬜ | | | (Fase 7, interface) |
@@ -85,6 +85,11 @@ Legenda: ⬜ pendente · 🟨 em andamento · ✅ concluída · ✂️ cortada (
 - **(S16)** As 13 linhas do `llm-runs.csv` registram `git_commit = ea5af13` (executado antes do commit `d9164c9`). Rodar de novo (cerca de US$ 0,001) ou manter a anotação?
 - **(S16)** Cobertura da `landmarks-llm`: age no bruto, então SPA e listagens ficam de fora (estimativa: 107 de 240 sites com candidato).
 - **(S16)** Apagar a chave da API no Console ao fim do projeto.
+- **(S17)** Validar o [ADR 018](decisoes/018-copia-local-servivel.md) (proposto): cópia local montada do `page.har` (desvio do roteiro, aprovado pelo autor), reescrita só de esquema e host, mesma transformação nas duas variantes, rede externa bloqueada, relógio fixo só na verificação. Verificação: 6 de 8 sites idênticos ao screenshot da coleta; 2 diferenças por animação (contagem regressiva, carrossel).
+- **(S17)** Texto corrompido no HAR: 66 CSS/JS em latin1 (56 sites) servidos com `U+FFFD` (o Playwright decodifica como UTF-8). Sem efeito visual nos 6 casos verificados; não medido no corpus.
+- **(S17)** Verificar a fidelidade da cópia também nos sites da amostra da S18? Sem limiar global de "fiel" (hoje: acima/abaixo do ruído por site).
+- **(S17)** Relógio real no Lighthouse da S18: páginas que dependem da data mostram o conteúdo de hoje (igual nas duas variantes).
+- **(S17)** `scripts/landmarks-validacao.ts` não foi reexecutado depois da extração do `compare.ts` (só passou no `tsc`).
 
 ## Bloqueios
 -
