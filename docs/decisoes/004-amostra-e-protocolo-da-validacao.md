@@ -187,6 +187,23 @@ tipo × tecnologia:
   - **Semântica sobre o DOM.** Correções que scripts da página desfazem não aparecem
     no índice, o que é o comportamento desejado, mas difere de medir o HTML bruto.
 
+## Adendo (S18b, 2026-11-16): rodada posterior com as regras revistas
+- **O que mudou.** Depois de ver o resultado da `v1.0`, o autor pediu duas mudanças no
+  módulo 3:
+  - a guarda de renderização na `img-dimensions` (adendo ao ADR 014);
+  - o prompt `landmarks-v2`, com candidatos `section`/`article` (adendo ao ADR 016).
+- **Como foi medido.** A mesma amostra foi medida de novo, com o mesmo protocolo
+  (seção 6) e a mesma família de testes (seção 7).
+- **Status.** Decisão do autor (*"D- Aceito"*): **a rodada da `v1.0` continua sendo o
+  resultado principal** (protocolo fixado antes das medições,
+  `data/processed/validation-v1.0.csv`). A rodada nova (`validation.csv`) é
+  **análise posterior, não confirmatória**, na seção 5 do `analysis/validacao.ipynb`.
+- **Resultado posterior.**
+  - Nenhum site com imagem distorcida (eram 4 de 12).
+  - A LLM corrigiu 3 sites (era 1).
+  - Nenhum desfecho principal significativo com Holm: LCP p = 0,027 bruto e 0,107
+    com Holm; índice p = 0,016 bruto e 0,078 com Holm.
+
 ## Onde aparece no TCC
 Metodologia (desenho da validação: amostra e protocolo) e Resultados (RQ2: antes/depois).
 A amostra intencional e o n vão para "Ameaças à validade".

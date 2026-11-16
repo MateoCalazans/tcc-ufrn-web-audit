@@ -94,6 +94,51 @@ sozinha e o que só recomenda.
   - Sites cujo bruto é um stub de meta refresh (ADR 010) recebem correções no stub, não
     na página de destino.
 
+## Adendo (S18b, 2026-11-16): guarda de renderização na `img-dimensions`
+- **Problema.** Na validação da `v1.0` (ADR 004), a regra distorceu imagens em 4 de 12
+  sites. Ela acrescentava `width`/`height`. Quando o CSS da página fixa só uma
+  dimensão (ex.: `height: 28px` no logo), o atributo passa a valer na outra.
+  - Exemplo: o `logoIMD.png` do `espacos-denf` foi exibido com 1572 × 28, quando a
+    proporção do arquivo é 4,13.
+  - Efeito: `image-aspect-ratio` reprovada e boas práticas −3 a −4.
+- **Decisão do autor:** corrigir, sem poder quebrar imagens (*"nao pode quebrar
+  imagens"*, *"alguma solucao a prova de erros"*).
+- **Opções:**
+  - a) Ler o CSS da página e só corrigir se nenhuma regra dimensiona a imagem.
+    Contras: media queries, especificidade e scripts tornam a análise estática
+    incompleta. Não é à prova de erro.
+  - b) Acrescentar `height: auto` inline. Contras: quebra quando o CSS fixa a altura.
+  - c) **Medir no navegador (escolhida).** O módulo 3 renderiza a página original e a
+    corrigida a partir do `page.har` (sem rede, regra 7), em viewport mobile (o da
+    coleta) e desktop (1350 × 940). Mede o tamanho de layout
+    (`offsetWidth` × `offsetHeight`) de cada imagem corrigida.
+- **Regra de decisão.** A correção de uma imagem só fica se o tamanho for igual
+  (tolerância de 0,5 px) nos dois viewports. É desfeita, e vira só recomendação, se:
+  - o tamanho muda;
+  - o original varia entre duas renderizações;
+  - a imagem não carrega ou não é encontrada (ex.: removida por script);
+  - falta o HAR ou a renderização falha.
+
+  Sem prova de que o tamanho não muda, não corrige.
+- **Detalhes de medição.**
+  - Um marcador (`data-tcc-guarda`) identifica as imagens. Ele existe só no HTML de
+    medição, nunca no `fixed.html`.
+  - Imagens com `loading` passam a carregar de imediato nas duas variantes, porque
+    imagens tardias fora da tela não carregariam e ficariam sem medida.
+  - Requisições que falharam na coleta (status −1 no HAR, ex.: `ERR_BLOCKED_BY_ORB`)
+    são abortadas, como na coleta. Sem isso, o `routeFromHAR` do Playwright ficava
+    pendurado numa folha do Google Fonts do `ce.ufrn.br`, e a guarda desfazia as 11
+    correções por tempo esgotado.
+  - A navegação espera o `domcontentloaded` e, por no máximo 15 s, o `load`. Isso
+    não afrouxa a guarda, porque cada imagem só é julgada se tiver carregado.
+- **Registro.** `recommendations.json` → `guardaImagens`, com os vereditos e as
+  medidas por imagem e viewport. O código está em `src/recommend/guarda-imagens.ts`.
+- **Limitações:**
+  - só dois viewports (outros tamanhos de tela não são provados);
+  - o estado medido é o do carregamento, sem interação;
+  - a guarda roda um navegador no módulo 3, cerca de 10 s por site com imagem
+    corrigida.
+
 ## Onde aparece no TCC
 Metodologia, módulo de recomendação (Cap. 5): motor, formato da correção, regras.
 Ameaças à validade: bruto × renderizado, CSS externo, `lang` fixo.

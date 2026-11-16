@@ -161,6 +161,26 @@ Amostra: 5 sites do conjunto principal sem nenhum landmark no DOM renderizado
     (`quimica`).
   - Corte em 150 candidatos: páginas muito aninhadas podem perder blocos fundos.
 
+## Adendo (S18b, 2026-11-16): prompt `landmarks-v2` e candidatos além de `div`
+- **Problema.** Na amostra da validação da `v1.0` (ADR 004), o modelo devolveu lista
+  vazia em 6 sites e acertou ao recusar. Os candidatos eram só `div`, e nos piores
+  sites o conteúdo estava em `section`s, `form` ou irmãos sem `div` em volta.
+- **Decisão do autor.** Ampliar os candidatos (*"c- ampliar"*), sem envolver irmãos num
+  *wrapper*.
+- **O que muda:**
+  - **Candidatos:** `div`, `section` e `article`. `section` e `article` entram só
+    fora de outro elemento secionador, e o código não desce neles.
+  - **Ficam de fora:** `form`, `table`, `ul` e similares, porque trocar o nome
+    quebraria o formulário, a tabela ou a lista.
+  - **Troca:** a de `section`/`article` segue as mesmas salvaguardas do `div` (texto
+    igual, landmarks esperados, nenhum seletor de CSS que cite a tag muda de alvo).
+    O `TIPO_TROCAVEL` passou a incluir `section` e `article`.
+- **Prompt `landmarks-v2.md`.** O texto muda só onde citava `<div>`. Regras, esquema,
+  modelo e `effort` são os mesmos. O v1 fica intacto (usado na S16 e na `v1.0`).
+- **Limite que continua.** Conteúdo formado por irmãos soltos (ex.: `profletras`, 12
+  `section`s no `body`) não tem um candidato único para `main`, e o modelo deve
+  continuar recusando.
+
 ## Onde aparece no TCC
 Metodologia, módulo de recomendação ("LLM como componente": modelo, prompt versionado,
 entrada, saída estruturada, validação); Resultados (custo, taxa de propostas válidas,
