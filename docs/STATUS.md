@@ -3,8 +3,8 @@
 > Atualizado ao fim de cada sessão (o `/fim-de-sessao` faz isso).
 
 **Última atualização:** 2026-11-16
-**Fase atual:** 6 — Fechamento concluído (pacote de reprodutibilidade, S19); a seguir, Fase 7 (interface)
-**Próxima sessão:** S20
+**Fase atual:** 7 — Interface visual: servidor local pronto (S20); faltam as telas (S21)
+**Próxima sessão:** S21
 
 | Sessão | Situação | Data | Diário | Commits/tag |
 |---|---|---|---|---|
@@ -29,7 +29,7 @@
 | S18 | ✅ | 2026-11-16 | [s18](diario/2026-11-16-s18.md) | a25cb65 27a9111 4e3711b cb33eb3 f05a2e0 900d1d5 345ee72 eb3d69d · v1.0 |
 | S18b | ✅ | 2026-11-16 | [s18b](diario/2026-11-16-s18b.md) | f24dfe3 a9e403d 4406460 55034ba 1cbd00f 6d89fde d8024b6 · fora do roteiro: guarda de imagens e LLM v2 |
 | S19 | ✅ | 2026-11-16 | [s19](diario/2026-11-16-s19.md) | 3372e84 eb0b846 a9dd18c 422a2d2 3f39119 |
-| S20 | ⬜ | | | (Fase 7, interface) |
+| S20 | ✅ | 2026-11-16 | [s20](diario/2026-11-16-s20.md) | 1ea9108 dfbe975 0b85fe3 · (Fase 7, interface) |
 | S21 | ⬜ | | | v1.1-interface |
 
 Legenda: ⬜ pendente · 🟨 em andamento · ✅ concluída · ✂️ cortada (ver ADR)
@@ -103,6 +103,8 @@ Legenda: ⬜ pendente · 🟨 em andamento · ✅ concluída · ✂️ cortada (
 
 - **(S19)** Declaração de uso de IA ([declaracao-uso-ia.md](artigo/declaracao-uso-ia.md)): faltam a orientação da UFRN e do curso, o item sobre a redação do texto e a confirmação da revisão dos diários (pendências do autor). As classificações aceito/alterado/rejeitado foram rascunhadas pelo assistente: basta declarar isso como limite? Os 34 itens de S00–S04 ficaram sem decisão registrada.
 - **(S19)** Reprodutibilidade do `dataset.csv` a partir dos brutos não foi retestada na S19 (base: S14). O `CLAUDE.md` diz que os commits levam `Co-Authored-By`, mas só 2 de 109 levam: alinhar.
+
+- **(S20)** Validar o [ADR 017](decisoes/017-interface-visual.md) (proposto): análises avulsas isoladas por cwd em `data/avulsos/`, fila de 1, teto global da LLM, só `127.0.0.1` e bloqueio de IP interno. Fora do ADR: a checagem de Host/Origin e o fato de a checagem de DNS não cobrir o destino de redirecionamentos. Teste de fumaça: `mat.ufrn.br` em 77 s, notas iguais às do TCC, salvo a de performance (50 contra 49).
 
 ## Bloqueios
 -
