@@ -1,7 +1,7 @@
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-import { chromium, type Page } from "playwright";
+import { chromium } from "playwright";
 
 import { jarDoPacote, prepararVnu } from "../src/analyze/vnu.js";
 import { MOBILE_SCREEN } from "../src/collect/page.js";
@@ -12,6 +12,7 @@ import { ID_REGRA_LLM, textoDoCorpo } from "../src/recommend/llm.js";
 import { createLogger } from "../src/shared/logger.js";
 import { buildMeta } from "../src/shared/meta.js";
 import type { Recommendation } from "../src/shared/types.js";
+import { compararPng, prepararComparador } from "../src/validate/compare.js";
 
 /**
  * Validação das trocas da regra `landmarks-llm` (S16, ADR 016), site a site:
@@ -47,36 +48,6 @@ const javaHome = process.env.JAVA_HOME?.trim();
 const vnu = prepararVnu({ jar: jarDoPacote(), java: javaHome ? join(javaHome, "bin", "java") : "java" });
 const browser = await chromium.launch();
 
-/** Pixels diferentes entre dois PNG (no navegador, sem dependência nova); `null` se o tamanho difere. */
-async function compararPng(page: Page, a: Buffer, b: Buffer) {
-  return page.evaluate(
-    async ([x, y]) => {
-      // Roda no navegador; o tsconfig do projeto não carrega os tipos do DOM.
-      const g = globalThis as unknown as {
-        createImageBitmap(b: Blob): Promise<{ width: number; height: number }>;
-        OffscreenCanvas: new (w: number, h: number) => {
-          getContext(t: "2d"): { drawImage(i: unknown, x: number, y: number): void; getImageData(x: number, y: number, w: number, h: number): { data: Uint8ClampedArray } } | null;
-        };
-      };
-      const ler = async (b64: string) => {
-        const bmp = await g.createImageBitmap(await (await fetch(`data:image/png;base64,${b64}`)).blob());
-        const c = new g.OffscreenCanvas(bmp.width, bmp.height);
-        const ctx = c.getContext("2d")!;
-        ctx.drawImage(bmp, 0, 0);
-        return { w: bmp.width, h: bmp.height, d: ctx.getImageData(0, 0, bmp.width, bmp.height).data };
-      };
-      const [p, q] = [await ler(x), await ler(y)];
-      if (p.w !== q.w || p.h !== q.h) return { tamanhoA: [p.w, p.h], tamanhoB: [q.w, q.h], diferentes: null, proporcao: null };
-      let n = 0;
-      for (let i = 0; i < p.d.length; i += 4) {
-        if (p.d[i] !== q.d[i] || p.d[i + 1] !== q.d[i + 1] || p.d[i + 2] !== q.d[i + 2] || p.d[i + 3] !== q.d[i + 3]) n++;
-      }
-      return { tamanhoA: [p.w, p.h], tamanhoB: [q.w, q.h], diferentes: n, proporcao: n / (p.w * p.h) };
-    },
-    [a.toString("base64"), b.toString("base64")] as const,
-  );
-}
-
 /** Screenshot da página inteira, com o documento principal trocado por `corpo` e o resto vindo do HAR. */
 async function fotografar(harPath: string, url: string, corpo: Buffer, tipo: string): Promise<Buffer> {
   const context = await browser.newContext({
@@ -105,7 +76,7 @@ async function fotografar(harPath: string, url: string, corpo: Buffer, tipo: str
 
 const comparador = await (await browser.newContext()).newPage();
 // O tsx (esbuild, keepNames) envolve funções internas em `__name(...)`, que não existe no navegador.
-await comparador.evaluate("globalThis.__name = (f) => f");
+await prepararComparador(comparador);
 let erros = 0;
 for (const id of ids) {
   try {
