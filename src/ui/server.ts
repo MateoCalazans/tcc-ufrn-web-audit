@@ -14,16 +14,23 @@
  *   GET  /api/corpus/:id                métricas e recomendações de um site do corpus
  *   POST /api/corpus/:id/recomendar     regras sobre cópia do bruto, sem LLM → 202 { id }
  *   GET  /api/corpus/:id/screenshot     screenshot.png da coleta do TCC
+ *   GET  /api/corpus/:id/captura/:nome  landmarks-original|landmarks-corrigido (validação da S18)
+ *   GET  /api/corpus/:id/tela-final/:variante?versao=v1.0|mais-recente
+ *                                       final-screenshot do Lighthouse (execução mediana da validação)
  *   GET  /api/llm                       saldo global da LLM
+ *
+ * Fora de `/api`, serve as telas compiladas (`ui/dist`, S21), se existirem.
  */
-import { existsSync, readFileSync, readdirSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { lookup } from "node:dns/promises";
 import { type IncomingMessage, type Server, type ServerResponse, createServer } from "node:http";
-import { join, resolve } from "node:path";
+import { extname, join, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 
 import { readCsvObjects } from "../shared/csv.js";
+import { decodificar } from "../recommend/encoding.js";
 import { buildMeta } from "../shared/meta.js";
+import type { Recommendation } from "../shared/types.js";
 import {
   type Analise,
   type Dependencias,
@@ -35,8 +42,33 @@ import {
   saldoLlmAtual,
 } from "./analise.js";
 import { validarUrl } from "./pipeline.js";
+import { trechosDasCorrecoes } from "./trechos.js";
+import { ARQUIVO_VERSAO, PASTA_VERSAO, extrairTelaFinal, resumoValidacao, versoesValidacao } from "./validacao.js";
 
 const LIMITE_CORPO = 16 * 1024;
+
+/** Capturas antes × depois que existem no TCC (validação da `landmarks-llm`, S18). */
+const CAPTURAS = ["landmarks-original", "landmarks-corrigido"] as const;
+
+const TIPOS: Record<string, string> = {
+  ".html": "text/html; charset=utf-8",
+  ".js": "text/javascript; charset=utf-8",
+  ".css": "text/css; charset=utf-8",
+  ".svg": "image/svg+xml",
+  ".png": "image/png",
+  ".ico": "image/x-icon",
+  ".woff2": "font/woff2",
+  ".json": "application/json; charset=utf-8",
+};
+
+/** Só o próprio servidor: as telas não carregam nada de fora. */
+const CSP = "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'";
+
+export interface OpcoesServidor {
+  porta: number;
+  /** Pasta das telas compiladas (`ui/dist`); sem ela, só a API. */
+  estaticos?: string;
+}
 
 export interface Servidor {
   server: Server;
@@ -83,12 +115,21 @@ async function lerCorpo(req: IncomingMessage): Promise<unknown> {
 /** Saídas de uma pasta com a estrutura de `data/` (avulsa ou do TCC). */
 function resultadoDaPasta(base: string, site: string) {
   const processed = join(base, "data", "processed", "sites", site);
+  const recommendations = lerJson(join(processed, "recommendations.json"));
   return {
     metrics: lerJson(join(processed, "metrics.json")),
-    recommendations: lerJson(join(processed, "recommendations.json")),
+    recommendations,
     fixDiff: lerTexto(join(processed, "fix.diff")),
+    trechos: trechosDoBruto(join(base, "data", "raw", site, "index.html"), recommendations),
     temScreenshot: existsSync(join(base, "data", "raw", site, "screenshot.png")),
   };
+}
+
+/** Trechos antes × depois de cada correção, sobre o mesmo bruto que o módulo 3 leu (S21). */
+function trechosDoBruto(caminho: string, recommendations: unknown) {
+  const recs = (recommendations as { recommendations?: Recommendation[] } | null)?.recommendations;
+  if (!Array.isArray(recs) || !existsSync(caminho)) return {};
+  return trechosDasCorrecoes(decodificar(readFileSync(caminho)).texto, recs);
 }
 
 /** Recomendação mais recente feita pela interface para um site do corpus. */
@@ -98,7 +139,8 @@ function ultimaRecomendacaoCorpus(raiz: string, site: string): { id: string; pas
   for (const c of readdirSync(dir).sort().reverse()) {
     const pasta = join(dir, c);
     const reg = lerJson(join(pasta, "analise.json")) as { tipo?: string; estado?: string } | null;
-    if (reg?.tipo === "corpus" && reg.estado === "concluida") return { id: `${site}__${c}`, pasta };
+    const saida = join(pasta, "data", "processed", "sites", site, "recommendations.json");
+    if (reg?.tipo === "corpus" && reg.estado === "concluida" && existsSync(saida)) return { id: `${site}__${c}`, pasta };
   }
   return null;
 }
@@ -119,7 +161,7 @@ function registroDaAnalise(fila: Fila, raiz: string, id: string): { analise: Par
   return { analise: reg ?? { site }, pasta };
 }
 
-export function criarServidor(deps: Dependencias, opcoes: { porta: number }): Servidor {
+export function criarServidor(deps: Dependencias, opcoes: OpcoesServidor): Servidor {
   const fila = new Fila(deps);
   const datasetPath = join(deps.raiz, "data", "processed", "dataset.csv");
   const lerDataset = () => (existsSync(datasetPath) ? readCsvObjects(datasetPath) : []);
@@ -146,8 +188,34 @@ export function criarServidor(deps: Dependencias, opcoes: { porta: number }): Se
     const partes = url.pathname.split("/").filter(Boolean).map(decodeURIComponent);
     const metodo = req.method ?? "GET";
 
-    if (partes[0] !== "api") return json(res, 404, { erro: "rota não encontrada" });
+    if (partes[0] !== "api") return estatico(req, res, url.pathname);
     const [, recurso, id, sub, ...resto] = partes;
+
+    // ---- captura antes × depois da validação (só leitura, nomes fixos)
+    if (recurso === "corpus" && sub === "captura" && resto.length === 1 && metodo === "GET") {
+      const nome = resto[0]!;
+      if (id === undefined || !ID_SITE.test(id) || !(CAPTURAS as readonly string[]).includes(nome)) {
+        return json(res, 404, { erro: "captura não encontrada" });
+      }
+      return enviarPng(res, join(deps.raiz, "data", "processed", "sites", id, `${nome}.png`));
+    }
+    // ---- primeira tela antes × depois, do relatório do Lighthouse da validação (só leitura)
+    if (recurso === "corpus" && sub === "tela-final" && resto.length === 1 && metodo === "GET") {
+      const variante = resto[0]!;
+      const versao = url.searchParams.get("versao") ?? "mais-recente";
+      if (id === undefined || !ID_SITE.test(id) || (variante !== "original" && variante !== "corrigido") || !(versao === "v1.0" || versao === "mais-recente")) {
+        return json(res, 404, { erro: "captura não encontrada" });
+      }
+      const pastaSite = join(deps.raiz, "data", "processed", "sites", id);
+      const resumoV = resumoValidacao(lerJson(join(pastaSite, ARQUIVO_VERSAO[versao])), versao, ARQUIVO_VERSAO[versao]);
+      const n = resumoV?.medianas[variante];
+      if (n === null || n === undefined || !Number.isInteger(n)) return json(res, 404, { erro: "sem execução mediana" });
+      const tela = extrairTelaFinal(lerJson(join(pastaSite, PASTA_VERSAO[versao], `lh-${variante}-${n}.json`)));
+      if (!tela) return json(res, 404, { erro: "sem final-screenshot" });
+      res.writeHead(200, { "content-type": tela.tipo, "cache-control": "no-store", "x-content-type-options": "nosniff" });
+      res.end(tela.bytes);
+      return;
+    }
     if (resto.length > 0) return json(res, 404, { erro: "rota não encontrada" });
 
     // ---- LLM
@@ -216,20 +284,52 @@ export function criarServidor(deps: Dependencias, opcoes: { porta: number }): Se
       if (sub !== undefined) return json(res, 404, { erro: "rota não encontrada" });
 
       const tcc = resultadoDaPasta(deps.raiz, id);
-      let recomendacao: { origem: "tcc" | "interface"; analise?: string; recommendations: unknown; fixDiff: string | null } | null = null;
+      let recomendacao: {
+        origem: "tcc" | "interface";
+        analise?: string;
+        recommendations: unknown;
+        fixDiff: string | null;
+        trechos: ReturnType<typeof trechosDoBruto>;
+      } | null = null;
       if (tcc.recommendations !== null) {
-        recomendacao = { origem: "tcc", recommendations: tcc.recommendations, fixDiff: tcc.fixDiff };
+        recomendacao = { origem: "tcc", recommendations: tcc.recommendations, fixDiff: tcc.fixDiff, trechos: tcc.trechos };
       } else {
         const ultima = ultimaRecomendacaoCorpus(deps.raiz, id);
         if (ultima) {
           const r = resultadoDaPasta(ultima.pasta, id);
-          recomendacao = { origem: "interface", analise: ultima.id, recommendations: r.recommendations, fixDiff: r.fixDiff };
+          recomendacao = { origem: "interface", analise: ultima.id, recommendations: r.recommendations, fixDiff: r.fixDiff, trechos: r.trechos };
         }
       }
-      return json(res, 200, { id, dataset: linha, metrics: tcc.metrics, temScreenshot: tcc.temScreenshot, recomendacao });
+      const pastaSite = join(deps.raiz, "data", "processed", "sites", id);
+      const capturas = CAPTURAS.filter((c) => existsSync(join(pastaSite, `${c}.png`)));
+      const temBruto = existsSync(join(deps.raiz, "data", "raw", id, "index.html"));
+      // validação do módulo 4 (só leitura): v1.0 e a rodada mais recente
+      const validacoes = versoesValidacao(lerJson(join(pastaSite, "validation-v1.0.json")), lerJson(join(pastaSite, "validation.json")));
+      return json(res, 200, { id, dataset: linha, metrics: tcc.metrics, temScreenshot: tcc.temScreenshot, temBruto, capturas, recomendacao, validacoes });
     }
 
     return json(res, 404, { erro: "rota não encontrada" });
+  }
+
+  /** Telas compiladas: arquivo dentro de `estaticos`, ou o `index.html` (rotas do lado do cliente). */
+  function estatico(req: IncomingMessage, res: ServerResponse, caminho: string): void {
+    if (!opcoes.estaticos) return json(res, 404, { erro: "rota não encontrada" });
+    if (req.method !== "GET" && req.method !== "HEAD") return json(res, 405, { erro: "método não permitido" });
+    const raizEst = resolve(opcoes.estaticos);
+    let alvo = resolve(raizEst, "." + decodeURIComponent(caminho));
+    if (alvo !== raizEst && !alvo.startsWith(raizEst + sep)) return json(res, 404, { erro: "rota não encontrada" });
+    if (!existsSync(alvo) || !statSync(alvo).isFile()) alvo = join(raizEst, "index.html");
+    if (!existsSync(alvo)) return json(res, 404, { erro: "telas não compiladas (npm run ui:build)" });
+    const tipo = TIPOS[extname(alvo).toLowerCase()];
+    if (!tipo) return json(res, 404, { erro: "rota não encontrada" });
+    res.writeHead(200, {
+      "content-type": tipo,
+      "cache-control": "no-store",
+      "x-content-type-options": "nosniff",
+      "content-security-policy": CSP,
+      "referrer-policy": "no-referrer",
+    });
+    res.end(req.method === "HEAD" ? undefined : readFileSync(alvo));
   }
 
   function sse(req: IncomingMessage, res: ServerResponse, id: string): void {
@@ -277,14 +377,17 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   const raiz = resolve(fileURLToPath(new URL("../..", import.meta.url)));
   const i = process.argv.indexOf("--porta");
   const porta = i >= 0 ? Number(process.argv[i + 1]) : 5179;
+  const dist = join(raiz, "ui", "dist");
+  const temTelas = existsSync(join(dist, "index.html"));
   const { server } = criarServidor(
     { raiz, executar: executorReal(raiz), resolver: resolverDns, agora: () => new Date() },
-    { porta },
+    { porta, ...(temTelas ? { estaticos: dist } : {}) },
   );
   server.listen(porta, "127.0.0.1", () => {
     const meta = buildMeta();
+    const onde = temTelas ? `http://127.0.0.1:${porta}/` : `http://127.0.0.1:${porta}/api (sem telas: npm run ui:build)`;
     process.stderr.write(
-      `[ui] http://127.0.0.1:${porta}/api · commit ${meta.gitCommit?.slice(0, 7) ?? "?"}${meta.gitDirty ? " (dirty)" : ""} · só local (ADR 017)\n`,
+      `[ui] ${onde} · commit ${meta.gitCommit?.slice(0, 7) ?? "?"}${meta.gitDirty ? " (dirty)" : ""} · só local (ADR 017)\n`,
     );
   });
 }
