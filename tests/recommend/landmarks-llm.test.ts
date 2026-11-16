@@ -54,9 +54,16 @@ function regra(chamar: ChamarModelo) {
 
 const p = (candidato: string, elemento: string, justificativa = "evidência") => ({ candidato, elemento, justificativa });
 
-describe("landmarks-v1 (prompt versionado)", () => {
+describe("landmarks-v2 (prompt versionado)", () => {
+  it("o v1 (usado na S16 e na v1.0) continua legível e diferente do v2", () => {
+    const v1 = carregarPrompt("docs/prompts/landmarks-v1.md");
+    expect(v1.versao).toBe("landmarks-v1");
+    expect(v1.sha256).not.toBe(prompt.sha256);
+    expect(prompt.sistema).toContain("<section>");
+  });
+
   it("lê cabeçalho, blocos e esquema do arquivo em docs/prompts", () => {
-    expect(prompt.versao).toBe("landmarks-v1");
+    expect(prompt.versao).toBe("landmarks-v2");
     expect(prompt.modelo).toBe("claude-haiku-5-5");
     expect(prompt.effort).toBe("low");
     expect(prompt.maxTokens).toBe(4000);
@@ -89,9 +96,19 @@ describe("montarEsqueleto", () => {
     );
   });
 
-  it("exclui <div> dentro de secionadores e sem tag de fechamento no arquivo", () => {
+  it("exclui <div> dentro de secionadores e sem tag de fechamento; a <section> de fora vira candidata (v2)", () => {
     const e = montarEsqueleto(parsear(ler("landmarks-llm/parcial.html")));
-    expect(e.candidatos.map((c) => c.el.attribs.id ?? c.el.attribs.class)).toEqual(["cabeca", "sem-fim"]);
+    expect(e.candidatos.map((c) => `${c.el.tagName}${c.el.attribs.id ? "#" + c.el.attribs.id : c.el.attribs.class ? "." + c.el.attribs.class : ""}`)).toEqual([
+      "div#cabeca",
+      "section",
+      "div.sem-fim",
+    ]);
+    expect(e.candidatos[1]!.linha).toContain("<section> filhos=[div]");
+  });
+
+  it("não lista <form>, <table> nem <ul> (trocar o nome quebraria o comportamento)", () => {
+    const e = montarEsqueleto(parsear("<html><body><form><p>a</p></form><table><tr><td>b</td></tr></table><ul><li>c</li></ul><article><p>d</p></article></body></html>"));
+    expect(e.candidatos.map((c) => c.el.tagName)).toEqual(["article"]);
   });
 });
 
@@ -127,7 +144,7 @@ describe("landmarks-llm (resposta mockada)", () => {
     expect(execucoes).toHaveLength(1);
     expect(execucoes[0]).toMatchObject({
       siteId: "exemplo.ufrn.br",
-      prompt: "landmarks-v1",
+      prompt: "landmarks-v2",
       chamada: true,
       stopReason: "end_turn",
       inputTokens: 1000,
@@ -314,12 +331,37 @@ describe("teto de gasto", () => {
   });
 });
 
+describe("landmarks-llm v2: troca de <section>", () => {
+  const html =
+    `<html><head><title>T</title></head><body><header><a href="/">Site</a></header>` +
+    `<section class="conteudo"><h1>Notícias</h1><p>Texto</p></section>` +
+    `<section class="rodape"><p>Endereço</p></section></body></html>`;
+
+  it("troca <section> por <main>/<footer> na abertura e no fechamento", async () => {
+    const { r } = regra(falso({ propostas: [p("c1", "main"), p("c2", "footer")] }).chamar);
+    const out = await rodar(r, html);
+    expect(out.recommendations.map((x) => x.correcaoAutomatica)).toEqual([true, true]);
+    expect(out.recommendations[0]!.mensagem).toContain("trocar este <section> por <main>");
+    expect(out.fixedHtml).toContain('<main class="conteudo"><h1>Notícias</h1><p>Texto</p></main>');
+    expect(out.fixedHtml).toContain('<footer class="rodape"><p>Endereço</p></footer>');
+    expect(landmarks(parsear(out.fixedHtml))).toMatchObject({ main: 1, contentinfo: 1 });
+  });
+
+  it("CSS que seleciona pela tag section bloqueia a troca", async () => {
+    const comCss = html.replace("<title>T</title>", "<title>T</title><style>body > section { padding: 2em }</style>");
+    const { r } = regra(falso({ propostas: [p("c2", "footer")] }).chamar);
+    const out = await rodar(r, comCss);
+    expect(out.recommendations[0]!.correcaoAutomatica).toBe(false);
+    expect(out.recommendations[0]!.mensagem).toContain("o CSS da página seleciona pela tag (body > section)");
+  });
+});
+
 describe("linhaLlmRuns", () => {
   it("uma célula por coluna, com escape de aspas e vírgulas", async () => {
     const { r, execucoes } = regra(falso({ propostas: [p("c99", "header", 'diz "topo", no início')] }).chamar);
     await rodar(r, ler("landmarks-llm/sem-landmarks.html"));
     const linha = linhaLlmRuns(execucoes[0]!, "2026-11-16T12:00:00.000Z", "abc123");
-    expect(linha.startsWith("2026-11-16T12:00:00.000Z,abc123,exemplo.ufrn.br,landmarks-v1,")).toBe(true);
+    expect(linha.startsWith("2026-11-16T12:00:00.000Z,abc123,exemplo.ufrn.br,landmarks-v2,")).toBe(true);
     expect(linha).toContain(',"[{""candidato"":""c99"",""elemento"":""header"",""motivo"":""candidato inexistente""}]",');
     expect(linha).toContain(",header nav main footer,6,6,end_turn,1000,200,0.0002,1,0,");
     // 23 colunas: conta as vírgulas fora de aspas

@@ -28,7 +28,7 @@ import { bytesNoHar } from "./rules/img-dimensions.js";
 // Prompt versionado (docs/prompts/landmarks-v1.md)
 // --------------------------------------------------------------------------
 
-export const PROMPT_PADRAO = "docs/prompts/landmarks-v1.md";
+export const PROMPT_PADRAO = "docs/prompts/landmarks-v2.md";
 
 export interface PromptLandmarks {
   /** Nome do arquivo sem extensão (ex.: `landmarks-v1`). */
@@ -96,6 +96,13 @@ const MAX_CLASSE = 80;
 const IGNORADOS = new Set(["script", "style", "template", "noscript"]);
 const FOLHAS = new Set(["svg", "math"]);
 const SECIONADORAS = new Set(["article", "aside", "main", "nav", "section", "header", "footer"]);
+/**
+ * Tags que podem virar landmark só trocando o nome, sem mudar comportamento
+ * (S18b, adendo ao ADR 016): `div` e, desde o `landmarks-v2`, `section` e
+ * `article` fora de outros secionadores. `form`, `table`, `ul` etc. ficam de
+ * fora: trocar o nome quebraria o formulário, a tabela ou a lista.
+ */
+export const TAGS_CANDIDATAS: ReadonlySet<string> = new Set(["div", "section", "article"]);
 const ROLES_SECIONADORAS = new Set(["article", "complementary", "main", "navigation", "region", "banner", "contentinfo"]);
 
 interface NoDom extends No {
@@ -154,6 +161,8 @@ function contagem(itens: string[]): string {
 export function montarEsqueleto($: CheerioAPI): Esqueleto {
   const elegiveis: Array<{ el: NoDom; prof: number; pai: NoDom | null; ordem: number }> = [];
   let ordem = 0;
+  const temTags = (f: NoDom) => locTag(f as unknown as Element) !== null && locFim(f as unknown as Element) !== null;
+  const temConteudo = (f: NoDom) => normalizar(textoDe(f)) !== "" || $(f as never).find("img").length > 0;
   const ir = (n: NoDom, prof: number, pai: NoDom | null) => {
     for (const f of n.children ?? []) {
       if (!ehTag(f)) continue;
@@ -161,12 +170,17 @@ export function montarEsqueleto($: CheerioAPI): Esqueleto {
       if (IGNORADOS.has(t) || f.attribs?.hidden !== undefined) continue;
       if (FOLHAS.has(t)) continue;
       const r = roleExplicito(f);
-      if (papelLandmark(f, false) !== null || SECIONADORAS.has(t) || (r !== null && ROLES_SECIONADORAS.has(r))) continue;
+      if (papelLandmark(f, false) !== null || (r !== null && ROLES_SECIONADORAS.has(r))) continue;
+      if (SECIONADORAS.has(t)) {
+        // `section`/`article` fora de outro secionador viram candidatos; não se desce
+        // neles (um `header` lá dentro não seria banner).
+        if (TAGS_CANDIDATAS.has(t) && r === null && temTags(f) && temConteudo(f)) elegiveis.push({ el: f, prof, pai, ordem: ordem++ });
+        continue;
+      }
       let filhoPai = pai;
       let filhoProf = prof;
-      if (t === "div" && r === null && locTag(f as unknown as Element) !== null && locFim(f as unknown as Element) !== null) {
-        const temConteudo = normalizar(textoDe(f)) !== "" || $(f as never).find("img").length > 0;
-        if (temConteudo) {
+      if (t === "div" && r === null && temTags(f)) {
+        if (temConteudo(f)) {
           elegiveis.push({ el: f, prof, pai, ordem: ordem++ });
           filhoPai = f;
           filhoProf = prof + 1;
@@ -189,7 +203,7 @@ export function montarEsqueleto($: CheerioAPI): Esqueleto {
     const a = c.el.attribs ?? {};
     const classe = normalizar(a.class ?? "");
     const tag =
-      "<div" +
+      `<${nomeDe(c.el)}` +
       (a.id !== undefined ? ` id="${normalizar(a.id)}"` : "") +
       (classe !== "" ? ` class="${classe.length > MAX_CLASSE ? classe.slice(0, MAX_CLASSE - 1) + "…" : classe}"` : "") +
       ">";
@@ -302,16 +316,21 @@ export function validarPropostas(
   return { validas, rejeitadas };
 }
 
-/** Edições que trocam `<div`/`</div` pelo elemento proposto (posições de origem, ADR 014). */
+/**
+ * Edições que trocam o nome da tag candidata (`div`, `section`, `article`) pelo
+ * elemento proposto, na abertura e no fechamento (posições de origem, ADR 014).
+ */
 export function edicoesDeTroca(html: string, el: Element, elemento: ElementoLandmark): Edicao[] | null {
   const ini = locTag(el);
   const fim = locFim(el);
-  if (ini === null || fim === null) return null;
-  if (html.slice(ini.startOffset, ini.startOffset + 4).toLowerCase() !== "<div") return null;
-  if (html.slice(fim.startOffset, fim.startOffset + 5).toLowerCase() !== "</div") return null;
+  const tag = el.tagName.toLowerCase();
+  if (ini === null || fim === null || !TAGS_CANDIDATAS.has(tag)) return null;
+  const n = tag.length;
+  if (html.slice(ini.startOffset, ini.startOffset + 1 + n).toLowerCase() !== `<${tag}`) return null;
+  if (html.slice(fim.startOffset, fim.startOffset + 2 + n).toLowerCase() !== `</${tag}`) return null;
   return [
-    { inicio: ini.startOffset + 1, fim: ini.startOffset + 4, texto: elemento },
-    { inicio: fim.startOffset + 2, fim: fim.startOffset + 5, texto: elemento },
+    { inicio: ini.startOffset + 1, fim: ini.startOffset + 1 + n, texto: elemento },
+    { inicio: fim.startOffset + 2, fim: fim.startOffset + 2 + n, texto: elemento },
   ];
 }
 
@@ -419,7 +438,7 @@ export function folhasDeEstilo($: CheerioAPI, url: string, har: Har | undefined)
 }
 
 /**
- * Declarações sem efeito na troca: `div`, `header`, `nav`, `main` e `footer` têm o
+ * Declarações sem efeito na troca: `div`, `section`, `article`, `header`, `nav`, `main` e `footer` têm o
  * mesmo estilo padrão no navegador (só `display: block`, sem margem nem padding),
  * então resets e o normalize.css não mudam nada ao trocar a tag.
  */
@@ -469,8 +488,8 @@ export function regrasCss(css: string): RegraCss[] {
   return out;
 }
 
-/** Seletor que cita `div`/`header`/`nav`/`main`/`footer` como tipo (não `.main`, `#nav`). */
-const TIPO_TROCAVEL = /(^|[\s>+~(])(div|header|nav|main|footer)(?![\w-])/i;
+/** Seletor que cita `div`/`section`/`article`/`header`/`nav`/`main`/`footer` como tipo (não `.main`, `#nav`). */
+const TIPO_TROCAVEL = /(^|[\s>+~(])(div|section|article|header|nav|main|footer)(?![\w-])/i;
 
 /**
  * Seletores (com tipo trocável) das regras cujo conjunto de elementos muda com a
@@ -620,7 +639,7 @@ export function criarRegraLandmarks({ chamar, prompt, registrar, orcamento }: Op
     id: ID_REGRA_LLM,
     dimensao: "semantica",
     severidade: "media",
-    descricao: `Landmarks ausentes propostos por LLM sobre <div> existentes (${prompt.versao}, ${prompt.modelo}).`,
+    descricao: `Landmarks ausentes propostos por LLM sobre <div>, <section> ou <article> existentes (${prompt.versao}, ${prompt.modelo}).`,
     async avaliar({ siteId, url, html, $, har }): Promise<Achado[]> {
       const t0 = performance.now();
       const presentes = landmarks($);
@@ -656,7 +675,7 @@ export function criarRegraLandmarks({ chamar, prompt, registrar, orcamento }: Op
         return achados;
       };
       if (ausentes.length === 0 || esq.candidatos.length === 0) {
-        exec.motivo = ausentes.length === 0 ? "nenhum landmark ausente" : "nenhum <div> candidato";
+        exec.motivo = ausentes.length === 0 ? "nenhum landmark ausente" : "nenhum candidato";
         return fim([]);
       }
 
@@ -748,10 +767,10 @@ export function criarRegraLandmarks({ chamar, prompt, registrar, orcamento }: Op
           evidencia: evidenciaTag(html, v.el),
           posicao: posicao(locTag(v.el)),
           mensagem:
-            `Landmark ${PAPEL[v.elemento]} ausente: trocar este <div> por <${v.elemento}>. ` +
+            `Landmark ${PAPEL[v.elemento]} ausente: trocar este <${v.el.tagName.toLowerCase()}> por <${v.elemento}>. ` +
             `Justificativa do modelo: ${JSON.stringify(v.justificativa)}. ` +
             `Proposta gerada por LLM (${prompt.versao}, ${prompt.modelo}, candidato ${v.candidato}); ` +
-            `conferir CSS e scripts que selecionem "div" neste elemento.` +
+            `conferir CSS e scripts que selecionem "${v.el.tagName.toLowerCase()}" neste elemento.` +
             (aplicar ? "" : semCorrecao),
           edicoes: aplicar ? edicoes : [],
         })),
