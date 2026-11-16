@@ -3,8 +3,8 @@
 > Atualizado ao fim de cada sessão (o `/fim-de-sessao` faz isso).
 
 **Última atualização:** 2026-11-16
-**Fase atual:** 7 — Interface visual: servidor local pronto (S20); faltam as telas (S21)
-**Próxima sessão:** S21
+**Fase atual:** 7 — Interface visual: telas prontas (S21); faltam a tag `v1.1-interface` e a demonstração gravada
+**Próxima sessão:** fechar a S21 (tag `v1.1-interface` e demonstração); depois, fim do roteiro
 
 | Sessão | Situação | Data | Diário | Commits/tag |
 |---|---|---|---|---|
@@ -31,7 +31,7 @@
 | S19 | ✅ | 2026-11-16 | [s19](diario/2026-11-16-s19.md) | 3372e84 eb0b846 a9dd18c 422a2d2 3f39119 |
 | S19b | ✅ | 2026-11-16 | [s19b](diario/2026-11-16-s19b.md) | 213a363 8730eb8 1b072fd 528eee3 cd5581d 92b73da 9f402ec 82fe903 b52d6de · fora do roteiro: censo do antes/depois (134 sites) e guia de escrita |
 | S20 | ✅ | 2026-11-16 | [s20](diario/2026-11-16-s20.md) | 1ea9108 dfbe975 0b85fe3 · (Fase 7, interface) |
-| S21 | ⬜ | | | v1.1-interface |
+| S21 | 🟨 | 2026-11-16 | [s21](diario/2026-11-16-s21.md) | 1f1588a c87d6ca 9ba3a44 228a679 45d8c99 0f165f8 · v1.1-interface (pendente: tag e demonstração) |
 
 Legenda: ⬜ pendente · 🟨 em andamento · ✅ concluída · ✂️ cortada (ver ADR)
 
@@ -109,6 +109,9 @@ Legenda: ⬜ pendente · 🟨 em andamento · ✅ concluída · ✂️ cortada (
 - **(S19b)** Validar o adendo do censo ao [ADR 004](decisoes/004-amostra-e-protocolo-da-validacao.md): análise secundária com 134 elegíveis e 14 exclusões por conferência visual. Resultado com Holm: nota de performance (52 × 20, p = 0,020), LCP (106 × 28) e índice de semântica (63 × 2) melhoram; CLS e TBT sem diferença. A `v1.0` (n = 12, nada confirmado) continua sendo o resultado principal.
 - **(S19b)** Pioras reais no censo: CLS em 8 sites (`img-lazy` em imagens sem dimensões depois da guarda; `meta-viewport` inserida) e landmark errado no `grafica.cchla` (o modelo disse "não válida como main" e a troca passou). Decisão do autor: trabalho futuro, sem nova rodada; o desenvolvimento para e o foco passa para a escrita. O orientador concorda?
 - **(S19b)** `recommend --llm` rodado em mais 87 sites sem ADR (cobertura do diagnóstico e da interface): 207 de 217 do conjunto principal com recomendações. Origem da lista `registros-ufrn.txt` não descrita nos documentos.
+- **(S21)** Decisões de apresentação da interface sem ADR (referência das regras = ADR que as define, índice sem faixas de cor, telas e API no mesmo servidor com CSP, logo da UFRN tirado do HAR da coleta, `v1.0` como validação principal e aviso de ruído): fazer um adendo ao [ADR 017](decisoes/017-interface-visual.md)?
+- **(S21)** Uma análise avulsa (coleta + Lighthouse) rodou das 18:59:54 às 19:00:56 durante o censo: conferir se algum site do censo foi medido nessa janela.
+- **(S21)** A interface não tem objetivo na rastreabilidade (OE1–OE6): criar um OE ou tratá-la como apêndice ("Ferramenta")?
 
 ## Bloqueios
 -
