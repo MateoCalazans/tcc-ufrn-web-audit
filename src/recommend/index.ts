@@ -1,16 +1,15 @@
-import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { appendFileSync, existsSync, mkdirSync, writeFileSync } from "node:fs";
 
 import { VERSION as VERSAO_SDK } from "@anthropic-ai/sdk/version";
 import { createRequire } from "node:module";
 import { join } from "node:path";
 
-import { escolherExecucao } from "../analyze/performance.js";
-import { LH_RECORD, type LighthouseRecord, lhRunFile } from "../collect/lighthouse.js";
 import { createLogger } from "../shared/logger.js";
 import { buildMeta } from "../shared/meta.js";
-import type { Har, LhrRegras, Rule } from "../shared/types.js";
-import { codificar, decodificar } from "./encoding.js";
+import type { Rule } from "../shared/types.js";
+import { codificar } from "./encoding.js";
 import { aplicarRegras } from "./engine.js";
+import { lerEntradaDoSite } from "./entrada.js";
 import {
   carregarPrompt,
   chamadorAnthropic,
@@ -86,27 +85,12 @@ let erros = 0;
 for (const id of ids) {
   const dir = join(RAW, id);
   try {
-    const bruto = join(dir, "index.html");
-    if (!existsSync(bruto)) throw new Error("sem index.html (HTML bruto) na coleta");
-    const { url } = JSON.parse(readFileSync(join(dir, "collect.json"), "utf8")) as { url: string };
-    const fonte = decodificar(readFileSync(bruto));
-    const harPath = join(dir, "page.har");
-    const har = existsSync(harPath) ? (JSON.parse(readFileSync(harPath, "utf8")) as Har) : undefined;
-
-    // Relatório do Lighthouse da execução mediana (ADR 009); sem execução válida, as
-    // regras que dependem dele não acusam nada.
-    let lighthouse: LhrRegras | undefined;
-    let lhArquivo: string | null = null;
-    if (existsSync(join(dir, LH_RECORD))) {
-      const { execucao } = escolherExecucao(JSON.parse(readFileSync(join(dir, LH_RECORD), "utf8")) as LighthouseRecord);
-      if (execucao !== null && existsSync(join(dir, lhRunFile(execucao)))) {
-        lhArquivo = lhRunFile(execucao);
-        lighthouse = JSON.parse(readFileSync(join(dir, lhArquivo), "utf8")) as LhrRegras;
-      }
-    }
+    // HTML bruto, HAR e o relatório da execução mediana (ADR 009).
+    const { entrada, fonte, lhArquivo } = lerEntradaDoSite(dir, id);
+    const { url, har, lighthouse } = entrada;
 
     const antes = execucoes.length;
-    const r = await aplicarRegras({ siteId: id, url, html: fonte.texto, har, lighthouse }, regras);
+    const r = await aplicarRegras(entrada, regras);
     const execLlm = execucoes.slice(antes).find((e) => e.siteId === id) ?? null;
     if (execLlm !== null) {
       if (!existsSync(LLM_RUNS)) writeFileSync(LLM_RUNS, COLUNAS_LLM_RUNS.join(",") + "\n", "utf8");
