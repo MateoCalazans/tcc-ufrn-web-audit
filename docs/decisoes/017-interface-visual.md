@@ -115,9 +115,10 @@ Levantamento no código (S20):
     módulos já gravam;
   - recomendações para os 242 sites do corpus sem nova coleta.
 - **Negativas / limitações:**
-  - **Tempo.** Uma análise avulsa leva cerca de 1 a 2 minutos (estimativa pela coleta da
-    S08: 45 a 70 s por site no piloto, mais a triagem). A fila de 1 faz o segundo pedido
-    esperar.
+  - **Tempo.** Uma análise avulsa do `mat.ufrn.br`, sem LLM, levou **77 s** no teste de
+    fumaça da S20. Por etapa: triagem 0,5 s, sondagem 4,8 s, classificação 0,6 s, coleta
+    57,5 s, análise 3,8 s e recomendação 10,2 s (eventos `etapa-fim` do SSE). A fila de 1
+    faz o segundo pedido esperar.
   - **Comparabilidade.** O resultado de um site de fora da UFRN não é comparável ao
     panorama do TCC: outra data, outra rede, outra carga na máquina.
   - **Dependência de caminhos relativos.** Se uma versão futura de um módulo gravar fora do
