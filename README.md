@@ -26,6 +26,13 @@ npm run validate -- run --sample data/validation/amostra.csv
 npm test
 ```
 
+### Interface (ADR 017)
+```bash
+npm run ui                        # compila ui/ e abre em http://127.0.0.1:5179/ (só local)
+npm run ui:dev                    # Vite com proxy (rodar npm run ui:server ao lado)
+npm run ui:axe                    # axe nas telas, com o servidor no ar → docs/resultados/ui-axe.json
+```
+
 O passo a passo completo, com versões e conferência de hashes, está em
 [Como reproduzir](#como-reproduzir).
 
