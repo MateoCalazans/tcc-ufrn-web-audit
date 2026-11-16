@@ -185,7 +185,7 @@ pequena".
 
 ### S20 · Interface: ADR + serviço que roda o pipeline para uma URL
 **Prompt:**
-> Rascunhe o ADR 017 (interface visual). O ADR cobre:
+> Rascunhe o ADR 018 (interface visual; o 017 ficou com a cópia local da S17). O ADR cobre:
 > - análises avulsas gravadas em `data/avulsos/<site>/<data>/`, nunca no `dataset.csv`, no
 >   `llm-runs.csv` do TCC nem em `data/raw/`;
 > - as regras invioláveis 1–5 continuam valendo (robots, User-Agent, pausas, só a página
