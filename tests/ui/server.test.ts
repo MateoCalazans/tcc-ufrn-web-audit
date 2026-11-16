@@ -14,7 +14,7 @@ import { criarServidor } from "../../src/ui/server.js";
  * os arquivos que cada módulo gravaria, conforme o cenário do teste.
  */
 
-type Cenario = { excluir?: string; coletaIncompleta?: boolean; falharEm?: Etapa["nome"] };
+type Cenario = { excluir?: string; coletaIncompleta?: boolean; falharEm?: Etapa["nome"]; semSaidaEm?: Etapa["nome"] };
 
 function escrever(caminho: string, conteudo: string): void {
   mkdirSync(join(caminho, ".."), { recursive: true });
@@ -28,6 +28,8 @@ function executorSimulado(chamadas: Array<{ etapa: Etapa; cwd: string }>, cenari
     const c = cenario();
     onLinha(`simulado: ${etapa.nome}`);
     if (c.falharEm === etapa.nome) return 2;
+    // módulo que registra o erro do site e sai com 0 (erro por site não derruba o lote)
+    if (c.semSaidaEm === etapa.nome) return 0;
     const iSite = etapa.args.indexOf("--site");
     const id =
       iSite >= 0
@@ -196,10 +198,13 @@ describe("análise avulsa", () => {
 
   it("LLM: passa o saldo global como teto e o gasto avulso entra no saldo seguinte", async () => {
     expect(await getJson("/api/llm")).toMatchObject({ tetoUsd: 4.5, gastoUsd: 0.0133 });
+    escrever(join(raiz, "docs", "prompts", "landmarks-v2.md"), "PROMPT-V2");
     await post("/api/analises", { url: "ppgsw.ufrn.br", llm: true });
     await fila.ociosa();
     const rec = chamadas.find((c) => c.etapa.nome === "recomendacao")!;
     expect(rec.etapa.args).toEqual(["--site", "ppgsw.ufrn.br", "--llm", "--teto-usd", "4.4867"]);
+    // o módulo 3 lê o prompt relativo ao cwd: a pasta da análise tem a cópia
+    expect(readFileSync(join(rec.cwd, "docs", "prompts", "landmarks-v2.md"), "utf8")).toBe("PROMPT-V2");
     const saldo = await getJson("/api/llm");
     expect(saldo.gastoUsd).toBeCloseTo(0.2633, 6);
     expect(saldo.saldoUsd).toBeCloseTo(4.2367, 6);
@@ -256,6 +261,27 @@ describe("corpus", () => {
     expect(existsSync(join(raiz, "data", "processed", "sites", "agir.ufrn.br", "recommendations.json"))).toBe(false);
     expect(readdirSync(join(raiz, "data", "raw", "agir.ufrn.br")).sort()).toEqual(["collect.json", "screenshot.png"]);
     expect(await (await fetch(`${base}/api/corpus/agir.ufrn.br/screenshot`)).text()).toBe("PNG-TCC");
+  });
+
+  it("módulo que sai com 0 sem gravar a saída: análise falha e não vira recomendação do site", async () => {
+    cenario = { semSaidaEm: "recomendacao" };
+    const { id } = (await (await post("/api/corpus/agir.ufrn.br/recomendar", {})).json()) as { id: string };
+    await fila.ociosa();
+    const a = await getJson(`/api/analises/${id}`);
+    expect(a.estado).toBe("falhou");
+    expect(a.motivo).toBe("Recomendação não gerou recommendations.json (ver logs/ na pasta da análise)");
+    const agir = await getJson("/api/corpus/agir.ufrn.br");
+    expect(agir.recomendacao).toBeNull();
+    expect(agir.temBruto).toBe(false);
+  });
+
+  it("análise avulsa: análise sem metrics.json falha antes da recomendação", async () => {
+    cenario = { semSaidaEm: "analise" };
+    const { id } = (await (await post("/api/analises", { url: "ppgsw.ufrn.br" })).json()) as { id: string };
+    await fila.ociosa();
+    const a = await getJson(`/api/analises/${id}`);
+    expect(a).toMatchObject({ estado: "falhou", motivo: "Análise não gerou metrics.json (ver logs/ na pasta da análise)" });
+    expect(chamadas.map((c) => c.etapa.nome)).not.toContain("recomendacao");
   });
 });
 

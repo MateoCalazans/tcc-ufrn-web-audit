@@ -231,6 +231,13 @@ export class Fila {
 
       mkdirSync(join(a.pasta, "data", "input"), { recursive: true });
       writeFileSync(join(a.pasta, "data", "input", "registros-ufrn.txt"), `${host}\n`);
+      // Com LLM, o módulo 3 lê o prompt versionado relativo ao cwd
+      // (`docs/prompts/`, ADR 016). A cópia também deixa na pasta o prompt usado.
+      if (opcoes.llm) {
+        const prompts = join(this.deps.raiz, "docs", "prompts");
+        if (!existsSync(prompts)) return this.mudar(a, "falhou", "sem docs/prompts/ no repositório para a LLM");
+        cpSync(prompts, join(a.pasta, "docs", "prompts"), { recursive: true });
+      }
 
       const plano = planoAvulso({ id: site, llm: opcoes.llm, vnu: opcoes.vnu, tetoUsd: opcoes.tetoUsd ?? 0 });
       for (const etapa of plano) {
@@ -246,6 +253,8 @@ export class Fila {
           const incompleta = coletaIncompleta(join(a.pasta, "data", "raw", site));
           if (incompleta) return this.mudar(a, "falhou", incompleta);
         }
+        const faltou = saidaAusente(a.pasta, site, etapa.nome);
+        if (faltou) return this.mudar(a, "falhou", faltou);
       }
       this.mudar(a, "concluida");
     });
@@ -262,11 +271,24 @@ export class Fila {
       for (const etapa of planoCorpus(site)) {
         const codigo = await this.rodarEtapa(a, etapa);
         if (codigo !== 0) return this.mudar(a, "falhou", `${ROTULO_ETAPA[etapa.nome]} terminou com código ${codigo}`);
+        const faltou = saidaAusente(a.pasta, site, etapa.nome);
+        if (faltou) return this.mudar(a, "falhou", faltou);
       }
       this.mudar(a, "concluida");
     });
     return a;
   }
+}
+
+/**
+ * Os módulos 2 e 3 registram o erro de um site e saem com código 0 (erro por
+ * site não derruba o lote). Para uma análise de um site só, isso é falha:
+ * `null` se a etapa gravou o que devia; senão, o motivo (S21).
+ */
+export function saidaAusente(pasta: string, site: string, etapa: NomeEtapa): string | null {
+  const arquivo = etapa === "analise" ? "metrics.json" : etapa === "recomendacao" ? "recommendations.json" : null;
+  if (arquivo === null || existsSync(join(pasta, "data", "processed", "sites", site, arquivo))) return null;
+  return `${ROTULO_ETAPA[etapa]} não gerou ${arquivo} (ver logs/ na pasta da análise)`;
 }
 
 /** `null` se a coleta tem página e Lighthouse completos; senão, o motivo. */
