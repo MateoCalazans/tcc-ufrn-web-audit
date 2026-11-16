@@ -2,9 +2,9 @@
 
 > Atualizado ao fim de cada sessão (o `/fim-de-sessao` faz isso).
 
-**Última atualização:** 2026-11-12
-**Fase atual:** 4 — Recomendação (S15); motor e 3 regras da S14 concluídos
-**Próxima sessão:** S15
+**Última atualização:** 2026-11-16
+**Fase atual:** 4 — Recomendação (S16); motor e 8 regras (S14–S15) concluídos
+**Próxima sessão:** S16
 
 | Sessão | Situação | Data | Diário | Commits/tag |
 |---|---|---|---|---|
@@ -23,7 +23,7 @@
 | S12 | ✅ | 2026-11-11 | [s12](diario/2026-11-11-s12.md) | 18ad216 870aa71 ffb7132 f44cf53 · v0.2-analise |
 | S13 | ✅ | 2026-11-12 | [s13](diario/2026-11-12-s13.md) | 0beff4c cb16291 a4dbc32 39eafb5 |
 | S14 | ✅ | 2026-11-12 | [s14](diario/2026-11-12-s14.md) | d609114 d64373f bb9e380 3d1d445 20e27f2 |
-| S15 | ⬜ | | | |
+| S15 | ✅ | 2026-11-16 | [s15](diario/2026-11-16-s15.md) | 1ab9a18 80c0990 72953b6 |
 | S16 | ⬜ | | | v0.3-recomendacao |
 | S17 | ⬜ | | | |
 | S18 | ⬜ | | | v1.0 |
@@ -75,6 +75,9 @@ Legenda: ⬜ pendente · 🟨 em andamento · ✅ concluída · ✂️ cortada (
 - **(S14)** Fins de linha: resolvido com o `.gitattributes` (`20e27f2`, `* text=auto eol=lf`). Num clone novo, as fixtures saem com LF e o SHA-256 do `dataset.csv` bate com o da S12 (resolve a pendência da S12). `registros-ufrn.txt` e a fixture `xhtml-crlf.html` ficaram com `-text`.
 - **(S14)** Por que as 3 regras da S14? Vieram do `ROTEIRO.md` (15/out), sem justificativa registrada e antes do diagnóstico. A frequência só sustenta a `img-dimensions` (`unsized-images` 72,8%; `html-has-lang` 21,7%; `viewport-insight` 13,4%). Perguntar ao orientador o critério combinado. A pergunta é provável na banca.
 - **(S14)** Escopo de acessibilidade: o autor manteve o roteiro (sem ARIA/WCAG além das regras previstas). Declarar no texto que o sistema não audita conformidade WCAG; justificar as regras pela frequência das falhas no diagnóstico (não feito).
+- **(S15)** Validar o [ADR 015](decisoes/015-regras-da-s15-e-criterio-de-escolha.md) (proposto): critério de escolha (viabilidade + frequência), limiar de 3 imagens da `img-lazy` (não validado; sem auditoria no Lighthouse 13 para medir a frequência), severidades das 8 regras (resolve as pendências da S14 sobre severidades e critério). Referências citadas de memória.
+- **(S15)** `fake-button` (2,3% dos sites) e `obsolete-tags` (1,8%) mantidas como demonstração do motor, por decisão do autor; saem junto se as subnotas `sub_interativos`/`sub_obsoletos` forem retiradas (pendência S12). CSS incluído na `render-blocking-hint` (adendo ao ADR 015).
+- **(S15)** `npx vitest` reintroduz o `c:` minúsculo no Windows (pendência S11); `node node_modules/vitest/vitest.mjs run` funciona. Registrar em `docs/ambiente/` ou ajustar o `npm test`?
 
 ## Bloqueios
 -

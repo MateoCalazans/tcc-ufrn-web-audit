@@ -51,9 +51,9 @@ Isso inclui as severidades da S14, que ficaram fora do ADR 014.
      implícito → só recomendação;
    - `heading-skip` e `fake-button`: só recomendação;
    - `render-blocking-hint`: só recomendação.
-4. **`render-blocking-hint`:** só scripts listados pelo Lighthouse, presentes no HTML bruto como
-   `<script src>` sem `async`/`defer` e que não sejam `type="module"`. As folhas de estilo da
-   mesma auditoria ficam fora (escopo do roteiro). Sem relatório do Lighthouse, não acusa nada.
+4. **`render-blocking-hint`:** recursos listados pelo Lighthouse e presentes no HTML bruto como
+   `<script src>` sem `async`/`defer` e que não sejam `type="module"`, ou como
+   `<link rel="stylesheet" href>` (ver adendo). Sem relatório do Lighthouse, não acusa nada.
 5. **Definições iguais às do índice:** `heading-skip` usa `nivelDoTitulo` (ADR 010, item 4), e
    `fake-button` usa a definição do ADR 011, item 2 (`div`/`span` + `onclick`, sem `role` e sem
    `tabindex`). As funções são importadas de `src/analyze/semantics.ts`. `obsolete-tags` usa a
@@ -113,9 +113,22 @@ Isso inclui as severidades da S14, que ficaram fora do ADR 014.
     (ex.: `<font style="vertical-align: inherit">` do Google Tradutor) é acusada como obsoleta.
   - O parser reabre elementos de formatação não fechados (`<font>`) com clones que herdam a
     posição da tag original. A regra conta uma vez por tag escrita no arquivo.
-  - `render-blocking-hint` não vê scripts injetados por JS nem os de sites sem execução
-    válida do Lighthouse (25 sites `falha`, S08), e não cobre CSS.
+  - `render-blocking-hint` não vê recursos injetados por JS nem `@import` dentro de CSS, e
+    não age nos sites sem execução válida do Lighthouse (25 sites `falha`, S08).
   - `fake-button` e `obsolete-tags` são raras no corpus (≤ 2,3% dos sites).
+
+## Adendo (2026-11-16, ainda na S15) — CSS na `render-blocking-hint` e regras raras mantidas
+- **CSS incluído.** A 1ª versão cobria só scripts (escopo do roteiro). Uma contagem
+  exploratória na execução mediana do conjunto principal (n = 217; tipo inferido pela
+  extensão na URL, `node -e` sobre os `lh<n>.json`) achou 181 sites com recurso bloqueante:
+  60 só com CSS, 17 só com JS e 104 com os dois. Dos 1.546 itens, 1.168 são CSS. Só com
+  scripts, a regra ficaria muda em um terço dos sites com o problema mais frequente do
+  diagnóstico. A folha de estilo também só gera recomendação (CSS crítico dentro do HTML,
+  atributo `media`, remover o que não é usado), então o `fixed.html` e a validação não mudam.
+  Decisão do autor: *"incluir o render blocking"*.
+- **`fake-button` e `obsolete-tags` mantidas**, como demonstração do motor e porque cada uma
+  corresponde a uma subnota do índice (`sub_interativos`, `sub_obsoletos`). Se a pendência da
+  S12 levar à retirada dessas subnotas, as regras saem junto. Decisão do autor: *"Manter"*.
 
 ## Onde aparece no TCC
 Cap. 5 (módulo de recomendação): tabela de regras (`docs/artigo/catalogo-regras.md`),

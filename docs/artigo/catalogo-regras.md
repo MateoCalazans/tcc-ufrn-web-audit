@@ -12,7 +12,7 @@ Preenchido pelo comando `/nova-regra`. Entra como tabela no Cap. 5. Decisões: A
 | `obsolete-tags` | semântica | baixa | só `<font>` com `color`/`face` válidos → `<span style>` | elementos obsoletos (`OBSOLETAS_WHATWG`) | 1,8% (`obsoletas_whatwg > 0`) | WHATWG §16.2 (Non-conforming features) |
 | `heading-skip` | semântica | media | não | salto de nível ao descer na hierarquia de títulos (ADR 010) | 28,6% (`titulos_saltos > 0`); `heading-order` 25,8% | WCAG 1.3.1 / técnica G141; eMAG 3.1 |
 | `fake-button` | semântica | media | não | `div`/`span` com `onclick`, sem `role` e `tabindex` (ADR 011) | 2,3% (`interativos_falsos > 0`) | WCAG 2.1.1 e 4.1.2 |
-| `render-blocking-hint` | performance | media | não | `<script src>` sem `async`/`defer` listado na `render-blocking-insight` | `render-blocking-insight` 83,4% | Lighthouse, `render-blocking-insight` |
+| `render-blocking-hint` | performance | media | não | `<script src>` sem `async`/`defer` ou `<link rel="stylesheet">` listado na `render-blocking-insight` | `render-blocking-insight` 83,4% | Lighthouse, `render-blocking-insight` |
 
 As referências normativas foram citadas de memória: conferir antes do texto final.
 As frequências das auditorias vêm de `docs/resultados/tabelas/auditorias_falha.csv` (S13).
