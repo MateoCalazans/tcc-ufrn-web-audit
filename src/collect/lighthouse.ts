@@ -77,6 +77,8 @@ export interface RunnerOptions {
   tlsInvalido: boolean;
   /** Executável do Chromium (o do Playwright, ADR 007). */
   chromePath: string;
+  /** Flags acrescentadas às de `chromeFlags` (S18: bloqueio de rede na cópia local, ADR 004). */
+  chromeFlagsExtras?: string[];
 }
 
 export type LighthouseRunner = (url: string, opts: RunnerOptions) => Promise<RunOutput>;
@@ -85,7 +87,7 @@ export type LighthouseRunner = (url: string, opts: RunnerOptions) => Promise<Run
 export const runLighthouse: LighthouseRunner = async (url, opts) => {
   const chrome = await chromeLauncher.launch({
     chromePath: opts.chromePath,
-    chromeFlags: chromeFlags(opts, opts.userAgent),
+    chromeFlags: [...chromeFlags(opts, opts.userAgent), ...(opts.chromeFlagsExtras ?? [])],
     logLevel: "silent",
   });
   try {
