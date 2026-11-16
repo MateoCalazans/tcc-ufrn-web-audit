@@ -21,7 +21,7 @@ const achado = (inicio: number, fim: number, texto: string): Achado => ({
 });
 
 describe("motor", () => {
-  it("site de exemplo com as 3 regras → fixed.html esperado, diff aplicável", async () => {
+  it("site de exemplo com todas as regras → fixed.html esperado, diff aplicável", async () => {
     const html = readFileSync(join(SITE, "index.html"), "utf8");
     const r = await aplicarRegras(
       { siteId: "exemplo.ufrn.br", url: "https://exemplo.ufrn.br/", html, har: har([entrada("https://exemplo.ufrn.br/logo.png", png(320, 96), "image/png")]) },
@@ -32,7 +32,13 @@ describe("motor", () => {
     expect(r.resumo).toEqual({
       total: 3,
       corrigidas: 3,
-      porRegra: { "html-lang": { total: 1, corrigidas: 1 }, "meta-viewport": { total: 1, corrigidas: 1 }, "img-dimensions": { total: 1, corrigidas: 1 } },
+      porRegra: {
+        // regras sem achado aparecem com zero
+        ...Object.fromEntries(REGRAS.map((x) => [x.id, { total: 0, corrigidas: 0 }])),
+        "html-lang": { total: 1, corrigidas: 1 },
+        "meta-viewport": { total: 1, corrigidas: 1 },
+        "img-dimensions": { total: 1, corrigidas: 1 },
+      },
       porDimensao: { performance: 2, semantica: 1 },
     });
     expect(r.diff.startsWith("--- a/index.html\n+++ b/fixed.html\n")).toBe(true);
