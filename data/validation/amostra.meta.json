@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T19:12:26.540Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12"
+    },
+    "gitCommit": "900d1d5d8c100caeb44e9832f0da0f80993b820f",
+    "gitDirty": true
+  },
+  "adr": "docs/decisoes/004-amostra-e-protocolo-da-validacao.md",
+  "parametros": {
+    "porGrupo": 3,
+    "regras": [
+      "html-lang",
+      "meta-viewport",
+      "img-dimensions",
+      "img-lazy",
+      "obsolete-tags",
+      "heading-skip",
+      "fake-button",
+      "render-blocking-hint"
+    ],
+    "llm": false
+  },
+  "fonte": {
+    "dataset": "data/processed/dataset.csv",
+    "raw": "data\\raw"
+  },
+  "linhasNoDataset": 242,
+  "excluidos": {
+    "socrates.ct.ufrn.br": "login (regra 4): tela de carregamento do Portainer, que pede login",
+    "secacademica.ect.ufrn.br": "login (regra 4): página inicial é o formulário de login",
+    "artefatos.imd.ufrn.br": "ferramenta de infraestrutura (JFrog Artifactory), não é portal institucional; decisão do autor"
+  },
+  "inelegiveis": {
+    "fora-do-conjunto-principal": 25,
+    "excluido-na-validacao": 3,
+    "semantica-nao-ok": 4,
+    "meta-refresh": 17,
+    "sem-nota-ou-indice": 0,
+    "tecnologia-sem-grupo": 0,
+    "sem-copia-local": 2,
+    "sem-correcao": 46
+  },
+  "elegiveis": 145,
+  "elegiveisPorGrupo": {
+    "estatico": 81,
+    "framework-js": 20,
+    "wordpress": 35,
+    "outro": 9
+  },
+  "amostra": 12
+}
