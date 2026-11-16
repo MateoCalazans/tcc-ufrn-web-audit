@@ -1,4 +1,4 @@
-import { appendFileSync, existsSync, mkdirSync, writeFileSync } from "node:fs";
+import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 
 import { VERSION as VERSAO_SDK } from "@anthropic-ai/sdk/version";
 import { createRequire } from "node:module";
@@ -8,7 +8,10 @@ import { createLogger } from "../shared/logger.js";
 import { buildMeta } from "../shared/meta.js";
 import type { Rule } from "../shared/types.js";
 import { codificar } from "./encoding.js";
-import { aplicarRegras } from "./engine.js";
+import { chromium, type Browser } from "playwright";
+
+import { aplicarRegras, montarResultado } from "./engine.js";
+import { desfazerReprovadas, guardarImagens, julgar, prepararMedicao, REGRA_GUARDADA, type ResultadoGuarda } from "./guarda-imagens.js";
 import { lerEntradaDoSite } from "./entrada.js";
 import {
   carregarPrompt,
@@ -82,6 +85,7 @@ if (usarLlm) {
 log.info("inicio", { meta, sites: ids, regras: regras.map((r) => r.id), llm });
 
 let erros = 0;
+let navegador: Browser | undefined;
 for (const id of ids) {
   const dir = join(RAW, id);
   try {
@@ -90,7 +94,32 @@ for (const id of ids) {
     const { url, har, lighthouse } = entrada;
 
     const antes = execucoes.length;
-    const r = await aplicarRegras(entrada, regras);
+    const bruto = await aplicarRegras(entrada, regras);
+
+    // Guarda de renderização das imagens (S18b, adendo ao ADR 014): só fica a
+    // correção da img-dimensions cujo tamanho exibido não muda (mobile e desktop).
+    let guarda: ResultadoGuarda | null = null;
+    let r = bruto;
+    if (bruto.recommendations.some((x) => x.regra === REGRA_GUARDADA && x.edicoes.length > 0)) {
+      const harPath = join(dir, "page.har");
+      if (existsSync(harPath)) {
+        const collect = JSON.parse(readFileSync(join(dir, "collect.json"), "utf8")) as { url: string; raw?: { finalUrl?: string | null; headers?: Record<string, string> } };
+        navegador ??= await chromium.launch();
+        guarda = await guardarImagens(
+          navegador,
+          { harPath, url: collect.raw?.finalUrl ?? collect.url, contentType: collect.raw?.headers?.["content-type"] ?? "text/html" },
+          entrada.html,
+          bruto.recommendations,
+          (t) => codificar(t, fonte),
+        );
+      } else {
+        // Sem HAR não há como medir: nenhuma correção da regra é mantida.
+        const { marcadores } = prepararMedicao(entrada.html, bruto.recommendations);
+        guarda = { ...julgar(marcadores, {}), erro: "sem page.har: nada a medir" };
+      }
+      r = montarResultado(entrada.html, regras.map((x) => x.id), desfazerReprovadas(bruto.recommendations, guarda));
+      log.info("guarda-imagens", { id, mantidas: guarda.mantidas, desfeitas: guarda.desfeitas, erro: guarda.erro });
+    }
     const execLlm = execucoes.slice(antes).find((e) => e.siteId === id) ?? null;
     if (execLlm !== null) {
       if (!existsSync(LLM_RUNS)) writeFileSync(LLM_RUNS, COLUNAS_LLM_RUNS.join(",") + "\n", "utf8");
@@ -115,17 +144,23 @@ for (const id of ids) {
       regras: regras.map((x) => ({ id: x.id, dimensao: x.dimensao, descricao: x.descricao })),
       llm: llm === null ? null : { ...llm, execucao: execLlm },
       resumo: r.resumo,
+      guardaImagens: guarda,
       recommendations: r.recommendations,
     };
     writeFileSync(join(destino, "recommendations.json"), JSON.stringify(saida, null, 2) + "\n", "utf8");
     writeFileSync(join(destino, "fixed.html"), codificar(r.fixedHtml, fonte));
     writeFileSync(join(destino, "fix.diff"), codificar(r.diff, { ...fonte, bom: false }));
     log.info("site", { id, ...r.resumo });
-    process.stderr.write(`[recommend] ${id}: ${r.resumo.total} recomendações, ${r.resumo.corrigidas} corrigidas.\n`);
+    process.stderr.write(
+      `[recommend] ${id}: ${r.resumo.total} recomendações, ${r.resumo.corrigidas} corrigidas.` +
+        (guarda ? ` Guarda de imagens: ${guarda.mantidas} mantidas, ${guarda.desfeitas} desfeitas${guarda.erro ? ` (${guarda.erro})` : ""}.` : "") +
+        "\n",
+    );
   } catch (e) {
     erros++;
     log.error("site", { id, erro: (e as Error).message });
     process.stderr.write(`[recommend] ${id}: erro — ${(e as Error).message}\n`);
   }
 }
+await navegador?.close();
 log.info("fim", { sites: ids.length, erros });
