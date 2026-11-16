@@ -1,7 +1,7 @@
 # tcc-ufrn-web-audit
 
 Análise automatizada de performance e semântica HTML nos sites públicos da UFRN.
-TCC 2 — Bacharelado (UFRN/EAJ), 2026. Orientador: Prof. Taniro.
+TCC 2 — Tecnologia em Análise e Desenvolvimento de Sistemas (UFRN/EAJ), 2026. Orientador: Prof. Taniro.
 
 ## Sobre a coleta (para administradores dos sites)
 Este projeto acessa **apenas a página inicial pública** dos sites `*.ufrn.br`, com no

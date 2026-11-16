@@ -5,7 +5,7 @@
 
 ## O que é este projeto
 
-TCC 2 (Bacharelado, UFRN/EAJ). Título provisório:
+TCC 2 (Tecnologia em Análise e Desenvolvimento de Sistemas, UFRN/EAJ). Título provisório:
 **"Análise automatizada de performance e semântica HTML em portais institucionais:
 um estudo de caso nos sites da UFRN."**
 
