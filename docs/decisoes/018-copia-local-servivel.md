@@ -1,4 +1,4 @@
-# ADR 017 — Cópia local servível: fonte, reescrita de URLs e verificação
+# ADR 018 — Cópia local servível: fonte, reescrita de URLs e verificação
 
 **Data:** 2026-11-16 · **Status:** proposto
 

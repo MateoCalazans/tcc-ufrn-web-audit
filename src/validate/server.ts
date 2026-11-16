@@ -7,7 +7,7 @@ import { gzipSync } from "node:zlib";
 import { ARQ_MANIFESTO, type EntradaManifesto, type Manifesto } from "./snapshot.js";
 
 /**
- * Servidor estático da cópia local (S17, ADR 017). O MESMO código serve a
+ * Servidor estático da cópia local (S17, ADR 018). O MESMO código serve a
  * variante original e a corrigida, cada uma na sua porta: só o HTML da página
  * muda entre as duas. Regras iguais para os dois lados:
  *   - `Cache-Control: no-store` (cada execução do Lighthouse baixa tudo);

@@ -5,7 +5,7 @@ import { join } from "node:path";
 import type { Meta } from "../shared/types.js";
 
 /**
- * Módulo 4 — cópia local servível (S17, ADR 017).
+ * Módulo 4 — cópia local servível (S17, ADR 018).
  *
  * A cópia é montada a partir do `page.har` da coleta congelada, sem nenhuma
  * requisição nova aos sites (regras 7 e 8). Cada recurso do HAR vira um
@@ -130,7 +130,7 @@ export function reescreverUrls(texto: string, hostPrincipal: string, hostsExtern
  * relativos à raiz (`/x`) passariam a apontar para a raiz do servidor local.
  * Esta função os ancora em `/_ext/<host>`. Cobre CSS (`url(/x)`,
  * `@import "/x"`) e atributos de HTML (`src`, `href`, `action`, `poster`);
- * caminhos montados em JS não são cobertos (limitação do ADR 017).
+ * caminhos montados em JS não são cobertos (limitação do ADR 018).
  */
 export function ancorarRaizExterna(texto: string, host: string, contentType: string): string {
   const prefixo = `${PREFIXO_EXTERNO}${host.toLowerCase()}`;

@@ -5,7 +5,7 @@ import { type Comparacao, compararPng } from "./compare.js";
 import { servirSnapshot } from "./server.js";
 
 /**
- * Verificação visual da cópia local (S17, ADR 017): a variante original,
+ * Verificação visual da cópia local (S17, ADR 018): a variante original,
  * servida pelo servidor local, é fotografada com os mesmos parâmetros da
  * coleta (viewport mobile, `networkidle`, só a viewport) e comparada pixel a
  * pixel com o `screenshot.png` da coleta. O ruído é medido entre duas

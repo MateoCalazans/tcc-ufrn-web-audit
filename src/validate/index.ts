@@ -10,7 +10,7 @@ import { DIR_SNAPSHOT, gravarSnapshot } from "./snapshot.js";
 import { BLOQUEIO_DE_REDE, verificarSnapshot } from "./verify.js";
 
 /**
- * Módulo 4 — Validação. Por enquanto (S17, ADR 017), só a cópia local:
+ * Módulo 4 — Validação. Por enquanto (S17, ADR 018), só a cópia local:
  *
  *   npm run validate -- snapshot --site <id> [--site <id> ...] [--verificar]
  *
