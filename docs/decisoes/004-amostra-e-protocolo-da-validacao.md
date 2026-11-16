@@ -263,6 +263,37 @@ Pré-registro, escrito e commitado **antes** de qualquer medição do censo.
     qualquer delta do censo.
   - Outras telas fora do escopo podem ter escapado, porque só os suspeitos foram
     conferidos.
+- **Execução.**
+  - 134 de 134 sites medidos, sem delta ausente.
+  - O lote caiu por falta de memória no site 78 (`pronatec`, heap de cerca de 4 GB,
+    depois de 66 min) e foi retomado com `--max-old-space-size=8192`, como na S08. Os
+    sites já medidos foram pulados, e o `pronatec` foi medido do zero.
+  - O `lisp` levou 638 s, e a 3ª execução das duas variantes caiu de 57 para 38/41,
+    possivelmente por carga externa na máquina. A mediana não mudou (57 → 57).
+- **Resultado** (`docs/resultados/tabelas/validacao-wilcoxon-censo.csv`):
+  - **Com diferença confirmada depois do Holm:**
+    - nota de performance: 52 melhoraram, 20 pioraram, 62 iguais, p Holm = 0,020;
+    - LCP: 106 melhoraram, 28 pioraram, mediana da diferença de −442 ms, p Holm < 0,001;
+    - índice de semântica: 63 subiram, 2 caíram, 69 iguais, p Holm < 0,001.
+  - **Sem diferença confirmada:** CLS e TBT.
+  - **Faixa de ruído da nota de performance:** 19 sites melhoraram e 4 pioraram mais
+    do que a amplitude das 3 execuções; 111 ficaram dentro dela.
+- **Pioras encontradas** (conferidas no `layout-shifts` da execução mediana):
+  - **CLS:** subiu mais de 0,05 em 8 sites, por duas causas:
+    - `img-lazy` em `<img>` sem `width`/`height`, quando a guarda desfaz a
+      `img-dimensions` e o `loading="lazy"` fica (`transportes`, `covid19`,
+      `direitoacidade`, `negtec`);
+    - `meta-viewport` inserida, que troca o layout de 980 px pelo responsivo (`nesc`,
+      `dep.ct`, `negtec`).
+  - **Landmarks:** no `grafica.cchla`, a `landmarks-llm` trocou por `main` um bloco que
+    contém o `header` e o `footer`. Dentro do `main`, eles deixam de ser `banner` e
+    `contentinfo` (HTML-AAM): no DOM, banner 1 → 0 e contentinfo 1 → 0, e a subnota de
+    landmarks caiu 25 pontos. A justificativa do próprio modelo dizia que a proposta
+    "não é válida como main", mas a proposta veio e a validação do ADR 016 (texto
+    igual e CSS) não a barrou.
+  - **Decisão:** relatar como resultado. As regras não mudam depois da medição, e a
+    correção da interação lazy × dimensões fica como trabalho futuro ou rodada
+    posterior declarada.
 
 ## Onde aparece no TCC
 Metodologia (desenho da validação: amostra e protocolo) e Resultados (RQ2: antes/depois).
