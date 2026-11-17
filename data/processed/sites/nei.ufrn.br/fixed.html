@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<base href="/">
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	<meta name="language" content="Portuguese">
+	<meta name="description" content="NEI - Núcleo de Educação da Infância">
+	<meta name="designer" content="Equipe FERA, Antonio Braz, David Martins, André Lourenço e Andressa Kroeff (frontend@sti.ufrn.br)">
+	<meta name="keywords" content="nei, ufrn, nei ufrn, nucleo de educação da infância">
+	<meta name="reply-to" content="nei@ce.ufrn.br">
+	<meta name="copyright" content="https://nei.ufrn.br/">
+    <meta name="category" content="Núcleo de Educação">
+    <meta name="Robots" content="Index,Follow">
+
+    <!-- Verificacao G Suite -->
+    <meta name="google-site-verification" content="1TrTs7ji5Kgp7776fLM3Jz4mx2H8YtJBgLTl7mlxQ9g" />
+
+	<!-- Folhas de estilo -->
+	<link rel="stylesheet" type="text/css" href="/dist/vendors/lightbox2/css/lightbox.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/dist/vendors/font-awesome/css/font-awesome.min.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/dist/vendors/owl.carousel/css/owl.carousel.min.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/dist/vendors/owl.carousel/css/owl.theme.default.min.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/dist/css/barragoverno.css?v=1.4.0">
+
+	<link rel="stylesheet" href="/dist/css//main.css?v=2.0.0"> <!-- O bootstrap está dentro -->
+
+	<!-- TODO: Alterar a imagem do ícone -->
+	<link rel="shortcut icon" href="/dist/img/favicon.png?v=2.0.0">
+
+	<title>NEI | Núcleo de Educação da Infância - CAp/UFRN</title>
+</head>
+<body>
+		<script type="text/javascript" src="/dist/vendors/jquery/js/jquery.js"></script>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J14N8XR2RG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J14N8XR2RG');
+</script>
+<div id="barra-brasil" style="height: 23px; width: 100%; opacity: 0.1;">
+    <ul id="menu-barra-temp" style="list-style:none;">
+        <li style="display:inline; float:left; padding-right:10px; margin-right:10px;">
+            <a href="https://brasil.gov.br" style="text-decoration:none; color: transparent;">Portal do Governo Brasileiro</a>
+        </li>
+    </ul>
+</div>
+<script type="text/javascript" src="https://arquivos.info.ufrn.br/arquivos/2023032242cfad1243936953c7d717b89d/STICookieConsent.js"></script>
+<header>
+		<!-- header-barra: navegacao e busca -->
+		<section class="header-barra hidden-xs hidden-sm">
+			<div class="container">
+				<ul>
+					<li>
+						<a href="https://sigaa.ufrn.br/sigaa/public/processo_seletivo/lista.jsf?aba=p-processo&nivel=I" target="_blank">Inscrições</a>
+					</li>
+					<li>
+						<a href="/instituicao/contato">Fale Conosco</a>
+					</li>
+					<li class="divisor">|</li>
+					<li class="busca">
+						<form id="form_busca"  class="searchform" action="/busca" name="form_busca" method="GET">
+                            <input class="input-busca" type="text" id="chave" name="s" placeholder="Palavra-Chave">
+                            <button type="submit" class="btn btn-default bt_busca"><i class="fa fa-search"></i></button>
+                        </form>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!-- header-logo: logo -->
+		<section class="header-logo">
+			<div class="container">
+				<a href="/" class="logo"><img src="/dist/img/NEI.png"></a>
+			</div>
+		</section>
+	</div>
+</header><nav class="navbar navbar-default">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-principal" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form class="navbar-form hidden-md hidden-lg" id="form_pesquisa_mob">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Search">
+				</div>
+				<button type="button" class="btn btn-navbar-custom pesquisa" id="bt_pesquisa_mob"><i class="fa fa-search"></i></button>
+				<button type="button" class="btn btn-navbar-custom fechar" id="bt_pesquisa_mob_fechar"><i class="fa fa-close"></i></button>
+			</form>
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="menu-principal">
+			<ul class="nav navbar-nav">
+				<li class="dropdown ">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Instituição</a>
+					<ul class="dropdown-menu">
+						<li class=" "><a href="/instituicao/historia">História</a></li><!-- pagina extra -->
+						<li class=" "><a href="/instituicao/proposta">Proposta Pedagógica</a></li><!-- pagina extra -->
+						<li class=" "><a href="/instituicao/equipe">Equipe</a></li><!-- pagina extra -->
+						<li class=" "><a href="https://arquivos.info.ufrn.br/arquivos/2025234030463a11957539b7698bfd2986/res0102024-aprova_o_reg._inter._do_NEI-CAP_-_UAE-CE.pagina.pdf" target="_blank">Regimento Interno</a></li>
+						<li class=" "><a href="/instituicao/telefones">Contatos</a></li><!-- pagina extra -->
+					</ul>
+				</li>
+				<li class="dropdown ">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">O Saber na Escola</a>
+					<ul class="dropdown-menu">
+						<li class=" "><a href="/osabernaescola/educ_infantil">Educação Infantil</a></li><!-- pagina extra -->
+						<li class=" "><a href="/osabernaescola/ens_fundamental">Ensino Fundamental</a></li><!-- pagina extra -->
+						<li class=" "><a href="/osabernaescola/entrada">A entrada da criança na escola</a></li><!-- pagina extra -->
+						<li class=" "><a href="/osabernaescola/atendimento">Atendimento pedagógico</a></li><!-- pagina extra -->
+						<li class=" "><a href="/osabernaescola/inclusao">Inclusão</a></li><!-- pagina extra -->
+					</ul>
+				</li>
+				<li class="dropdown ">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pesquisa e Extensão</a>
+					<ul class="dropdown-menu">
+						<li class=" "><a href="/pesquisaeextensao/proj_pesquisa">Projetos de Pesquisa</a></li><!-- pagina extra -->
+						<li class=" "><a href="/pesquisaeextensao/proj_extensao">Projetos de Extensão</a></li><!-- pagina extra -->
+						<li class=" "><a href="/pesquisaeextensao/cursos">Cursos</a></li><!-- pagina extra -->
+						<li class=" "><a href="https://arquivos.info.ufrn.br/arquivos/2020144234721d7687246d0acd4ee8725/PRONEI.pdf" target="_blank">PRONEI</a></li>
+					</ul>
+				</li>
+				<li class="dropdown ">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Escola e Família</a>
+					<ul class="dropdown-menu">
+						<li class=" "><a href="/acontecenei/documentos/calendario-anual/342116252">Calendário Anual</a></li>
+						<li class=" "><a href="/escolaefamilia/orientacoes">Normas e Orientações</a></li><!-- pagina extra -->
+					</ul>
+				</li>
+				<li class="dropdown ">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Você na Escola</a>
+					<ul class="dropdown-menu">
+						<li class=" "><a href="/vocenaescola/estagio">Estágio supervisionado para estudantes da UFRN</a></li><!-- pagina extra -->
+						<li class=" "><a href="/vocenaescola/visitas">Visitas e pesquisas acadêmicas</a></li><!-- pagina extra -->
+					</ul>
+				</li>
+				<li class="dropdown ">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Acontece NEI</a>
+					<ul class="dropdown-menu">
+						<li class=" "><a href="/acontecenei/noticias">Notícias</a></li>
+						<li class=" "><a href="https://sigaa.ufrn.br/sigaa/public/processo_seletivo/lista.jsf?aba=p-processo&nivel=I" target="_blank">Inscrições</a></li>
+						<li class=" "><a href="/acontecenei/documentos">Documentos</a></li>
+						<li class=" "><a href="/acontecenei/galerias">Galeria de fotos</a></li>
+						<li class=" "><a target="_blank" href="https://www.youtube.com/channel/UCZoR71ZR0UApoN6tft9w04Q">Canal do NEI</a></li>
+					</ul>
+				</li>
+				<li class="dropdown ">
+					<a href="/repositorio">Repositório</a>
+				</li>
+				<li class="dropdown">
+					<a href="https://arquivos.info.ufrn.br/arquivos/2020144234721d7687246d0acd4ee8725/PRONEI.pdf" target="_blank">PRONEI</a>
+				</li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</div><!-- /.container -->
+</nav>
+<main class="container pg-interna">
+		<div class="flor hidden-xs hidden-sm"></div>
+
+	<div class="col-xs-12 col-sm-12 col-md-8">
+		
+<section class="slideshow">
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+									<div class="item active">
+							 
+						<div class="first-slide img-carousel" style="background-image:url(/dist/img/imagem_padrao.png);" alt="First slide"></div>
+						<div class="container">
+							<div class="carousel-caption">
+								<p>Geral</p>
+								<a href="/acontecenei/noticias/resultado-do-sorteio-do-dia-31-10-2026-grupos-1-2-3-e-4/73205724">
+								<p>RESULTADO DO SORTEIO DO DIA 31/10/2026 -  GRUPOS 1, 2, 3 E 4</p>
+								</a>
+
+							</div>
+						</div>
+					</div>
+											<div class="item">
+							 
+						<div class="first-slide img-carousel" style="background-image:url(/dist/img/imagem_padrao.png);" alt="First slide"></div>
+						<div class="container">
+							<div class="carousel-caption">
+								<p>Geral</p>
+								<a href="/acontecenei/noticias/edital-de-vagas-para-turmas-de-ingresso-para-o-ano-letivo-2027/72918331">
+								<p>EDITAL DE VAGAS PARA TURMAS DE INGRESSO PARA O ANO LETIVO 2027</p>
+								</a>
+
+							</div>
+						</div>
+					</div>
+											<div class="item">
+							 
+						<div class="first-slide img-carousel" style="background-image:url(https://arquivos.info.ufrn.br/arquivos/202600410411331904654832cecc9f7a2f/WhatsApp_Image_2026-09-02_at_09.51.47.jpeg);" alt="First slide"></div>
+						<div class="container">
+							<div class="carousel-caption">
+								<p>Geral</p>
+								<a href="/acontecenei/noticias/resultado-para-estagio-supervisionado-2026.2/72496265">
+								<p>RESULTADO PARA ESTÁGIO SUPERVISIONADO 2026.2</p>
+								</a>
+
+							</div>
+						</div>
+					</div>
+							</div>
+	</div> 
+</section>		<section class="noticias-home">
+	<div class="hidden-xs"> 
+		<header class="interna-header">
+			<h3 class="titulo-sessao">Notícias</h3>
+		</header>
+		<section class="row">
+			 
+							<article class="col-xs-6">
+								<div class="row">
+									<i class="fa fa-angle-right fa-1 col-xs-1" aria-hidden="true"></i>
+									<div class="col-xs-11"> 
+										<h5>Geral</h5>
+										<span>24/08/2026</span>
+										<a href="/acontecenei/noticias/estagio-supervisionado-2026.2/72333396"><p>ESTÁGIO SUPERVISIONADO 2026.2 </p></a>
+									</div>
+								</div>
+							</article>
+
+							 
+							<article class="col-xs-6">
+								<div class="row">
+									<i class="fa fa-angle-right fa-1 col-xs-1" aria-hidden="true"></i>
+									<div class="col-xs-11"> 
+										<h5>Geral</h5>
+										<span>19/08/2026</span>
+										<a href="/acontecenei/noticias/curso-de-extensao-o-estagio-supervisionado-no-nei-cap-ufrn-formacao-docente-infancias-e-percursos-formativos./72251107"><p>Curso de extensão: O Estágio Supervisionado no NEI/CAp/UFRN: formação docente, infâncias e percursos formativos. </p></a>
+									</div>
+								</div>
+							</article>
+
+							 
+							<article class="col-xs-6">
+								<div class="row">
+									<i class="fa fa-angle-right fa-1 col-xs-1" aria-hidden="true"></i>
+									<div class="col-xs-11"> 
+										<h5>Geral</h5>
+										<span>19/06/2026</span>
+										<a href="/acontecenei/noticias/divulgacao-do-resultado-final-auxilio-estudantil-nei-2026/71035881"><p>Divulgação do Resultado Final - Auxílio Estudantil NEI/2026 </p></a>
+									</div>
+								</div>
+							</article>
+
+							 
+							<article class="col-xs-6">
+								<div class="row">
+									<i class="fa fa-angle-right fa-1 col-xs-1" aria-hidden="true"></i>
+									<div class="col-xs-11"> 
+										<h5>Geral</h5>
+										<span>16/06/2026</span>
+										<a href="/acontecenei/noticias/divulgacao-do-resultado-parcial-ii-auxilio-estudantil-2026/70993789"><p>Divulgação do Resultado Parcial II - Auxílio Estudantil 2026 </p></a>
+									</div>
+								</div>
+							</article>
+
+									</section>
+	</div>
+	<div class="ver-mais">
+		<a href="/acontecenei/noticias">+ Notícias</a>
+	</div>
+</section>		<section class="galeria">
+	<header class="interna-header">
+		<h3 class="titulo-sessao">Galeria de fotos</h3>
+	</header>
+	<div class="row">
+							<section class="col-xs-6 col-sm-3">
+						
+						<a href="/acontecenei/galerias/40-anos-do-nei-que-imagem-nos-representa/30431210" class="col-xs-12">
+							<figure>
+								<div style="background-image:url(https://arquivos.info.ufrn.br/arquivos/201920014512c06143251d04c43855270/20190416_084339.jpg);"> </div>
+							</figure>
+							<p>40 anos do NEI: que imagem nos representa?</p>
+							
+						</a>
+					</section>
+										<section class="col-xs-6 col-sm-3">
+						
+						<a href="/acontecenei/galerias/alunos-do-nei-tem-curtas-premiados-em-festival-de-cinema/25257544" class="col-xs-12">
+							<figure>
+								<div style="background-image:url(https://arquivos.info.ufrn.br/arquivos/2018153149d01547795152857caa641ba/WhatsApp_Image_2018-02-21_at_14.14.59_1.jpeg);"> </div>
+							</figure>
+							<p>Alunos do NEI tem curtas premiados em festival de cinema</p>
+							
+						</a>
+					</section>
+										<section class="col-xs-6 col-sm-3">
+						
+						<a href="/acontecenei/galerias/uma-crianca-chegou-e-a-escola-voltou-a-comecar/25184930" class="col-xs-12">
+							<figure>
+								<div style="background-image:url(https://arquivos.info.ufrn.br/arquivos/201804112359cf476465989ba27ecfe8a/WhatsApp_Image_2018-02-20_at_10.54.04.jpeg);"> </div>
+							</figure>
+							<p>Uma criança chegou e a escola voltou a começar</p>
+							
+						</a>
+					</section>
+										<section class="col-xs-6 col-sm-3">
+						
+						<a href="/acontecenei/galerias/criancas-do-nei-participam-de-plantio-e-inauguram-a-horta-da-escola/24399161" class="col-xs-12">
+							<figure>
+								<div style="background-image:url(https://arquivos.info.ufrn.br/arquivos/2017025019c14b464454355a545c050d2/WhatsApp_Image_2017-12-11_at_14.36.25_1.jpeg);"> </div>
+							</figure>
+							<p>Crianças do NEI participam de plantio e inauguram a horta da escola</p>
+							
+						</a>
+					</section>
+										
+	</div>
+	<div class="ver-mais">
+		<a href="/acontecenei/galerias">+ Álbuns</a>
+	</div>
+</section>	</div>
+	<aside class="col-xs-12 col-sm-12 col-md-4 aside-home">
+		<section class="ofazer">
+	<header class="interna-header">
+		<h3 class="titulo-sessao">O fazer na Escola</h3>
+	</header>
+	<div class="row">
+		<section class="col-xs-6 col-sm-3 col-md-8 offset-aside-home-a"> 
+			<div>
+				<a href="/osabernaescola/educ_infantil">
+					<figure>
+						<div style="background-image:url('/dist/img/educacaoinfantil.png');"> </div>
+					</figure>
+					<h5>Educação Infantil</h5>
+				</a>
+			</div>
+		</section>
+		<section class="col-xs-6 col-sm-3 col-md-8 offset-aside-home-b"> 
+			<div>
+				<a href="/osabernaescola/ens_fundamental">
+					<figure>
+						<div style="background-image:url('/dist/img/ensinofundamental.png');"> </div>
+					</figure>
+					<h5>Ensino Fundamental</h5>
+				</a>
+			</div>
+		</section>
+		<section class="col-xs-6 col-sm-3 col-md-8 offset-aside-home-c"> 
+			<div>
+				<a href="https://www.youtube.com/channel/UCZoR71ZR0UApoN6tft9w04Q" target="_blank">
+					<figure>
+						<div style="background-image:url('/dist/img/videos.png');"> </div>
+					</figure>
+					<h5>Vídeos</h5>
+				</a>
+			</div>
+		</section>
+	</div>
+</section>
+<section class="linksimportantes">
+	<header class="interna-header">
+		<h3 class="titulo-sessao">Links importantes</h3>
+	</header>
+	<div class="row">
+		<section class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0 col-md-8 col-md-offset-2"> 
+			<div id="owl-links" class="owl-carousel owl-theme owl-loaded">
+				<div class="owl-item">
+					<a href="https://sia.ufrn.br/" target="_blank" title="Acesse aqui o site da SIA">
+						<img src="/dist/img/parceiros/caene.png" alt="Logomarca da CAENE - Atual SIA" class="img-responsive" width="274" height="124">
+					</a>
+				</div>
+				<div class="owl-item">
+					<a href="https://sigaa.ufrn.br/" target="_blank" title="Acesse aqui o sistema do SIGAA">
+						<img src="/dist/img/parceiros/sigaa.png" alt="Logomarca do SIGAA" class="img-responsive" width="274" height="124">
+					</a>
+				</div>
+				<div class="owl-item">
+					<a href="https://ce.ufrn.br/" target="_blank" title="Acesse aqui o site do CE">
+						<img loading="lazy" src="/dist/img/parceiros/ce.png" alt="Logomarca do CE" class="img-responsive" width="274" height="124">
+					</a>
+				</div>
+				<div class="owl-item">
+					<a href="https://www.adurn.org.br/" target="_blank" title="Acesse aqui o site da ADURN">
+						<img loading="lazy" src="/dist/img/parceiros/adurn.png" alt="Logomarca da ADURN" class="img-responsive" width="274" height="124">
+					</a>
+				</div>
+				<div class="owl-item">
+					<a href="http://sedis.ufrn.br/" target="_blank" title="Acesse aqui o site da SEDIS">
+						<img loading="lazy" src="/dist/img/parceiros/sedis.png" alt="Logomarca da SEDIS" class="img-responsive" width="274" height="124">
+					</a>
+				</div>
+			</div>
+		</section>
+	</div>
+</section>	</aside>
+</main><footer id="footer">
+	<div class="rodape">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 item">
+					<h1 class="titulo">Núcleo de Educação da Infância - CAp / UFRN</h1>
+					<p class="infos">Campus Universitário - Lagoa Nova<br>
+					CEP: 59072-970 / Cx. P: 1524, Natal/RN</p>
+				</div>
+				<div class="col-xs-12 col-sm-6 item">
+					<h1 class="titulo">Contato</h1>
+					<p class="infos">(84) 3342-2279<br>
+					<a href="mailto:nei@ce.ufrn.br">nei@ce.ufrn.br</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="copyright">
+		<div class="container">
+			<p class="infos">NEI - © Copyright 2014 / 2026. Todos os direitos reservados.<br>
+			<a href="https://ufrn.br/" target="_blank">UFRN - Universidade Federal do Rio Grande do Norte</a></p>
+			
+			<a href="https://info.ufrn.br/" class="por" target="_blank">Desenvolvido pela STI</a>
+		</div>
+	</div>
+</footer>	<!-- libs, plugins e scripts -->
+	<script type="text/javascript" src="/dist/vendors/bootstrap-sass/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/dist/vendors/lightbox2/js/lightbox.js"></script>
+	<script type="text/javascript" src="/dist/vendors/owl.carousel/js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="/dist/js/main.js?v=2.0.0"></script>
+	<script>
+		generateCookieConsentModal(
+			"site do NEI" , 
+			{
+				fontSize: '16px',
+			},
+			{ 
+				fontFamily: "'Raleway', sans-serif"
+			},
+			true
+		);
+	</script>
+	<!-- Go to www.addthis.com/dashboard to customize your tools -->
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52fe1e556981238c"></script>
+	<script defer="defer" src="https://barra.brasil.gov.br/barra.js" type="text/javascript"></script>
+    <script type="text/javascript"  src="/dist/js/js/barragoverno.hack.js?v=1.4.0" type="text/javascript"></script>
+	
+</body>
+</html>

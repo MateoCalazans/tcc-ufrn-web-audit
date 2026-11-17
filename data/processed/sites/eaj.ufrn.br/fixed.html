@@ -1,0 +1,718 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head>
+    <title>EAJ - Escola Agr&iacute;cola de Jundia&iacute; | Unidade Acad&ecirc;mica Especializada em Ci&ecirc;ncias Agr&aacute;rias | UFRN</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="eaj, EAJ, UAECA, uaeca, escola, Escola, Agrícola, agrícola, agricola, Agricola, Jundiaí, Jundiai, jundiaí, jundiai, UFRN, ufrn, unidade, Unidade, acadêmica, Acadêmica, academica, Academica, ciências, Ciências, ciencias, Ciencias, agrárias, Agrárias, agrarias, Agrarias." />
+    <meta name="description" content="Escola Agrícola de Jundiaí - EAJ" />
+
+    <meta name="designer" content="Equipe FERA - STI">
+    <link rev=made href="mailto:frontend@sti.ufrn.br">
+
+	<link rel="shortcut icon" href="img/eaj.ico?v=2.0.0">
+	<link rel="stylesheet" type="text/css" href="css/geral.css?v=2.0.0" title="padrao" media="screen" />
+
+    	<!-- Flash -->
+	<script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+
+	<!-- Jquery e plugins -->
+	<script type="text/javascript" src="js/jquery.js?v=2.0.0"></script>
+    <script type="text/javascript" src="js/validacao.js?v=2.0.0"></script>
+    <script type="text/javascript" src="js/funcoes_jquery.js?v=2.0.0"></script>
+
+    <!-- Js cycle -->
+    <script type="text/javascript" src="js/jquery.cycle.all.min.js"></script>
+
+    <!-- Js lightBox -->
+    <script type="text/javascript" src="js/lightbox-0.5.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/lightbox-0.5.css" media="screen" />
+
+    <script type="text/javascript">
+		$(document).ready(function() {
+
+			// esconde as abas do menu
+			$('#aba_1').hide();
+			$('#aba_2').hide();
+			$('#aba_3').hide();
+			$('#aba_4').hide();
+			$('#aba_5').hide();
+			$('#aba_6').hide();
+			$('#aba_7').hide();
+			$('#aba_8').hide();
+
+			// chama a funcao para ampliar imagem - lightBox
+			$('.aumenta a').lightBox();
+
+			// chama a funcao para mostrar as fotos dos albuns - lightBox
+			$('#album1 a').lightBox();
+
+			// chama a funcao para mostrar as fotos dos albuns - lightBox
+			$('#album2 a').lightBox();
+
+			// chama a funcao para mostrar as fotos dos albuns - lightBox
+			$('#album3 a').lightBox();
+
+			// chama a funcao para mostrar as fotos dos albuns - lightBox
+			$('#album4 a').lightBox();
+
+			//cria a navegacao das noticias em destaque
+			$('#noticias').after('<div id="navegacao">').cycle({
+			    fx: 'fade',
+				speed: 1500,
+				timeout: 12000,
+				pager:  '#navegacao'
+			});
+
+			//cria a animacao em alguns banners
+			$('#anima_banner').cycle({
+			    fx: 'fade',
+				speed: 1500,
+				timeout: 8000
+			});
+
+		});
+    </script>
+		<script type="text/javascript" src="https://arquivos.info.ufrn.br/arquivos/2023032242cfad1243936953c7d717b89d/STICookieConsent.js"></script>
+</head>
+<body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v5.0"></script>
+	<div id="bg">
+    	<div id="bg_rodape">
+
+            <!-- topo -->
+            <header id="topo">
+
+            	<div id="linha_superior">
+                	<!-- frase -->
+                    <div id="frase"></div>
+
+                    <!-- ufrn -->
+                    <div id="ufrn">
+                        <a href="http://www.ufrn.br" target="_blank">
+                            UFRN
+                        </a>
+                    </div>
+                </div>
+
+                <!-- logo -->
+                <div id="logo">
+                    <a href="index.php" title="Acesse a página inicial do site">
+                        <img src="img/logo.png" />
+                    </a>
+                </div>
+
+                <!-- informacoes na direita -->
+                <div id="bloco_direita">
+
+                    <!-- atalhos -->
+                                        <div id="atalhos">
+                        <ul>
+                            <li>
+                                <a href="index.php" title="Ir para a página inicial">Inicial</a>
+                            </li>
+                            <li class="separador"></li>
+                            <li>
+                                <a href="contato.php" title="Entre em contato conosco">Contato</a>
+                            </li>
+                            <li class="separador"></li>
+                            <li>
+                                <a href="mapa.php" title="Mapa do site">Mapa do site</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- busca -->
+                                        <div id="busca">
+                        <form id="form_busca" action="busca.php" method="post">
+                            <span class="bg_busca">
+                                <input class="buscar" type="text" id="chave" name="chave" value="Palavra-chave" onclick="limpaCampo(this, 'Palavra-chave')" onblur="preencheCampo(this, 'Palavra-chave')" />
+                            </span>
+                            <input type="button" class="bt_buscar" alt="Buscar" value="" onClick="verifBusca()" />
+                        </form>
+                    </div>
+                </div>
+                <!-- FIM - informacoes na direita -->
+
+            </header>
+            <!-- FIM - topo -->
+
+
+            <!-- menu -->
+                        <nav id="area_menu">
+            	<div id="menu">
+                	<ul>
+                    	<li class="primeiro" id="link_1"><a href="#" onclick="mudarAba(1)">Institucional</a></li>
+                    	<li id="link_2"><a href="#" onclick="mudarAba(2)">Ensino</a></li>
+                    	<li id="link_3"><a href="#" onclick="mudarAba(3)">Pesquisa</a></li>
+                    	<li id="link_4"><a href="#" onclick="mudarAba(4)">Extens&atilde;o</a></li>
+                    	<li id="link_5"><a href="#" onclick="mudarAba(5)">Setores</a></li>
+                    	<li id="link_6"><a href="#" onclick="mudarAba(6)">Galerias</a></li>
+                    	<li id="link_7"><a href="#" onclick="mudarAba(7)">Documentos</a></li>
+                    	<li id="link_8"><a href="#" onclick="mudarAba(8)">Fale Conosco</a></li>
+                    </ul>
+                </div>
+
+				<div id="aba_1" class="esconde_submenu">
+                	<div class="area_submenu_cima"></div>
+	                <div class="area_submenu">
+                        <div class="submenu">
+                            <div class="area_aba">
+                                <div class="area_link tamanho_c4">
+                                    <span class="titulo_menu"><a href="pagina.php?a=int_historico">Hist&oacute;rico</a></span>
+                                </div>
+                                <div class="area_link tamanho_c4">
+                                    <span class="titulo_menu"><a href="pagina.php?a=int_eadministrativa">Estrutura Administrativa</a></span>
+                                </div>
+                                <div class="area_link tamanho_c4">
+                                    <span class="titulo_menu"><a href="pagina.php?a=int_efisica">Estrutura F&iacute;sica</a></span>
+                                </div>
+                                <div class="area_link tamanho_c4 ultimo">
+                                    <span class="titulo_menu"><a href="pagina.php?a=int_movsociais">Movimentos Sociais</a></span>
+                                </div>
+                                <div class="area_link tamanho_c4 seg_linha">
+                                    <span class="titulo_menu"><a href="pagina.php?a=int_condetuf">CONDETUF</a></span>
+                                </div>
+                                <div class="area_link tamanho_c4 seg_linha">
+                                    <span class="titulo_menu"><a href="pagina.php?a=int_telefones">Telefones</a></span>
+                                </div>
+                                <div class="area_link tamanho_c4 seg_linha">
+                                    <span class="titulo_menu"><a href="contato.php">Localiza&ccedil;&atilde;o</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fechar_aba">
+                            <a href="#" onclick="mudarAba(1)">Fechar aba (X)</a>
+                        </div>
+					</div>
+                    <div class="area_submenu_baixo"></div>
+                </div>
+
+
+				<div id="aba_2" class="esconde_submenu">
+                	<div class="area_submenu_cima"></div>
+	                <div class="area_submenu">
+                        <div class="submenu">
+                            <div class="area_aba">
+                                <div class="area_link tamanho_c4">
+                                    <span class="titulo_menu"><label>Calend&aacute;rio Acad&ecirc;mico</label></span>
+                                    <ul>
+                                        <li><a href="https://sistemas.ufrn.br/download/sigaa/public/calendario_universitario.pdf" target="_blank">Calend&aacute;rio da UFRN</a></li>
+                                        <li><a href="documento.php?id=183372081">Calend&aacute;rio da EAJ</a></li>
+                                    </ul>
+                                </div>
+                                <div class="area_link tamanho_c4">
+                                    <span class="titulo_menu"><label>Cursos</label></span>
+                                    <ul>
+                                        <li><a href="curso_proeja.php">PROEJA</a></li>
+                                        <li><a href="curso_ensinotecnico.php">Ensino T&eacute;cnico</a></li>
+                                        <li><a href="pagina.php?a=ens_etec">e-Tec</a></li>
+                                        <li><a href="curso_graduacao.php">Gradua&ccedil;&atilde;o</a></li>
+                                        <li><a href="curso_posgraduacao.php">P&oacute;s-Gradua&ccedil;&atilde;o</a></li>
+                                    </ul>
+                                </div>
+                                <div class="area_link tamanho_c4">
+                                    <span class="titulo_menu"><a href="pagina.php?a=ens_docentes">Docentes</a></span>
+                                    <ul>
+                                        <li><a href="pagina.php?a=ens_doc-emt">Ensino M&eacute;dio-T&eacute;cnico</a></li>
+                                        <li><a href="pagina.php?a=ens_doc-g">Gradua&ccedil;&atilde;o</a></li>
+                                        <li><a href="pagina.php?a=ens_doc-pg">P&oacute;s-Gradua&ccedil;&atilde;o</a></li>
+                                    </ul>
+                                </div>
+                                <div class="area_link tamanho_c4 ultimo">
+                                    <span class="titulo_menu"><label>Processos Seletivos</label></span>
+                                    <ul>
+                                        <li><a href="http://www.comperve.ufrn.br">Comperve</a></li>
+                                        <li><a href="https://sigaa.ufrn.br/sigaa/public/home.jsf?aba=p-processo">SIGAA</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fechar_aba">
+                            <a href="#" onclick="mudarAba(2)">Fechar aba (X)</a>
+                        </div>
+					</div>
+                    <div class="area_submenu_baixo"></div>
+                </div>
+
+
+				<div id="aba_3" class="esconde_submenu">
+                	<div class="area_submenu_cima"></div>
+	                <div class="area_submenu">
+                        <div class="submenu">
+                            <div class="area_aba">
+                                <div class="area_link tamanho_c4">
+                                    <span class="titulo_menu"><label>Coordena&ccedil;&atilde;o</label></span>
+                                    <ul>
+                                        <li><a href="pagina.php?a=pes_coo_apresentacao">Apresenta&ccedil;&atilde;o</a></li>
+                                        <li><a href="documento.php?id=60181527">Documentos</a></li>
+                                    </ul>
+                                </div>
+                                <div class="area_link tamanho_c4">
+                                    <span class="titulo_menu"><a href="noticias_pesquisa.php">Not&iacute;cias</a></span>
+                                </div>
+                                <div class="area_link tamanho_c4">
+                                    <span class="titulo_menu"><label>Laborat&oacute;rios</label></span>
+                                    <ul>
+                                        <li><a href="pagina.php?a=pes_lab_agroind">Agroind&uacute;stria</a></li>
+                                        <li><a href="pagina.php?a=pes_lab_eletronica">Eletr&ocirc;nica</a></li>
+                                        <li><a href="pagina.php?a=pes_lab_entomologia">Entomologia</a></li>
+                                        <li><a href="pagina.php?a=pes_lab_genetica">Gen&eacute;tica</a></li>
+                                        <li><a href="pagina.php?a=pes_lab_gesolo">Gesolo</a></li>
+                                        <li><a href="pagina.php?a=pes_lab_quimica">Qu&iacute;mica</a></li>
+                                        <li><a href="pagina.php?a=pes_lab_tapioca">TAPIOCA</a></li>
+                                    </ul>
+                                </div>
+                                <div class="area_link tamanho_c4 ultimo">
+                                    <span class="titulo_menu"><a href="documento.php?id=61082418">Projetos de Pesquisa</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fechar_aba">
+                            <a href="#" onclick="mudarAba(3)">Fechar aba (X)</a>
+                        </div>
+					</div>
+                    <div class="area_submenu_baixo"></div>
+                </div>
+
+
+				<div id="aba_4" class="esconde_submenu">
+                	<div class="area_submenu_cima"></div>
+	                <div class="area_submenu">
+                        <div class="submenu">
+                            <div class="area_aba">
+                                <div class="area_link tamanho_c3">
+                                    <span class="titulo_menu"><label>Coordena&ccedil;&atilde;o</label></span>
+                                    <ul>
+                                        <li><a href="pagina.php?a=ext_coo_apresentacao">Apresenta&ccedil;&atilde;o</a></li>
+                                        <li><a href="documento.php?id=60181528">Documentos</a></li>
+                                    </ul>
+                                </div>
+                                <div class="area_link tamanho_c3">
+                                    <span class="titulo_menu"><a href="noticias_extensao.php">Not&iacute;cias</a></span>
+                                </div>
+                                <div class="area_link tamanho_c3 ultimo">
+                                    <span class="titulo_menu"><a href="pagina.php?a=ext_projextensao">Projetos de Extens&atilde;o</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fechar_aba">
+                            <a href="#" onclick="mudarAba(4)">Fechar aba (X)</a>
+                        </div>
+					</div>
+                    <div class="area_submenu_baixo"></div>
+                </div>
+
+
+				<div id="aba_5" class="esconde_submenu">
+                	<div class="area_submenu_cima"></div>
+	                <div class="area_submenu">
+                        <div class="submenu">
+                            <div class="area_aba">
+                                <div class="area_link tamanho_c4">
+                                    <span class="titulo_menu"><a href="setor_direcao.php">Dire&ccedil;&atilde;o</a></span>
+                                </div>
+                                <div class="area_link tamanho_c4">
+                                    <span class="titulo_menu"><a href="setor_coord_planejamento.php">Coordena&ccedil;&atilde;o de Planejamento</a></span>
+                                </div>
+                                <div class="area_link tamanho_c4">
+                                    <span class="titulo_menu"><a href="setor_coord_estagios_egressos.php">Coord. de Est&aacute;gios e Egressos</a></span>
+                                </div>
+                                <div class="area_link tamanho_c4 ultimo">
+                                    <span class="titulo_menu"><a href="setor_sec_escolar.php">Secretaria Escolar</a></span>
+                                </div>
+                                <div class="area_link tamanho_c4 seg_linha">
+                                    <span class="titulo_menu"><a href="setor_uae.php">Un. de Atendimento ao Educando</a></span>
+                                </div>
+                                <div class="area_link tamanho_c4 seg_linha">
+                                    <span class="titulo_menu"><a href="http://www.bczm.ufrn.br/site/setoriais/eaj">Biblioteca Setorial</a></span>
+                                </div>
+                                <div class="area_link tamanho_c4 seg_linha ultimo">
+                                    <span class="titulo_menu"><a href="setor_gremio_estudantil.php">Gr&ecirc;mio Estudantil</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fechar_aba">
+                            <a href="#" onclick="mudarAba(5)">Fechar aba (X)</a>
+                        </div>
+					</div>
+                    <div class="area_submenu_baixo"></div>
+                </div>
+
+
+				<div id="aba_6" class="esconde_submenu">
+                	<div class="area_submenu_cima"></div>
+	                <div class="area_submenu">
+                        <div class="submenu">
+                            <div class="area_aba">
+                                <div class="area_link tamanho_c4">
+                                    <span class="titulo_menu"><a href="noticias.php">Not&iacute;cias Diversas</a></span>
+                                </div>
+                                <div class="area_link tamanho_c4">
+                                    <span class="titulo_menu"><a href="eventos.php">Eventos</a></span>
+                                </div>
+                                <div class="area_link tamanho_c4">
+                                    <span class="titulo_menu"><a href="albuns.php">Fotos</a></span>
+                                </div>
+                                <div class="area_link tamanho_c4 ultimo">
+                                    <span class="titulo_menu"><a href="videos.php">V&iacute;deos</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fechar_aba">
+                            <a href="#" onclick="mudarAba(6)">Fechar aba (X)</a>
+                        </div>
+					</div>
+                    <div class="area_submenu_baixo"></div>
+                </div>
+
+
+				<div id="aba_7" class="esconde_submenu">
+                	<div class="area_submenu_cima"></div>
+	                <div class="area_submenu">
+                        <div class="submenu">
+                            <div class="area_aba">
+                                <div class="area_link tamanho_c6">
+                                    <span class="titulo_menu"><a href="documento.php?id=60181526">Dire&ccedil;&atilde;o</a></span>
+                                </div>
+                                <div class="area_link tamanho_c6">
+                                    <span class="titulo_menu"><a href="documento.php?id=60182611">Sec. Escolar</a></span>
+                                </div>
+                                <div class="area_link tamanho_c6">
+                                    <span class="titulo_menu"><a href="documento.php?id=60182612">UAE</a></span>
+                                </div>
+                                <div class="area_link tamanho_c6">
+                                    <span class="titulo_menu"><a href="documento.php?id=60181527">Pesquisa</a></span>
+                                </div>
+                                <div class="area_link tamanho_c6">
+                                    <span class="titulo_menu"><a href="documento.php?id=60181528">Extens&atilde;o</a></span>
+                                </div>
+                                <div class="area_link tamanho_c6 ultimo">
+                                    <span class="titulo_menu"><a href="documentos.php">Todos</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fechar_aba">
+                            <a href="#" onclick="mudarAba(7)">Fechar aba (X)</a>
+                        </div>
+					</div>
+                    <div class="area_submenu_baixo"></div>
+                </div>
+
+
+				<div id="aba_8" class="esconde_submenu">
+                	<div class="area_submenu_cima"></div>
+	                <div class="area_submenu">
+                        <div class="submenu">
+                            <div class="area_aba">
+                                <div class="area_link tamanho_c2">
+                                    <span class="titulo_menu"><a href="pagina.php?a=int_telefones">Telefones</a></span>
+                                </div>
+                                <div class="area_link tamanho_c2 ultimo">
+                                    <span class="titulo_menu"><a href="contato.php">Contato e Localização</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fechar_aba">
+                            <a href="#" onclick="mudarAba(8)">Fechar aba (X)</a>
+                        </div>
+					</div>
+                    <div class="area_submenu_baixo"></div>
+                </div>
+            </nav>
+            <!-- FIM - menu -->			<!-- estrutura -->
+            <div id="estrutura">
+
+                <!-- conteudo -->
+                <main id="conteudo">
+	<!-- Js flowplayer -->
+	<script type="text/javascript" src="js/flowplayer-3.2.3.min.js"></script>
+
+	                <!-- esquerda -->
+                	<div id="esquerda">
+                    	<div class="bloco tamanho_destaques">
+                        	<ul id="noticias">
+                                <li class="texto">
+                                    <a href="noticia.php?id=72414161">
+                                        <span class="titulo">Divulgação do resultado final - Processo Seletivo para Instrutor(a) de Robótica</span>
+                                        Em anexo, segue a divulga&ccedil;&atilde;o do resultado final do processo seletivo simplificado para contrata&ccedil;&atilde;o de prestador(a) de servi&ccedil;os de instrutoria em rob&oacute;tica educacional (Edital N&ordm; 09/2026 &ndash; EAJ/UFRN).                                    </a>
+								</li>
+                                <li class="texto">
+                                    <a href="noticia.php?id=72368902">
+                                        <span class="titulo">Divulgação do resultado preliminar - Processo Seletivo para Instrutor(a) de Robótica</span>
+                                        Em anexo, segue a divulga&ccedil;&atilde;o do resultado preliminar do processo seletivo simplificado para contrata&ccedil;&atilde;o de prestador(a) de servi&ccedil;os de instrutoria em rob&oacute;tica educacional (Edital N&ordm; 09/2026 &ndash; EAJ/UFRN).                                    </a>
+								</li>
+                                <li class="texto">
+                                    <a href="noticia.php?id=72329674">
+                                        <span class="titulo">Divulgação das inscrições deferidas e dos horários das entrevistas - Processo Seletivo para Instrutor(a) de Robótica</span>
+                                        Em anexo segue a divulga&ccedil;&atilde;o das inscri&ccedil;&otilde;es deferidas e dos hor&aacute;rios das entrevistas do processo seletivo simplificado para contrata&ccedil;&atilde;o de prestador(a) de servi&ccedil;os de instrutoria em rob&oacute;tica educacional (Edital N&ordm; 09/2026 &ndash; EAJ/UFRN).                                    </a>
+								</li>
+                                <li class="texto">
+                                    <a href="noticia.php?id=72226091">
+                                        <span class="titulo">&#128226; PROCESSO SELETIVO  INSTRUTOR(A) DE ROBÓTICA EDUCACIONAL</span>
+                                        A Escola Agr&iacute;cola de Jundia&iacute; (EAJ/UFRN) torna p&uacute;blica a abertura de processo seletivo simplificado para contrata&ccedil;&atilde;o de 1 (um/uma) prestador(a) de servi&ccedil;os de Instrutoria em Rob&oacute;tica Educacional, para atua&ccedil;&atilde;o no Projeto &ldquo;Tecnologia que Transforma: Rob&oacute;tica Socioeducativa para Inclus&atilde;o Social&rdquo;.  &nbsp;  &amp;#...                                    </a>
+								</li>
+                                <li class="texto">
+                                    <a href="noticia.php?id=70264981">
+                                        <span class="titulo">RESULTADO FINAL DO AUXÍLIO RESIDÊNCIA (CURSOS TÉCNICOS) - EDITAL Nº 03/2026-COPE/EAJ-UFRN</span>
+                                        A Coordena&ccedil;&atilde;o de Pol&iacute;ticas Estudantis-COPE/EAJ-UFRN torna p&uacute;blico o RESULTADO FINAL DE RENOVA&Ccedil;&Atilde;O/CONCESS&Atilde;O referente ao Processo Seletivo para o Aux&iacute;lio Resid&ecirc;ncia Estudantil, conforme previsto no EDITAL N&ordm; 03/2026-COPE/EAJ-UFRN, de 06 de fevereiro de 2026, destinado a estudantes dos cursos T&eacute;cnicos...                                    </a>
+								</li>
+							</ul>
+                        </div>
+                    	<div class="bloco tamanho_noticias">
+                        	<span class="titulo">Novidades para você</span>
+                            <ul class="listagem">
+                            	<li class="primeiro">
+                                	<a href="noticia.php?id=70264949">
+                                    	<strong>(17/04)</strong> RESULTADO FINAL DO AUXÍLIO TRANSPORTE (CURSOS TÉCNICOS) - EDITAL Nº 02/2026-COPE/EAJ-UFRN                                    </a>
+                                </li>
+                            	<li >
+                                	<a href="noticia.php?id=70264915">
+                                    	<strong>(17/04)</strong> RESULTADO FINAL DO AUXÍLIO ALIMENTAÇÃO (CURSOS TÉCNICOS) - EDITAL Nº 01/2026-COPE/EAJ-UFRN                                    </a>
+                                </li>
+                            	<li >
+                                	<a href="noticia.php?id=70061822">
+                                    	<strong>(31/03)</strong> RESULTADO PARCIAL DO AUXÍLIO RESIDÊNCIA ESTUDANTIL PARA 2026.1 (CURSOS TÉCNICOS)                                    </a>
+                                </li>
+                            	<li >
+                                	<a href="noticia.php?id=70061779">
+                                    	<strong>(31/03)</strong> RESULTADO PARCIAL DO AUXÍLIO TRANSPORTE ESTUDANTIL PARA 2026.1 (CURSOS TÉCNICOS)                                    </a>
+                                </li>
+                            	<li >
+                                	<a href="noticia.php?id=70061764">
+                                    	<strong>(31/03)</strong> RESULTADO PARCIAL DO AUXÍLIO ALIMENTAÇÃO ESTUDANTIL PARA 2026.1 (CURSOS TÉCNICOS)                                    </a>
+                                </li>
+                            	<li >
+                                	<a href="noticia.php?id=69892159">
+                                    	<strong>(19/03)</strong> EDITAL DE PROCESSO SELETIVO PARA BOLSAS 1/2026                                    </a>
+                                </li>
+                            	<li >
+                                	<a href="noticia.php?id=69165897">
+                                    	<strong>(06/02)</strong> EDITAL Nº 03/2026-COPE/EAJ-UFRN DO PROCESSO SELETIVO DE RENOVAÇÃO E CONCESSÃO DO AUXÍLIO RESIDÊNCIA ESTUDANTIL 2026.1                                    </a>
+                                </li>
+                            </ul>
+                            <div class="link">
+                            	<a href="noticias.php">Mais not&iacute;cias</a>
+                            </div>
+                        </div>
+                    </div>
+		            <!-- FIM - esquerda -->
+
+	                <!-- direita -->
+                    <div id="direita">
+                    	<div class="bloco tamanho_eventos">
+							<span class="titulo">Canal EAJ</span>
+							<iframe width="100%" height="184px" src="https://www.youtube.com/embed/videoseries?list=PLYnXCWU_1dqc8pBgt33MMj8fiPHP4ZZO5" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+                    	<div class="bloco tamanho_videos">
+							<div class="fb-page" data-href="https://www.facebook.com/EscolaAgricolaDeJundiaiUfrn/" data-tabs="timeline" data-width="" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/EscolaAgricolaDeJundiaiUfrn/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/EscolaAgricolaDeJundiaiUfrn/">Escola Agrícola de Jundiaí - UFRN</a></blockquote></div>
+                        </div>
+                    </div>
+		            <!-- FIM - direita -->
+
+	                <!-- lateral -->
+                                        <div id="lateral">
+                        <a href="http://www.instagram.com.br/eaj.ufrn/" target="_blank">
+                        	<img src="img/banner/banner_instagram_eaj.png" width="130" height="50" />
+						</a>
+						<a href="http://www.etec.eaj.ufrn.br/" target="_blank">
+                        	<img src="img/banner/banner_etec.png" width="130" height="50" />
+						</a>
+                        <a href="http://www.meioambiente.ufrn.br" target="_blank">
+                            <img loading="lazy" src="img/banner/banner_pma.png" width="97" height="49" />
+                        </a>
+                    	<a href="http://www.periodicos.capes.gov.br" target="_blank">
+                        	<img loading="lazy" src="img/banner/banner_periodicos.png" width="130" height="50" />
+						</a>
+                        <a href="http://www.cnpq.br" target="_blank">
+                            <img loading="lazy" src="img/banner/banner_cnpq.png" width="118" height="50" />
+                        </a>
+                        <a href="http://www.mec.gov.br" target="_blank">
+                            <img loading="lazy" src="img/banner/banner_mec.png" width="130" height="50" />
+                        </a>
+                        <a href="http://w3.ufsm.br/condetuf" class="ultimo" target="_blank">
+                            <img loading="lazy" src="img/banner/banner_condetuf.png" width="122" height="50" />
+                        </a>
+                    </div>
+		            <!-- FIM - lateral -->
+
+                </main>
+	            <!-- FIM - conteudo -->                <!-- rodape -->
+                <footer id="rodape">
+
+                	<!-- chamadas (links) -->
+                                        <div class="chamada primeira_chamada">
+                    	<span class="grupo">Público Externo</span>
+                        <ul class="urls">
+                        	<li>
+                            	<a href="http://www.prh.ufrn.br/conteudo/concursos/prof_efetivo.htm" class="primeiro" target="_blank">
+                                	<strong>-</strong> Concursos
+                                </a>
+                            </li>
+                        	<li>
+                            	<a href="pagina.php?a=ens_docentes">
+                                	<strong>-</strong> Professores da EAJ
+                                </a>
+                            </li>
+                        	<li>
+                            	<a href="pagina.php?a=int_telefones">
+                                	<strong>-</strong> Telefones
+                                </a>
+                            </li>
+                        	<li>
+                            	<a href="http://www.sigaa.ufrn.br/sigaa/public/processo_seletivo/lista.jsf?aba=p-processo&nivel=S" target="_blank">
+                                	<strong>-</strong> Seleções Pós-Graduação
+                                </a>
+                            </li>
+                        	<li>
+                            	<a href="http://www.comperve.ufrn.br" target="_blank">
+                                	<strong>-</strong> Vestibular e Processos Seletivos
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="chamada">
+                    	<span class="grupo">Alunos</span>
+                        <ul class="urls">
+                        	<li>
+                            	<a href="http://www.prograd.ufrn.br/conteudo/calendario/calendario.php" class="primeiro" target="_blank">
+                                	<strong>-</strong> Calendário Acadêmico da UFRN
+                                </a>
+                            </li>
+                        	<li>
+                            	<a href="http://www.sigaa.ufrn.br/sigaa/public/home.jsf?aba=p-biblioteca" target="_blank">
+                                	<strong>-</strong> Consultar Acervo Bibliográfico
+                                </a>
+                            </li>
+                        	<li>
+                            	<a href="http://bdtd.bczm.ufrn.br/tedesimplificado" target="_blank">
+                                	<strong>-</strong> Biblioteca de Teses/Dissertações
+                                </a>
+                            </li>
+                        	<li>
+                            	<a href="http://www.sistemas.ufrn.br/portalufrn/PT/oportunidade_bolsas" target="_blank">
+                                	<strong>-</strong> Oportunidades de Bolsas
+                                </a>
+                            </li>
+                        	<li>
+                            	<a href="contato_uae.php">
+                                	<strong>-</strong> Entre em Contato com a UAE
+                                </a>
+                            </li>
+                        	<li>
+                            	<a href="setor_coord_estagios_egressos.php">
+                                	<strong>-</strong> Coordenação de Estágios e Egressos
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="chamada">
+                    	<span class="grupo">Professores</span>
+                        <ul class="urls">
+                        	<li>
+                            	<a href="http://www.prograd.ufrn.br/conteudo/calendario/calendario.php" class="primeiro" target="_blank">
+                                	<strong>-</strong> Calendário Acadêmico da UFRN
+                                </a>
+                            </li>
+                        	<li>
+                            	<a href="http://www.sigaa.ufrn.br" target="_blank">
+                                	<strong>-</strong> SIGAA
+                                </a>
+                            </li>
+                        	<li>
+                            	<a href="pagina.php?a=pes_coo_apresentacao">
+                                	<strong>-</strong> Pesquisa
+                                </a>
+                            </li>
+                        	<li>
+                            	<a href="pagina.php?a=ext_coo_apresentacao">
+                                	<strong>-</strong> Extensão
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="chamada ultima_chamada">
+                    	<span class="grupo">Servidores</span>
+                        <ul class="urls">
+                        	<li>
+                            	<a href="http://www.portaldap.ufrn.br" class="primeiro" target="_blank">
+                                	<strong>-</strong> Portal do DAP
+                                </a>
+                            </li>
+                        	<li>
+                            	<a href="http://www.prh.ufrn.br/DAS/index.htm" target="_blank">
+                                	<strong>-</strong> Assistência ao Servidor
+                                </a>
+                            </li>
+                        	<li>
+                            	<a href="http://www.sigrh.ufrn.br/sigrh/public/autenticidade/tipo_documento.jsf" target="_blank">
+                                	<strong>-</strong> Autenticação de Documentos
+                                </a>
+                            </li>
+                        	<li>
+                            	<a href="http://www.sipac.ufrn.br" target="_blank">
+                                	<strong>-</strong> SIPAC
+                                </a>
+                            </li>
+                        	<li>
+                            	<a href="http://www.sigrh.ufrn.br" target="_blank">
+                                	<strong>-</strong> SIGPRH
+                                </a>
+                            </li>
+                        	<li>
+                            	<a href="http://www.siapenet.gov.br" target="_blank">
+                                	<strong>-</strong> SIAPENET
+                                </a>
+                            </li>
+                        </ul>
+                    </div>                    <!-- FIM - chamadas (links) -->
+
+                    <div id="alinha">
+                    	<span class="endereco">
+                        	RN 160 - Km 03 - Distrito de Jundiaí - Macaíba/RN<br>
+                            CEP: 59280-000 | Cx Postal 07<br>
+                            Fone: +55 (84) 3342-2297
+                        </span>
+                        <span class="direitos">
+                        	<strong>EAJ</strong> &copy; Copyright 2011 / 2026 - Todos os direitos reservados.<br>
+							<a href="https://ufrn.br" target="_blank" title="Acessar o portal">Universidade Federal do Rio Grande do Norte - UFRN</a>
+                        </span>
+                        <span class="desenvolvido">
+                            <label>Desenvolvido pela</label>
+                            <a href="https://info.ufrn.br" target="_blank" title="Acessar o site da Superintendência de Tecnologia da Informação">
+                                STI
+                            </a>
+                        </span>
+                    </div>
+                </footer>
+                <!-- FIM - rodape -->
+
+			</div>
+            <!-- FIM - estrutura -->
+
+        </div>
+	</div>
+
+    <!-- script do menu superior -->
+    <script type="text/javascript" src="js/script_menu.js?v=2.0.0"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        generateCookieConsentModal(
+                    "site da EAJ" , 
+                    {
+                        fontSize: '16px',
+                    },
+                    { 
+                        margin: 'auto',
+            width: '980px',
+                        lineHeight: '1.33'
+                    },
+                    false
+                );
+    })
+    </script>
+
+</body>
+</html>

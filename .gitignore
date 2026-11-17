@@ -3,14 +3,21 @@ dist/
 logs/
 data/raw/*
 !data/raw/.gitkeep
+# brutos fora do git (pesados); só o screenshot de cada site sobe (evidência visual)
+!data/raw/*/
+data/raw/*/*
+!data/raw/*/screenshot.png
 # HTML das páginas iniciais capturado na sondagem (S04) — bruto, pesado
 data/interim/triage-html/
-reports/
 .env
 *.zip
 .ipynb_checkpoints/
 __pycache__/
-# metrics.json por site: regerável dos brutos (ADR 012)
-data/processed/sites/
+# Saídas por site: sobem as leves (métricas, recomendações, correção, validação e imagens).
+# Ficam fora as pesadas: cópias locais (snapshot/arquivos) e JSONs do Lighthouse da validação.
+data/processed/sites/*/snapshot/arquivos/
+data/processed/sites/*/snapshot/*.html
+data/processed/sites/*/validacao/
+data/processed/sites/*/validacao-v1.0/
 # análises avulsas da interface (ADR 017)
 data/avulsos/

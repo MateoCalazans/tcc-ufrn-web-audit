@@ -1,0 +1,1945 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T23:30:44.811Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12",
+      "diff": "9.0.0",
+      "@anthropic-ai/sdk": "1.8.0"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "id": "escoladesaude.ufrn.br",
+  "url": "https://escoladesaude.ufrn.br/",
+  "fonte": {
+    "html": "index.html",
+    "codificacao": "utf-8",
+    "bom": false,
+    "har": true,
+    "lighthouse": "lh1.json",
+    "lighthouseVersion": "13.5.0"
+  },
+  "regras": [
+    {
+      "id": "html-lang",
+      "dimensao": "semantica",
+      "descricao": "O elemento <html> declara o idioma da página (atributo lang)."
+    },
+    {
+      "id": "meta-viewport",
+      "dimensao": "performance",
+      "descricao": "A página declara <meta name=\"viewport\"> adequada a telas móveis, sem bloquear o zoom."
+    },
+    {
+      "id": "img-dimensions",
+      "dimensao": "performance",
+      "descricao": "Toda <img> declara width e height, para o navegador reservar o espaço antes do download."
+    },
+    {
+      "id": "img-lazy",
+      "dimensao": "performance",
+      "descricao": "<img> depois das 3 primeiras do documento usa loading=\"lazy\" (exceto a imagem LCP)."
+    },
+    {
+      "id": "obsolete-tags",
+      "dimensao": "semantica",
+      "descricao": "Sem elementos obsoletos do WHATWG (center, font, marquee…); <font> simples vira <span style>."
+    },
+    {
+      "id": "heading-skip",
+      "dimensao": "semantica",
+      "descricao": "Títulos não pulam níveis ao descer na hierarquia (h1 → h3, por exemplo)."
+    },
+    {
+      "id": "fake-button",
+      "dimensao": "semantica",
+      "descricao": "Elementos clicáveis são <button>/<a>, não div/span com onclick."
+    },
+    {
+      "id": "render-blocking-hint",
+      "dimensao": "performance",
+      "descricao": "Scripts e folhas de estilo que o Lighthouse aponta como bloqueantes são adiados quando não são críticos."
+    },
+    {
+      "id": "landmarks-llm",
+      "dimensao": "semantica",
+      "descricao": "Landmarks ausentes propostos por LLM sobre <div>, <section> ou <article> existentes (landmarks-v2, claude-haiku-5-5)."
+    }
+  ],
+  "llm": {
+    "prompt": "landmarks-v2",
+    "arquivo": "docs/prompts/landmarks-v2.md",
+    "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+    "modelo": "claude-haiku-5-5",
+    "effort": "low",
+    "maxTokens": 4000,
+    "execucao": {
+      "siteId": "escoladesaude.ufrn.br",
+      "prompt": "landmarks-v2",
+      "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "modeloResposta": "claude-haiku-5-5",
+      "respostaId": "msg_011Ch7Uh5avPUTkKQrRkGFaj",
+      "chamada": true,
+      "motivo": null,
+      "ausentes": [
+        "header",
+        "main"
+      ],
+      "candidatos": 33,
+      "elegiveis": 33,
+      "stopReason": "end_turn",
+      "inputTokens": 4357,
+      "outputTokens": 960,
+      "custoUsd": 0.0009157000000000001,
+      "propostas": 1,
+      "validas": 1,
+      "rejeitadas": [],
+      "textoIgual": true,
+      "landmarksDepois": {
+        "banner": 1,
+        "navigation": 2,
+        "main": 0,
+        "contentinfo": 1
+      },
+      "erro": null,
+      "duracaoMs": 6176
+    }
+  },
+  "resumo": {
+    "total": 57,
+    "corrigidas": 32,
+    "porRegra": {
+      "html-lang": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "meta-viewport": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "img-dimensions": {
+        "total": 23,
+        "corrigidas": 8
+      },
+      "img-lazy": {
+        "total": 23,
+        "corrigidas": 23
+      },
+      "obsolete-tags": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "heading-skip": {
+        "total": 3,
+        "corrigidas": 0
+      },
+      "fake-button": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "render-blocking-hint": {
+        "total": 7,
+        "corrigidas": 0
+      },
+      "landmarks-llm": {
+        "total": 1,
+        "corrigidas": 1
+      }
+    },
+    "porDimensao": {
+      "performance": 53,
+      "semantica": 4
+    }
+  },
+  "guardaImagens": {
+    "imagens": [
+      {
+        "recomendacao": "img-dimensions-1",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 250,
+              "altura": 57,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 250,
+              "altura": 57,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 250,
+              "altura": 120,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 250,
+              "altura": 120,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-2",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 412,
+              "altura": 450,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 412,
+              "altura": 450,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 667,
+              "altura": 434,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 667,
+              "altura": 434,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-3",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 412,
+              "altura": 450,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 412,
+              "altura": 450,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 667,
+              "altura": 434,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 667,
+              "altura": 434,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-4",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 412,
+              "altura": 450,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 412,
+              "altura": 450,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 667,
+              "altura": 434,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 667,
+              "altura": 434,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-5",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 412,
+              "altura": 450,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 412,
+              "altura": 450,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 667,
+              "altura": 434,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 667,
+              "altura": 434,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-6",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 382,
+              "altura": 382,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 382,
+              "altura": 382,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 350,
+              "altura": 350,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 350,
+              "altura": 350,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-7",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 382,
+              "altura": 382,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 382,
+              "altura": 382,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 350,
+              "altura": 350,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 350,
+              "altura": 350,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-8",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 382,
+              "altura": 382,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 382,
+              "altura": 382,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 350,
+              "altura": 350,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 350,
+              "altura": 350,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-9",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 412,
+              "altura": 180,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 206,
+              "altura": 180,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 338,
+              "altura": 180,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 338,
+              "altura": 180,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-10",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 412,
+              "altura": 180,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 206,
+              "altura": 180,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 338,
+              "altura": 180,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 338,
+              "altura": 180,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-11",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 412,
+              "altura": 180,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 206,
+              "altura": 180,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 338,
+              "altura": 180,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 338,
+              "altura": 180,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-12",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 412,
+              "altura": 180,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 206,
+              "altura": 180,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 338,
+              "altura": 180,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 338,
+              "altura": 180,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-13",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 412,
+              "altura": 180,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 206,
+              "altura": 180,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 338,
+              "altura": 180,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 338,
+              "altura": 180,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-14",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 412,
+              "altura": 180,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 206,
+              "altura": 180,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 338,
+              "altura": 180,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 338,
+              "altura": 180,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-15",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 412,
+              "altura": 180,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 206,
+              "altura": 180,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 338,
+              "altura": 180,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 338,
+              "altura": 180,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-16",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 412,
+              "altura": 180,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 206,
+              "altura": 180,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 338,
+              "altura": 180,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 338,
+              "altura": 180,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-17",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 412,
+              "altura": 180,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 206,
+              "altura": 180,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 338,
+              "altura": 180,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 338,
+              "altura": 180,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-18",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 412,
+              "altura": 180,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 206,
+              "altura": 180,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 338,
+              "altura": 180,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 338,
+              "altura": 180,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-19",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 412,
+              "altura": 180,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 206,
+              "altura": 180,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 338,
+              "altura": 180,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 338,
+              "altura": 180,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-20",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 412,
+              "altura": 180,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 206,
+              "altura": 180,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 338,
+              "altura": 180,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 338,
+              "altura": 180,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-21",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 412,
+              "altura": 180,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 206,
+              "altura": 180,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 338,
+              "altura": 180,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 338,
+              "altura": 180,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-22",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 412,
+              "altura": 180,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 206,
+              "altura": 180,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 338,
+              "altura": 180,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 338,
+              "altura": 180,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-23",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "mudou"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 133,
+              "altura": 30,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 681,
+              "altura": 30,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 133,
+              "altura": 30,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 681,
+              "altura": 30,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      }
+    ],
+    "mantidas": 8,
+    "desfeitas": 15,
+    "erro": null
+  },
+  "recommendations": [
+    {
+      "id": "img-dimensions-1",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"Logo Escola de Saúde da UFRN - ESUFRN\" class=\"h-100 mx-auto my-0\" src=\"/static/assets/images/logotipo_ufrn_esufrn.low.ca08fec120a1.png\"/>",
+      "posicao": {
+        "linha": 3,
+        "coluna": 5224
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"681\" height=\"154\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 6407,
+          "fim": 6407,
+          "texto": " width=\"681\" height=\"154\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-2",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" class=\"h-100 h-100 m-auto\" src=\"/media/blog/imagens/WhatsApp_Image_2026-11-09_at_09.25.35.jpeg\" style=\"object-fit: contain; z-index: 2; max-height: 450px\"/>",
+      "posicao": {
+        "linha": 12,
+        "coluna": 78
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1200\" height=\"1600\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 15116,
+          "fim": 15116,
+          "texto": " width=\"1200\" height=\"1600\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-3",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" class=\"h-100 h-100 m-auto\" src=\"/media/blog/imagens/WhatsApp_Image_2026-11-05_at_10.03.21.jpeg\" style=\"object-fit: contain; z-index: 2; max-height: 450px\"/>",
+      "posicao": {
+        "linha": 22,
+        "coluna": 78
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1080\" height=\"1350\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 16577,
+          "fim": 16577,
+          "texto": " width=\"1080\" height=\"1350\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-4",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" class=\"h-100 h-100 m-auto\" src=\"/media/blog/imagens/Novo_post_Eleição_de_Coordenação_de_Cursos_dU06h3Y.png\" style=\"object-fit: contain; z-index: 2; max-height: 450px\"/>",
+      "posicao": {
+        "linha": 32,
+        "coluna": 78
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1080\" height=\"1350\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 18067,
+          "fim": 18067,
+          "texto": " width=\"1080\" height=\"1350\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-5",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" class=\"h-100 h-100 m-auto\" src=\"/media/blog/imagens/edital_aberto_11.png\" style=\"object-fit: contain; z-index: 2; max-height: 450px\"/>",
+      "posicao": {
+        "linha": 42,
+        "coluna": 78
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1080\" height=\"1350\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 19534,
+          "fim": 19534,
+          "texto": " width=\"1080\" height=\"1350\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-6",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"Trabalho de monitoria da ESUFRN recebe menção honrosa no Encontro Integrado dos Programas de Ensino da UFRN - Escola de Saúde da UFRN - ESUFRN\" src=\"/media/blog/imagens/WhatsApp_Image_2026-…",
+      "posicao": {
+        "linha": 44,
+        "coluna": 730
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1200\" height=\"1600\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 20562,
+          "fim": 20562,
+          "texto": " width=\"1200\" height=\"1600\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-7",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"Resultado final dos Auxílios 2026.2 é divulgado pela ESUFRN - Escola de Saúde da UFRN - ESUFRN\" src=\"/media/blog/imagens/WhatsApp_Image_2026-11-05_at_10.03.21.jpeg\" title=\"Resultado final d…",
+      "posicao": {
+        "linha": 45,
+        "coluna": 481
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1080\" height=\"1350\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 21470,
+          "fim": 21470,
+          "texto": " width=\"1080\" height=\"1350\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-8",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"Proclamadas chapas vencedoras para coordenação dos cursos Técnicos em Enfermagem e Vigilância em Saúde 2027-2029 - Escola de Saúde da UFRN - ESUFRN\" src=\"/media/blog/imagens/Novo_post_Elei%…",
+      "posicao": {
+        "linha": 46,
+        "coluna": 438
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1080\" height=\"1350\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 22473,
+          "fim": 22473,
+          "texto": " width=\"1080\" height=\"1350\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-9",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/files/BIBLIOTECA.png\" title=\"\"/>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 3614
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"310\" height=\"210\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: igual)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-10",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/files/cnpq.png\" title=\"\"/>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 3717
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"310\" height=\"210\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: igual)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-11",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/files/cofen.png\" title=\"\"/>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 3823
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"310\" height=\"210\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: igual)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-12",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/files/UFRN_logotipo_flat.png\" title=\"\"/>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 3926
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"310\" height=\"210\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: igual)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-13",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/files/JOGOS.png\" title=\"\"/>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 4122
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"310\" height=\"210\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: igual)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-14",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/files/ouvidoria-2.png\" title=\"\"/>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 4234
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"310\" height=\"210\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: igual)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-15",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/files/periodicos.png\" title=\"\"/>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 4397
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"310\" height=\"210\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: igual)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-16",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/files/portal1.png\" title=\"\"/>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 4531
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"310\" height=\"210\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: igual)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-17",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/files/PORTAL-DA-SAUDE.png\" title=\"\"/>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 4640
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"310\" height=\"210\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: igual)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-18",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/files/REDE.png\" title=\"\"/>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 4766
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"310\" height=\"210\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: igual)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-19",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/files/SERVICOS-3.png\" title=\"\"/>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 4883
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"310\" height=\"210\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: igual)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-20",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/files/sigaa.png\" title=\"\"/>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 5014
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"310\" height=\"210\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: igual)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-21",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/files/sigrh.png\" title=\"\"/>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 5140
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"310\" height=\"210\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: igual)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-22",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/files/sipac.png\" title=\"\"/>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 5266
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"310\" height=\"210\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: igual)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-23",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"Logo suporte ESUFRN \" src=\"/static/assets/images/logotipo_ufrn_esufrn.low.ca08fec120a1.png\"/>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 9714
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"681\" height=\"154\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: mudou)",
+      "edicoes": []
+    },
+    {
+      "id": "img-lazy-1",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/blog/imagens/WhatsApp_Image_2026-11-05_at_10.03.21.jpeg\" style=\"width: 100%; height: 100%; position: absolute; bottom: 0px; left: 0px; z-index: 1; object-fit: cover; opacity: …",
+      "posicao": {
+        "linha": 14,
+        "coluna": 585
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "4ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 15630,
+          "fim": 15630,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-2",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" class=\"h-100 h-100 m-auto\" src=\"/media/blog/imagens/WhatsApp_Image_2026-11-05_at_10.03.21.jpeg\" style=\"object-fit: contain; z-index: 2; max-height: 450px\"/>",
+      "posicao": {
+        "linha": 22,
+        "coluna": 78
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "5ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 16303,
+          "fim": 16303,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-3",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/blog/imagens/Novo_post_Eleição_de_Coordenação_de_Cursos_dU06h3Y.png\" style=\"width: 100%; height: 100%; position: absolute; bottom: 0px; left: 0px; z-index: 1; object-fit: cove…",
+      "posicao": {
+        "linha": 24,
+        "coluna": 590
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "6ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 17096,
+          "fim": 17096,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-4",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" class=\"h-100 h-100 m-auto\" src=\"/media/blog/imagens/Novo_post_Eleição_de_Coordenação_de_Cursos_dU06h3Y.png\" style=\"object-fit: contain; z-index: 2; max-height: 450px\"/>",
+      "posicao": {
+        "linha": 32,
+        "coluna": 78
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "7ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 17781,
+          "fim": 17781,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-5",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/blog/imagens/edital_aberto_11.png\" style=\"width: 100%; height: 100%; position: absolute; bottom: 0px; left: 0px; z-index: 1; object-fit: cover; opacity: 0.5; filter: blur(10px…",
+      "posicao": {
+        "linha": 34,
+        "coluna": 635
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "8ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 18631,
+          "fim": 18631,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-6",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" class=\"h-100 h-100 m-auto\" src=\"/media/blog/imagens/edital_aberto_11.png\" style=\"object-fit: contain; z-index: 2; max-height: 450px\"/>",
+      "posicao": {
+        "linha": 42,
+        "coluna": 78
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "9ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 19282,
+          "fim": 19282,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-7",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"Resultado final dos Auxílios 2026.2 é divulgado pela ESUFRN - Escola de Saúde da UFRN - ESUFRN\" src=\"/media/blog/imagens/WhatsApp_Image_2026-11-05_at_10.03.21.jpeg\" title=\"Resultado final d…",
+      "posicao": {
+        "linha": 45,
+        "coluna": 481
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "11ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 21197,
+          "fim": 21197,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-8",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"Proclamadas chapas vencedoras para coordenação dos cursos Técnicos em Enfermagem e Vigilância em Saúde 2027-2029 - Escola de Saúde da UFRN - ESUFRN\" src=\"/media/blog/imagens/Novo_post_Elei%…",
+      "posicao": {
+        "linha": 46,
+        "coluna": 438
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "12ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 22062,
+          "fim": 22062,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-9",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/files/BIBLIOTECA.png\" title=\"\"/>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 3614
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "13ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 26241,
+          "fim": 26241,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-10",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/files/cnpq.png\" title=\"\"/>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 3717
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "14ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 26344,
+          "fim": 26344,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-11",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/files/cofen.png\" title=\"\"/>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 3823
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "15ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 26450,
+          "fim": 26450,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-12",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/files/UFRN_logotipo_flat.png\" title=\"\"/>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 3926
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "16ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 26553,
+          "fim": 26553,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-13",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/files/JOGOS.png\" title=\"\"/>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 4122
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "17ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 26749,
+          "fim": 26749,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-14",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/files/ouvidoria-2.png\" title=\"\"/>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 4234
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "18ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 26861,
+          "fim": 26861,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-15",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/files/periodicos.png\" title=\"\"/>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 4397
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "19ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 27024,
+          "fim": 27024,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-16",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/files/portal1.png\" title=\"\"/>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 4531
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "20ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 27158,
+          "fim": 27158,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-17",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/files/PORTAL-DA-SAUDE.png\" title=\"\"/>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 4640
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "21ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 27267,
+          "fim": 27267,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-18",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/files/REDE.png\" title=\"\"/>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 4766
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "22ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 27393,
+          "fim": 27393,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-19",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/files/SERVICOS-3.png\" title=\"\"/>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 4883
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "23ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 27510,
+          "fim": 27510,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-20",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/files/sigaa.png\" title=\"\"/>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 5014
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "24ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 27641,
+          "fim": 27641,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-21",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/files/sigrh.png\" title=\"\"/>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 5140
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "25ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 27767,
+          "fim": 27767,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-22",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"/media/files/sipac.png\" title=\"\"/>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 5266
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "26ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 27893,
+          "fim": 27893,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-23",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"Logo suporte ESUFRN \" src=\"/static/assets/images/logotipo_ufrn_esufrn.low.ca08fec120a1.png\"/>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 9714
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "27ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 32341,
+          "fim": 32341,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "heading-skip-1",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h5 class=\"mb-4 mb-sm-0\" style=\"text-align: left; text-align-last: left\" title=\"Trabalho de monitoria da ESUFRN recebe menção honrosa no Encontro Integrado dos Programas de Ensino da UFRN\">",
+      "posicao": {
+        "linha": 44,
+        "coluna": 1204
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 2 para o nível 5: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h3 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "heading-skip-2",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h5 class=\"text-white\">",
+      "posicao": {
+        "linha": 47,
+        "coluna": 900
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 2 para o nível 5: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h3 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "heading-skip-3",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h5>",
+      "posicao": {
+        "linha": 47,
+        "coluna": 6001
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 1 para o nível 5: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h2 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-1",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link href=\"https://fonts.googleapis.com/css?family=Raleway\" rel=\"stylesheet\"/>",
+      "posicao": {
+        "linha": 1,
+        "coluna": 258
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (936 ms de bloqueio, 0.5 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-2",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link href=\"/static/assets/css/bootstrap.min.e95f40369127.css\" rel=\"stylesheet\"/>",
+      "posicao": {
+        "linha": 1,
+        "coluna": 337
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (2491 ms de bloqueio, 141.7 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-3",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link href=\"/static/assets/css/style.8da50b9c7457.css\" rel=\"stylesheet\"/>",
+      "posicao": {
+        "linha": 1,
+        "coluna": 418
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (935 ms de bloqueio, 14.1 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-4",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link href=\"/static/assets/css/barra_2.0.ea9a4f464366.css\" rel=\"stylesheet\"/>",
+      "posicao": {
+        "linha": 1,
+        "coluna": 491
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (779 ms de bloqueio, 11.3 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-5",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link href=\"/static/assets/fontawesome-free-6.3.0-web/css/all.min.7606999e834e.css\" rel=\"stylesheet\"/>",
+      "posicao": {
+        "linha": 1,
+        "coluna": 568
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (2180 ms de bloqueio, 100.2 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-6",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link href=\"/static/assets/owl-carousel/owl.carousel.min.df68a8b8bbcc.css\" rel=\"stylesheet\"/>",
+      "posicao": {
+        "linha": 3,
+        "coluna": 10
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (468 ms de bloqueio, 3.5 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-7",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link href=\"/static/assets/owl-carousel/owl.theme.default.min.9df3f8c959c4.css\" rel=\"stylesheet\"/>",
+      "posicao": {
+        "linha": 3,
+        "coluna": 103
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (468 ms de bloqueio, 1.2 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "landmarks-llm-1",
+      "regra": "landmarks-llm",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<div class=\"main-container container d-lg-flex px-0 menu-container\">",
+      "posicao": {
+        "linha": 3,
+        "coluna": 5092
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "Landmark banner ausente: trocar este <div> por <header>. Justificativa do modelo: \"Bloco do topo com a identidade do site (logo, 'ESCOLA DE SAÚDE - UFRN') e o menu principal (classes menu-container e menu-box), dentro de c8, sem conteúdo de notícias.\". Proposta gerada por LLM (landmarks-v2, claude-haiku-5-5, candidato c13); conferir CSS e scripts que selecionem \"div\" neste elemento.",
+      "edicoes": [
+        {
+          "inicio": 6131,
+          "fim": 6134,
+          "texto": "header"
+        },
+        {
+          "inicio": 13829,
+          "fim": 13832,
+          "texto": "header"
+        }
+      ]
+    }
+  ]
+}

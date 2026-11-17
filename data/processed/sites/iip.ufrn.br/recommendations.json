@@ -1,0 +1,254 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T23:30:44.811Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12",
+      "diff": "9.0.0",
+      "@anthropic-ai/sdk": "1.8.0"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "id": "iip.ufrn.br",
+  "url": "https://iip.ufrn.br/en",
+  "fonte": {
+    "html": "index.html",
+    "codificacao": "utf-8",
+    "bom": false,
+    "har": true,
+    "lighthouse": "lh2.json",
+    "lighthouseVersion": "13.5.0"
+  },
+  "regras": [
+    {
+      "id": "html-lang",
+      "dimensao": "semantica",
+      "descricao": "O elemento <html> declara o idioma da página (atributo lang)."
+    },
+    {
+      "id": "meta-viewport",
+      "dimensao": "performance",
+      "descricao": "A página declara <meta name=\"viewport\"> adequada a telas móveis, sem bloquear o zoom."
+    },
+    {
+      "id": "img-dimensions",
+      "dimensao": "performance",
+      "descricao": "Toda <img> declara width e height, para o navegador reservar o espaço antes do download."
+    },
+    {
+      "id": "img-lazy",
+      "dimensao": "performance",
+      "descricao": "<img> depois das 3 primeiras do documento usa loading=\"lazy\" (exceto a imagem LCP)."
+    },
+    {
+      "id": "obsolete-tags",
+      "dimensao": "semantica",
+      "descricao": "Sem elementos obsoletos do WHATWG (center, font, marquee…); <font> simples vira <span style>."
+    },
+    {
+      "id": "heading-skip",
+      "dimensao": "semantica",
+      "descricao": "Títulos não pulam níveis ao descer na hierarquia (h1 → h3, por exemplo)."
+    },
+    {
+      "id": "fake-button",
+      "dimensao": "semantica",
+      "descricao": "Elementos clicáveis são <button>/<a>, não div/span com onclick."
+    },
+    {
+      "id": "render-blocking-hint",
+      "dimensao": "performance",
+      "descricao": "Scripts e folhas de estilo que o Lighthouse aponta como bloqueantes são adiados quando não são críticos."
+    },
+    {
+      "id": "landmarks-llm",
+      "dimensao": "semantica",
+      "descricao": "Landmarks ausentes propostos por LLM sobre <div>, <section> ou <article> existentes (landmarks-v2, claude-haiku-5-5)."
+    }
+  ],
+  "llm": {
+    "prompt": "landmarks-v2",
+    "arquivo": "docs/prompts/landmarks-v2.md",
+    "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+    "modelo": "claude-haiku-5-5",
+    "effort": "low",
+    "maxTokens": 4000,
+    "execucao": {
+      "siteId": "iip.ufrn.br",
+      "prompt": "landmarks-v2",
+      "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "modeloResposta": "claude-haiku-5-5",
+      "respostaId": "msg_011Ch7UipE1bi3vZCqnnpXSQ",
+      "chamada": true,
+      "motivo": null,
+      "ausentes": [
+        "header",
+        "main"
+      ],
+      "candidatos": 29,
+      "elegiveis": 29,
+      "stopReason": "end_turn",
+      "inputTokens": 4260,
+      "outputTokens": 380,
+      "custoUsd": 0.000616,
+      "propostas": 2,
+      "validas": 2,
+      "rejeitadas": [],
+      "textoIgual": true,
+      "landmarksDepois": {
+        "banner": 1,
+        "navigation": 1,
+        "main": 1,
+        "contentinfo": 1
+      },
+      "erro": null,
+      "duracaoMs": 2950
+    }
+  },
+  "resumo": {
+    "total": 5,
+    "corrigidas": 2,
+    "porRegra": {
+      "html-lang": {
+        "total": 1,
+        "corrigidas": 0
+      },
+      "meta-viewport": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "img-dimensions": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "img-lazy": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "obsolete-tags": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "heading-skip": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "fake-button": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "render-blocking-hint": {
+        "total": 2,
+        "corrigidas": 0
+      },
+      "landmarks-llm": {
+        "total": 2,
+        "corrigidas": 2
+      }
+    },
+    "porDimensao": {
+      "performance": 2,
+      "semantica": 3
+    }
+  },
+  "guardaImagens": null,
+  "recommendations": [
+    {
+      "id": "html-lang-1",
+      "regra": "html-lang",
+      "severidade": "info",
+      "dimensao": "semantica",
+      "evidencia": "<html data-dpl-id=\"dpl_BYD576uDfADwAbvZchz5yKcMhNZ3\" lang=\"en\" class=\"__variable_4c5b3d\">",
+      "posicao": {
+        "linha": 1,
+        "coluna": 16
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "lang=\"en\" declara um idioma diferente do português: conferir se é o idioma principal da página.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-1",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"/_next/static/css/73a0626b6c159f1f.css?dpl=dpl_BYD576uDfADwAbvZchz5yKcMhNZ3\" data-precedence=\"next\"/>",
+      "posicao": {
+        "linha": 1,
+        "coluna": 203
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (1.8 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-2",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"/_next/static/css/1bbd515f67fd55ac.css?dpl=dpl_BYD576uDfADwAbvZchz5yKcMhNZ3\" data-precedence=\"next\"/>",
+      "posicao": {
+        "linha": 1,
+        "coluna": 333
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (16.1 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "landmarks-llm-1",
+      "regra": "landmarks-llm",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<div data-state=\"closed\" id=\"header\" class=\"w-full flex flex-col lg:flex-row items-center justify-center bg-blue-950 border-2 border-blue-950 data-[state=open]:bottom-0 left-0 top-0 right-0 z-20\">",
+      "posicao": {
+        "linha": 1,
+        "coluna": 3895
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "Landmark banner ausente: trocar este <div> por <header>. Justificativa do modelo: \"Bloco com id=\\\"header\\\" no topo da página, com logotipo do IIP e o menu de navegação, antes do conteúdo principal.\". Proposta gerada por LLM (landmarks-v2, claude-haiku-5-5, candidato c2); conferir CSS e scripts que selecionem \"div\" neste elemento.",
+      "edicoes": [
+        {
+          "inicio": 3895,
+          "fim": 3898,
+          "texto": "header"
+        },
+        {
+          "inicio": 15653,
+          "fim": 15656,
+          "texto": "header"
+        }
+      ]
+    },
+    {
+      "id": "landmarks-llm-2",
+      "regra": "landmarks-llm",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<div class=\"w-full flex-1 flex-col \">",
+      "posicao": {
+        "linha": 1,
+        "coluna": 15658
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "Landmark main ausente: trocar este <div> por <main>. Justificativa do modelo: \"Bloco sem header ou footer, que reúne exclusivamente o conteúdo da página (about, research fields, events, talks e news) e fica entre o cabeçalho e o rodapé.\". Proposta gerada por LLM (landmarks-v2, claude-haiku-5-5, candidato c3); conferir CSS e scripts que selecionem \"div\" neste elemento.",
+      "edicoes": [
+        {
+          "inicio": 15658,
+          "fim": 15661,
+          "texto": "main"
+        },
+        {
+          "inicio": 24547,
+          "fim": 24550,
+          "texto": "main"
+        }
+      ]
+    }
+  ]
+}

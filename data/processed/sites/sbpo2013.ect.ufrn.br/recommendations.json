@@ -1,0 +1,453 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T14:24:15.826Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12",
+      "diff": "9.0.0"
+    },
+    "gitCommit": "eafcebd827a93a2e37afa7fd3e8f30f3fbd1fa34",
+    "gitDirty": true
+  },
+  "id": "sbpo2013.ect.ufrn.br",
+  "url": "http://sbpo2013.ect.ufrn.br/",
+  "fonte": {
+    "html": "index.html",
+    "codificacao": "latin1",
+    "bom": false,
+    "har": true,
+    "lighthouse": null,
+    "lighthouseVersion": null
+  },
+  "regras": [
+    {
+      "id": "html-lang",
+      "dimensao": "semantica",
+      "descricao": "O elemento <html> declara o idioma da página (atributo lang)."
+    },
+    {
+      "id": "meta-viewport",
+      "dimensao": "performance",
+      "descricao": "A página declara <meta name=\"viewport\"> adequada a telas móveis, sem bloquear o zoom."
+    },
+    {
+      "id": "img-dimensions",
+      "dimensao": "performance",
+      "descricao": "Toda <img> declara width e height, para o navegador reservar o espaço antes do download."
+    },
+    {
+      "id": "img-lazy",
+      "dimensao": "performance",
+      "descricao": "<img> depois das 3 primeiras do documento usa loading=\"lazy\" (exceto a imagem LCP)."
+    },
+    {
+      "id": "obsolete-tags",
+      "dimensao": "semantica",
+      "descricao": "Sem elementos obsoletos do WHATWG (center, font, marquee…); <font> simples vira <span style>."
+    },
+    {
+      "id": "heading-skip",
+      "dimensao": "semantica",
+      "descricao": "Títulos não pulam níveis ao descer na hierarquia (h1 → h3, por exemplo)."
+    },
+    {
+      "id": "fake-button",
+      "dimensao": "semantica",
+      "descricao": "Elementos clicáveis são <button>/<a>, não div/span com onclick."
+    },
+    {
+      "id": "render-blocking-hint",
+      "dimensao": "performance",
+      "descricao": "Scripts que o Lighthouse aponta como bloqueantes usam defer/async quando não são críticos."
+    }
+  ],
+  "resumo": {
+    "total": 18,
+    "corrigidas": 15,
+    "porRegra": {
+      "html-lang": {
+        "total": 1,
+        "corrigidas": 1
+      },
+      "meta-viewport": {
+        "total": 1,
+        "corrigidas": 1
+      },
+      "img-dimensions": {
+        "total": 7,
+        "corrigidas": 4
+      },
+      "img-lazy": {
+        "total": 9,
+        "corrigidas": 9
+      },
+      "obsolete-tags": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "heading-skip": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "fake-button": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "render-blocking-hint": {
+        "total": 0,
+        "corrigidas": 0
+      }
+    },
+    "porDimensao": {
+      "performance": 17,
+      "semantica": 1
+    }
+  },
+  "recommendations": [
+    {
+      "id": "html-lang-1",
+      "regra": "html-lang",
+      "severidade": "alta",
+      "dimensao": "semantica",
+      "evidencia": "<html>",
+      "posicao": {
+        "linha": 2,
+        "coluna": 1
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "O <html> não tem o atributo lang: leitores de tela não sabem em que idioma ler a página. Declarar lang=\"pt-BR\".",
+      "edicoes": [
+        {
+          "inicio": 21,
+          "fim": 21,
+          "texto": " lang=\"pt-BR\""
+        }
+      ]
+    },
+    {
+      "id": "meta-viewport-1",
+      "regra": "meta-viewport",
+      "severidade": "alta",
+      "dimensao": "performance",
+      "evidencia": "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">",
+      "posicao": {
+        "linha": 5,
+        "coluna": 9
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "Não há <meta name=\"viewport\">: no celular a página é desenhada como desktop e reduzida. Declarar content=\"width=device-width, initial-scale=1\".",
+      "edicoes": [
+        {
+          "inicio": 212,
+          "fim": 212,
+          "texto": "\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-1",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"Logo SBPO 2013\" src=\"http://www.sbpo2013.ect.ufrn.br/img/logo.png\">",
+      "posicao": {
+        "linha": 82,
+        "coluna": 83
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"206\" height=\"175\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 4880,
+          "fim": 4880,
+          "texto": " width=\"206\" height=\"175\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-2",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img style=\"vertical-align: middle;\" src=\"http://www.sbpo2013.ect.ufrn.br/img/brasil.gif\" />",
+      "posicao": {
+        "linha": 86,
+        "coluna": 85
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"20\" height=\"14\" (dimensões do arquivo, gif). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 5184,
+          "fim": 5184,
+          "texto": " width=\"20\" height=\"14\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-3",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img style=\"vertical-align: middle;\" src=\"http://www.sbpo2013.ect.ufrn.br/img/us.gif\" />",
+      "posicao": {
+        "linha": 87,
+        "coluna": 86
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"20\" height=\"14\" (dimensões do arquivo, gif). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 5451,
+          "fim": 5451,
+          "texto": " width=\"20\" height=\"14\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-4",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"75px\" src=\"http://www.4nets.com.br/sbpo/arquivos/central/miniaturas/6940054312184b4b36090b24cad8f8f6.jpg\">",
+      "posicao": {
+        "linha": 201,
+        "coluna": 122
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-5",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"75px\" src=\"http://www.4nets.com.br/sbpo/arquivos/central/miniaturas/ebe5efc2454888ce274c9d932c375f97.jpg\">",
+      "posicao": {
+        "linha": 201,
+        "coluna": 339
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-6",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"75px\" src=\"http://www.4nets.com.br/sbpo/arquivos/central/miniaturas/22503492a2091b34372238ed62b48769.jpg\">",
+      "posicao": {
+        "linha": 201,
+        "coluna": 556
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-7",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"http://www.sbpo2013.ect.ufrn.br/img/logos_home.gif\" />",
+      "posicao": {
+        "linha": 218,
+        "coluna": 5
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"615\" height=\"400\" (dimensões do arquivo, gif). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 15819,
+          "fim": 15819,
+          "texto": " width=\"615\" height=\"400\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-1",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"627\" height=\"293\" src=\"http://www.4nets.com.br/sbpo/arquivos/central/4078936ef5c07b15671194dc50420226.jpg\">",
+      "posicao": {
+        "linha": 135,
+        "coluna": 156
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "4ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 8600,
+          "fim": 8600,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-2",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"627\" height=\"293\" src=\"http://www.4nets.com.br/sbpo/arquivos/central/876bd1e7360d086ad96c6795db3712e6.jpg\">",
+      "posicao": {
+        "linha": 135,
+        "coluna": 416
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "5ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 8860,
+          "fim": 8860,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-3",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"627\" height=\"293\" src=\"http://www.4nets.com.br/sbpo/arquivos/central/748b8cb186f6595f2596f3a19e76e010.jpg\">",
+      "posicao": {
+        "linha": 135,
+        "coluna": 676
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "6ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 9120,
+          "fim": 9120,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-4",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"627\" height=\"293\" src=\"http://www.4nets.com.br/sbpo/arquivos/central/8f2dfab3c97c271df48c6ab9bb295fe6.jpg\">",
+      "posicao": {
+        "linha": 135,
+        "coluna": 936
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "7ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 9380,
+          "fim": 9380,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-5",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"627\" height=\"293\" src=\"http://www.4nets.com.br/sbpo/arquivos/central/830efb5a1c4aa68035dc20a96562a582.jpg\">",
+      "posicao": {
+        "linha": 135,
+        "coluna": 1196
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "8ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 9640,
+          "fim": 9640,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-6",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"75px\" src=\"http://www.4nets.com.br/sbpo/arquivos/central/miniaturas/6940054312184b4b36090b24cad8f8f6.jpg\">",
+      "posicao": {
+        "linha": 201,
+        "coluna": 122
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "9ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 14468,
+          "fim": 14468,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-7",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"75px\" src=\"http://www.4nets.com.br/sbpo/arquivos/central/miniaturas/ebe5efc2454888ce274c9d932c375f97.jpg\">",
+      "posicao": {
+        "linha": 201,
+        "coluna": 339
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "10ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 14685,
+          "fim": 14685,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-8",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"75px\" src=\"http://www.4nets.com.br/sbpo/arquivos/central/miniaturas/22503492a2091b34372238ed62b48769.jpg\">",
+      "posicao": {
+        "linha": 201,
+        "coluna": 556
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "11ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 14902,
+          "fim": 14902,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-9",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"http://www.sbpo2013.ect.ufrn.br/img/logos_home.gif\" />",
+      "posicao": {
+        "linha": 218,
+        "coluna": 5
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "12ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 15762,
+          "fim": 15762,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    }
+  ]
+}

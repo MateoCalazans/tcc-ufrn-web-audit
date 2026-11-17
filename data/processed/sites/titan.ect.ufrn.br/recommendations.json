@@ -1,0 +1,441 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T23:30:44.811Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12",
+      "diff": "9.0.0",
+      "@anthropic-ai/sdk": "1.8.0"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "id": "titan.ect.ufrn.br",
+  "url": "https://titan.ect.ufrn.br/",
+  "fonte": {
+    "html": "index.html",
+    "codificacao": "utf-8",
+    "bom": false,
+    "har": true,
+    "lighthouse": "lh2.json",
+    "lighthouseVersion": "13.5.0"
+  },
+  "regras": [
+    {
+      "id": "html-lang",
+      "dimensao": "semantica",
+      "descricao": "O elemento <html> declara o idioma da página (atributo lang)."
+    },
+    {
+      "id": "meta-viewport",
+      "dimensao": "performance",
+      "descricao": "A página declara <meta name=\"viewport\"> adequada a telas móveis, sem bloquear o zoom."
+    },
+    {
+      "id": "img-dimensions",
+      "dimensao": "performance",
+      "descricao": "Toda <img> declara width e height, para o navegador reservar o espaço antes do download."
+    },
+    {
+      "id": "img-lazy",
+      "dimensao": "performance",
+      "descricao": "<img> depois das 3 primeiras do documento usa loading=\"lazy\" (exceto a imagem LCP)."
+    },
+    {
+      "id": "obsolete-tags",
+      "dimensao": "semantica",
+      "descricao": "Sem elementos obsoletos do WHATWG (center, font, marquee…); <font> simples vira <span style>."
+    },
+    {
+      "id": "heading-skip",
+      "dimensao": "semantica",
+      "descricao": "Títulos não pulam níveis ao descer na hierarquia (h1 → h3, por exemplo)."
+    },
+    {
+      "id": "fake-button",
+      "dimensao": "semantica",
+      "descricao": "Elementos clicáveis são <button>/<a>, não div/span com onclick."
+    },
+    {
+      "id": "render-blocking-hint",
+      "dimensao": "performance",
+      "descricao": "Scripts e folhas de estilo que o Lighthouse aponta como bloqueantes são adiados quando não são críticos."
+    },
+    {
+      "id": "landmarks-llm",
+      "dimensao": "semantica",
+      "descricao": "Landmarks ausentes propostos por LLM sobre <div>, <section> ou <article> existentes (landmarks-v2, claude-haiku-5-5)."
+    }
+  ],
+  "llm": {
+    "prompt": "landmarks-v2",
+    "arquivo": "docs/prompts/landmarks-v2.md",
+    "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+    "modelo": "claude-haiku-5-5",
+    "effort": "low",
+    "maxTokens": 4000,
+    "execucao": {
+      "siteId": "titan.ect.ufrn.br",
+      "prompt": "landmarks-v2",
+      "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "modeloResposta": "claude-haiku-5-5",
+      "respostaId": "msg_011Ch7UswL8yMSRSGEHagiNm",
+      "chamada": true,
+      "motivo": null,
+      "ausentes": [
+        "main"
+      ],
+      "candidatos": 3,
+      "elegiveis": 3,
+      "stopReason": "end_turn",
+      "inputTokens": 1435,
+      "outputTokens": 604,
+      "custoUsd": 0.0004455,
+      "propostas": 1,
+      "validas": 1,
+      "rejeitadas": [],
+      "textoIgual": true,
+      "landmarksDepois": {
+        "banner": 1,
+        "navigation": 1,
+        "main": 1,
+        "contentinfo": 1
+      },
+      "erro": "CSS depende da tag: main",
+      "duracaoMs": 4963
+    }
+  },
+  "resumo": {
+    "total": 11,
+    "corrigidas": 3,
+    "porRegra": {
+      "html-lang": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "meta-viewport": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "img-dimensions": {
+        "total": 3,
+        "corrigidas": 3
+      },
+      "img-lazy": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "obsolete-tags": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "heading-skip": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "fake-button": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "render-blocking-hint": {
+        "total": 7,
+        "corrigidas": 0
+      },
+      "landmarks-llm": {
+        "total": 1,
+        "corrigidas": 0
+      }
+    },
+    "porDimensao": {
+      "performance": 10,
+      "semantica": 1
+    }
+  },
+  "guardaImagens": {
+    "imagens": [
+      {
+        "recomendacao": "img-dimensions-1",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 75,
+              "altura": 75,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 75,
+              "altura": 75,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 75,
+              "altura": 75,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 75,
+              "altura": 75,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-2",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 500,
+              "altura": 500,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 500,
+              "altura": 500,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 500,
+              "altura": 500,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 500,
+              "altura": 500,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-3",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 500,
+              "altura": 500,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 500,
+              "altura": 500,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 500,
+              "altura": 500,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 500,
+              "altura": 500,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      }
+    ],
+    "mantidas": 3,
+    "desfeitas": 0,
+    "erro": null
+  },
+  "recommendations": [
+    {
+      "id": "img-dimensions-1",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"logo_titan\" src=\"/static/img/titan/home/logo_titan.png\" alt=\"imagem\">",
+      "posicao": {
+        "linha": 28,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"500\" height=\"500\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 1346,
+          "fim": 1346,
+          "texto": " width=\"500\" height=\"500\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-2",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"/static/img/titan/home/stellar.png\" alt=\"Slide 1\">",
+      "posicao": {
+        "linha": 91,
+        "coluna": 11
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"574\" height=\"491\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 3636,
+          "fim": 3636,
+          "texto": " width=\"574\" height=\"491\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-3",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"/static/img/titan/home/exoplanet.png\" alt=\"Slide 2\">",
+      "posicao": {
+        "linha": 102,
+        "coluna": 11
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"571\" height=\"509\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 4221,
+          "fim": 4221,
+          "texto": " width=\"571\" height=\"509\""
+        }
+      ]
+    },
+    {
+      "id": "render-blocking-hint-1",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" type=\"text/css\" href=\"/static/css/titan/home/struct_main.css\">",
+      "posicao": {
+        "linha": 10,
+        "coluna": 3
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (155 ms de bloqueio, 2.4 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-2",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" type=\"text/css\" href=\"/static/css/titan/home/slider.css\">",
+      "posicao": {
+        "linha": 11,
+        "coluna": 3
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (463 ms de bloqueio, 1.0 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-3",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" type=\"text/css\" href=\"/static/css/titan/home/contact.css\">",
+      "posicao": {
+        "linha": 12,
+        "coluna": 3
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (463 ms de bloqueio, 0.7 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-4",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200\" />",
+      "posicao": {
+        "linha": 13,
+        "coluna": 3
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (924 ms de bloqueio, 0.5 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-5",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css\">",
+      "posicao": {
+        "linha": 14,
+        "coluna": 3
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (930 ms de bloqueio, 10.9 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-6",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script src=\"/static/js/titan/burger.js\">",
+      "posicao": {
+        "linha": 24,
+        "coluna": 3
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (463 ms de bloqueio, 0.6 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-7",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script src=\"/static/js/titan/slider.js\">",
+      "posicao": {
+        "linha": 25,
+        "coluna": 3
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (463 ms de bloqueio, 0.9 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "landmarks-llm-1",
+      "regra": "landmarks-llm",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<section class=\"main-content\">",
+      "posicao": {
+        "linha": 62,
+        "coluna": 3
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Landmark main ausente: trocar este <section> por <main>. Justificativa do modelo: \"Possui a classe \\\"main-content\\\", é o primeiro bloco de conteúdo no topo logo após o cabeçalho e contém a apresentação do Titan, sem links de menu nem rodapé.\". Proposta gerada por LLM (landmarks-v2, claude-haiku-5-5, candidato c1); conferir CSS e scripts que selecionem \"section\" neste elemento. Sem correção automática: o CSS da página seleciona pela tag (main); ajustar os seletores antes de trocar.",
+      "edicoes": []
+    }
+  ]
+}

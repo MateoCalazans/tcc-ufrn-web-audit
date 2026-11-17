@@ -1,0 +1,405 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T21:05:15.459Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12",
+      "diff": "9.0.0",
+      "@anthropic-ai/sdk": "1.8.0"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "id": "reservas.cchla.ufrn.br",
+  "url": "https://reservas.cchla.ufrn.br/",
+  "fonte": {
+    "html": "index.html",
+    "codificacao": "utf-8",
+    "bom": false,
+    "har": true,
+    "lighthouse": "lh2.json",
+    "lighthouseVersion": "13.5.0"
+  },
+  "regras": [
+    {
+      "id": "html-lang",
+      "dimensao": "semantica",
+      "descricao": "O elemento <html> declara o idioma da página (atributo lang)."
+    },
+    {
+      "id": "meta-viewport",
+      "dimensao": "performance",
+      "descricao": "A página declara <meta name=\"viewport\"> adequada a telas móveis, sem bloquear o zoom."
+    },
+    {
+      "id": "img-dimensions",
+      "dimensao": "performance",
+      "descricao": "Toda <img> declara width e height, para o navegador reservar o espaço antes do download."
+    },
+    {
+      "id": "img-lazy",
+      "dimensao": "performance",
+      "descricao": "<img> depois das 3 primeiras do documento usa loading=\"lazy\" (exceto a imagem LCP)."
+    },
+    {
+      "id": "obsolete-tags",
+      "dimensao": "semantica",
+      "descricao": "Sem elementos obsoletos do WHATWG (center, font, marquee…); <font> simples vira <span style>."
+    },
+    {
+      "id": "heading-skip",
+      "dimensao": "semantica",
+      "descricao": "Títulos não pulam níveis ao descer na hierarquia (h1 → h3, por exemplo)."
+    },
+    {
+      "id": "fake-button",
+      "dimensao": "semantica",
+      "descricao": "Elementos clicáveis são <button>/<a>, não div/span com onclick."
+    },
+    {
+      "id": "render-blocking-hint",
+      "dimensao": "performance",
+      "descricao": "Scripts e folhas de estilo que o Lighthouse aponta como bloqueantes são adiados quando não são críticos."
+    },
+    {
+      "id": "landmarks-llm",
+      "dimensao": "semantica",
+      "descricao": "Landmarks ausentes propostos por LLM sobre <div>, <section> ou <article> existentes (landmarks-v2, claude-haiku-5-5)."
+    }
+  ],
+  "llm": {
+    "prompt": "landmarks-v2",
+    "arquivo": "docs/prompts/landmarks-v2.md",
+    "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+    "modelo": "claude-haiku-5-5",
+    "effort": "low",
+    "maxTokens": 4000,
+    "execucao": {
+      "siteId": "reservas.cchla.ufrn.br",
+      "prompt": "landmarks-v2",
+      "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "modeloResposta": "claude-haiku-5-5",
+      "respostaId": "msg_011Ch7JUvT18G7xhZRNGGEvo",
+      "chamada": true,
+      "motivo": null,
+      "ausentes": [
+        "header",
+        "nav",
+        "main",
+        "footer"
+      ],
+      "candidatos": 31,
+      "elegiveis": 31,
+      "stopReason": "end_turn",
+      "inputTokens": 3592,
+      "outputTokens": 851,
+      "custoUsd": 0.0007847,
+      "propostas": 3,
+      "validas": 3,
+      "rejeitadas": [],
+      "textoIgual": true,
+      "landmarksDepois": {
+        "banner": 1,
+        "navigation": 1,
+        "main": 0,
+        "contentinfo": 1
+      },
+      "erro": null,
+      "duracaoMs": 4914
+    }
+  },
+  "resumo": {
+    "total": 12,
+    "corrigidas": 3,
+    "porRegra": {
+      "html-lang": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "meta-viewport": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "img-dimensions": {
+        "total": 1,
+        "corrigidas": 0
+      },
+      "img-lazy": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "obsolete-tags": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "heading-skip": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "fake-button": {
+        "total": 7,
+        "corrigidas": 0
+      },
+      "render-blocking-hint": {
+        "total": 1,
+        "corrigidas": 0
+      },
+      "landmarks-llm": {
+        "total": 3,
+        "corrigidas": 3
+      }
+    },
+    "porDimensao": {
+      "performance": 2,
+      "semantica": 10
+    }
+  },
+  "guardaImagens": {
+    "imagens": [
+      {
+        "recomendacao": "img-dimensions-1",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "mudou"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 207,
+              "altura": 55,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 411,
+              "altura": 55,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 207,
+              "altura": 55,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 411,
+              "altura": 55,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      }
+    ],
+    "mantidas": 0,
+    "desfeitas": 1,
+    "erro": null
+  },
+  "recommendations": [
+    {
+      "id": "img-dimensions-1",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"cchla-logo.jpg\" alt=\"Logo CCHLA\">",
+      "posicao": {
+        "linha": 96,
+        "coluna": 9
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"411\" height=\"109\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: mudou)",
+      "edicoes": []
+    },
+    {
+      "id": "fake-button-1",
+      "regra": "fake-button",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<div class=\"legenda-item\" id=\"leg-A\" onclick=\"filtrarCalendario('Auditorio A', 'A')\">",
+      "posicao": {
+        "linha": 136,
+        "coluna": 7
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<div> com onclick não recebe foco pelo teclado nem é anunciado como botão. Usar <button type=\"button\"> (ou <a href> se a ação navega) e ajustar o CSS. Se não puder trocar: role=\"button\", tabindex=\"0\" e tratar Enter e Espaço. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "fake-button-2",
+      "regra": "fake-button",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<div class=\"legenda-item\" id=\"leg-B\" onclick=\"filtrarCalendario('Auditorio B', 'B')\">",
+      "posicao": {
+        "linha": 139,
+        "coluna": 7
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<div> com onclick não recebe foco pelo teclado nem é anunciado como botão. Usar <button type=\"button\"> (ou <a href> se a ação navega) e ajustar o CSS. Se não puder trocar: role=\"button\", tabindex=\"0\" e tratar Enter e Espaço. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "fake-button-3",
+      "regra": "fake-button",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<div class=\"legenda-item\" id=\"leg-C\" onclick=\"filtrarCalendario('Auditorio C', 'C')\">",
+      "posicao": {
+        "linha": 142,
+        "coluna": 7
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<div> com onclick não recebe foco pelo teclado nem é anunciado como botão. Usar <button type=\"button\"> (ou <a href> se a ação navega) e ajustar o CSS. Se não puder trocar: role=\"button\", tabindex=\"0\" e tratar Enter e Espaço. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "fake-button-4",
+      "regra": "fake-button",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<div class=\"legenda-item\" id=\"leg-D\" onclick=\"filtrarCalendario('Auditorio D', 'D')\">",
+      "posicao": {
+        "linha": 145,
+        "coluna": 7
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<div> com onclick não recebe foco pelo teclado nem é anunciado como botão. Usar <button type=\"button\"> (ou <a href> se a ação navega) e ajustar o CSS. Se não puder trocar: role=\"button\", tabindex=\"0\" e tratar Enter e Espaço. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "fake-button-5",
+      "regra": "fake-button",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<div class=\"legenda-item\" id=\"leg-E\" onclick=\"filtrarCalendario('Auditorio E', 'E')\">",
+      "posicao": {
+        "linha": 148,
+        "coluna": 7
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<div> com onclick não recebe foco pelo teclado nem é anunciado como botão. Usar <button type=\"button\"> (ou <a href> se a ação navega) e ajustar o CSS. Se não puder trocar: role=\"button\", tabindex=\"0\" e tratar Enter e Espaço. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "fake-button-6",
+      "regra": "fake-button",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<div class=\"legenda-item\" id=\"leg-Feriado\" onclick=\"filtrarCalendario('FERIADO', 'Feriado')\">",
+      "posicao": {
+        "linha": 151,
+        "coluna": 7
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<div> com onclick não recebe foco pelo teclado nem é anunciado como botão. Usar <button type=\"button\"> (ou <a href> se a ação navega) e ajustar o CSS. Se não puder trocar: role=\"button\", tabindex=\"0\" e tratar Enter e Espaço. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "fake-button-7",
+      "regra": "fake-button",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<div class=\"legenda-item ativo\" id=\"leg-TODOS\" onclick=\"filtrarCalendario('TODOS', 'TODOS')\">",
+      "posicao": {
+        "linha": 154,
+        "coluna": 7
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<div> com onclick não recebe foco pelo teclado nem é anunciado como botão. Usar <button type=\"button\"> (ou <a href> se a ação navega) e ajustar o CSS. Se não puder trocar: role=\"button\", tabindex=\"0\" e tratar Enter e Espaço. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-1",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script src=\"https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js\">",
+      "posicao": {
+        "linha": 10,
+        "coluna": 3
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (1205 ms de bloqueio, 80.1 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "landmarks-llm-1",
+      "regra": "landmarks-llm",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<div class=\"header\">",
+      "posicao": {
+        "linha": 94,
+        "coluna": 5
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "Landmark banner ausente: trocar este <div> por <header>. Justificativa do modelo: \"Elemento com classe 'header' no topo da página (prof=1, dentro do container), com o logotipo e título 'Calendário de Ocupação dos Auditórios' e o menu de Solicitações de Reservas.\". Proposta gerada por LLM (landmarks-v2, claude-haiku-5-5, candidato c5); conferir CSS e scripts que selecionem \"div\" neste elemento.",
+      "edicoes": [
+        {
+          "inicio": 8411,
+          "fim": 8414,
+          "texto": "header"
+        },
+        {
+          "inicio": 9204,
+          "fim": 9207,
+          "texto": "header"
+        }
+      ]
+    },
+    {
+      "id": "landmarks-llm-2",
+      "regra": "landmarks-llm",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<div class=\"dropdown-container\" id=\"meuDropdownContainer\">",
+      "posicao": {
+        "linha": 100,
+        "coluna": 7
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "Landmark navigation ausente: trocar este <div> por <nav>. Justificativa do modelo: \"Dropdown 'meuDropdownContainer' dentro do header, com botão de menu e três links de navegação (Solicite uma Reserva, Acompanhe a sua Solicitação, Gestão das Solicitações).\". Proposta gerada por LLM (landmarks-v2, claude-haiku-5-5, candidato c15); conferir CSS e scripts que selecionem \"div\" neste elemento.",
+      "edicoes": [
+        {
+          "inicio": 8603,
+          "fim": 8606,
+          "texto": "nav"
+        },
+        {
+          "inicio": 9193,
+          "fim": 9196,
+          "texto": "nav"
+        }
+      ]
+    },
+    {
+      "id": "landmarks-llm-3",
+      "regra": "landmarks-llm",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<div class=\"footer\">",
+      "posicao": {
+        "linha": 161,
+        "coluna": 3
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "Landmark contentinfo ausente: trocar este <div> por <footer>. Justificativa do modelo: \"Elemento com classe 'footer' no nível raiz, no fim da página, com contato da Gerência de Redes do CCHLA/UFRN e telefones.\". Proposta gerada por LLM (landmarks-v2, claude-haiku-5-5, candidato c2); conferir CSS e scripts que selecionem \"div\" neste elemento.",
+      "edicoes": [
+        {
+          "inicio": 11574,
+          "fim": 11577,
+          "texto": "footer"
+        },
+        {
+          "inicio": 11712,
+          "fim": 11715,
+          "texto": "footer"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,742 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T21:05:15.459Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12",
+      "diff": "9.0.0",
+      "@anthropic-ai/sdk": "1.8.0"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "id": "museutronco.cchla.ufrn.br",
+  "url": "https://museutronco.cchla.ufrn.br/",
+  "fonte": {
+    "html": "index.html",
+    "codificacao": "utf-8",
+    "bom": false,
+    "har": true,
+    "lighthouse": "lh2.json",
+    "lighthouseVersion": "13.5.0"
+  },
+  "regras": [
+    {
+      "id": "html-lang",
+      "dimensao": "semantica",
+      "descricao": "O elemento <html> declara o idioma da página (atributo lang)."
+    },
+    {
+      "id": "meta-viewport",
+      "dimensao": "performance",
+      "descricao": "A página declara <meta name=\"viewport\"> adequada a telas móveis, sem bloquear o zoom."
+    },
+    {
+      "id": "img-dimensions",
+      "dimensao": "performance",
+      "descricao": "Toda <img> declara width e height, para o navegador reservar o espaço antes do download."
+    },
+    {
+      "id": "img-lazy",
+      "dimensao": "performance",
+      "descricao": "<img> depois das 3 primeiras do documento usa loading=\"lazy\" (exceto a imagem LCP)."
+    },
+    {
+      "id": "obsolete-tags",
+      "dimensao": "semantica",
+      "descricao": "Sem elementos obsoletos do WHATWG (center, font, marquee…); <font> simples vira <span style>."
+    },
+    {
+      "id": "heading-skip",
+      "dimensao": "semantica",
+      "descricao": "Títulos não pulam níveis ao descer na hierarquia (h1 → h3, por exemplo)."
+    },
+    {
+      "id": "fake-button",
+      "dimensao": "semantica",
+      "descricao": "Elementos clicáveis são <button>/<a>, não div/span com onclick."
+    },
+    {
+      "id": "render-blocking-hint",
+      "dimensao": "performance",
+      "descricao": "Scripts e folhas de estilo que o Lighthouse aponta como bloqueantes são adiados quando não são críticos."
+    },
+    {
+      "id": "landmarks-llm",
+      "dimensao": "semantica",
+      "descricao": "Landmarks ausentes propostos por LLM sobre <div>, <section> ou <article> existentes (landmarks-v2, claude-haiku-5-5)."
+    }
+  ],
+  "llm": {
+    "prompt": "landmarks-v2",
+    "arquivo": "docs/prompts/landmarks-v2.md",
+    "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+    "modelo": "claude-haiku-5-5",
+    "effort": "low",
+    "maxTokens": 4000,
+    "execucao": {
+      "siteId": "museutronco.cchla.ufrn.br",
+      "prompt": "landmarks-v2",
+      "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "modeloResposta": "claude-haiku-5-5",
+      "respostaId": "msg_011Ch7JETGVAfYgT4NWZmKFu",
+      "chamada": true,
+      "motivo": null,
+      "ausentes": [
+        "main"
+      ],
+      "candidatos": 132,
+      "elegiveis": 132,
+      "stopReason": "end_turn",
+      "inputTokens": 13302,
+      "outputTokens": 322,
+      "custoUsd": 0.0014912,
+      "propostas": 1,
+      "validas": 1,
+      "rejeitadas": [],
+      "textoIgual": true,
+      "landmarksDepois": {
+        "banner": 1,
+        "navigation": 1,
+        "main": 1,
+        "contentinfo": 1
+      },
+      "erro": null,
+      "duracaoMs": 3035
+    }
+  },
+  "resumo": {
+    "total": 39,
+    "corrigidas": 5,
+    "porRegra": {
+      "html-lang": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "meta-viewport": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "img-dimensions": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "img-lazy": {
+        "total": 4,
+        "corrigidas": 4
+      },
+      "obsolete-tags": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "heading-skip": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "fake-button": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "render-blocking-hint": {
+        "total": 34,
+        "corrigidas": 0
+      },
+      "landmarks-llm": {
+        "total": 1,
+        "corrigidas": 1
+      }
+    },
+    "porDimensao": {
+      "performance": 38,
+      "semantica": 1
+    }
+  },
+  "guardaImagens": null,
+  "recommendations": [
+    {
+      "id": "img-lazy-1",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"1197\" height=\"640\" src=\"https://museutronco.cchla.ufrn.br/wp-content/uploads/2023/04/logoufrnbranca.png\" class=\"attachment-kava-thumb-justify-2 size-kava-thumb-justify-2 wp-image-153\" alt…",
+      "posicao": {
+        "linha": 678,
+        "coluna": 16
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "9ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 155713,
+          "fim": 155713,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-2",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"800\" height=\"376\" src=\"https://museutronco.cchla.ufrn.br/wp-content/uploads/2023/05/PPGASLOGObranca-maior.png\" class=\"attachment-1536x1536 size-1536x1536 wp-image-335\" alt=\"\" srcset=\"http…",
+      "posicao": {
+        "linha": 686,
+        "coluna": 16
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "11ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 157573,
+          "fim": 157573,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-3",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"300\" height=\"141\" src=\"https://museutronco.cchla.ufrn.br/wp-content/uploads/2023/05/PPGASLOGObranca-maior-300x141.png\" class=\"attachment-medium size-medium wp-image-335\" alt=\"\" srcset=\"ht…",
+      "posicao": {
+        "linha": 690,
+        "coluna": 16
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "12ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 158733,
+          "fim": 158733,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-4",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"1142\" height=\"455\" src=\"https://museutronco.cchla.ufrn.br/wp-content/uploads/2023/05/PROEX-PNG-branca.png\" class=\"attachment-full size-full wp-image-327\" alt=\"\" srcset=\"https://museutronc…",
+      "posicao": {
+        "linha": 694,
+        "coluna": 16
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "13ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 159895,
+          "fim": 159895,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "render-blocking-hint-1",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='tainacan-blocks-common-theme-styles-css' href='https://museutronco.cchla.ufrn.br/wp-content/plugins/tainacan/assets/css/tainacan-gutenberg-block-common-theme-styles.css' me…",
+      "posicao": {
+        "linha": 20,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (1.2 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-2",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='hfe-widgets-style-css' href='https://museutronco.cchla.ufrn.br/wp-content/plugins/header-footer-elementor/inc/widgets-css/frontend.css?ver=2.9.5' media='all' />",
+      "posicao": {
+        "linha": 21,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (211 ms de bloqueio, 9.6 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-3",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='related-items-list-css' href='https://museutronco.cchla.ufrn.br/wp-content/plugins/tainacan/assets/css/tainacan-gutenberg-block-related-items-list.css' media='all' />",
+      "posicao": {
+        "linha": 42,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (0.9 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-4",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='item-gallery-css' href='https://museutronco.cchla.ufrn.br/wp-content/plugins/tainacan/assets/css/tainacan-gutenberg-block-item-gallery.css' media='all' />",
+      "posicao": {
+        "linha": 43,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (211 ms de bloqueio, 5.8 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-5",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='item-metadata-sections-css' href='https://museutronco.cchla.ufrn.br/wp-content/plugins/tainacan/assets/css/tainacan-gutenberg-block-item-metadata-sections.css' media='all' …",
+      "posicao": {
+        "linha": 44,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (0.4 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-6",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='item-metadata-section-css' href='https://museutronco.cchla.ufrn.br/wp-content/plugins/tainacan/assets/css/tainacan-gutenberg-block-item-metadata-section.css' media='all' />",
+      "posicao": {
+        "linha": 45,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (0.4 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-7",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='item-metadata-css' href='https://museutronco.cchla.ufrn.br/wp-content/plugins/tainacan/assets/css/tainacan-gutenberg-block-item-metadata.css' media='all' />",
+      "posicao": {
+        "linha": 46,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (0.4 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-8",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='item-metadatum-css' href='https://museutronco.cchla.ufrn.br/wp-content/plugins/tainacan/assets/css/tainacan-gutenberg-block-item-metadatum.css' media='all' />",
+      "posicao": {
+        "linha": 47,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (0.4 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-9",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='geocoordinate-item-metadatum-css' href='https://museutronco.cchla.ufrn.br/wp-content/plugins/tainacan/assets/css/tainacan-gutenberg-block-geocoordinate-item-metadatum.css' …",
+      "posicao": {
+        "linha": 48,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (0.6 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-10",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='items-gallery-css' href='https://museutronco.cchla.ufrn.br/wp-content/plugins/tainacan/assets/css/tainacan-gutenberg-block-item-gallery.css' media='all' />",
+      "posicao": {
+        "linha": 49,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (211 ms de bloqueio, 5.8 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-11",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='TainacanURLPluginStyle-css' href='https://museutronco.cchla.ufrn.br/wp-content/plugins/tainacan-url-metadata-type/metadata_type/metadata-type.css?ver=0.2.0' media='all' />",
+      "posicao": {
+        "linha": 61,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (0.9 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-12",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='hfe-style-css' href='https://museutronco.cchla.ufrn.br/wp-content/plugins/header-footer-elementor/assets/css/header-footer-elementor.css?ver=2.9.5' media='all' />",
+      "posicao": {
+        "linha": 127,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (1.0 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-13",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='elementor-frontend-css' href='https://museutronco.cchla.ufrn.br/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=4.3.5' media='all' />",
+      "posicao": {
+        "linha": 128,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (7.5 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-14",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='elementor-post-165-css' href='https://museutronco.cchla.ufrn.br/wp-content/uploads/elementor/css/post-165.css?ver=1792766524' media='all' />",
+      "posicao": {
+        "linha": 129,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (0.8 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-15",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='widget-heading-css' href='https://museutronco.cchla.ufrn.br/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=4.3.5' media='all' />",
+      "posicao": {
+        "linha": 130,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (0.8 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-16",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='widget-video-css' href='https://museutronco.cchla.ufrn.br/wp-content/plugins/elementor/assets/css/widget-video.min.css?ver=4.3.5' media='all' />",
+      "posicao": {
+        "linha": 131,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (0.6 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-17",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='widget-image-css' href='https://museutronco.cchla.ufrn.br/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=4.3.5' media='all' />",
+      "posicao": {
+        "linha": 132,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (0.4 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-18",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='e-animation-fadeInUp-css' href='https://museutronco.cchla.ufrn.br/wp-content/plugins/elementor/assets/lib/animations/styles/fadeInUp.min.css?ver=4.3.5' media='all' />",
+      "posicao": {
+        "linha": 133,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (0.3 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-19",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='elementor-post-160-css' href='https://museutronco.cchla.ufrn.br/wp-content/uploads/elementor/css/post-160.css?ver=1794243701' media='all' />",
+      "posicao": {
+        "linha": 134,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (211 ms de bloqueio, 4.4 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-20",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='elementor-post-175-css' href='https://museutronco.cchla.ufrn.br/wp-content/uploads/elementor/css/post-175.css?ver=1792766525' media='all' />",
+      "posicao": {
+        "linha": 135,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (2.2 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-21",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='elementor-post-232-css' href='https://museutronco.cchla.ufrn.br/wp-content/uploads/elementor/css/post-232.css?ver=1792766525' media='all' />",
+      "posicao": {
+        "linha": 136,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (2.0 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-22",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='font-awesome-css' href='https://museutronco.cchla.ufrn.br/wp-content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css?ver=4.7.0' media='all' />",
+      "posicao": {
+        "linha": 137,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (7.2 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-23",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='kava-theme-style-css' href='https://museutronco.cchla.ufrn.br/wp-content/themes/kava/style.css?ver=2.1.4' media='all' />",
+      "posicao": {
+        "linha": 138,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (4.5 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-24",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='kava-theme-main-style-css' href='https://museutronco.cchla.ufrn.br/wp-content/themes/kava/theme.css?ver=2.1.4' media='all' />",
+      "posicao": {
+        "linha": 143,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (211 ms de bloqueio, 10.9 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-25",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='blog-layouts-module-css' href='https://museutronco.cchla.ufrn.br/wp-content/themes/kava/inc/modules/blog-layouts/assets/css/blog-layouts-module.css?ver=2.1.4' media='all' />",
+      "posicao": {
+        "linha": 144,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (11.7 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-26",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='hfe-elementor-icons-css' href='https://museutronco.cchla.ufrn.br/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.34.0' media='all' />",
+      "posicao": {
+        "linha": 145,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (211 ms de bloqueio, 4.7 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-27",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='hfe-icons-list-css' href='https://museutronco.cchla.ufrn.br/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css?ver=3.24.3' media='all' />",
+      "posicao": {
+        "linha": 146,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (1.3 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-28",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='hfe-social-icons-css' href='https://museutronco.cchla.ufrn.br/wp-content/plugins/elementor/assets/css/widget-social-icons.min.css?ver=3.24.0' media='all' />",
+      "posicao": {
+        "linha": 147,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (1.3 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-29",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='hfe-social-share-icons-brands-css' href='https://museutronco.cchla.ufrn.br/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.css?ver=5.15.3' media='all' />",
+      "posicao": {
+        "linha": 148,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (0.9 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-30",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='hfe-social-share-icons-fontawesome-css' href='https://museutronco.cchla.ufrn.br/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.css?ver=5.15.3' media='…",
+      "posicao": {
+        "linha": 149,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (13.1 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-31",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='hfe-nav-menu-icons-css' href='https://museutronco.cchla.ufrn.br/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.css?ver=5.15.3' media='all' />",
+      "posicao": {
+        "linha": 150,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (0.9 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-32",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='museu-fonts-css' href='https://museutronco.cchla.ufrn.br/wp-content/museu-fonts/museu-fonts.css?ver=1' media='all' />",
+      "posicao": {
+        "linha": 151,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (0.7 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-33",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script id=\"jquery-core-js\" src=\"https://museutronco.cchla.ufrn.br/wp-includes/js/jquery/jquery.min.js?ver=3.7.1\">",
+      "posicao": {
+        "linha": 152,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (422 ms de bloqueio, 30.2 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-34",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script id=\"jquery-migrate-js\" src=\"https://museutronco.cchla.ufrn.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1\">",
+      "posicao": {
+        "linha": 153,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (5.0 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "landmarks-llm-1",
+      "regra": "landmarks-llm",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<div data-elementor-type=\"wp-page\" data-elementor-id=\"160\" class=\"elementor elementor-160\">",
+      "posicao": {
+        "linha": 332,
+        "coluna": 4
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "Landmark main ausente: trocar este <div> por <main>. Justificativa do modelo: \"Elemento class=\\\"elementor elementor-160\\\" é filho direto de c1 (#page), que contém header e footer como irmãos; c2 agrupa só o conteúdo exclusivo da página (Sobre o Museu, Saberes Sustentáveis, Entrevistas, Exposições, Ações de educação patrimonial), sem menu nem rodapé.\". Proposta gerada por LLM (landmarks-v2, claude-haiku-5-5, candidato c2); conferir CSS e scripts que selecionem \"div\" neste elemento.",
+      "edicoes": [
+        {
+          "inicio": 104226,
+          "fim": 104229,
+          "texto": "main"
+        },
+        {
+          "inicio": 138781,
+          "fim": 138784,
+          "texto": "main"
+        }
+      ]
+    }
+  ]
+}

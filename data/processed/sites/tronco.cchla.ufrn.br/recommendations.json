@@ -1,0 +1,1460 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T23:30:44.811Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12",
+      "diff": "9.0.0",
+      "@anthropic-ai/sdk": "1.8.0"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "id": "tronco.cchla.ufrn.br",
+  "url": "http://tronco.cchla.ufrn.br/",
+  "fonte": {
+    "html": "index.html",
+    "codificacao": "utf-8",
+    "bom": false,
+    "har": true,
+    "lighthouse": null,
+    "lighthouseVersion": null
+  },
+  "regras": [
+    {
+      "id": "html-lang",
+      "dimensao": "semantica",
+      "descricao": "O elemento <html> declara o idioma da página (atributo lang)."
+    },
+    {
+      "id": "meta-viewport",
+      "dimensao": "performance",
+      "descricao": "A página declara <meta name=\"viewport\"> adequada a telas móveis, sem bloquear o zoom."
+    },
+    {
+      "id": "img-dimensions",
+      "dimensao": "performance",
+      "descricao": "Toda <img> declara width e height, para o navegador reservar o espaço antes do download."
+    },
+    {
+      "id": "img-lazy",
+      "dimensao": "performance",
+      "descricao": "<img> depois das 3 primeiras do documento usa loading=\"lazy\" (exceto a imagem LCP)."
+    },
+    {
+      "id": "obsolete-tags",
+      "dimensao": "semantica",
+      "descricao": "Sem elementos obsoletos do WHATWG (center, font, marquee…); <font> simples vira <span style>."
+    },
+    {
+      "id": "heading-skip",
+      "dimensao": "semantica",
+      "descricao": "Títulos não pulam níveis ao descer na hierarquia (h1 → h3, por exemplo)."
+    },
+    {
+      "id": "fake-button",
+      "dimensao": "semantica",
+      "descricao": "Elementos clicáveis são <button>/<a>, não div/span com onclick."
+    },
+    {
+      "id": "render-blocking-hint",
+      "dimensao": "performance",
+      "descricao": "Scripts e folhas de estilo que o Lighthouse aponta como bloqueantes são adiados quando não são críticos."
+    },
+    {
+      "id": "landmarks-llm",
+      "dimensao": "semantica",
+      "descricao": "Landmarks ausentes propostos por LLM sobre <div>, <section> ou <article> existentes (landmarks-v2, claude-haiku-5-5)."
+    }
+  ],
+  "llm": {
+    "prompt": "landmarks-v2",
+    "arquivo": "docs/prompts/landmarks-v2.md",
+    "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+    "modelo": "claude-haiku-5-5",
+    "effort": "low",
+    "maxTokens": 4000,
+    "execucao": {
+      "siteId": "tronco.cchla.ufrn.br",
+      "prompt": "landmarks-v2",
+      "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "modeloResposta": "claude-haiku-5-5",
+      "respostaId": "msg_011Ch7UuDKbS8nmCv6cM2w3M",
+      "chamada": true,
+      "motivo": null,
+      "ausentes": [
+        "header",
+        "nav",
+        "footer"
+      ],
+      "candidatos": 5,
+      "elegiveis": 5,
+      "stopReason": "end_turn",
+      "inputTokens": 1689,
+      "outputTokens": 11,
+      "custoUsd": 0.0001744,
+      "propostas": 0,
+      "validas": 0,
+      "rejeitadas": [],
+      "textoIgual": null,
+      "landmarksDepois": null,
+      "erro": null,
+      "duracaoMs": 1153
+    }
+  },
+  "resumo": {
+    "total": 38,
+    "corrigidas": 31,
+    "porRegra": {
+      "html-lang": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "meta-viewport": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "img-dimensions": {
+        "total": 17,
+        "corrigidas": 17
+      },
+      "img-lazy": {
+        "total": 14,
+        "corrigidas": 14
+      },
+      "obsolete-tags": {
+        "total": 7,
+        "corrigidas": 0
+      },
+      "heading-skip": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "fake-button": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "render-blocking-hint": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "landmarks-llm": {
+        "total": 0,
+        "corrigidas": 0
+      }
+    },
+    "porDimensao": {
+      "performance": 31,
+      "semantica": 7
+    }
+  },
+  "guardaImagens": {
+    "imagens": [
+      {
+        "recomendacao": "img-dimensions-1",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 150,
+              "altura": 46,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 150,
+              "altura": 46,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 230,
+              "altura": 70,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 230,
+              "altura": 70,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-2",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 25,
+              "altura": 25,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 25,
+              "altura": 25,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 25,
+              "altura": 25,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 25,
+              "altura": 25,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-3",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 25,
+              "altura": 25,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 25,
+              "altura": 25,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 25,
+              "altura": 25,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 25,
+              "altura": 25,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-4",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 50,
+              "altura": 50,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 50,
+              "altura": 50,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 50,
+              "altura": 50,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 50,
+              "altura": 50,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-5",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 371,
+              "altura": 278,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 371,
+              "altura": 278,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 595,
+              "altura": 446,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 595,
+              "altura": 446,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-6",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 40,
+              "altura": 41,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 40,
+              "altura": 41,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 40,
+              "altura": 41,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 40,
+              "altura": 41,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-7",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 210,
+              "altura": 108,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 210,
+              "altura": 108,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 210,
+              "altura": 108,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 210,
+              "altura": 108,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-8",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 210,
+              "altura": 108,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 210,
+              "altura": 108,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 210,
+              "altura": 108,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 210,
+              "altura": 108,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-9",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 210,
+              "altura": 99,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 210,
+              "altura": 99,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 210,
+              "altura": 99,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 210,
+              "altura": 99,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-10",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 210,
+              "altura": 100,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 210,
+              "altura": 100,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 210,
+              "altura": 100,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 210,
+              "altura": 100,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-11",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 311,
+              "altura": 78,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 311,
+              "altura": 78,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 410,
+              "altura": 104,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 410,
+              "altura": 104,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-12",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 210,
+              "altura": 83,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 210,
+              "altura": 83,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 210,
+              "altura": 83,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 210,
+              "altura": 83,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-13",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 311,
+              "altura": 70,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 311,
+              "altura": 70,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 610,
+              "altura": 138,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 610,
+              "altura": 138,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-14",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 310,
+              "altura": 104,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 310,
+              "altura": 104,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 310,
+              "altura": 104,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 310,
+              "altura": 104,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-15",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 20,
+              "altura": 20,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 20,
+              "altura": 20,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 20,
+              "altura": 20,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 20,
+              "altura": 20,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-16",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 20,
+              "altura": 20,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 20,
+              "altura": 20,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 20,
+              "altura": 20,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 20,
+              "altura": 20,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-17",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 20,
+              "altura": 20,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 20,
+              "altura": 20,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 20,
+              "altura": 20,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 20,
+              "altura": 20,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      }
+    ],
+    "mantidas": 17,
+    "desfeitas": 0,
+    "erro": null
+  },
+  "recommendations": [
+    {
+      "id": "img-dimensions-1",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img id=\"logo_laire\" class=\"w-[230px] mt-[25px]\" src=\"/img/laire.png\">",
+      "posicao": {
+        "linha": 35,
+        "coluna": 71
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"2567\" height=\"785\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 1747,
+          "fim": 1747,
+          "texto": " width=\"2567\" height=\"785\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-2",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"w-[25px]\" src=\"/img/brasil.png\">",
+      "posicao": {
+        "linha": 52,
+        "coluna": 135
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"512\" height=\"512\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 3415,
+          "fim": 3415,
+          "texto": " width=\"512\" height=\"512\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-3",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"w-[25px]\" src=\"/img/eua.png\">",
+      "posicao": {
+        "linha": 53,
+        "coluna": 132
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"512\" height=\"512\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 3602,
+          "fim": 3602,
+          "texto": " width=\"512\" height=\"512\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-4",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"w-[50px] mt-[12px] float-right\" src=\"/img/avt_rs.png\">",
+      "posicao": {
+        "linha": 76,
+        "coluna": 93
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"500\" height=\"500\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 6427,
+          "fim": 6427,
+          "texto": " width=\"500\" height=\"500\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-5",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"/img/conteudo/imagens/885294965.jpeg\" class=\"w-[100%] mt-[50px] rounded-[20px]\">",
+      "posicao": {
+        "linha": 217,
+        "coluna": 17
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1024\" height=\"768\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 16141,
+          "fim": 16141,
+          "texto": " width=\"1024\" height=\"768\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-6",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img id=\"button2\" class=\"w-[40px] cursor-pointer mt-[-5px] float-left\" title=\"Ver libras\" src=\"/img/libra.png\">",
+      "posicao": {
+        "linha": 226,
+        "coluna": 21
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1400\" height=\"1431\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 16575,
+          "fim": 16575,
+          "texto": " width=\"1400\" height=\"1431\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-7",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"w-[210px]\" src=\"/img/Logo UFRN.jpg\" alt=\"\">",
+      "posicao": {
+        "linha": 766,
+        "coluna": 62
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1600\" height=\"824\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 54736,
+          "fim": 54736,
+          "texto": " width=\"1600\" height=\"824\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-8",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"w-[210px]\" src=\"/img/8.png\" alt=\"\">",
+      "posicao": {
+        "linha": 767,
+        "coluna": 62
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"3375\" height=\"1739\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 54850,
+          "fim": 54850,
+          "texto": " width=\"3375\" height=\"1739\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-9",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"w-[210px]\" src=\"/img/6.png\" alt=\"\">",
+      "posicao": {
+        "linha": 768,
+        "coluna": 62
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"3375\" height=\"1587\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 54964,
+          "fim": 54964,
+          "texto": " width=\"3375\" height=\"1587\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-10",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"w-[210px]\" src=\"/img/3.png\" alt=\"\">",
+      "posicao": {
+        "linha": 769,
+        "coluna": 62
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"3375\" height=\"1609\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 55078,
+          "fim": 55078,
+          "texto": " width=\"3375\" height=\"1609\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-11",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"w-[410px]\" src=\"/img/mcti.png\" alt=\"\">",
+      "posicao": {
+        "linha": 770,
+        "coluna": 62
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1200\" height=\"303\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 55195,
+          "fim": 55195,
+          "texto": " width=\"1200\" height=\"303\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-12",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"w-[210px]\" src=\"/img/ppgfis.png\" alt=\"\">",
+      "posicao": {
+        "linha": 771,
+        "coluna": 62
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"453\" height=\"178\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 55314,
+          "fim": 55314,
+          "texto": " width=\"453\" height=\"178\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-13",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"w-[610px]\" src=\"/img/10.png\" alt=\"\">",
+      "posicao": {
+        "linha": 772,
+        "coluna": 62
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"718\" height=\"162\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 55429,
+          "fim": 55429,
+          "texto": " width=\"718\" height=\"162\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-14",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"w-[310px]\" src=\"/img/logomarcaproex_oficial.jpg\" alt=\"\">",
+      "posicao": {
+        "linha": 773,
+        "coluna": 62
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"600\" height=\"201\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 55564,
+          "fim": 55564,
+          "texto": " width=\"600\" height=\"201\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-15",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"text-[#ffffff] text-[20px]\" src=\"/img/facebook.png\" alt=\"Facebook\">",
+      "posicao": {
+        "linha": 819,
+        "coluna": 135
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"512\" height=\"512\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 59723,
+          "fim": 59723,
+          "texto": " width=\"512\" height=\"512\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-16",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"text-[#ffffff] text-[20px]\" src=\"/img/instagram.png\" alt=\"Instagram\">",
+      "posicao": {
+        "linha": 820,
+        "coluna": 145
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"512\" height=\"512\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 59958,
+          "fim": 59958,
+          "texto": " width=\"512\" height=\"512\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-17",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"text-[#ffffff] text-[20px]\" src=\"/img/youtube.png\" alt=\"Youtube\">",
+      "posicao": {
+        "linha": 821,
+        "coluna": 157
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"512\" height=\"512\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 60201,
+          "fim": 60201,
+          "texto": " width=\"512\" height=\"512\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-1",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"w-[50px] mt-[12px] float-right\" src=\"/img/avt_rs.png\">",
+      "posicao": {
+        "linha": 76,
+        "coluna": 93
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "4ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 6366,
+          "fim": 6366,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-2",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"/img/conteudo/imagens/885294965.jpeg\" class=\"w-[100%] mt-[50px] rounded-[20px]\">",
+      "posicao": {
+        "linha": 217,
+        "coluna": 17
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "5ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 16056,
+          "fim": 16056,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-3",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img id=\"button2\" class=\"w-[40px] cursor-pointer mt-[-5px] float-left\" title=\"Ver libras\" src=\"/img/libra.png\">",
+      "posicao": {
+        "linha": 226,
+        "coluna": 21
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "6ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 16469,
+          "fim": 16469,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-4",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"w-[210px]\" src=\"/img/Logo UFRN.jpg\" alt=\"\">",
+      "posicao": {
+        "linha": 766,
+        "coluna": 62
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "7ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 54686,
+          "fim": 54686,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-5",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"w-[210px]\" src=\"/img/8.png\" alt=\"\">",
+      "posicao": {
+        "linha": 767,
+        "coluna": 62
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "8ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 54808,
+          "fim": 54808,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-6",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"w-[210px]\" src=\"/img/6.png\" alt=\"\">",
+      "posicao": {
+        "linha": 768,
+        "coluna": 62
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "9ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 54922,
+          "fim": 54922,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-7",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"w-[210px]\" src=\"/img/3.png\" alt=\"\">",
+      "posicao": {
+        "linha": 769,
+        "coluna": 62
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "10ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 55036,
+          "fim": 55036,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-8",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"w-[410px]\" src=\"/img/mcti.png\" alt=\"\">",
+      "posicao": {
+        "linha": 770,
+        "coluna": 62
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "11ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 55150,
+          "fim": 55150,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-9",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"w-[210px]\" src=\"/img/ppgfis.png\" alt=\"\">",
+      "posicao": {
+        "linha": 771,
+        "coluna": 62
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "12ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 55267,
+          "fim": 55267,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-10",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"w-[610px]\" src=\"/img/10.png\" alt=\"\">",
+      "posicao": {
+        "linha": 772,
+        "coluna": 62
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "13ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 55386,
+          "fim": 55386,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-11",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"w-[310px]\" src=\"/img/logomarcaproex_oficial.jpg\" alt=\"\">",
+      "posicao": {
+        "linha": 773,
+        "coluna": 62
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "14ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 55501,
+          "fim": 55501,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-12",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"text-[#ffffff] text-[20px]\" src=\"/img/facebook.png\" alt=\"Facebook\">",
+      "posicao": {
+        "linha": 819,
+        "coluna": 135
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "15ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 59648,
+          "fim": 59648,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-13",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"text-[#ffffff] text-[20px]\" src=\"/img/instagram.png\" alt=\"Instagram\">",
+      "posicao": {
+        "linha": 820,
+        "coluna": 145
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "16ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 59882,
+          "fim": 59882,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-14",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"text-[#ffffff] text-[20px]\" src=\"/img/youtube.png\" alt=\"Youtube\">",
+      "posicao": {
+        "linha": 821,
+        "coluna": 157
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "17ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 60129,
+          "fim": 60129,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "obsolete-tags-1",
+      "regra": "obsolete-tags",
+      "severidade": "baixa",
+      "dimensao": "semantica",
+      "evidencia": "<center>",
+      "posicao": {
+        "linha": 257,
+        "coluna": 5
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<center> é obsoleto no HTML (WHATWG): usar CSS (text-align: center para texto; margin-inline: auto para blocos).",
+      "edicoes": []
+    },
+    {
+      "id": "obsolete-tags-2",
+      "regra": "obsolete-tags",
+      "severidade": "baixa",
+      "dimensao": "semantica",
+      "evidencia": "<center>",
+      "posicao": {
+        "linha": 636,
+        "coluna": 5
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<center> é obsoleto no HTML (WHATWG): usar CSS (text-align: center para texto; margin-inline: auto para blocos).",
+      "edicoes": []
+    },
+    {
+      "id": "obsolete-tags-3",
+      "regra": "obsolete-tags",
+      "severidade": "baixa",
+      "dimensao": "semantica",
+      "evidencia": "<center>",
+      "posicao": {
+        "linha": 691,
+        "coluna": 13
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<center> é obsoleto no HTML (WHATWG): usar CSS (text-align: center para texto; margin-inline: auto para blocos).",
+      "edicoes": []
+    },
+    {
+      "id": "obsolete-tags-4",
+      "regra": "obsolete-tags",
+      "severidade": "baixa",
+      "dimensao": "semantica",
+      "evidencia": "<center>",
+      "posicao": {
+        "linha": 716,
+        "coluna": 21
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<center> é obsoleto no HTML (WHATWG): usar CSS (text-align: center para texto; margin-inline: auto para blocos).",
+      "edicoes": []
+    },
+    {
+      "id": "obsolete-tags-5",
+      "regra": "obsolete-tags",
+      "severidade": "baixa",
+      "dimensao": "semantica",
+      "evidencia": "<center>",
+      "posicao": {
+        "linha": 723,
+        "coluna": 17
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<center> é obsoleto no HTML (WHATWG): usar CSS (text-align: center para texto; margin-inline: auto para blocos).",
+      "edicoes": []
+    },
+    {
+      "id": "obsolete-tags-6",
+      "regra": "obsolete-tags",
+      "severidade": "baixa",
+      "dimensao": "semantica",
+      "evidencia": "<center>",
+      "posicao": {
+        "linha": 750,
+        "coluna": 21
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<center> é obsoleto no HTML (WHATWG): usar CSS (text-align: center para texto; margin-inline: auto para blocos).",
+      "edicoes": []
+    },
+    {
+      "id": "obsolete-tags-7",
+      "regra": "obsolete-tags",
+      "severidade": "baixa",
+      "dimensao": "semantica",
+      "evidencia": "<center>",
+      "posicao": {
+        "linha": 763,
+        "coluna": 9
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<center> é obsoleto no HTML (WHATWG): usar CSS (text-align: center para texto; margin-inline: auto para blocos).",
+      "edicoes": []
+    }
+  ]
+}

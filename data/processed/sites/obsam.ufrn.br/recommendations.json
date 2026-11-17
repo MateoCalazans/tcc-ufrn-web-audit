@@ -1,0 +1,656 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T21:05:15.459Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12",
+      "diff": "9.0.0",
+      "@anthropic-ai/sdk": "1.8.0"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "id": "obsam.ufrn.br",
+  "url": "https://obsam.ufrn.br/",
+  "fonte": {
+    "html": "index.html",
+    "codificacao": "utf-8",
+    "bom": false,
+    "har": true,
+    "lighthouse": "lh2.json",
+    "lighthouseVersion": "13.5.0"
+  },
+  "regras": [
+    {
+      "id": "html-lang",
+      "dimensao": "semantica",
+      "descricao": "O elemento <html> declara o idioma da página (atributo lang)."
+    },
+    {
+      "id": "meta-viewport",
+      "dimensao": "performance",
+      "descricao": "A página declara <meta name=\"viewport\"> adequada a telas móveis, sem bloquear o zoom."
+    },
+    {
+      "id": "img-dimensions",
+      "dimensao": "performance",
+      "descricao": "Toda <img> declara width e height, para o navegador reservar o espaço antes do download."
+    },
+    {
+      "id": "img-lazy",
+      "dimensao": "performance",
+      "descricao": "<img> depois das 3 primeiras do documento usa loading=\"lazy\" (exceto a imagem LCP)."
+    },
+    {
+      "id": "obsolete-tags",
+      "dimensao": "semantica",
+      "descricao": "Sem elementos obsoletos do WHATWG (center, font, marquee…); <font> simples vira <span style>."
+    },
+    {
+      "id": "heading-skip",
+      "dimensao": "semantica",
+      "descricao": "Títulos não pulam níveis ao descer na hierarquia (h1 → h3, por exemplo)."
+    },
+    {
+      "id": "fake-button",
+      "dimensao": "semantica",
+      "descricao": "Elementos clicáveis são <button>/<a>, não div/span com onclick."
+    },
+    {
+      "id": "render-blocking-hint",
+      "dimensao": "performance",
+      "descricao": "Scripts e folhas de estilo que o Lighthouse aponta como bloqueantes são adiados quando não são críticos."
+    },
+    {
+      "id": "landmarks-llm",
+      "dimensao": "semantica",
+      "descricao": "Landmarks ausentes propostos por LLM sobre <div>, <section> ou <article> existentes (landmarks-v2, claude-haiku-5-5)."
+    }
+  ],
+  "llm": {
+    "prompt": "landmarks-v2",
+    "arquivo": "docs/prompts/landmarks-v2.md",
+    "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+    "modelo": "claude-haiku-5-5",
+    "effort": "low",
+    "maxTokens": 4000,
+    "execucao": {
+      "siteId": "obsam.ufrn.br",
+      "prompt": "landmarks-v2",
+      "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "modeloResposta": null,
+      "respostaId": null,
+      "chamada": false,
+      "motivo": "nenhum landmark ausente",
+      "ausentes": [],
+      "candidatos": 7,
+      "elegiveis": 7,
+      "stopReason": null,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "custoUsd": null,
+      "propostas": 0,
+      "validas": 0,
+      "rejeitadas": [],
+      "textoIgual": null,
+      "landmarksDepois": null,
+      "erro": null,
+      "duracaoMs": 1
+    }
+  },
+  "resumo": {
+    "total": 26,
+    "corrigidas": 5,
+    "porRegra": {
+      "html-lang": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "meta-viewport": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "img-dimensions": {
+        "total": 4,
+        "corrigidas": 3
+      },
+      "img-lazy": {
+        "total": 2,
+        "corrigidas": 2
+      },
+      "obsolete-tags": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "heading-skip": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "fake-button": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "render-blocking-hint": {
+        "total": 20,
+        "corrigidas": 0
+      },
+      "landmarks-llm": {
+        "total": 0,
+        "corrigidas": 0
+      }
+    },
+    "porDimensao": {
+      "performance": 26,
+      "semantica": 0
+    }
+  },
+  "guardaImagens": {
+    "imagens": [
+      {
+        "recomendacao": "img-dimensions-1",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 412,
+              "altura": 100,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 412,
+              "altura": 100,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 1350,
+              "altura": 326,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 1350,
+              "altura": 326,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-2",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 412,
+              "altura": 100,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 412,
+              "altura": 100,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 1350,
+              "altura": 326,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 1350,
+              "altura": 326,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-3",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 412,
+              "altura": 100,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 412,
+              "altura": 100,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 1350,
+              "altura": 326,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 1350,
+              "altura": 326,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      }
+    ],
+    "mantidas": 3,
+    "desfeitas": 0,
+    "erro": null
+  },
+  "recommendations": [
+    {
+      "id": "img-dimensions-1",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img decoding=\"async\" class=\"swiper-slide-image\" src=\"https://obsam.ufrn.br/wp-content/uploads/2019/08/bruna-1.jpg\" alt=\"bruna\" />",
+      "posicao": {
+        "linha": 229,
+        "coluna": 132
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1920\" height=\"464\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 31673,
+          "fim": 31673,
+          "texto": " width=\"1920\" height=\"464\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-2",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img decoding=\"async\" class=\"swiper-slide-image\" src=\"https://obsam.ufrn.br/wp-content/uploads/2019/10/nec.jpg\" alt=\"nec\" />",
+      "posicao": {
+        "linha": 229,
+        "coluna": 400
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1920\" height=\"464\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 31935,
+          "fim": 31935,
+          "texto": " width=\"1920\" height=\"464\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-3",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img decoding=\"async\" class=\"swiper-slide-image\" src=\"https://obsam.ufrn.br/wp-content/uploads/2019/10/reitoria.jpg\" alt=\"reitoria\" />",
+      "posicao": {
+        "linha": 229,
+        "coluna": 662
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1920\" height=\"464\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 32207,
+          "fim": 32207,
+          "texto": " width=\"1920\" height=\"464\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-4",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"http://obsam.ufrn.br/wp-content/uploads/2019/08/logotipo_flat.png\" />",
+      "posicao": {
+        "linha": 286,
+        "coluna": 17
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-lazy-1",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img decoding=\"async\" class=\"swiper-slide-image\" src=\"https://obsam.ufrn.br/wp-content/uploads/2019/10/reitoria.jpg\" alt=\"reitoria\" />",
+      "posicao": {
+        "linha": 229,
+        "coluna": 662
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "4ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 32080,
+          "fim": 32080,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-2",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"http://obsam.ufrn.br/wp-content/uploads/2019/08/logotipo_flat.png\" />",
+      "posicao": {
+        "linha": 286,
+        "coluna": 17
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "5ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 35948,
+          "fim": 35948,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "render-blocking-hint-1",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='hfe-widgets-style-css' href='https://obsam.ufrn.br/wp-content/plugins/header-footer-elementor/inc/widgets-css/frontend.css?ver=2.9.6' media='all' />",
+      "posicao": {
+        "linha": 18,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (464 ms de bloqueio, 12.2 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-2",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='hfe-style-css' href='https://obsam.ufrn.br/wp-content/plugins/header-footer-elementor/assets/css/header-footer-elementor.css?ver=2.9.6' media='all' />",
+      "posicao": {
+        "linha": 50,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (464 ms de bloqueio, 3.6 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-3",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='elementor-icons-css' href='https://obsam.ufrn.br/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.54.0' media='all' />",
+      "posicao": {
+        "linha": 51,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (614 ms de bloqueio, 7.7 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-4",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='elementor-frontend-css' href='https://obsam.ufrn.br/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=4.3.6' media='all' />",
+      "posicao": {
+        "linha": 52,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (764 ms de bloqueio, 10.3 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-5",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='swiper-css' href='https://obsam.ufrn.br/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5' media='all' />",
+      "posicao": {
+        "linha": 53,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (614 ms de bloqueio, 7.7 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-6",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='e-swiper-css' href='https://obsam.ufrn.br/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css?ver=4.3.6' media='all' />",
+      "posicao": {
+        "linha": 54,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (464 ms de bloqueio, 4.0 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-7",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='widget-image-carousel-css' href='https://obsam.ufrn.br/wp-content/plugins/elementor/assets/css/widget-image-carousel.min.css?ver=4.3.6' media='all' />",
+      "posicao": {
+        "linha": 55,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (164 ms de bloqueio, 3.4 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-8",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='widget-heading-css' href='https://obsam.ufrn.br/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=4.3.6' media='all' />",
+      "posicao": {
+        "linha": 56,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (164 ms de bloqueio, 3.4 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-9",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='elementor-post-6-css' href='https://obsam.ufrn.br/wp-content/uploads/elementor/css/post-6.css?ver=1794022562' media='all' />",
+      "posicao": {
+        "linha": 57,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (164 ms de bloqueio, 3.9 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-10",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='hfe-elementor-icons-css' href='https://obsam.ufrn.br/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.34.0' media='all' />",
+      "posicao": {
+        "linha": 58,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (314 ms de bloqueio, 7.7 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-11",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='hfe-icons-list-css' href='https://obsam.ufrn.br/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css?ver=3.24.3' media='all' />",
+      "posicao": {
+        "linha": 59,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (164 ms de bloqueio, 4.2 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-12",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='hfe-social-icons-css' href='https://obsam.ufrn.br/wp-content/plugins/elementor/assets/css/widget-social-icons.min.css?ver=3.24.0' media='all' />",
+      "posicao": {
+        "linha": 60,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (314 ms de bloqueio, 4.4 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-13",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='hfe-social-share-icons-brands-css' href='https://obsam.ufrn.br/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.css?ver=5.15.3' media='all' />",
+      "posicao": {
+        "linha": 61,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (164 ms de bloqueio, 3.6 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-14",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='hfe-social-share-icons-fontawesome-css' href='https://obsam.ufrn.br/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.css?ver=5.15.3' media='all' />",
+      "posicao": {
+        "linha": 62,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (614 ms de bloqueio, 16.1 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-15",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='hfe-nav-menu-icons-css' href='https://obsam.ufrn.br/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.css?ver=5.15.3' media='all' />",
+      "posicao": {
+        "linha": 63,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (164 ms de bloqueio, 3.6 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-16",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='virtue_theme-css' href='https://obsam.ufrn.br/wp-content/themes/virtue/assets/css/virtue.css?ver=3.4.15' media='all' />",
+      "posicao": {
+        "linha": 64,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (914 ms de bloqueio, 39.2 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-17",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='virtue_skin-css' href='https://obsam.ufrn.br/wp-content/themes/virtue/assets/css/skins/default.css?ver=3.4.15' media='all' />",
+      "posicao": {
+        "linha": 65,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (314 ms de bloqueio, 4.5 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-18",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='redux-google-fonts-virtue-css' href='https://fonts.googleapis.com/css?family=Lato:400,700&#038;ver=7.1.4' media='all' />",
+      "posicao": {
+        "linha": 66,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (885 ms de bloqueio, 0.5 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-19",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script id=\"jquery-core-js\" src=\"https://obsam.ufrn.br/wp-includes/js/jquery/jquery.min.js?ver=3.7.1\">",
+      "posicao": {
+        "linha": 67,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (764 ms de bloqueio, 33.0 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-20",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script id=\"jquery-migrate-js\" src=\"https://obsam.ufrn.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1\">",
+      "posicao": {
+        "linha": 68,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (314 ms de bloqueio, 8.0 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    }
+  ]
+}

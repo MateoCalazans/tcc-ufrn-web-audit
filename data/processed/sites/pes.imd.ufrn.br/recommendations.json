@@ -1,0 +1,1014 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T21:05:15.459Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12",
+      "diff": "9.0.0",
+      "@anthropic-ai/sdk": "1.8.0"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "id": "pes.imd.ufrn.br",
+  "url": "https://pes.imd.ufrn.br/pes/index",
+  "fonte": {
+    "html": "index.html",
+    "codificacao": "utf-8",
+    "bom": false,
+    "har": true,
+    "lighthouse": "lh2.json",
+    "lighthouseVersion": "13.5.0"
+  },
+  "regras": [
+    {
+      "id": "html-lang",
+      "dimensao": "semantica",
+      "descricao": "O elemento <html> declara o idioma da página (atributo lang)."
+    },
+    {
+      "id": "meta-viewport",
+      "dimensao": "performance",
+      "descricao": "A página declara <meta name=\"viewport\"> adequada a telas móveis, sem bloquear o zoom."
+    },
+    {
+      "id": "img-dimensions",
+      "dimensao": "performance",
+      "descricao": "Toda <img> declara width e height, para o navegador reservar o espaço antes do download."
+    },
+    {
+      "id": "img-lazy",
+      "dimensao": "performance",
+      "descricao": "<img> depois das 3 primeiras do documento usa loading=\"lazy\" (exceto a imagem LCP)."
+    },
+    {
+      "id": "obsolete-tags",
+      "dimensao": "semantica",
+      "descricao": "Sem elementos obsoletos do WHATWG (center, font, marquee…); <font> simples vira <span style>."
+    },
+    {
+      "id": "heading-skip",
+      "dimensao": "semantica",
+      "descricao": "Títulos não pulam níveis ao descer na hierarquia (h1 → h3, por exemplo)."
+    },
+    {
+      "id": "fake-button",
+      "dimensao": "semantica",
+      "descricao": "Elementos clicáveis são <button>/<a>, não div/span com onclick."
+    },
+    {
+      "id": "render-blocking-hint",
+      "dimensao": "performance",
+      "descricao": "Scripts e folhas de estilo que o Lighthouse aponta como bloqueantes são adiados quando não são críticos."
+    },
+    {
+      "id": "landmarks-llm",
+      "dimensao": "semantica",
+      "descricao": "Landmarks ausentes propostos por LLM sobre <div>, <section> ou <article> existentes (landmarks-v2, claude-haiku-5-5)."
+    }
+  ],
+  "llm": {
+    "prompt": "landmarks-v2",
+    "arquivo": "docs/prompts/landmarks-v2.md",
+    "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+    "modelo": "claude-haiku-5-5",
+    "effort": "low",
+    "maxTokens": 4000,
+    "execucao": {
+      "siteId": "pes.imd.ufrn.br",
+      "prompt": "landmarks-v2",
+      "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "modeloResposta": "claude-haiku-5-5",
+      "respostaId": "msg_011Ch7JMXF3xvqpMoMswJic3",
+      "chamada": true,
+      "motivo": null,
+      "ausentes": [
+        "header",
+        "main"
+      ],
+      "candidatos": 15,
+      "elegiveis": 15,
+      "stopReason": "end_turn",
+      "inputTokens": 2613,
+      "outputTokens": 486,
+      "custoUsd": 0.0005043000000000001,
+      "propostas": 2,
+      "validas": 2,
+      "rejeitadas": [],
+      "textoIgual": true,
+      "landmarksDepois": {
+        "banner": 1,
+        "navigation": 1,
+        "main": 1,
+        "contentinfo": 1
+      },
+      "erro": null,
+      "duracaoMs": 3029
+    }
+  },
+  "resumo": {
+    "total": 27,
+    "corrigidas": 14,
+    "porRegra": {
+      "html-lang": {
+        "total": 1,
+        "corrigidas": 1
+      },
+      "meta-viewport": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "img-dimensions": {
+        "total": 11,
+        "corrigidas": 3
+      },
+      "img-lazy": {
+        "total": 8,
+        "corrigidas": 8
+      },
+      "obsolete-tags": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "heading-skip": {
+        "total": 1,
+        "corrigidas": 0
+      },
+      "fake-button": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "render-blocking-hint": {
+        "total": 4,
+        "corrigidas": 0
+      },
+      "landmarks-llm": {
+        "total": 2,
+        "corrigidas": 2
+      }
+    },
+    "porDimensao": {
+      "performance": 23,
+      "semantica": 4
+    }
+  },
+  "guardaImagens": {
+    "imagens": [
+      {
+        "recomendacao": "img-dimensions-1",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 52,
+              "altura": 19,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 52,
+              "altura": 19,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-2",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 52,
+              "altura": 19,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 52,
+              "altura": 19,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-3",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 90,
+              "altura": 36,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 90,
+              "altura": 36,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 134,
+              "altura": 54,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 134,
+              "altura": 54,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-4",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "mudou"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 80,
+              "altura": 80,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 80,
+              "altura": 209,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 120,
+              "altura": 120,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 120,
+              "altura": 209,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-5",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "mudou"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 80,
+              "altura": 80,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 80,
+              "altura": 209,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 120,
+              "altura": 120,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 120,
+              "altura": 209,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-6",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "mudou"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 80,
+              "altura": 80,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 80,
+              "altura": 209,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 120,
+              "altura": 120,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 120,
+              "altura": 209,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-7",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "mudou"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 80,
+              "altura": 80,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 80,
+              "altura": 209,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 120,
+              "altura": 120,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 120,
+              "altura": 209,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-8",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "mudou"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 80,
+              "altura": 80,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 80,
+              "altura": 209,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 120,
+              "altura": 120,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 120,
+              "altura": 209,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-9",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "mudou"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 80,
+              "altura": 80,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 80,
+              "altura": 209,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 120,
+              "altura": 120,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 120,
+              "altura": 209,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-10",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "mudou"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 80,
+              "altura": 80,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 80,
+              "altura": 209,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 120,
+              "altura": 120,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 120,
+              "altura": 209,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-11",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "mudou"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 80,
+              "altura": 80,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 80,
+              "altura": 209,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 120,
+              "altura": 120,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 120,
+              "altura": 209,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      }
+    ],
+    "mantidas": 3,
+    "desfeitas": 8,
+    "erro": null
+  },
+  "recommendations": [
+    {
+      "id": "html-lang-1",
+      "regra": "html-lang",
+      "severidade": "alta",
+      "dimensao": "semantica",
+      "evidencia": "<html xmlns=\"http://www.w3.org/1999/xhtml\">",
+      "posicao": {
+        "linha": 2,
+        "coluna": 1
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "O <html> não tem o atributo lang: leitores de tela não sabem em que idioma ler a página. Declarar lang=\"pt-BR\".",
+      "edicoes": [
+        {
+          "inicio": 58,
+          "fim": 58,
+          "texto": " lang=\"pt-BR\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-1",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"/pes/imagens/ufrn_cinza.png\" width=\"52\"/>",
+      "posicao": {
+        "linha": 153,
+        "coluna": 70
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado height=\"19\" (proporcional ao width=\"52\" e ao arquivo 81×30). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 3279,
+          "fim": 3279,
+          "texto": " height=\"19\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-2",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"/pes/imagens/ufrn_cinza.png\" width=\"52\"/>",
+      "posicao": {
+        "linha": 158,
+        "coluna": 9
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado height=\"19\" (proporcional ao width=\"52\" e ao arquivo 81×30). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 3715,
+          "fim": 3715,
+          "texto": " height=\"19\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-3",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"img-fluid\" src=\"/pes/imagens/PES-Logotipo.png\">",
+      "posicao": {
+        "linha": 185,
+        "coluna": 42
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"134\" height=\"54\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 5535,
+          "fim": 5535,
+          "texto": " width=\"134\" height=\"54\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-4",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"px-3 py-3 rounded-circle shadow-sm icon-campo\" src=\"/pes/imagens/Bioinformatica.png\"/>",
+      "posicao": {
+        "linha": 266,
+        "coluna": 143
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"209\" height=\"209\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: mudou)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-5",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"px-3 py-3 rounded-circle shadow-sm icon-campo\" src=\"/pes/imagens/Cienciadedados.png\"/>",
+      "posicao": {
+        "linha": 268,
+        "coluna": 143
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"209\" height=\"209\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: mudou)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-6",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"px-3 py-3 rounded-circle shadow-sm icon-campo\" src=\"/pes/imagens/Infoeducacional.png\"/>",
+      "posicao": {
+        "linha": 270,
+        "coluna": 135
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"209\" height=\"209\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: mudou)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-7",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"px-3 py-3 rounded-circle shadow-sm icon-campo\" src=\"/pes/imagens/Inovacao.png\"/>",
+      "posicao": {
+        "linha": 272,
+        "coluna": 132
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"209\" height=\"209\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: mudou)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-8",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"px-3 py-3 rounded-circle shadow-sm icon-campo\" src=\"/pes/imagens/Inteligenciacomputacional.png\"/>",
+      "posicao": {
+        "linha": 274,
+        "coluna": 136
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"209\" height=\"209\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: mudou)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-9",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"px-3 py-3 rounded-circle shadow-sm icon-campo\" src=\"/pes/imagens/Internetdascoisas_novo.png\"/>",
+      "posicao": {
+        "linha": 276,
+        "coluna": 132
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"209\" height=\"209\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: mudou)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-10",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"px-3 py-3 rounded-circle shadow-sm icon-campo\" src=\"/pes/imagens/Jogosdigitais.png\"/>",
+      "posicao": {
+        "linha": 278,
+        "coluna": 129
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"209\" height=\"209\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: mudou)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-11",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"px-3 py-3 rounded-circle shadow-sm icon-campo\" src=\"/pes/imagens/Sistemasgerenciais.png\"/>",
+      "posicao": {
+        "linha": 280,
+        "coluna": 134
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"209\" height=\"209\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: mudou)",
+      "edicoes": []
+    },
+    {
+      "id": "img-lazy-1",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"px-3 py-3 rounded-circle shadow-sm icon-campo\" src=\"/pes/imagens/Bioinformatica.png\"/>",
+      "posicao": {
+        "linha": 266,
+        "coluna": 143
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "4ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 9067,
+          "fim": 9067,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-2",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"px-3 py-3 rounded-circle shadow-sm icon-campo\" src=\"/pes/imagens/Cienciadedados.png\"/>",
+      "posicao": {
+        "linha": 268,
+        "coluna": 143
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "5ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 9361,
+          "fim": 9361,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-3",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"px-3 py-3 rounded-circle shadow-sm icon-campo\" src=\"/pes/imagens/Infoeducacional.png\"/>",
+      "posicao": {
+        "linha": 270,
+        "coluna": 135
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "6ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 9649,
+          "fim": 9649,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-4",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"px-3 py-3 rounded-circle shadow-sm icon-campo\" src=\"/pes/imagens/Inovacao.png\"/>",
+      "posicao": {
+        "linha": 272,
+        "coluna": 132
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "7ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 9942,
+          "fim": 9942,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-5",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"px-3 py-3 rounded-circle shadow-sm icon-campo\" src=\"/pes/imagens/Inteligenciacomputacional.png\"/>",
+      "posicao": {
+        "linha": 274,
+        "coluna": 136
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "8ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 10236,
+          "fim": 10236,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-6",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"px-3 py-3 rounded-circle shadow-sm icon-campo\" src=\"/pes/imagens/Internetdascoisas_novo.png\"/>",
+      "posicao": {
+        "linha": 276,
+        "coluna": 132
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "9ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 10539,
+          "fim": 10539,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-7",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"px-3 py-3 rounded-circle shadow-sm icon-campo\" src=\"/pes/imagens/Jogosdigitais.png\"/>",
+      "posicao": {
+        "linha": 278,
+        "coluna": 129
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "10ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 10832,
+          "fim": 10832,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-8",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"px-3 py-3 rounded-circle shadow-sm icon-campo\" src=\"/pes/imagens/Sistemasgerenciais.png\"/>",
+      "posicao": {
+        "linha": 280,
+        "coluna": 134
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "11ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 11116,
+          "fim": 11116,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "heading-skip-1",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h6 class=\"mt-4\">",
+      "posicao": {
+        "linha": 267,
+        "coluna": 7
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 2 para o nível 6: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h3 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-1",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"/pes/css/bootstrap.css\">",
+      "posicao": {
+        "linha": 12,
+        "coluna": 2
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (1987 ms de bloqueio, 169.7 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-2",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"/pes/css/accessibility.css\">",
+      "posicao": {
+        "linha": 13,
+        "coluna": 2
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (464 ms de bloqueio, 2.1 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-3",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.6.3/css/all.css\" integrity=\"sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/\" crossorigin=\"anonymous\">",
+      "posicao": {
+        "linha": 14,
+        "coluna": 2
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (910 ms de bloqueio, 12.5 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-4",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"/pes/css/style.css\">",
+      "posicao": {
+        "linha": 15,
+        "coluna": 2
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (464 ms de bloqueio, 6.3 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "landmarks-llm-1",
+      "regra": "landmarks-llm",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<div id=\"menu\">",
+      "posicao": {
+        "linha": 144,
+        "coluna": 2
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "Landmark banner ausente: trocar este <div> por <header>. Justificativa do modelo: \"Div de topo (prof=0, primeiro bloco, id=\\\"menu\\\") com o nome/logotipo \\\"Metrópole Digital UFRN\\\" e o nav já aninhado, o que cumpre o papel de cabeçalho do site.\". Proposta gerada por LLM (landmarks-v2, claude-haiku-5-5, candidato c1); conferir CSS e scripts que selecionem \"div\" neste elemento.",
+      "edicoes": [
+        {
+          "inicio": 2898,
+          "fim": 2901,
+          "texto": "header"
+        },
+        {
+          "inicio": 6415,
+          "fim": 6418,
+          "texto": "header"
+        }
+      ]
+    },
+    {
+      "id": "landmarks-llm-2",
+      "regra": "landmarks-llm",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<div id=\"conteudo-pb\">",
+      "posicao": {
+        "linha": 211,
+        "coluna": 2
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "Landmark main ausente: trocar este <div> por <main>. Justificativa do modelo: \"Div de conteúdo (id=\\\"conteudo-pb\\\", prof=0) que reúne todas as seções exclusivas da página (certificados, PES, campos do saber e modais), sem o menu nem o rodapé.\". Proposta gerada por LLM (landmarks-v2, claude-haiku-5-5, candidato c2); conferir CSS e scripts que selecionem \"div\" neste elemento.",
+      "edicoes": [
+        {
+          "inicio": 6425,
+          "fim": 6428,
+          "texto": "main"
+        },
+        {
+          "inicio": 32370,
+          "fim": 32373,
+          "texto": "main"
+        }
+      ]
+    }
+  ]
+}

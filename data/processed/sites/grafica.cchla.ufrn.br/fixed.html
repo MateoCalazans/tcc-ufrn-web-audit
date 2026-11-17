@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="Laboratório de Documentação Histórica - LABORDOC" />
+<meta name="author" content="Laboratório de Documentação Histórica - LABORDOC" />
+<title>Laboratório de Documentação Histórica - LABORDOC</title>
+<!-- Favicon-->
+<link rel="icon" type="image/x-icon" href="imagens/favicon.ico" />
+<!-- Bootstrap Icons-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+<!-- Google fonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
+
+<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<!-- <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" /> -->
+
+<!-- SimpleLightbox plugin CSS-->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+<!-- Core theme CSS (includes Bootstrap)-->
+<!-- Arquivos CSS -->
+<!-- <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/blocks.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/homepage.css" rel="stylesheet" />
+    <link href="css/output.css" rel="stylesheet" />
+    <link href="css/pe-customize-controls.css" rel="stylesheet" />
+    <link href="css/slick.min.css" rel="stylesheet" /> -->
+<link href="css/styles-old.css" rel="stylesheet" />
+<link href="css/extra.css" rel="stylesheet" />
+<!-- <link href="css/swiper-bundle.css" rel="stylesheet" /> -->
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+    :root {
+        --labordoc-primary: rgb(232, 150, 24);
+    }
+
+    /* Ativar dropdown no hover */
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+
+    .dropdown-toggle::after {
+        display: none;
+    }
+
+    .labordoc-carousel {
+        height: 40em; /* Altura padrão para telas maiores */
+        overflow: hidden;
+    }
+
+    .labordoc-carousel img {
+        max-height: 40em;
+        height: 40em;
+        object-fit: cover; /* Garante que a imagem se ajuste ao espaço */
+    }
+
+    @media (max-width: 768px) {
+        .labordoc-carousel {
+            height: 30em; /* Altura reduzida para telas menores */
+        }
+
+        .labordoc-carousel img {
+            max-height: 30em;
+            height: 30em;
+        }
+    }
+
+    .service-card {
+        position: relative;
+        width: 20rem;
+        height: 20em;
+        border-radius: 1.5rem;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        cursor: pointer;
+        transition: transform 0.2s;
+        background: #eee;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .service-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .service-card .overlay {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        font-weight: 500;
+        transition: top 0.4s cubic-bezier(.4, 0, .2, 1), visibility 0s linear 0.4s, pointer-events 0s linear 0.4s;
+        padding: 2rem;
+        text-align: center;
+        pointer-events: none;
+        visibility: hidden;
+    }
+
+    .service-card:hover .overlay {
+        top: 0;
+        pointer-events: auto;
+        visibility: visible;
+        transition: top 0.4s cubic-bezier(.4, 0, .2, 1), visibility 0s, pointer-events 0s;
+    }
+
+    .service-card .bottom-label {
+        position: absolute;
+        left: 1rem;
+        right: 1rem;
+        bottom: 1rem;
+        background: #fff;
+        color: #222;
+        border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+        font-weight: 600;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+        text-align: center;
+        /* background-color: rgb(232, 150, 24);
+        color: white; */
+    }
+
+    .gap-6 {
+        gap: 5rem !important;
+    }
+
+    .mb-6,
+    .mt-6 {
+        margin-bottom: 5rem !important;
+    }
+
+    .team-item {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .team-item img {
+        display: block;
+        border-radius: 1em;
+        transition: transform 0.2s;
+    }
+
+    .team-item:hover img {
+        transform: scale(1.03);
+    }
+
+    .glass-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(8px);
+        border-radius: 0 0 1em 1em;
+        width: 100%;
+        padding: 0.7em 0.5em;
+    }
+
+    @media (max-width: 992px) {
+        .team-item {
+            flex: 1 1 calc(50% - 1rem);
+            max-width: calc(50% - 1rem);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .team-item {
+            flex: 1 1 100%;
+            max-width: 100%;
+        }
+    }
+
+    .btn-larbodoc {
+        background: var(--labordoc-primary);
+        color: #fff;
+        border-radius: 0.375rem;
+        border: 2px solid var(--labordoc-primary);
+        transition: all 0.2s;
+    }
+
+    .btn-larbodoc:hover,
+    .btn-larbodoc:focus {
+        background: #fff;
+        color: var(--labordoc-primary);
+        border-color: var(--labordoc-primary);
+    }
+
+    .paragrafo {
+        font-size: 20px !important;
+    }
+
+    #btnTopo {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1050;
+        display: none;
+    }
+
+    @media (max-width: 767.98px) {
+        #mobileMenu .dropdown-menu {
+            display: none !important;
+        }
+
+        #mobileMenu .dropdown-toggle {
+            pointer-events: none;
+            cursor: default;
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        #mobileMenu {
+            display: none !important;
+            flex-direction: column;
+            gap: 1rem;
+            background: #fff;
+            padding: 1rem 0;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #mobileMenu.show {
+            display: flex !important;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .mobile-margin {
+            margin-left: 2rem !important;
+        }
+    }
+</style></head>
+
+<body>
+    <main class="d-flex flex-column gap-6">
+        <header class="shadow" style="position: relative;">
+    <div class="container d-flex justify-content-between align-items-center">
+        <a href="/" id="icone-principal" class="d-flex justify-content-between align-items-center titulo-menu">
+            <!-- Logo -->
+            <img src="/assets/site/icon.png" alt="" style="max-width: 100px;">
+            <strong class="titulo-destaque">LABORDOC</strong>
+        </a>
+        <div>
+            <!-- Menu de navegação -->
+            <nav class="d-flex flex-column gap-2">
+                <button class="navbar-toggler d-md-none mb-2" type="button" aria-label="Abrir menu" onclick="document.getElementById('mobileMenu').classList.toggle('show')">
+                    <span class="navbar-toggler-icon" style="display:inline-block;width:1.5em;height:1.5em;background-size:100% 100%;background-image:url('data:image/svg+xml;utf8,<svg viewBox=\'0 0 30 30\' xmlns=\'http://www.w3.org/2000/svg\'><path stroke=\'rgba(0,0,0,0.7)\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-miterlimit=\'10\' d=\'M4 7h22M4 15h22M4 23h22\'/></svg>');"></span>
+                </button>
+
+                <div id="mobileMenu" class="d-flex flex-column gap-3">
+                    <div class="d-flex gap-3 flex-wrap flex-md-nowrap">
+                        <div class="dropdown mobile-margin">
+                            <a href="/laboratorio.php" class="titulo-destaque titulo-menu">O laboratório</a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLab">
+                                <li><a class="dropdown-item" href="laboratorio.php#apresentacao-section">Apresentação</a></li>
+                                <li><a class="dropdown-item" href="laboratorio.php#historia-section">História</a></li>
+                                <li><a class="dropdown-item" href="laboratorio.php#regimento-section">Regimento</a></li>
+                                <li><a class="dropdown-item" href="laboratorio.php#horario-section">Horário de atendimento</a></li>
+                                <li><a class="dropdown-item" href="laboratorio.php#agenda-section">Agenda</a></li>
+                                <li><a class="dropdown-item" href="laboratorio.php#equipe-atual-section">Equipe atual</a></li>
+                                <li><a class="dropdown-item" href="laboratorio.php#equipes-anteriores-section">Equipes anteriores</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown mobile-margin">
+                            <a href="/atendimento.php" class="titulo-destaque titulo-menu">Atendimento</a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuAtendimento">
+                                <li><a class="dropdown-item" href="atendimento.php#atendimento-online-section">Atendimento on-line</a></li>
+                                <li><a class="dropdown-item" href="atendimento.php#atendimento-presencial-section">Atendimento presencial</a></li>
+                                <li><a class="dropdown-item" href="atendimento.php#pesquisa-satisfacao-section">Pesquisa de satisfação e dados do atendimento</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown mobile-margin">
+                            <a href="/acervos.php" class="titulo-destaque titulo-menu">Acervos</a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuAcervos">
+                                <li><a class="dropdown-item" href="acervos.php#sobre-section">Sobre o acervo</a></li>
+                                <li><a class="dropdown-item" href="acervos.php#fundos-section">Fundos</a></li>
+                                <li><a class="dropdown-item" href="acervos.php#colecoes-section">Coleções</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown mobile-margin">
+                            <a href="/eventos.php" class="titulo-destaque titulo-menu">Eventos</a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuAcervos">
+                                <li><a class="dropdown-item" href="eventos.php#eventos-ativos-section">Eventos ativos</a></li>
+                                <li><a class="dropdown-item" href="eventos.php#eventos-realizados-section">Eventos realizados</a></li>
+                                <li><a class="dropdown-item" href="eventos.php#eventos-apoiados-section">Eventos apoiados</a></li>
+                            </ul>
+                        </div>
+                        <div class="mobile-margin">
+                            <a class="titulo-destaque titulo-menu" href="/cursos.php">Cursos</a>
+                        </div>
+                        <div class="mobile-margin">
+                            <a class="titulo-destaque titulo-menu" href="/noticias/">Notícias</a>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex gap-3 flex-wrap flex-md-nowrap mx-auto">
+                        <div class="dropdown mobile-margin">
+                            <a href="/atendimento.php" class="titulo-destaque titulo-menu">Visitas</a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuAcervos">
+                                <li><a class="dropdown-item" href="/atendimento.php#visitas-section">Orientações para visitas</a></li>
+                                <li><a class="dropdown-item" href="/admin/login/index.php" target="_blank">Agendamento de visitas</a></li>
+                            </ul>
+                        </div>
+                        <div class="mobile-margin">
+                            <a class="titulo-destaque titulo-menu" href="/instrumentos.php">Instrumentos de pesquisa</a>
+                        </div>
+                        <div class="dropdown mobile-margin">
+                            <a href="/canais-atendimento.php" class="titulo-destaque titulo-menu">Canais de atendimento</a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuAcervos">
+                                <li><a class="dropdown-item" href="/canais-atendimento.php#fale-com-o-labordoc-section">Fale com o Labordoc</a></li>
+                                <li><a class="dropdown-item" href="/canais-atendimento.php#redes-sociais-section">Redes sociais</a></li>
+                            </ul>
+                        </div>
+                        <div class="mobile-margin">
+                            <a class="titulo-destaque titulo-menu" href="/admin" target="_blank">SADOC</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>        <div class="row container justify-content-center align-items-center mx-auto">
+    <div class="col-12 col-lg-6 d-flex justify-content-center mb-4 mb-lg-0">
+        <div id="homepageCarousel" class="carousel slide w-100 labordoc-carousel" data-bs-ride="carousel" style="position: relative;">
+            <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                        <a href="/noticias/?abrir=35"
+                        class="d-block text-decoration-none text-reset">
+                            <img
+                                src="/imagens/noticia/noticia_1794235634_35.jpg"
+                                class="d-block w-100"
+                                alt="Fechamento no turno matutino (09/11/2016)" width="500" height="500">
+                            <div class="carousel-caption d-none d-md-block"
+                                style="background: rgba(30, 30, 30, 0.7); border-radius: 0; padding: 1rem; left: 0; right: 0; bottom: 0; width: 100%; position: absolute;">
+                                <h5>Fechamento no turno matutino (09/11/2016)</h5>
+                                <p>
+                                    Atendimento                                    - Publicado em
+                                    09/11/2026 11:46                                </p>
+                            </div>
+                        </a>
+                    </div>
+                                    <div class="carousel-item ">
+                        <a href="/noticias/?abrir=32"
+                        class="d-block text-decoration-none text-reset">
+                            <img
+                                src="/imagens/noticia/noticia_1793902444_32.jpg"
+                                class="d-block w-100"
+                                alt="Fechamento do Labordoc em 05.11.2026" width="500" height="500">
+                            <div class="carousel-caption d-none d-md-block"
+                                style="background: rgba(30, 30, 30, 0.7); border-radius: 0; padding: 1rem; left: 0; right: 0; bottom: 0; width: 100%; position: absolute;">
+                                <h5>Fechamento do Labordoc em 05.11.2026</h5>
+                                <p>
+                                    Urgente                                    - Publicado em
+                                    05/11/2026 15:13                                </p>
+                            </div>
+                        </a>
+                    </div>
+                                    <div class="carousel-item ">
+                        <a href="/noticias/?abrir=31"
+                        class="d-block text-decoration-none text-reset">
+                            <img loading="lazy"
+                                src="/imagens/noticia/noticia_1793225063_31.jpg"
+                                class="d-block w-100"
+                                alt="Aula 1 do Curso Caravana Cultural -  Patrimônio imaterial e formas de expressão: vida e obra de Donatilla Dantas" width="500" height="500">
+                            <div class="carousel-caption d-none d-md-block"
+                                style="background: rgba(30, 30, 30, 0.7); border-radius: 0; padding: 1rem; left: 0; right: 0; bottom: 0; width: 100%; position: absolute;">
+                                <h5>Aula 1 do Curso Caravana Cultural -  Patrimônio imaterial e formas de expressão: vida e obra de Donatilla Dantas</h5>
+                                <p>
+                                    Novidade                                    - Publicado em
+                                    28/10/2026 18:34                                </p>
+                            </div>
+                        </a>
+                    </div>
+                                    <div class="carousel-item ">
+                        <a href="/noticias/?abrir=26"
+                        class="d-block text-decoration-none text-reset">
+                            <img loading="lazy"
+                                src="/imagens/noticia/noticia_1790351229_26.jpg"
+                                class="d-block w-100"
+                                alt="Fechamento do Labordoc nas férias " width="500" height="500">
+                            <div class="carousel-caption d-none d-md-block"
+                                style="background: rgba(30, 30, 30, 0.7); border-radius: 0; padding: 1rem; left: 0; right: 0; bottom: 0; width: 100%; position: absolute;">
+                                <h5>Fechamento do Labordoc nas férias </h5>
+                                <p>
+                                    Urgente                                    - Publicado em
+                                    19/01/2026 21:35                                </p>
+                            </div>
+                        </a>
+                    </div>
+                            </div>
+        
+            <button class="carousel-control-prev d-flex align-items-center justify-content-center" type="button" data-bs-target="#homepageCarousel" data-bs-slide="prev"
+                style="width: 48px; height: 48px; border-radius: 50%; background: #fff; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.15); left: 16px; top: 50%; transform: translateY(-50%); position: absolute;">
+                <i class="bi bi-arrow-left" style="font-size: 1.5rem; color: #111;"></i>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next d-flex align-items-center justify-content-center" type="button" data-bs-target="#homepageCarousel" data-bs-slide="next"
+                style="width: 48px; height: 48px; border-radius: 50%; background: #fff; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.15); right: 16px; top: 50%; transform: translateY(-50%); position: absolute;">
+                <i class="bi bi-arrow-right" style="font-size: 1.5rem; color: #111;"></i>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+        </div>
+    </div>
+    <div class="col-12 col-lg-6 d-flex align-items-center justify-content-center">
+        <div class="shadow-lg p-4 rounded-lg bg-white w-100">
+            <h3 class="card-title">
+                <strong>Sobre o Labordoc</strong>
+            </h3>
+            <p style="text-align: justify; margin: 0cm; line-height: normal; font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(0, 0, 0);"><span style="font-size: 11pt;"><span source="" sans="" pro";"="" style="font-family: Verdana;">O Laboratório de Documentação Histórica</span><span style="font-weight: bolder;"><span source="" sans="" pro";"="" style="font-family: Verdana;"> -</span></span><span source="" sans="" pro";"="" style="font-family: Verdana;"> Labordoc, vinculado ao Departamento de História do Centro de Ensino Superior do Seridó (DHC-CERES), Campus de Caicó, da Universidade Federal do Rio Grande do Norte (UFRN), foi criado em 1998, a partir de demanda específica ligada à conservação de documentos da esfera criminal provenientes da Comarca de Caicó. </span></span><font style="font-size: 11pt; vertical-align: inherit;"><font style="vertical-align: inherit;"><span source="" sans="" pro";"="" style="font-family: Verdana;">Seus objetivos são: atender, de maneira adequada, a demanda por acervos arquivísticos, sobretudo, com problemas de conservação; </span></font><font style="vertical-align: inherit;"><span source="" sans="" pro";"="" style="font-family: Verdana;">guardar, sob custódia, fundos arquivísticos, recolhidos parcial ou integralmente, e tratados do ponto de vista técnico como um conjunto orgânico, contemplando o Princípio da Proveniência dos Fundos; </span></font><font style="vertical-align: inherit;"><span source="" sans="" pro";"="" style="font-family: Verdana;">criar e manter acervo documental voltado para a História do Rio Grande do Norte e, particularmente, do Seridó, com a finalidade de utilização em pesquisas; </span></font><font style="vertical-align: inherit;"><span source="" sans="" pro";"="" style="font-family: Verdana;">apoiar e transferir conhecimento técnico a projetos que tenham como meta a criação e implantação de arquivos públicos municipais na região do Seridó; </span></font><font style="vertical-align: inherit;"><span source="" sans="" pro";"="" style="font-family: Verdana;">oferecendo espaço para aulas práticas de componentes curriculares do Curso de História que ligam-se ao métier do profissional de História, a exemplo de Arquivologia, Paleografia, Introdução à Pesquisa Histórica e Pesquisa Histórica.</span></font></font></p><p class="MsoNormal" style="margin: 0cm; line-height: normal; font-size: 11pt; font-family: Calibri, sans-serif; color: rgb(0, 0, 0);"><o:p></o:p></p>        </div>
+    </div>
+</div>
+        <section class="container">
+    <div class="mx-auto text-center mb-5">
+        <h4>
+            <strong>Serviços</strong>
+        </h4>
+    </div>
+
+    <div class="d-flex flex-wrap gap-4 justify-content-center">
+        <a href="https://labordoc.ceres.ufrn.br/admin/login/index.php"
+           class="col-12 col-md-3 text-decoration-none text-reset d-block">
+            <div class="service-card w-100">
+                <img loading="lazy" src="assets/site/sadoc.png" alt="SADOC" width="2025" height="2025">
+                <div class="overlay">
+                    Sistema de Agendamentos e Solicitações de Pesquisa do Labordoc.
+                </div>
+                <div class="bottom-label">
+                    SADOC
+                </div>
+            </div>
+        </a>
+
+        <a href="https://acervus.ufrn.br/acervus-publico/"
+           class="col-12 col-md-3 text-decoration-none text-reset d-block"
+           target="_blank"
+           rel="noopener noreferrer">
+            <div class="service-card w-100">
+                <img loading="lazy" src="assets/site/acervus.png" alt="Acervus" width="2025" height="2025">
+                <div class="overlay">
+                    Sistema de gerenciamento dos acervos museológicos, artísticos e históricos da UFRN.
+                </div>
+                <div class="bottom-label">
+                    Acervus
+                </div>
+            </div>
+        </a>
+
+        <a href="https://labordoc.ceres.ufrn.br/instrumentos.php"
+           class="col-12 col-md-3 text-decoration-none text-reset d-block">
+            <div class="service-card w-100">
+                <img loading="lazy" src="assets/site/instrumentos-pesquisa.png" alt="Instrumentos de Pesquisa" width="2025" height="2025">
+                <div class="overlay">
+                    Conheça os relatórios, catálogos e repertórios que contêm parte do acervo custodiado pelo Labordoc.
+                </div>
+                <div class="bottom-label">
+                    Instrumentos de Pesquisa
+                </div>
+            </div>
+        </a>
+    </div>
+</section>        <section class="container">
+    <div class="mx-auto text-center mb-5">
+        <h4>
+            <strong>Notícias</strong>
+        </h4>
+    </div>
+    <div class="row gap-4 mb-5 justify-content-center">
+                    <div class="col-12 col-md-5 service-card">
+                <a href="/noticias/?abrir=35"
+                class="d-block text-decoration-none text-reset">
+                    <img src="/imagens/noticia/noticia_1794235634_35.jpg"
+                        class="d-block w-100"
+                        alt="Fechamento no turno matutino (09/11/2016)" width="500" height="500">
+                    <div class="overlay">
+                        Atendimento                    </div>
+                    <div class="bottom-label"
+                        style="background-color: rgb(33, 37, 41); color: white;">
+                        Fechamento no turno matutino (09/11/2016)                    </div>
+                </a>
+            </div>
+                    <div class="col-12 col-md-5 service-card">
+                <a href="/noticias/?abrir=32"
+                class="d-block text-decoration-none text-reset">
+                    <img loading="lazy" src="/imagens/noticia/noticia_1793902444_32.jpg"
+                        class="d-block w-100"
+                        alt="Fechamento do Labordoc em 05.11.2026" width="500" height="500">
+                    <div class="overlay">
+                        Urgente                    </div>
+                    <div class="bottom-label"
+                        style="background-color: rgb(33, 37, 41); color: white;">
+                        Fechamento do Labordoc em 05.11.2026                    </div>
+                </a>
+            </div>
+                    <div class="col-12 col-md-5 service-card">
+                <a href="/noticias/?abrir=31"
+                class="d-block text-decoration-none text-reset">
+                    <img loading="lazy" src="/imagens/noticia/noticia_1793225063_31.jpg"
+                        class="d-block w-100"
+                        alt="Aula 1 do Curso Caravana Cultural -  Patrimônio imaterial e formas de expressão: vida e obra de Donatilla Dantas" width="500" height="500">
+                    <div class="overlay">
+                        Novidade                    </div>
+                    <div class="bottom-label"
+                        style="background-color: rgb(33, 37, 41); color: white;">
+                        Aula 1 do Curso Caravana Cultural -  Patrimônio imaterial e formas de expressão: vida e obra de Donatilla Dantas                    </div>
+                </a>
+            </div>
+                    <div class="col-12 col-md-5 service-card">
+                <a href="/noticias/?abrir=26"
+                class="d-block text-decoration-none text-reset">
+                    <img loading="lazy" src="/imagens/noticia/noticia_1790351229_26.jpg"
+                        class="d-block w-100"
+                        alt="Fechamento do Labordoc nas férias " width="500" height="500">
+                    <div class="overlay">
+                        Urgente                    </div>
+                    <div class="bottom-label"
+                        style="background-color: rgb(33, 37, 41); color: white;">
+                        Fechamento do Labordoc nas férias                     </div>
+                </a>
+            </div>
+            </div>
+    <div>
+        <a href="/noticias/" class="btn btn-larbodoc d-block mx-auto w-25">
+            Outras Notícias
+        </a>
+    </div>
+</section>
+        <div>
+    <div class="mx-auto text-center mb-5">
+        <h4>
+            <strong>Equipe</strong>
+        </h4>
+    </div>
+    <div class="d-flex flex-wrap gap-5 justify-content-center container">
+        
+            <div class='team-item position-relative' style='flex: 1 1 260px; max-width: 420px; min-width: 220px; height: 25em; display: flex; align-items: flex-end; justify-content: center;'>
+                <img loading="lazy" src='imagens/perfil/helder_112.jpg' alt='Helder Alexandre Medeiros de Macedo' style='object-fit: cover; width: 100%; height: 100%; border-radius: 1em;'>
+                <div class='glass-overlay position-absolute' style='
+                    left: 50%; 
+                    transform: translate(-50%, 0);
+                    bottom: 1.5em;
+                    width: 80%;
+                    border-radius: 0.8em;
+                    background: rgba(255,255,255,0.3); 
+                    backdrop-filter: blur(8px); 
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                    text-align: center;
+                    padding: 0.7em 0.5em;
+                '>
+                    <div style='font-weight: bold; font-size: 0.85em;'>Helder Alexandre Medeiros de Macedo</div>
+                    <div style='font-size: 0.85em;'>Coordenador</div>
+                </div>
+            </div>
+            
+            <div class='team-item position-relative' style='flex: 1 1 260px; max-width: 420px; min-width: 220px; height: 25em; display: flex; align-items: flex-end; justify-content: center;'>
+                <img loading="lazy" src='imagens/perfil/claudiana.jpg' alt='Claudiana Cristina Batista de Araújo' style='object-fit: cover; width: 100%; height: 100%; border-radius: 1em;'>
+                <div class='glass-overlay position-absolute' style='
+                    left: 50%; 
+                    transform: translate(-50%, 0);
+                    bottom: 1.5em;
+                    width: 80%;
+                    border-radius: 0.8em;
+                    background: rgba(255,255,255,0.3); 
+                    backdrop-filter: blur(8px); 
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                    text-align: center;
+                    padding: 0.7em 0.5em;
+                '>
+                    <div style='font-weight: bold; font-size: 0.85em;'>Claudiana Cristina Batista de Araújo</div>
+                    <div style='font-size: 0.85em;'>Bolsista</div>
+                </div>
+            </div>
+            
+            <div class='team-item position-relative' style='flex: 1 1 260px; max-width: 420px; min-width: 220px; height: 25em; display: flex; align-items: flex-end; justify-content: center;'>
+                <img loading="lazy" src='imagens/perfil/larissa.jpg' alt='Larissa Santos de Medeiros' style='object-fit: cover; width: 100%; height: 100%; border-radius: 1em;'>
+                <div class='glass-overlay position-absolute' style='
+                    left: 50%; 
+                    transform: translate(-50%, 0);
+                    bottom: 1.5em;
+                    width: 80%;
+                    border-radius: 0.8em;
+                    background: rgba(255,255,255,0.3); 
+                    backdrop-filter: blur(8px); 
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                    text-align: center;
+                    padding: 0.7em 0.5em;
+                '>
+                    <div style='font-weight: bold; font-size: 0.85em;'>Larissa Santos de Medeiros</div>
+                    <div style='font-size: 0.85em;'>Bolsista</div>
+                </div>
+            </div>
+            
+            <div class='team-item position-relative' style='flex: 1 1 260px; max-width: 420px; min-width: 220px; height: 25em; display: flex; align-items: flex-end; justify-content: center;'>
+                <img loading="lazy" src='imagens/perfil/felipe_263.jpg' alt='Felipe Erik Brito Costa da Silva' style='object-fit: cover; width: 100%; height: 100%; border-radius: 1em;'>
+                <div class='glass-overlay position-absolute' style='
+                    left: 50%; 
+                    transform: translate(-50%, 0);
+                    bottom: 1.5em;
+                    width: 80%;
+                    border-radius: 0.8em;
+                    background: rgba(255,255,255,0.3); 
+                    backdrop-filter: blur(8px); 
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                    text-align: center;
+                    padding: 0.7em 0.5em;
+                '>
+                    <div style='font-weight: bold; font-size: 0.85em;'>Felipe Erik Brito Costa da Silva</div>
+                    <div style='font-size: 0.85em;'>Bolsista</div>
+                </div>
+            </div>
+            
+            <div class='team-item position-relative' style='flex: 1 1 260px; max-width: 420px; min-width: 220px; height: 25em; display: flex; align-items: flex-end; justify-content: center;'>
+                <img loading="lazy" src='imagens/perfil/erik_148.jpg' alt='Erik Ariel Dos Santos Almeida' style='object-fit: cover; width: 100%; height: 100%; border-radius: 1em;'>
+                <div class='glass-overlay position-absolute' style='
+                    left: 50%; 
+                    transform: translate(-50%, 0);
+                    bottom: 1.5em;
+                    width: 80%;
+                    border-radius: 0.8em;
+                    background: rgba(255,255,255,0.3); 
+                    backdrop-filter: blur(8px); 
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                    text-align: center;
+                    padding: 0.7em 0.5em;
+                '>
+                    <div style='font-weight: bold; font-size: 0.85em;'>Erik Ariel Dos Santos Almeida</div>
+                    <div style='font-size: 0.85em;'>Bolsista</div>
+                </div>
+            </div>
+            
+            <div class='team-item position-relative' style='flex: 1 1 260px; max-width: 420px; min-width: 220px; height: 25em; display: flex; align-items: flex-end; justify-content: center;'>
+                <img loading="lazy" src='imagens/perfil/diego_269.jpg' alt='Diego Nathan Pereira' style='object-fit: cover; width: 100%; height: 100%; border-radius: 1em;'>
+                <div class='glass-overlay position-absolute' style='
+                    left: 50%; 
+                    transform: translate(-50%, 0);
+                    bottom: 1.5em;
+                    width: 80%;
+                    border-radius: 0.8em;
+                    background: rgba(255,255,255,0.3); 
+                    backdrop-filter: blur(8px); 
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                    text-align: center;
+                    padding: 0.7em 0.5em;
+                '>
+                    <div style='font-weight: bold; font-size: 0.85em;'>Diego Nathan Pereira</div>
+                    <div style='font-size: 0.85em;'>Bolsista</div>
+                </div>
+            </div>
+            
+            <div class='team-item position-relative' style='flex: 1 1 260px; max-width: 420px; min-width: 220px; height: 25em; display: flex; align-items: flex-end; justify-content: center;'>
+                <img loading="lazy" src='imagens/perfil/alicia_268.jpeg' alt='Alícia Cacilda Vale de Araújo dos Santos' style='object-fit: cover; width: 100%; height: 100%; border-radius: 1em;'>
+                <div class='glass-overlay position-absolute' style='
+                    left: 50%; 
+                    transform: translate(-50%, 0);
+                    bottom: 1.5em;
+                    width: 80%;
+                    border-radius: 0.8em;
+                    background: rgba(255,255,255,0.3); 
+                    backdrop-filter: blur(8px); 
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                    text-align: center;
+                    padding: 0.7em 0.5em;
+                '>
+                    <div style='font-weight: bold; font-size: 0.85em;'>Alícia Cacilda Vale de Araújo dos Santos</div>
+                    <div style='font-size: 0.85em;'>Bolsista</div>
+                </div>
+            </div>
+                </div>
+</div>
+        <!-- <section id="horario-section">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-xxl-12 text-center">
+                <h4 class="mb-5">
+                    <strong>Horário de Funcionamento</strong>
+                </h4>
+                <div class="box-body table-responsive no-padding">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr class="text-center">
+                                <th scope="col"></th>
+                                                                        <th scope='col'>Segunda-feira</th>
+                                                                        <th scope='col'>Terça-feira</th>
+                                                                        <th scope='col'>Quarta-feira</th>
+                                                                        <th scope='col'>Quinta-feira</th>
+                                                                        <th scope='col'>Sexta-feira</th>
+                                                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr class='text-center'>
+                                        <th class='text-center' scope='row'>Manhã<br><h6 style='font-size: 80%;' class='text-sm-center'>(07h00 às 11h00)</h6></th>
+                                        <td>Fechado<i></i> </td><td>Fechado<i></i> </td><td>Fechado<i></i> </td><td>Fechado<i></i> </td><td>Fechado<i></i> </td>
+                                    </tr><tr class='text-center'>
+                                        <th class='text-center' scope='row'>Tarde<br><h6 style='font-size: 80%;' class='text-sm-center'>(13h00 às 17h00)</h6></th>
+                                        <td>Fechado<i></i> </td><td>Fechado<i></i> </td><td>Fechado<i></i> </td><td>Fechado<i></i> </td><td>Fechado<i></i> </td>
+                                    </tr><tr class='text-center'>
+                                        <th class='text-center' scope='row'>Noite<br><h6 style='font-size: 80%;' class='text-sm-center'>(18h00 às 21h00)</h6></th>
+                                        <td>Fechado<i></i> </td><td>Fechado<i></i> </td><td>Fechado<i></i> </td><td>Fechado<i></i> </td><td>Fechado<i></i> </td>
+                                    </tr>                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+        <footer style="background-color: rgb(7, 6, 8);" class="w-100">
+    <div class="container text-white pb-3">
+        <div class="row">
+            <div class="col">
+                <a href="#" id="icone-principal" class="d-flex align-items-center titulo-menu">
+                    <!-- Logo -->
+                    <img loading="lazy" src="assets/site/icon.png" alt="" style="max-width: 100px;">
+                    <strong class="titulo-destaque text-white">LABORDOC</strong>
+                </a>
+            </div>
+            <div class="col d-flex justify-content-between align-items-center">
+                <span class="titulo-destaque">Links</span>
+            </div>
+            <div class="col d-flex justify-content-between align-items-center">
+                <span class="titulo-destaque">Serviços</span>
+            </div>
+            <div class="col d-flex justify-content-between align-items-center">
+                <span class="titulo-destaque">Contatos</span>
+            </div>
+        </div>
+        <hr style="height: 4px; background-color: white; border: none;" >
+        <div class="row">
+            <div class="col">
+                Copyright © 2022 - Laboratório de Documentação Histórica
+            </div>
+            <div class="col">
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <i class="bi bi-arrow-right" style="color: rgb(232, 150, 24);"></i>
+                        <a href="tutorial.php" class="text-decoration-none" target="_blank">
+                            <span class="titulo-menu-alt" style="font-size: 18px;">Tutorial</span>
+                        </a>
+                    </li>
+                    <li>
+                        <i class="bi bi-arrow-right" style="color: rgb(232, 150, 24);"></i>
+                        <a href="https://acervus.ufrn.br/acervus-publico/laboratorio-documentacao-historica/principal" class="text-decoration-none" target="_blank">
+                            <span class="titulo-menu-alt" style="font-size: 18px;">LABORDOC</span>
+                        </a>
+                    </li>
+                    <li>
+                        <i class="bi bi-arrow-right" style="color: rgb(232, 150, 24);"></i>
+                        <a href="https://acervus.ufrn.br/acervus-publico/museu-camara-cascudo/principal" class="text-decoration-none" target="_blank">
+                            <span class="titulo-menu-alt" style="font-size: 18px;">Museu Câmara Cascudo</span>
+                        </a>
+                    </li>
+                    <li>
+                        <i class="bi bi-arrow-right" style="color: rgb(232, 150, 24);"></i>
+                        <a href="https://acervus.ufrn.br/acervus-publico/museu-serido/principal" class="text-decoration-none" target="_blank">
+                            <span class="titulo-menu-alt" style="font-size: 18px;">Museu Seridó</span>
+                        </a>
+                    </li>
+                    <li>
+                        <i class="bi bi-arrow-right" style="color: rgb(232, 150, 24);"></i>
+                        <a href="https://acervus.ufrn.br/acervus-publico/nucleo-arte-cultura/principal" class="text-decoration-none" target="_blank">
+                            <span class="titulo-menu-alt" style="font-size: 18px;">Núcleo de Arte e Cultura</span>
+                        </a>
+                    </li>
+                    <li>
+                        <i class="bi bi-arrow-right" style="color: rgb(232, 150, 24);"></i>
+                        <a href="https://acervus.ufrn.br/acervus-publico/nucleo-tematico-seca-semi-arido/principal" class="text-decoration-none" target="_blank">
+                            <span class="titulo-menu-alt" style="font-size: 18px;">Núcleo Temático da Seca e do Semi-Árido</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <i class="bi bi-arrow-right" style="color: rgb(232, 150, 24);"></i>
+                        <span class="titulo-menu-alt" style="font-size: 18px;">Pesquisa</span>
+                    </li>
+                    <li>
+                        <i class="bi bi-arrow-right" style="color: rgb(232, 150, 24);"></i>
+                        <span class="titulo-menu-alt" style="font-size: 18px;">Material</span>
+                    </li>
+                    <li>
+                        <i class="bi bi-arrow-right" style="color: rgb(232, 150, 24);"></i>
+                        <span class="titulo-menu-alt" style="font-size: 18px;">Local Físico</span>
+                    </li>
+                    <li>
+                        <i class="bi bi-arrow-right" style="color: rgb(232, 150, 24);"></i>
+                        <span class="titulo-menu-alt" style="font-size: 18px;">Registros Fotográficos</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <i class="bi bi-arrow-right" style="color: rgb(232, 150, 24);"></i>
+                        <a href="https://www.instagram.com/labordoc_ufrn/" class="text-decoration-none" target="_blank">
+                            <span class="titulo-menu-alt" style="font-size: 18px;">Instagram</span>
+                        </a>
+                    </li>
+                    <li>
+                        <i class="bi bi-arrow-right" style="color: rgb(232, 150, 24);"></i>
+                        <span class="titulo-menu-alt" style="font-size: 18px;">+55 (84) 3342-2238</span>
+                    </li>
+                    <li>
+                        <i class="bi bi-arrow-right" style="color: rgb(232, 150, 24);"></i>
+                        <a class="text-decoration-none" href="mailto:labordocufrn@gmail.com">
+                            <span class="titulo-menu-alt" style="font-size: 18px;">labordocufrn@gmail.com</span>
+                        </a>
+                    </li>
+                    <li>
+                        <i class="bi bi-arrow-right" style="color: rgb(232, 150, 24);"></i>
+                        <a href="https://www.google.com.br/maps/place/Universidade+Federal+do+Rio+Grande+do+Norte,+Campus+Caic%C3%B3/@-6.4673262,-37.087203,17z/data=!3m1!4b1!4m5!3m4!1s0x7afedab1b879121:0x55a2f46645b6dbd2!8m2!3d-6.4673262!4d-37.0850143?shorturl=1" class="text-decoration-none" target="_blank">
+                            <span class="titulo-menu-alt" style="font-size: 18px;">Rua Joaquim Gregório - Penedo, Caicó - RN</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>    </main>
+    <button id="btnTopo" class="btn btn-primary d-flex align-items-center justify-content-center shadow">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+    <!-- Bootstrap core JS-->
+<script src="admin/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<!-- <script src="admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+<!-- Select2 -->
+<script src="admin/plugins/select2/js/select2.full.min.js"></script>
+<!-- AdminLTE App -->
+<script src="admin/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="admin/dist/js/demo.js"></script>
+
+<!-- SimpleLightbox plugin JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+<!-- * *                               SB Forms JS                               * *-->
+<!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+<!--// PARA AS MASCARAS-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+
+<script>
+    $(function() {
+        const $btn = $("#btnTopo");
+        $btn.on("click", function() {
+            $("html, body").animate({
+                scrollTop: 0
+            }, 200); // 200ms = rápido
+        });
+
+        $('.dropdown > a').on('click', function(e) {
+            const $dropdownMenu = $(this).next('.dropdown-menu');
+
+            if ($dropdownMenu.length) {
+                // Verifica se está no mobile (largura da tela <= 768px)
+                if (window.innerWidth <= 768) {
+                    // Fecha o menu dropdown no mobile e permite o redirecionamento
+                    $('#mobileMenu').removeClass('show');
+                    return true; // Permite o redirecionamento
+                } else {
+                    // No desktop, impede o redirecionamento e abre o dropdown
+                    e.preventDefault();
+                    $dropdownMenu.toggleClass('show');
+                }
+            }
+        });
+    });
+</script>
+</body>
+
+</html>

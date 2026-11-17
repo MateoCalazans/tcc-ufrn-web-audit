@@ -1,0 +1,832 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T23:30:44.811Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12",
+      "diff": "9.0.0",
+      "@anthropic-ai/sdk": "1.8.0"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "id": "revistaeduquestao.educ.ufrn.br",
+  "url": "https://revistaeduquestao.educ.ufrn.br/",
+  "fonte": {
+    "html": "index.html",
+    "codificacao": "utf-8",
+    "bom": true,
+    "har": true,
+    "lighthouse": "lh3.json",
+    "lighthouseVersion": "13.5.0"
+  },
+  "regras": [
+    {
+      "id": "html-lang",
+      "dimensao": "semantica",
+      "descricao": "O elemento <html> declara o idioma da página (atributo lang)."
+    },
+    {
+      "id": "meta-viewport",
+      "dimensao": "performance",
+      "descricao": "A página declara <meta name=\"viewport\"> adequada a telas móveis, sem bloquear o zoom."
+    },
+    {
+      "id": "img-dimensions",
+      "dimensao": "performance",
+      "descricao": "Toda <img> declara width e height, para o navegador reservar o espaço antes do download."
+    },
+    {
+      "id": "img-lazy",
+      "dimensao": "performance",
+      "descricao": "<img> depois das 3 primeiras do documento usa loading=\"lazy\" (exceto a imagem LCP)."
+    },
+    {
+      "id": "obsolete-tags",
+      "dimensao": "semantica",
+      "descricao": "Sem elementos obsoletos do WHATWG (center, font, marquee…); <font> simples vira <span style>."
+    },
+    {
+      "id": "heading-skip",
+      "dimensao": "semantica",
+      "descricao": "Títulos não pulam níveis ao descer na hierarquia (h1 → h3, por exemplo)."
+    },
+    {
+      "id": "fake-button",
+      "dimensao": "semantica",
+      "descricao": "Elementos clicáveis são <button>/<a>, não div/span com onclick."
+    },
+    {
+      "id": "render-blocking-hint",
+      "dimensao": "performance",
+      "descricao": "Scripts e folhas de estilo que o Lighthouse aponta como bloqueantes são adiados quando não são críticos."
+    },
+    {
+      "id": "landmarks-llm",
+      "dimensao": "semantica",
+      "descricao": "Landmarks ausentes propostos por LLM sobre <div>, <section> ou <article> existentes (landmarks-v2, claude-haiku-5-5)."
+    }
+  ],
+  "llm": {
+    "prompt": "landmarks-v2",
+    "arquivo": "docs/prompts/landmarks-v2.md",
+    "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+    "modelo": "claude-haiku-5-5",
+    "effort": "low",
+    "maxTokens": 4000,
+    "execucao": {
+      "siteId": "revistaeduquestao.educ.ufrn.br",
+      "prompt": "landmarks-v2",
+      "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "modeloResposta": "claude-haiku-5-5",
+      "respostaId": "msg_011Ch7UqLekxy67qpkUiQyUY",
+      "chamada": true,
+      "motivo": null,
+      "ausentes": [
+        "header",
+        "nav",
+        "main",
+        "footer"
+      ],
+      "candidatos": 14,
+      "elegiveis": 14,
+      "stopReason": "end_turn",
+      "inputTokens": 2126,
+      "outputTokens": 347,
+      "custoUsd": 0.0003861,
+      "propostas": 4,
+      "validas": 4,
+      "rejeitadas": [],
+      "textoIgual": true,
+      "landmarksDepois": {
+        "banner": 1,
+        "navigation": 1,
+        "main": 1,
+        "contentinfo": 1
+      },
+      "erro": null,
+      "duracaoMs": 4520
+    }
+  },
+  "resumo": {
+    "total": 24,
+    "corrigidas": 17,
+    "porRegra": {
+      "html-lang": {
+        "total": 1,
+        "corrigidas": 1
+      },
+      "meta-viewport": {
+        "total": 1,
+        "corrigidas": 1
+      },
+      "img-dimensions": {
+        "total": 8,
+        "corrigidas": 6
+      },
+      "img-lazy": {
+        "total": 5,
+        "corrigidas": 5
+      },
+      "obsolete-tags": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "heading-skip": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "fake-button": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "render-blocking-hint": {
+        "total": 5,
+        "corrigidas": 0
+      },
+      "landmarks-llm": {
+        "total": 4,
+        "corrigidas": 4
+      }
+    },
+    "porDimensao": {
+      "performance": 19,
+      "semantica": 5
+    }
+  },
+  "guardaImagens": {
+    "imagens": [
+      {
+        "recomendacao": "img-dimensions-1",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 960,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 960,
+              "altura": 200,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 960,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 960,
+              "altura": 200,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-2",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 103,
+              "altura": 133,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 103,
+              "altura": 133,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 103,
+              "altura": 133,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 103,
+              "altura": 133,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-4",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 107,
+              "altura": 45,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 107,
+              "altura": 45,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 107,
+              "altura": 45,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 107,
+              "altura": 45,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-5",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 115,
+              "altura": 46,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 115,
+              "altura": 46,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 115,
+              "altura": 46,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 115,
+              "altura": 46,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-6",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 82,
+              "altura": 52,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 82,
+              "altura": 52,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 82,
+              "altura": 52,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 82,
+              "altura": 52,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-7",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 130,
+              "altura": 33,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 130,
+              "altura": 33,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 130,
+              "altura": 33,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 130,
+              "altura": 33,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      }
+    ],
+    "mantidas": 6,
+    "desfeitas": 0,
+    "erro": null
+  },
+  "recommendations": [
+    {
+      "id": "html-lang-1",
+      "regra": "html-lang",
+      "severidade": "alta",
+      "dimensao": "semantica",
+      "evidencia": "<html>",
+      "posicao": {
+        "linha": 2,
+        "coluna": 1
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "O <html> não tem o atributo lang: leitores de tela não sabem em que idioma ler a página. Declarar lang=\"pt-BR\".",
+      "edicoes": [
+        {
+          "inicio": 22,
+          "fim": 22,
+          "texto": " lang=\"pt-BR\""
+        }
+      ]
+    },
+    {
+      "id": "meta-viewport-1",
+      "regra": "meta-viewport",
+      "severidade": "alta",
+      "dimensao": "performance",
+      "evidencia": "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">",
+      "posicao": {
+        "linha": 7,
+        "coluna": 2
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "Não há <meta name=\"viewport\">: no celular a página é desenhada como desktop e reduzida. Declarar content=\"width=device-width, initial-scale=1\".",
+      "edicoes": [
+        {
+          "inicio": 273,
+          "fim": 273,
+          "texto": "\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-1",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img style=\"border:none;\" src=\"images/header.png\"/>",
+      "posicao": {
+        "linha": 34,
+        "coluna": 4
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"960\" height=\"200\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 1690,
+          "fim": 1690,
+          "texto": " width=\"960\" height=\"200\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-2",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img id=\"animationImage\" src=\"images/capas/v41n27.jpg\">",
+      "posicao": {
+        "linha": 64,
+        "coluna": 7
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"140\" height=\"180\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 3357,
+          "fim": 3357,
+          "texto": " width=\"140\" height=\"180\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-3",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"images/favicon.ico\">",
+      "posicao": {
+        "linha": 76,
+        "coluna": 9
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-4",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img style=\"margin-left:15px;margin-top:10px;border:none;\" src=\"images/ufrn.png\" title=\"UFRN - Universidade Federal do Rio Grande do Norte\"/>",
+      "posicao": {
+        "linha": 90,
+        "coluna": 51
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"107\" height=\"45\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 4212,
+          "fim": 4212,
+          "texto": " width=\"107\" height=\"45\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-5",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img style=\"margin-left:5px;margin-top:10px;border:none;\" src=\"images/ce.png\" title=\"CE - Centro de Educação\"/>",
+      "posicao": {
+        "linha": 91,
+        "coluna": 24
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"115\" height=\"46\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 4352,
+          "fim": 4352,
+          "texto": " width=\"115\" height=\"46\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-6",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img style=\"position:relative;margin-left:5px;margin-top:10px;top:-5px;border:none;\" src=\"images/ppged.png\" title=\"PPGED - Programa de Pós-Graduação em Educação\"/>",
+      "posicao": {
+        "linha": 92,
+        "coluna": 57
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"82\" height=\"52\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 4577,
+          "fim": 4577,
+          "texto": " width=\"82\" height=\"52\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-7",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img style=\"position:relative;margin-left:5px;margin-top:10px;top:-7px;border:none;\" src=\"images/logo_periodicos.gif\" title=\"Capes - Periódicos\"/>",
+      "posicao": {
+        "linha": 93,
+        "coluna": 67
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"130\" height=\"33\" (dimensões do arquivo, gif). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 4795,
+          "fim": 4795,
+          "texto": " width=\"130\" height=\"33\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-8",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"//www.clustrmaps.com/map_v2.png?u=OO07&d=1zHb4XnFPT699YSnQzXPID7nFzL516PUUwW-UAdmUPE\" />",
+      "posicao": {
+        "linha": 94,
+        "coluna": 131
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-lazy-1",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img style=\"margin-left:15px;margin-top:10px;border:none;\" src=\"images/ufrn.png\" title=\"UFRN - Universidade Federal do Rio Grande do Norte\"/>",
+      "posicao": {
+        "linha": 90,
+        "coluna": 51
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "4ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 4077,
+          "fim": 4077,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-2",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img style=\"margin-left:5px;margin-top:10px;border:none;\" src=\"images/ce.png\" title=\"CE - Centro de Educação\"/>",
+      "posicao": {
+        "linha": 91,
+        "coluna": 24
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "5ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 4247,
+          "fim": 4247,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-3",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img style=\"position:relative;margin-left:5px;margin-top:10px;top:-5px;border:none;\" src=\"images/ppged.png\" title=\"PPGED - Programa de Pós-Graduação em Educação\"/>",
+      "posicao": {
+        "linha": 92,
+        "coluna": 57
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "6ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 4420,
+          "fim": 4420,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-4",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img style=\"position:relative;margin-left:5px;margin-top:10px;top:-7px;border:none;\" src=\"images/logo_periodicos.gif\" title=\"Capes - Periódicos\"/>",
+      "posicao": {
+        "linha": 93,
+        "coluna": 67
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "7ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 4655,
+          "fim": 4655,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-5",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"//www.clustrmaps.com/map_v2.png?u=OO07&d=1zHb4XnFPT699YSnQzXPID7nFzL516PUUwW-UAdmUPE\" />",
+      "posicao": {
+        "linha": 94,
+        "coluna": 131
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "8ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 4937,
+          "fim": 4937,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "render-blocking-hint-1",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" type=\"text/css\" href=\"stylesheets/reeq_stylesheet.css\" />",
+      "posicao": {
+        "linha": 14,
+        "coluna": 2
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (151 ms de bloqueio, 2.4 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-2",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script type=\"text/javascript\" src=\"jquery.js\">",
+      "posicao": {
+        "linha": 15,
+        "coluna": 2
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (1951 ms de bloqueio, 242.7 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-3",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script type=\"text/javascript\" src=\"javascripts/fontDetector.js\">",
+      "posicao": {
+        "linha": 16,
+        "coluna": 2
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (451 ms de bloqueio, 2.9 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-4",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script type=\"text/javascript\" src=\"javascripts/animationJS.js\">",
+      "posicao": {
+        "linha": 17,
+        "coluna": 2
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (451 ms de bloqueio, 1.1 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-5",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script type=\"text/javascript\" src=\"javascripts/changesForBrowser.js\">",
+      "posicao": {
+        "linha": 18,
+        "coluna": 2
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (451 ms de bloqueio, 1.8 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "landmarks-llm-1",
+      "regra": "landmarks-llm",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<div id=\"header\">",
+      "posicao": {
+        "linha": 33,
+        "coluna": 24
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "Landmark banner ausente: trocar este <div> por <header>. Justificativa do modelo: \"Div id=\\\"header\\\" no topo (profundidade 1, dentro de c1), contém apenas a imagem do logotipo da revista.\". Proposta gerada por LLM (landmarks-v2, claude-haiku-5-5, candidato c3); conferir CSS e scripts que selecionem \"div\" neste elemento.",
+      "edicoes": [
+        {
+          "inicio": 1620,
+          "fim": 1623,
+          "texto": "header"
+        },
+        {
+          "inicio": 1698,
+          "fim": 1701,
+          "texto": "header"
+        }
+      ]
+    },
+    {
+      "id": "landmarks-llm-2",
+      "regra": "landmarks-llm",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<div id=\"menu\">",
+      "posicao": {
+        "linha": 37,
+        "coluna": 3
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "Landmark navigation ausente: trocar este <div> por <nav>. Justificativa do modelo: \"Div id=\\\"menu\\\" com 8 links e lista ul de itens (Apresentação, Política Editorial, Conselho Editorial, Comitê Científico, Normas), formando o menu principal.\". Proposta gerada por LLM (landmarks-v2, claude-haiku-5-5, candidato c4); conferir CSS e scripts que selecionem \"div\" neste elemento.",
+      "edicoes": [
+        {
+          "inicio": 1713,
+          "fim": 1716,
+          "texto": "nav"
+        },
+        {
+          "inicio": 2474,
+          "fim": 2477,
+          "texto": "nav"
+        }
+      ]
+    },
+    {
+      "id": "landmarks-llm-3",
+      "regra": "landmarks-llm",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<div id=\"content\" style=\"z-index:-20\">",
+      "posicao": {
+        "linha": 51,
+        "coluna": 3
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "Landmark main ausente: trocar este <div> por <main>. Justificativa do modelo: \"Div id=\\\"content\\\" contém o conteúdo principal exclusivo da página, sem cabeçalho, menu ou rodapé, sendo o elemento mais externo que cumpre esse papel.\". Proposta gerada por LLM (landmarks-v2, claude-haiku-5-5, candidato c5); conferir CSS e scripts que selecionem \"div\" neste elemento.",
+      "edicoes": [
+        {
+          "inicio": 2485,
+          "fim": 2488,
+          "texto": "main"
+        },
+        {
+          "inicio": 3400,
+          "fim": 3403,
+          "texto": "main"
+        }
+      ]
+    },
+    {
+      "id": "landmarks-llm-4",
+      "regra": "landmarks-llm",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<div id=\"footer_parent\">",
+      "posicao": {
+        "linha": 71,
+        "coluna": 2
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "Landmark contentinfo ausente: trocar este <div> por <footer>. Justificativa do modelo: \"Div id=\\\"footer_parent\\\" está no fim da página (profundidade 0, último candidato) e reúne nome da revista, centro, programa, endereço e 5 links institucionais.\". Proposta gerada por LLM (landmarks-v2, claude-haiku-5-5, candidato c2); conferir CSS e scripts que selecionem \"div\" neste elemento.",
+      "edicoes": [
+        {
+          "inicio": 3419,
+          "fim": 3422,
+          "texto": "footer"
+        },
+        {
+          "inicio": 5091,
+          "fim": 5094,
+          "texto": "footer"
+        }
+      ]
+    }
+  ]
+}

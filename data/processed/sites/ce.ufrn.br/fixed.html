@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="description" content="CE - Centro de Educação">
+	<meta name="designer" content="Equipe FERA - STI, Andressa Kroeff, Antonio Braz e Rosana Azevedo <frontend@sti.ufrn.br>">
+    <meta name="keywords" content="centro de educacao, centro de educacao ufrn, centro ufrn, educacao ufrn">
+    <meta name="reply-to" content="diretoria@ce.ufrn.br">
+    <meta name="copyright" content="ce.ufrn.br">
+    <meta name="category" content="Centro de Educação">
+    <meta name="robots" content="index,follow">
+
+
+	<!-- Folhas de estilo -->
+	<link rel="stylesheet" type="text/css" href="/dist/vendors/lightbox2/css/lightbox.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/dist/vendors/font-awesome/css/font-awesome.min.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/dist/vendors/slick-carousel/css/slick.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/dist/vendors/slick-carousel/css/slick-theme.css" media="screen" />
+
+	<link rel="stylesheet" type="text/css" href="/dist/vendors/datetimepicker/css/bootstrap-datetimepicker.min.css" />
+	<link rel="stylesheet" type="text/css" href="/dist/vendors/datetimepicker/css/bootstrap-datetimepicker-standalone.css" />
+
+	<link rel="stylesheet" type="text/css" href="/dist/css/main.css?v=2.0.0" /> <!-- O bootstrap está dentro -->
+	<link href="https://fonts.googleapis.com/css?family=Tahoma:400,700,400italic,700italic,300italic,300" rel="stylesheet" type="text/css" />
+
+	<!-- TODO: Alterar a imagem do ícone -->
+	<link rel="shortcut icon" href="/dist/img/ce-icon.png">
+
+	<title>CE | Centro de Educação - UFRN</title>
+</head>
+<body>
+
+    <!-- Chama o construtor do modal -->
+    <script type="text/javascript" src="https://arquivos.info.ufrn.br/arquivos/2023032242cfad1243936953c7d717b89d/STICookieConsent.js"></script>
+<div id="modal-banner" class="banner-modal">
+	<div class="modal-content">
+	    <img class="banner-img">
+		<span class="close-modal">&times;</span>
+	</div>
+</div>
+
+<script src="/dist/js/modal.js?v=2.0.0"></script>
+
+    <!-- Inicia o modal com duração em segundos, path em que deve aparecer, dia,
+    mes e ano em que não deve mais aparecer e o caminho da imagem-->
+    <script>
+        initModal(10, "/", 19, 10, 2018, "/dist/img/CARTAZ_IIIENAPPE_MODIFICADO.jpg", "http://enappe.ce.ufrn.br/");
+    </script>
+
+	<script type="text/javascript" src="/dist/vendors/jquery/js/jquery.js"></script>
+	<div id="barra-brasil">
+		<ul id="menu-barra-temp" style="list-style: none">
+			<li style="display:inline; float:left;padding-right:10px; margin-right:10px; border-right:1px solid #EDEDED">
+				<a href="http://brasil.gov.br" target="_blank" style="font-family:sans,sans-serif; text-decoration:none; color:white;">Portal do Governo Brasileiro</a>
+			</li>
+		</ul>
+	</div>
+	<script>
+  /*
+  TODO: utilizar apenas quando em produção.
+  Cada site possui uma identificação própria, assim o script abaixo é apenas de exemplo, devendo ser substituindo pelo gerado para o site.
+  
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-4564254-15', 'auto');
+  ga('send', 'pageview');
+  */
+</script><header style="background-image:url('/dist/img/bg_site.png');" id="topo">
+    <section class="topbar hidden-xs hidden-sm">
+        <div class="container">
+            <div class="topbar-content hidden-xs hidden-sm col-md-9 col-md-offset-3">
+                <ul class="list-inline">
+                    <li>
+                        <a href="#ir-para-o-conteudo" class="sr-only sr-only-focusable">Pular para o conteúdo</a>
+                    </li>
+                    <li>
+                        <a href="/" title="Ir para a página"><i class="fa fa-home"></i>Inicial</a>
+                    </li>
+                    <li>
+                        <a href="https://mx4.ufrn.br" target="_blank" title="Acesse aqui o webmail"><i class="fa fa-send"></i>Webmail</a>
+                    </li>   
+                    <li>
+                        <a href="/contato" title="Entre em contato com o Centro de Educação"><i class="fa fa-envelope"></i>Contato</a>
+                    </li>
+                    <li>
+                        <a href="/institucional/telefones" title="Ir para a página"><i class="fa fa-phone"></i>Telefones</a>
+                    </li>
+                    <li>
+                        <a href="#" title="Ativar ou desativar o modo contraste" class="contraste"><i class="fa fa-adjust"></i></a>
+                    </li>
+                    <li>
+                        <a href="/mapa_site" title="Acesse o mapa do site"><i class="fa fa-sitemap"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="logos-header">
+        <div class="container">
+            <a href="/" title="Ir para a página inicial" class="logo-ce">
+                <div class="logo-header-ce" alt="Imagem: Logomarca do Centro de Educação"></div>
+            </a>
+            <div class="borda-vertical"></div>
+            <a href="https://ufrn.br/" title="Ir para o portal da UFRN" class="brasao-ufrn" target="_blank">
+			    <div class="brasao-header-ufrn" alt="Imagem: Brasão da UFRN"></div>  
+			</a>
+            <div class="search-header hidden-sm hidden-xs">
+                <form action="/busca" method="get">
+                    <button type="submit" class="btn btn-default bt_busca" title="Buscar"><i class="fa fa-search"></i></button>
+                    <input type="text" id="s" name="s" class="form-control" name="chave" placeholder="Palavra-Chave">
+                </form>
+            </div>
+        </div>
+    </section>
+    <nav class="navbar navbar-default navbar-top">
+    <div class="main-menu">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="pesquisa-mobile">
+                <button type="button" id="busca-mobile" data-toggle="collapse" data-target="#pesquisa-touch" class="collapsed" aria-expanded="false"></button>
+                <form action="/busca" method="post" class="collapse" id="pesquisa-touch" aria-expanded="false" style="height: 0px;">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                    <input type="text" placeholder="Palavra-Chave" name="s">
+                </form>
+            </div>
+        </div>
+        <div id="navbar" class="container navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="visible-sm visible-xs"><a href="#ir-para-o-conteudo"><i class="caret-right hidden-lg"></i>Ir para o conteúdo</a></li>
+                <li class="dropdown main-menu-mobile ">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="caret-right hidden-lg"></i>Institucional</a>
+                    <ul class="dropdown-menu first">
+                        <li><a href="/institucional/i_historico"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>Histórico</a></li>
+                        <li class="dropdown dropdown-submenu">
+                            <a class="submenu dropdown-toggle toggleSubmenu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" tabindex="-1" href="#"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>Consec<i class="fa fa-plus hidden-md hidden-lg" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu sub">
+                                <li><a href="/consec/c_caracter">Caracterização</a></li>
+                                <li><a href="/consec/c_objetivos">Objetivos</a></li>
+                                <li><a href="/consec/c_membros">Membros</a></li>
+                                <li><a href="/consec/c_calendario">Calendário</a></li>
+                                <li><a href="/consec/c_pautas">Pautas</a></li>
+                                <li><a href="/consec/c_atas">Atas</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/institucional/i_direcao"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>Direção</a></li>
+                        <li><a href="/institucional/i_corpo_adm"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>Corpo Administrativo</a></li>
+                        <li class="dropdown-submenu">
+                            <a class="submenu dropdown-toggle toggleSubmenu" tabindex="-1" href="#"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>Departamentos<i class="fa fa-plus hidden-md hidden-lg" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu sub">
+                                <li><a href="/institucional/i_dpec">DPEC</a></li>
+                                <li><a href="/institucional/i_dfpe">DFPE</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="submenu dropdown-toggle toggleSubmenu" tabindex="-1" href="#"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>Coordenações<i class="fa fa-plus hidden-md hidden-lg" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu sub">
+                                <li><a href="/institucional/i_ped_presencial">Pedagogia Presencial</a></li>
+                                <li><a href="/institucional/i_ped_distancia">Pedagogia a Distância</a></li>
+                                <li><a href="/institucional/i_disc_ped_licen">Licenciaturas</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="submenu dropdown-toggle toggleSubmenu" tabindex="-1" href="#"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>Pós-Graduação<i class="fa fa-plus hidden-md hidden-lg" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu sub">
+                                <li><a href="/institucional/i_ppged">PPGED</a></li>
+                                <li><a href="https://posgraduacao.ufrn.br/30546" target="_blank">PPGEESP</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/institucional/i_profoco"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>PROFOCO</a></li>
+                        <li><a href="/institucional/CPIA-CE"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>CPIA-CE</a></li>
+                        <li><a href="/institucional/i_nei"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>NEI</a></li>
+                        <li><a href="/publicacoes/p_revista"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>Revista Educação em Questão</a></li>
+                        <li><a href="/institucional/i_lab"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>Laboratórios</a></li>
+                        <li><a href="/institucional/i_organograma"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>Organograma</a></li>
+                    </ul>
+                </li>
+
+                <li class=" dropdown main-menu-mobile ">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <i class="caret-right hidden-lg"></i>Documentos</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/documentos/legislacao/127807144"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>Legislação</a></li>
+                        <li><a href="/documentos/editais/127807146"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>Editais</a></li>
+                        <li><a href="/documentos/convenios/127807148"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>Convênios</a></li>
+                        <li><a href="/documentos/formularios/131536514"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>Formulários</a></li>
+                        <li><a href="/documentos/relatorios/131536515"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>Relatórios</a></li>
+                        <li><a href="/documentos"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>Todos</a></li>
+                    </ul>
+                </li>
+                <li class=" dropdown main-menu-mobile ">
+                    <a href="comunicacao/eventos" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="caret-right hidden-lg"></i>Comunicação</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/comunicacao/noticias"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>Notícias</a></li>
+                        <li><a href="/co_solicitacao"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>Solicitação de divulgação</a></li>
+                        <li><a href="/co_equipe"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>Equipe</a></li>
+                        <li><a href="/comunicacao/eventos"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>Calendário de Eventos</a></li>
+                        <li><a href="/comunicacao/galerias"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>Galeria de Fotos</a></li>
+                        <li><a href="https://www.youtube.com/user/CEUFRN" target="_blank"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>Canal Youtube</a></li>
+                    </ul>
+                </li>
+                <li class=" dropdown main-menu-mobile ">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="caret-right hidden-lg"></i>Publicações</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/documentos/livros/239936239"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>Livros</a></li>
+                        <li><a href="/documentos/publicacoes/127807149"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>Todas</a></li>
+                    </ul>
+                </li>
+                <li class=" dropdown main-menu-mobile ">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="caret-right hidden-lg"></i>Biblioteca</a>
+                    <ul class="dropdown-menu menu-to-right">
+                        <li><a href="/biblioteca/b_cat_livros"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>Catálogo de Livros</a></li>
+                        <li><a href="/biblioteca/b_cat_ac_videos"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>Catalógo do Acervo de Vídeos</a></li>
+                        <li><a href="/biblioteca/b_ac_tcc_pedag"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>Acervo TCCs de Graduação</a></li>
+                        <li><a href="/biblioteca/b_ac_diss_tesesppged"><i class="fa fa-circle hidden-md hidden-lg" aria-hidden="true"></i>Acervo de Dissertações e Teses</a></li>
+                    </ul>
+                </li>
+                <li class=" main-menu-mobile ">
+                    <a href="/servicos">Serviços</a>
+                </li>
+                <li class="visible-sm visible-xs"><a href="https://mx4.ufrn.br" target="_blank"><i class="caret-right hidden-lg"></i>Webmail</a></li>
+                <li class="visible-sm visible-xs "><a href="/contato"> <i class="caret-right hidden-lg"></i>Contato</a>
+                </li>
+                <li class="visible-sm visible-xs"><a href="/institucional/telefones"><i class="caret-right hidden-lg"></i>Telefones</a></li>
+                <li class="visible-sm visible-xs"><a href="#" class="contraste"><i class="caret-right hidden-lg"></i>Contraste</a></li>
+                <li class="visible-sm visible-xs"><a href="/suporte"><i class="caret-right hidden-lg"></i>Suporte</a></li>
+                <li class="visible-sm visible-xs"><a href="/mapa_site"><i class="caret-right hidden-lg"></i>Mapa do site</a></li>
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</nav>
+<div id="ir-para-o-conteudo"></div>
+<!--/. Navbar -->
+</header><!-- Slide Principal -->
+<section class="slides hidden-xs" style="background-image:url('/dist/img/fundo_lilas.png');">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 area-slides">
+                <div class="slider-principal">
+                    <div>
+                        <img src="/dist/img/img_01.png" class="img-responsive" width="980" height="244">
+                    </div>
+                    <div>
+                        <img src="/dist/img/img_02.png" class="img-responsive" width="1166" height="250">
+                    </div>
+                    <div>
+                        <img loading="lazy" src="/dist/img/img_03.png" class="img-responsive" width="980" height="244">
+                    </div>
+                    <div>
+                        <img loading="lazy" src="/dist/img/img_04.png" class="img-responsive" width="980" height="244">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/. Slide Principal -->
+<!-- Seção Notícias -->
+<section class="noticias">
+    <div class="container">
+        <div class="row">
+            <h3 class="sr-only">Notícias</h3>
+            <div class="col-md-6 col-sm-6 col-xs-12 area-slide-noticias">
+                <div class="slider-noticias">
+                   <!-- ITENS -->
+				                    <div class="item slick-slide">
+                        <a href="/comunicacao/noticias/retificacao-processo-seletivo-para-cadastro-de-reserva-de-tutores-para-atuacao-nos-cursos-vinculados-ao-projeto-formacao-continuada-e-em-servico-2026/71410260">
+                            <figure>
+                                <div class="img-slide-noticia" style="background-image: url(https://arquivos.info.ufrn.br/arquivos/2026105211b13018800649983d17a64ae2/Facebook_cover_-_67.png);" title="RETIFICAÇÃO - Processo seletivo para cadastro de reserva de tutores para atuação nos cursos..."></div>
+                                <figcaption>RETIFICAÇÃO - Processo seletivo para cadastro de reserva de tutores para atuação nos cursos...</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                                    <div class="item slick-slide">
+                        <a href="/comunicacao/noticias/processo-seletivo-para-o-preenchimento-de-vaga-de-diretora-de-desenvolvimento-de-negocios-no-pax--rn/71310460">
+                            <figure>
+                                <div class="img-slide-noticia" style="background-image: url(https://arquivos.info.ufrn.br/arquivos/2026238189dd05188006345d1b0fd6904c/Facebook_cover_-_70.png);" title="PROCESSO SELETIVO PARA O PREENCHIMENTO DE VAGA DE DIRETOR(A) DE DESENVOLVIMENTO DE NEGÓCIOS NO..."></div>
+                                <figcaption>PROCESSO SELETIVO PARA O PREENCHIMENTO DE VAGA DE DIRETOR(A) DE DESENVOLVIMENTO DE NEGÓCIOS NO...</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                                    <div class="item slick-slide">
+                        <a href="/comunicacao/noticias/processo-seletivo-para-cadastro-de-reserva-de-tutores-para-atuacao-nos-cursos-vinculados-ao-projeto-formacao-continuada-e-em-servico-2026/71310082">
+                            <figure>
+                                <div class="img-slide-noticia" style="background-image: url(https://arquivos.info.ufrn.br/arquivos/2026066178f30718800631f69d0852a818/Facebook_cover_-_68.png);" title="Processo seletivo para cadastro de reserva de tutores para atuação nos cursos vinculados ao P..."></div>
+                                <figcaption>Processo seletivo para cadastro de reserva de tutores para atuação nos cursos vinculados ao P...</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                                    <div class="item slick-slide">
+                        <a href="/comunicacao/noticias/resultado-final-processo-seletivo-proleei-rn/70935430">
+                            <figure>
+                                <div class="img-slide-noticia" style="background-image: url(https://arquivos.info.ufrn.br/arquivos/2026122249276918800628d6bc67a68a11/Facebook_cover_-_69.png);" title="Resultado Final Processo Seletivo PROLEEI-RN"></div>
+                                <figcaption>Resultado Final Processo Seletivo PROLEEI-RN</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                                    <div class="item slick-slide">
+                        <a href="/comunicacao/noticias/deferimento-das-inscricoes-e-entrevistas/70918706">
+                            <figure>
+                                <div class="img-slide-noticia" style="background-image: url(https://arquivos.info.ufrn.br/arquivos/20261462481d3118644741095fdb240ce0/Facebook_cover_-_66.png);" title="Deferimento das inscrições e entrevistas"></div>
+                                <figcaption>Deferimento das inscrições e entrevistas</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 ultimas-noticias">
+                                <ul>
+                                   <li class="col-sm-6">
+                                        <a href="/comunicacao/noticias/oficina-de-animacao-em-recortes-com-claudia-bolshaw/72749897">
+                            <span class="data">21 set</span>
+                            <div class="img-ultimas-noticias hidden-xs" style="background-image: url(https://arquivos.info.ufrn.br/arquivos/202619321677f2192035220de3eac04026/PHOTO-2026-09-17-08-13-53.jpg);" title="Oficina de Animação em recortes com Cláudia Bolshaw"></div>
+                            <div class="texto-noticia"><p>Oficina de Animação em recortes com Cláudia Bolshaw</p></div>
+                        </a> 
+                    </li>
+                                    <li class="col-sm-6">
+                                        <a href="/comunicacao/noticias/orientacoes-para-estagio-nao-obirgatorio/72445406">
+                            <span class="data">31 ago</span>
+                            <div class="img-ultimas-noticias hidden-xs" style="background-image: url(/dist/img/imagem_padrao.png);" title="Orientações para Estágio Não-Obirgatório"></div>
+                            <div class="texto-noticia"><p>Orientações para Estágio Não-Obirgatório</p></div>
+                        </a> 
+                    </li>
+                                        <li class="hidden-md">
+                                            <a href="/comunicacao/noticias/resultado-do-edital-para-tutoria-nos-cursos-vinculados-ao-projeto-formacao-continuada-e-em-servico-2026/72126583">
+                            <span class="data">14 ago</span>
+                            <div class="img-ultimas-noticias hidden-xs" style="background-image: url(/dist/img/imagem_padrao.png);" title="Resultado do Edital para Tutoria nos Cursos vinculados ao Projeto Formação Con..."></div>
+                            <div class="texto-noticia"><p>Resultado do Edital para Tutoria nos Cursos vinculados ao Projeto Formação Con...</p></div>
+                        </a> 
+                    </li>
+                                    <li class="hidden-sm">
+                                        <a href="/comunicacao/noticias/selecao-simplificada-para-bolsa-de-apoio-tecnico-administrativo-para-o-profoco-ce/72009266">
+                            <span class="data">11 ago</span>
+                            <div class="img-ultimas-noticias hidden-xs" style="background-image: url(/dist/img/imagem_padrao.png);" title="Seleção Simplificada para Bolsa de Apoio Técnico-Administrativo para o PROFOC..."></div>
+                            <div class="texto-noticia"><p>Seleção Simplificada para Bolsa de Apoio Técnico-Administrativo para o PROFOC...</p></div>
+                        </a> 
+                    </li>
+                                    <a href="/comunicacao/noticias" alt="Veja mais notícias" class="mais-noticias">Veja mais notícias &raquo;</a>
+			            </ul>
+            </div>            
+        </div>
+    </div>
+</section>
+<!--/. Fim Seção Notícias -->
+<!-- Seção Mídia -->
+<section class="midia">
+    <div class="container">
+        <div class="row">
+            <h3>Nossas mídias</h3>
+            <ul>
+                <li class="col-xs-12 col-sm-4 col-md-3">
+                    <h4>Canal CE</h4>
+                    <iframe width="210" height="150" src="https://www.youtube.com/embed/videoseries?list=PLttQ8YuiUS0qj76EPBr0EGiBCaHLmcEai" frameborder="0" allowfullscreen></iframe>
+                    <a href="https://www.youtube.com/user/CEUFRN/playlists" class="acesse-mais" target="_blank">Acesse o canal</a>
+                </li>
+
+                <li class="col-xs-12 col-sm-4 col-md-3">
+                    <h4>Acervo</h4>
+                    <iframe src="https://player.vimeo.com/video/104922487" width="210" height="150" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    <a href="https://vimeo.com/user31069972" class="acesse-mais" target="_blank">Acesse o canal</a>
+                </li>
+                    <li class="col-xs-12 col-sm-4 col-md-3 galeria">
+                        <h4>Álbum de Fotos</h4>
+                        <a href="/comunicacao/galerias/assembleia-de-outorga-de-entrega-de-titulo-de-professora-emerita-as-docentes-maria-salonilde-ferreira-e-maria-doninha-de-almeida-post-mortem/64495466" class="box-galeria">
+                            <div class="img-galeria" style="background-image: url(https://arquivos.info.ufrn.br/arquivos/20251510274619162906516b0767067369/IMG_0070.jpg);" title="Assembleia de Outorga de entrega de título de Professora Emérita às docentes Maria Salonilde Ferreira e Maria Doninha de Almeida (Post-Mortem)">
+                                <span class="icon-galeria fa fa-search" alt="Acesse a galeria"></span>
+                            </div>
+                        </a>
+                        <a href="/comunicacao/galerias" class="acesse-mais">Acesse a galeria</a>
+                    </li>
+                    <li class="col-xs-12 col-sm-4 col-md-3 galeria hidden-xs">
+                        <h4>Álbum de Fotos</h4>
+                        <a href="/comunicacao/galerias/assembleia-de-outorga-de-entrega-de-titulo-de-professora-emerita-as-docentes-maria-salonilde-ferreira-e-maria-doninha-de-almeida-post-mortem/64401374" class="box-galeria">
+                            <div class="img-galeria" style="background-image: url(https://arquivos.info.ufrn.br/arquivos/2025202070d44f16267970e1607bd14508/IMG_0070.jpg);" title="Assembleia de Outorga de entrega de título de Professora Emérita às docentes Maria Salonilde Ferreira e Maria Doninha de Almeida (Post-Mortem)">
+                                <span class="icon-galeria fa fa-search" alt="Acesse a galeria"></span>
+                            </div>
+                        </a>
+                        <a href="/comunicacao/galerias" class="acesse-mais">Acesse a galeria</a>
+                    </li>
+	
+            </ul>	
+        </div>
+    </div>
+</section>
+<!--/. Fim Seção Mídia -->
+<!-- Seção Diversos -->
+<section class="diversos">
+    <div class="container">
+        <div class="row">
+            <ul class="lista-diversos">
+                <li class="lista-externa">
+                    <h3>Eventos</h3>
+                    <ol class="lista-evento">
+                                            <br>
+                        <p><strong>Nenhum evento foi encontrado no momento.</strong></p>
+                                            </ol>
+                    <a href="/comunicacao/eventos" class="mais">Veja mais eventos &raquo;</a>
+                </li>
+                <li class="lista-externa">
+                    <h3>Editais</h3>
+                                <ol class="lista-interna">
+                                    <li><a  href="https://arquivos.info.ufrn.br/arquivos/20231480154b741282340688ee0ebb81f4/Edital_de_Monitoria.pdf" class="link">Edital de monitoria para o IV Colóquio de Políticas Educacionais e I Seminário da Pesquisa Integrada</a></li>
+                                    <li><a target="_blank" href="http://www.capes.gov.br/bolsas-e-auxilios-internacionais/modalidades-de-bolsas/modalidade/estagio-pos-doutoral" class="link">BOLSAS E AUXÍLIOS INTERNACIONAIS</a></li>
+                                    <li><a target="_blank" href="http://www.capes.gov.br" class="link">Programa de Iniciativa de Pesquisa Colaborativa (PIPC)  CAPES-DFG</a></li>
+                                    <li><a target="_blank" href="http://inscricao.capes.gov.br/individual" class="link">Edital 14/2018 - Escola de Altos Estudos - EAE</a></li>
+                                </ol>
+                    <a href="/documentos/editais/127807146" class="mais">Veja mais editais &raquo;</a>
+                            </li>
+                <li class="lista-externa">
+                    <h3>Publicações</h3>
+                                <ol class="lista-interna">
+                                    <li class="lista-publicacao"><a  href="/documentos/revista-educacao-em-questao/127819800" class="link">Revista Educação em Questão</a></li>
+                                    <li class="lista-publicacao"><a  href="/documentos/boletins/127819801" class="link">Boletins</a></li>
+                                    <li class="lista-publicacao"><a  href="/documentos/livros/239936239" class="link">Livros</a></li>
+                                    <li class="lista-publicacao"><a  href="/documentos/ebooks/282504085" class="link">Ebooks</a></li>
+                                    <li class="lista-publicacao"><a  href="/documentos/revista-eletronica/282504086" class="link">Revista eletrônica</a></li>
+                                    <li class="lista-publicacao"><a  href="/documentos/boletim-informativo/282504087" class="link">Boletim informativo</a></li>
+                                    <li class="lista-publicacao"><a  href="/documentos/cartilha-de-orientacoes-de-estagio-nao-obrigatorio/508384132" class="link">Cartilha de Orientações de Estágio não Obrigatório</a></li>
+                                    <li class="lista-publicacao"><a  href="/documentos/encontro-nacional-de-pesquisas-e-praticas-em-educacao-enappe/540573145" class="link">ENCONTRO NACIONAL DE PESQUISAS E PRÁTICAS EM EDUCAÇÃO - ENAPPE</a></li>
+                                </ol>
+                    <a href="/documentos/publicacoes/127807149" class="mais">Veja mais publicações &raquo;</a>
+                            </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- /.Fim Seção Diversos -->
+<footer>
+    <div class="container footer1">
+        <a class="topo scroll" href="#topo" title="Ir para o topo da Página">
+            <i class="fa fa-caret-up fa-1x"></i>
+        </a>
+        <div class="secoes-footer">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-footer col-1">
+                    <div class="heading">
+                        <h4>Links</h4>
+                    </div>
+                    <div class="col-xs-12 parceiros">
+                        <div class="slider-parceiros">
+                            <div class="inner">
+                                <a href="https://ufrnet.br/" target="_blank" title="ir para o site da UFRNet">
+<img loading="lazy" src="/dist/img/parceiros/banner_ufrnet.png" alt="Imagem: Banner da UFRNet" class="img-responsive" width="400" height="217">
+                                </a>
+                            </div>
+
+                            <div class="inner">
+                                <a href="https://pt-br.facebook.com/LTEUFRN/" target="_blank" title="ir para o site do LTE">
+<img loading="lazy" src="/dist/img/parceiros/banner_lte.png" alt="Imagem: Banner do Laboratório de Tecnologia Educacional - LTE" class="img-responsive" width="400" height="217">
+                                </a>
+                            </div>
+
+                            <div class="inner">
+                                <a href="http://www.ppged.ufrn.br/" target="_blank" title="ir para o site do PPGED">
+<img loading="lazy" src="/dist/img/parceiros/banner_ppged.png" alt="Imagem: Banner do Programa de Pós-Gradução em Educação" class="img-responsive" width="400" height="217">
+                                </a>
+                            </div>
+
+                            <div class="inner">
+                                <a href="http://www.nei.ufrn.br/" target="_blank" title="ir para o site do NEI">
+<img loading="lazy" src="/dist/img/parceiros/banner_nei.png" alt="Imagem: Banner do Núcleo de Educação da Infância" class="img-responsive" width="400" height="217">
+                                </a>
+                            </div>
+
+                            <div class="inner">
+                                <a href="http://www.sedis.ufrn.br/" target="_blank" title="ir para o site do SEDIS">
+<img loading="lazy" src="/dist/img/parceiros/banner_sedis.png" alt="Imagem: Banner do Secretaria de Educação a Distância da UFRN" class="img-responsive" width="400" height="217">
+                                </a>
+                            </div>
+
+                            <div class="inner">
+                                <a href="http://www.anped.org.br/" target="_blank" title="ir para o site do ANPED">
+<img loading="lazy" src="/dist/img/parceiros/banner_anped.png" alt="Imagem: Banner da Associação Nacional de Pós-Graduação e Pesquisa em Educação" class="img-responsive" width="400" height="217">
+                                </a>
+                            </div>
+
+                            <div class="inner">
+                                <a href="http://fne.mec.gov.br/" target="_blank" title="ir para o site do FNE">
+<img loading="lazy" src="/dist/img/parceiros/banner_fne.png" alt="Imagem: Banner do Fórum Nacional de Educação" class="img-responsive" width="400" height="217">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-footer col-2">
+                    <div class="heading">
+                        <h4>Centro de Educação</h4>
+                    </div>
+                    <p>
+                        Campus Universitário UFRN - Lagoa Nova
+                        <br/> CEP 59.072-970 | Natal - RN, Brasil
+                        <br/> Telefone: (84) 3342-2270 <a href="/institucional/telefones">(Mais informações)</a>
+                        <br/> E-mail: <a href="mailto:diretoria@ce.ufrn.br">diretoria@ce.ufrn.br</a>
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-footer col-3">
+                    <div class="heading">
+                        <h4>Acompanhe nas Redes Sociais</h4>
+                    </div>
+                    <ul type="none">
+                        <a href="https://www.facebook.com/ceufrn" target="_blank">
+                            <li class="col-xs-6"><i class="fa fa-facebook-f" aria-hidden="true" title="Ir para o Facebook do Centro de Educação"></i><span> Facebook</span></li>
+                        </a>
+                        <a href="https://twitter.com/CEUFRN" target="_blank">
+                            <li class="col-xs-6"><i class="fa fa-twitter" aria-hidden="true" title="Ir para o Twitter do Centro de Educação"></i> <span> Twitter</span></li>
+                        </a>
+                        <a href="https://www.instagram.com/ceufrn/" target="_blank">
+                            <li class="col-xs-6"><i class="fa fa-instagram" aria-hidden="true" title="Ir para o Instagram do Centro de Educação"></i><span> Instagram</span></li>
+                        </a>
+                        <a href="https://www.youtube.com/user/CEUFRN" target="_blank">
+                            <li class="col-xs-6"><i class="fa fa-youtube" aria-hidden="true" title="Ir para o Canal do Youtube do Centro de Educação"></i><span> Youtube</span></li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="area-copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-sm-8 col-xs-12 ">
+                    <span class="copyright">Centro de Educação © Copyright 2017 / 2026 - Todos os direitos reservados  </span>
+                    <span><a href="https://ufrn.br/" target="_blank">UFRN - Universidade Federal do Rio Grande do Norte </a> </span>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-12 sinfo">
+                    Desenvolvido pela <a href=" https://info.ufrn.br/" target="_blank" title="ir para o site da Superintendência de Tecnologia da Informação">STI</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="bg-escuro"></div>	<!-- libs, plugins e scripts -->
+
+	<script type="text/javascript" src="/dist/vendors/datetimepicker/js/moment.min.js"></script>
+	<script type="text/javascript" src="/dist/vendors/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript" src="/dist/vendors/bootstrap-sass/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/dist/vendors/lightbox2/js/lightbox.js"></script>
+	<script type="text/javascript" src="/dist/vendors/slick-carousel/js/slick.js"></script>
+	<script type="text/javascript" src="/dist/js/main.js?v=2.0.0"></script>
+	<script type="text/javascript" src="https://barra.brasil.gov.br/barra.js" defer="defer"></script>
+	<script type="text/javascript" src="/dist/js/barragoverno.hack.js?v=2.0.0"></script>
+</body>
+</html>
+
+<script type="text/javascript">
+
+		generateCookieConsentModal(
+			"site do CE" , 
+			{
+				fontSize: '16px',
+			},
+			{ 
+				margin: 'auto'
+			},
+			true
+		);
+	</script>

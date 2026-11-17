@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html id="index" lang="pt-BR">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>NegTec</title>
+	<link rel="stylesheet" type="text/css" href="css/template.css">
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		function transformScreen(){
+			var width = $(window).width();
+			var height = $(window).height();
+			var distanciaQuadrantes;
+			if(width >= 1601){
+				distanciaQuadrantes = 45;
+				$("#espaco_vertical_grande_meio").css("margin-right", "45px");
+				$("#espaco_vertical_grande_esquerdo").css("margin-right", "45px");
+				$(".espaco_vertical_grande_transparente").css("margin-right", "45px");
+				$(".espaco_vertical_pequeno_esquerdo").css("margin-right", "45px");
+				$(".espaco_vertical_pequeno_direito").css("margin-right", "45px");
+				$(".espaco_horizontal").css("margin-top", "45px");
+				$("#espaco_esquerdo").css("margin-right", "45px");
+			}else if(width >= 1400){
+				distanciaQuadrantes = 40;
+				$("#espaco_vertical_grande_meio").css("margin-right", "40px");
+				$("#espaco_vertical_grande_esquerdo").css("margin-right", "40px");
+				$(".espaco_vertical_grande_transparente").css("margin-right", "40px");
+				$(".espaco_vertical_pequeno_esquerdo").css("margin-right", "40px");
+				$(".espaco_vertical_pequeno_direito").css("margin-right", "40px");
+				$(".espaco_horizontal").css("margin-top", "40px");
+				$("#espaco_esquerdo").css("margin-right", "40px");
+			}else if(width >= 960){
+				distanciaQuadrantes = 30;
+				$("#espaco_vertical_grande_meio").css("margin-right", "30px");
+				$("#espaco_vertical_grande_esquerdo").css("margin-right", "30px");
+				$(".espaco_vertical_grande_transparente").css("margin-right", "30px");
+				$(".espaco_vertical_pequeno_esquerdo").css("margin-right", "30px");
+				$(".espaco_vertical_pequeno_direito").css("margin-right", "30px");
+				$(".espaco_horizontal").css("margin-top", "30px");
+				$("#espaco_esquerdo").css("margin-right", "30px");
+			}else if(width >= 760){
+				distanciaQuadrantes = 20;
+				$("#espaco_vertical_grande_meio").css("margin-right", "20px");
+				$("#espaco_vertical_grande_esquerdo").css("margin-right", "20px");
+				$(".espaco_vertical_grande_transparente").css("margin-right", "20px");
+				$(".espaco_vertical_pequeno_esquerdo").css("margin-right", "20px");
+				$(".espaco_vertical_pequeno_direito").css("margin-right", "20px");
+				$(".espaco_horizontal").css("margin-top", "20px");
+				$("#espaco_esquerdo").css("margin-right", "20px");
+			}else if(width >= 600){
+				distanciaQuadrantes = 15;
+				$("#espaco_vertical_grande_meio").css("margin-right", "15px");
+				$("#espaco_vertical_grande_esquerdo").css("margin-right", "15px");
+				$(".espaco_vertical_grande_transparente").css("margin-right", "15px");
+				$(".espaco_vertical_pequeno_esquerdo").css("margin-right", "15px");
+				$(".espaco_vertical_pequeno_direito").css("margin-right", "15px");
+				$(".espaco_horizontal").css("margin-top", "15px");
+				$("#espaco_esquerdo").css("margin-right", "15px");
+			}else if(width >= 360){
+				distanciaQuadrantes = 10;
+				$("#espaco_vertical_grande_meio").css("margin-right", "10px");
+				$("#espaco_vertical_grande_esquerdo").css("margin-right", "10px");
+				$(".espaco_vertical_grande_transparente").css("margin-right", "10px");
+				$(".espaco_vertical_pequeno_esquerdo").css("margin-right", "10px");
+				$(".espaco_vertical_pequeno_direito").css("margin-right", "10px");
+				$(".espaco_horizontal").css("margin-top", "10px");
+				$("#espaco_esquerdo").css("margin-right", "10px");
+			}else if(width >= 240){
+				distanciaQuadrantes = 5;
+				$("#espaco_vertical_grande_meio").css("margin-right", "5px");
+				$("#espaco_vertical_grande_esquerdo").css("margin-right", "5px");
+				$(".espaco_vertical_grande_transparente").css("margin-right", "5px");
+				$(".espaco_vertical_pequeno_esquerdo").css("margin-right", "5px");
+				$(".espaco_vertical_pequeno_direito").css("margin-right", "5px");
+				$(".espaco_horizontal").css("margin-top", "5px");
+				$("#espaco_esquerdo").css("margin-right", "5px");
+			}
+			if(width >= height * 1.692307692307692){
+				var canvasHeight = height - 60;
+				var canvasWidth = canvasHeight * 1.692307692307692;
+				$("#canvas_espaco").css("width", canvasWidth);
+				$("#canvas_espaco").css("height", canvasHeight);
+				var quadranteGrandeWidth = (canvasWidth - distanciaQuadrantes * 4) / 5;
+				var quadranteGrandeHeight = quadranteGrandeWidth * (561.75 / 228);
+				$("#espaco_vertical_grande_meio").css("width", quadranteGrandeWidth);
+				$("#espaco_vertical_grande_meio").css("height", quadranteGrandeHeight);
+				$("#espaco_vertical_grande_esquerdo").css("width", quadranteGrandeWidth);
+				$("#espaco_vertical_grande_esquerdo").css("height", quadranteGrandeHeight);
+				$("#espaco_vertical_grande_direito").css("width", quadranteGrandeWidth);
+				$("#espaco_vertical_grande_direito").css("height", quadranteGrandeHeight);
+				$(".espaco_vertical_grande_transparente").css("width", quadranteGrandeWidth);
+				$(".espaco_vertical_grande_transparente").css("height", quadranteGrandeHeight);
+				$(".espaco_vertical_pequeno_esquerdo").css("width", quadranteGrandeWidth);
+				$(".espaco_vertical_pequeno_direito").css("width", quadranteGrandeWidth);
+				var marginTopPequeno = quadranteGrandeWidth / (260 / 50);
+				$(".espaco_vertical_pequeno_direito").css("margin-top", marginTopPequeno);
+				$(".espaco_vertical_pequeno_esquerdo").css("margin-top", marginTopPequeno);
+				var quadranteHorizontalWidth = (canvasWidth - distanciaQuadrantes) / 2;
+	    		var quadranteHorizontalHeight = quadranteHorizontalWidth / (637.5 / 173.25);
+	    		$(".espaco_horizontal").css("width", quadranteHorizontalWidth);
+				$(".espaco_horizontal").css("height", quadranteHorizontalHeight);
+				var fontCanvasGrande = quadranteGrandeWidth / (260 / 25);
+				var fontCanvasPequeno = quadranteGrandeWidth / (260 / 21);
+				var marginFontHorizontal = quadranteHorizontalWidth / (730 / 40)
+				$(".string_canvas_grande").css("font-size", fontCanvasGrande);
+				$(".string_canvas_pequeno").css("font-size", fontCanvasPequeno);
+				$(".string_canvas_horizontal").css("font-size", fontCanvasGrande);
+				$(".string_canvas_horizontal").css("margin-left", marginFontHorizontal);
+				var imagemQuadranteGrande = quadranteGrandeWidth / (260 / 160);
+				var ajusteImagemQuadranteGrande = imagemQuadranteGrande / -2;
+				$(".img_quadrante_grande_lateral").css("width", imagemQuadranteGrande);
+				$(".img_quadrante_grande_lateral").css("height", imagemQuadranteGrande);
+				$(".img_quadrante_grande_lateral").css("margin-left", ajusteImagemQuadranteGrande);
+				$(".img_quadrante_grande_lateral").css("margin-top", ajusteImagemQuadranteGrande);
+				var imagemQuadrantePequeno = quadranteGrandeWidth / (260 / 110);
+				var ajusteImagemQuadrantePequenoTop = imagemQuadrantePequeno / (110 / -17);
+				var ajusteImagemQuadrantePequenoLeft = imagemQuadrantePequeno / (110 / -55);
+				$(".img_quadrante_pequeno").css("width", imagemQuadrantePequeno);
+				$(".img_quadrante_pequeno").css("height", imagemQuadrantePequeno);
+				$(".img_quadrante_pequeno").css("margin-left", ajusteImagemQuadrantePequenoLeft);
+				$(".img_quadrante_pequeno").css("margin-top", ajusteImagemQuadrantePequenoTop);
+				var ajusteImagemQuadranteHorizontalTop = imagemQuadranteGrande / (160 / -80);
+				var ajusteImagemQuadranteHorizontalLeft = imagemQuadranteGrande / (160 / 165);
+				$(".img_quadrante_baixo").css("width", imagemQuadranteGrande);
+				$(".img_quadrante_baixo").css("height", imagemQuadranteGrande);
+				$(".img_quadrante_baixo").css("margin-left", ajusteImagemQuadranteHorizontalLeft);
+				$(".img_quadrante_baixo").css("margin-top", ajusteImagemQuadranteHorizontalTop);
+			}else{
+				var canvasWidth =  width - 60;
+				var canvasHeight = canvasWidth / 1.692307692307692;
+				$("#canvas_espaco").css("width", canvasWidth);
+				$("#canvas_espaco").css("height", canvasHeight);
+				var quadranteGrandeWidth = (canvasWidth - distanciaQuadrantes * 4) / 5;
+				var quadranteGrandeHeight = quadranteGrandeWidth * (561.75 / 228);
+				$("#espaco_vertical_grande_meio").css("width", quadranteGrandeWidth);
+				$("#espaco_vertical_grande_meio").css("height", quadranteGrandeHeight);
+				$("#espaco_vertical_grande_esquerdo").css("width", quadranteGrandeWidth);
+				$("#espaco_vertical_grande_esquerdo").css("height", quadranteGrandeHeight);
+				$("#espaco_vertical_grande_direito").css("width", quadranteGrandeWidth);
+				$("#espaco_vertical_grande_direito").css("height", quadranteGrandeHeight);
+				$(".espaco_vertical_grande_transparente").css("width", quadranteGrandeWidth);
+				$(".espaco_vertical_grande_transparente").css("height", quadranteGrandeHeight);
+				$(".espaco_vertical_pequeno_esquerdo").css("width", quadranteGrandeWidth);
+				$(".espaco_vertical_pequeno_direito").css("width", quadranteGrandeWidth);
+				var marginTopPequeno = quadranteGrandeWidth / (260 / 50);
+				$(".espaco_vertical_pequeno_direito").css("margin-top", marginTopPequeno);
+				$(".espaco_vertical_pequeno_esquerdo").css("margin-top", marginTopPequeno);
+				var quadranteHorizontalWidth = (canvasWidth - distanciaQuadrantes) / 2;
+	    		var quadranteHorizontalHeight = quadranteHorizontalWidth / (637.5 / 173.25);
+	    		$(".espaco_horizontal").css("width", quadranteHorizontalWidth);
+				$(".espaco_horizontal").css("height", quadranteHorizontalHeight);
+				var fontCanvasGrande = quadranteGrandeWidth / (260 / 25);
+				var fontCanvasPequeno = quadranteGrandeWidth / (260 / 21);
+				var marginFontHorizontal = quadranteHorizontalWidth / (730 / 40)
+				$(".string_canvas_grande").css("font-size", fontCanvasGrande);
+				$(".string_canvas_pequeno").css("font-size", fontCanvasPequeno);
+				$(".string_canvas_horizontal").css("font-size", fontCanvasGrande);
+				$(".string_canvas_horizontal").css("margin-left", marginFontHorizontal);
+				var imagemQuadranteGrande = quadranteGrandeWidth / (260 / 160);
+				var ajusteImagemQuadranteGrande = imagemQuadranteGrande / -2;
+				$(".img_quadrante_grande_lateral").css("width", imagemQuadranteGrande);
+				$(".img_quadrante_grande_lateral").css("height", imagemQuadranteGrande);
+				$(".img_quadrante_grande_lateral").css("margin-left", ajusteImagemQuadranteGrande);
+				$(".img_quadrante_grande_lateral").css("margin-top", ajusteImagemQuadranteGrande);
+				var imagemQuadrantePequeno = quadranteGrandeWidth / (260 / 110);
+				var ajusteImagemQuadrantePequenoTop = imagemQuadrantePequeno / (110 / -17);
+				var ajusteImagemQuadrantePequenoLeft = imagemQuadrantePequeno / (110 / -55);
+				$(".img_quadrante_pequeno").css("width", imagemQuadrantePequeno);
+				$(".img_quadrante_pequeno").css("height", imagemQuadrantePequeno);
+				$(".img_quadrante_pequeno").css("margin-left", ajusteImagemQuadrantePequenoLeft);
+				$(".img_quadrante_pequeno").css("margin-top", ajusteImagemQuadrantePequenoTop);
+				var ajusteImagemQuadranteHorizontalTop = imagemQuadranteGrande / (160 / -80);
+				var ajusteImagemQuadranteHorizontalLeft = imagemQuadranteGrande / (160 / 165);
+				$(".img_quadrante_baixo").css("width", imagemQuadranteGrande);
+				$(".img_quadrante_baixo").css("height", imagemQuadranteGrande);
+				$(".img_quadrante_baixo").css("margin-left", ajusteImagemQuadranteHorizontalLeft);
+				$(".img_quadrante_baixo").css("margin-top", ajusteImagemQuadranteHorizontalTop);
+			}
+		}
+		$(window).resize(function() {
+	  		transformScreen();
+		});
+		$(document).ready(function(){
+			transformScreen();
+		});
+	</script>
+</head>
+<body>
+	<div id="canvas_espaco">
+		<a href="parcerias.html">
+			<div id="espaco_vertical_grande_esquerdo">
+				<p class="string_canvas_grande">PARCEIRAS<br>PRINCIPAIS</p>
+				<img src= "img/Parcerias.png" class="img_quadrante_grande_lateral"/>
+			</div>
+		</a>
+
+		<div class="espaco_vertical_grande_transparente">
+			<a href="atividades.html">
+				<div class="espaco_vertical_pequeno_esquerdo">
+					<p class="string_canvas_pequeno">ATIVIDADES<br>PRINCIPAIS</p>
+					<img src= "img/Ativ-Principais.png" class="img_quadrante_pequeno"/>
+				</div>
+			</a>
+
+			<a href="recursos.html">
+				<div class="espaco_vertical_pequeno_esquerdo">
+					<p class="string_canvas_pequeno">RECURSOS<br>PRINCIPAIS</p>
+					<img src= "img/recursos_principais_tamanhomenor.png" class="img_quadrante_pequeno"/>
+				</div>
+			</a>
+		</div>
+
+		<a href="proposta.html">
+			<div id="espaco_vertical_grande_meio">
+				<p class="string_canvas_grande">PROPOSTA<br>DE VALOR</p>
+			</div>
+		</a>
+
+		<div class="espaco_vertical_grande_transparente">
+			<a href="relacionamento.html">
+				<div class="espaco_vertical_pequeno_direito">
+					<p class="string_canvas_pequeno">RELACIONAMENTO<br>COM CLIENTES</p>
+					<img loading="lazy" src= "img/Rel-Cliente.png" class="img_quadrante_pequeno"/>
+				</div>
+			</a>
+
+			<a href="canais.html">
+				<div class="espaco_vertical_pequeno_direito">
+					<p class="string_canvas_pequeno">CANAIS</p>
+					<img loading="lazy" src="img/Canais_x.png" class="img_quadrante_pequeno"/>
+				</div>
+			</a>
+		</div>
+
+		<a href="clientes.html">
+			<div id="espaco_vertical_grande_direito">
+				<p class="string_canvas_grande">SEGMENTO<br>DE CLIENTES</p>
+				<img loading="lazy" src="img/Seg-Cliente.png" class="img_quadrante_grande_lateral"/>
+			</div>
+		</a>
+
+		<a href="estrutura_custos.html">
+			<div class="espaco_horizontal" id="espaco_esquerdo">
+				<p class="string_canvas_horizontal">ESTRUTURA DE CUSTO</p>
+				<img src= "img/Estrut-Custo.png" class="img_quadrante_baixo"/>
+			</div>
+		</a>
+
+		<a href="fontes_receita.html">
+			<div class="espaco_horizontal">
+				<p class="string_canvas_horizontal">FONTES DE RECEITA</p>
+				<img loading="lazy" src= "img/Fontes-Receita.png" class="img_quadrante_baixo"/>
+			</div>
+		</a>
+
+		<footer id="footer">
+			<p id="copyright">&#169; 2017 - NegTec - Todos os direitos reservados. </p>
+		</footer>
+	</div>
+</body>
+</html>

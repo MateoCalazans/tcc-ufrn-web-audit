@@ -1,0 +1,655 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T21:05:15.459Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12",
+      "diff": "9.0.0",
+      "@anthropic-ai/sdk": "1.8.0"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "id": "leier.ct.ufrn.br",
+  "url": "https://leier.ct.ufrn.br/",
+  "fonte": {
+    "html": "index.html",
+    "codificacao": "utf-8",
+    "bom": false,
+    "har": true,
+    "lighthouse": "lh2.json",
+    "lighthouseVersion": "13.5.0"
+  },
+  "regras": [
+    {
+      "id": "html-lang",
+      "dimensao": "semantica",
+      "descricao": "O elemento <html> declara o idioma da página (atributo lang)."
+    },
+    {
+      "id": "meta-viewport",
+      "dimensao": "performance",
+      "descricao": "A página declara <meta name=\"viewport\"> adequada a telas móveis, sem bloquear o zoom."
+    },
+    {
+      "id": "img-dimensions",
+      "dimensao": "performance",
+      "descricao": "Toda <img> declara width e height, para o navegador reservar o espaço antes do download."
+    },
+    {
+      "id": "img-lazy",
+      "dimensao": "performance",
+      "descricao": "<img> depois das 3 primeiras do documento usa loading=\"lazy\" (exceto a imagem LCP)."
+    },
+    {
+      "id": "obsolete-tags",
+      "dimensao": "semantica",
+      "descricao": "Sem elementos obsoletos do WHATWG (center, font, marquee…); <font> simples vira <span style>."
+    },
+    {
+      "id": "heading-skip",
+      "dimensao": "semantica",
+      "descricao": "Títulos não pulam níveis ao descer na hierarquia (h1 → h3, por exemplo)."
+    },
+    {
+      "id": "fake-button",
+      "dimensao": "semantica",
+      "descricao": "Elementos clicáveis são <button>/<a>, não div/span com onclick."
+    },
+    {
+      "id": "render-blocking-hint",
+      "dimensao": "performance",
+      "descricao": "Scripts e folhas de estilo que o Lighthouse aponta como bloqueantes são adiados quando não são críticos."
+    },
+    {
+      "id": "landmarks-llm",
+      "dimensao": "semantica",
+      "descricao": "Landmarks ausentes propostos por LLM sobre <div>, <section> ou <article> existentes (landmarks-v2, claude-haiku-5-5)."
+    }
+  ],
+  "llm": {
+    "prompt": "landmarks-v2",
+    "arquivo": "docs/prompts/landmarks-v2.md",
+    "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+    "modelo": "claude-haiku-5-5",
+    "effort": "low",
+    "maxTokens": 4000,
+    "execucao": {
+      "siteId": "leier.ct.ufrn.br",
+      "prompt": "landmarks-v2",
+      "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "modeloResposta": "claude-haiku-5-5",
+      "respostaId": "msg_011Ch7JA7NJDEJ7Bk1958Yip",
+      "chamada": true,
+      "motivo": null,
+      "ausentes": [
+        "main",
+        "footer"
+      ],
+      "candidatos": 17,
+      "elegiveis": 17,
+      "stopReason": "end_turn",
+      "inputTokens": 2645,
+      "outputTokens": 859,
+      "custoUsd": 0.000694,
+      "propostas": 1,
+      "validas": 1,
+      "rejeitadas": [],
+      "textoIgual": true,
+      "landmarksDepois": {
+        "banner": 1,
+        "navigation": 1,
+        "main": 0,
+        "contentinfo": 1
+      },
+      "erro": null,
+      "duracaoMs": 6117
+    }
+  },
+  "resumo": {
+    "total": 21,
+    "corrigidas": 7,
+    "porRegra": {
+      "html-lang": {
+        "total": 1,
+        "corrigidas": 0
+      },
+      "meta-viewport": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "img-dimensions": {
+        "total": 4,
+        "corrigidas": 3
+      },
+      "img-lazy": {
+        "total": 1,
+        "corrigidas": 1
+      },
+      "obsolete-tags": {
+        "total": 4,
+        "corrigidas": 2
+      },
+      "heading-skip": {
+        "total": 2,
+        "corrigidas": 0
+      },
+      "fake-button": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "render-blocking-hint": {
+        "total": 8,
+        "corrigidas": 0
+      },
+      "landmarks-llm": {
+        "total": 1,
+        "corrigidas": 1
+      }
+    },
+    "porDimensao": {
+      "performance": 13,
+      "semantica": 8
+    }
+  },
+  "guardaImagens": {
+    "imagens": [
+      {
+        "recomendacao": "img-dimensions-1",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 382,
+              "altura": 55,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 382,
+              "altura": 55,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 1140,
+              "altura": 165,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 1140,
+              "altura": 165,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-2",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "mudou"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 412,
+              "altura": 275,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 412,
+              "altura": 2000,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 1350,
+              "altura": 900,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 1350,
+              "altura": 2000,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-3",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-4",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      }
+    ],
+    "mantidas": 3,
+    "desfeitas": 1,
+    "erro": null
+  },
+  "recommendations": [
+    {
+      "id": "html-lang-1",
+      "regra": "html-lang",
+      "severidade": "info",
+      "dimensao": "semantica",
+      "evidencia": "<html lang=\"en\">",
+      "posicao": {
+        "linha": 8,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "lang=\"en\" declara um idioma diferente do português: conferir se é o idioma principal da página.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-1",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"images/logonova.png\" class=\"img-responsive\" alt=\"\">",
+      "posicao": {
+        "linha": 67,
+        "coluna": 6
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1703\" height=\"246\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 2877,
+          "fim": 2877,
+          "texto": " width=\"1703\" height=\"246\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-2",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"images/1.jpg\" alt=\"\" />",
+      "posicao": {
+        "linha": 127,
+        "coluna": 5
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"3000\" height=\"2000\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: mudou)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-3",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"images/2.jpg\" alt=\"\" />",
+      "posicao": {
+        "linha": 134,
+        "coluna": 5
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1280\" height=\"720\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 5543,
+          "fim": 5543,
+          "texto": " width=\"1280\" height=\"720\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-4",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"images/3.jpg\" alt=\"\" />",
+      "posicao": {
+        "linha": 140,
+        "coluna": 5
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1280\" height=\"720\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 5673,
+          "fim": 5673,
+          "texto": " width=\"1280\" height=\"720\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-1",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"images/3.jpg\" alt=\"\" />",
+      "posicao": {
+        "linha": 140,
+        "coluna": 5
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "4ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 5647,
+          "fim": 5647,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "obsolete-tags-1",
+      "regra": "obsolete-tags",
+      "severidade": "baixa",
+      "dimensao": "semantica",
+      "evidencia": "<FONT FACE=Arial COLOR=\"black\">",
+      "posicao": {
+        "linha": 159,
+        "coluna": 51
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<font> é obsoleto no HTML (WHATWG): usar CSS (color, font-family, font-size) num elemento com significado ou num <span>. Trocado por <span style>, mesma aparência. Conferir CSS do site que mire \"font\".",
+      "edicoes": [
+        {
+          "inicio": 6187,
+          "fim": 6218,
+          "texto": "<span style=\"color: black; font-family: Arial\">"
+        },
+        {
+          "inicio": 8011,
+          "fim": 8018,
+          "texto": "</span>"
+        }
+      ]
+    },
+    {
+      "id": "obsolete-tags-2",
+      "regra": "obsolete-tags",
+      "severidade": "baixa",
+      "dimensao": "semantica",
+      "evidencia": "<FONT FACE=Arial COLOR=\"black\">",
+      "posicao": {
+        "linha": 193,
+        "coluna": 51
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<font> é obsoleto no HTML (WHATWG): usar CSS (color, font-family, font-size) num elemento com significado ou num <span>. Trocado por <span style>, mesma aparência. Conferir CSS do site que mire \"font\".",
+      "edicoes": [
+        {
+          "inicio": 9394,
+          "fim": 9425,
+          "texto": "<span style=\"color: black; font-family: Arial\">"
+        },
+        {
+          "inicio": 11196,
+          "fim": 11203,
+          "texto": "</span>"
+        }
+      ]
+    },
+    {
+      "id": "obsolete-tags-3",
+      "regra": "obsolete-tags",
+      "severidade": "baixa",
+      "dimensao": "semantica",
+      "evidencia": "<FONT FACE=Arial COLOR=\"black\">",
+      "posicao": {
+        "linha": 203,
+        "coluna": 53
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<font> é obsoleto no HTML (WHATWG): usar CSS (color, font-family, font-size) num elemento com significado ou num <span>. Sem </font> no arquivo (fechamento implícito): trocar à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "obsolete-tags-4",
+      "regra": "obsolete-tags",
+      "severidade": "baixa",
+      "dimensao": "semantica",
+      "evidencia": "<FONT FACE=Arial COLOR=\"black\">",
+      "posicao": {
+        "linha": 207,
+        "coluna": 53
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<font> é obsoleto no HTML (WHATWG): usar CSS (color, font-family, font-size) num elemento com significado ou num <span>. Sem </font> no arquivo (fechamento implícito): trocar à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "heading-skip-1",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h4 align=\"justify\" style=\"line-height: 1.5\">",
+      "posicao": {
+        "linha": 159,
+        "coluna": 6
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 2 para o nível 4: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h3 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "heading-skip-2",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h4 align=\"justify\" style=\"line-height: 1.5\">",
+      "posicao": {
+        "linha": 193,
+        "coluna": 6
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 2 para o nível 4: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h3 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-1",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link href=\"css/font-awesome.min.css\" rel=\"stylesheet\" type=\"text/css\" media=\"all\" />",
+      "posicao": {
+        "linha": 11,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (6.8 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-2",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link href=\"css/bootstrap.min.css\" rel=\"stylesheet\" type=\"text/css\" media=\"all\" />",
+      "posicao": {
+        "linha": 12,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (300 ms de bloqueio, 19.9 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-3",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link href=\"css/style.css\" rel=\"stylesheet\" type=\"text/css\" media=\"all\" />",
+      "posicao": {
+        "linha": 13,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (8.0 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-4",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link href=\"//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese\" rel=\"stylesheet\">",
+      "posicao": {
+        "linha": 22,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (876 ms de bloqueio, 0.6 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-5",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link href=\"//fonts.googleapis.com/css?family=Open+Sans\" rel=\"stylesheet\">",
+      "posicao": {
+        "linha": 23,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (183 ms de bloqueio, 0.3 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-6",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script type=\"text/javascript\" src=\"js/jquery-2.1.4.min.js\">",
+      "posicao": {
+        "linha": 25,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (300 ms de bloqueio, 29.4 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-7",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script src=\"js/skdslider.min.js\">",
+      "posicao": {
+        "linha": 29,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (1.7 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-8",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link href=\"css/skdslider.css\" rel=\"stylesheet\">",
+      "posicao": {
+        "linha": 30,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (150 ms de bloqueio, 1.4 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "landmarks-llm-1",
+      "regra": "landmarks-llm",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<div class=\"footer-top\">",
+      "posicao": {
+        "linha": 325,
+        "coluna": 2
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "Landmark contentinfo ausente: trocar este <div> por <footer>. Justificativa do modelo: \"Bloco 'footer-top' no fim da página, com links rápidos, endereço, contato, newsletter e direitos autorais do site, e contém c11 e c16 (sem papel de main).\". Proposta gerada por LLM (landmarks-v2, claude-haiku-5-5, candidato c6); conferir CSS e scripts que selecionem \"div\" neste elemento.",
+      "edicoes": [
+        {
+          "inicio": 16069,
+          "fim": 16072,
+          "texto": "footer"
+        },
+        {
+          "inicio": 17366,
+          "fim": 17369,
+          "texto": "footer"
+        }
+      ]
+    }
+  ]
+}

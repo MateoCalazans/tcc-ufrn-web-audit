@@ -1,0 +1,745 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T21:05:15.459Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12",
+      "diff": "9.0.0",
+      "@anthropic-ai/sdk": "1.8.0"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "id": "dep.ct.ufrn.br",
+  "url": "https://dep.ct.ufrn.br/",
+  "fonte": {
+    "html": "index.html",
+    "codificacao": "utf-8",
+    "bom": false,
+    "har": true,
+    "lighthouse": "lh2.json",
+    "lighthouseVersion": "13.5.0"
+  },
+  "regras": [
+    {
+      "id": "html-lang",
+      "dimensao": "semantica",
+      "descricao": "O elemento <html> declara o idioma da página (atributo lang)."
+    },
+    {
+      "id": "meta-viewport",
+      "dimensao": "performance",
+      "descricao": "A página declara <meta name=\"viewport\"> adequada a telas móveis, sem bloquear o zoom."
+    },
+    {
+      "id": "img-dimensions",
+      "dimensao": "performance",
+      "descricao": "Toda <img> declara width e height, para o navegador reservar o espaço antes do download."
+    },
+    {
+      "id": "img-lazy",
+      "dimensao": "performance",
+      "descricao": "<img> depois das 3 primeiras do documento usa loading=\"lazy\" (exceto a imagem LCP)."
+    },
+    {
+      "id": "obsolete-tags",
+      "dimensao": "semantica",
+      "descricao": "Sem elementos obsoletos do WHATWG (center, font, marquee…); <font> simples vira <span style>."
+    },
+    {
+      "id": "heading-skip",
+      "dimensao": "semantica",
+      "descricao": "Títulos não pulam níveis ao descer na hierarquia (h1 → h3, por exemplo)."
+    },
+    {
+      "id": "fake-button",
+      "dimensao": "semantica",
+      "descricao": "Elementos clicáveis são <button>/<a>, não div/span com onclick."
+    },
+    {
+      "id": "render-blocking-hint",
+      "dimensao": "performance",
+      "descricao": "Scripts e folhas de estilo que o Lighthouse aponta como bloqueantes são adiados quando não são críticos."
+    },
+    {
+      "id": "landmarks-llm",
+      "dimensao": "semantica",
+      "descricao": "Landmarks ausentes propostos por LLM sobre <div>, <section> ou <article> existentes (landmarks-v2, claude-haiku-5-5)."
+    }
+  ],
+  "llm": {
+    "prompt": "landmarks-v2",
+    "arquivo": "docs/prompts/landmarks-v2.md",
+    "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+    "modelo": "claude-haiku-5-5",
+    "effort": "low",
+    "maxTokens": 4000,
+    "execucao": {
+      "siteId": "dep.ct.ufrn.br",
+      "prompt": "landmarks-v2",
+      "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "modeloResposta": "claude-haiku-5-5",
+      "respostaId": "msg_011Ch7HqrpCaawTH5KSpZEXb",
+      "chamada": true,
+      "motivo": null,
+      "ausentes": [
+        "header",
+        "nav",
+        "main",
+        "footer"
+      ],
+      "candidatos": 16,
+      "elegiveis": 16,
+      "stopReason": "end_turn",
+      "inputTokens": 2792,
+      "outputTokens": 858,
+      "custoUsd": 0.0007082000000000001,
+      "propostas": 3,
+      "validas": 3,
+      "rejeitadas": [],
+      "textoIgual": true,
+      "landmarksDepois": {
+        "banner": 1,
+        "navigation": 0,
+        "main": 1,
+        "contentinfo": 1
+      },
+      "erro": null,
+      "duracaoMs": 5143
+    }
+  },
+  "resumo": {
+    "total": 19,
+    "corrigidas": 15,
+    "porRegra": {
+      "html-lang": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "meta-viewport": {
+        "total": 1,
+        "corrigidas": 1
+      },
+      "img-dimensions": {
+        "total": 6,
+        "corrigidas": 6
+      },
+      "img-lazy": {
+        "total": 5,
+        "corrigidas": 5
+      },
+      "obsolete-tags": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "heading-skip": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "fake-button": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "render-blocking-hint": {
+        "total": 4,
+        "corrigidas": 0
+      },
+      "landmarks-llm": {
+        "total": 3,
+        "corrigidas": 3
+      }
+    },
+    "porDimensao": {
+      "performance": 16,
+      "semantica": 3
+    }
+  },
+  "guardaImagens": {
+    "imagens": [
+      {
+        "recomendacao": "img-dimensions-1",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 34,
+              "altura": 34,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 34,
+              "altura": 34,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 34,
+              "altura": 34,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 34,
+              "altura": 34,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-2",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 34,
+              "altura": 34,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 34,
+              "altura": 34,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 34,
+              "altura": 34,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 34,
+              "altura": 34,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-3",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 34,
+              "altura": 34,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 34,
+              "altura": 34,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 34,
+              "altura": 34,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 34,
+              "altura": 34,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-4",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 186,
+              "altura": 90,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 186,
+              "altura": 90,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 186,
+              "altura": 90,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 186,
+              "altura": 90,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-5",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 127,
+              "altura": 41,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 127,
+              "altura": 41,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 127,
+              "altura": 41,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 127,
+              "altura": 41,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-6",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 270,
+              "altura": 245,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 270,
+              "altura": 245,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 270,
+              "altura": 245,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 270,
+              "altura": 245,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      }
+    ],
+    "mantidas": 6,
+    "desfeitas": 0,
+    "erro": null
+  },
+  "recommendations": [
+    {
+      "id": "meta-viewport-1",
+      "regra": "meta-viewport",
+      "severidade": "alta",
+      "dimensao": "performance",
+      "evidencia": "<meta charset=\"UTF-8\" />",
+      "posicao": {
+        "linha": 4,
+        "coluna": 1
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "Não há <meta name=\"viewport\">: no celular a página é desenhada como desktop e reduzida. Declarar content=\"width=device-width, initial-scale=1\".",
+      "edicoes": [
+        {
+          "inicio": 67,
+          "fim": 67,
+          "texto": "\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-1",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"wp-content/themes/dep2014/images/lang-eng.png\" alt=\"English\" title=\"English\">",
+      "posicao": {
+        "linha": 64,
+        "coluna": 124
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"48\" height=\"48\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 16483,
+          "fim": 16483,
+          "texto": " width=\"48\" height=\"48\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-2",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"wp-content/themes/dep2014/images/lang-esp.png\" alt=\"Español\" title=\"Español\">",
+      "posicao": {
+        "linha": 65,
+        "coluna": 124
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"48\" height=\"48\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 16703,
+          "fim": 16703,
+          "texto": " width=\"48\" height=\"48\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-3",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"wp-content/themes/dep2014/images/lang-deu.png\" alt=\"Deutsch\" title=\"Deutsch\">",
+      "posicao": {
+        "linha": 66,
+        "coluna": 124
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"48\" height=\"48\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 16923,
+          "fim": 16923,
+          "texto": " width=\"48\" height=\"48\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-4",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"wp-content/themes/dep2014/images/logo-dep.png\" />",
+      "posicao": {
+        "linha": 69,
+        "coluna": 66
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"186\" height=\"90\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 17101,
+          "fim": 17101,
+          "texto": " width=\"186\" height=\"90\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-5",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"wp-content/themes/dep2014/images/ufrn.png\" />",
+      "posicao": {
+        "linha": 70,
+        "coluna": 79
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"127\" height=\"41\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 17239,
+          "fim": 17239,
+          "texto": " width=\"127\" height=\"41\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-6",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"wp-content/themes/dep2014/images/imgdes.jpg\" />",
+      "posicao": {
+        "linha": 107,
+        "coluna": 10
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"250\" height=\"225\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 19481,
+          "fim": 19481,
+          "texto": " width=\"250\" height=\"225\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-1",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"wp-content/themes/dep2014/images/logo-dep.png\" />",
+      "posicao": {
+        "linha": 69,
+        "coluna": 66
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "4ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 17049,
+          "fim": 17049,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-2",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"wp-content/themes/dep2014/images/ufrn.png\" />",
+      "posicao": {
+        "linha": 70,
+        "coluna": 79
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "5ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 17191,
+          "fim": 17191,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-3",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"wp-content/themes/dep2014/images/imgdes.jpg\" />",
+      "posicao": {
+        "linha": 107,
+        "coluna": 10
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "6ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 19431,
+          "fim": 19431,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-4",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"http://dep.ct.ufrn.br/wp-content/uploads/2025/04/EP - ENADE - Conceito 5.jpg\" width=\"100%\" height=\"80%\" alt=\"\">",
+      "posicao": {
+        "linha": 119,
+        "coluna": 96
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "7ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 20562,
+          "fim": 20562,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-5",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"http://dep.ct.ufrn.br/wp-content/uploads/2026/01/Resultado 2026 - Incrições - Esp. Eng. de Operação e Gestão de Ativos.jpg\" width=\"100%\" height=\"80%\" alt=\"\">",
+      "posicao": {
+        "linha": 126,
+        "coluna": 139
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "8ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 21200,
+          "fim": 21200,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "render-blocking-hint-1",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://dep.ct.ufrn.br/wp-content/themes/dep2014/style.css\" />",
+      "posicao": {
+        "linha": 7,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (0.5 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-2",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script src=\"wp-content/themes/dep2014/js/jquery.js\">",
+      "posicao": {
+        "linha": 9,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (150 ms de bloqueio, 31.9 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-3",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script src=\"wp-content/themes/dep2014/js/jquery.dropdown.js\">",
+      "posicao": {
+        "linha": 10,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (0.5 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-4",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script src=\"wp-content/themes/dep2014/js/webmail.js\">",
+      "posicao": {
+        "linha": 11,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (0.4 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "landmarks-llm-1",
+      "regra": "landmarks-llm",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<div id=\"topo\">",
+      "posicao": {
+        "linha": 62,
+        "coluna": 9
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "Landmark banner ausente: trocar este <div> por <header>. Justificativa do modelo: \"Id \\\"topo\\\" no início do wrapper, com logos (c5) e o menu principal de links, por isso cumpre o papel de cabeçalho do site.\". Proposta gerada por LLM (landmarks-v2, claude-haiku-5-5, candidato c2); conferir CSS e scripts que selecionem \"div\" neste elemento.",
+      "edicoes": [
+        {
+          "inicio": 16232,
+          "fim": 16235,
+          "texto": "header"
+        },
+        {
+          "inicio": 19308,
+          "fim": 19311,
+          "texto": "header"
+        }
+      ]
+    },
+    {
+      "id": "landmarks-llm-2",
+      "regra": "landmarks-llm",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<div id=\"content\">",
+      "posicao": {
+        "linha": 103,
+        "coluna": 9
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "Landmark main ausente: trocar este <div> por <main>. Justificativa do modelo: \"Id \\\"content\\\" após o topo e antes do rodapé, reúne destaques, eventos e notícias, que é o conteúdo exclusivo da página.\". Proposta gerada por LLM (landmarks-v2, claude-haiku-5-5, candidato c3); conferir CSS e scripts que selecionem \"div\" neste elemento.",
+      "edicoes": [
+        {
+          "inicio": 19345,
+          "fim": 19348,
+          "texto": "main"
+        },
+        {
+          "inicio": 28199,
+          "fim": 28202,
+          "texto": "main"
+        }
+      ]
+    },
+    {
+      "id": "landmarks-llm-3",
+      "regra": "landmarks-llm",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<div id=\"rodape\">",
+      "posicao": {
+        "linha": 225,
+        "coluna": 9
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "Landmark contentinfo ausente: trocar este <div> por <footer>. Justificativa do modelo: \"Id \\\"rodape\\\" no fim da página, com endereço da UFRN, Campus Lagoa Nova e contatos do centro.\". Proposta gerada por LLM (landmarks-v2, claude-haiku-5-5, candidato c4); conferir CSS e scripts que selecionem \"div\" neste elemento.",
+      "edicoes": [
+        {
+          "inicio": 28241,
+          "fim": 28244,
+          "texto": "footer"
+        },
+        {
+          "inicio": 28883,
+          "fim": 28886,
+          "texto": "footer"
+        }
+      ]
+    }
+  ]
+}

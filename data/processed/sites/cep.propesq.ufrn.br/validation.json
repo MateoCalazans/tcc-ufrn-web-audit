@@ -1,0 +1,692 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T22:26:30.463Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "siteId": "cep.propesq.ufrn.br",
+  "contexto": {
+    "grupo": "estatico",
+    "tecnologia": "estatico",
+    "tipo": "outro"
+  },
+  "recomendacoes": {
+    "total": 7,
+    "corrigidas": 2,
+    "corrigidasLlm": 1,
+    "llm": {
+      "prompt": "landmarks-v2",
+      "arquivo": "docs/prompts/landmarks-v2.md",
+      "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "effort": "low",
+      "maxTokens": 4000,
+      "execucao": {
+        "siteId": "cep.propesq.ufrn.br",
+        "prompt": "landmarks-v2",
+        "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+        "modelo": "claude-haiku-5-5",
+        "modeloResposta": "claude-haiku-5-5",
+        "respostaId": "msg_011Ch7HiPyxLRyCawRvcJac8",
+        "chamada": true,
+        "motivo": null,
+        "ausentes": [
+          "main"
+        ],
+        "candidatos": 6,
+        "elegiveis": 6,
+        "stopReason": "end_turn",
+        "inputTokens": 1744,
+        "outputTokens": 133,
+        "custoUsd": 0.0002409,
+        "propostas": 1,
+        "validas": 1,
+        "rejeitadas": [],
+        "textoIgual": true,
+        "landmarksDepois": {
+          "banner": 1,
+          "navigation": 2,
+          "main": 1,
+          "contentinfo": 1
+        },
+        "erro": null,
+        "duracaoMs": 1684
+      }
+    }
+  },
+  "parametros": {
+    "execucoesPorVariante": 3,
+    "formFactor": "mobile",
+    "throttlingMethod": "simulate",
+    "chromeFlagsExtras": [
+      "--host-resolver-rules=MAP * ~NOTFOUND, EXCLUDE 127.0.0.1"
+    ],
+    "userAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+    "relogioSemantica": "2026-11-09T20:30:57.188Z",
+    "relogioLighthouse": "real"
+  },
+  "ordem": [
+    {
+      "variante": "original",
+      "n": 1
+    },
+    {
+      "variante": "corrigido",
+      "n": 1
+    },
+    {
+      "variante": "original",
+      "n": 2
+    },
+    {
+      "variante": "corrigido",
+      "n": 2
+    },
+    {
+      "variante": "original",
+      "n": 3
+    },
+    {
+      "variante": "corrigido",
+      "n": 3
+    }
+  ],
+  "variantes": {
+    "original": {
+      "urlLocal": "http://127.0.0.1:56123/",
+      "execucoes": [
+        {
+          "n": 1,
+          "startedAt": "2026-11-16T22:34:34.732Z",
+          "durationMs": 7764,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 78,
+            "accessibility": 72,
+            "best-practices": 88,
+            "seo": 91
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:56123/",
+          "mainDocumentUrl": "http://127.0.0.1:56123/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2865.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 78,
+              "accessibility": 72,
+              "best-practices": 88,
+              "seo": 91
+            },
+            "fcpMs": 2940,
+            "lcpMs": 4619.5,
+            "tbtMs": 36,
+            "cls": 0.0267314702308627,
+            "speedIndexMs": 2940,
+            "pesoTotalBytes": 553397,
+            "requisicoes": 37,
+            "jsNaoUsadoBytes": 30309,
+            "cssNaoUsadoBytes": 21905
+          }
+        },
+        {
+          "n": 2,
+          "startedAt": "2026-11-16T22:34:50.364Z",
+          "durationMs": 7673,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 79,
+            "accessibility": 72,
+            "best-practices": 88,
+            "seo": 91
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:56123/",
+          "mainDocumentUrl": "http://127.0.0.1:56123/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2747,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 79,
+              "accessibility": 72,
+              "best-practices": 88,
+              "seo": 91
+            },
+            "fcpMs": 2852.01315,
+            "lcpMs": 4517.0262999999995,
+            "tbtMs": 91.99999999999955,
+            "cls": 0.0267314702308627,
+            "speedIndexMs": 2852.01315,
+            "pesoTotalBytes": 553397,
+            "requisicoes": 37,
+            "jsNaoUsadoBytes": 30309,
+            "cssNaoUsadoBytes": 21905
+          }
+        },
+        {
+          "n": 3,
+          "startedAt": "2026-11-16T22:35:05.733Z",
+          "durationMs": 7733,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 97,
+            "accessibility": 72,
+            "best-practices": 88,
+            "seo": 91
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:56123/",
+          "mainDocumentUrl": "http://127.0.0.1:56123/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 3014,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 97,
+              "accessibility": 72,
+              "best-practices": 88,
+              "seo": 91
+            },
+            "fcpMs": 1502.2032000000002,
+            "lcpMs": 2477.2032,
+            "tbtMs": 22,
+            "cls": 0.0267314702308627,
+            "speedIndexMs": 1502.2032000000002,
+            "pesoTotalBytes": 553397,
+            "requisicoes": 37,
+            "jsNaoUsadoBytes": 30309,
+            "cssNaoUsadoBytes": 21905
+          }
+        }
+      ],
+      "mediana": {
+        "criterio": "nota-performance",
+        "n": 2
+      },
+      "metricas": {
+        "notas": {
+          "performance": 79,
+          "accessibility": 72,
+          "best-practices": 88,
+          "seo": 91
+        },
+        "fcpMs": 2852.01315,
+        "lcpMs": 4517.0262999999995,
+        "tbtMs": 91.99999999999955,
+        "cls": 0.0267314702308627,
+        "speedIndexMs": 2852.01315,
+        "pesoTotalBytes": 553397,
+        "requisicoes": 37,
+        "jsNaoUsadoBytes": 30309,
+        "cssNaoUsadoBytes": 21905
+      },
+      "variacaoPerformance": {
+        "n": 3,
+        "min": 78,
+        "max": 97,
+        "amplitude": 19,
+        "media": 84.67,
+        "desvioPadrao": 10.69
+      },
+      "semantica": {
+        "status": "ok",
+        "indicadores": {
+          "divSpan": {
+            "div": 85,
+            "span": 13,
+            "total": 242,
+            "proporcao": 0.4049586776859504
+          },
+          "landmarks": {
+            "banner": 1,
+            "navigation": 3,
+            "main": 0,
+            "contentinfo": 1
+          },
+          "titulos": {
+            "total": 13,
+            "h1": 8,
+            "porNivel": [
+              8,
+              0,
+              5,
+              0,
+              0,
+              0
+            ],
+            "saltos": 4,
+            "maiorSalto": 2,
+            "primeiroNivel": 3
+          },
+          "estrutura": {
+            "article": 0,
+            "section": 4,
+            "aside": 0,
+            "figure": 0,
+            "ul": 7,
+            "ol": 0
+          },
+          "interativosFalsos": {
+            "comOnclick": 0,
+            "falsos": 0
+          },
+          "metadados": {
+            "lang": "pt-br",
+            "temTitle": true,
+            "titleComprimento": 32,
+            "temViewport": true,
+            "temDescription": true
+          },
+          "imagens": {
+            "total": 3,
+            "semAlt": 2,
+            "altVazio": 0,
+            "semAltComAlternativa": 0
+          },
+          "campos": {
+            "total": 1,
+            "semLabel": 1,
+            "semLabelComPlaceholderOuTitle": 0
+          },
+          "obsoletas": {
+            "roteiro": 0,
+            "whatwg": 0,
+            "porTag": {}
+          },
+          "tabelas": {
+            "total": 0,
+            "layoutDeclarada": 0,
+            "layoutHeuristica": 0,
+            "dados": 0,
+            "indeterminada": 0
+          }
+        },
+        "indice": {
+          "subnotas": {
+            "landmarks": 75,
+            "titulos": 33.333333333333336,
+            "imagens": 33.333333333333336,
+            "campos": 0,
+            "divSpan": 59.50413223140496,
+            "metadados": 100,
+            "interativos": null,
+            "obsoletos": 100
+          },
+          "indice": 50.1232419892707,
+          "indicePesosIguais": 57.31011412829595
+        },
+        "networkidleTimeout": false
+      },
+      "faltasNoServidor": [
+        "/dist/img/favicon.png?v=2.0.0",
+        "/robots.txt"
+      ]
+    },
+    "corrigido": {
+      "urlLocal": "http://127.0.0.1:56124/",
+      "execucoes": [
+        {
+          "n": 1,
+          "startedAt": "2026-11-16T22:34:42.497Z",
+          "durationMs": 7867,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 79,
+            "accessibility": 74,
+            "best-practices": 88,
+            "seo": 91
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:56124/",
+          "mainDocumentUrl": "http://127.0.0.1:56124/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2860,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 79,
+              "accessibility": 74,
+              "best-practices": 88,
+              "seo": 91
+            },
+            "fcpMs": 2851.06695,
+            "lcpMs": 4493.811725,
+            "tbtMs": 14,
+            "cls": 0.0267314702308627,
+            "speedIndexMs": 2851.06695,
+            "pesoTotalBytes": 553419,
+            "requisicoes": 37,
+            "jsNaoUsadoBytes": 30309,
+            "cssNaoUsadoBytes": 21905
+          }
+        },
+        {
+          "n": 2,
+          "startedAt": "2026-11-16T22:34:58.038Z",
+          "durationMs": 7695,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 79,
+            "accessibility": 74,
+            "best-practices": 88,
+            "seo": 91
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:56124/",
+          "mainDocumentUrl": "http://127.0.0.1:56124/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2908.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 79,
+              "accessibility": 74,
+              "best-practices": 88,
+              "seo": 91
+            },
+            "fcpMs": 3000.95295,
+            "lcpMs": 4464.9059,
+            "tbtMs": 87.99999999999955,
+            "cls": 0.0267314702308627,
+            "speedIndexMs": 3000.95295,
+            "pesoTotalBytes": 553419,
+            "requisicoes": 37,
+            "jsNaoUsadoBytes": 30309,
+            "cssNaoUsadoBytes": 21905
+          }
+        },
+        {
+          "n": 3,
+          "startedAt": "2026-11-16T22:35:13.466Z",
+          "durationMs": 7678,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 80,
+            "accessibility": 74,
+            "best-practices": 88,
+            "seo": 91
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:56124/",
+          "mainDocumentUrl": "http://127.0.0.1:56124/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 3028,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 80,
+              "accessibility": 74,
+              "best-practices": 88,
+              "seo": 91
+            },
+            "fcpMs": 2852.091,
+            "lcpMs": 4426.530500000001,
+            "tbtMs": 23,
+            "cls": 0.027345587029510995,
+            "speedIndexMs": 2852.091,
+            "pesoTotalBytes": 553419,
+            "requisicoes": 37,
+            "jsNaoUsadoBytes": 30309,
+            "cssNaoUsadoBytes": 21905
+          }
+        }
+      ],
+      "mediana": {
+        "criterio": "nota-performance",
+        "n": 2
+      },
+      "metricas": {
+        "notas": {
+          "performance": 79,
+          "accessibility": 74,
+          "best-practices": 88,
+          "seo": 91
+        },
+        "fcpMs": 3000.95295,
+        "lcpMs": 4464.9059,
+        "tbtMs": 87.99999999999955,
+        "cls": 0.0267314702308627,
+        "speedIndexMs": 3000.95295,
+        "pesoTotalBytes": 553419,
+        "requisicoes": 37,
+        "jsNaoUsadoBytes": 30309,
+        "cssNaoUsadoBytes": 21905
+      },
+      "variacaoPerformance": {
+        "n": 3,
+        "min": 79,
+        "max": 80,
+        "amplitude": 1,
+        "media": 79.33,
+        "desvioPadrao": 0.58
+      },
+      "semantica": {
+        "status": "ok",
+        "indicadores": {
+          "divSpan": {
+            "div": 84,
+            "span": 13,
+            "total": 242,
+            "proporcao": 0.40082644628099173
+          },
+          "landmarks": {
+            "banner": 1,
+            "navigation": 3,
+            "main": 1,
+            "contentinfo": 1
+          },
+          "titulos": {
+            "total": 13,
+            "h1": 8,
+            "porNivel": [
+              8,
+              0,
+              5,
+              0,
+              0,
+              0
+            ],
+            "saltos": 4,
+            "maiorSalto": 2,
+            "primeiroNivel": 3
+          },
+          "estrutura": {
+            "article": 0,
+            "section": 4,
+            "aside": 0,
+            "figure": 0,
+            "ul": 7,
+            "ol": 0
+          },
+          "interativosFalsos": {
+            "comOnclick": 0,
+            "falsos": 0
+          },
+          "metadados": {
+            "lang": "pt-br",
+            "temTitle": true,
+            "titleComprimento": 32,
+            "temViewport": true,
+            "temDescription": true
+          },
+          "imagens": {
+            "total": 3,
+            "semAlt": 2,
+            "altVazio": 0,
+            "semAltComAlternativa": 0
+          },
+          "campos": {
+            "total": 1,
+            "semLabel": 1,
+            "semLabelComPlaceholderOuTitle": 0
+          },
+          "obsoletas": {
+            "roteiro": 0,
+            "whatwg": 0,
+            "porTag": {}
+          },
+          "tabelas": {
+            "total": 0,
+            "layoutDeclarada": 0,
+            "layoutHeuristica": 0,
+            "dados": 0,
+            "indeterminada": 0
+          }
+        },
+        "indice": {
+          "subnotas": {
+            "landmarks": 100,
+            "titulos": 33.333333333333336,
+            "imagens": 33.333333333333336,
+            "campos": 0,
+            "divSpan": 59.917355371900825,
+            "metadados": 100,
+            "interativos": null,
+            "obsoletos": 100
+          },
+          "indice": 55.42989705669132,
+          "indicePesosIguais": 60.94057457693822
+        },
+        "networkidleTimeout": false
+      },
+      "faltasNoServidor": [
+        "/dist/img/favicon.png?v=2.0.0",
+        "/robots.txt"
+      ]
+    }
+  },
+  "deltas": {
+    "nota_performance": {
+      "original": 79,
+      "corrigido": 79,
+      "delta": 0
+    },
+    "nota_accessibility": {
+      "original": 72,
+      "corrigido": 74,
+      "delta": 2
+    },
+    "nota_best_practices": {
+      "original": 88,
+      "corrigido": 88,
+      "delta": 0
+    },
+    "nota_seo": {
+      "original": 91,
+      "corrigido": 91,
+      "delta": 0
+    },
+    "fcp_ms": {
+      "original": 2852.01315,
+      "corrigido": 3000.95295,
+      "delta": 148.93979999999965
+    },
+    "lcp_ms": {
+      "original": 4517.0262999999995,
+      "corrigido": 4464.9059,
+      "delta": -52.12039999999979
+    },
+    "tbt_ms": {
+      "original": 91.99999999999955,
+      "corrigido": 87.99999999999955,
+      "delta": -4
+    },
+    "cls": {
+      "original": 0.0267314702308627,
+      "corrigido": 0.0267314702308627,
+      "delta": 0
+    },
+    "speed_index_ms": {
+      "original": 2852.01315,
+      "corrigido": 3000.95295,
+      "delta": 148.93979999999965
+    },
+    "peso_total_bytes": {
+      "original": 553397,
+      "corrigido": 553419,
+      "delta": 22
+    },
+    "requisicoes": {
+      "original": 37,
+      "corrigido": 37,
+      "delta": 0
+    },
+    "indice_semantica": {
+      "original": 50.1232419892707,
+      "corrigido": 55.42989705669132,
+      "delta": 5.306655067420614
+    },
+    "indice_semantica_pesos_iguais": {
+      "original": 57.31011412829595,
+      "corrigido": 60.94057457693822,
+      "delta": 3.6304604486422676
+    },
+    "sub_landmarks": {
+      "original": 75,
+      "corrigido": 100,
+      "delta": 25
+    },
+    "sub_titulos": {
+      "original": 33.333333333333336,
+      "corrigido": 33.333333333333336,
+      "delta": 0
+    },
+    "sub_imagens": {
+      "original": 33.333333333333336,
+      "corrigido": 33.333333333333336,
+      "delta": 0
+    },
+    "sub_campos": {
+      "original": 0,
+      "corrigido": 0,
+      "delta": 0
+    },
+    "sub_divSpan": {
+      "original": 59.50413223140496,
+      "corrigido": 59.917355371900825,
+      "delta": 0.41322314049586595
+    },
+    "sub_metadados": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    },
+    "sub_interativos": {
+      "original": null,
+      "corrigido": null,
+      "delta": null
+    },
+    "sub_obsoletos": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    }
+  }
+}

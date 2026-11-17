@@ -1,0 +1,586 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T23:30:44.811Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12",
+      "diff": "9.0.0",
+      "@anthropic-ai/sdk": "1.8.0"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "id": "thevideogame.ufrn.br",
+  "url": "http://thevideogame.ufrn.br/",
+  "fonte": {
+    "html": "index.html",
+    "codificacao": "utf-8",
+    "bom": true,
+    "har": true,
+    "lighthouse": null,
+    "lighthouseVersion": null
+  },
+  "regras": [
+    {
+      "id": "html-lang",
+      "dimensao": "semantica",
+      "descricao": "O elemento <html> declara o idioma da página (atributo lang)."
+    },
+    {
+      "id": "meta-viewport",
+      "dimensao": "performance",
+      "descricao": "A página declara <meta name=\"viewport\"> adequada a telas móveis, sem bloquear o zoom."
+    },
+    {
+      "id": "img-dimensions",
+      "dimensao": "performance",
+      "descricao": "Toda <img> declara width e height, para o navegador reservar o espaço antes do download."
+    },
+    {
+      "id": "img-lazy",
+      "dimensao": "performance",
+      "descricao": "<img> depois das 3 primeiras do documento usa loading=\"lazy\" (exceto a imagem LCP)."
+    },
+    {
+      "id": "obsolete-tags",
+      "dimensao": "semantica",
+      "descricao": "Sem elementos obsoletos do WHATWG (center, font, marquee…); <font> simples vira <span style>."
+    },
+    {
+      "id": "heading-skip",
+      "dimensao": "semantica",
+      "descricao": "Títulos não pulam níveis ao descer na hierarquia (h1 → h3, por exemplo)."
+    },
+    {
+      "id": "fake-button",
+      "dimensao": "semantica",
+      "descricao": "Elementos clicáveis são <button>/<a>, não div/span com onclick."
+    },
+    {
+      "id": "render-blocking-hint",
+      "dimensao": "performance",
+      "descricao": "Scripts e folhas de estilo que o Lighthouse aponta como bloqueantes são adiados quando não são críticos."
+    },
+    {
+      "id": "landmarks-llm",
+      "dimensao": "semantica",
+      "descricao": "Landmarks ausentes propostos por LLM sobre <div>, <section> ou <article> existentes (landmarks-v2, claude-haiku-5-5)."
+    }
+  ],
+  "llm": {
+    "prompt": "landmarks-v2",
+    "arquivo": "docs/prompts/landmarks-v2.md",
+    "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+    "modelo": "claude-haiku-5-5",
+    "effort": "low",
+    "maxTokens": 4000,
+    "execucao": {
+      "siteId": "thevideogame.ufrn.br",
+      "prompt": "landmarks-v2",
+      "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "modeloResposta": "claude-haiku-5-5",
+      "respostaId": "msg_011Ch7UsJ3obx9mAdm7NUdUV",
+      "chamada": true,
+      "motivo": null,
+      "ausentes": [
+        "header",
+        "nav",
+        "main",
+        "footer"
+      ],
+      "candidatos": 2,
+      "elegiveis": 2,
+      "stopReason": "end_turn",
+      "inputTokens": 1311,
+      "outputTokens": 380,
+      "custoUsd": 0.0003211,
+      "propostas": 2,
+      "validas": 2,
+      "rejeitadas": [],
+      "textoIgual": true,
+      "landmarksDepois": {
+        "banner": 0,
+        "navigation": 0,
+        "main": 1,
+        "contentinfo": 1
+      },
+      "erro": null,
+      "duracaoMs": 2688
+    }
+  },
+  "resumo": {
+    "total": 13,
+    "corrigidas": 9,
+    "porRegra": {
+      "html-lang": {
+        "total": 1,
+        "corrigidas": 1
+      },
+      "meta-viewport": {
+        "total": 1,
+        "corrigidas": 1
+      },
+      "img-dimensions": {
+        "total": 5,
+        "corrigidas": 3
+      },
+      "img-lazy": {
+        "total": 2,
+        "corrigidas": 2
+      },
+      "obsolete-tags": {
+        "total": 2,
+        "corrigidas": 0
+      },
+      "heading-skip": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "fake-button": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "render-blocking-hint": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "landmarks-llm": {
+        "total": 2,
+        "corrigidas": 2
+      }
+    },
+    "porDimensao": {
+      "performance": 8,
+      "semantica": 5
+    }
+  },
+  "guardaImagens": {
+    "imagens": [
+      {
+        "recomendacao": "img-dimensions-1",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 720,
+              "altura": 76,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 382,
+              "altura": 40,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 800,
+              "altura": 85,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 800,
+              "altura": 85,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-2",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 400,
+              "altura": 574,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 382,
+              "altura": 548,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 400,
+              "altura": 574,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 400,
+              "altura": 574,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-3",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 150,
+              "altura": 47,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 150,
+              "altura": 47,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 150,
+              "altura": 47,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 150,
+              "altura": 47,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-4",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 200,
+              "altura": 46,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 200,
+              "altura": 46,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 200,
+              "altura": 46,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 200,
+              "altura": 46,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-5",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 150,
+              "altura": 50,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 150,
+              "altura": 50,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 150,
+              "altura": 50,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 150,
+              "altura": 50,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      }
+    ],
+    "mantidas": 3,
+    "desfeitas": 2,
+    "erro": null
+  },
+  "recommendations": [
+    {
+      "id": "html-lang-1",
+      "regra": "html-lang",
+      "severidade": "alta",
+      "dimensao": "semantica",
+      "evidencia": "<html>",
+      "posicao": {
+        "linha": 2,
+        "coluna": 1
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "O <html> não tem o atributo lang: leitores de tela não sabem em que idioma ler a página. Declarar lang=\"pt-BR\".",
+      "edicoes": [
+        {
+          "inicio": 22,
+          "fim": 22,
+          "texto": " lang=\"pt-BR\""
+        }
+      ]
+    },
+    {
+      "id": "meta-viewport-1",
+      "regra": "meta-viewport",
+      "severidade": "alta",
+      "dimensao": "performance",
+      "evidencia": "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">",
+      "posicao": {
+        "linha": 6,
+        "coluna": 5
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "Não há <meta name=\"viewport\">: no celular a página é desenhada como desktop e reduzida. Declarar content=\"width=device-width, initial-scale=1\".",
+      "edicoes": [
+        {
+          "inicio": 149,
+          "fim": 149,
+          "texto": "\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-1",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img style=\"width: 800px\" src=\"images/frase.png\" class=\"img-responsive\">",
+      "posicao": {
+        "linha": 23,
+        "coluna": 17
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"4134\" height=\"437\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: igual)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-2",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img style=\"width: 400px\" src=\"images/logo.png\" class=\"img-responsive\">",
+      "posicao": {
+        "linha": 24,
+        "coluna": 17
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"3543\" height=\"5080\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: igual)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-3",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img style=\"width: 150px\" src=\"images/ufrn.png\" class=\"img-responsive\">",
+      "posicao": {
+        "linha": 39,
+        "coluna": 63
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"594\" height=\"188\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 1389,
+          "fim": 1389,
+          "texto": " width=\"594\" height=\"188\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-4",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img style=\"width: 200px\" src=\"images/imd.png\" class=\"img-responsive\">",
+      "posicao": {
+        "linha": 42,
+        "coluna": 70
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"6307\" height=\"1447\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 1610,
+          "fim": 1610,
+          "texto": " width=\"6307\" height=\"1447\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-5",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img style=\"width: 150px\" src=\"images/proex.png\" class=\"img-responsive\">",
+      "posicao": {
+        "linha": 45,
+        "coluna": 69
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"3276\" height=\"1100\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 1836,
+          "fim": 1836,
+          "texto": " width=\"3276\" height=\"1100\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-1",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img style=\"width: 200px\" src=\"images/imd.png\" class=\"img-responsive\">",
+      "posicao": {
+        "linha": 42,
+        "coluna": 70
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "4ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 1545,
+          "fim": 1545,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-2",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img style=\"width: 150px\" src=\"images/proex.png\" class=\"img-responsive\">",
+      "posicao": {
+        "linha": 45,
+        "coluna": 69
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "5ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 1769,
+          "fim": 1769,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "obsolete-tags-1",
+      "regra": "obsolete-tags",
+      "severidade": "baixa",
+      "dimensao": "semantica",
+      "evidencia": "<center>",
+      "posicao": {
+        "linha": 21,
+        "coluna": 13
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<center> é obsoleto no HTML (WHATWG): usar CSS (text-align: center para texto; margin-inline: auto para blocos).",
+      "edicoes": []
+    },
+    {
+      "id": "obsolete-tags-2",
+      "regra": "obsolete-tags",
+      "severidade": "baixa",
+      "dimensao": "semantica",
+      "evidencia": "<center>",
+      "posicao": {
+        "linha": 37,
+        "coluna": 13
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<center> é obsoleto no HTML (WHATWG): usar CSS (text-align: center para texto; margin-inline: auto para blocos).",
+      "edicoes": []
+    },
+    {
+      "id": "landmarks-llm-1",
+      "regra": "landmarks-llm",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<section id=\"TheVideoGame\">",
+      "posicao": {
+        "linha": 18,
+        "coluna": 5
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "Landmark main ausente: trocar este <section> por <main>. Justificativa do modelo: \"É o único bloco de conteúdo principal (id TheVideoGame, com imagens e sem links de navegação nem texto de rodapé), posicionado no topo do corpo da página.\". Proposta gerada por LLM (landmarks-v2, claude-haiku-5-5, candidato c1); conferir CSS e scripts que selecionem \"section\" neste elemento.",
+      "edicoes": [
+        {
+          "inicio": 608,
+          "fim": 615,
+          "texto": "main"
+        },
+        {
+          "inicio": 1015,
+          "fim": 1022,
+          "texto": "main"
+        }
+      ]
+    },
+    {
+      "id": "landmarks-llm-2",
+      "regra": "landmarks-llm",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<section id=\"Realizacao\">",
+      "posicao": {
+        "linha": 32,
+        "coluna": 5
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "Landmark contentinfo ausente: trocar este <section> por <footer>. Justificativa do modelo: \"Está no fim da página, com id Realizacao, texto de copyright e direitos reservados, além de links institucionais.\". Proposta gerada por LLM (landmarks-v2, claude-haiku-5-5, candidato c2); conferir CSS e scripts que selecionem \"section\" neste elemento.",
+      "edicoes": [
+        {
+          "inicio": 1055,
+          "fim": 1062,
+          "texto": "footer"
+        },
+        {
+          "inicio": 2176,
+          "fim": 2183,
+          "texto": "footer"
+        }
+      ]
+    }
+  ]
+}

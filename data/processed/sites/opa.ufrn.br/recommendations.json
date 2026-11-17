@@ -1,0 +1,1711 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T21:05:15.459Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12",
+      "diff": "9.0.0",
+      "@anthropic-ai/sdk": "1.8.0"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "id": "opa.ufrn.br",
+  "url": "https://opa.ufrn.br/",
+  "fonte": {
+    "html": "index.html",
+    "codificacao": "utf-8",
+    "bom": false,
+    "har": true,
+    "lighthouse": "lh1.json",
+    "lighthouseVersion": "13.5.0"
+  },
+  "regras": [
+    {
+      "id": "html-lang",
+      "dimensao": "semantica",
+      "descricao": "O elemento <html> declara o idioma da página (atributo lang)."
+    },
+    {
+      "id": "meta-viewport",
+      "dimensao": "performance",
+      "descricao": "A página declara <meta name=\"viewport\"> adequada a telas móveis, sem bloquear o zoom."
+    },
+    {
+      "id": "img-dimensions",
+      "dimensao": "performance",
+      "descricao": "Toda <img> declara width e height, para o navegador reservar o espaço antes do download."
+    },
+    {
+      "id": "img-lazy",
+      "dimensao": "performance",
+      "descricao": "<img> depois das 3 primeiras do documento usa loading=\"lazy\" (exceto a imagem LCP)."
+    },
+    {
+      "id": "obsolete-tags",
+      "dimensao": "semantica",
+      "descricao": "Sem elementos obsoletos do WHATWG (center, font, marquee…); <font> simples vira <span style>."
+    },
+    {
+      "id": "heading-skip",
+      "dimensao": "semantica",
+      "descricao": "Títulos não pulam níveis ao descer na hierarquia (h1 → h3, por exemplo)."
+    },
+    {
+      "id": "fake-button",
+      "dimensao": "semantica",
+      "descricao": "Elementos clicáveis são <button>/<a>, não div/span com onclick."
+    },
+    {
+      "id": "render-blocking-hint",
+      "dimensao": "performance",
+      "descricao": "Scripts e folhas de estilo que o Lighthouse aponta como bloqueantes são adiados quando não são críticos."
+    },
+    {
+      "id": "landmarks-llm",
+      "dimensao": "semantica",
+      "descricao": "Landmarks ausentes propostos por LLM sobre <div>, <section> ou <article> existentes (landmarks-v2, claude-haiku-5-5)."
+    }
+  ],
+  "llm": {
+    "prompt": "landmarks-v2",
+    "arquivo": "docs/prompts/landmarks-v2.md",
+    "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+    "modelo": "claude-haiku-5-5",
+    "effort": "low",
+    "maxTokens": 4000,
+    "execucao": {
+      "siteId": "opa.ufrn.br",
+      "prompt": "landmarks-v2",
+      "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "modeloResposta": "claude-haiku-5-5",
+      "respostaId": "msg_011Ch7JKfHBWbLyTSzb7zUdR",
+      "chamada": true,
+      "motivo": null,
+      "ausentes": [
+        "main"
+      ],
+      "candidatos": 14,
+      "elegiveis": 14,
+      "stopReason": "end_turn",
+      "inputTokens": 2709,
+      "outputTokens": 458,
+      "custoUsd": 0.0004999000000000001,
+      "propostas": 1,
+      "validas": 1,
+      "rejeitadas": [],
+      "textoIgual": true,
+      "landmarksDepois": {
+        "banner": 1,
+        "navigation": 1,
+        "main": 1,
+        "contentinfo": 1
+      },
+      "erro": "CSS depende da tag: div",
+      "duracaoMs": 3588
+    }
+  },
+  "resumo": {
+    "total": 70,
+    "corrigidas": 26,
+    "porRegra": {
+      "html-lang": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "meta-viewport": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "img-dimensions": {
+        "total": 12,
+        "corrigidas": 12
+      },
+      "img-lazy": {
+        "total": 14,
+        "corrigidas": 14
+      },
+      "obsolete-tags": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "heading-skip": {
+        "total": 4,
+        "corrigidas": 0
+      },
+      "fake-button": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "render-blocking-hint": {
+        "total": 39,
+        "corrigidas": 0
+      },
+      "landmarks-llm": {
+        "total": 1,
+        "corrigidas": 0
+      }
+    },
+    "porDimensao": {
+      "performance": 65,
+      "semantica": 5
+    }
+  },
+  "guardaImagens": {
+    "imagens": [
+      {
+        "recomendacao": "img-dimensions-1",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 392,
+              "altura": 490,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 392,
+              "altura": 490,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 350,
+              "altura": 437,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 350,
+              "altura": 437,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-2",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 392,
+              "altura": 490,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 392,
+              "altura": 490,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 350,
+              "altura": 437,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 350,
+              "altura": 437,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-3",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 392,
+              "altura": 490,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 392,
+              "altura": 490,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 350,
+              "altura": 437,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 350,
+              "altura": 437,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-4",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-5",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-6",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-7",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-8",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-9",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-10",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-11",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-12",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      }
+    ],
+    "mantidas": 12,
+    "desfeitas": 0,
+    "erro": null
+  },
+  "recommendations": [
+    {
+      "id": "img-dimensions-1",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img decoding=\"async\" src=\"https://opa.ufrn.br/wp-content/uploads/2026/10/destaque_animacao-DL.jpg\" alt=\"FABULAR O MUNDO: PROCESSOS DE CRIAÇÃO DA ANIMAÇÃO INFANTIL AS AVENTURAS DE LUCARINO, EM DIOGO …",
+      "posicao": {
+        "linha": 420,
+        "coluna": 167
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1080\" height=\"1350\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 54502,
+          "fim": 54502,
+          "texto": " width=\"1080\" height=\"1350\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-2",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img decoding=\"async\" src=\"https://opa.ufrn.br/wp-content/uploads/2026/05/Redes-sociais-OPA.jpg\" alt=\"Entre Pontes: Catálogo produzido pela UFRN e UFRB aproxima localidades através de filmes-carta\"/>",
+      "posicao": {
+        "linha": 431,
+        "coluna": 160
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1890\" height=\"2363\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 56307,
+          "fim": 56307,
+          "texto": " width=\"1890\" height=\"2363\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-3",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img decoding=\"async\" src=\"https://opa.ufrn.br/wp-content/uploads/2025/12/post-Mostra-opa-1.jpg\" alt=\"Produções potiguares sobem ao palco na 12ª Mostra de Cinema de Gostoso\"/>",
+      "posicao": {
+        "linha": 442,
+        "coluna": 137
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1080\" height=\"1350\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 58044,
+          "fim": 58044,
+          "texto": " width=\"1080\" height=\"1350\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-4",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img decoding=\"async\" class=\"swiper-slide-image\" src=\"https://opa.ufrn.br/wp-content/uploads/2020/08/decom-1-150x150.png\" alt=\"decom\" />",
+      "posicao": {
+        "linha": 614,
+        "coluna": 132
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"150\" height=\"150\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 76066,
+          "fim": 76066,
+          "texto": " width=\"150\" height=\"150\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-5",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img decoding=\"async\" class=\"swiper-slide-image\" src=\"https://opa.ufrn.br/wp-content/uploads/2020/08/UFRN-1-150x150.png\" alt=\"UFRN\" />",
+      "posicao": {
+        "linha": 614,
+        "coluna": 406
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"150\" height=\"150\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 76338,
+          "fim": 76338,
+          "texto": " width=\"150\" height=\"150\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-6",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img decoding=\"async\" class=\"swiper-slide-image\" src=\"https://opa.ufrn.br/wp-content/uploads/2020/10/logo.amaru_-1-150x150.png\" alt=\"logo.amaru\" />",
+      "posicao": {
+        "linha": 614,
+        "coluna": 678
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"150\" height=\"150\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 76623,
+          "fim": 76623,
+          "texto": " width=\"150\" height=\"150\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-7",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img decoding=\"async\" class=\"swiper-slide-image\" src=\"https://opa.ufrn.br/wp-content/uploads/2020/08/OBTEP-150x150.png\" alt=\"OBTEP\" />",
+      "posicao": {
+        "linha": 614,
+        "coluna": 963
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"150\" height=\"150\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 76895,
+          "fim": 76895,
+          "texto": " width=\"150\" height=\"150\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-8",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img decoding=\"async\" class=\"swiper-slide-image\" src=\"https://opa.ufrn.br/wp-content/uploads/2020/08/GPragma-150x150.png\" alt=\"GPragma\" />",
+      "posicao": {
+        "linha": 614,
+        "coluna": 1235
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"150\" height=\"150\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 77171,
+          "fim": 77171,
+          "texto": " width=\"150\" height=\"150\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-9",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img decoding=\"async\" class=\"swiper-slide-image\" src=\"https://opa.ufrn.br/wp-content/uploads/2020/08/Cinemateca_Transp-150x150.png\" alt=\"Cinemateca_Transp\" />",
+      "posicao": {
+        "linha": 614,
+        "coluna": 1511
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"150\" height=\"150\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 77467,
+          "fim": 77467,
+          "texto": " width=\"150\" height=\"150\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-10",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img decoding=\"async\" class=\"swiper-slide-image\" src=\"https://opa.ufrn.br/wp-content/uploads/2020/10/Logo-CAL-Vertical-com-fundo-1-1-150x150.png\" alt=\"Logo - CAL Vertical com fundo (1)\" />",
+      "posicao": {
+        "linha": 614,
+        "coluna": 1807
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"150\" height=\"150\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 77793,
+          "fim": 77793,
+          "texto": " width=\"150\" height=\"150\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-11",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img decoding=\"async\" class=\"swiper-slide-image\" src=\"https://opa.ufrn.br/wp-content/uploads/2020/08/PEIC-150x150.png\" alt=\"PEIC\" />",
+      "posicao": {
+        "linha": 614,
+        "coluna": 2133
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"150\" height=\"150\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 78063,
+          "fim": 78063,
+          "texto": " width=\"150\" height=\"150\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-12",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img decoding=\"async\" class=\"swiper-slide-image\" src=\"https://opa.ufrn.br/wp-content/uploads/2020/08/Cinestesicopng-150x150.png\" alt=\"Cinestesicopng\" />",
+      "posicao": {
+        "linha": 614,
+        "coluna": 2403
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"150\" height=\"150\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 78353,
+          "fim": 78353,
+          "texto": " width=\"150\" height=\"150\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-1",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img fetchpriority=\"high\" decoding=\"async\" width=\"300\" height=\"300\" src=\"https://opa.ufrn.br/wp-content/uploads/2020/08/Group-14-300x300.png\" class=\"attachment-medium size-medium wp-image-20595\" alt=…",
+      "posicao": {
+        "linha": 378,
+        "coluna": 16
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "4ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 49705,
+          "fim": 49705,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-2",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img decoding=\"async\" src=\"https://opa.ufrn.br/wp-content/uploads/2026/10/destaque_animacao-DL.jpg\" alt=\"FABULAR O MUNDO: PROCESSOS DE CRIAÇÃO DA ANIMAÇÃO INFANTIL AS AVENTURAS DE LUCARINO, EM DIOGO …",
+      "posicao": {
+        "linha": 420,
+        "coluna": 167
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "5ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 54298,
+          "fim": 54298,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-3",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img decoding=\"async\" src=\"https://opa.ufrn.br/wp-content/uploads/2026/05/Redes-sociais-OPA.jpg\" alt=\"Entre Pontes: Catálogo produzido pela UFRN e UFRB aproxima localidades através de filmes-carta\"/>",
+      "posicao": {
+        "linha": 431,
+        "coluna": 160
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "6ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 56114,
+          "fim": 56114,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-4",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img decoding=\"async\" src=\"https://opa.ufrn.br/wp-content/uploads/2025/12/post-Mostra-opa-1.jpg\" alt=\"Produções potiguares sobem ao palco na 12ª Mostra de Cinema de Gostoso\"/>",
+      "posicao": {
+        "linha": 442,
+        "coluna": 137
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "7ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 57875,
+          "fim": 57875,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-5",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img decoding=\"async\" class=\"swiper-slide-image\" src=\"https://opa.ufrn.br/wp-content/uploads/2020/08/decom-1-150x150.png\" alt=\"decom\" />",
+      "posicao": {
+        "linha": 614,
+        "coluna": 132
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "10ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 75937,
+          "fim": 75937,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-6",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img decoding=\"async\" class=\"swiper-slide-image\" src=\"https://opa.ufrn.br/wp-content/uploads/2020/08/UFRN-1-150x150.png\" alt=\"UFRN\" />",
+      "posicao": {
+        "linha": 614,
+        "coluna": 406
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "11ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 76211,
+          "fim": 76211,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-7",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img decoding=\"async\" class=\"swiper-slide-image\" src=\"https://opa.ufrn.br/wp-content/uploads/2020/10/logo.amaru_-1-150x150.png\" alt=\"logo.amaru\" />",
+      "posicao": {
+        "linha": 614,
+        "coluna": 678
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "12ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 76483,
+          "fim": 76483,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-8",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img decoding=\"async\" class=\"swiper-slide-image\" src=\"https://opa.ufrn.br/wp-content/uploads/2020/08/OBTEP-150x150.png\" alt=\"OBTEP\" />",
+      "posicao": {
+        "linha": 614,
+        "coluna": 963
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "13ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 76768,
+          "fim": 76768,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-9",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img decoding=\"async\" class=\"swiper-slide-image\" src=\"https://opa.ufrn.br/wp-content/uploads/2020/08/GPragma-150x150.png\" alt=\"GPragma\" />",
+      "posicao": {
+        "linha": 614,
+        "coluna": 1235
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "14ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 77040,
+          "fim": 77040,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-10",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img decoding=\"async\" class=\"swiper-slide-image\" src=\"https://opa.ufrn.br/wp-content/uploads/2020/08/Cinemateca_Transp-150x150.png\" alt=\"Cinemateca_Transp\" />",
+      "posicao": {
+        "linha": 614,
+        "coluna": 1511
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "15ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 77316,
+          "fim": 77316,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-11",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img decoding=\"async\" class=\"swiper-slide-image\" src=\"https://opa.ufrn.br/wp-content/uploads/2020/10/Logo-CAL-Vertical-com-fundo-1-1-150x150.png\" alt=\"Logo - CAL Vertical com fundo (1)\" />",
+      "posicao": {
+        "linha": 614,
+        "coluna": 1807
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "16ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 77612,
+          "fim": 77612,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-12",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img decoding=\"async\" class=\"swiper-slide-image\" src=\"https://opa.ufrn.br/wp-content/uploads/2020/08/PEIC-150x150.png\" alt=\"PEIC\" />",
+      "posicao": {
+        "linha": 614,
+        "coluna": 2133
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "17ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 77938,
+          "fim": 77938,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-13",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img decoding=\"async\" class=\"swiper-slide-image\" src=\"https://opa.ufrn.br/wp-content/uploads/2020/08/Cinestesicopng-150x150.png\" alt=\"Cinestesicopng\" />",
+      "posicao": {
+        "linha": 614,
+        "coluna": 2403
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "18ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 78208,
+          "fim": 78208,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-14",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"200\" height=\"74\" src=\"https://opa.ufrn.br/wp-content/uploads/2020/08/Logo_OAP_transparente-1.png\" class=\"image wp-image-20272 attachment-full size-full\" alt=\"\" style=\"max-width: 100%; hei…",
+      "posicao": {
+        "linha": 652,
+        "coluna": 114
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "19ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 80497,
+          "fim": 80497,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "heading-skip-1",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h6 class=\"hoverdoazul\">",
+      "posicao": {
+        "linha": 370,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 3 para o nível 6: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h4 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "heading-skip-2",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h6 class=\"hoverdoamarelo\">",
+      "posicao": {
+        "linha": 499,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 3 para o nível 6: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h4 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "heading-skip-3",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h6 class=\"hoverdoverde\">",
+      "posicao": {
+        "linha": 541,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 3 para o nível 6: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h4 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "heading-skip-4",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h6 style=\"font-weight: 900;\">",
+      "posicao": {
+        "linha": 664,
+        "coluna": 97
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 3 para o nível 6: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h4 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-1",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='hfe-widgets-style-css' href='https://opa.ufrn.br/wp-content/plugins/header-footer-elementor/inc/widgets-css/frontend.css?ver=2.9.6' media='all' />",
+      "posicao": {
+        "linha": 19,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (471 ms de bloqueio, 12.2 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-2",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='wpblog-post-layouts-block-style-css' href='https://opa.ufrn.br/wp-content/plugins/wp-blog-post-layouts/includes/assets/css/build.css?ver=1.1.5' media='all' />",
+      "posicao": {
+        "linha": 40,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (625 ms de bloqueio, 5.4 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-3",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='contact-form-7-css' href='https://opa.ufrn.br/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.2.4.1' media='all' />",
+      "posicao": {
+        "linha": 52,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (471 ms de bloqueio, 4.2 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-4",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='uaf_client_css-css' href='https://opa.ufrn.br/wp-content/uploads/useanyfont/uaf.css?ver=1787153009' media='all' />",
+      "posicao": {
+        "linha": 53,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (471 ms de bloqueio, 3.4 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-5",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='hfe-style-css' href='https://opa.ufrn.br/wp-content/plugins/header-footer-elementor/assets/css/header-footer-elementor.css?ver=2.9.6' media='all' />",
+      "posicao": {
+        "linha": 54,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (471 ms de bloqueio, 3.5 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-6",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='elementor-icons-css' href='https://opa.ufrn.br/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.54.0' media='all' />",
+      "posicao": {
+        "linha": 55,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (625 ms de bloqueio, 7.7 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-7",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='elementor-frontend-css' href='https://opa.ufrn.br/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=4.3.6' media='all' />",
+      "posicao": {
+        "linha": 56,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (471 ms de bloqueio, 10.3 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-8",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='elementor-post-19986-css' href='https://opa.ufrn.br/wp-content/uploads/elementor/css/post-19986.css?ver=1794022486' media='all' />",
+      "posicao": {
+        "linha": 57,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (164 ms de bloqueio, 3.7 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-9",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='e-animation-fadeInUp-css' href='https://opa.ufrn.br/wp-content/plugins/elementor/assets/lib/animations/styles/fadeInUp.min.css?ver=4.3.6' media='all' />",
+      "posicao": {
+        "linha": 58,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (164 ms de bloqueio, 3.3 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-10",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='widget-heading-css' href='https://opa.ufrn.br/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=4.3.6' media='all' />",
+      "posicao": {
+        "linha": 59,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (164 ms de bloqueio, 3.4 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-11",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='widget-image-css' href='https://opa.ufrn.br/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=4.3.6' media='all' />",
+      "posicao": {
+        "linha": 60,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (164 ms de bloqueio, 3.4 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-12",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='widget-spacer-css' href='https://opa.ufrn.br/wp-content/plugins/elementor/assets/css/widget-spacer.min.css?ver=4.3.6' media='all' />",
+      "posicao": {
+        "linha": 61,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (164 ms de bloqueio, 3.6 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-13",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='widget-testimonial-css' href='https://opa.ufrn.br/wp-content/plugins/elementor/assets/css/widget-testimonial.min.css?ver=4.3.6' media='all' />",
+      "posicao": {
+        "linha": 62,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (164 ms de bloqueio, 3.6 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-14",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='swiper-css' href='https://opa.ufrn.br/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5' media='all' />",
+      "posicao": {
+        "linha": 63,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (317 ms de bloqueio, 7.7 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-15",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='e-swiper-css' href='https://opa.ufrn.br/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css?ver=4.3.6' media='all' />",
+      "posicao": {
+        "linha": 64,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (164 ms de bloqueio, 4.0 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-16",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='widget-image-carousel-css' href='https://opa.ufrn.br/wp-content/plugins/elementor/assets/css/widget-image-carousel.min.css?ver=4.3.6' media='all' />",
+      "posicao": {
+        "linha": 65,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (163 ms de bloqueio, 3.4 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-17",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='elementor-post-7129-css' href='https://opa.ufrn.br/wp-content/uploads/elementor/css/post-7129.css?ver=1794022487' media='all' />",
+      "posicao": {
+        "linha": 66,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (317 ms de bloqueio, 5.0 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-18",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='elementor-post-21196-css' href='https://opa.ufrn.br/wp-content/uploads/elementor/css/post-21196.css?ver=1794022487' media='all' />",
+      "posicao": {
+        "linha": 67,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (163 ms de bloqueio, 4.2 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-19",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='wpblog-post-layouts-google-fonts-css' href='https://fonts.googleapis.com/css?family=Roboto%3A400%2C100%2C300%2C400%2C500%2C700%2C900%7CYanone+Kaffeesatz%3A200%2C300%2C400%2…",
+      "posicao": {
+        "linha": 68,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (897 ms de bloqueio, 1.1 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-20",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='fontawesome-css' href='https://opa.ufrn.br/wp-content/plugins/wp-blog-post-layouts/includes/assets/fontawesome/css/all.min.css?ver=5.12.1' media='all' />",
+      "posicao": {
+        "linha": 69,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (625 ms de bloqueio, 15.4 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-21",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='kyoto-main-style-css' href='https://opa.ufrn.br/wp-content/themes/kyoto/assets/styles/kyoto.css?ver=1.0.0' media='all' />",
+      "posicao": {
+        "linha": 70,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (1393 ms de bloqueio, 43.2 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-22",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='magnific-popup-css' href='https://opa.ufrn.br/wp-content/themes/kyoto/assets/styles/magnific-popup.css?ver=1.0.0' media='all' />",
+      "posicao": {
+        "linha": 71,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (317 ms de bloqueio, 4.8 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-23",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='owl-carousel-css' href='https://opa.ufrn.br/wp-content/themes/kyoto/assets/styles/owl.carousel.min.css?ver=1.0.0' media='all' />",
+      "posicao": {
+        "linha": 72,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (163 ms de bloqueio, 4.3 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-24",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='perfect-scrollbar-css' href='https://opa.ufrn.br/wp-content/themes/kyoto/assets/styles/perfect-scrollbar.css?ver=1.0.0' media='all' />",
+      "posicao": {
+        "linha": 73,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (163 ms de bloqueio, 3.9 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-25",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='kyoto-wp-style-css' href='https://opa.ufrn.br/wp-content/themes/kyoto/style.css?ver=5df1618bbac134c2b5402c719407a88f' media='all' />",
+      "posicao": {
+        "linha": 74,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (317 ms de bloqueio, 4.3 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-26",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='kyoto-fonts-css' href='//fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900%7CRoboto+Slab%3A300%2C400&#038;ver=1.0.0' media='all' />",
+      "posicao": {
+        "linha": 75,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (185 ms de bloqueio, 0.4 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-27",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='hfe-elementor-icons-css' href='https://opa.ufrn.br/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.34.0' media='all' />",
+      "posicao": {
+        "linha": 76,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (317 ms de bloqueio, 7.7 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-28",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='hfe-icons-list-css' href='https://opa.ufrn.br/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css?ver=3.24.3' media='all' />",
+      "posicao": {
+        "linha": 77,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (164 ms de bloqueio, 4.2 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-29",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='hfe-social-icons-css' href='https://opa.ufrn.br/wp-content/plugins/elementor/assets/css/widget-social-icons.min.css?ver=3.24.0' media='all' />",
+      "posicao": {
+        "linha": 78,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (317 ms de bloqueio, 4.3 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-30",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='hfe-social-share-icons-brands-css' href='https://opa.ufrn.br/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.css?ver=5.15.3' media='all' />",
+      "posicao": {
+        "linha": 79,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (163 ms de bloqueio, 3.5 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-31",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='hfe-social-share-icons-fontawesome-css' href='https://opa.ufrn.br/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.css?ver=5.15.3' media='all' />",
+      "posicao": {
+        "linha": 80,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (625 ms de bloqueio, 16.0 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-32",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='hfe-nav-menu-icons-css' href='https://opa.ufrn.br/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.css?ver=5.15.3' media='all' />",
+      "posicao": {
+        "linha": 81,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (163 ms de bloqueio, 3.5 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-33",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='elementor-gf-local-roboto-css' href='https://opa.ufrn.br/wp-content/uploads/elementor/google-fonts/css/roboto.css?ver=1742219585' media='all' />",
+      "posicao": {
+        "linha": 82,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (317 ms de bloqueio, 6.0 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-34",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='elementor-gf-local-robotoslab-css' href='https://opa.ufrn.br/wp-content/uploads/elementor/google-fonts/css/robotoslab.css?ver=1742219601' media='all' />",
+      "posicao": {
+        "linha": 83,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (164 ms de bloqueio, 4.1 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-35",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='elementor-icons-shared-0-css' href='https://opa.ufrn.br/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3' media='all' />",
+      "posicao": {
+        "linha": 84,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (625 ms de bloqueio, 15.6 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-36",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='elementor-icons-fa-solid-css' href='https://opa.ufrn.br/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3' media='all' />",
+      "posicao": {
+        "linha": 85,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (164 ms de bloqueio, 3.5 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-37",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='elementor-icons-fa-regular-css' href='https://opa.ufrn.br/wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css?ver=5.15.3' media='all' />",
+      "posicao": {
+        "linha": 86,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (164 ms de bloqueio, 3.5 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-38",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script id=\"jquery-core-js\" src=\"https://opa.ufrn.br/wp-includes/js/jquery/jquery.min.js?ver=3.7.1\">",
+      "posicao": {
+        "linha": 87,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (778 ms de bloqueio, 33.0 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-39",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script id=\"jquery-migrate-js\" src=\"https://opa.ufrn.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1\">",
+      "posicao": {
+        "linha": 88,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (317 ms de bloqueio, 8.0 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "landmarks-llm-1",
+      "regra": "landmarks-llm",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<div class=\"l-main-wrapper__holder h-clearfix h-large-bottom-padding h-large-top-padding\">",
+      "posicao": {
+        "linha": 315,
+        "coluna": 2
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Landmark main ausente: trocar este <div> por <main>. Justificativa do modelo: \"Wrapper de conteúdo (classe l-main-wrapper__holder) como filho de c1, ao lado do header e fora dele; contém toda a seção de conteúdo (O que é?, análises, CinePoty, mapa, parceiros) e não inclui o menu nem o rodapé.\". Proposta gerada por LLM (landmarks-v2, claude-haiku-5-5, candidato c2); conferir CSS e scripts que selecionem \"div\" neste elemento. Sem correção automática: o CSS da página seleciona pela tag (div); ajustar os seletores antes de trocar.",
+      "edicoes": []
+    }
+  ]
+}

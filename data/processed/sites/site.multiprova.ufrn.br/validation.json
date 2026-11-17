@@ -1,0 +1,848 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T22:26:30.463Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "siteId": "site.multiprova.ufrn.br",
+  "contexto": {
+    "grupo": "outro",
+    "tecnologia": "outro-cms",
+    "tipo": "outro"
+  },
+  "recomendacoes": {
+    "total": 1,
+    "corrigidas": 1,
+    "corrigidasLlm": 0,
+    "llm": {
+      "prompt": "landmarks-v2",
+      "arquivo": "docs/prompts/landmarks-v2.md",
+      "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "effort": "low",
+      "maxTokens": 4000,
+      "execucao": {
+        "siteId": "site.multiprova.ufrn.br",
+        "prompt": "landmarks-v2",
+        "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+        "modelo": "claude-haiku-5-5",
+        "modeloResposta": null,
+        "respostaId": null,
+        "chamada": false,
+        "motivo": "nenhum landmark ausente",
+        "ausentes": [],
+        "candidatos": 4,
+        "elegiveis": 4,
+        "stopReason": null,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "custoUsd": null,
+        "propostas": 0,
+        "validas": 0,
+        "rejeitadas": [],
+        "textoIgual": null,
+        "landmarksDepois": null,
+        "erro": null,
+        "duracaoMs": 5
+      }
+    }
+  },
+  "parametros": {
+    "execucoesPorVariante": 3,
+    "formFactor": "mobile",
+    "throttlingMethod": "simulate",
+    "chromeFlagsExtras": [
+      "--host-resolver-rules=MAP * ~NOTFOUND, EXCLUDE 127.0.0.1"
+    ],
+    "userAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+    "relogioSemantica": "2026-11-09T22:32:01.455Z",
+    "relogioLighthouse": "real"
+  },
+  "ordem": [
+    {
+      "variante": "corrigido",
+      "n": 1
+    },
+    {
+      "variante": "original",
+      "n": 1
+    },
+    {
+      "variante": "corrigido",
+      "n": 2
+    },
+    {
+      "variante": "original",
+      "n": 2
+    },
+    {
+      "variante": "corrigido",
+      "n": 3
+    },
+    {
+      "variante": "original",
+      "n": 3
+    }
+  ],
+  "variantes": {
+    "original": {
+      "urlLocal": "http://127.0.0.1:63905/",
+      "execucoes": [
+        {
+          "n": 1,
+          "startedAt": "2026-11-16T23:20:22.052Z",
+          "durationMs": 9001,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 68,
+            "accessibility": 92,
+            "best-practices": 96,
+            "seo": 92
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:63905/",
+          "mainDocumentUrl": "http://127.0.0.1:63905/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2954,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 68,
+              "accessibility": 92,
+              "best-practices": 96,
+              "seo": 92
+            },
+            "fcpMs": 3752.44241174529,
+            "lcpMs": 7129.579522022419,
+            "tbtMs": 51.5,
+            "cls": 0.01148665454371051,
+            "speedIndexMs": 3752.44241174529,
+            "pesoTotalBytes": 1162257,
+            "requisicoes": 63,
+            "jsNaoUsadoBytes": 143899,
+            "cssNaoUsadoBytes": 0
+          }
+        },
+        {
+          "n": 2,
+          "startedAt": "2026-11-16T23:20:40.567Z",
+          "durationMs": 10082,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 68,
+            "accessibility": 92,
+            "best-practices": 96,
+            "seo": 92
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:63905/",
+          "mainDocumentUrl": "http://127.0.0.1:63905/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2898,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 68,
+              "accessibility": 92,
+              "best-practices": 96,
+              "seo": 92
+            },
+            "fcpMs": 3752.528105856334,
+            "lcpMs": 7055.056211712668,
+            "tbtMs": 51.5,
+            "cls": 0.01148665454371051,
+            "speedIndexMs": 3752.528105856334,
+            "pesoTotalBytes": 1162257,
+            "requisicoes": 63,
+            "jsNaoUsadoBytes": 143891,
+            "cssNaoUsadoBytes": 0
+          }
+        },
+        {
+          "n": 3,
+          "startedAt": "2026-11-16T23:21:00.380Z",
+          "durationMs": 10879,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 68,
+            "accessibility": 92,
+            "best-practices": 96,
+            "seo": 92
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:63905/",
+          "mainDocumentUrl": "http://127.0.0.1:63905/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2421.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 68,
+              "accessibility": 92,
+              "best-practices": 96,
+              "seo": 92
+            },
+            "fcpMs": 3602.9198735774103,
+            "lcpMs": 7280.839747154822,
+            "tbtMs": 61,
+            "cls": 0.01148665454371051,
+            "speedIndexMs": 3602.9198735774103,
+            "pesoTotalBytes": 1162257,
+            "requisicoes": 63,
+            "jsNaoUsadoBytes": 143899,
+            "cssNaoUsadoBytes": 0
+          }
+        }
+      ],
+      "mediana": {
+        "criterio": "nota-performance",
+        "n": 2
+      },
+      "metricas": {
+        "notas": {
+          "performance": 68,
+          "accessibility": 92,
+          "best-practices": 96,
+          "seo": 92
+        },
+        "fcpMs": 3752.528105856334,
+        "lcpMs": 7055.056211712668,
+        "tbtMs": 51.5,
+        "cls": 0.01148665454371051,
+        "speedIndexMs": 3752.528105856334,
+        "pesoTotalBytes": 1162257,
+        "requisicoes": 63,
+        "jsNaoUsadoBytes": 143891,
+        "cssNaoUsadoBytes": 0
+      },
+      "variacaoPerformance": {
+        "n": 3,
+        "min": 68,
+        "max": 68,
+        "amplitude": 0,
+        "media": 68,
+        "desvioPadrao": 0
+      },
+      "semantica": {
+        "status": "ok",
+        "indicadores": {
+          "divSpan": {
+            "div": 270,
+            "span": 141,
+            "total": 525,
+            "proporcao": 0.7828571428571428
+          },
+          "landmarks": {
+            "banner": 1,
+            "navigation": 1,
+            "main": 1,
+            "contentinfo": 1
+          },
+          "titulos": {
+            "total": 13,
+            "h1": 1,
+            "porNivel": [
+              1,
+              12,
+              0,
+              0,
+              0,
+              0
+            ],
+            "saltos": 0,
+            "maiorSalto": 0,
+            "primeiroNivel": 1
+          },
+          "estrutura": {
+            "article": 0,
+            "section": 14,
+            "aside": 0,
+            "figure": 0,
+            "ul": 2,
+            "ol": 0
+          },
+          "interativosFalsos": {
+            "comOnclick": 0,
+            "falsos": 0
+          },
+          "metadados": {
+            "lang": "pt",
+            "temTitle": true,
+            "titleComprimento": 33,
+            "temViewport": true,
+            "temDescription": true
+          },
+          "imagens": {
+            "total": 18,
+            "semAlt": 0,
+            "altVazio": 2,
+            "semAltComAlternativa": 0
+          },
+          "campos": {
+            "total": 0,
+            "semLabel": 0,
+            "semLabelComPlaceholderOuTitle": 0
+          },
+          "obsoletas": {
+            "roteiro": 0,
+            "whatwg": 0,
+            "porTag": {}
+          },
+          "tabelas": {
+            "total": 0,
+            "layoutDeclarada": 0,
+            "layoutHeuristica": 0,
+            "dados": 0,
+            "indeterminada": 0
+          }
+        },
+        "indice": {
+          "subnotas": {
+            "landmarks": 100,
+            "titulos": 100,
+            "imagens": 100,
+            "campos": null,
+            "divSpan": 21.71428571428572,
+            "metadados": 100,
+            "interativos": null,
+            "obsoletos": 100
+          },
+          "indice": 90.21428571428571,
+          "indicePesosIguais": 86.95238095238096
+        },
+        "networkidleTimeout": false
+      },
+      "faltasNoServidor": [
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=21&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=dfbef1e5-ffa8-41e2-a677-2bcdece85068&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=0&tsn=60&platformOnSite=true&hasInitialZoom=false&infoInitialZoom=%7B%22devicePixelRatio%22%3A1.75%2C%22innerWidth%22%3A981%2C%22outerWidth%22%3A412%2C%22visualViewportScale%22%3A1%7D&mpaSessionId=0faf5600-5460-4b2c-8b84-be67d59cad7e",
+        "/_ext/panorama.wixapps.net/api/v1/bulklog",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=dfbef1e5-ffa8-41e2-a677-2bcdece85068&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=0&tsn=60&errorInfo=Uncaught%20ReferenceError:%20Cannot%20access%20%27u%27%20before%20initialization&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=dfbef1e5-ffa8-41e2-a677-2bcdece85068&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=0&tsn=60&errorInfo=Uncaught%20TypeError:%20Failed%20to%20construct%20%27URL%27:%20Invalid%20URL&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=28&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=dfbef1e5-ffa8-41e2-a677-2bcdece85068&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=0&tsn=60&name=partially_visible&duration=1794263521455&pageId=pfvdq&isSuccessfulSSR=true",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=dfbef1e5-ffa8-41e2-a677-2bcdece85068&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=0&tsn=60&errorInfo=SecurityError:%20Failed%20to%20construct%20%27Worker%27:%20Script%20at%20%27http://_partials/wix-thunderbolt/dist/clientWorker.70eb3f68.bundle.min.js%27%20cannot%20be%20accessed%20from%20origin%20%27http://127.0.0.1:63905%27.&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=21&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=40788cfa-e16f-434c-b4d0-d9b71b70832b&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=33&tsn=68&platformOnSite=true&hasInitialZoom=false&infoInitialZoom=%7B%22devicePixelRatio%22%3A1.75%2C%22innerWidth%22%3A981%2C%22outerWidth%22%3A412%2C%22visualViewportScale%22%3A1%7D&mpaSessionId=90f554cf-923c-4d3c-9a15-eb16e84137d0",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=40788cfa-e16f-434c-b4d0-d9b71b70832b&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=33&tsn=68&errorInfo=Uncaught%20TypeError:%20Failed%20to%20construct%20%27URL%27:%20Invalid%20URL&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=40788cfa-e16f-434c-b4d0-d9b71b70832b&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=33&tsn=68&errorInfo=Uncaught%20ReferenceError:%20Cannot%20access%20%27u%27%20before%20initialization&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=40788cfa-e16f-434c-b4d0-d9b71b70832b&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=33&tsn=68&errorInfo=SecurityError:%20Failed%20to%20construct%20%27Worker%27:%20Script%20at%20%27http://_partials/wix-thunderbolt/dist/clientWorker.70eb3f68.bundle.min.js%27%20cannot%20be%20accessed%20from%20origin%20%27http://127.0.0.1:63905%27.&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=28&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=40788cfa-e16f-434c-b4d0-d9b71b70832b&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=33&tsn=68&name=partially_visible&duration=1794871224292&pageId=pfvdq&isSuccessfulSSR=true",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=40788cfa-e16f-434c-b4d0-d9b71b70832b&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=33&tsn=68&errorInfo=Uncaught%20TypeError:%20Cannot%20read%20properties%20of%20undefined%20(reading%20%27wixBiSession%27)&errorType=load",
+        "/_ext/static.wixstatic.com/media/a45654_3afe6adb057c4e7aa125a45b538419e9%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/a45654_3afe6adb057c4e7aa125a45b538419e9%7Emv2.png",
+        "/_ext/static.wixstatic.com/media/a45654_3afe6adb057c4e7aa125a45b538419e9%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/a45654_3afe6adb057c4e7aa125a45b538419e9%7Emv2.png",
+        "/_ext/static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/amaticsc/v13/TUZyzwprpvBS1izr_vOECuSfU5cP1Q.woff2",
+        "/robots.txt",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/handleAccessTokens.inline.3250797b.bundle.min.js.map",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/overrideGlobals.inline.b271af7d.bundle.min.js.map",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/sendFedopsLoadStarted.inline.807a10d2.bundle.min.js.map",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/webpack-runtime.6e580b93.bundle.min.js.map",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/fastdom.inline.91adf90e.bundle.min.js.map",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/custom-element-utils.inline.1364221e.bundle.min.js.map",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/initCustomElements.inline.3a3771fe.bundle.min.js.map",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/externals-registry.inline.c335b0f1.bundle.min.js.map",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/lazyCustomElementWrapper.inline.eefbcea5.bundle.min.js.map",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/bi-common.inline.25508356.bundle.min.js.map",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/createPlatformWorker.inline.a9bb4739.bundle.min.js.map",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/windowMessageRegister.inline.5cd174ec.bundle.min.js.map",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/bi.inline.ae93e7f6.bundle.min.js.map",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/sendBeat12.inline.995b241c.bundle.min.js.map",
+        "/_ext/browser.sentry-cdn.com/7.120.3/modulemetadata.es5.min.js.map",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/thunderbolt-commons.7c52e13b.bundle.min.js.map",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/main.e386638a.bundle.min.js.map",
+        "/_ext/static.parastorage.com/services/tag-manager-client/1.1075.0/siteTags.bundle.min.js.map",
+        "/_ext/browser.sentry-cdn.com/7.120.3/bundle.tracing.es5.min.js.map",
+        "/_ext/static.wixstatic.com/media/a45654_795c53280e6c4181a72fce4830ac74d1~mv2.jpg/v1/crop/x_36,y_0,w_1472,h_891/fill/w_656,h_397,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/2024-05-01_21-57-32b.jpg",
+        "/_ext/static.wixstatic.com/media/a45654_54784695c50246c1b70c821a873c0759~mv2.png/v1/fill/w_505,h_381,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/AdobeStock_581664603.png",
+        "/_ext/static.wixstatic.com/media/8ad369_e8e71a7a0f904a95bec91bb9863a1e40~mv2.png/v1/fill/w_153,h_33,al_c,q_85,enc_avif,quality_auto/8ad369_e8e71a7a0f904a95bec91bb9863a1e40~mv2.png",
+        "/_ext/static.wixstatic.com/media/8ad369_51bdb1a6ff9e4868ae8090f1d7a497a3~mv2.png/v1/fill/w_209,h_624,al_c,q_85,enc_avif,quality_auto/8ad369_51bdb1a6ff9e4868ae8090f1d7a497a3~mv2.png",
+        "/_ext/static.wixstatic.com/media/a45654_795c53280e6c4181a72fce4830ac74d1~mv2.jpg/v1/crop/x_36,y_0,w_1472,h_891/fill/w_1312,h_794,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/2024-05-01_21-57-32b.jpg",
+        "/_ext/static.wixstatic.com/media/a45654_54784695c50246c1b70c821a873c0759~mv2.png/v1/fill/w_1010,h_762,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/AdobeStock_581664603.png",
+        "/_ext/static.wixstatic.com/media/8ad369_e8e71a7a0f904a95bec91bb9863a1e40~mv2.png/v1/fill/w_214,h_46,al_c,lg_1,q_85,enc_avif,quality_auto/8ad369_e8e71a7a0f904a95bec91bb9863a1e40~mv2.png",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=21&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=72d9089f-8f2f-4d7e-8d60-3f0fc441b1e2&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=36&tsn=67&platformOnSite=true&hasInitialZoom=false&infoInitialZoom=%7B%22devicePixelRatio%22%3A1.75%2C%22innerWidth%22%3A981%2C%22outerWidth%22%3A412%2C%22visualViewportScale%22%3A1%7D&mpaSessionId=90f554cf-923c-4d3c-9a15-eb16e84137d0&document_referrer=http://127.0.0.1:63905/",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=72d9089f-8f2f-4d7e-8d60-3f0fc441b1e2&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=36&tsn=67&errorInfo=Uncaught%20TypeError:%20Failed%20to%20construct%20%27URL%27:%20Invalid%20URL&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=72d9089f-8f2f-4d7e-8d60-3f0fc441b1e2&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=36&tsn=67&errorInfo=Uncaught%20ReferenceError:%20Cannot%20access%20%27u%27%20before%20initialization&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=28&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=72d9089f-8f2f-4d7e-8d60-3f0fc441b1e2&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=36&tsn=67&name=partially_visible&duration=1794871230307&pageId=pfvdq&isSuccessfulSSR=true",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=72d9089f-8f2f-4d7e-8d60-3f0fc441b1e2&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=36&tsn=67&errorInfo=SecurityError:%20Failed%20to%20construct%20%27Worker%27:%20Script%20at%20%27http://_partials/wix-thunderbolt/dist/clientWorker.70eb3f68.bundle.min.js%27%20cannot%20be%20accessed%20from%20origin%20%27http://127.0.0.1:63905%27.&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=72d9089f-8f2f-4d7e-8d60-3f0fc441b1e2&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=36&tsn=67&errorInfo=Uncaught%20TypeError:%20Cannot%20read%20properties%20of%20undefined%20(reading%20%27wixBiSession%27)&errorType=load",
+        "/_ext/static.wixstatic.com/media/8ad369_701fd68d8c4547f9b103e829e134003b~mv2.png/v1/fill/w_58,h_19,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/8ad369_701fd68d8c4547f9b103e829e134003b~mv2.png",
+        "/_ext/static.wixstatic.com/media/a45654_0075212c59cf4995940b52b0dc7ed5b8~mv2.png/v1/crop/x_210,y_0,w_1024,h_1024/fill/w_164,h_164,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/escolaMPE2.png",
+        "/_ext/static.wixstatic.com/media/8ad369_c4df189807bf48cdbb477dd995df4884~mv2.png/v1/crop/x_0,y_4,w_540,h_483/fill/w_479,h_428,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/pana.png",
+        "/_ext/static.wixstatic.com/media/a45654_3e3f4b466a8548f79c4edc1e9b473dbc~mv2.jpg/v1/fill/w_600,h_398,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/2024-05-01_18-33-00.jpg",
+        "/_ext/static.wixstatic.com/media/a45654_9674560be70046caa29fc3cb72b86c28~mv2.png/v1/fill/w_74,h_74,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logoMPcorretor.png",
+        "/_ext/static.wixstatic.com/media/a45654_fae55420fd834cc887bab484acec5fad~mv2.png/v1/crop/x_0,y_117,w_1817,h_1085/fill/w_575,h_343,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/bitmap.png",
+        "/_ext/static.wixstatic.com/media/a45654_71214075ed424dae8855d261db155655~mv2.png/v1/crop/x_323,y_480,w_5380,h_3135/fill/w_529,h_309,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/AdobeStock_534550727.png",
+        "/_ext/static.wixstatic.com/media/a45654_ba6ee2c31cf1493b8afb2ef589ccdb39~mv2.jpg/v1/crop/x_0,y_12,w_1365,h_851/fill/w_394,h_246,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/2024-04-29_14-32-17.jpg",
+        "/_ext/static.wixstatic.com/media/a45654_662892d6688f4f3ba4668e8af1352d61~mv2.jpg/v1/crop/x_0,y_64,w_997,h_566/fill/w_285,h_176,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/2023-11-16_16-03-00.jpg",
+        "/_ext/static.wixstatic.com/media/a45654_d7fa7be2d5614dd8afa238d9701190b3~mv2.jpg/v1/fill/w_332,h_263,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a45654_d7fa7be2d5614dd8afa238d9701190b3~mv2.jpg",
+        "/_ext/static.wixstatic.com/media/a45654_4373766a73bd4bf697a45c357804b07d~mv2.png/v1/fill/w_383,h_263,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a45654_4373766a73bd4bf697a45c357804b07d~mv2.png",
+        "/_ext/static.wixstatic.com/media/a45654_61af59f66a90427391a385b66ddc491d~mv2.jpeg/v1/fill/w_370,h_208,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/AdobeStock_175796505.jpeg",
+        "/_ext/static.wixstatic.com/media/a45654_634b63246d314260990ebd057818854c~mv2.png/v1/fill/w_258,h_359,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/tableteMultiprova.png",
+        "/_ext/static.wixstatic.com/media/a45654_c50e9e4bcd3749b0971c462321c1ca5f~mv2.png/v1/fill/w_600,h_328,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/nuvemmultiprova.png",
+        "/_ext/static.wixstatic.com/media/8ad369_51bdb1a6ff9e4868ae8090f1d7a497a3~mv2.png/v1/fill/w_1069,h_624,al_c,q_90,enc_avif,quality_auto/8ad369_51bdb1a6ff9e4868ae8090f1d7a497a3~mv2.png",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=21&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=a255a818-a67a-47db-8a0b-f3db4cc99ae8&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=35&tsn=64&platformOnSite=true&hasInitialZoom=false&infoInitialZoom=%7B%22devicePixelRatio%22%3A1.75%2C%22innerWidth%22%3A981%2C%22outerWidth%22%3A412%2C%22visualViewportScale%22%3A1%7D&mpaSessionId=eaca2630-6b5c-4804-b385-177c2ab325d3",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=a255a818-a67a-47db-8a0b-f3db4cc99ae8&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=35&tsn=64&errorInfo=Uncaught%20TypeError:%20Failed%20to%20construct%20%27URL%27:%20Invalid%20URL&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=a255a818-a67a-47db-8a0b-f3db4cc99ae8&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=35&tsn=64&errorInfo=Uncaught%20ReferenceError:%20Cannot%20access%20%27u%27%20before%20initialization&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=28&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=a255a818-a67a-47db-8a0b-f3db4cc99ae8&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=35&tsn=64&name=partially_visible&duration=1794871242675&pageId=pfvdq&isSuccessfulSSR=true",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=a255a818-a67a-47db-8a0b-f3db4cc99ae8&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=35&tsn=64&errorInfo=SecurityError:%20Failed%20to%20construct%20%27Worker%27:%20Script%20at%20%27http://_partials/wix-thunderbolt/dist/clientWorker.70eb3f68.bundle.min.js%27%20cannot%20be%20accessed%20from%20origin%20%27http://127.0.0.1:63905%27.&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=a255a818-a67a-47db-8a0b-f3db4cc99ae8&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=35&tsn=64&errorInfo=Uncaught%20TypeError:%20Cannot%20read%20properties%20of%20undefined%20(reading%20%27wixBiSession%27)&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=21&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=59e21b6d-5fce-49b1-85b3-4c6e6559fdfc&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=23&tsn=52&platformOnSite=true&hasInitialZoom=false&infoInitialZoom=%7B%22devicePixelRatio%22%3A1.75%2C%22innerWidth%22%3A981%2C%22outerWidth%22%3A412%2C%22visualViewportScale%22%3A1%7D&mpaSessionId=eaca2630-6b5c-4804-b385-177c2ab325d3&document_referrer=http://127.0.0.1:63905/",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=59e21b6d-5fce-49b1-85b3-4c6e6559fdfc&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=23&tsn=52&errorInfo=Uncaught%20TypeError:%20Failed%20to%20construct%20%27URL%27:%20Invalid%20URL&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=59e21b6d-5fce-49b1-85b3-4c6e6559fdfc&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=23&tsn=52&errorInfo=Uncaught%20ReferenceError:%20Cannot%20access%20%27u%27%20before%20initialization&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=28&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=59e21b6d-5fce-49b1-85b3-4c6e6559fdfc&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=23&tsn=52&name=partially_visible&duration=1794871249838&pageId=pfvdq&isSuccessfulSSR=true",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=59e21b6d-5fce-49b1-85b3-4c6e6559fdfc&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=23&tsn=52&errorInfo=SecurityError:%20Failed%20to%20construct%20%27Worker%27:%20Script%20at%20%27http://_partials/wix-thunderbolt/dist/clientWorker.70eb3f68.bundle.min.js%27%20cannot%20be%20accessed%20from%20origin%20%27http://127.0.0.1:63905%27.&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=59e21b6d-5fce-49b1-85b3-4c6e6559fdfc&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=23&tsn=52&errorInfo=Uncaught%20TypeError:%20Cannot%20read%20properties%20of%20undefined%20(reading%20%27wixBiSession%27)&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=21&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=fc516560-89ab-4cc6-9918-1955aaea6c1e&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=24&tsn=54&platformOnSite=true&hasInitialZoom=false&infoInitialZoom=%7B%22devicePixelRatio%22%3A1.75%2C%22innerWidth%22%3A981%2C%22outerWidth%22%3A412%2C%22visualViewportScale%22%3A1%7D&mpaSessionId=82abe150-ad93-49e3-9123-129d04a3916a",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=fc516560-89ab-4cc6-9918-1955aaea6c1e&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=24&tsn=54&errorInfo=Uncaught%20TypeError:%20Failed%20to%20construct%20%27URL%27:%20Invalid%20URL&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=fc516560-89ab-4cc6-9918-1955aaea6c1e&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=24&tsn=54&errorInfo=SecurityError:%20Failed%20to%20construct%20%27Worker%27:%20Script%20at%20%27http://_partials/wix-thunderbolt/dist/clientWorker.70eb3f68.bundle.min.js%27%20cannot%20be%20accessed%20from%20origin%20%27http://127.0.0.1:63905%27.&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=fc516560-89ab-4cc6-9918-1955aaea6c1e&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=24&tsn=54&errorInfo=Uncaught%20ReferenceError:%20Cannot%20access%20%27u%27%20before%20initialization&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=28&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=fc516560-89ab-4cc6-9918-1955aaea6c1e&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=24&tsn=54&name=partially_visible&duration=1794871263126&pageId=pfvdq&isSuccessfulSSR=true",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=fc516560-89ab-4cc6-9918-1955aaea6c1e&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=24&tsn=54&errorInfo=Uncaught%20TypeError:%20Cannot%20read%20properties%20of%20undefined%20(reading%20%27wixBiSession%27)&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=21&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=d79e20a7-0e0c-4bd6-819e-b3933796b3e4&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=23&tsn=67&platformOnSite=true&hasInitialZoom=false&infoInitialZoom=%7B%22devicePixelRatio%22%3A1.75%2C%22innerWidth%22%3A981%2C%22outerWidth%22%3A412%2C%22visualViewportScale%22%3A1%7D&mpaSessionId=82abe150-ad93-49e3-9123-129d04a3916a&document_referrer=http://127.0.0.1:63905/",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=d79e20a7-0e0c-4bd6-819e-b3933796b3e4&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=23&tsn=67&errorInfo=Uncaught%20TypeError:%20Failed%20to%20construct%20%27URL%27:%20Invalid%20URL&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=d79e20a7-0e0c-4bd6-819e-b3933796b3e4&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=23&tsn=67&errorInfo=Uncaught%20ReferenceError:%20Cannot%20access%20%27u%27%20before%20initialization&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=d79e20a7-0e0c-4bd6-819e-b3933796b3e4&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=23&tsn=67&errorInfo=SecurityError:%20Failed%20to%20construct%20%27Worker%27:%20Script%20at%20%27http://_partials/wix-thunderbolt/dist/clientWorker.70eb3f68.bundle.min.js%27%20cannot%20be%20accessed%20from%20origin%20%27http://127.0.0.1:63905%27.&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=28&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=d79e20a7-0e0c-4bd6-819e-b3933796b3e4&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63905%2F&st=2&ts=23&tsn=67&name=partially_visible&duration=1794871270173&pageId=pfvdq&isSuccessfulSSR=true"
+      ]
+    },
+    "corrigido": {
+      "urlLocal": "http://127.0.0.1:63906/",
+      "execucoes": [
+        {
+          "n": 1,
+          "startedAt": "2026-11-16T23:20:10.994Z",
+          "durationMs": 11059,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 68,
+            "accessibility": 92,
+            "best-practices": 96,
+            "seo": 92
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:63906/",
+          "mainDocumentUrl": "http://127.0.0.1:63906/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 3010,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 68,
+              "accessibility": 92,
+              "best-practices": 96,
+              "seo": 92
+            },
+            "fcpMs": 3751.7911851348417,
+            "lcpMs": 7128.358472127827,
+            "tbtMs": 54.000000000000455,
+            "cls": 0.01148665454371051,
+            "speedIndexMs": 3751.7911851348417,
+            "pesoTotalBytes": 1162260,
+            "requisicoes": 63,
+            "jsNaoUsadoBytes": 143891,
+            "cssNaoUsadoBytes": 0
+          }
+        },
+        {
+          "n": 2,
+          "startedAt": "2026-11-16T23:20:31.054Z",
+          "durationMs": 9513,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 68,
+            "accessibility": 92,
+            "best-practices": 96,
+            "seo": 92
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:63906/",
+          "mainDocumentUrl": "http://127.0.0.1:63906/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2842,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 68,
+              "accessibility": 92,
+              "best-practices": 96,
+              "seo": 92
+            },
+            "fcpMs": 3752.858334416369,
+            "lcpMs": 7280.716668832735,
+            "tbtMs": 59.5,
+            "cls": 0.01148665454371051,
+            "speedIndexMs": 3752.858334416369,
+            "pesoTotalBytes": 1162260,
+            "requisicoes": 63,
+            "jsNaoUsadoBytes": 143891,
+            "cssNaoUsadoBytes": 0
+          }
+        },
+        {
+          "n": 3,
+          "startedAt": "2026-11-16T23:20:50.650Z",
+          "durationMs": 9730,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 68,
+            "accessibility": 92,
+            "best-practices": 96,
+            "seo": 92
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:63906/",
+          "mainDocumentUrl": "http://127.0.0.1:63906/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2739.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 68,
+              "accessibility": 92,
+              "best-practices": 96,
+              "seo": 92
+            },
+            "fcpMs": 3601.599185139473,
+            "lcpMs": 7127.998472136511,
+            "tbtMs": 51.5,
+            "cls": 0.01148665454371051,
+            "speedIndexMs": 3601.599185139473,
+            "pesoTotalBytes": 1162260,
+            "requisicoes": 63,
+            "jsNaoUsadoBytes": 143891,
+            "cssNaoUsadoBytes": 0
+          }
+        }
+      ],
+      "mediana": {
+        "criterio": "nota-performance",
+        "n": 2
+      },
+      "metricas": {
+        "notas": {
+          "performance": 68,
+          "accessibility": 92,
+          "best-practices": 96,
+          "seo": 92
+        },
+        "fcpMs": 3752.858334416369,
+        "lcpMs": 7280.716668832735,
+        "tbtMs": 59.5,
+        "cls": 0.01148665454371051,
+        "speedIndexMs": 3752.858334416369,
+        "pesoTotalBytes": 1162260,
+        "requisicoes": 63,
+        "jsNaoUsadoBytes": 143891,
+        "cssNaoUsadoBytes": 0
+      },
+      "variacaoPerformance": {
+        "n": 3,
+        "min": 68,
+        "max": 68,
+        "amplitude": 0,
+        "media": 68,
+        "desvioPadrao": 0
+      },
+      "semantica": {
+        "status": "ok",
+        "indicadores": {
+          "divSpan": {
+            "div": 270,
+            "span": 141,
+            "total": 525,
+            "proporcao": 0.7828571428571428
+          },
+          "landmarks": {
+            "banner": 1,
+            "navigation": 1,
+            "main": 1,
+            "contentinfo": 1
+          },
+          "titulos": {
+            "total": 13,
+            "h1": 1,
+            "porNivel": [
+              1,
+              12,
+              0,
+              0,
+              0,
+              0
+            ],
+            "saltos": 0,
+            "maiorSalto": 0,
+            "primeiroNivel": 1
+          },
+          "estrutura": {
+            "article": 0,
+            "section": 14,
+            "aside": 0,
+            "figure": 0,
+            "ul": 2,
+            "ol": 0
+          },
+          "interativosFalsos": {
+            "comOnclick": 0,
+            "falsos": 0
+          },
+          "metadados": {
+            "lang": "pt",
+            "temTitle": true,
+            "titleComprimento": 33,
+            "temViewport": true,
+            "temDescription": true
+          },
+          "imagens": {
+            "total": 18,
+            "semAlt": 0,
+            "altVazio": 2,
+            "semAltComAlternativa": 0
+          },
+          "campos": {
+            "total": 0,
+            "semLabel": 0,
+            "semLabelComPlaceholderOuTitle": 0
+          },
+          "obsoletas": {
+            "roteiro": 0,
+            "whatwg": 0,
+            "porTag": {}
+          },
+          "tabelas": {
+            "total": 0,
+            "layoutDeclarada": 0,
+            "layoutHeuristica": 0,
+            "dados": 0,
+            "indeterminada": 0
+          }
+        },
+        "indice": {
+          "subnotas": {
+            "landmarks": 100,
+            "titulos": 100,
+            "imagens": 100,
+            "campos": null,
+            "divSpan": 21.71428571428572,
+            "metadados": 100,
+            "interativos": null,
+            "obsoletos": 100
+          },
+          "indice": 90.21428571428571,
+          "indicePesosIguais": 86.95238095238096
+        },
+        "networkidleTimeout": false
+      },
+      "faltasNoServidor": [
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=21&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=174e9455-da95-40cc-9850-ec10f5926685&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=0&tsn=60&platformOnSite=true&hasInitialZoom=false&infoInitialZoom=%7B%22devicePixelRatio%22%3A1.75%2C%22innerWidth%22%3A981%2C%22outerWidth%22%3A412%2C%22visualViewportScale%22%3A1%7D&mpaSessionId=f1ed59dd-cbc4-4e80-995e-1a10486164f6",
+        "/_ext/panorama.wixapps.net/api/v1/bulklog",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=174e9455-da95-40cc-9850-ec10f5926685&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=0&tsn=60&errorInfo=Uncaught%20TypeError:%20Failed%20to%20construct%20%27URL%27:%20Invalid%20URL&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=174e9455-da95-40cc-9850-ec10f5926685&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=0&tsn=60&errorInfo=Uncaught%20ReferenceError:%20Cannot%20access%20%27u%27%20before%20initialization&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=28&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=174e9455-da95-40cc-9850-ec10f5926685&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=0&tsn=60&name=partially_visible&duration=1794263521455&pageId=pfvdq&isSuccessfulSSR=true",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=174e9455-da95-40cc-9850-ec10f5926685&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=0&tsn=60&errorInfo=SecurityError:%20Failed%20to%20construct%20%27Worker%27:%20Script%20at%20%27http://_partials/wix-thunderbolt/dist/clientWorker.70eb3f68.bundle.min.js%27%20cannot%20be%20accessed%20from%20origin%20%27http://127.0.0.1:63906%27.&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=21&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=41fdabd9-7029-45de-92ac-97fc28106661&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=23&tsn=62&platformOnSite=true&hasInitialZoom=false&infoInitialZoom=%7B%22devicePixelRatio%22%3A1.75%2C%22innerWidth%22%3A981%2C%22outerWidth%22%3A412%2C%22visualViewportScale%22%3A1%7D&mpaSessionId=bb7ec4ec-9a36-4251-9367-f00ba90ec915",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=41fdabd9-7029-45de-92ac-97fc28106661&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=23&tsn=62&errorInfo=Uncaught%20TypeError:%20Failed%20to%20construct%20%27URL%27:%20Invalid%20URL&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=41fdabd9-7029-45de-92ac-97fc28106661&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=23&tsn=62&errorInfo=SecurityError:%20Failed%20to%20construct%20%27Worker%27:%20Script%20at%20%27http://_partials/wix-thunderbolt/dist/clientWorker.70eb3f68.bundle.min.js%27%20cannot%20be%20accessed%20from%20origin%20%27http://127.0.0.1:63906%27.&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=41fdabd9-7029-45de-92ac-97fc28106661&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=23&tsn=62&errorInfo=Uncaught%20ReferenceError:%20Cannot%20access%20%27u%27%20before%20initialization&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=28&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=41fdabd9-7029-45de-92ac-97fc28106661&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=23&tsn=62&name=partially_visible&duration=1794871213323&pageId=pfvdq&isSuccessfulSSR=true",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=41fdabd9-7029-45de-92ac-97fc28106661&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=23&tsn=62&errorInfo=Uncaught%20TypeError:%20Cannot%20read%20properties%20of%20undefined%20(reading%20%27wixBiSession%27)&errorType=load",
+        "/_ext/static.wixstatic.com/media/a45654_3afe6adb057c4e7aa125a45b538419e9%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/a45654_3afe6adb057c4e7aa125a45b538419e9%7Emv2.png",
+        "/_ext/static.wixstatic.com/media/a45654_3afe6adb057c4e7aa125a45b538419e9%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/a45654_3afe6adb057c4e7aa125a45b538419e9%7Emv2.png",
+        "/_ext/static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/amaticsc/v13/TUZyzwprpvBS1izr_vOECuSfU5cP1Q.woff2",
+        "/robots.txt",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/handleAccessTokens.inline.3250797b.bundle.min.js.map",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/overrideGlobals.inline.b271af7d.bundle.min.js.map",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/sendFedopsLoadStarted.inline.807a10d2.bundle.min.js.map",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/webpack-runtime.6e580b93.bundle.min.js.map",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/fastdom.inline.91adf90e.bundle.min.js.map",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/custom-element-utils.inline.1364221e.bundle.min.js.map",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/initCustomElements.inline.3a3771fe.bundle.min.js.map",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/externals-registry.inline.c335b0f1.bundle.min.js.map",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/lazyCustomElementWrapper.inline.eefbcea5.bundle.min.js.map",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/bi-common.inline.25508356.bundle.min.js.map",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/createPlatformWorker.inline.a9bb4739.bundle.min.js.map",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/windowMessageRegister.inline.5cd174ec.bundle.min.js.map",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/bi.inline.ae93e7f6.bundle.min.js.map",
+        "/_ext/browser.sentry-cdn.com/7.120.3/modulemetadata.es5.min.js.map",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/thunderbolt-commons.7c52e13b.bundle.min.js.map",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/main.e386638a.bundle.min.js.map",
+        "/_ext/static.parastorage.com/services/wix-thunderbolt/dist/sendBeat12.inline.995b241c.bundle.min.js.map",
+        "/_ext/static.parastorage.com/services/tag-manager-client/1.1075.0/siteTags.bundle.min.js.map",
+        "/_ext/browser.sentry-cdn.com/7.120.3/bundle.tracing.es5.min.js.map",
+        "/_ext/static.wixstatic.com/media/a45654_795c53280e6c4181a72fce4830ac74d1~mv2.jpg/v1/crop/x_36,y_0,w_1472,h_891/fill/w_656,h_397,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/2024-05-01_21-57-32b.jpg",
+        "/_ext/static.wixstatic.com/media/a45654_54784695c50246c1b70c821a873c0759~mv2.png/v1/fill/w_505,h_381,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/AdobeStock_581664603.png",
+        "/_ext/static.wixstatic.com/media/8ad369_e8e71a7a0f904a95bec91bb9863a1e40~mv2.png/v1/fill/w_153,h_33,al_c,q_85,enc_avif,quality_auto/8ad369_e8e71a7a0f904a95bec91bb9863a1e40~mv2.png",
+        "/_ext/static.wixstatic.com/media/8ad369_51bdb1a6ff9e4868ae8090f1d7a497a3~mv2.png/v1/fill/w_209,h_624,al_c,q_85,enc_avif,quality_auto/8ad369_51bdb1a6ff9e4868ae8090f1d7a497a3~mv2.png",
+        "/_ext/static.wixstatic.com/media/a45654_795c53280e6c4181a72fce4830ac74d1~mv2.jpg/v1/crop/x_36,y_0,w_1472,h_891/fill/w_1312,h_794,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/2024-05-01_21-57-32b.jpg",
+        "/_ext/static.wixstatic.com/media/a45654_54784695c50246c1b70c821a873c0759~mv2.png/v1/fill/w_1010,h_762,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/AdobeStock_581664603.png",
+        "/_ext/static.wixstatic.com/media/8ad369_e8e71a7a0f904a95bec91bb9863a1e40~mv2.png/v1/fill/w_214,h_46,al_c,lg_1,q_85,enc_avif,quality_auto/8ad369_e8e71a7a0f904a95bec91bb9863a1e40~mv2.png",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=21&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=1ba406b7-c4d4-419b-9cc3-1f43e5147305&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=30&tsn=79&platformOnSite=true&hasInitialZoom=false&infoInitialZoom=%7B%22devicePixelRatio%22%3A1.75%2C%22innerWidth%22%3A981%2C%22outerWidth%22%3A412%2C%22visualViewportScale%22%3A1%7D&mpaSessionId=bb7ec4ec-9a36-4251-9367-f00ba90ec915&document_referrer=http://127.0.0.1:63906/",
+        "/_ext/static.wixstatic.com/media/8ad369_701fd68d8c4547f9b103e829e134003b~mv2.png/v1/fill/w_58,h_19,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/8ad369_701fd68d8c4547f9b103e829e134003b~mv2.png",
+        "/_ext/static.wixstatic.com/media/a45654_0075212c59cf4995940b52b0dc7ed5b8~mv2.png/v1/crop/x_210,y_0,w_1024,h_1024/fill/w_164,h_164,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/escolaMPE2.png",
+        "/_ext/static.wixstatic.com/media/8ad369_c4df189807bf48cdbb477dd995df4884~mv2.png/v1/crop/x_0,y_4,w_540,h_483/fill/w_479,h_428,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/pana.png",
+        "/_ext/static.wixstatic.com/media/a45654_3e3f4b466a8548f79c4edc1e9b473dbc~mv2.jpg/v1/fill/w_600,h_398,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/2024-05-01_18-33-00.jpg",
+        "/_ext/static.wixstatic.com/media/a45654_9674560be70046caa29fc3cb72b86c28~mv2.png/v1/fill/w_74,h_74,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logoMPcorretor.png",
+        "/_ext/static.wixstatic.com/media/a45654_fae55420fd834cc887bab484acec5fad~mv2.png/v1/crop/x_0,y_117,w_1817,h_1085/fill/w_575,h_343,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/bitmap.png",
+        "/_ext/static.wixstatic.com/media/a45654_71214075ed424dae8855d261db155655~mv2.png/v1/crop/x_323,y_480,w_5380,h_3135/fill/w_529,h_309,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/AdobeStock_534550727.png",
+        "/_ext/static.wixstatic.com/media/a45654_ba6ee2c31cf1493b8afb2ef589ccdb39~mv2.jpg/v1/crop/x_0,y_12,w_1365,h_851/fill/w_394,h_246,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/2024-04-29_14-32-17.jpg",
+        "/_ext/static.wixstatic.com/media/a45654_662892d6688f4f3ba4668e8af1352d61~mv2.jpg/v1/crop/x_0,y_64,w_997,h_566/fill/w_285,h_176,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/2023-11-16_16-03-00.jpg",
+        "/_ext/static.wixstatic.com/media/a45654_d7fa7be2d5614dd8afa238d9701190b3~mv2.jpg/v1/fill/w_332,h_263,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a45654_d7fa7be2d5614dd8afa238d9701190b3~mv2.jpg",
+        "/_ext/static.wixstatic.com/media/a45654_4373766a73bd4bf697a45c357804b07d~mv2.png/v1/fill/w_383,h_263,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a45654_4373766a73bd4bf697a45c357804b07d~mv2.png",
+        "/_ext/static.wixstatic.com/media/a45654_61af59f66a90427391a385b66ddc491d~mv2.jpeg/v1/fill/w_370,h_208,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/AdobeStock_175796505.jpeg",
+        "/_ext/static.wixstatic.com/media/a45654_634b63246d314260990ebd057818854c~mv2.png/v1/fill/w_258,h_359,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/tableteMultiprova.png",
+        "/_ext/static.wixstatic.com/media/a45654_c50e9e4bcd3749b0971c462321c1ca5f~mv2.png/v1/fill/w_600,h_328,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/nuvemmultiprova.png",
+        "/_ext/static.wixstatic.com/media/8ad369_51bdb1a6ff9e4868ae8090f1d7a497a3~mv2.png/v1/fill/w_1069,h_624,al_c,q_90,enc_avif,quality_auto/8ad369_51bdb1a6ff9e4868ae8090f1d7a497a3~mv2.png",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=21&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=107b644e-aa4f-421e-a14f-baa663d3bdcf&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=27&tsn=58&platformOnSite=true&hasInitialZoom=false&infoInitialZoom=%7B%22devicePixelRatio%22%3A1.75%2C%22innerWidth%22%3A981%2C%22outerWidth%22%3A412%2C%22visualViewportScale%22%3A1%7D&mpaSessionId=06601ba2-c6fc-43c5-ba11-91ac0e426c7b",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=107b644e-aa4f-421e-a14f-baa663d3bdcf&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=27&tsn=58&errorInfo=Uncaught%20TypeError:%20Failed%20to%20construct%20%27URL%27:%20Invalid%20URL&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=107b644e-aa4f-421e-a14f-baa663d3bdcf&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=27&tsn=58&errorInfo=SecurityError:%20Failed%20to%20construct%20%27Worker%27:%20Script%20at%20%27http://_partials/wix-thunderbolt/dist/clientWorker.70eb3f68.bundle.min.js%27%20cannot%20be%20accessed%20from%20origin%20%27http://127.0.0.1:63906%27.&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=107b644e-aa4f-421e-a14f-baa663d3bdcf&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=27&tsn=58&errorInfo=Uncaught%20ReferenceError:%20Cannot%20access%20%27u%27%20before%20initialization&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=28&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=107b644e-aa4f-421e-a14f-baa663d3bdcf&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=27&tsn=58&name=partially_visible&duration=1794871233595&pageId=pfvdq&isSuccessfulSSR=true",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=107b644e-aa4f-421e-a14f-baa663d3bdcf&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=27&tsn=58&errorInfo=Uncaught%20TypeError:%20Cannot%20read%20properties%20of%20undefined%20(reading%20%27wixBiSession%27)&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=21&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=07bef835-da4e-4c3f-b5cd-230f630afea7&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=22&tsn=47&platformOnSite=true&hasInitialZoom=false&infoInitialZoom=%7B%22devicePixelRatio%22%3A1.75%2C%22innerWidth%22%3A981%2C%22outerWidth%22%3A412%2C%22visualViewportScale%22%3A1%7D&mpaSessionId=06601ba2-c6fc-43c5-ba11-91ac0e426c7b&document_referrer=http://127.0.0.1:63906/",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=07bef835-da4e-4c3f-b5cd-230f630afea7&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=22&tsn=47&errorInfo=Uncaught%20TypeError:%20Failed%20to%20construct%20%27URL%27:%20Invalid%20URL&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=07bef835-da4e-4c3f-b5cd-230f630afea7&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=22&tsn=47&errorInfo=Uncaught%20ReferenceError:%20Cannot%20access%20%27u%27%20before%20initialization&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=28&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=07bef835-da4e-4c3f-b5cd-230f630afea7&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=22&tsn=47&name=partially_visible&duration=1794871239734&pageId=pfvdq&isSuccessfulSSR=true",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=07bef835-da4e-4c3f-b5cd-230f630afea7&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=22&tsn=47&errorInfo=SecurityError:%20Failed%20to%20construct%20%27Worker%27:%20Script%20at%20%27http://_partials/wix-thunderbolt/dist/clientWorker.70eb3f68.bundle.min.js%27%20cannot%20be%20accessed%20from%20origin%20%27http://127.0.0.1:63906%27.&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=07bef835-da4e-4c3f-b5cd-230f630afea7&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=22&tsn=47&errorInfo=Uncaught%20TypeError:%20Cannot%20read%20properties%20of%20undefined%20(reading%20%27wixBiSession%27)&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=21&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=4dc6e225-537c-4a34-b54d-dfa92bdba21b&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=31&tsn=65&platformOnSite=true&hasInitialZoom=false&infoInitialZoom=%7B%22devicePixelRatio%22%3A1.75%2C%22innerWidth%22%3A981%2C%22outerWidth%22%3A412%2C%22visualViewportScale%22%3A1%7D&mpaSessionId=3258922b-926d-47ce-ba06-f1ade4c82b97",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=4dc6e225-537c-4a34-b54d-dfa92bdba21b&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=31&tsn=65&errorInfo=SecurityError:%20Failed%20to%20construct%20%27Worker%27:%20Script%20at%20%27http://_partials/wix-thunderbolt/dist/clientWorker.70eb3f68.bundle.min.js%27%20cannot%20be%20accessed%20from%20origin%20%27http://127.0.0.1:63906%27.&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=4dc6e225-537c-4a34-b54d-dfa92bdba21b&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=31&tsn=65&errorInfo=Uncaught%20TypeError:%20Failed%20to%20construct%20%27URL%27:%20Invalid%20URL&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=4dc6e225-537c-4a34-b54d-dfa92bdba21b&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=31&tsn=65&errorInfo=Uncaught%20ReferenceError:%20Cannot%20access%20%27u%27%20before%20initialization&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=28&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=4dc6e225-537c-4a34-b54d-dfa92bdba21b&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=31&tsn=65&name=partially_visible&duration=1794871252792&pageId=pfvdq&isSuccessfulSSR=true",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=4dc6e225-537c-4a34-b54d-dfa92bdba21b&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=31&tsn=65&errorInfo=Uncaught%20TypeError:%20Cannot%20read%20properties%20of%20undefined%20(reading%20%27wixBiSession%27)&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=21&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=6736a18c-34bb-4ca7-81ae-1fe23b494136&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=25&tsn=67&platformOnSite=true&hasInitialZoom=false&infoInitialZoom=%7B%22devicePixelRatio%22%3A1.75%2C%22innerWidth%22%3A981%2C%22outerWidth%22%3A412%2C%22visualViewportScale%22%3A1%7D&mpaSessionId=3258922b-926d-47ce-ba06-f1ade4c82b97&document_referrer=http://127.0.0.1:63906/",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=6736a18c-34bb-4ca7-81ae-1fe23b494136&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=25&tsn=67&errorInfo=Uncaught%20TypeError:%20Failed%20to%20construct%20%27URL%27:%20Invalid%20URL&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=6736a18c-34bb-4ca7-81ae-1fe23b494136&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=25&tsn=67&errorInfo=SecurityError:%20Failed%20to%20construct%20%27Worker%27:%20Script%20at%20%27http://_partials/wix-thunderbolt/dist/clientWorker.70eb3f68.bundle.min.js%27%20cannot%20be%20accessed%20from%20origin%20%27http://127.0.0.1:63906%27.&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=26&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=6736a18c-34bb-4ca7-81ae-1fe23b494136&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=25&tsn=67&errorInfo=Uncaught%20ReferenceError:%20Cannot%20access%20%27u%27%20before%20initialization&errorType=load",
+        "/_ext/frog.wix.com/bolt-performance?src=72&evid=28&appName=thunderbolt&is_rollout=1&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=virginia-pub&is_cached=false&msid=3a0cba75-7008-4274-9ef7-11deffc0b021&session_id=bda0dc94-1bf7-4bbe-9efb-eea25ce9a427&ish=true&isb=true&isbr=webdriver&vsi=6736a18c-34bb-4ca7-81ae-1fe23b494136&caching=unknown&pv=visible&pn=1&v=1.18365.0&url=%2F&client_url=http%3A%2F%2F127.0.0.1%3A63906%2F&st=2&ts=25&tsn=67&name=partially_visible&duration=1794871259425&pageId=pfvdq&isSuccessfulSSR=true"
+      ]
+    }
+  },
+  "deltas": {
+    "nota_performance": {
+      "original": 68,
+      "corrigido": 68,
+      "delta": 0
+    },
+    "nota_accessibility": {
+      "original": 92,
+      "corrigido": 92,
+      "delta": 0
+    },
+    "nota_best_practices": {
+      "original": 96,
+      "corrigido": 96,
+      "delta": 0
+    },
+    "nota_seo": {
+      "original": 92,
+      "corrigido": 92,
+      "delta": 0
+    },
+    "fcp_ms": {
+      "original": 3752.528105856334,
+      "corrigido": 3752.858334416369,
+      "delta": 0.3302285600348114
+    },
+    "lcp_ms": {
+      "original": 7055.056211712668,
+      "corrigido": 7280.716668832735,
+      "delta": 225.6604571200669
+    },
+    "tbt_ms": {
+      "original": 51.5,
+      "corrigido": 59.5,
+      "delta": 8
+    },
+    "cls": {
+      "original": 0.01148665454371051,
+      "corrigido": 0.01148665454371051,
+      "delta": 0
+    },
+    "speed_index_ms": {
+      "original": 3752.528105856334,
+      "corrigido": 3752.858334416369,
+      "delta": 0.3302285600348114
+    },
+    "peso_total_bytes": {
+      "original": 1162257,
+      "corrigido": 1162260,
+      "delta": 3
+    },
+    "requisicoes": {
+      "original": 63,
+      "corrigido": 63,
+      "delta": 0
+    },
+    "indice_semantica": {
+      "original": 90.21428571428571,
+      "corrigido": 90.21428571428571,
+      "delta": 0
+    },
+    "indice_semantica_pesos_iguais": {
+      "original": 86.95238095238096,
+      "corrigido": 86.95238095238096,
+      "delta": 0
+    },
+    "sub_landmarks": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    },
+    "sub_titulos": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    },
+    "sub_imagens": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    },
+    "sub_campos": {
+      "original": null,
+      "corrigido": null,
+      "delta": null
+    },
+    "sub_divSpan": {
+      "original": 21.71428571428572,
+      "corrigido": 21.71428571428572,
+      "delta": 0
+    },
+    "sub_metadados": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    },
+    "sub_interativos": {
+      "original": null,
+      "corrigido": null,
+      "delta": null
+    },
+    "sub_obsoletos": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    }
+  }
+}

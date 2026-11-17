@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MCA - Mulheres Conquistando Autonomia</title>
+
+	<!-- Bootstrap -->
+	<link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Navbar-header -->
+	<link href="css/navbar-index.css" rel="stylesheet">
+	<!-- Image Perfil -->
+	<link href="css/img-perfil.css" rel="stylesheet">
+	<!-- Section home-->
+	<link href="css/home-section.css" rel="stylesheet">
+	<!-- Semantic UI image -->
+	<link href="css/UI-Image-master/image.css" rel="stylesheet">
+	<!-- Acoes Css -->
+	<link href="css/img-acoes.css" rel="stylesheet">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <!-- ESTILO DAS FONTS -->
+      <style>
+      	@font-face {
+      		font-family: corbel;
+      		src: local('corbel');
+      		src: url('fonts/corbel.ttf') format("truetype");
+      	}
+
+      	@font-face {
+      		font-family: nova;
+      		src: local('nova');
+      		src: url('fonts/nova.otf') format("opentype");
+      	}
+
+      	@font-face {
+      		font-family: corbel;
+      		src: local('corbelb');
+      		src: url('fonts/corbelb.ttf') format("truetype");
+      		font-weight: bold;
+      	}
+
+      	.corbel-font{
+      		font-family: corbel; 
+      	} 
+
+      	.nova-font{
+      		font-family: nova;
+      	}
+      </style>
+      <!-- FIM DO ESTILO DAS FONTS -->
+  </head>
+  <body>
+  	<nav class="navbar navbar-default navbar-fixed-top corbel-font" id="menu">
+  		<div class="container">
+  			<!-- Brand and toggle get grouped for better mobile display -->
+  			<div class="navbar-header">
+  				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+  					<span class="sr-only">Toggle navigation</span>
+  					<span class="icon-bar"></span>
+  					<span class="icon-bar"></span>
+  					<span class="icon-bar"></span>
+  				</button>
+  				<a class="navbar-brand" href="#" onclick="$('#inicio').animatescroll();"><img class="ui tiny image" src="images/simbolo-navbar.png" width="507" height="173"></a>
+  			</div>
+
+  			<!-- Collect the nav links, forms, and other content for toggling -->
+  			<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+  				<ul class="nav navbar-nav">
+  					<li><a href="#" onclick="$('#inicio').animatescroll();"><b>INÍCIO</b></a></li>
+            <li><a href="#" onclick="$('#eventos').animatescroll();"><b>EVENTOS</b></a></li>
+  					<li><a href="#" onclick="$('#sobre').animatescroll();"><b>SOBRE</b></a></li>
+  					<li><a href="#" onclick="$('#equipe').animatescroll();"><b>EQUIPE</b></a></li>
+  					<li><a href="#" onclick="$('#acoes').animatescroll();"><b>AÇÕES</b></a></li>
+  					<li><a href="#" onclick="$('#agenda').animatescroll();"><b>AGENDA</b></a></li>
+  					<li><a href="#" onclick="$('#downloads').animatescroll();"><b>DOWNLOADS</b></a></li>
+  					<li><a href="#" onclick="$('#contato').animatescroll();"><b>CONTATO</b></a></li>
+  				</ul>
+  			</div><!-- /.navbar-collapse -->
+  		</div>
+  	</nav>
+  	<section id="inicio">
+  		<div class="container-fluid inicio text-center corbel-font">
+  			<div class="row">
+  				<div class="col-xs-12">
+  					<img class="ui medium middle aligned image" src="images/logo-site.png" width="480" height="280">
+  					<h2><b>Desenvolvendo ações para inserção e permanência </b></h2>
+  					<h2><b>de mulheres do Rio Grande do Norte </b></h2>
+  					<h2><b>no mundo do trabalho</b></h2>
+  				</div>
+  			</div>
+  		</div>
+  	</section>
+    <section id="eventos">
+      <div class="container-fluid eventos text-center corbel-font">
+        <div class="row">
+          <div class="col-xs-12">
+            <h1><b>Eventos</b></h1>
+            <br><br>
+            <img class="ui middle aligned image" src="images/folder_evento.png">
+            <br>
+            <br>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary btn-lg" id="saibamais" name="saibamais" data-toggle="modal" data-target="#eventoModal">Saiba Mais!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  	<section id="sobre">
+  		<div class="container-fluid sobre corbel-font">
+  			<div class="row">
+  				<div class="col-xs-12 col-md-12 col-lg-12">
+            <h1 class="text-center"><b>Sobre</b></h1>
+            <br>
+  					<h3>O projeto de extensão da Universidade Federal do Rio Grande do Norte (UFRN), "Mulheres Conquistando Autonomia - Ações para inserção e permanência das mulheres do Rio Grande do Norte no mundo do trabalho" visa estabelecer com as mulheres e organizações representativas, processos formativos e de capacitação, bem como fomentar ações com gestores públicos e atores da sociedade civil, buscando fortalecer a autonomia econômica das mulheres do Rio Grande do Norte (RN), contribuindo para o aumento econômico e permanência no mundo do trabalho, por meio da articulação, ampliação e diversificação da oferta e demanda de ações, numa perspectiva crítico-feminista.</h3>
+  				</div>
+  			</div>
+  		</div>
+  	</section>
+  	<section id="equipe" class="corbel-font">
+  		<div class="container-fluid equipe">
+  			<div class="row">
+          <div class="col-xs-12 col-md-12 col-lg-12 text-center">
+          <h1><b>Equipe</b></h1>
+          <br><br>
+          <h2>Professores</h2>
+          <br><br>
+          </div>
+  				<div class="col-xs-12 col-md-3 col-lg-3 text-center">
+  					<figure class="ui small circular image" data-toggle="modal" data-target="#perfilModal" data-imagem="images/fotos-perfil/deusimar.jpg" data-name="Deusimar Freire Brasil" data-funcao="Coordenador" data-formacao="Doutorado em Aquicultura" data-curriculo="http://lattes.cnpq.br/1289770421989278" >
+  						<img loading="lazy" class="img-circle" src="images/fotos-perfil/deusimar.jpg" width="155" height="155">
+  						<figcaption><span class="figcaption-text">Clique aqui<br>e<br>saiba mais</span></figcaption>
+  					</figure>
+  					<h4><b>Deusimar Freire</b></h4>
+  					<h5>Coordenador</h5>
+  				</div>
+  				<div class="col-xs-12 col-md-3 col-lg-3 text-center">
+  					<figure class="ui small circular image" data-toggle="modal" data-target="#perfilModal" data-imagem="images/fotos-perfil/sem-foto-feminino.jpg" data-name="Fernanda Cristina Barbosa Pereira Queiroz" data-funcao="Coordenadora" data-formacao="Doutorado em Engenharia de Produção" data-curriculo="http://lattes.cnpq.br/4742833301655917" >
+  						<img loading="lazy" class="img-circle" src="images/fotos-perfil/sem-foto-feminino.jpg" width="280" height="280">
+  						<figcaption><span class="figcaption-text">Clique aqui<br>e<br>saiba mais</span></figcaption>
+  					</figure>
+  					<h4><b>Fernanda Queiroz</b></h4>
+  					<h5>Coordenadora</h5>
+  				</div>
+  				<div class="col-xs-12 col-md-3 col-lg-3 text-center">
+  					<figure class="ui small circular image" data-toggle="modal" data-target="#perfilModal" data-imagem="images/fotos-perfil/sem-foto-masculino.jpg" data-name="Jamerson Viegas Queiroz" data-funcao="Coordenador" data-formacao="Doutorado em Engenharia de Produção" data-curriculo="http://lattes.cnpq.br/0037657888703116" >
+  						<img loading="lazy" class="img-circle" src="images/fotos-perfil/sem-foto-masculino.jpg" width="320" height="320">
+  						<figcaption><span class="figcaption-text">Clique aqui<br>e<br>saiba mais</span></figcaption>
+  					</figure>
+  					<h4><b>Jamerson Queiroz</b></h4>
+  					<h5>Coordenador</h5>
+  				</div>
+  				<div class="col-xs-12 col-md-3 col-lg-3 text-center">
+  					<figure class="ui small circular image" data-toggle="modal" data-target="#perfilModal" data-imagem="images/fotos-perfil/Furukava.jpg" data-name="Marciano Furukava" data-funcao="Coordenador Geral" data-formacao="Doutorado em Ciência e Engenharia de Materiais" data-curriculo="http://lattes.cnpq.br/7046131809246694" >
+  						<img loading="lazy" class="img-circle" src="images/fotos-perfil/furukava.jpg" width="640" height="640">
+  						<figcaption><span class="figcaption-text">Clique aqui<br>e<br>saiba mais</span></figcaption>
+  					</figure>
+  					<h4><b>Marciano Furukava</b></h4>
+  					<h5>Coordenador Geral</h5>
+  				</div>
+  			</div>
+  			<br><br><br>
+  			<h2 class="text-center">Assessoria Técnica</h2>
+  			<br><br>
+  			<div class="row">
+  				<div class="col-xs-12 text-center">
+  					<figure class="ui small circular image" data-toggle="modal" data-target="#perfilModal" data-imagem="images/fotos-perfil/lidiane.jpg" data-name="Lidiane Freire de Jesus" data-funcao="Assesora Técnica" data-formacao="Tecnóloga em Cooperativismo e Especialização em Economia Solidária e Desenvolvimento Territorial" data-curriculo="http://lattes.cnpq.br/6037602556843641" >
+  						<img loading="lazy" class="img-circle" src="images/fotos-perfil/lidiane.jpg" width="1080" height="1080">
+  						<figcaption><span class="figcaption-text">Clique aqui<br>e<br>saiba mais</span></figcaption>
+  					</figure>
+  					<h4><b>Lidiane Freire</b></h4>
+  					<h5>Asessora Técnica</h5>
+  				</div>
+  			</div>
+  			<br><br><br>
+
+  			<!-- Bolsistas -->
+  			<h2 class="text-center">Bolsistas Multidisciplinares</h2>
+  			<br><br>
+  			<div class="row">
+  				<div class="col-xs-12 col-md-2 col-lg-2 text-center">
+  					<figure class="ui tiny circular image" data-toggle="modal" data-target="#perfilModal" data-imagem="images/fotos-perfil/alynne.jpg" data-name="Alynne Fonseca de Oliveira" data-funcao="Bolsista de Extensão" data-formacao="Graduada em Comunicação Social - Jornalismo e Graduanda em Letras - Espanhol" data-curriculo="http://lattes.cnpq.br/6390089389702103" >
+  						<img loading="lazy" class="img-circle" src="images/fotos-perfil/alynne.jpg" width="504" height="504">
+  						<figcaption><span class="figcaption-text-tiny">Clique aqui<br>e<br>saiba mais</span></figcaption>
+  					</figure>
+  					<h5>Alynne Oliveira</h5>
+  				</div>
+  				<div class="col-xs-12 col-md-2 col-lg-2 text-center">
+  					<figure class="ui tiny circular image" data-toggle="modal" data-target="#perfilModal" data-imagem="images/fotos-perfil/andriele.jpg" data-name="Andrielle Miranda de Lima" data-funcao="Bolsista de Extensão" data-formacao="Graduanda em Engenharia Têxtil" data-curriculo="http://lattes.cnpq.br/4593042008320349" >
+  						<img loading="lazy" class="img-circle" src="images/fotos-perfil/andriele.jpg" width="338" height="338">
+  						<figcaption><span class="figcaption-text-tiny">Clique aqui<br>e<br>saiba mais</span></figcaption>
+  					</figure>
+  					<h5>Andrielle Miranda</h5>
+  				</div>
+  				<div class="col-xs-12 col-md-2 col-lg-2 text-center">
+  					<figure class="ui tiny circular image" data-toggle="modal" data-target="#perfilModal" data-imagem="images/fotos-perfil/divaneide.jpg" data-name="Maria Divaneide Basílio" data-funcao="Bolsista de Extensão" data-formacao="Doutoranda em Ciências Sociais" data-curriculo="http://lattes.cnpq.br/2817697428167208" >
+  						<img loading="lazy" class="img-circle" src="images/fotos-perfil/divaneide.jpg" width="720" height="720">
+  						<figcaption><span class="figcaption-text-tiny">Clique aqui<br>e<br>saiba mais</span></figcaption>
+  					</figure>
+  					<h5>Divaneide Basílio</h5>
+  				</div>
+  				<div class="col-xs-12 col-md-2 col-lg-2 text-center">
+  					<figure class="ui tiny circular image" data-toggle="modal" data-target="#perfilModal" data-imagem="images/fotos-perfil/sem-foto-masculino.jpg" data-name="Dalmo Múcio Silva dos Santos" data-funcao="Bolsista de Extensão" data-formacao="Bacharelando em Engenharia de Aquicultura" data-curriculo="http://lattes.cnpq.br/0276566514281164" >
+  						<img loading="lazy" class="img-circle" src="images/fotos-perfil/sem-foto-masculino.jpg" width="320" height="320">
+  						<figcaption><span class="figcaption-text-tiny">Clique aqui<br>e<br>saiba mais</span></figcaption>
+  					</figure>
+  					<h5>Dalmo Santos</h5>
+  				</div>
+  				<div class="col-xs-12 col-md-2 col-lg-2 text-center">
+  					<figure class="ui tiny circular image" data-toggle="modal" data-target="#perfilModal" data-imagem="images/fotos-perfil/gabriella.jpg" data-name="Maria Gabriella Madruga de Macêdo" data-funcao="Bolsista de Extensão" data-formacao="Graduanda em Psicologia" data-curriculo="http://lattes.cnpq.br/6455782575758750" >
+  						<img loading="lazy" class="img-circle" src="images/fotos-perfil/gabriella.jpg" width="520" height="520">
+  						<figcaption><span class="figcaption-text-tiny">Clique aqui<br>e<br>saiba mais</span></figcaption>
+  					</figure>
+  					<h5>Gabriella Macêdo</h5>
+  				</div>
+  				<div class="col-xs-12 col-md-2 col-lg-2 text-center">
+  					<figure class="ui tiny circular image" data-toggle="modal" data-target="#myModal">
+  						<img loading="lazy" class="img-circle" src="images/fotos-perfil/genifer.jpg" width="612" height="612">
+  						<figcaption><span class="figcaption-text-tiny">Clique aqui<br>e<br>saiba mais</span></figcaption>
+  					</figure>
+  					<h5>Genifer Reis</h5>
+  				</div>
+  			</div>
+  			<div class="row">
+  				<div class="col-xs-12 col-md-2 col-lg-2 text-center">
+  					<figure class="ui tiny circular image" data-toggle="modal" data-target="#perfilModal" data-imagem="images/fotos-perfil/gisely.jpg" data-name="Gisely Lacerda Gomes" data-funcao="Bolsista de Extensão" data-formacao="Bacharelanda em Ciências e Tecnologia" data-curriculo="http://lattes.cnpq.br/1989250179045233" >
+  						<img loading="lazy" class="img-circle" src="images/fotos-perfil/gisely.jpg" width="640" height="640">
+  						<figcaption><span class="figcaption-text-tiny">Clique aqui<br>e<br>saiba mais</span></figcaption>
+  					</figure>
+  					<h5>Gisely Lacerda</h5>
+  				</div>
+  				<div class="col-xs-12 col-md-2 col-lg-2 text-center">
+  					<figure class="ui tiny circular image" data-toggle="modal" data-target="#perfilModal" data-imagem="images/gisleude-image.jpg" data-name="Gisleude José Gentil Linhares" data-funcao="Bolsista de Extensão" data-formacao="Bacharelando em Tecnologia da Informação" data-curriculo="http://lattes.cnpq.br/6903632866265684" >
+  						<img loading="lazy" class="img-circle" src="images/gisleude-image.jpg" width="596" height="597">
+  						<figcaption><span class="figcaption-text-tiny">Clique aqui<br>e<br>saiba mais</span></figcaption>
+  					</figure>
+  					<h5>Gisleude Linhares</h5>
+  				</div>
+  				<div class="col-xs-12 col-md-2 col-lg-2 text-center">
+  					<figure class="ui tiny circular image" data-toggle="modal" data-target="#perfilModal" data-imagem="images/fotos-perfil/leandro.jpg" data-name="Leandro de Almeida Gonçalves" data-funcao="Bolsista de Extensão" data-formacao="Graduado - Engenharia de Petróleo e Graduando em Gestão de Projetos" data-curriculo="http://lattes.cnpq.br/6694527649127165" >
+  						<img loading="lazy" class="img-circle" src="images/fotos-perfil/leandro.jpg" width="625" height="625">
+  						<figcaption><span class="figcaption-text-tiny">Clique aqui<br>e<br>saiba mais</span></figcaption>
+  					</figure>
+  					<h5>Leandro Almeida</h5>
+  				</div>
+  				<div class="col-xs-12 col-md-2 col-lg-2 text-center">
+  					<figure class="ui tiny circular image" data-toggle="modal" data-target="#perfilModal" data-imagem="images/fotos-perfil/lia.jpg" data-name="Lia Pereira de Araújo e Silva" data-funcao="Bolsista de Extensão" data-formacao="Graduanda em Ciências Sociais" data-curriculo="http://lattes.cnpq.br/2387483906506423" >
+  						<img loading="lazy" class="img-circle" src="images/fotos-perfil/lia.jpg" width="719" height="719">
+  						<figcaption><span class="figcaption-text-tiny">Clique aqui<br>e<br>saiba mais</span></figcaption>
+  					</figure>
+  					<h5>Lia Araujo</h5>
+  				</div>
+  				<div class="col-xs-12 col-md-2 col-lg-2 text-center">
+  					<figure class="ui tiny circular image" data-toggle="modal" data-target="#perfilModal" data-imagem="images/fotos-perfil/liege.jpg" data-name="Liege Priscila de Medeiros" data-funcao="Bolsista de Extensão" data-formacao="Mestranda do Programa de Pós-Graduação em Ensino de Ciências Naturais e  Matemática (PPGECNM)" data-curriculo="http://lattes.cnpq.br/9765164346347793" >
+  						<img loading="lazy" class="img-circle" src="images/fotos-perfil/liege.jpg" width="640" height="640">
+  						<figcaption><span class="figcaption-text-tiny">Clique aqui<br>e<br>saiba mais</span></figcaption>
+  					</figure>
+  					<h5>Liege Medeiros</h5>
+  				</div>
+  				<div class="col-xs-12 col-md-2 col-lg-2 text-center">
+  					<figure class="ui tiny circular image" data-toggle="modal" data-target="#perfilModal" data-imagem="images/fotos-perfil/ryann.jpg" data-name="Ryann Fonseca de Oliveira" data-funcao="Bolsista de Extensão" data-formacao="Bacharelando em Administração" data-curriculo="http://lattes.cnpq.br/3531086221149311" >
+  						<img loading="lazy" class="img-circle" src="images/fotos-perfil/ryann.jpg" width="456" height="455">
+  						<figcaption><span class="figcaption-text-tiny">Clique aqui<br>e<br>saiba mais</span></figcaption>
+  					</figure>
+  					<h5>Ryann Oliveira</h5>
+  				</div>
+  			</div>
+  			<div class="row">
+  				<div class="col-xs-12 col-md-2 col-lg-2 text-center">
+  					<figure class="ui tiny circular image" data-toggle="modal" data-target="#perfilModal" data-imagem="images/fotos-perfil/sem-foto-feminino.jpg" data-name="Taoane Uchoa de Araújo Borges" data-funcao="Bolsista de Extensão" data-formacao="Graduanda em Ciências e Tecnologia  - Ênfase em Engenharia Ambiental" data-curriculo="http://lattes.cnpq.br/3988233682882187" >
+  						<img loading="lazy" class="img-circle" src="images/fotos-perfil/sem-foto-feminino.jpg" width="280" height="280">
+  						<figcaption><span class="figcaption-text-tiny">Clique aqui<br>e<br>saiba mais</span></figcaption>
+  					</figure>
+  					<h5>Taoane Uchoa</h5>
+  				</div>
+  				<div class="col-xs-12 col-md-2 col-lg-2 text-center">
+  					<figure class="ui tiny circular image" data-toggle="modal" data-target="#perfilModal" data-imagem="images/fotos-perfil/tayssa.jpg" data-name="Tayssa Figueiredo Moura" data-funcao="Bolsista de Extensão" data-formacao="Graduanda do Bacharelado em Ciências e Tecnologia - Ênfase em Tecnologia Biomédica" data-curriculo="http://lattes.cnpq.br/2006239035667881" >
+  						<img loading="lazy" class="img-circle" src="images/fotos-perfil/tayssa.jpg" width="640" height="640">
+  						<figcaption><span class="figcaption-text-tiny">Clique aqui<br>e<br>saiba mais</span></figcaption>
+  					</figure>
+  					<h5>Tayssa Figueiredo</h5>
+  				</div>
+  			</div>	
+     			<!--
+     			<div class="col-xs-12 col-md-2 col-lg-2 text-center">
+       				<figure class="ui tiny circular image" data-toggle="modal" data-target="#myModal">
+       					<img class="perfil" src="images/imagem.jpg">
+            			<figcaption><span class="figcaption-text-tiny">Clique aqui<br>e<br>saiba mais</span></figcaption>
+            		</figure>
+       				<center><h5>Isabela Muniz</h5></center>
+     			</div>
+     		-->
+     	</div>
+     </section>
+
+     <!-- Ações -->
+     <section id="acoes" class="corbel-font">
+     	<div class="container-fluid">
+     		<div class="row">
+          <div class="col-xs-12 col-md-12 col-lg-12 text-center">
+            <h1><b>Ações</b></h1>
+            <br><br>
+          </div>
+    			<div class="col-xs-12 col-md-4 col-lg-4 text-center acao-image">
+    				<figure class="ui medium rounded image" src="images/fotos-acoes/caico.jpg" data-toggle="modal" data-target="#acaoModal" data-name="Caicó - RN" data-imagem1="images/fotos-acoes/caico.jpg" data-imagem2="images/fotos-acoes/caico2.jpg" data-title1="" data-title2="" data-title3="">
+    					<img loading="lazy" src="images/fotos-acoes/caico.jpg" width="960" height="540">
+    					<figcaption><span class="figcaption-text-acoes"><h2><b>Oficina de Caicó</b></h2>Clique para ver as fotos!</span></figcaption>
+    				</figure>
+    			</div>
+    			<div class="col-xs-12 col-md-4 col-lg-4 text-center acao-image">
+    				<figure class="ui medium rounded image" src="images/fotos-acoes/caico.jpg" data-toggle="modal" data-target="#acaoModal" data-name="Nova Cruz - RN" data-imagem1="images/fotos-acoes/novacruz.jpg" data-imagem2="images/fotos-acoes/novacruz2.jpeg"  data-title1="" data-title2="" data-title3="">
+    					<img loading="lazy" src="images/fotos-acoes/novacruz.jpg" width="1040" height="585">
+    					<figcaption><span class="figcaption-text-acoes"><h2><b>Oficina de Nova Cruz</b></h2>Clique para ver as fotos!</span></figcaption>
+    				</figure>
+    			</div>
+    			<div class="col-xs-12 col-md-4 col-lg-4 text-center acao-image">
+    				<figure class="ui medium rounded image" src="images/fotos-acoes/joao-camara.jpg" data-toggle="modal" data-target="#acaoModal" data-name="João Câmara - RN" data-imagem1="images/fotos-acoes/joao-camara.jpg" data-imagem2="images/fotos-acoes/joao-camara2.jpg" data-title1="" data-title2="" data-title3="">
+    					<img loading="lazy" src="images/fotos-acoes/joao-camara.jpg" width="960" height="540">
+    					<figcaption><span class="figcaption-text-acoes"><h2><b>Oficina de João Câmara</b></h2>Clique para ver as fotos!</span></figcaption>
+    				</figure>
+    			</div>
+		</div>
+	</div>
+</section>
+<section id="agenda">
+	<div class="container-fluid nova-font">
+		<div class="row">
+			<div class="col-xs-12 col-md-12 col-lg-12">
+				<h2 class="text-center"><b>AGENDA</b></h2>
+        <br>
+			</div>
+			<div class="col-xs-12 col-md-12 col-lg-12">
+				<h4>14/06 - São Paulo do Potengi - RN - Oficina de Validação e Priorização</h4>
+			</div>
+			<div class="col-xs-12 col-md-12 col-lg-12">
+				<h4>20/06 - Santa Cruz - RN - Oficina Temática Territorial - "Autonomia e Economia Solidária" (8h às 12h)</h4>
+			</div>
+			<div class="col-xs-12 col-md-12 col-lg-12">
+				<h4>20/06 - Jaçanã - RN - Oficina de Validação e Priorização (14h às 17h)</h4>
+			</div>
+			<div class="col-xs-12 col-md-12 col-lg-12">
+				<h4>22/06 - Angicos - RN - Oficina Diagnostica Territorial</h4>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="downloads">
+	<div class="container-fluid text-center corbel-font">
+		<div class="row">
+			<div class="col-xs-12 col-md-12 col-lg-12">
+        <h1><b>Downloads</b></h1>
+        <br>
+				<a href="http://www.onumulheres.org.br/wp-content/uploads/2016/04/cartilha_WEPs_2016.pdf" target="_blank"><h4><img loading="lazy" class="ui middle aligned spaced circular image" width="40" height="40" src="images/download.png"></a>Princípios de Empoderamento das Mulheres - ONU Mulheres</h3>
+			</div>
+		</div>
+	</section>
+	<section id="contato">
+		<div class="container-fluid">
+			<div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+          <h1 class="text-center"><b>Contato</b></h1>
+          <br><br>
+        </div>
+				<div class="col-xs-12 col-md-6 col-lg-6">
+					<form class="area-do-form" action="send_mail.php" method="post">
+						<div class="form-group form-inline">
+							<label for="contact-name">Nome:</label>
+							<input type="text" class="form-control" id="contact-name" name="contact-name" required>
+						</div>
+						<div class="form-group form-inline">
+							<label for="contact-email">Email:</label>
+							<input type="email" class="form-control" id="contact-email" name="contact-email" required>
+						</div>
+						<div class="form-group">
+							<label for="comment">Mensagem:</label>
+							<textarea class="form-control" rows="5" id="contact-comment" name="contact-comment" required></textarea>
+						</div>
+						<div class="text-center">
+							<button type="submit" class="btn btn-warning" id="enviar" name="enviar">Enviar</button>
+						</div>
+					</form>
+				</div>
+				<div class="col-xs-12 col-md-6 col-lg-6" id="branco">
+				</div>
+				<div class="col-xs-12 col-md-6 col-lg-6 text-center">
+					<p id="contact-facebook">Nos acompanhe no Facebook</p>
+					<a href="https://www.facebook.com/mulheresconquistandoautonomia" target="_blank"><img loading="lazy" class="ui circular middle aligned image" width="80" heigth="80" src="images/face.png" height="80"></a>
+				</div>
+			</div>
+			<br><br><br><br><br>
+			<div class="row">
+				<div class="col-xs-12 col-md-6 col-lg-6">
+					<h3>Realização</h3>
+					<div class="row">
+						<div class="col-xs-6 col-md-4 col-lg-4">
+							<img loading="lazy" class="img-responsive" src="images/logo-governo.png" width="800" height="319">
+						</div>
+						<div class="col-xs-6 col-md-4 col-lg-4">
+							<img loading="lazy" class="img-responsive" src="images/logo-ufrn.png" width="800" height="336">
+						</div>
+						<div class="col-xs-12 col-md-4 col-lg-4">
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-6 col-lg-6">
+					<h3>Parcerias</h3>
+					<div class="row">
+						<div class="col-xs-6 col-md-4 col-lg-4">
+							<img loading="lazy" class="img-responsive" src="images/logo-sicredi.png" width="800" height="197">
+						</div>
+						<div class="col-xs-6 col-md-4 col-lg-4">
+							<img loading="lazy" class="img-responsive" src="images/logo-bandeira-lilas.jpg" width="125" height="117">
+						</div>
+						<div class="col-xs-12 col-md-4 col-lg-4">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<hr>
+	<footer>
+		<div class="row corbel-font">
+			<div class="col-xs-12 col-md-12 col-lg-12 text-center">
+				<h4>Todos os direitos reservados | 2017 | NTI, Bloco 10, Campus Central - UFRN - Natal/RN</h4>
+			</div>
+		</div>
+	</footer>
+	<!-- Perfil Modals -->
+	<div class="modal fade" id="perfilModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title" id="nome-titulo"></h4>
+				</div>
+				<div class="modal-body">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-xs-6">
+								<img loading="lazy" class="ui medium rounded image" id="image"></img>
+								<br>
+							</div>
+							<div class="col-xs-6">
+								<h4>Função no projeto</h4>
+								<p id="funcao"></p>
+								<h4>Nível de Formação</h4>
+								<p id="formacao"></p>
+								<h4>Currículo</h4>
+								<a id="curriculo" target="_blank">Lattes</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default btn-warning" data-dismiss="modal">Voltar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+  <!-- Evento Modal -->
+  <div class="modal fade" id="eventoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xs-12">
+                <img loading="lazy" class="ui fluid roundend image" src="images/folder_evento.png" width="793" height="280">
+                <h4 class="text-justify">O Workshop acontece nos dias 25 e 26 de outubro na UFRN durante a CIENTEC. O evento objetiva possibilitar o relato das experiências das pesquisas sobre a busca pela autonomia econômica, política e social pelas mulheres. O evento será composto de uma mesa de debates, oficinas e apresentação de artigos.</h4>
+                <br>
+          <center><a href="#" onClick="window.open('anais-workshop.html','Anais Workshop','resizable,height=640,width=860'); return false;"><button type="button" class="btn btn-primary btn-lg">Anais do Evento</button></a></center>
+<br>
+                <h4 class="text-center"><b>Programação</b></h4>
+                <h5><b>Dia 25</b></h5>
+                <h5><b>8h as 12h</b> - Escola de Ciência e Tecnologia - Auditório F:<br>
+Mesa de abertura - "Autonomia Econômica e Políticas Públicas para as mulheres"<br>
+Palestrantes convidadas: Tatau Godinho, Maria Tereza Freire, Joana Santos e Gema Esmeraldo<br>
+<br>
+<b>14h as 18h</b> - Auditório do NUPEP:<br>
+Apresentações dos artigos selecionados <br>  <br>           </h5>
+                <h5><b>Dia 26</b></h5>
+                <h5><b>9h as 12h</b> - Auditório do NUPEP:<br>
+Oficina: "Empoderamento Feminino" Ana Cristina.<br>
+<br>
+<b>9h as 12h</b> - Sala 231 - CTEC:<br>
+Oficina: "Jovens e Autonomia Econômica" Divaneide e M. Katiane.<br>
+<br>
+<b>14h as 17h</b> - Sala 222 - CTEC:<br>
+Oficina: "Autonomia e Políticas Públicas para as mulheres" Divaneide e Lidiane.<br>
+<br>
+<b>14h as 17h</b> - Auditório do NUPEP:<br>
+Oficina: "Logística Reversa" Prof. Ciliana<br>
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default btn-warning" data-dismiss="modal">Voltar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+	<!-- Modal acao 1 -->
+	<div class="modal fade" id="acaoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title text-center" id="nome-acao"></h4>
+				</div>
+				<div class="modal-body">
+					<div class="container-fluid">
+						<div id="myCarousel" class="carousel slide" data-ride="carousel">
+							<!-- Indicators -->
+							<ol class="carousel-indicators">
+								<li data-target="#myCarousel" data-toggle="modal" data-target="#acaoModal" data-slide-to="0" class="active"></li>
+								<li data-target="#myCarousel" data-toggle="modal" data-target="#acaoModal" data-slide-to="1"></li>
+							</ol>
+
+							<!-- Wrapper for slides -->
+							<div class="carousel-inner">
+								<div class="item active">
+									<img loading="lazy" class="ui fluid roundend image" id="imagem1">
+									<div class="carousel-caption">
+										<h3 id="titulo1"></h3>
+									</div>
+								</div>
+
+								<div class="item">
+									<img loading="lazy" class="ui fluid roundend image" id="imagem2">
+									<div class="carousel-caption">
+										<h3 id="titulo2"></h3>
+									</div>
+								</div>
+							</div>
+
+							<!-- Left and right controls -->
+							<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="right carousel-control" href="#myCarousel" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default btn-warning" data-dismiss="modal">Voltar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="bootstrap-3.3.7-dist/js/jquery-1.11.3.min.js"></script>
+	<!-- jQuery navbar --> 
+	<script src="js/animate-scroll/animatescroll.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed --> 
+	<script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+	<!-- Modal Informations --> 
+	<script src="js/informacao-modal.js"></script>
+	<!-- Acoes Modal JS --> 
+	<script src="js/acao-modal.js"></script>
+</body>
+</html>

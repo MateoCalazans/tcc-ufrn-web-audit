@@ -1,0 +1,194 @@
+--- a/index.html
++++ b/fixed.html
+@@ -1,7 +1,8 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+-<html xmlns="http://www.w3.org/1999/xhtml">
++<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+ <head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
++<meta name="viewport" content="width=device-width, initial-scale=1" />
+     <title>GRECOM - Grupo de Estudos da Complexidade</title>
+ 
+ 	<meta name="language" content="Portuguese">
+@@ -22,7 +23,7 @@
+ </head>
+ <body>
+ 	<div id="pagina" class="">
+-        <div id="topo">
++        <header id="topo">
+         	<div id="cabecalho">
+ 
+                 <!-- inicio do topo -->
+@@ -56,7 +57,7 @@
+ 						<!-- logo da ufrn -->
+ 						<div id="logo_UFRN">
+ 							<a title="Universidade Federal do Rio Grande do Norte - UFRN" target="_blank" href="http://www.ufrn.br/">
+-								<img align="absmiddle" src="img/UFRN.png" alt="Site da UFRN" title"UFRN"/>
++								<img align="absmiddle" src="img/UFRN.png" alt="Site da UFRN" title"UFRN" width="68" height="24"/>
+ 							</a>
+ 						</div>
+ 						<!-- FIM - logo da ufrn -->
+@@ -82,7 +83,7 @@
+         	</div>
+ 
+ 			<!-- NAVEGACAO -->
+-        	<div id="nav">
++        	<nav id="nav">
+             	                <!-- menu -->
+                 <div id="menu">
+                     <ul class="area-acoes">
+@@ -165,12 +166,12 @@
+                 	<div class="barra-sessao-interna"></div>
+                 </div>
+ 
+-            </div>
++            </nav>
+             <!-- FIM - navegacao -->
+ 
+-		</div>
++		</header>
+         <!-- FIM - topo -->		<!-- corpo do site -->
+-		<div id="corpo">
++		<main id="corpo">
+ 			<div id="centro-corpo">
+ 				<div id="textoIndex">
+                     <h2>Sonho de olhos abertos</h2><br/>
+@@ -194,7 +195,7 @@
+ 								<p class="titulo-quadro-destaques verde">Destaques</p>
+ 							</div>
+ 							<div class="topo-abrir-fechar">
+-								<a href="#" id="show1" class="abrirFechar" onclick="changeSrc('p-a1');"><img id="p-a1" alt="Fechar" src="img/off.png" title="Fechar"></a>
++								<a href="#" id="show1" class="abrirFechar" onclick="changeSrc('p-a1');"><img id="p-a1" alt="Fechar" src="img/off.png" title="Fechar" width="22" height="11"></a>
+ 							</div>
+ 						</div>
+ 
+@@ -227,7 +228,7 @@
+ 								<p class="titulo-quadro-eventos">Novidades</p>
+ 							</div>
+ 							<div class="topo-abrir-fechar">
+-								<a href="#" id="show2" class="abrirFechar" onclick="changeSrc('p-a2');"><img id="p-a2" alt="Abrir" src="img/on.png" title="Abrir"></a>	
++								<a href="#" id="show2" class="abrirFechar" onclick="changeSrc('p-a2');"><img id="p-a2" alt="Abrir" src="img/on.png" title="Abrir" width="22" height="11"></a>	
+ 							</div>
+ 						</div>
+ 
+@@ -245,7 +246,7 @@
+ 								<p class="titulo-quadro-galerias">Galerias</p>
+ 							</div>
+ 							<div class="topo-abrir-fechar">
+-								<a href="#" id="show3" class="abrirFechar" onclick="changeSrc('p-a3');"><img id="p-a3" alt="Abrir" src="img/on.png" title="Abrir"></a>	
++								<a href="#" id="show3" class="abrirFechar" onclick="changeSrc('p-a3');"><img loading="lazy" id="p-a3" alt="Abrir" src="img/on.png" title="Abrir" width="22" height="11"></a>	
+ 							</div>
+ 						</div>
+ 
+@@ -258,7 +259,7 @@
+                                 <span class="foto">
+                                     <a href="foto.php?id=24227874" title="LANÇAMENTO DO LIVRO CIÊNCIAS DA COMPLEXIDADE E EDUCAÇÃO - RAZÃO APAIXONADA E POLITIZAÇÃO DO PENSAMENTO">
+                                         <span class="bg-foto">
+-                                            <img src="https://arquivos.info.ufrn.br/arquivos/2017116004736d45845325584c8180955/DSCN0691.JPG"/>
++                                            <img loading="lazy" src="https://arquivos.info.ufrn.br/arquivos/2017116004736d45845325584c8180955/DSCN0691.JPG" width="149" height="210"/>
+                                         </span>
+                                         <span class="data-foto">21/11/2017</span>
+                                     </a>
+@@ -267,7 +268,7 @@
+                                 <span class="foto">
+                                     <a href="foto.php?id=23508498" title="LANÇAMENTO DA AUTOBIOGRAFIA DE EDGARD ASSIS DE CARVALHO">
+                                         <span class="bg-foto">
+-                                            <img src="https://arquivos.info.ufrn.br/arquivos/2017022176c9484339588f94e04a50543/foto_1_de_entrada_do_site.jpg"/>
++                                            <img loading="lazy" src="https://arquivos.info.ufrn.br/arquivos/2017022176c9484339588f94e04a50543/foto_1_de_entrada_do_site.jpg" width="210" height="157"/>
+                                         </span>
+                                         <span class="data-foto">25/08/2017</span>
+                                     </a>
+@@ -276,7 +277,7 @@
+                                 <span class="foto">
+                                     <a href="foto.php?id=22540864" title="SEMINÁRIO SINTOMAS DO CONTEMPORÂNEO, CONTRADIÇÕES DO SUJEITO">
+                                         <span class="bg-foto">
+-                                            <img src="https://arquivos.info.ufrn.br/arquivos/2017111170f96641195777cf1191752fc/20170605_142554.jpg"/>
++                                            <img loading="lazy" src="https://arquivos.info.ufrn.br/arquivos/2017111170f96641195777cf1191752fc/20170605_142554.jpg" width="210" height="118"/>
+                                         </span>
+                                         <span class="data-foto">05/06/2017</span>
+                                     </a>
+@@ -303,7 +304,7 @@
+ 								<p class="titulo-quadro-enquete">Enquete</p>
+ 							</div>
+ 							<div class="topo-abrir-fechar">
+-								<a href="#" id="show4" class="abrirFechar" onclick="changeSrc('p-a4');"><img id="p-a4" alt="Abrir" src="img/on.png" title="Abrir"></a>	
++								<a href="#" id="show4" class="abrirFechar" onclick="changeSrc('p-a4');"><img loading="lazy" id="p-a4" alt="Abrir" src="img/on.png" title="Abrir" width="22" height="11"></a>	
+ 							</div>
+ 						</div>	
+ 						<div class="enquete conteudo-quadro">
+@@ -361,19 +362,19 @@
+ 
+ 
+ 			</div>
+-        </div>
++        </main>
+         <!-- FIM - corpo do site -->
+ 
+         <!-- link para o topo -->
+         <div id="topo-link">
+ 			<a href="#topo" title="voltar ao topo" class="topo-link">
+-            	TOPO<img src="img/off.png">
++            	TOPO<img loading="lazy" src="img/off.png" width="22" height="11">
+             </a>
+         </div>
+         <!-- FIM - link para o topo -->
+ 
+         <!-- rodape do site -->
+-        <div id="rodape">
++        <footer id="rodape">
+ 
+             <!-- barra 1 -->
+             <div id="rodape-barra1">
+@@ -395,29 +396,29 @@
+                       <ul class="menu">
+ 							<li class="li-menu-redes-sociais">
+ 						  		<a title="Veja nosso canal no youtube" target="_blank" href="https://www.youtube.com/grecomoficial">
+-									<img align="absmiddle" src="img/bg_youtube.png" alt="youtube">
++									<img loading="lazy" align="absmiddle" src="img/bg_youtube.png" alt="youtube" width="41" height="38">
+ 								</a>
+ 							</li>
+                             <li class="li-menu-redes-sociais">
+ 						  		<a title="Acesse nosso perfil no facebook" target="_blank" href="https://www.facebook.com/ogrecomoficial">
+-									<img align="absmiddle" src="img/bg_facebook.png" alt="facebook">
++									<img loading="lazy" align="absmiddle" src="img/bg_facebook.png" alt="facebook" width="41" height="38">
+ 								</a>
+ 							</li>
+ 							<li class="li-menu-redes-sociais">
+ 								<a title="Siga-nos no twitter" target="_blank" href="https://www.twitter.com/grecomoficial">
+-									<img align="absmiddle" src="img/bg_twitter.png" alt="twitter">
++									<img loading="lazy" align="absmiddle" src="img/bg_twitter.png" alt="twitter" width="41" height="38">
+ 								</a>
+ 							</li>
+ 							<li class="li-menu-redes-sociais">
+   								<a title="Cadastre-se para receber nosso RSS" target="_blank" href="https://sistemas.ufrn.br/gerenciadorportais/public/grecom/noticia/rss/">
+-									<img align="absmiddle" src="img/bg_rss.png" alt="rss">
++									<img loading="lazy" align="absmiddle" src="img/bg_rss.png" alt="rss" width="41" height="38">
+                                  </a>
+ 							</li>
+                       	</ul>
+                 	</div>                    <!-- FIM - redes sociais -->
+ 
+                   	<div id="vinte_anos">
+-                    	<a href=""><img align="absmiddle" src="img/bg_21_anos.png" alt="GRECOM 21 anos"></a>
++                    	<a href=""><img loading="lazy" align="absmiddle" src="img/bg_21_anos.png" alt="GRECOM 21 anos" width="295" height="76"></a>
+                 	</div>
+         		</div>
+             </div>
+@@ -454,7 +455,7 @@
+ 						<span class="desenvolvido">
+ 							<label>Desenvolvido por:</label>
+ 							<a title="Superintendência de Informática" target="_blank" href="http://www.info.ufrn.br">
+-								<img align="absmiddle" src="img/sinfo.png">
++								<img loading="lazy" align="absmiddle" src="img/sinfo.png" width="36" height="28">
+ 							</a>
+ 						</span>
+                     </div>
+@@ -464,7 +465,7 @@
+         	</div>
+             <!-- FIM - barra 2 -->
+ 
+-        </div>
++        </footer>
+     </div>
+ 
+     <!-- javascript -->

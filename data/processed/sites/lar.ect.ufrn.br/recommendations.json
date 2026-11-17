@@ -1,0 +1,416 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T17:27:52.512Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12",
+      "diff": "9.0.0",
+      "@anthropic-ai/sdk": "1.8.0"
+    },
+    "gitCommit": "ea5af13dd7f72effc623da8a9e83f28663510154",
+    "gitDirty": true
+  },
+  "id": "lar.ect.ufrn.br",
+  "url": "https://lar.ect.ufrn.br/",
+  "fonte": {
+    "html": "index.html",
+    "codificacao": "utf-8",
+    "bom": false,
+    "har": true,
+    "lighthouse": "lh2.json",
+    "lighthouseVersion": "13.5.0"
+  },
+  "regras": [
+    {
+      "id": "html-lang",
+      "dimensao": "semantica",
+      "descricao": "O elemento <html> declara o idioma da página (atributo lang)."
+    },
+    {
+      "id": "meta-viewport",
+      "dimensao": "performance",
+      "descricao": "A página declara <meta name=\"viewport\"> adequada a telas móveis, sem bloquear o zoom."
+    },
+    {
+      "id": "img-dimensions",
+      "dimensao": "performance",
+      "descricao": "Toda <img> declara width e height, para o navegador reservar o espaço antes do download."
+    },
+    {
+      "id": "img-lazy",
+      "dimensao": "performance",
+      "descricao": "<img> depois das 3 primeiras do documento usa loading=\"lazy\" (exceto a imagem LCP)."
+    },
+    {
+      "id": "obsolete-tags",
+      "dimensao": "semantica",
+      "descricao": "Sem elementos obsoletos do WHATWG (center, font, marquee…); <font> simples vira <span style>."
+    },
+    {
+      "id": "heading-skip",
+      "dimensao": "semantica",
+      "descricao": "Títulos não pulam níveis ao descer na hierarquia (h1 → h3, por exemplo)."
+    },
+    {
+      "id": "fake-button",
+      "dimensao": "semantica",
+      "descricao": "Elementos clicáveis são <button>/<a>, não div/span com onclick."
+    },
+    {
+      "id": "render-blocking-hint",
+      "dimensao": "performance",
+      "descricao": "Scripts e folhas de estilo que o Lighthouse aponta como bloqueantes são adiados quando não são críticos."
+    },
+    {
+      "id": "landmarks-llm",
+      "dimensao": "semantica",
+      "descricao": "Landmarks ausentes propostos por LLM sobre <div> existentes (landmarks-v1, claude-haiku-5-5)."
+    }
+  ],
+  "llm": {
+    "prompt": "landmarks-v1",
+    "arquivo": "docs/prompts/landmarks-v1.md",
+    "sha256": "b19e8d1c3e0f0f5b100a0b4fc27d0e7d609945f7d6b19c65ed5e609bfbf4e31a",
+    "modelo": "claude-haiku-5-5",
+    "effort": "low",
+    "maxTokens": 4000,
+    "execucao": {
+      "siteId": "lar.ect.ufrn.br",
+      "prompt": "landmarks-v1",
+      "promptSha256": "b19e8d1c3e0f0f5b100a0b4fc27d0e7d609945f7d6b19c65ed5e609bfbf4e31a",
+      "modelo": "claude-haiku-5-5",
+      "modeloResposta": "claude-haiku-5-5",
+      "respostaId": "msg_011Ch711ckQ5kg9u7Zb1BgrX",
+      "chamada": true,
+      "motivo": null,
+      "ausentes": [
+        "header",
+        "nav",
+        "main",
+        "footer"
+      ],
+      "candidatos": 10,
+      "elegiveis": 10,
+      "stopReason": "end_turn",
+      "inputTokens": 1759,
+      "outputTokens": 325,
+      "custoUsd": 0.0003384,
+      "propostas": 1,
+      "validas": 1,
+      "rejeitadas": [],
+      "textoIgual": true,
+      "landmarksDepois": {
+        "banner": 0,
+        "navigation": 0,
+        "main": 1,
+        "contentinfo": 0
+      },
+      "erro": null,
+      "duracaoMs": 2375
+    }
+  },
+  "resumo": {
+    "total": 13,
+    "corrigidas": 11,
+    "porRegra": {
+      "html-lang": {
+        "total": 1,
+        "corrigidas": 1
+      },
+      "meta-viewport": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "img-dimensions": {
+        "total": 6,
+        "corrigidas": 6
+      },
+      "img-lazy": {
+        "total": 3,
+        "corrigidas": 3
+      },
+      "obsolete-tags": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "heading-skip": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "fake-button": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "render-blocking-hint": {
+        "total": 2,
+        "corrigidas": 0
+      },
+      "landmarks-llm": {
+        "total": 1,
+        "corrigidas": 1
+      }
+    },
+    "porDimensao": {
+      "performance": 11,
+      "semantica": 2
+    }
+  },
+  "recommendations": [
+    {
+      "id": "html-lang-1",
+      "regra": "html-lang",
+      "severidade": "alta",
+      "dimensao": "semantica",
+      "evidencia": "<html>",
+      "posicao": {
+        "linha": 2,
+        "coluna": 1
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "O <html> não tem o atributo lang: leitores de tela não sabem em que idioma ler a página. Declarar lang=\"pt-BR\".",
+      "edicoes": [
+        {
+          "inicio": 21,
+          "fim": 21,
+          "texto": " lang=\"pt-BR\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-1",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"images/logo.svg\" alt=\"Logo do Projeto Educacional URA\" />",
+      "posicao": {
+        "linha": 16,
+        "coluna": 9
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"163\" height=\"119\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 565,
+          "fim": 565,
+          "texto": " width=\"163\" height=\"119\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-2",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"images/upbutton.svg\" alt=\"Sinais Controles\" class=\"icons-image\" />",
+      "posicao": {
+        "linha": 29,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"153\" height=\"153\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 1057,
+          "fim": 1057,
+          "texto": " width=\"153\" height=\"153\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-3",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"images/leftbutton.svg\" alt=\"Sinais Controles\" class=\"icons-image\" />",
+      "posicao": {
+        "linha": 38,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"152\" height=\"153\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 1351,
+          "fim": 1351,
+          "texto": " width=\"152\" height=\"153\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-4",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"images/stopbutton.svg\" alt=\"Sinais Controles\" class=\"icons-image\" />",
+      "posicao": {
+        "linha": 45,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"16\" height=\"16\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 1591,
+          "fim": 1591,
+          "texto": " width=\"16\" height=\"16\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-5",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"images/rightbutton.svg\" alt=\"Sinais Controles\" class=\"icons-image\" />",
+      "posicao": {
+        "linha": 52,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"153\" height=\"153\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 1833,
+          "fim": 1833,
+          "texto": " width=\"153\" height=\"153\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-6",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"images/downbutton.svg\" alt=\"Sinais Controles\" class=\"icons-image\" />",
+      "posicao": {
+        "linha": 61,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"153\" height=\"153\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 2127,
+          "fim": 2127,
+          "texto": " width=\"153\" height=\"153\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-1",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"images/stopbutton.svg\" alt=\"Sinais Controles\" class=\"icons-image\" />",
+      "posicao": {
+        "linha": 45,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "4ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 1472,
+          "fim": 1472,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-2",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"images/rightbutton.svg\" alt=\"Sinais Controles\" class=\"icons-image\" />",
+      "posicao": {
+        "linha": 52,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "5ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 1713,
+          "fim": 1713,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-3",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"images/downbutton.svg\" alt=\"Sinais Controles\" class=\"icons-image\" />",
+      "posicao": {
+        "linha": 61,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "6ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 2008,
+          "fim": 2008,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "render-blocking-hint-1",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"style.css\" />",
+      "posicao": {
+        "linha": 9,
+        "coluna": 5
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (4.5 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-2",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/mqtt/4.2.7/mqtt.min.js\">",
+      "posicao": {
+        "linha": 10,
+        "coluna": 5
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (910 ms de bloqueio, 41.2 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "landmarks-llm-1",
+      "regra": "landmarks-llm",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<div class=\"main\">",
+      "posicao": {
+        "linha": 14,
+        "coluna": 5
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "Landmark main ausente: trocar este <div> por <main>. Justificativa do modelo: \"Classe 'main' em profundidade 0 contém todo o conteúdo da página (controle e envio de comandos), sem menu, cabeçalho ou rodapé separados.\". Proposta gerada por LLM (landmarks-v1, claude-haiku-5-5, candidato c1); conferir CSS e scripts que selecionem \"div\" neste elemento.",
+      "edicoes": [
+        {
+          "inicio": 450,
+          "fim": 453,
+          "texto": "main"
+        },
+        {
+          "inicio": 2556,
+          "fim": 2559,
+          "texto": "main"
+        }
+      ]
+    }
+  ]
+}

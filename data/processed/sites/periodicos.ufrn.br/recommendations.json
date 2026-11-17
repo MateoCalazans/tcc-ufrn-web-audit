@@ -1,0 +1,1680 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T19:53:06.795Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12",
+      "diff": "9.0.0",
+      "@anthropic-ai/sdk": "1.8.0"
+    },
+    "gitCommit": "35192446fa4c70dad6b3eb15bfdec2bff375c62c",
+    "gitDirty": true
+  },
+  "id": "periodicos.ufrn.br",
+  "url": "https://periodicos.ufrn.br/index/",
+  "fonte": {
+    "html": "index.html",
+    "codificacao": "utf-8",
+    "bom": false,
+    "har": true,
+    "lighthouse": "lh1.json",
+    "lighthouseVersion": "13.5.0"
+  },
+  "regras": [
+    {
+      "id": "html-lang",
+      "dimensao": "semantica",
+      "descricao": "O elemento <html> declara o idioma da página (atributo lang)."
+    },
+    {
+      "id": "meta-viewport",
+      "dimensao": "performance",
+      "descricao": "A página declara <meta name=\"viewport\"> adequada a telas móveis, sem bloquear o zoom."
+    },
+    {
+      "id": "img-dimensions",
+      "dimensao": "performance",
+      "descricao": "Toda <img> declara width e height, para o navegador reservar o espaço antes do download."
+    },
+    {
+      "id": "img-lazy",
+      "dimensao": "performance",
+      "descricao": "<img> depois das 3 primeiras do documento usa loading=\"lazy\" (exceto a imagem LCP)."
+    },
+    {
+      "id": "obsolete-tags",
+      "dimensao": "semantica",
+      "descricao": "Sem elementos obsoletos do WHATWG (center, font, marquee…); <font> simples vira <span style>."
+    },
+    {
+      "id": "heading-skip",
+      "dimensao": "semantica",
+      "descricao": "Títulos não pulam níveis ao descer na hierarquia (h1 → h3, por exemplo)."
+    },
+    {
+      "id": "fake-button",
+      "dimensao": "semantica",
+      "descricao": "Elementos clicáveis são <button>/<a>, não div/span com onclick."
+    },
+    {
+      "id": "render-blocking-hint",
+      "dimensao": "performance",
+      "descricao": "Scripts e folhas de estilo que o Lighthouse aponta como bloqueantes são adiados quando não são críticos."
+    },
+    {
+      "id": "landmarks-llm",
+      "dimensao": "semantica",
+      "descricao": "Landmarks ausentes propostos por LLM sobre <div>, <section> ou <article> existentes (landmarks-v2, claude-haiku-5-5)."
+    }
+  ],
+  "llm": {
+    "prompt": "landmarks-v2",
+    "arquivo": "docs/prompts/landmarks-v2.md",
+    "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+    "modelo": "claude-haiku-5-5",
+    "effort": "low",
+    "maxTokens": 4000,
+    "execucao": {
+      "siteId": "periodicos.ufrn.br",
+      "prompt": "landmarks-v2",
+      "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "modeloResposta": null,
+      "respostaId": null,
+      "chamada": false,
+      "motivo": "nenhum landmark ausente",
+      "ausentes": [],
+      "candidatos": 6,
+      "elegiveis": 6,
+      "stopReason": null,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "custoUsd": null,
+      "propostas": 0,
+      "validas": 0,
+      "rejeitadas": [],
+      "textoIgual": null,
+      "landmarksDepois": null,
+      "erro": null,
+      "duracaoMs": 4
+    }
+  },
+  "resumo": {
+    "total": 47,
+    "corrigidas": 36,
+    "porRegra": {
+      "html-lang": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "meta-viewport": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "img-dimensions": {
+        "total": 19,
+        "corrigidas": 19
+      },
+      "img-lazy": {
+        "total": 17,
+        "corrigidas": 17
+      },
+      "obsolete-tags": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "heading-skip": {
+        "total": 3,
+        "corrigidas": 0
+      },
+      "fake-button": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "render-blocking-hint": {
+        "total": 8,
+        "corrigidas": 0
+      },
+      "landmarks-llm": {
+        "total": 0,
+        "corrigidas": 0
+      }
+    },
+    "porDimensao": {
+      "performance": 44,
+      "semantica": 3
+    }
+  },
+  "guardaImagens": {
+    "imagens": [
+      {
+        "recomendacao": "img-dimensions-1",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 400,
+              "altura": 459,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 400,
+              "altura": 459,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 400,
+              "altura": 459,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 400,
+              "altura": 459,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-2",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 23,
+              "altura": 23,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 23,
+              "altura": 23,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 23,
+              "altura": 23,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 23,
+              "altura": 23,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-3",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 23,
+              "altura": 23,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 23,
+              "altura": 23,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 23,
+              "altura": 23,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 23,
+              "altura": 23,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-4",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 23,
+              "altura": 23,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 23,
+              "altura": 23,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 23,
+              "altura": 23,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 23,
+              "altura": 23,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-5",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 23,
+              "altura": 23,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 23,
+              "altura": 23,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 23,
+              "altura": 23,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 23,
+              "altura": 23,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-6",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 93,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 93,
+              "altura": 150,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 93,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 93,
+              "altura": 150,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-7",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 106,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 106,
+              "altura": 150,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 106,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 106,
+              "altura": 150,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-8",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 105,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 105,
+              "altura": 150,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 105,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 105,
+              "altura": 150,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-9",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 106,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 106,
+              "altura": 150,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 106,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 106,
+              "altura": 150,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-10",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 106,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 106,
+              "altura": 150,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 106,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 106,
+              "altura": 150,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-11",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 106,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 106,
+              "altura": 150,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 106,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 106,
+              "altura": 150,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-12",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 93,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 93,
+              "altura": 150,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 93,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 93,
+              "altura": 150,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-13",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 106,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 106,
+              "altura": 150,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 106,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 106,
+              "altura": 150,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-14",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 120,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 120,
+              "altura": 150,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 120,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 120,
+              "altura": 150,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-15",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 39,
+              "altura": 39,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 39,
+              "altura": 39,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 125,
+              "altura": 125,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 125,
+              "altura": 125,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-16",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 73,
+              "altura": 26,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 73,
+              "altura": 26,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 84,
+              "altura": 30,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 84,
+              "altura": 30,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-17",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 49,
+              "altura": 60,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 49,
+              "altura": 60,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 49,
+              "altura": 60,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 49,
+              "altura": 60,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-18",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 84,
+              "altura": 24,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 84,
+              "altura": 24,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 105,
+              "altura": 30,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 105,
+              "altura": 30,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-19",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 2,
+              "altura": 1,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 2,
+              "altura": 1,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 118,
+              "altura": 77,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 118,
+              "altura": 77,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      }
+    ],
+    "mantidas": 19,
+    "desfeitas": 0,
+    "erro": null
+  },
+  "recommendations": [
+    {
+      "id": "img-dimensions-1",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/plugins/themes/ojsufrn3308/imagens/brasao_outline.png\" alt=\"Portal logo\">",
+      "posicao": {
+        "linha": 25,
+        "coluna": 3
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1675\" height=\"1920\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 1826,
+          "fim": 1826,
+          "texto": " width=\"1675\" height=\"1920\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-2",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/plugins/themes/ojsufrn3308/imagens/flags/en_US.svg\" alt=\"Language select\">",
+      "posicao": {
+        "linha": 42,
+        "coluna": 7
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"512\" height=\"512\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 2804,
+          "fim": 2804,
+          "texto": " width=\"512\" height=\"512\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-3",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/plugins/themes/ojsufrn3308/imagens/flags/es_ES.svg\" alt=\"Language select\">",
+      "posicao": {
+        "linha": 47,
+        "coluna": 7
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"512\" height=\"512\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 3070,
+          "fim": 3070,
+          "texto": " width=\"512\" height=\"512\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-4",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/plugins/themes/ojsufrn3308/imagens/flags/fr_CA.svg\" alt=\"Language select\">",
+      "posicao": {
+        "linha": 52,
+        "coluna": 7
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"512\" height=\"512\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 3336,
+          "fim": 3336,
+          "texto": " width=\"512\" height=\"512\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-5",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/plugins/themes/ojsufrn3308/imagens/flags/pt_BR.svg\" alt=\"Language select\">",
+      "posicao": {
+        "linha": 57,
+        "coluna": 7
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"512\" height=\"512\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 3602,
+          "fim": 3602,
+          "texto": " width=\"512\" height=\"512\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-6",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/plugins/themes/ojsufrn3308/imagens/journal-default.png\" alt=\"Journal logo\" class=\"slick_item_img\">",
+      "posicao": {
+        "linha": 154,
+        "coluna": 16
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"105\" height=\"170\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 8766,
+          "fim": 8766,
+          "texto": " width=\"105\" height=\"170\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-7",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/public/journals/16/cover_issue_1588_pt_BR.jpg\" class=\"slick_item_img\">",
+      "posicao": {
+        "linha": 162,
+        "coluna": 16
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1241\" height=\"1755\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 9155,
+          "fim": 9155,
+          "texto": " width=\"1241\" height=\"1755\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-8",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/public/journals/5/cover_issue_1574_pt_BR.png\" class=\"slick_item_img\">",
+      "posicao": {
+        "linha": 170,
+        "coluna": 16
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1400\" height=\"2000\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 9527,
+          "fim": 9527,
+          "texto": " width=\"1400\" height=\"2000\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-9",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/public/journals/49/cover_issue_1581_pt_BR.png\" class=\"slick_item_img\">",
+      "posicao": {
+        "linha": 178,
+        "coluna": 16
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"2475\" height=\"3500\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 9948,
+          "fim": 9948,
+          "texto": " width=\"2475\" height=\"3500\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-10",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/public/journals/6/cover_issue_1455_pt_BR.jpg\" class=\"slick_item_img\">",
+      "posicao": {
+        "linha": 186,
+        "coluna": 16
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1748\" height=\"2482\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 10323,
+          "fim": 10323,
+          "texto": " width=\"1748\" height=\"2482\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-11",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/public/journals/63/cover_issue_1586_pt_BR.jpg\" class=\"slick_item_img\">",
+      "posicao": {
+        "linha": 194,
+        "coluna": 16
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1414\" height=\"2000\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 10727,
+          "fim": 10727,
+          "texto": " width=\"1414\" height=\"2000\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-12",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/plugins/themes/ojsufrn3308/imagens/journal-default.png\" alt=\"Journal logo\" class=\"slick_item_img\">",
+      "posicao": {
+        "linha": 202,
+        "coluna": 16
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"105\" height=\"170\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 11131,
+          "fim": 11131,
+          "texto": " width=\"105\" height=\"170\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-13",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/public/journals/54/cover_issue_1585_pt_BR.jpg\" class=\"slick_item_img\">",
+      "posicao": {
+        "linha": 210,
+        "coluna": 16
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"596\" height=\"843\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 11512,
+          "fim": 11512,
+          "texto": " width=\"596\" height=\"843\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-14",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/public/journals/26/cover_issue_1537_pt_BR.jpg\" class=\"slick_item_img\">",
+      "posicao": {
+        "linha": 218,
+        "coluna": 16
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"567\" height=\"710\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 11929,
+          "fim": 11929,
+          "texto": " width=\"567\" height=\"710\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-15",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"site bczm\" src=\"https://periodicos.ufrn.br/plugins/themes/ojsufrn3308/imagens/BCZM.png\" target=\"_blank\">",
+      "posicao": {
+        "linha": 949,
+        "coluna": 7
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"125\" height=\"125\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 41714,
+          "fim": 41714,
+          "texto": " width=\"125\" height=\"125\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-16",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/plugins/themes/ojsufrn3308/imagens/Creatives.png\" alt=\"Creatives CC logo\" style=\"max-height: 30px;\">",
+      "posicao": {
+        "linha": 972,
+        "coluna": 6
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"975\" height=\"347\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 42622,
+          "fim": 42622,
+          "texto": " width=\"975\" height=\"347\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-17",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/plugins/themes/ojsufrn3308/imagens/cariniana.png\" alt=\"Cariniana logo\" style=\"max-height: 60px;\">",
+      "posicao": {
+        "linha": 976,
+        "coluna": 9
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"220\" height=\"270\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 42848,
+          "fim": 42848,
+          "texto": " width=\"220\" height=\"270\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-18",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/plugins/themes/ojsufrn3308/imagens/lockss.png\" alt=\"Lockoss logo\" style=\"max-height: 30px;\">",
+      "posicao": {
+        "linha": 977,
+        "coluna": 9
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"300\" height=\"86\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 42990,
+          "fim": 42990,
+          "texto": " width=\"300\" height=\"86\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-19",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"Mais informações sobre o sistema de publicação, a plataforma e o fluxo de publicação do OJS/PKP.\" src=\"https://periodicos.ufrn.br/templates/images/ojs_brand_white.png\" target=\"_blank\" style…",
+      "posicao": {
+        "linha": 982,
+        "coluna": 8
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"300\" height=\"195\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 43375,
+          "fim": 43375,
+          "texto": " width=\"300\" height=\"195\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-1",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/plugins/themes/ojsufrn3308/imagens/flags/fr_CA.svg\" alt=\"Language select\">",
+      "posicao": {
+        "linha": 52,
+        "coluna": 7
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "4ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 3230,
+          "fim": 3230,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-2",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/plugins/themes/ojsufrn3308/imagens/flags/pt_BR.svg\" alt=\"Language select\">",
+      "posicao": {
+        "linha": 57,
+        "coluna": 7
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "5ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 3496,
+          "fim": 3496,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-3",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/public/site/pageHeaderTitleImage_pt_BR.png\" width=\"1010\" height=\"510\" alt=\"##common.pageHeaderLogo.altText##\" />",
+      "posicao": {
+        "linha": 72,
+        "coluna": 9
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "6ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 3974,
+          "fim": 3974,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-4",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/plugins/themes/ojsufrn3308/imagens/journal-default.png\" alt=\"Journal logo\" class=\"slick_item_img\">",
+      "posicao": {
+        "linha": 154,
+        "coluna": 16
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "7ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 8636,
+          "fim": 8636,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-5",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/public/journals/16/cover_issue_1588_pt_BR.jpg\" class=\"slick_item_img\">",
+      "posicao": {
+        "linha": 162,
+        "coluna": 16
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "8ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 9052,
+          "fim": 9052,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-6",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/public/journals/5/cover_issue_1574_pt_BR.png\" class=\"slick_item_img\">",
+      "posicao": {
+        "linha": 170,
+        "coluna": 16
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "9ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 9425,
+          "fim": 9425,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-7",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/public/journals/49/cover_issue_1581_pt_BR.png\" class=\"slick_item_img\">",
+      "posicao": {
+        "linha": 178,
+        "coluna": 16
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "10ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 9845,
+          "fim": 9845,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-8",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/public/journals/6/cover_issue_1455_pt_BR.jpg\" class=\"slick_item_img\">",
+      "posicao": {
+        "linha": 186,
+        "coluna": 16
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "11ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 10221,
+          "fim": 10221,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-9",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/public/journals/63/cover_issue_1586_pt_BR.jpg\" class=\"slick_item_img\">",
+      "posicao": {
+        "linha": 194,
+        "coluna": 16
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "12ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 10624,
+          "fim": 10624,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-10",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/plugins/themes/ojsufrn3308/imagens/journal-default.png\" alt=\"Journal logo\" class=\"slick_item_img\">",
+      "posicao": {
+        "linha": 202,
+        "coluna": 16
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "13ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 11001,
+          "fim": 11001,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-11",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/public/journals/54/cover_issue_1585_pt_BR.jpg\" class=\"slick_item_img\">",
+      "posicao": {
+        "linha": 210,
+        "coluna": 16
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "14ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 11409,
+          "fim": 11409,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-12",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/public/journals/26/cover_issue_1537_pt_BR.jpg\" class=\"slick_item_img\">",
+      "posicao": {
+        "linha": 218,
+        "coluna": 16
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "15ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 11826,
+          "fim": 11826,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-13",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"site bczm\" src=\"https://periodicos.ufrn.br/plugins/themes/ojsufrn3308/imagens/BCZM.png\" target=\"_blank\">",
+      "posicao": {
+        "linha": 949,
+        "coluna": 7
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "16ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 41605,
+          "fim": 41605,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-14",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/plugins/themes/ojsufrn3308/imagens/Creatives.png\" alt=\"Creatives CC logo\" style=\"max-height: 30px;\">",
+      "posicao": {
+        "linha": 972,
+        "coluna": 6
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "17ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 42490,
+          "fim": 42490,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-15",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/plugins/themes/ojsufrn3308/imagens/cariniana.png\" alt=\"Cariniana logo\" style=\"max-height: 60px;\">",
+      "posicao": {
+        "linha": 976,
+        "coluna": 9
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "18ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 42719,
+          "fim": 42719,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-16",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://periodicos.ufrn.br/plugins/themes/ojsufrn3308/imagens/lockss.png\" alt=\"Lockoss logo\" style=\"max-height: 30px;\">",
+      "posicao": {
+        "linha": 977,
+        "coluna": 9
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "19ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 42866,
+          "fim": 42866,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-17",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"Mais informações sobre o sistema de publicação, a plataforma e o fluxo de publicação do OJS/PKP.\" src=\"https://periodicos.ufrn.br/templates/images/ojs_brand_white.png\" target=\"_blank\" style…",
+      "posicao": {
+        "linha": 982,
+        "coluna": 8
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "20ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 43160,
+          "fim": 43160,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "heading-skip-1",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h3 style=\"text-align: center;\">",
+      "posicao": {
+        "linha": 241,
+        "coluna": 7
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 1 para o nível 3: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h2 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "heading-skip-2",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h3 style=\"text-align: center;\">",
+      "posicao": {
+        "linha": 706,
+        "coluna": 9
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 1 para o nível 3: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h2 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "heading-skip-3",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h3 style=\"text-align: center;\">",
+      "posicao": {
+        "linha": 797,
+        "coluna": 9
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 1 para o nível 3: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h2 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-1",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"https://periodicos.ufrn.br/index/$$$call$$$/page/page/css?name=stylesheet\" type=\"text/css\" />",
+      "posicao": {
+        "linha": 13,
+        "coluna": 2
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (389 ms de bloqueio, 10.2 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-2",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"https://periodicos.ufrn.br/index/$$$call$$$/page/page/css?name=font\" type=\"text/css\" />",
+      "posicao": {
+        "linha": 13,
+        "coluna": 124
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (581 ms de bloqueio, 0.7 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-3",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"https://periodicos.ufrn.br/lib/pkp/styles/fontawesome/fontawesome.css?v=3.3.0.21\" type=\"text/css\" />",
+      "posicao": {
+        "linha": 13,
+        "coluna": 240
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (773 ms de bloqueio, 7.6 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-4",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"https://periodicos.ufrn.br/plugins/themes/ojsufrn3308/styles/bootstrap.min.css?v=3.3.0.21\" type=\"text/css\" />",
+      "posicao": {
+        "linha": 13,
+        "coluna": 369
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (1158 ms de bloqueio, 20.9 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-5",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"https://periodicos.ufrn.br/plugins/themes/ojsufrn3308/styles/slick.min.css?v=3.3.0.21\" type=\"text/css\" />",
+      "posicao": {
+        "linha": 13,
+        "coluna": 507
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (581 ms de bloqueio, 1.0 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-6",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"https://periodicos.ufrn.br/plugins/themes/ojsufrn3308/styles/slick-theme.min.css?v=3.3.0.21\" type=\"text/css\" />",
+      "posicao": {
+        "linha": 13,
+        "coluna": 641
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (581 ms de bloqueio, 1.3 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-7",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"https://periodicos.ufrn.br/plugins/themes/ojsufrn3308/styles/ufrn_azul.css?v=3.3.0.21\" type=\"text/css\" />",
+      "posicao": {
+        "linha": 13,
+        "coluna": 781
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (581 ms de bloqueio, 21.8 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-8",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"https://periodicos.ufrn.br/plugins/generic/orcidProfile/css/orcidProfile.css?v=3.3.0.21\" type=\"text/css\" />",
+      "posicao": {
+        "linha": 13,
+        "coluna": 915
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (197 ms de bloqueio, 0.6 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    }
+  ]
+}

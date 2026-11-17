@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+	<meta name="description" content="Portal do Centro de Biociências">
+	<meta name="author" content="Equipe FERA - STI">
+
+	<title>CB | Centro de Biociências</title>
+	
+	<!-- Folhas de estilo -->
+	<link rel="stylesheet" href="/assets/vendors/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/assets/css/bootstrap-custom.css?v=2.0.0">
+	<link rel="stylesheet" href="/assets/vendors/lightbox2/css/lightbox.css">
+    <link rel="stylesheet" href="/assets/css/main.css?v=2.0.0">
+	
+	<!-- TODO: Alterar a imagem do ícone -->
+	<link rel="shortcut icon" href="/assets/img/cb_ico.png">
+<script type="text/javascript" src="https://arquivos.info.ufrn.br/arquivos/2023032242cfad1243936953c7d717b89d/STICookieConsent.js"></script>
+</head>
+<body>
+	<div id="fb-root"></div>
+    <script>
+    	(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id))
+                return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.5";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+		generateCookieConsentModal(
+		"site do CB" , 
+		{
+			fontSize: '16px',
+		},
+		{ 
+			fontFamily: "'Raleway', sans-serif",
+			width: '960px'
+		},
+		true
+	);
+		</script>
+		<script>
+			const img_resize = (arrSrc, largCalc, proporcao) => {
+					Array.prototype.filter.call(arrSrc, ch => {
+							ch.style.height = `${parseFloat(largCalc) / proporcao }px`;
+					});
+			};
+			const el_width_calc = el => window.getComputedStyle(el).getPropertyValue('width');
+		</script>
+<div id="barra-brasil">
+    <ul id="menu-barra-temp" style="list-style: none">
+	    <li style="display:inline; float:left;padding-right:10px; margin-right:10px; border-right:1px solid #EDEDED">
+	        <a href="https://brasil.gov.br" target="_blank" style="font-family:sans,sans-serif; text-decoration:none; color:white;">Portal do Governo Brasileiro</a>
+		</li>
+	</ul>
+</div>
+<header id="header" class="hidden-xs hidden-sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="navs-topo">
+                    <nav id="nav2">
+                        <ul>
+                            <li><a title="Ir para o conteúdo" href="#conteudo"><i class="fa fa-clone"></i></a></li>
+                            <li><a title="Suporte em informática" href="/servicos/suporte"><i class="fa fa-cog"></i></a></li>
+                            <li><a title="Mapa do site" href="/mapadosite"><i class="fa fa-sitemap"></i></a></li>
+                        </ul>
+                    </nav>
+                    <nav id="nav1">
+                        <ul>
+                            <li><a title="Ir para a página inicial" href="/"><i class="fa fa-home"></i>INÍCIO</a></li>
+                            <li><a href="https://darwin.cb.ufrn.br/" target="_blank"><i class="fa fa-at"></i>WEBMAIL</a></li>
+                            <li><a href="/servicos/contato"><i class="fa fa-envelope"></i>CONTATO</a></li>
+                            <li><a href="/telefones"><i class="fa fa-phone"></i>TELEFONES</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="logo"><a href="/"><img src="/assets/img/logo-cb.png" alt="Logomarca do Centro de Biociências" width="250" height="100"></a></div>
+                <div class="links"><a id="cb" href="/">CENTRO DE BIOCIÊNCIAS</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a title="UFRN" id="ufrn" href="https://ufrn.br/" target="_blank">UFRN</a></div>
+            </div>
+            <div class="col-md-6">
+                <div id="input-busca">
+                    <form action="/busca" method="get">
+                        <input type="text" placeholder="Palavra-Chave" name="s">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</header><nav class="navbar">
+    <div class="container">
+        <div class="row">
+            <div class="navbar-header visible-xs visible-sm">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-principal" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img src="/assets/img/logo-cb-mobile.png" alt="Ciências Biológicas" width="80" height="30"></a>
+                <div class="pesquisa-touch">
+                    <button type="button" data-toggle="collapse" data-target="#pesquisa-touch" class="collapsed"></button>
+                    <form action="/busca" method="get" class="collapse" id="pesquisa-touch">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                        <input type="text" placeholder="Palavra-Chave" name="s">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="collapse navbar-collapse" id="menu-principal">
+                <ul class="nav navbar-nav visible-xs visible-sm">
+                    <li><a href="#conteudo" title="Ir para o conteúdo">Ir para o conteúdo</a></li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown active">
+                        <a href="/institucional/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Institucional</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/institucional/historico">Histórico</a></li>
+                            <li><a href="/institucional/corpoadm">Corpo Administrativo</a></li>
+                            <li><a href="/institucional/planodegestao">Plano de Gestão</a></li>
+                            <li><a href="/institucional/regimentointerno">Regimento Interno</a></li>
+                            <li class="sub_menu">
+                                <span>CONSEC</span>
+                                <ul>
+                                    <li><a href="/institucional/consec">Membros</a></li>
+                                    <li><a href="/institucional/consecatas">Atas</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/institucional/organograma">Organograma</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="/departamentos/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Departamentos</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/departamentos/dbf">Biofísica e Farmacologia (DBF)</a></li>
+                            <li><a href="/departamentos/dbg">Biologia Celular e Genética (DBG)</a></li>
+                            <li><a href="/departamentos/dbq">Bioquímica (DBQ)</a></li>
+                            <li><a href="/departamentos/dbez">Botânica e Zoologia (DBEZ)</a></li>
+                            <li><a href="/departamentos/decol">Ecologia (DECOL)</a></li>
+                            <li><a href="/departamentos/dfs">Fisiologia e Comportamento (DFS)</a></li>
+                            <li><a href="/departamentos/dmp">Microbiologia e Parasitologia (DMP)</a></li>
+                            <li><a href="/departamentos/dmor">Morfologia (DMOR)</a></li>
+                            <li><a href="/departamentos/dol">Oceanografia e Limnologia (DOL)</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="/graduacao/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Graduação</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/graduacao/biomedicina">Biomedicina</a></li>
+                            <li class="sub_menu">
+                                <span>Ciências Biológicas</span>
+                                <ul>
+                                    <li><a href="/graduacao/cienciasbiobac">Bacharelado</a></li>
+                                    <li><a href="/graduacao/cienciasbiolic">Licenciatura</a></li>
+                                    <li><a href="/graduacao/cienciasbioead">Ensino a distância (EAD)</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/graduacao/ecologia">Ecologia</a></li>
+                            <li><a href="/graduacao/engaquicultura">Engenharia de Aquicultura</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="/posgraduacao/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pós-Graduação</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/posgraduacao/bioestruturalefun">Biologia Estrutural e Funcional</a></li>
+                            <li><a href="/posgraduacao/bioparasitaria">Biologia Parasitária</a></li>
+                            <li><a href="/posgraduacao/bioquimica">Bioquímica e Biologia Molecular</a></li>
+                            <li><a href="/posgraduacao/biotecnologia">Biotecnologia (RENORBIO)</a></li>
+                            <li><a href="/posgraduacao/cienciasbio">Ciências Biológicas</a></li>
+                            <li><a href="/posgraduacao/desmeioambiente">Desenvolvimento e Meio Ambiente</a></li>
+                            <li><a href="/posgraduacao/ecologia">Ecologia</a></li>
+                            <li><a href="/posgraduacao/psicobiologia">Psicobiologia</a></li>
+                            <li><a href="/posgraduacao/sistematicaeevolu">Sistemática e Evolução</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="/sala_imprensa/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sala de Imprensa</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/sala_imprensa/noticias">Notícias</a></li>
+                            <li><a href="/sala_imprensa/documentos">Documentos</a></li>
+                            <li><a href="/sala_imprensa/eventos">Eventos</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="/servicos/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Serviços</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/servicos/reservadesalas">Reserva de Salas</a></li>
+                            <li><a href="/servicos/manutencao">Manutenção</a></li>
+                            <li><a href="/servicos/suporte">Suporte em Informática</a></li>
+                            <li><a href="/servicos/bioterio">Biotério</a></li>
+                            <li><a href="/servicos/contato">Fale com o Centro</a></li>                            
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="/financeiro/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Financeiro</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/financeiro/pagamentos/pgtospendentes">Pagamentos Pendentes</a></li>
+                            <li><a href="/financeiro/pagamentos/pgtosefetivados">Pagamentos Efetivados</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="/nossas_midias/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mídias</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/nossas_midias/albuns">Álbuns</a></li>
+                            <li><a href="https://www.facebook.com/CentrodeBiocienciasUFRN/" target="_blank">Facebook</a></li>
+                            <li><a href="https://www.instagram.com/cb.ufrn.br/" target="_blank">Instagram</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav visible-xs visible-sm">
+                    <li><a href="/servicos/contato">Contato</a></li>
+                    <li><a href="/telefones">Telefones</a></li>
+                    <li><a href="/servicos/suporte">Suporte em informática</a></li>
+                    <li><a href="/mapadosite">Mapa do site</a></li>
+                    <li><a href="https://darwin.cb.ufrn.br/" target="_blank">Webmail</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<div id="bg-escuro"></div><section id="slideshow">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="slide-principal">
+                    <div id="slide-principal" class="carousel slide" data-ride="carousel">
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                                                            <div
+                                    class="item  active"
+                                    style="
+                                        background-image:url('/assets/img/slideshowprincipal/fachada.jpg');
+                                        background-size: cover;
+                                        background-position: center center;
+                                        width: 100%;
+                                    "
+                                    alt="Área com imagens ilustrativas do CB"
+                                    role="img"
+                                ></div>
+
+                                                            <div
+                                    class="item "
+                                    style="
+                                        background-image:url('/assets/img/slideshowprincipal/sagui.jpg');
+                                        background-size: cover;
+                                        background-position: center center;
+                                        width: 100%;
+                                    "
+                                    alt="Área com imagens ilustrativas do CB"
+                                    role="img"
+                                ></div>
+
+                                                            <div
+                                    class="item "
+                                    style="
+                                        background-image:url('/assets/img/slideshowprincipal/laboratorio.jpg');
+                                        background-size: cover;
+                                        background-position: center center;
+                                        width: 100%;
+                                    "
+                                    alt="Área com imagens ilustrativas do CB"
+                                    role="img"
+                                ></div>
+
+                                                            <div
+                                    class="item "
+                                    style="
+                                        background-image:url('/assets/img/slideshowprincipal/dengue.jpg');
+                                        background-size: cover;
+                                        background-position: center center;
+                                        width: 100%;
+                                    "
+                                    alt="Área com imagens ilustrativas do CB"
+                                    role="img"
+                                ></div>
+
+                                                            <div
+                                    class="item "
+                                    style="
+                                        background-image:url('/assets/img/slideshowprincipal/peixes.jpg');
+                                        background-size: cover;
+                                        background-position: center center;
+                                        width: 100%;
+                                    "
+                                    alt="Área com imagens ilustrativas do CB"
+                                    role="img"
+                                ></div>
+
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><main id="conteudo">
+    
+<section id="noticias">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <h1 class="titulo">Destaque</h1>
+                                    <div class="slide-noticias">
+                        <div class="controles voltar hidden-xs hidden-sm">
+                            <a class="voltar" href="#slide-noticias" role="button" data-slide="prev">
+                                <i class="fa fa-play fa-rotate-180" aria-hidden="true"></i>
+                                <span class="sr-only">Anterior</span>
+                            </a>
+                        </div>
+                        <div id="slide-noticias" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner" role="listbox">
+                                                                    <div class="item  active">
+                                        <a href="/sala_imprensa/noticias/67495898/cb-de-portas-abertas">
+                                            <div class="inic-news-item" style="
+                                                background-image: url('https://arquivos.info.ufrn.br/arquivos/202612414211ca1933181743af92b62a99/CB_portas_abertas_.png');
+
+                                                background-repeat: no-repeat;
+                                                background-size: cover;
+                                                background-position: center center;
+                                                width: 100%;
+
+                                                border-top-right-radius: 15px;
+                                                border-top-left-radius: 15px;
+                                                overflow: hidden;                                                
+                                                border: 0;
+                                            "></div>
+                                            <div class="carousel-caption descricao">
+                                                <h1 class="titulo" title="CB de portas abertas">CB de portas abertas</h1>
+                                            </div>
+                                        </a>
+                                    </div>
+                                                                        <div class="item ">
+                                        <a href="/sala_imprensa/noticias/67129833/departamento-de-bioquimica-da-ufrn-celebra-40-anos">
+                                            <div class="inic-news-item" style="
+                                                background-image: url('/assets/img/imagem_padrao.png');
+
+                                                background-repeat: no-repeat;
+                                                background-size: cover;
+                                                background-position: center center;
+                                                width: 100%;
+
+                                                border-top-right-radius: 15px;
+                                                border-top-left-radius: 15px;
+                                                overflow: hidden;                                                
+                                                border: 0;
+                                            "></div>
+                                            <div class="carousel-caption descricao">
+                                                <h1 class="titulo" title="Departamento de Bioquímica da UFRN celebra 40 anos">Departamento de Bioquímica da UFRN celebra 40 anos</h1>
+                                            </div>
+                                        </a>
+                                    </div>
+                                                                        <div class="item ">
+                                        <a href="/sala_imprensa/noticias/63519350/relatorio-de-gestao-2024">
+                                            <div class="inic-news-item" style="
+                                                background-image: url('https://arquivos.info.ufrn.br/arquivos/2025039067ea6b16000969293fa3fb7ec4/IMG-20250128-WA00242.jpg');
+
+                                                background-repeat: no-repeat;
+                                                background-size: cover;
+                                                background-position: center center;
+                                                width: 100%;
+
+                                                border-top-right-radius: 15px;
+                                                border-top-left-radius: 15px;
+                                                overflow: hidden;                                                
+                                                border: 0;
+                                            "></div>
+                                            <div class="carousel-caption descricao">
+                                                <h1 class="titulo" title="Relatório de Gestão 2024">Relatório de Gestão 2024</h1>
+                                            </div>
+                                        </a>
+                                    </div>
+                                                                        <div class="item ">
+                                        <a href="/sala_imprensa/noticias/60868174/por-dentro-do-campus-dbf">
+                                            <div class="inic-news-item" style="
+                                                background-image: url('/assets/img/imagem_padrao.png');
+
+                                                background-repeat: no-repeat;
+                                                background-size: cover;
+                                                background-position: center center;
+                                                width: 100%;
+
+                                                border-top-right-radius: 15px;
+                                                border-top-left-radius: 15px;
+                                                overflow: hidden;                                                
+                                                border: 0;
+                                            "></div>
+                                            <div class="carousel-caption descricao">
+                                                <h1 class="titulo" title="Por Dentro do Campus - DBF">Por Dentro do Campus - DBF</h1>
+                                            </div>
+                                        </a>
+                                    </div>
+                                                                        <div class="item ">
+                                        <a href="/sala_imprensa/noticias/60009388/edital-de-selecao-bolsistas-projeto-proilhas">
+                                            <div class="inic-news-item" style="
+                                                background-image: url('/assets/img/imagem_padrao.png');
+
+                                                background-repeat: no-repeat;
+                                                background-size: cover;
+                                                background-position: center center;
+                                                width: 100%;
+
+                                                border-top-right-radius: 15px;
+                                                border-top-left-radius: 15px;
+                                                overflow: hidden;                                                
+                                                border: 0;
+                                            "></div>
+                                            <div class="carousel-caption descricao">
+                                                <h1 class="titulo" title="Edital de Seleção Bolsistas Projeto PROILHAS">Edital de Seleção Bolsistas Projeto PROILHAS</h1>
+                                            </div>
+                                        </a>
+                                    </div>
+                                                                     <script>
+                                    const inic_news_img_arr = document.getElementsByClassName('inic-news-item');
+                                    const inic_news_slider = document.getElementById('slide-noticias');
+
+                                    const inic_news_img_proprc = 1.33;
+
+                                    let inic_news_slider_larg = el_width_calc(inic_news_slider);
+                                    img_resize(inic_news_img_arr, inic_news_slider_larg, inic_news_img_proprc);
+                                    window.addEventListener('resize', () => {
+                                        inic_news_slider_larg = el_width_calc(inic_news_slider);
+                                        img_resize(inic_news_img_arr, inic_news_slider_larg, inic_news_img_proprc);
+                                    });                                    
+                                </script>
+                            </div>
+                            <div class="indicadores">
+                                <ol class="carousel-indicators">
+                                                                            <li data-target="#slide-noticias" data-slide-to="0"  class="active"></li>
+                                                                                <li data-target="#slide-noticias" data-slide-to="1" ></li>
+                                                                                <li data-target="#slide-noticias" data-slide-to="2" ></li>
+                                                                                <li data-target="#slide-noticias" data-slide-to="3" ></li>
+                                                                                <li data-target="#slide-noticias" data-slide-to="4" ></li>
+                                                                        </ol>
+                            </div>
+                        </div>
+                        <div class="controles avancar hidden-xs hidden-sm">
+                            <a class="avancar" href="#slide-noticias" role="button" data-slide="next">
+                                <i class="fa fa-play" aria-hidden="true"></i>
+                                <span class="sr-only">Próximo</span>
+                            </a>
+                        </div>
+                    </div>
+                                </div>
+            <div class="col-md-6 col-sm-12 hidden-xs box-ultimas-noticias">
+                <h1 class="titulo">Demais Notícias</h1>
+                                    <div class="ultimas-noticias">
+                                                    <div class="noticia">
+                                <div class="texto">
+                                    <a href="/sala_imprensa/noticias/59176764/museu-de-ciencias-morfologicas">
+                                        <h1 class="titulo" title="Museu de Ciências Morfológicas">Museu de Ciências Morfológicas</h1>
+                                        <p class="previa" title="O Museu de Ci&ecirc;ncias Morfol&oacute;gicas (MCM) da Universidade Federal do Rio Grande do Norte (UFRN) &eacute; um espa&ccedil;o de divulga&ccedil;&atilde;o cient&iacute;fica, museal, de ensino, pesquisa e extens&atilde;o universit&aacute;ria na &aacute;rea de Morfologia Humana e Animal. Resultou da fus&atilde;o do acervo de tr&ecirc;s espa&ccedil;os de exposi&ccedil;&atilde;o dentro da UFRN, send...">O Museu de Ci&ecirc;ncias Morfol&oacute;gicas (MCM) da Universidade Federal do Rio Grande do Norte (UFRN) &eacute; um espa&ccedil;o de divulga&ccedil;&atilde;o cient&iacute;fica, museal, de ensino, pesquisa e extens&atilde;o universit&aacute;ria na &aacute;rea de Morfol...</p>
+                                    </a>
+                                </div>
+                            </div>
+                                                        <div class="noticia">
+                                <div class="texto">
+                                    <a href="/sala_imprensa/noticias/57792829/mostra-de-ensino-pesquisa-e-extensao-do-cb">
+                                        <h1 class="titulo" title="Mostra de Ensino, Pesquisa e Extensão do CB">Mostra de Ensino, Pesquisa e Extensão do CB</h1>
+                                        <p class="previa" title="COMUNICADO  &nbsp;  Como &eacute; de conhecimento de todos, devido &agrave; suspens&atilde;o do evento CB 50 anos no dia de hoje (28/11), em virtude das fortes chuvas, todas as atividades programadas para hoje est&atilde;o suspensas. N&atilde;o haver&aacute; transfer&ecirc;ncia das mesmas para outra data, com exce&ccedil;&atilde;o das solenidades comemorativas list...">COMUNICADO  &nbsp;  Como &eacute; de conhecimento de todos, devido &agrave; suspens&atilde;o do evento CB 50 anos no dia de hoje (28/11), em virtude das fortes chuvas, todas as atividades programadas para hoje est&atilde;o suspensas. N&atilde;o haver&aacute; transfer&ec...</p>
+                                    </a>
+                                </div>
+                            </div>
+                                                        <div class="noticia">
+                                <div class="texto">
+                                    <a href="/sala_imprensa/noticias/57598806/professor-do-cb-recebe-homenagem-na-assembleia-legislativa">
+                                        <h1 class="titulo" title="Professor do CB recebe homenagem na Assembleia Legislativa">Professor do CB recebe homenagem na Assembleia Legislativa</h1>
+                                        <p class="previa" title="Um jovem estudante de medicina chega &agrave; faculdade e descobre que um dos professores &eacute; l&aacute; de sua terra. Da&iacute; pensa: &quot;Tou em casa&quot;. N&atilde;o existia parentesco, mas sobrava considera&ccedil;&atilde;o. Coisas nossas do interior.&nbsp;  &quot;Na sess&atilde;o solene da&nbsp;Assembleia Legislativa do RN em homenagem ao Dia do Professor, tive a em...">Um jovem estudante de medicina chega &agrave; faculdade e descobre que um dos professores &eacute; l&aacute; de sua terra. Da&iacute; pensa: &quot;Tou em casa&quot;. N&atilde;o existia parentesco, mas sobrava considera&ccedil;&atilde;o. Coisas nossas do interior.&nbsp; ...</p>
+                                    </a>
+                                </div>
+                            </div>
+                                                        <div class="noticia">
+                                <div class="texto">
+                                    <a href="/sala_imprensa/noticias/57213273/x-conferencia--xv-simposio-de-psicobiologia">
+                                        <h1 class="titulo" title="X Conferência & XV Simpósio de Psicobiologia">X Conferência & XV Simpósio de Psicobiologia</h1>
+                                        <p class="previa" title="Per&iacute;odo: 9 a 11 de Novembro de 2023  Local: Natal - Rio Grande do Norte  &nbsp;    Palestrantes nacionais e internacionais  Mesas redondas com atualiza&ccedil;&otilde;es na &aacute;rea  Apresenta&ccedil;&atilde;o de trabalhos acad&ecirc;micos  Minicursos te&oacute;rico-pr&aacute;ticos  Publica&ccedil;&atilde;o de anais do evento  E muito mais    &nbsp;  Inscri&ccedil;&otilde;es no site: htt...">Per&iacute;odo: 9 a 11 de Novembro de 2023  Local: Natal - Rio Grande do Norte  &nbsp;    Palestrantes nacionais e internacionais  Mesas redondas com atualiza&ccedil;&otilde;es na &aacute;rea  Apresenta&ccedil;&atilde;o de trabalhos acad&ecirc;micos  Minicursos te&oacut...</p>
+                                    </a>
+                                </div>
+                            </div>
+                                            </div>
+                                    <div class="ver-mais"><a href="/sala_imprensa/noticias">Veja mais notícias >></a></div>
+                                </div>
+        </div>
+    </div>
+</section><section id="albuns" class="hidden-xs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="titulo">Álbuns de Fotos</h1>
+            </div>
+        </div>
+        <div class="row">
+            
+                    <div class="col-md-4 col-sm-6 ">
+                        <figure class="imagem_container borda_escura">
+                            <a href="/nossas_midias/albuns/32200194/colacao-biomedicina-e-engenharia-de-aquicultura-2019.1" title="Colação Biomedicina e Engenharia de Aquicultura 2019.1">
+                                <div class="inic-alb-item" style="
+                                    background-image: url('https://arquivos.info.ufrn.br/arquivos/20191580090d836552259f165ea3a3ac7/colacao10.jpeg');
+
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                    background-position: center center;
+                                    width: 100%;
+
+                                    border-top-right-radius: 20px;
+                                ">                                
+                                </div>
+                                <figcaption class="descricao_imagem verde">
+                                    <span>Colação Biomedicina e Engenharia de Aquicultura 2019.1</span>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </div>
+                    
+                    <div class="col-md-4 col-sm-6 ">
+                        <figure class="imagem_container borda_escura">
+                            <a href="/nossas_midias/albuns/24471103/iv-jornada-de-biologia-parasitaria" title="IV Jornada de Biologia Parasitária">
+                                <div class="inic-alb-item" style="
+                                    background-image: url('https://arquivos.info.ufrn.br/arquivos/20171691334f9146588720e012873391d/Biologia_Parasitria-9.jpg');
+
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                    background-position: center center;
+                                    width: 100%;
+
+                                    border-top-right-radius: 20px;
+                                ">                                
+                                </div>
+                                <figcaption class="descricao_imagem verde">
+                                    <span>IV Jornada de Biologia Parasitária</span>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </div>
+                    
+                    <div class="col-md-4 col-sm-6  hidden-sm">
+                        <figure class="imagem_container borda_escura">
+                            <a href="/nossas_midias/albuns/20722357/minicursos-do-i-simposio-em-biologia-estrutural-e-funcional" title="Minicursos do I Simpósio em Biologia Estrutural e Funcional ">
+                                <div class="inic-alb-item" style="
+                                    background-image: url('https://arquivos.info.ufrn.br/arquivos/2016022019149d3703410829ea891734b/DSC_0107.JPG');
+
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                    background-position: center center;
+                                    width: 100%;
+
+                                    border-top-right-radius: 20px;
+                                ">                                
+                                </div>
+                                <figcaption class="descricao_imagem verde">
+                                    <span>Minicursos do I Simpósio em Biologia Estrutural e Funcional </span>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </div>
+                                <script>
+                const inic_alb_img_arr = document.getElementsByClassName('inic-alb-item');
+                const inic_alb_img_proprc = 1.5;
+                let inic_alb_img_larg = el_width_calc(inic_alb_img_arr[0]);
+                img_resize(inic_alb_img_arr, inic_alb_img_larg, inic_alb_img_proprc);
+                window.addEventListener('resize', () => {
+                    inic_alb_img_larg = el_width_calc(inic_alb_img_arr[0]);
+                    img_resize(inic_alb_img_arr, inic_alb_img_larg, inic_alb_img_proprc);
+                });
+            </script>
+                    </div>
+                    <div class="ver-mais"><a href="/nossas_midias/albuns">Veja mais álbuns >></a></div>
+                </div>
+</section>
+<section id="eventos" class="hidden-xs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <h1 class="titulo">Eventos</h1>
+                <div class="eventos">
+                                            <p class="small">Nenhum evento foi encontrado no momento.</p>
+                                        </div>
+                            </div>
+            <div class="col-md-4  col-sm-6">
+                <a href="/servicos/reservadesalas" class="reserva-sala">Reserva de Salas<br><i class="fa fa-check"></i><br>Acesse aqui</a>
+            </div>
+            <div class="col-md-4 hidden-sm">
+                <div class="fb-page" data-href="https://www.facebook.com/CentrodeBiocienciasUFRN/" data-width="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/CentrodeBiocienciasUFRN/"><a href="https://www.facebook.com/CentrodeBiocienciasUFRN/">Centro de Biociências</a></blockquote></div></div>
+            </div>
+        </div>
+    </div>
+</section><section id="links-mobile" class="visible-xs">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <a href="/nossas_midias/albuns"><i class="fa fa-camera left"></i> ÁLBUNS <i class="fa fa-play right"></i></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <a href="/sala_imprensa/eventos"><i class="fa fa-calendar-o left"></i> EVENTOS <i class="fa fa-play right"></i></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <a href="/servicos/reservadesalas"><i class="fa fa-check left"></i> RESERVA DE SALAS <i class="fa fa-play right"></i></a>
+            </div>
+        </div>
+    </div>
+</section></main>
+<footer id="footer">
+    <a class="subir hidden-sm hidden-xs" href="#" id="subir"><i class="fa fa-caret-up"></i></a>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-6 box-footer">
+                <h1 class="titulo">PARCEIROS</h1>
+                <div class="content">
+                    <div id="slide-parceiros" class="carousel slide" data-ride="carousel">
+                        <div class="controles voltar hidden-xs hidden-sm">
+                            <a href="#slide-parceiros" role="button" data-slide="prev"><i class="fa fa-play fa-rotate-180" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <a href="http://www.clientesinterativa.com.br/museu/" target="_blank"><img src="/assets/img/parceiros/mcm.png" width="344" height="159"></a>
+                            </div>
+                            <div class="item">
+                                <a href="http://www.bczm.ufrn.br/" target="_blank"><img loading="lazy" src="/assets/img/parceiros/bczm.png" width="344" height="159"></a>
+                            </div>
+                            <div class="item">
+                                <a href="http://www.periodicos.capes.gov.br/" target="_blank"><img loading="lazy" src="/assets/img/parceiros/periodicos.png" width="344" height="159"></a>
+                            </div>
+                            <div class="item">
+                                <a href="http://www.meioambiente.ufrn.br/" target="_blank"><img loading="lazy" src="/assets/img/parceiros/dma.png" width="344" height="159"></a>
+                            </div>
+                            <div class="item">
+                                <a href="https://sigaa.ufrn.br/" target="_blank"><img loading="lazy" src="/assets/img/parceiros/sigaa.png" width="344" height="159"></a>
+                            </div>
+                            <div class="item">
+                                <a href="https://doacaodecorposufrn.com.br/" target="_blank"><img loading="lazy" src="/assets/img/parceiros/doacao.png" width="344" height="159"></a>
+                            </div>
+                        </div>
+                        <div class="controles avancar hidden-xs hidden-sm">
+                            <a href="#slide-parceiros" role="button" data-slide="next"><i class="fa fa-play" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 box-footer hidden-sm hidden-xs">
+                <h1 class="titulo">CENTRO DE BIOCIÊNCIAS</h1>
+                <div class="content box-texto">
+                    <address class="endereco">
+                        Campus Universitário UFRN - Lagoa Nova<br>
+                        CEP 59078-970 | Natal - RN, Brasil
+                    </address>
+                    <address class="contato">
+                        <i class="fa fa-at"></i>
+                        <a href="mailto:contato@cb.ufrn.br" target="_blank">contato@cb.ufrn.br</a>
+                    </address>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-6 box-footer">
+                <h1 class="titulo">REDES SOCIAIS</h1>
+                <div class="content box-sociais">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://www.facebook.com/CentrodeBiocienciasUFRN/" target="_blank">
+                                <i class="fa fa-facebook"></i>
+                                <span class="hidden-xs">Curta-nos no Facebook</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/cb.ufrn.br/" target="_blank">
+                                <i class="fa fa-instagram"></i>
+                                <span class="hidden-xs">Siga-nos no Instagram </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copy">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-9 copy-texto">
+                    CB @ 2016 / 2026 - Todos os direitos reservados<br>
+                    <a href="https://ufrn.br/" title="Acessar portal" target="_blank">Universidade Federal do Rio Grande do Norte</a>
+                </div>
+                <div class="col-xs-12 col-sm-3 copy-logo">
+                    Desenvolvido pela <a href="https://info.ufrn.br/" title="Acessar portal da Superintendência de Tecnologia da Informação" target="_blank">STI</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>	<!-- libs, plugins e scripts -->
+	<script type="text/javascript" src="/assets/vendors/jquery/js/jquery.js"></script>
+	<script type="text/javascript" src="/assets/vendors/jquery-mobile-custom/js/jquery.mobile.custom.min.js"></script>
+	<script type="text/javascript" src="/assets/vendors/bootstrap-sass/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/assets/vendors/lightbox2/js/lightbox.js"></script>
+	<script type="text/javascript" src="https://barra.brasil.gov.br/barra.js" defer="defer"></script>
+	<script type="text/javascript" src="/assets/js/main.js?v=2.0.0"></script>
+</body>
+</html>

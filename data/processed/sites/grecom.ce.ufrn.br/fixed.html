@@ -1,0 +1,548 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GRECOM - Grupo de Estudos da Complexidade</title>
+
+	<meta name="language" content="Portuguese">
+    <meta name="description" content="GRECOM - Grupo de Estudos da Complexidade">
+    <meta name="keywords" content="grecom, grecom ufrn, grupo de estudos da complexidade, grupo de estudos ufrn">
+    <meta name="reply-to" content="paulo.raposo.086@ufrn.edu.br">
+    <meta name="copyright" content="grecom.ufrn.br">
+    <meta name="category" content="Grupo de Estudos da Complexidade">
+    <meta name="Robots" content="Index,Follow">
+    <meta name="designer" content="Joeldson Costa, Andressa Kroeff e Equipe FERA - STI">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+    <link rev=made href="mailto:frontend@sti.ufrn.br">
+
+	<!-- Estilo geral -->
+	<link href="css/estilo_geral.css" rel="stylesheet" type="text/css" />
+	<!-- Estilo da inicial -->
+    <link href="css/estilo_inicial.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div id="pagina" class="">
+        <header id="topo">
+        	<div id="cabecalho">
+
+                <!-- inicio do topo -->
+        		<div id="cabecalho-centro">
+                    <!-- LOGO GRECOM -->
+                    <a class="url" title="Grupo de Estudos da Complexidade - GRECOM" href="index.php">
+                    	<div id="logo"></div>
+                    </a>
+
+                    <!-- lateral do topo -->
+                    <div id="topo-lateral-direita">
+						<!-- menu rapido -->
+						<div id="menu-rapido" class="menu">
+							<ul>
+								
+							<!-- itens do menu rapido -->
+                            <li class="li-menu">
+                                <a href="index.php" title="Início do site">Home</a>
+                            </li>
+                            <li class="li-menu divisor">|</li>
+                            <li class="li-menu">
+                                <a href="grecom.php?a=g_historia" title="Nossa história">Sobre o Grecom</a>
+                            </li>
+                            <li class="li-menu divisor">|</li>
+                            <li class="li-menu">
+                                <a href="contato.php" title="Fale conosco">Contato</a>
+                            </li>							</ul>
+						</div>
+						<!-- FIM - menu rapido -->
+
+						<!-- logo da ufrn -->
+						<div id="logo_UFRN">
+							<a title="Universidade Federal do Rio Grande do Norte - UFRN" target="_blank" href="http://www.ufrn.br/">
+								<img align="absmiddle" src="img/UFRN.png" alt="Site da UFRN" title"UFRN" width="68" height="24"/>
+							</a>
+						</div>
+						<!-- FIM - logo da ufrn -->
+
+						<!-- busca -->
+	                        
+						<!-- busca -->
+						<div id="busca">
+                            <form id="form_busca" name="form_busca" method="post" action="busca.php">
+								<span class="bg_busca">
+									<input id="chave" class="buscar" type="text" onblur="preencheCampo(this, 'Palavra-chave')" onclick="limpaCampo(this, 'Palavra-chave')" value="Palavra-chave" name="chave">
+								</span>
+								<input class="bt_buscar" type="button" onClick="verifBusca()" value="" alt="Buscar" title="Efetuar busca">
+							</form>
+						</div>						<!-- FIM - busca -->
+
+					</div>
+                    <!-- FIM - lateral do topo -->
+
+                </div>
+                <!-- FIM - inicio do topo -->
+
+        	</div>
+
+			<!-- NAVEGACAO -->
+        	<nav id="nav">
+            	                <!-- menu -->
+                <div id="menu">
+                    <ul class="area-acoes">
+                    	<li class="li-menu area-equipe">
+                        	<a title="Grecom">GRECOM</a> 
+                            <div class="sub-menu">
+                                <div class="sub-top"></div>
+                                <ul class="marcador-vermelho">
+                                    <li><a href="grecom.php?a=g_historia" title="O que é">O que é</a></li>
+                                    <li><a href="grecom.php?a=g_eixospesquisa" title="Eixos de Pesquisa">Eixos de Pesquisa</a></li>
+                                    <li><a href="grecom.php?a=g_edgar" title="Edgar Morin">Edgar Morin</a></li>
+                                    <li><a href="grecom.php?a=g_pesquisadores" title="Pesquisadores">Pesquisadores</a></li>
+                                    <li><a href="grecom.php?a=g_intercambios" title="Intercâmbios">Intercâmbios</a></li>
+                                    <li><a href="contato.php" title="Contato">Contato</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="li-menu area-projetos">
+                            <a title="Projetos">PROJETOS</a>
+                            <div class="sub-menu">
+                                <div class="sub-top"></div>
+                                <ul class="marcador-amarelo">
+                                    <li><a href="projetos.php?a=p_poli_ideias" title="Polifônicas Idéias">Polifônicas Idéias</a></li>
+                                    <li><a href="projetos.php?a=p_estaleiro" title="Estaleiro de Saberes">Estaleiro de Saberes</a></li>
+                                    <li><a href="projetos.php?a=p_ciuem" title="CIUEM - Cátedra Itinerante UNESCO Edgar Moran para o Pensamento Complexo">CIUEM</a></li>
+                                    <li><a href="projetos.php?a=p_pensamento_sul" title="Para um Pensamento do Sul">Para um Pensamento do Sul</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="li-menu area-eventos">
+                            <a title="Atividades">ATIVIDADES</a>
+                            <div class="sub-menu">
+                                <div class="sub-top"></div>
+                                <ul class="marcador-azul">
+                                    <li><a href="publicacao.php?id=100246421" title="Grecom 20 Anos">Grecom 20 Anos</a></li>
+                                    <li><a href="publicacao.php?id=100246422" title="Dia de Estudo">Dia de Estudo</a></li>
+                                    <li><a href="atividades.php" title="Mais atividades">Mais atividades</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="li-menu ">
+                            <a href="novidades.php" title="Eventos">AGENDA</a>
+                        </li>
+                        <li class="li-menu area-publicações">
+                            <a title="Biblioteca">BIBLIOTECA</a>
+                            <div class="sub-menu">
+                                <div class="sub-top"></div>
+                                <ul class="marcador-amarelo">
+                                    <li><a href="publicacao.php?id=81550282" title="Artigos">Artigos</a></li>
+                                    <li><a href="publicacao.php?id=100246420" title="Artigos">Atividades</a></li>
+                                    <li><a href="publicacao.php?id=81550284" title="Dissertações">Dissertações</a></li>
+                                    <li><a href="publicacao.php?id=81550280" title="Livros">Livros</a></li>
+                                    <li><a href="publicacao.php?id=81550283" title="Monografias">Monografias</a></li>
+                                    <li><a href="publicacao.php?id=81550281" title="Revistas">Revistas</a></li>
+                                    <li><a href="publicacao.php?id=81550285" title="Teses">Teses</a></li>
+                                    <li><a href="publicacoes.php" title="Hemeroteca">Hemeroteca</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="li-menu area-galerias">
+                            <a title="Galeria">GALERIA</a>
+                            <div class="sub-menu">
+                                <div class="sub-top"></div>
+                                <ul class="marcador-laranja">
+                                    <li><a href="fotos.php" title="Fotos">Fotos</a></li>
+                                    <li><a href="videos.php" title="Vídeos">Vídeos</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="li-menu area-amigos">
+     							<a href="pagina.php?a=l_amigos" title="Amigos" class="">AMIGOS</a>
+                        </li>
+                   		<li class="li-menu-ultimo area-nucleos">
+     							<a href="pagina.php?a=l_parcerias" title="Parcerias" class="">PARCERIAS</a>
+                            </li>
+                    </ul>
+                </div>
+                <!-- BARRA DE SESSAO -->
+                <div id="barra-sessao">
+                	<div class="barra-sessao-interna"></div>
+                </div>
+
+            </nav>
+            <!-- FIM - navegacao -->
+
+		</header>
+        <!-- FIM - topo -->		<!-- corpo do site -->
+		<main id="corpo">
+			<div id="centro-corpo">
+				<div id="textoIndex">
+                    <h2>Sonho de olhos abertos</h2><br/>
+                    <p>
+                        <p>Era uma vez, um pequeno grupo de pessoas que sonhou transformar o trabalho acad&ecirc;mico numa est&eacute;tica do pensar com prazer, partilha e paix&atilde;o.</p><br />
+<p>Era uma vez, um pequeno grupo de sonhadores que escolheu como estilo de vida apostar na produ&ccedil;&atilde;o do conhecimento capaz de transformar sementes de morte em sementes de vida; que preferiu olhar para o mundo com lentes polif&ocirc;nicas, como condi&ccedil;&atilde;o de entender os fen&ocirc;menos do mundo em sua complexidade; que decidiu politizar a ci&ecirc;ncia atrav&eacute;s do compromisso di&aacute;rio de suas pr&aacute;ticas de vida; que acreditou na "boa utopia" de um mundo onde homens, mulheres e crian&ccedil;as possam, com maior frequ&ecirc;ncia, "rir, sorrir e gargalhar".</p><br />
+<p>Era uma vez, um grupo de sonhadores que imaginou uma ci&ecirc;ncia mais humilde, mais humana, mais comprometida com o destino do planeta.</p><br />
+<p>Um dia, o pequeno grupo de sonhadores percebeu que j&aacute; n&atilde;o era t&atilde;o pequeno, e que parte do sonho sonhado se tornara realidade - a&iacute; nasceu o GRECOM. A outra parte do sonho ainda &eacute; um sonho. Mas ele alimenta os cora&ccedil;&otilde;es de todos n&oacute;s na busca de "fazer um mundo melhor, mesmo que n&atilde;o seja o melhor dos mundos" (Morin).</p><br />
+<p>Neste site n&atilde;o cabe o registro de todo o caminho sonhado e realizado pelo Grupo de Estudos da Complexidade desde o seu in&iacute;cio. Peda&ccedil;os de sonhos foram deixados de lado, outros foram lamentavelmente esquecidos, outros, ainda, n&atilde;o podem ser registrados - de t&atilde;o vol&aacute;teis que foram...</p><br />
+<p>Aqui est&atilde;o bricolados fragmentos da vida de um grupo, reordenados segundo uma certa &oacute;tica e de acordo com o material que conseguimos garimpar e rejuntar. Equ&iacute;vocos? Omiss&otilde;es? Esquecimentos? Sim, &eacute; poss&iacute;vel. Reorganizar e reformatar tal volume de produ&ccedil;&atilde;o s&atilde;o tarefas que demandam tempo. Assumimos todas as lacunas e nos desculpamos.</p><br />
+<p><strong>Cei&ccedil;a Almeida</strong><br />Coordenadora do GRECOM</p>                	</p>
+				</div>
+
+				<div id="quadros"> 
+					<!-- =================================================
+                    	 QUADROS DE DESTAQUE
+                         ================================================= -->
+					<div class="quadro">
+						<div class="quadro-topo">
+							<div class="topo-titulo">
+								<p class="titulo-quadro-destaques verde">Destaques</p>
+							</div>
+							<div class="topo-abrir-fechar">
+								<a href="#" id="show1" class="abrirFechar" onclick="changeSrc('p-a1');"><img id="p-a1" alt="Fechar" src="img/off.png" title="Fechar" width="22" height="11"></a>
+							</div>
+						</div>
+
+                    	<!-- conteúdo das atividades -->
+						<div class="destaques conteudo-quadro">
+							<span class="noticia-destaque">
+                                <span class="data-noticia">(15/09/2022)</span><br/>
+                                <span class="titulo-noticia">Professora Ceiça Almeida profere palestra em evento na UFCG</span><br/>
+                            	<a href="atividade.php?id=52265883">
+                                    <span class="texto-noticia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Com o tema &ldquo;Os problemas n&atilde;o resolvidos da Biologia&rdquo;, o evento &ldquo;As confer&ecirc;ncias do Jabre&rdquo; acontece dia 20/09/2022, no Casar&atilde;o do Jabre, em Matur&eacute;ia/PB. Promovido pela UFCG Campus Patos e organizado pelo grupo de estudos ARBOR (Ci&ecirc;ncias da vida e Pensamento Complexo) a atividade visa ...</span>
+								</a>
+                            </span>
+							<span class="noticia-destaque">
+                                <span class="data-noticia">(08/07/2022)</span><br/>
+                                <span class="titulo-noticia">Parabéns, Morin!</span><br/>
+                            	<a href="atividade.php?id=51083436">
+                                    <span class="texto-noticia">101 anos de vida.</span>
+								</a>
+                            </span>
+                            <a href="atividades.php" class="link-quadro link_azul">mais atividades</a>
+						</div>
+					</div><!-- fim div quadro destaques-->
+
+					<!-- =================================================
+                    	 QUADROS DE NOVIDADES - EVENTOS
+                         ================================================= -->
+					<div class="quadro">
+						<div class="quadro-topo">
+							<div class="topo-titulo">
+								<p class="titulo-quadro-eventos">Novidades</p>
+							</div>
+							<div class="topo-abrir-fechar">
+								<a href="#" id="show2" class="abrirFechar" onclick="changeSrc('p-a2');"><img id="p-a2" alt="Abrir" src="img/on.png" title="Abrir" width="22" height="11"></a>	
+							</div>
+						</div>
+
+						<div class="eventos conteudo-quadro">
+							<p><strong>Nenhuma novidade foi encontrada.</strong></p>
+						</div>
+					</div><!-- fim div quadro eventos -->
+
+					<!-- =================================================
+                    	 QUADROS DE GALERIAS
+                         ================================================= -->
+					<div class="quadro">
+						<div class="quadro-topo">
+							<div class="topo-titulo">
+								<p class="titulo-quadro-galerias">Galerias</p>
+							</div>
+							<div class="topo-abrir-fechar">
+								<a href="#" id="show3" class="abrirFechar" onclick="changeSrc('p-a3');"><img loading="lazy" id="p-a3" alt="Abrir" src="img/on.png" title="Abrir" width="22" height="11"></a>	
+							</div>
+						</div>
+
+						<div class="galerias conteudo-quadro">
+
+                            <!-- GALERIA DE FOTOS -->
+                            <span class="galeria-bloco">
+                            <span class="geleria-subtitulo">Fotos</span>
+                                <!-- album -->
+                                <span class="foto">
+                                    <a href="foto.php?id=24227874" title="LANÇAMENTO DO LIVRO CIÊNCIAS DA COMPLEXIDADE E EDUCAÇÃO - RAZÃO APAIXONADA E POLITIZAÇÃO DO PENSAMENTO">
+                                        <span class="bg-foto">
+                                            <img loading="lazy" src="https://arquivos.info.ufrn.br/arquivos/2017116004736d45845325584c8180955/DSCN0691.JPG" width="149" height="210"/>
+                                        </span>
+                                        <span class="data-foto">21/11/2017</span>
+                                    </a>
+                                </span>
+                                <!-- album -->
+                                <span class="foto">
+                                    <a href="foto.php?id=23508498" title="LANÇAMENTO DA AUTOBIOGRAFIA DE EDGARD ASSIS DE CARVALHO">
+                                        <span class="bg-foto">
+                                            <img loading="lazy" src="https://arquivos.info.ufrn.br/arquivos/2017022176c9484339588f94e04a50543/foto_1_de_entrada_do_site.jpg" width="210" height="157"/>
+                                        </span>
+                                        <span class="data-foto">25/08/2017</span>
+                                    </a>
+                                </span>
+                                <!-- album -->
+                                <span class="foto">
+                                    <a href="foto.php?id=22540864" title="SEMINÁRIO SINTOMAS DO CONTEMPORÂNEO, CONTRADIÇÕES DO SUJEITO">
+                                        <span class="bg-foto">
+                                            <img loading="lazy" src="https://arquivos.info.ufrn.br/arquivos/2017111170f96641195777cf1191752fc/20170605_142554.jpg" width="210" height="118"/>
+                                        </span>
+                                        <span class="data-foto">05/06/2017</span>
+                                    </a>
+                                </span>
+							</span>
+                            <a href="fotos.php" class="link-quadro link_laranja" title="Mais imagens">mais fotos</a>
+                         	<br/>
+
+                            <!-- GALERIA DE VIDEOS -->
+                            <span class="galeria-bloco">
+                                <span class="galeria-linha"></span>
+                                <span class="geleria-subtitulo">Vídeos</span>
+								<p class="msg-quadro">Nenhum vídeo foi encontrado.</p>
+                            </span>
+						</div>
+					</div><!-- fim div quadro galerias --> 
+
+					<!-- =================================================
+                    	 QUADROS DE ENQUETE
+                         ================================================= -->
+					<div class="quadro">
+						<div class="quadro-topo">
+							<div class="topo-titulo">
+								<p class="titulo-quadro-enquete">Enquete</p>
+							</div>
+							<div class="topo-abrir-fechar">
+								<a href="#" id="show4" class="abrirFechar" onclick="changeSrc('p-a4');"><img loading="lazy" id="p-a4" alt="Abrir" src="img/on.png" title="Abrir" width="22" height="11"></a>	
+							</div>
+						</div>	
+						<div class="enquete conteudo-quadro">
+                            <iframe scrolling="auto" frameborder="0" width="100%" height="190px" src="https://sistemas.ufrn.br/gerenciadorportais/public/grecom/enquete/">
+                            </iframe>
+                            <!-- Formulario enquete
+                            <p>
+                                Aponte o grau de satisfação das publicações GRECOM 2011?
+                            </p>
+                            <br/>
+                            <form id="formEnqueteVotacao">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <input type="radio" name="enquete"/> <label>Excelente</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="radio" name="enquete"/> <label>Bom</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="radio" name="enquete"/> <label>Regular</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="radio" name="enquete" /> <label>Ruim</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="radio" name="enquete"/> <label>Péssimo</label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td>
+                                                <br/>
+                                                <input class="btn-voto" type="button" value="Votar" title="Votar" alt="Votar"/>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </form>
+                            -->
+                        </div>
+					</div><!-- fim div quadro enquete -->
+
+				</div><!-- fim div quadros-->
+
+
+			</div>
+        </main>
+        <!-- FIM - corpo do site -->
+
+        <!-- link para o topo -->
+        <div id="topo-link">
+			<a href="#topo" title="voltar ao topo" class="topo-link">
+            	TOPO<img loading="lazy" src="img/off.png" width="22" height="11">
+            </a>
+        </div>
+        <!-- FIM - link para o topo -->
+
+        <!-- rodape do site -->
+        <footer id="rodape">
+
+            <!-- barra 1 -->
+            <div id="rodape-barra1">
+                <div id="rodape-centro-barra1">
+                	<div id="grecom">
+                        <p>
+                            <a class="maior" title="Grupo de Estudos da Complexidade" href="index.php">Grupo de Estudos da Complexidade/GRECOM</a><br/>
+                            Centro de Ciências Sociais Aplicadas<br/>
+                            Programa de Pós-Graduação em Educação<br/>
+                            Contato: +55 (84) 3215-3525<br/>
+                            E-mail: <a href="mailto:paulo.raposo.086@ufrn.edu.br">paulo.raposo.086@ufrn.edu.br</a><br/>
+                            Coordenadora do Grecom: Maria da Conceição de Almeida<br/>
+                        </p>
+                    </div>
+
+                    <!-- redes sociais -->
+                    						<!-- redes sociais -->
+                    <div id="redes_sociais">
+                      <ul class="menu">
+							<li class="li-menu-redes-sociais">
+						  		<a title="Veja nosso canal no youtube" target="_blank" href="https://www.youtube.com/grecomoficial">
+									<img loading="lazy" align="absmiddle" src="img/bg_youtube.png" alt="youtube" width="41" height="38">
+								</a>
+							</li>
+                            <li class="li-menu-redes-sociais">
+						  		<a title="Acesse nosso perfil no facebook" target="_blank" href="https://www.facebook.com/ogrecomoficial">
+									<img loading="lazy" align="absmiddle" src="img/bg_facebook.png" alt="facebook" width="41" height="38">
+								</a>
+							</li>
+							<li class="li-menu-redes-sociais">
+								<a title="Siga-nos no twitter" target="_blank" href="https://www.twitter.com/grecomoficial">
+									<img loading="lazy" align="absmiddle" src="img/bg_twitter.png" alt="twitter" width="41" height="38">
+								</a>
+							</li>
+							<li class="li-menu-redes-sociais">
+  								<a title="Cadastre-se para receber nosso RSS" target="_blank" href="https://sistemas.ufrn.br/gerenciadorportais/public/grecom/noticia/rss/">
+									<img loading="lazy" align="absmiddle" src="img/bg_rss.png" alt="rss" width="41" height="38">
+                                 </a>
+							</li>
+                      	</ul>
+                	</div>                    <!-- FIM - redes sociais -->
+
+                  	<div id="vinte_anos">
+                    	<a href=""><img loading="lazy" align="absmiddle" src="img/bg_21_anos.png" alt="GRECOM 21 anos" width="295" height="76"></a>
+                	</div>
+        		</div>
+            </div>
+            <!-- FIM - barra 1 -->
+
+            <!-- barra 2 -->
+        	<div id="rodape-barra2">
+        		<div id="rodape-centro-barra2">
+
+                    <!-- menu rapido (rodape) -->
+                    <div id="rodape-menu-rapido">
+						<ul class="menu">
+							
+							<!-- itens do menu rapido -->
+                            <li class="li-menu">
+                                <a href="index.php" title="Início do site">Home</a>
+                            </li>
+                            <li class="li-menu divisor">|</li>
+                            <li class="li-menu">
+                                <a href="grecom.php?a=g_historia" title="Nossa história">Sobre o Grecom</a>
+                            </li>
+                            <li class="li-menu divisor">|</li>
+                            <li class="li-menu">
+                                <a href="contato.php" title="Fale conosco">Contato</a>
+                            </li>						</ul>
+                	</div>
+                    <!-- FIM - menu rapido (rodape) -->
+
+                    <!-- creditos -->
+                    <div id="creditos">
+						<span class="direitos">
+							&copy; Copyright 2012 <b>GRECOM</b> - <a href="http://www.ufrn.br" target="_blank" title="UFRN - Universidade Federal do Rio Grande do Norte">UFRN - Universidade Federal do Rio Grande do Norte</a>
+						</span>
+						<span class="desenvolvido">
+							<label>Desenvolvido por:</label>
+							<a title="Superintendência de Informática" target="_blank" href="http://www.info.ufrn.br">
+								<img loading="lazy" align="absmiddle" src="img/sinfo.png" width="36" height="28">
+							</a>
+						</span>
+                    </div>
+                    <!-- FIM - creditos -->
+
+                </div>
+        	</div>
+            <!-- FIM - barra 2 -->
+
+        </footer>
+    </div>
+
+    <!-- javascript -->
+	
+	<!-- javascript -->
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/submenu.js" type="text/javascript"></script>
+    <script src="js/validacao.js" type="text/javascript"></script>
+
+    <!-- Js lightBox -->
+    <script src="js/lightbox-0.5.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="css/lightbox-0.5.css" media="screen" />
+
+    <script type="text/javascript">
+		$(document).ready(function() {
+
+			//MENU E SUBMENUS
+			new Submenu('#menu', {
+				elementsSelector: '.li-menu',
+				submenuSelector: '.sub-menu'
+			});
+
+			//DESTAQUES (atividades)
+			$(".destaques"); // cria o link caso o javasript estaja activo.
+			$("#show1").bind("click",function(){
+				$(".destaques").slideToggle("show1");
+				return false;
+			});
+
+			//EVENTOS (novidades)
+			$(".eventos");
+			$(".eventos").hide();
+			$("#show2").bind("click",function(){
+				$(".eventos").slideToggle("show2");
+				return false;
+			});
+
+			//GALERIAS (fotos e videos)
+			$(".galerias"); 
+			$(".galerias").hide();
+			$("#show3").bind("click",function(){
+				$(".galerias").slideToggle("show3");
+				return false;
+			}); 
+
+			//ENQUETE
+			$(".enquete"); 
+			$(".enquete").hide();
+			$("#show4").bind("click",function(){
+				$(".enquete").slideToggle("show4");
+				return false;
+			});
+
+			// chama a funcao para ampliar imagem - lightBox
+			$('.aumenta a').lightBox();
+
+			//Função para subir pagina com efeito deslizante
+			$('#topo-link').click(function(){
+				$('html, body').animate({scrollTop:0}, 'slow');
+				return false;
+			});
+		});
+
+		//Função para mudar as imagens para Abrir e Fechar quadros
+		function changeSrc(id) {
+			var imagem = document.getElementById(id);
+
+			//destaques
+			if(imagem.alt == "Abrir"){
+				imagem.src = "img/off.png";
+				imagem.alt = "Fechar";
+				imagem.title="Fechar";
+			}else{
+				imagem.src = "img/on.png";
+				imagem.alt = "Abrir"
+				imagem.title= "Abrir";
+			} 
+		}
+    </script> </body>
+</html>

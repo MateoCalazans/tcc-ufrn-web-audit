@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAIRE | UFRN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/laire_style.css">
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'
+    <!-- SCRIPT -->
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.3.2.js"></script>
+    <script src="/js/script.js"></script>
+</head>
+
+
+<body id="pagina" style="overflow-x: hidden;">
+    
+    <main>
+        <div id="home" class="w-[100%]"></div>
+        <header class="w-[100%] inline-block">
+            <div class="w-[100%] mt-[-20px] inline-block fixed" style="z-index: 1000;">
+                <div class="w-[100%] inline-block">
+                    <div class="w-[100%] inline-block">
+                        <div id="column_logo" class="float-left pl-[5%] w-[25%] inline-block bg-[#02173d]">
+                            <div class="w-[100%] h-[120px] inline-block">
+                                <a href="http://tronco.cchla.ufrn.br"><img id="logo_laire" class="w-[230px] mt-[25px]" src="/img/laire.png" width="2567" height="785"></a>
+                            </div>
+                        </div>
+                        <div id="column_buttons" class="float-left w-[75%] inline-block">
+                            <div class="w-[100%] h-[50px] pr-[7%] bg-[#212121] inline-block">
+                                <div id="column_create" class="w-[40%] float-left inline-block">
+                                    <p class="text-[12px] text-[#212121]">Desenvolvido por Gemenson França</p>
+                                </div>
+                                <div id="column_control" class="w-[60%] inline-block float-left">
+                                    <div id="header_font" class="w-[20.3%] float-left inline-block">
+                                        <ul id="bts_font" class="mt-[12px]">
+                                            <li class="inline-block ml-[20px]"><a href="http://tronco.cchla.ufrn.br/acessibilidade/font/up"><p class="uppercase font-bold text-[15px] text-[#ffffff]">A+</p></a></li></li>
+                                            <li class="inline-block ml-[20px]"><a href="http://tronco.cchla.ufrn.br/acessibilidade/font/down"><p class="uppercase font-bold text-[15px] text-[#ffffff]">A-</p></a></li></li>
+                                        </ul>
+                                    </div>
+                                    <div id="header_idiomas" class="w-[20.3%] float-left inline-block">
+                                        <ul id="btn_idioma" class="mt-[12px]">
+                                            <li class="inline-block ml-[10px]"><a href="http://tronco.cchla.ufrn.br/idioma/portugues"><img class="w-[25px]" src="/img/brasil.png" width="512" height="512"></a></li></li>
+                                            <li class="inline-block ml-[10px]"><a href="http://tronco.cchla.ufrn.br/idioma/ingles"><img class="w-[25px]" src="/img/eua.png" width="512" height="512"></a></li></li>
+                                        </ul>
+                                    </div>
+                                    <div id="header_busca" class="w-[59.3%] float-left inline-block">
+                                        <form action="http://tronco.cchla.ufrn.br/resultado/busca" method="POST">
+                                            <input type="hidden" name="_token" value="pzFhNiHRkVVRWE3pBU5f607H93phhjOOKf81Orc9">                                            <input class="w-[100%] h-[30px] text-[13px] mt-[10px] outline-none rounded-[3px] pl-[10px] border-[0px] bg-[#ffffff]" type="text" name="busca" placeholder="Busque por algo!">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-[100%] h-[76px] mt-[-6px] pr-[7%] bg-[#00FF8C] inline-block">
+                                <div id="header_menu_options" class="w-[90%] inline-block float-left">
+                                    <ul class="float-right mt-[26px]">
+                                                                                <li class="ml-[35px] inline-block"><a href="http://tronco.cchla.ufrn.br#noticias"><p class="text-[16px] text-[#02173d] font-bold uppercase">Notícias</p></a></li>
+                                                                                <li class="ml-[35px] inline-block"><a href="http://tronco.cchla.ufrn.br#sobre"><p class="text-[16px] text-[#02173d] font-bold uppercase">Sobre</p></a></li>
+                                        <li class="ml-[35px] inline-block"><a href="http://tronco.cchla.ufrn.br#equipe"><p class="text-[16px] text-[#02173d] font-bold uppercase">Equipe</p></a></li>
+                                        <li class="ml-[35px] inline-block"><a href="http://tronco.cchla.ufrn.br#pesquisas"><p class="text-[16px] text-[#02173d] font-bold uppercase">Pesquisas</p></a></li>
+                                        <li class="ml-[35px] inline-block"><a href="http://tronco.cchla.ufrn.br#eventos"><p class="text-[16px] text-[#02173d] font-bold uppercase">Eventos</p></a></li>
+                                        <li class="ml-[35px] inline-block"><a href="http://tronco.cchla.ufrn.br#contato"><p class="text-[16px] text-[#02173d] font-bold uppercase">Contatos</p></a></li>
+                                    </ul>
+                                </div>
+                                <div id="button_nav" class="w-[10%] inline-block float-left">
+                                    <div id="btn_rs_laire" class="w-[100%] float-left inline-block">
+                                        <a href="http://tronco.cchla.ufrn.br/respira-saude"><img loading="lazy" class="w-[50px] mt-[12px] float-right" src="/img/avt_rs.png" width="500" height="500"></a>
+                                    </div>
+                                    <div id="header_menu_hamburger" class="inline-block float-left">
+                                        <button class="text-[#02173d] outline-none text-[25px] float-right mt-[25px] mr-[8px]" type="button" id="action_hamburg"><p id=""><i class="fi fi-br-menu-burger"></i></p></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="menu_mobile_laire" style="display: none;" class="w-[100%] mt-[-15px] px-[5%] inline-block py-[20px] bg-[#00FF8C]">
+                        <input class="mt-[20px] w-[100%] pl-[10px] h-[40px] rounded-[5px] outline-none" type="text">
+                        <ul class="float-left mt-[26px]">
+                                                        <li class="mb-[20px] flex"><a href="#noticias"><p class="text-[18px] text-[#02173d] font-bold uppercase closed">Notícias</p></a></li>
+                                                        <li class="mb-[20px] flex"><a href="#sobre"><p class="text-[18px] text-[#02173d] font-bold uppercase closed">Sobre</p></a></li>
+                            <li class="mb-[20px] flex"><a href="#equipe"><p class="text-[18px] text-[#02173d] font-bold uppercase closed">Equipe</p></a></li>
+                            <li class="mb-[20px] flex"><a href="#pesquisas"><p class="text-[18px] text-[#02173d] font-bold uppercase closed">Pesquisas</p></a></li>
+                            <li class="mb-[20px] flex"><a href="#eventos"><p class="text-[18px] text-[#02173d] font-bold uppercase closed">Eventos</p></a></li>
+                            <li class="mb-[20px] flex"><a href="#contato"><p class="text-[18px] text-[#02173d] font-bold uppercase closed">Contatos</p></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        
+        <article>
+            
+
+<div class="w-[100%] inline-block">
+    <div class="w-[100%] mt-[80px] inline-block">
+                <div id="banner_section1" style="background-image: url('/img/conteudo/imagens/2123072228.png'); background-size: cover; background-position: center;" class="w-[50%] bg-[#f1f1f1] h-[100vh] float-left inline-block">
+            X1
+        </div>
+                <div id="banner_section2" class="w-[50%] bg-[#5CD1FF] h-[100vh] px-[5%] float-left inline-block">
+            <p id="texto_banner_principal" class="font-bold text-[300%] leading-[100%] uppercase mt-[15%] text-[#02173d]">AVALIAÇÃO, INTERVENÇÃO E EDUCAÇÃO EM SAÚDE RESPIRATÓRIA</p>
+            <p id="texto_banner_subtitulo" class="text-[20px] text-[#02173d] mt-[25px] leading-[25px]">Atividades de ensino, pesquisa e extensão relacionadas às doenças respiratórias agudas e crônicas que comprometem a qualidade de vida de crianças, adolescentes e adultos</p>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="noticias" class="w-[100%] inline-block mt-[-100px]">
+    <div class="slider">
+        
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+
+            
+            <div class="slide first">
+                <div id="box_geral" class="w-[100%] h-[100vh] pt-[120px]">
+                                        <div id="box_image_carrossel" class="w-[50%] inline-block float-left">
+                        <div id="img_carrossel" style="background: url('/img/conteudo/imagens/34133fc477400ddc7af7168ecd04768d1692831230.png'); background-size: cover;" class="w-[90%] float-right bg-[#eeeeee] p-[40px] h-[70vh] mt-[20px]"></div>
+                    </div>
+                    <div id="box_text_carrossel" class="w-[50%] inline-block float-left">
+                        <div id="text_carrossel" class="w-[90%] inline-block bg-[#f1f1f1] p-[40px] h-[70vh] mt-[20px] ">
+                            <p id="titulo_noticia" class="uppercase text-[#02173d] text-[16px] pl-[10px] border-l-[1px] border-l-[#02173d]">Novidades </p>
+                            <p id="titulo_card" class="text-[#02173d] font-bold text-[25px] mt-[20px]">RespiraSaúde</p>
+                            <p id="texto_noticia" class="text-[15px] text-justify text-[#02173d] mt-[20px]">Ponte entre a ciência e a sociedade valorizando a acessibilidade, comunicação simples e educação em saúde. O ARlindo lhe auxiliará na acessibilidade à conteúdos essenciais! Baixe o atalho rápido ao RespiraSaúde em seu celular e computador!</p>
+                                                        <a href="https://laire.ufrn.br/respira-saude" target="_blank">
+                                <button class="px-[50px] float-left mt-[40px] h-[40px] uppercase rounded-[5px] text-[9px] bg-[#00FF8C] text-[#02173d] font-bold text-[14px]">Ver mais</button>
+                            </a>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div id="box_geral" class="w-[100%] h-[100vh] pt-[120px]">
+                                        <div id="box_image_carrossel" class="w-[50%] inline-block float-left">
+                        <div id="img_carrossel" style="background: url('/img/conteudo/imagens/4453ca0b1e623386cf2531805943392f1692831535.png'); background-size: cover;" class="w-[90%] float-right bg-[#eeeeee] p-[40px] h-[70vh] mt-[20px]"></div>
+                    </div>
+                    <div id="box_text_carrossel" class="w-[50%] inline-block float-left">
+                        <div id="text_carrossel" class="w-[90%] inline-block bg-[#f1f1f1] p-[40px] h-[70vh] mt-[20px] ">
+                            <p id="titulo_noticia" class="uppercase text-[#02173d] text-[16px] pl-[10px] border-l-[1px] border-l-[#02173d]">Novidades </p>
+                            <p id="titulo_card" class="text-[#02173d] font-bold text-[25px] mt-[20px]">RespiraSaúde Blog</p>
+                            <p id="texto_noticia" class="text-[15px] text-justify text-[#02173d] mt-[20px]">
+Acompanhe aqui novidades e informações confiáveis para manter sua saúde respiratória!
+</p>
+                                                        <a href="https://laire.ufrn.br/blog" target="_blank">
+                                <button class="px-[50px] float-left mt-[40px] h-[40px] uppercase rounded-[5px] text-[9px] bg-[#00FF8C] text-[#02173d] font-bold text-[14px]">Ver mais</button>
+                            </a>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div id="box_geral" class="w-[100%] h-[100vh] pt-[120px]">
+                                        <div id="box_image_carrossel" class="w-[50%] inline-block float-left">
+                        <div id="img_carrossel" style="background: url('/img/conteudo/imagens/d36434e104315ac1df3dd586169f746e1692831645.png'); background-size: cover;" class="w-[90%] float-right bg-[#eeeeee] p-[40px] h-[70vh] mt-[20px]"></div>
+                    </div>
+                    <div id="box_text_carrossel" class="w-[50%] inline-block float-left">
+                        <div id="text_carrossel" class="w-[90%] inline-block bg-[#f1f1f1] p-[40px] h-[70vh] mt-[20px] ">
+                            <p id="titulo_noticia" class="uppercase text-[#02173d] text-[16px] pl-[10px] border-l-[1px] border-l-[#02173d]">Novidades </p>
+                            <p id="titulo_card" class="text-[#02173d] font-bold text-[25px] mt-[20px]">Projeto de Extensão</p>
+                            <p id="texto_noticia" class="text-[15px] text-justify text-[#02173d] mt-[20px]">
+Este projeto de extensão tem o objetivo de levar Educação Popular em Saúde Respiratória para todos! Aqui utilizamos formatos atrativos, linguagem simples, acessibilidade e informações de qualidade sobre a prevenção e controle das principais doenças respiratórias.
+</p>
+                                                        <a href="https://www.instagram.com/laire_ufrn/?hl=pt" target="_blank">
+                                <button class="px-[50px] float-left mt-[40px] h-[40px] uppercase rounded-[5px] text-[9px] bg-[#00FF8C] text-[#02173d] font-bold text-[14px]">Ver mais</button>
+                            </a>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div style="display: none;" class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+        </div>
+        
+        <div sty class="manual-navigation">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="sobre" class="w-[100%] h-[60px]"></div>
+
+<section class="w-[100%] mt-[50px] pb-[50px] inline-block">
+    
+    <div class="w-[100%] inline-block">
+        
+        <div id="bloco_laire_a" class="w-[50%] inline-block float-left pl-[80px] h-[600px]">
+            
+            <div id="container_inner_laire" class="w-[100%] inline-block">
+                
+                <div class="w-[100%] inline-block">
+                    
+                </div>
+                
+                <img loading="lazy" src="/img/conteudo/imagens/885294965.jpeg" class="w-[100%] mt-[50px] rounded-[20px]" width="1024" height="768">
+            </div>
+        </div>
+
+        
+        <div id="bloco_laire_b" class="w-[50%] inline-block float-left h-[auto] px-[80px]">
+            
+            <div id="container_inner_laire" class="w-[100%] inline-block">
+                                <div class="w-[100%] mt-[80px] inline-block">
+                    <img loading="lazy" id="button2" class="w-[40px] cursor-pointer mt-[-5px] float-left" title="Ver libras" src="/img/libra.png" width="1400" height="1431">
+                                        <p class="text-[25px] font-bold mb-[40px] float-left ml-[20px] pl-[20px] border-l-[3px] leading-[26px] uppercase border-l-[#00FF8C]">UM POUCO SOBRE O LAIRE</p>
+                                    </div>
+                
+                <div class="w-[100%] inline-block">
+                                            <p class="mb-[20px] text-[15px]"><p dir="ltr" style="text-align: justify;">O Laborat&oacute;rio de Avalia&ccedil;&atilde;o e Interven&ccedil;&atilde;o Respirat&oacute;ria (LAIRE) &eacute; vinculado ao Departamento de Fisioterapia da Universidade Federal do Rio Grande do Norte (UFRN) e ao Programa de P&oacute;s-Gradua&ccedil;&atilde;o em Fisioterapia (PPGFIS).&nbsp; Fazem parte do LAIRE um grupo de pesquisadores composto por docentes, colaboradores externos, alunos de inicia&ccedil;&atilde;o cient&iacute;fica, alunos de mestrado e doutorado.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p dir="ltr" style="text-align: justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p dir="ltr" style="text-align: justify;">Desenvolvemos atividades de ensino, pesquisa e extens&atilde;o. Estas atividades envolvem as mais diversas doen&ccedil;as respirat&oacute;rias agudas e cr&ocirc;nicas e, em destaque a asma infantojuvenil.&nbsp; No LAIRE t&ecirc;m sido desenvolvidos estudos com apoio do CNPq, Minist&eacute;rio da Sa&uacute;de e Minist&eacute;rio da Ci&ecirc;ncia, Tecnologia e Inova&ccedil;&otilde;es.&nbsp;</p>
+<p dir="ltr" style="text-align: justify;"><strong>&nbsp;</strong></p>
+<p dir="ltr" style="text-align: justify;">Os estudos desenvolvidos envolvem inova&ccedil;&atilde;o cient&iacute;fica e tecnol&oacute;gica e buscam solu&ccedil;&otilde;es para melhorar a condi&ccedil;&atilde;o de sa&uacute;de e qualidade de vida da popula&ccedil;&atilde;o. O enfrentamento da pandemia da COVID-19 tamb&eacute;m tem sido eixo central de algumas pesquisas e a&ccedil;&otilde;es de extens&atilde;o desenvolvidas pela equipe do LAIRE.&nbsp;</p>
+<p dir="ltr" style="text-align: justify;"><strong>&nbsp;</strong></p>
+<p dir="ltr" style="text-align: justify;">Nas atividades de extens&atilde;o temos ressaltado a import&acirc;ncia da educa&ccedil;&atilde;o em sa&uacute;de e trabalhado de forma muito intensa com este prop&oacute;sito. O LAIRE atrav&eacute;s de suas redes sociais tem levado conte&uacute;dos de educa&ccedil;&atilde;o em sa&uacute;de para milhares de pessoas visando a ades&atilde;o da popula&ccedil;&atilde;o &agrave;s medidas de preven&ccedil;&atilde;o de doen&ccedil;as respirat&oacute;rias agudas graves e o controle de doen&ccedil;as respirat&oacute;rias cr&ocirc;nicas.</p>
+<p dir="ltr" style="text-align: justify;"><strong>&nbsp;</strong></p>
+<p dir="ltr" style="text-align: justify;">Navegue neste portal para conhecer melhor nossa equipe, parceiros e pesquisas.</p>
+<p dir="ltr" style="text-align: justify;">&nbsp;</p></p>
+                                    </div>
+                
+                            </div>
+        </div>
+    </div>
+    
+    <div class="modal_video_laire">
+        <video id="box_libra_home" class="mt-[10%] rounded-[10px] w-[50%] mx-auto" id="video-missão" src="/img/conteudo/videos/1433958506.mp4" controls="controls"></video>
+    </div>
+</section>
+
+
+
+<div id="equipe" class="w-[100%] h-[90px]"></div>
+
+<section id="pesquisadores_bloco" class="w-full mt-[40px]">
+    <center>
+        <p id="pesquisadores" class="font-bold text-[#212121] mt-[50px] uppercase text-[25px]">Equipe</p>
+    </center>
+    <div id="sub_bloco_pesq" class="w-[90%] mx-[5%] inline-block">
+        <div class="w-[100%] mt-[70px] inline-block">
+                            
+                    
+                                        
+                    <div id="pesquisador-new" class="w-[20%] mx-[2.5%] float-left">
+                        
+                        <div id="img-pesquisador" class="w-[100%] bg-[#fafafa] shadow-lg h-[350px] inline-block border-t-[5px] border-t-[orange]">
+                            
+                            <div id="rounded-img" style="background: url('/img/pesquisadores/1555848034.jpg'); background-size: 100%;" class="w-[150px] h-[150px] rounded-[100px] mt-[50px] bg-[#FFC122] mx-auto transform hover:scale-110 transition duration-300 border-[1px]"></div>
+                            
+                            <div class="w-[90%] mx-[5%] mt-[20px] inline-block">
+                                
+                                <p id="nome_pesq" class="font-bold text-center text-[15px]">Karla Morganna</p>
+                                
+                                <p class="text-[#212121] text-center text-[16px]">UFRN</p>
+                            </div>
+                        </div>
+                        
+                        <div class="w-[100%] inline-block h-[150px]">
+                            
+                            <a href="http://tronco.cchla.ufrn.br/pesquisadores/laire/50"><p class="text-center uppercase text-[15px] mt-[25px] font-bold">ver bio ➜</p></a>
+                        </div>
+                    </div>
+                                    
+                    
+                                        
+                    <div id="pesquisador-new" class="w-[20%] mx-[2.5%] float-left">
+                        
+                        <div id="img-pesquisador" class="w-[100%] bg-[#fafafa] shadow-lg h-[350px] inline-block border-t-[5px] border-t-[orange]">
+                            
+                            <div id="rounded-img" style="background: url('/img/pesquisadores/1721682353.jpg'); background-size: 100%;" class="w-[150px] h-[150px] rounded-[100px] mt-[50px] bg-[#FFC122] mx-auto transform hover:scale-110 transition duration-300 border-[1px]"></div>
+                            
+                            <div class="w-[90%] mx-[5%] mt-[20px] inline-block">
+                                
+                                <p id="nome_pesq" class="font-bold text-center text-[15px]">Ivan Daniel Bezerra Nogueira</p>
+                                
+                                <p class="text-[#212121] text-center text-[16px]">UFRN</p>
+                            </div>
+                        </div>
+                        
+                        <div class="w-[100%] inline-block h-[150px]">
+                            
+                            <a href="http://tronco.cchla.ufrn.br/pesquisadores/laire/52"><p class="text-center uppercase text-[15px] mt-[25px] font-bold">ver bio ➜</p></a>
+                        </div>
+                    </div>
+                                    
+                    
+                                        
+                    <div id="pesquisador-new" class="w-[20%] mx-[2.5%] float-left">
+                        
+                        <div id="img-pesquisador" class="w-[100%] bg-[#fafafa] shadow-lg h-[350px] inline-block border-t-[5px] border-t-[orange]">
+                            
+                            <div id="rounded-img" style="background: url('/img/pesquisadores/1766496620.jpg'); background-size: 100%;" class="w-[150px] h-[150px] rounded-[100px] mt-[50px] bg-[#FFC122] mx-auto transform hover:scale-110 transition duration-300 border-[1px]"></div>
+                            
+                            <div class="w-[90%] mx-[5%] mt-[20px] inline-block">
+                                
+                                <p id="nome_pesq" class="font-bold text-center text-[15px]">Patrícia Angélica de Miranda Silva Nogueira</p>
+                                
+                                <p class="text-[#212121] text-center text-[16px]">UFRN</p>
+                            </div>
+                        </div>
+                        
+                        <div class="w-[100%] inline-block h-[150px]">
+                            
+                            <a href="http://tronco.cchla.ufrn.br/pesquisadores/laire/51"><p class="text-center uppercase text-[15px] mt-[25px] font-bold">ver bio ➜</p></a>
+                        </div>
+                    </div>
+                                    
+                    
+                                    
+                    
+                                    
+                    
+                                        
+                    <div id="pesquisador-new" class="w-[20%] mx-[2.5%] float-left">
+                        
+                        <div id="img-pesquisador" class="w-[100%] bg-[#fafafa] shadow-lg h-[350px] inline-block border-t-[5px] border-t-[orange]">
+                            
+                            <div id="rounded-img" style="background: url('/img/pesquisadores/650f1a1be28d7f2dd0e2b2336083426a1696524341.jpg'); background-size: 100%;" class="w-[150px] h-[150px] rounded-[100px] mt-[50px] bg-[#FFC122] mx-auto transform hover:scale-110 transition duration-300 border-[1px]"></div>
+                            
+                            <div class="w-[90%] mx-[5%] mt-[20px] inline-block">
+                                
+                                <p id="nome_pesq" class="font-bold text-center text-[15px]">Baldomero Antonio Kato da Silva</p>
+                                
+                                <p class="text-[#212121] text-center text-[16px]">UFDPar</p>
+                            </div>
+                        </div>
+                        
+                        <div class="w-[100%] inline-block h-[150px]">
+                            
+                            <a href="http://tronco.cchla.ufrn.br/pesquisadores/laire/58"><p class="text-center uppercase text-[15px] mt-[25px] font-bold">ver bio ➜</p></a>
+                        </div>
+                    </div>
+                                    
+                    
+                                        
+                    <div id="pesquisador-new" class="w-[20%] mx-[2.5%] float-left">
+                        
+                        <div id="img-pesquisador" class="w-[100%] bg-[#fafafa] shadow-lg h-[350px] inline-block border-t-[5px] border-t-[orange]">
+                            
+                            <div id="rounded-img" style="background: url('/img/pesquisadores/3a60076498224fef29c5ba3aa0b6204c1696524088.jpg'); background-size: 100%;" class="w-[150px] h-[150px] rounded-[100px] mt-[50px] bg-[#FFC122] mx-auto transform hover:scale-110 transition duration-300 border-[1px]"></div>
+                            
+                            <div class="w-[90%] mx-[5%] mt-[20px] inline-block">
+                                
+                                <p id="nome_pesq" class="font-bold text-center text-[15px]">João Carlos Alchieri</p>
+                                
+                                <p class="text-[#212121] text-center text-[16px]">UFRN</p>
+                            </div>
+                        </div>
+                        
+                        <div class="w-[100%] inline-block h-[150px]">
+                            
+                            <a href="http://tronco.cchla.ufrn.br/pesquisadores/laire/57"><p class="text-center uppercase text-[15px] mt-[25px] font-bold">ver bio ➜</p></a>
+                        </div>
+                    </div>
+                                    
+                    
+                                        
+                    <div id="pesquisador-new" class="w-[20%] mx-[2.5%] float-left">
+                        
+                        <div id="img-pesquisador" class="w-[100%] bg-[#fafafa] shadow-lg h-[350px] inline-block border-t-[5px] border-t-[orange]">
+                            
+                            <div id="rounded-img" style="background: url('/img/pesquisadores/ccf80a7bd8b67ce8ca967612d259b3481696524715.jpg'); background-size: 100%;" class="w-[150px] h-[150px] rounded-[100px] mt-[50px] bg-[#FFC122] mx-auto transform hover:scale-110 transition duration-300 border-[1px]"></div>
+                            
+                            <div class="w-[90%] mx-[5%] mt-[20px] inline-block">
+                                
+                                <p id="nome_pesq" class="font-bold text-center text-[15px]">Cecilia M. Patino</p>
+                                
+                                <p class="text-[#212121] text-center text-[16px]"></p>
+                            </div>
+                        </div>
+                        
+                        <div class="w-[100%] inline-block h-[150px]">
+                            
+                            <a href="http://tronco.cchla.ufrn.br/pesquisadores/laire/61"><p class="text-center uppercase text-[15px] mt-[25px] font-bold">ver bio ➜</p></a>
+                        </div>
+                    </div>
+                                    
+                    
+                                        
+                    <div id="pesquisador-new" class="w-[20%] mx-[2.5%] float-left">
+                        
+                        <div id="img-pesquisador" class="w-[100%] bg-[#fafafa] shadow-lg h-[350px] inline-block border-t-[5px] border-t-[orange]">
+                            
+                            <div id="rounded-img" style="background: url('/img/pesquisadores/a6b8e0a50e640bec62ac0d0720c3a10b1696524593.jpg'); background-size: 100%;" class="w-[150px] h-[150px] rounded-[100px] mt-[50px] bg-[#FFC122] mx-auto transform hover:scale-110 transition duration-300 border-[1px]"></div>
+                            
+                            <div class="w-[90%] mx-[5%] mt-[20px] inline-block">
+                                
+                                <p id="nome_pesq" class="font-bold text-center text-[15px]">Kleber Giovanni Luz</p>
+                                
+                                <p class="text-[#212121] text-center text-[16px]">UFRN</p>
+                            </div>
+                        </div>
+                        
+                        <div class="w-[100%] inline-block h-[150px]">
+                            
+                            <a href="http://tronco.cchla.ufrn.br/pesquisadores/laire/60"><p class="text-center uppercase text-[15px] mt-[25px] font-bold">ver bio ➜</p></a>
+                        </div>
+                    </div>
+                                    
+                    
+                                        
+                    <div id="pesquisador-new" class="w-[20%] mx-[2.5%] float-left">
+                        
+                        <div id="img-pesquisador" class="w-[100%] bg-[#fafafa] shadow-lg h-[350px] inline-block border-t-[5px] border-t-[orange]">
+                            
+                            <div id="rounded-img" style="background: url('/img/pesquisadores/1697517809.jpg'); background-size: 100%;" class="w-[150px] h-[150px] rounded-[100px] mt-[50px] bg-[#FFC122] mx-auto transform hover:scale-110 transition duration-300 border-[1px]"></div>
+                            
+                            <div class="w-[90%] mx-[5%] mt-[20px] inline-block">
+                                
+                                <p id="nome_pesq" class="font-bold text-center text-[15px]">Gabriela Chaves</p>
+                                
+                                <p class="text-[#212121] text-center text-[16px]">UFRN</p>
+                            </div>
+                        </div>
+                        
+                        <div class="w-[100%] inline-block h-[150px]">
+                            
+                            <a href="http://tronco.cchla.ufrn.br/pesquisadores/laire/54"><p class="text-center uppercase text-[15px] mt-[25px] font-bold">ver bio ➜</p></a>
+                        </div>
+                    </div>
+                                    
+                    
+                                    
+                    
+                                        
+                    <div id="pesquisador-new" class="w-[20%] mx-[2.5%] float-left">
+                        
+                        <div id="img-pesquisador" class="w-[100%] bg-[#fafafa] shadow-lg h-[350px] inline-block border-t-[5px] border-t-[orange]">
+                            
+                            <div id="rounded-img" style="background: url('/img/pesquisadores/1863279597.jpg'); background-size: 100%;" class="w-[150px] h-[150px] rounded-[100px] mt-[50px] bg-[#FFC122] mx-auto transform hover:scale-110 transition duration-300 border-[1px]"></div>
+                            
+                            <div class="w-[90%] mx-[5%] mt-[20px] inline-block">
+                                
+                                <p id="nome_pesq" class="font-bold text-center text-[15px]">Renata Ramos Tomaz</p>
+                                
+                                <p class="text-[#212121] text-center text-[16px]">UFRN</p>
+                            </div>
+                        </div>
+                        
+                        <div class="w-[100%] inline-block h-[150px]">
+                            
+                            <a href="http://tronco.cchla.ufrn.br/pesquisadores/laire/55"><p class="text-center uppercase text-[15px] mt-[25px] font-bold">ver bio ➜</p></a>
+                        </div>
+                    </div>
+                                    
+                    
+                                    
+                    
+                                    
+                    
+                                        
+                    <div id="pesquisador-new" class="w-[20%] mx-[2.5%] float-left">
+                        
+                        <div id="img-pesquisador" class="w-[100%] bg-[#fafafa] shadow-lg h-[350px] inline-block border-t-[5px] border-t-[orange]">
+                            
+                            <div id="rounded-img" style="background: url('/img/pesquisadores/866712968.jpg'); background-size: 100%;" class="w-[150px] h-[150px] rounded-[100px] mt-[50px] bg-[#FFC122] mx-auto transform hover:scale-110 transition duration-300 border-[1px]"></div>
+                            
+                            <div class="w-[90%] mx-[5%] mt-[20px] inline-block">
+                                
+                                <p id="nome_pesq" class="font-bold text-center text-[15px]">Thayla Amorim Santino</p>
+                                
+                                <p class="text-[#212121] text-center text-[16px]">UFRN</p>
+                            </div>
+                        </div>
+                        
+                        <div class="w-[100%] inline-block h-[150px]">
+                            
+                            <a href="http://tronco.cchla.ufrn.br/pesquisadores/laire/53"><p class="text-center uppercase text-[15px] mt-[25px] font-bold">ver bio ➜</p></a>
+                        </div>
+                    </div>
+                                    
+                    
+                                        
+                    <div id="pesquisador-new" class="w-[20%] mx-[2.5%] float-left">
+                        
+                        <div id="img-pesquisador" class="w-[100%] bg-[#fafafa] shadow-lg h-[350px] inline-block border-t-[5px] border-t-[orange]">
+                            
+                            <div id="rounded-img" style="background: url('/img/pesquisadores/295720091.jpeg'); background-size: 100%;" class="w-[150px] h-[150px] rounded-[100px] mt-[50px] bg-[#FFC122] mx-auto transform hover:scale-110 transition duration-300 border-[1px]"></div>
+                            
+                            <div class="w-[90%] mx-[5%] mt-[20px] inline-block">
+                                
+                                <p id="nome_pesq" class="font-bold text-center text-[15px]">Tácito Zaildo de Morais Santos</p>
+                                
+                                <p class="text-[#212121] text-center text-[16px]">UFRN</p>
+                            </div>
+                        </div>
+                        
+                        <div class="w-[100%] inline-block h-[150px]">
+                            
+                            <a href="http://tronco.cchla.ufrn.br/pesquisadores/laire/48"><p class="text-center uppercase text-[15px] mt-[25px] font-bold">ver bio ➜</p></a>
+                        </div>
+                    </div>
+                                    
+                    
+                                        
+                    <div id="pesquisador-new" class="w-[20%] mx-[2.5%] float-left">
+                        
+                        <div id="img-pesquisador" class="w-[100%] bg-[#fafafa] shadow-lg h-[350px] inline-block border-t-[5px] border-t-[orange]">
+                            
+                            <div id="rounded-img" style="background: url('/img/pesquisadores/1726614345.JPG'); background-size: 100%;" class="w-[150px] h-[150px] rounded-[100px] mt-[50px] bg-[#FFC122] mx-auto transform hover:scale-110 transition duration-300 border-[1px]"></div>
+                            
+                            <div class="w-[90%] mx-[5%] mt-[20px] inline-block">
+                                
+                                <p id="nome_pesq" class="font-bold text-center text-[15px]">Vitória Jéssica Teixeira Dantas Brito</p>
+                                
+                                <p class="text-[#212121] text-center text-[16px]">UFRN</p>
+                            </div>
+                        </div>
+                        
+                        <div class="w-[100%] inline-block h-[150px]">
+                            
+                            <a href="http://tronco.cchla.ufrn.br/pesquisadores/laire/45"><p class="text-center uppercase text-[15px] mt-[25px] font-bold">ver bio ➜</p></a>
+                        </div>
+                    </div>
+                                    
+                    
+                                        
+                    <div id="pesquisador-new" class="w-[20%] mx-[2.5%] float-left">
+                        
+                        <div id="img-pesquisador" class="w-[100%] bg-[#fafafa] shadow-lg h-[350px] inline-block border-t-[5px] border-t-[orange]">
+                            
+                            <div id="rounded-img" style="background: url('/img/pesquisadores/1826891489.JPG'); background-size: 100%;" class="w-[150px] h-[150px] rounded-[100px] mt-[50px] bg-[#FFC122] mx-auto transform hover:scale-110 transition duration-300 border-[1px]"></div>
+                            
+                            <div class="w-[90%] mx-[5%] mt-[20px] inline-block">
+                                
+                                <p id="nome_pesq" class="font-bold text-center text-[15px]">Joubert Vitor de Souto Barbosa</p>
+                                
+                                <p class="text-[#212121] text-center text-[16px]">UFRN</p>
+                            </div>
+                        </div>
+                        
+                        <div class="w-[100%] inline-block h-[150px]">
+                            
+                            <a href="http://tronco.cchla.ufrn.br/pesquisadores/laire/47"><p class="text-center uppercase text-[15px] mt-[25px] font-bold">ver bio ➜</p></a>
+                        </div>
+                    </div>
+                                    
+                    
+                                        
+                    <div id="pesquisador-new" class="w-[20%] mx-[2.5%] float-left">
+                        
+                        <div id="img-pesquisador" class="w-[100%] bg-[#fafafa] shadow-lg h-[350px] inline-block border-t-[5px] border-t-[orange]">
+                            
+                            <div id="rounded-img" style="background: url('/img/pesquisadores/1826167066.jpg'); background-size: 100%;" class="w-[150px] h-[150px] rounded-[100px] mt-[50px] bg-[#FFC122] mx-auto transform hover:scale-110 transition duration-300 border-[1px]"></div>
+                            
+                            <div class="w-[90%] mx-[5%] mt-[20px] inline-block">
+                                
+                                <p id="nome_pesq" class="font-bold text-center text-[15px]">Sarah Joysi Almeida Leite</p>
+                                
+                                <p class="text-[#212121] text-center text-[16px]">UFRN</p>
+                            </div>
+                        </div>
+                        
+                        <div class="w-[100%] inline-block h-[150px]">
+                            
+                            <a href="http://tronco.cchla.ufrn.br/pesquisadores/laire/49"><p class="text-center uppercase text-[15px] mt-[25px] font-bold">ver bio ➜</p></a>
+                        </div>
+                    </div>
+                                    
+                    
+                                        
+                    <div id="pesquisador-new" class="w-[20%] mx-[2.5%] float-left">
+                        
+                        <div id="img-pesquisador" class="w-[100%] bg-[#fafafa] shadow-lg h-[350px] inline-block border-t-[5px] border-t-[orange]">
+                            
+                            <div id="rounded-img" style="background: url('/img/pesquisadores/1961902307.jpg'); background-size: 100%;" class="w-[150px] h-[150px] rounded-[100px] mt-[50px] bg-[#FFC122] mx-auto transform hover:scale-110 transition duration-300 border-[1px]"></div>
+                            
+                            <div class="w-[90%] mx-[5%] mt-[20px] inline-block">
+                                
+                                <p id="nome_pesq" class="font-bold text-center text-[15px]">Juliana Cirilo Soares de Souza</p>
+                                
+                                <p class="text-[#212121] text-center text-[16px]">UFRN</p>
+                            </div>
+                        </div>
+                        
+                        <div class="w-[100%] inline-block h-[150px]">
+                            
+                            <a href="http://tronco.cchla.ufrn.br/pesquisadores/laire/44"><p class="text-center uppercase text-[15px] mt-[25px] font-bold">ver bio ➜</p></a>
+                        </div>
+                    </div>
+                                    
+                    
+                                    
+                    
+                                        
+                    <div id="pesquisador-new" class="w-[20%] mx-[2.5%] float-left">
+                        
+                        <div id="img-pesquisador" class="w-[100%] bg-[#fafafa] shadow-lg h-[350px] inline-block border-t-[5px] border-t-[orange]">
+                            
+                            <div id="rounded-img" style="background: url('/img/pesquisadores/1847937928.jpg'); background-size: 100%;" class="w-[150px] h-[150px] rounded-[100px] mt-[50px] bg-[#FFC122] mx-auto transform hover:scale-110 transition duration-300 border-[1px]"></div>
+                            
+                            <div class="w-[90%] mx-[5%] mt-[20px] inline-block">
+                                
+                                <p id="nome_pesq" class="font-bold text-center text-[15px]">Karol Souza</p>
+                                
+                                <p class="text-[#212121] text-center text-[16px]">FACISA</p>
+                            </div>
+                        </div>
+                        
+                        <div class="w-[100%] inline-block h-[150px]">
+                            
+                            <a href="http://tronco.cchla.ufrn.br/pesquisadores/laire/56"><p class="text-center uppercase text-[15px] mt-[25px] font-bold">ver bio ➜</p></a>
+                        </div>
+                    </div>
+                                                        </section>
+
+        
+            </div>
+</section>
+
+<!--BLOCO PESQUISAS-->
+<section class="w-[100%] inline-block">
+    <main id="pesquisas" class="w-[100%] h-[80px]"></main>
+    
+    <center>
+        <p id="pex" class="font-bold text-[#212121] text-[25px] leading-[35px] w-[500px] mt-[60px] uppercase pb-[20px]">Pesquisas</p>
+    </center>
+    <div id="caixa_evt" class="w-[90%] py-[20px] mx-[5%] mt-[20px] inline-block">
+        
+                        <div id="card_evento" class="w-[22%] mx-[1.5%] shadow-lg rounded-[0px] border-b-[5px] border-b-[#00FF8C] float-left inline-block">
+            <div style="border-radius: 0px; background-image: url('/img/conteudo/imagens/153814085.png'); background-size: cover; background-position: center;" class="w-[100%] h-[180px] bg-[#eeeeee] inline-block float-left"></div>
+            <div style="border-radius: 0px;" class="w-[100%] p-[30px] inline-block float-left">
+                
+                <p class="text-[13px] text-[#080E45] pl-[10px] border-l-[1px] border-l-[#080E45] leading-[20px] uppercase mt-[13px]">Pesquisa</p>
+                
+                <div class="w-[100%] h-[100px] inline-block">
+                    <p class="text-[16px] font-bold leading-[20px] uppercase mt-[13px]">TRADUÇÃO, ADAPTAÇÃO TRANSCULTURAL E VALIDAÇÃO DO PEDIATRI...</p>
+                </div>
+                <a href="http://tronco.cchla.ufrn.br/pesquisa/4"><button class="px-[20px] mt-[20px] h-[40px] font-bold text-[11px] bg-[#00FF8C] text-[#080E45] rounded-[5px]">Ver detalhes</button></a>
+            </div>
+        </div>
+                        <div id="card_evento" class="w-[22%] mx-[1.5%] shadow-lg rounded-[0px] border-b-[5px] border-b-[#00FF8C] float-left inline-block">
+            <div style="border-radius: 0px; background-image: url('/img/conteudo/imagens/544020035.png'); background-size: cover; background-position: center;" class="w-[100%] h-[180px] bg-[#eeeeee] inline-block float-left"></div>
+            <div style="border-radius: 0px;" class="w-[100%] p-[30px] inline-block float-left">
+                
+                <p class="text-[13px] text-[#080E45] pl-[10px] border-l-[1px] border-l-[#080E45] leading-[20px] uppercase mt-[13px]">Pesquisa</p>
+                
+                <div class="w-[100%] h-[100px] inline-block">
+                    <p class="text-[16px] font-bold leading-[20px] uppercase mt-[13px]">Ferramentas para avaliação e monitoramento do controle da...</p>
+                </div>
+                <a href="http://tronco.cchla.ufrn.br/pesquisa/5"><button class="px-[20px] mt-[20px] h-[40px] font-bold text-[11px] bg-[#00FF8C] text-[#080E45] rounded-[5px]">Ver detalhes</button></a>
+            </div>
+        </div>
+                        <div id="card_evento" class="w-[22%] mx-[1.5%] shadow-lg rounded-[0px] border-b-[5px] border-b-[#00FF8C] float-left inline-block">
+            <div style="border-radius: 0px; background-image: url('/img/conteudo/imagens/2097291377.png'); background-size: cover; background-position: center;" class="w-[100%] h-[180px] bg-[#eeeeee] inline-block float-left"></div>
+            <div style="border-radius: 0px;" class="w-[100%] p-[30px] inline-block float-left">
+                
+                <p class="text-[13px] text-[#080E45] pl-[10px] border-l-[1px] border-l-[#080E45] leading-[20px] uppercase mt-[13px]">Pesquisa</p>
+                
+                <div class="w-[100%] h-[100px] inline-block">
+                    <p class="text-[16px] font-bold leading-[20px] uppercase mt-[13px]">Exercícios respiratórios para asma: revisão sistemática c...</p>
+                </div>
+                <a href="http://tronco.cchla.ufrn.br/pesquisa/6"><button class="px-[20px] mt-[20px] h-[40px] font-bold text-[11px] bg-[#00FF8C] text-[#080E45] rounded-[5px]">Ver detalhes</button></a>
+            </div>
+        </div>
+                        <div id="card_evento" class="w-[22%] mx-[1.5%] shadow-lg rounded-[0px] border-b-[5px] border-b-[#00FF8C] float-left inline-block">
+            <div style="border-radius: 0px; background-image: url('/img/conteudo/imagens/1793175741.png'); background-size: cover; background-position: center;" class="w-[100%] h-[180px] bg-[#eeeeee] inline-block float-left"></div>
+            <div style="border-radius: 0px;" class="w-[100%] p-[30px] inline-block float-left">
+                
+                <p class="text-[13px] text-[#080E45] pl-[10px] border-l-[1px] border-l-[#080E45] leading-[20px] uppercase mt-[13px]">Pesquisa</p>
+                
+                <div class="w-[100%] h-[100px] inline-block">
+                    <p class="text-[16px] font-bold leading-[20px] uppercase mt-[13px]">MÉTODO BUTEYKO PARA CRIANÇAS COM ASMA: ESTUDO CONTROLADO ...</p>
+                </div>
+                <a href="http://tronco.cchla.ufrn.br/pesquisa/7"><button class="px-[20px] mt-[20px] h-[40px] font-bold text-[11px] bg-[#00FF8C] text-[#080E45] rounded-[5px]">Ver detalhes</button></a>
+            </div>
+        </div>
+                
+                <div class="w-[100%] my-[20px] mt-[40px] inline-block">
+            <center>
+                <a href="http://tronco.cchla.ufrn.br/pesquisas"><button class="px-[40px] h-[40px] rounded-[5px] text-[#ffffff] text-[13px] font-bold bg-[#080E45]">Ver mais pesquisas</button></a>
+            </center>
+        </div>
+            </div>
+</section>
+
+
+<section class="w-[100%] mt-[40px] inline-block">
+    <main id="eventos" class="w-[100%] h-[130px]"></main>
+    
+    <div class="w-[90%] mx-[5%] inline-block">
+        
+        <p class="text-center font-bold text-[25px] uppercase">Eventos</p>
+        
+        <div class="w-[100%] py-[20px] mt-[20px] inline-block">
+                        <div id="card_evento" class="w-[22%] mx-[1.5%] shadow-lg rounded-[0px] border-b-[5px] border-b-[#00FF8C] float-left inline-block">
+                <div style="border-radius: 0px; background-image: url('/img/conteudo/imagens/24f6c20dd1c618c2ed5384ccc32f87981693187959.png'); background-size: cover; background-position: center;" class="w-[100%] h-[180px] bg-[#eeeeee] inline-block float-left"></div>
+                <div style="border-radius: 0px;" class="w-[100%] p-[30px] inline-block float-left">
+                    
+                                        <p class="text-[12px] text-center text-[#080E45] pb-[5px] border-b-[1px] border-b-[#cdcdcd] leading-[20px] uppercase mt-[13px]">Encerrado</p>
+                                        
+                    <div class="w-[100%] h-[100px] inline-block">
+                        <p class="text-[16px] font-bold leading-[20px] uppercase mt-[13px]">I ConVivendo com a Asma</p>
+                    </div>
+                    <center>
+                        <a href="http://tronco.cchla.ufrn.br/materiais/eventos/8#eventos"><button class="w-[100%] mt-[20px] h-[40px] font-bold text-[11px] bg-[#00FF8C] text-[#080E45] rounded-[5px] uppercase">Ver mais</button></a>
+                    </center>
+                </div>
+            </div>
+                        
+                        <div class="w-[100%] my-[20px] mt-[40px] inline-block">
+                <center>
+                    <a href="http://tronco.cchla.ufrn.br/eventos"><button class="px-[40px] h-[40px] rounded-[5px] text-[#ffffff] text-[13px] font-bold bg-[#080E45]">Ver mais eventos</button></a>
+                </center>
+            </div>
+                    </div>
+    </div>
+</section>
+
+
+
+<section class="w-[100%] mt-[40px] inline-block">
+    <main id="eventos" class="w-[100%] h-[130px]"></main>
+    
+    <div class="w-[90%] mx-[5%] inline-block">
+        
+        <p class="text-center font-bold text-[25px] uppercase">Extensão</p>
+        
+        <div class="w-[100%] py-[20px] mt-[20px] inline-block">
+                        <div id="card_evento" class="w-[22%] mx-[1.5%] shadow-lg rounded-[0px] border-b-[5px] border-b-[#00FF8C] float-left inline-block">
+                <div style="border-radius: 0px; background-image: url('/img/conteudo/imagens/688415806.png'); background-size: cover; background-position: center;" class="w-[100%] h-[180px] bg-[#eeeeee] inline-block float-left"></div>
+                <div style="border-radius: 0px;" class="w-[100%] p-[30px] inline-block float-left">
+                    
+                    <div class="w-[100%] h-[100px] inline-block">
+                        <p class="text-[15px] font-bold leading-[20px] uppercase">Educação Popular em Saúde Respiratória</p>
+                    </div>
+                    
+                    
+                    <center>
+                        <a href="https://www.instagram.com/laire_ufrn/" target="_blank"><button class="w-[100%] mt-[30px] h-[40px] font-bold text-[11px] bg-[#00FF8C] text-[#080E45] rounded-[5px] uppercase">Acessar Link</button></a>
+                    </center>
+                </div>
+            </div>
+                    </div>
+    </div>
+</section>
+
+<section id="parceiros" class="w-[100%] h-[600px] inline-block bg-[#ffffff]">
+    
+    <div  class="w-[90%] mx-[5%] mt-[10%] inline-block">
+        
+        <center>
+            
+            <ul>
+                <li class="inline-block mx-[30px] my-[10px]"><img loading="lazy" class="w-[210px]" src="/img/Logo UFRN.jpg" alt="" width="1600" height="824"></li>
+                <li class="inline-block mx-[30px] my-[10px]"><img loading="lazy" class="w-[210px]" src="/img/8.png" alt="" width="3375" height="1739"></li>
+                <li class="inline-block mx-[30px] my-[10px]"><img loading="lazy" class="w-[210px]" src="/img/6.png" alt="" width="3375" height="1587"></li>
+                <li class="inline-block mx-[30px] my-[10px]"><img loading="lazy" class="w-[210px]" src="/img/3.png" alt="" width="3375" height="1609"></li>
+                <li class="inline-block mx-[30px] my-[10px]"><img loading="lazy" class="w-[410px]" src="/img/mcti.png" alt="" width="1200" height="303"></li>
+                <li class="inline-block mx-[30px] my-[10px]"><img loading="lazy" class="w-[210px]" src="/img/ppgfis.png" alt="" width="453" height="178"></li>
+                <li class="inline-block mx-[30px] my-[10px]"><img loading="lazy" class="w-[610px]" src="/img/10.png" alt="" width="718" height="162"></li>
+                <li class="inline-block mx-[30px] my-[10px]"><img loading="lazy" class="w-[310px]" src="/img/logomarcaproex_oficial.jpg" alt="" width="600" height="201"></li>
+            </ul>
+        </center>
+    </div>
+</section>
+
+        </article>
+
+        
+        <div id="contato" class="w-[100%] h-[90px]"></div>
+        <footer id="footer_mobile" class="w-[100%] mt-[30px] inline-block bg-[#080E45]">
+            
+            <div class="w-[90%] mx-[5%] mt-[5%] inline-block">
+                <div id="footmob" class="w-[100%] inline-block">
+                    <div id="footer_mob" class="w-[20%] pr-[60px] float-left inline-block">
+                        <p class="font-bold text-[13px] text-[#00FF8C] mb-[20px] uppercase pl-[10px] border-l-[2px] border-l-[#00FF8C]">Laire</p>
+                        <ul class="">
+                            <li class="flex mb-[10px]"><a href="http://tronco.cchla.ufrn.br#noticias"><p class="text-[13px] text-[#ffffff]">Notícia</p></a></li>
+                            <li class="flex mb-[10px]"><a href="http://tronco.cchla.ufrn.br#sobre"><p class="text-[13px] text-[#ffffff]">Sobre</p></a></li>
+                            <li class="flex mb-[10px]"><a href="http://tronco.cchla.ufrn.br#equipe"><p class="text-[13px] text-[#ffffff]">Equipe</p></a></li>
+                            <li class="flex mb-[10px]"><a href="http://tronco.cchla.ufrn.br#pesquisas"><p class="text-[13px] text-[#ffffff]">Pesquisas</p></a></li>
+                            <li class="flex mb-[10px]"><a href="http://tronco.cchla.ufrn.br#eventos"><p class="text-[13px] text-[#ffffff]">Eventos</p></a></li>
+                        </ul>
+                    </div>
+                    <div id="footer_mobi" class="w-[20%] float-left inline-block">
+                        <p class="font-bold text-[13px] text-[#00FF8C] mb-[20px] uppercase pl-[10px] border-l-[2px] border-l-[#00FF8C]">Blog</p>
+                        <ul class="">
+                            <li class="flex mb-[10px]"><a href="http://tronco.cchla.ufrn.br/blog/categoria/novidades"><p class="text-[13px] text-[#ffffff]">Novidades</p></a></li>
+                            <li class="flex mb-[10px]"><a href="http://tronco.cchla.ufrn.br/blog/categoria/pesquisas"><p class="text-[13px] text-[#ffffff]">Pesquisas</p></a></li>
+                            <li class="flex mb-[10px]"><a href="http://tronco.cchla.ufrn.br/blog/categoria/eventos"><p class="text-[13px] text-[#ffffff]">Eventos</p></a></li>
+                            <li class="flex mb-[10px]"><a href="http://tronco.cchla.ufrn.br/blog/categoria/doencas"><p class="text-[13px] text-[#ffffff]">Doenças</p></a></li>
+                            <li class="flex mb-[10px]"><a href="http://tronco.cchla.ufrn.br/blog/categoria/extencao"><p class="text-[13px] text-[#ffffff]">Ações de extenção</p></a></li>
+                        </ul>
+                    </div>
+                    <div id="footer_mob" class="w-[25%] float-left inline-block">
+                        <p class="font-bold text-[13px] text-[#00FF8C] mb-[20px] uppercase pl-[10px] border-l-[2px] border-l-[#00FF8C]">Onde estamos</p>
+                        <li class="flex mb-[5px]"><p class="text-[13px] font-bold text-[#ffffff]">Departamento de Fisioterapia da UFRN</p></li>
+                        <li class="flex mb-[5px]"><p class="text-[13px] font-bold text-[#ffffff]">Natal, Rio Grande do Norte</p></li>
+                    </div>
+                    <div id="footer_mobi" class="w-[15%] float-left inline-block">
+                        <p class="font-bold text-[13px] text-[#00FF8C] mb-[20px] uppercase pl-[10px] border-l-[2px] border-l-[#00FF8C]">Contato</p>
+                        <li class="flex mb-[5px]"><p class="text-[13px] font-bold text-[#ffffff]">asmalaire@gmail.com</p></li>
+                    </div>
+                    <div id="footer_rede" class="w-[20%] float-left inline-block">
+                        <p class="font-bold text-[13px] text-[#00FF8C] mb-[20px] uppercase pl-[10px] border-l-[2px] border-l-[#00FF8C]">Nossas redes</p>
+                        <ul id="logos_rede_footer">
+                            <li class="inline-block mr-[20px] w-[20px]"><a href="https://www.facebook.com/laire.lab" target="_blanck"><img loading="lazy"  class="text-[#ffffff] text-[20px]" src="/img/facebook.png" alt="Facebook" width="512" height="512"></a></li>
+                            <li class="inline-block mr-[20px] w-[20px]"><a href="https://www.instagram.com/laire_ufrn/?hl=pt" target="_blanck" ><img loading="lazy" class="text-[#ffffff] text-[20px]" src="/img/instagram.png" alt="Instagram" width="512" height="512"></a></li>
+                            <li class="inline-block mr-[20px] w-[20px]"><a href="https://www.youtube.com/channel/UCLTWKg3OKl5m9QQpY5inDtQ" target="_blanck"><img loading="lazy" class="text-[#ffffff] text-[20px]" src="/img/youtube.png" alt="Youtube" width="512" height="512"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-[100%] py-[20px] inline-block">
+                    <div class="w-[100%] float-left inline-block">
+                        <p class="float-right text-[#ffffff] mt-[40px] text-[10px]">Todos os direitos reservados a Laire | UFRN 2023 &copy;</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    
+    <div id="ftp" style="display: none;" class="rounded-[10px]">
+
+        <a href="http://tronco.cchla.ufrn.br/respira-saude">
+        <div id="mini-btn-laire" class="w-[40px] h-[40px] border-[1px] bg-[#ffffff] rounded-[15px] cursor-pointer" style="background-image: url(/img/avt_rs.png); background-size: cover;">
+            <div style="display: none;" id="texto_laire" class="absolute w-[150px] ml-[-160px] bg-[#212121] rounded-[10px] text-[12px] py-[10px] font-bold text-[#ffffff]">Acesse o Laire</div>
+        </div>
+        </a>
+
+        <div id="mini-btn-app" class="w-[40px] h-[40px] rounded-[15px] mt-[20px] cursor-pointer como_instalar" style="background-image: url(/img/unnamed.webp); background-size: cover;">
+            <div style="display: none;" id="texto_app" class="absolute w-[150px] ml-[-160px] bg-[#212121] rounded-[10px] text-[12px] py-[10px] font-bold text-[#ffffff]">Instalar no celular</div>
+        </div>
+
+    </div>
+
+    
+    <script>
+
+    let count = 1;
+
+    document.getElementById("radio1").checked = true;
+
+    setInterval( function(){
+        nextImage();
+    }, 10000)
+
+    function nextImage(){
+        count++;
+        if(count > 4){
+            count = 1;
+        }
+
+        document.getElementById("radio"+count).checked = true;
+    }
+
+    </script>
+
+    
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <script src="http://tronco.cchla.ufrn.br/sw.js"></script>
+
+    <script>
+        if (!navigator.serviceWorker.controller) {
+            navigator.serviceWorker.register("/sw.js").then(function (reg) {
+                console.log("Service worker has been registered for scope: " + reg.scope);
+            });
+        }
+    </script>
+
+    <script>
+        let c = 0;
+        function menu(){
+        if(c % 2 == 0) {
+        document.querySelector('.cont_drobpdown_menu').className = "cont_drobpdown_menu active";
+        document.querySelector('.cont_icon_trg').className = "cont_icon_trg active";
+        c++;
+        }else{
+        document.querySelector('.cont_drobpdown_menu').className = "cont_drobpdown_menu disable";
+        document.querySelector('.cont_icon_trg').className = "cont_icon_trg disable";
+        c++;
+        }
+        }
+    </script>
+
+    <script>
+        // Script jQuery para esconder um elemento na página quando a rolagem ultrapassar 200px
+        $(window).scroll(function(){
+
+                if($(document).scrollTop() > 600){// se a rolagem passar de 200px esconde o elemento
+
+                    $('#elementoAEsconder').fadeOut();
+
+                } else { // senão ele volta a ser visivel
+
+                    $('#elementoAEsconder').fadeIn();
+
+                }
+
+            });
+    </script>
+
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="/js/multislider.js"></script>
+    <script>
+        $('#basicSlider').multislider({
+            continuous: true,
+            duration: 2000
+        });
+
+        $('#mixedSlider').multislider({
+            duration: 200,
+            interval: 0
+        });
+    </script>
+</body>
+</html>

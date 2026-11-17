@@ -1,0 +1,751 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T18:36:05.988Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12"
+    },
+    "gitCommit": "107f56e3ef3e38e7406db9e7ef9ab0d48a1ce060",
+    "gitDirty": true
+  },
+  "siteId": "3cnienssup.ufrn.br",
+  "contexto": {
+    "grupo": "wordpress",
+    "tecnologia": "wordpress",
+    "tipo": "evento"
+  },
+  "recomendacoes": {
+    "total": 33,
+    "corrigidas": 4,
+    "corrigidasLlm": 0,
+    "llm": {
+      "prompt": "landmarks-v1",
+      "arquivo": "docs/prompts/landmarks-v1.md",
+      "sha256": "b19e8d1c3e0f0f5b100a0b4fc27d0e7d609945f7d6b19c65ed5e609bfbf4e31a",
+      "modelo": "claude-haiku-5-5",
+      "effort": "low",
+      "maxTokens": 4000,
+      "execucao": {
+        "siteId": "3cnienssup.ufrn.br",
+        "prompt": "landmarks-v1",
+        "promptSha256": "b19e8d1c3e0f0f5b100a0b4fc27d0e7d609945f7d6b19c65ed5e609bfbf4e31a",
+        "modelo": "claude-haiku-5-5",
+        "modeloResposta": "claude-haiku-5-5",
+        "respostaId": "msg_011Ch7637Uud8JwqpQMwCAkG",
+        "chamada": true,
+        "motivo": null,
+        "ausentes": [
+          "header",
+          "main",
+          "footer"
+        ],
+        "candidatos": 1,
+        "elegiveis": 1,
+        "stopReason": "end_turn",
+        "inputTokens": 1261,
+        "outputTokens": 170,
+        "custoUsd": 0.00021110000000000004,
+        "propostas": 0,
+        "validas": 0,
+        "rejeitadas": [],
+        "textoIgual": null,
+        "landmarksDepois": null,
+        "erro": null,
+        "duracaoMs": 1905
+      }
+    }
+  },
+  "parametros": {
+    "execucoesPorVariante": 3,
+    "formFactor": "mobile",
+    "throttlingMethod": "simulate",
+    "chromeFlagsExtras": [
+      "--host-resolver-rules=MAP * ~NOTFOUND, EXCLUDE 127.0.0.1"
+    ],
+    "userAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+    "relogioSemantica": "2026-11-09T18:06:47.370Z",
+    "relogioLighthouse": "real"
+  },
+  "ordem": [
+    {
+      "variante": "original",
+      "n": 1
+    },
+    {
+      "variante": "corrigido",
+      "n": 1
+    },
+    {
+      "variante": "original",
+      "n": 2
+    },
+    {
+      "variante": "corrigido",
+      "n": 2
+    },
+    {
+      "variante": "original",
+      "n": 3
+    },
+    {
+      "variante": "corrigido",
+      "n": 3
+    }
+  ],
+  "variantes": {
+    "original": {
+      "urlLocal": "http://127.0.0.1:51763/",
+      "execucoes": [
+        {
+          "n": 1,
+          "startedAt": "2026-11-16T18:48:24.832Z",
+          "durationMs": 10277,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 48,
+            "accessibility": 91,
+            "best-practices": 73,
+            "seo": 83
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:51763/",
+          "mainDocumentUrl": "http://127.0.0.1:51763/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2936.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 48,
+              "accessibility": 91,
+              "best-practices": 73,
+              "seo": 83
+            },
+            "fcpMs": 3534.4193999999998,
+            "lcpMs": 13137.559200000002,
+            "tbtMs": 1,
+            "cls": 0.4041478344256474,
+            "speedIndexMs": 3534.4193999999998,
+            "pesoTotalBytes": 2258918,
+            "requisicoes": 66,
+            "jsNaoUsadoBytes": 0,
+            "cssNaoUsadoBytes": 25478
+          }
+        },
+        {
+          "n": 2,
+          "startedAt": "2026-11-16T18:48:45.691Z",
+          "durationMs": 10135,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 48,
+            "accessibility": 91,
+            "best-practices": 73,
+            "seo": 83
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:51763/",
+          "mainDocumentUrl": "http://127.0.0.1:51763/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2491,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 48,
+              "accessibility": 91,
+              "best-practices": 73,
+              "seo": 83
+            },
+            "fcpMs": 3534.0867000000003,
+            "lcpMs": 13137.115600000001,
+            "tbtMs": 1,
+            "cls": 0.4041478344256474,
+            "speedIndexMs": 3534.0867000000003,
+            "pesoTotalBytes": 2258918,
+            "requisicoes": 66,
+            "jsNaoUsadoBytes": 0,
+            "cssNaoUsadoBytes": 25478
+          }
+        },
+        {
+          "n": 3,
+          "startedAt": "2026-11-16T18:49:06.417Z",
+          "durationMs": 10252,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 48,
+            "accessibility": 91,
+            "best-practices": 73,
+            "seo": 83
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:51763/",
+          "mainDocumentUrl": "http://127.0.0.1:51763/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2617,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 48,
+              "accessibility": 91,
+              "best-practices": 73,
+              "seo": 83
+            },
+            "fcpMs": 3529.1711999999998,
+            "lcpMs": 13205.561599999999,
+            "tbtMs": 34,
+            "cls": 0.4041478344256474,
+            "speedIndexMs": 3529.1711999999998,
+            "pesoTotalBytes": 2258918,
+            "requisicoes": 66,
+            "jsNaoUsadoBytes": 0,
+            "cssNaoUsadoBytes": 25478
+          }
+        }
+      ],
+      "mediana": {
+        "criterio": "nota-performance",
+        "n": 2
+      },
+      "metricas": {
+        "notas": {
+          "performance": 48,
+          "accessibility": 91,
+          "best-practices": 73,
+          "seo": 83
+        },
+        "fcpMs": 3534.0867000000003,
+        "lcpMs": 13137.115600000001,
+        "tbtMs": 1,
+        "cls": 0.4041478344256474,
+        "speedIndexMs": 3534.0867000000003,
+        "pesoTotalBytes": 2258918,
+        "requisicoes": 66,
+        "jsNaoUsadoBytes": 0,
+        "cssNaoUsadoBytes": 25478
+      },
+      "variacaoPerformance": {
+        "n": 3,
+        "min": 48,
+        "max": 48,
+        "amplitude": 0,
+        "media": 48,
+        "desvioPadrao": 0
+      },
+      "semantica": {
+        "status": "ok",
+        "indicadores": {
+          "divSpan": {
+            "div": 358,
+            "span": 37,
+            "total": 588,
+            "proporcao": 0.6717687074829932
+          },
+          "landmarks": {
+            "banner": 0,
+            "navigation": 2,
+            "main": 0,
+            "contentinfo": 0
+          },
+          "titulos": {
+            "total": 18,
+            "h1": 10,
+            "porNivel": [
+              10,
+              8,
+              0,
+              0,
+              0,
+              0
+            ],
+            "saltos": 0,
+            "maiorSalto": 0,
+            "primeiroNivel": 1
+          },
+          "estrutura": {
+            "article": 0,
+            "section": 25,
+            "aside": 0,
+            "figure": 11,
+            "ul": 3,
+            "ol": 0
+          },
+          "interativosFalsos": {
+            "comOnclick": 0,
+            "falsos": 0
+          },
+          "metadados": {
+            "lang": "pt-BR",
+            "temTitle": true,
+            "titleComprimento": 79,
+            "temViewport": true,
+            "temDescription": false
+          },
+          "imagens": {
+            "total": 24,
+            "semAlt": 0,
+            "altVazio": 2,
+            "semAltComAlternativa": 0
+          },
+          "campos": {
+            "total": 0,
+            "semLabel": 0,
+            "semLabelComPlaceholderOuTitle": 0
+          },
+          "obsoletas": {
+            "roteiro": 0,
+            "whatwg": 0,
+            "porTag": {}
+          },
+          "tabelas": {
+            "total": 0,
+            "layoutDeclarada": 0,
+            "layoutHeuristica": 0,
+            "dados": 0,
+            "indeterminada": 0
+          }
+        },
+        "indice": {
+          "subnotas": {
+            "landmarks": 25,
+            "titulos": 50,
+            "imagens": 100,
+            "campos": null,
+            "divSpan": 32.82312925170068,
+            "metadados": 100,
+            "interativos": null,
+            "obsoletos": 100
+          },
+          "indice": 60.352891156462576,
+          "indicePesosIguais": 67.9705215419501
+        },
+        "networkidleTimeout": false
+      },
+      "faltasNoServidor": [
+        "/_ext/www.youtube.com//embed/zihgTDxcmIo?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A51763&widgetid=1&forigin=http%3A%2F%2F127.0.0.1%3A51763%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/PTMpOrK7pEw?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A51763&widgetid=3&forigin=http%3A%2F%2F127.0.0.1%3A51763%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/iJVtfaP4rog?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A51763&widgetid=5&forigin=http%3A%2F%2F127.0.0.1%3A51763%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/wnPtaB2pvMI?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A51763&widgetid=7&forigin=http%3A%2F%2F127.0.0.1%3A51763%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/1PKM3SOYPYM?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A51763&widgetid=9&forigin=http%3A%2F%2F127.0.0.1%3A51763%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/yBjDGTVKuuM?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A51763&widgetid=11&forigin=http%3A%2F%2F127.0.0.1%3A51763%2F&aoriginsup=1&vf=1",
+        "/favicon.ico",
+        "/_ext/www.youtube.com//embed/wnPtaB2pvMI?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A51763&widgetid=1&forigin=http%3A%2F%2F127.0.0.1%3A51763%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/1PKM3SOYPYM?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A51763&widgetid=3&forigin=http%3A%2F%2F127.0.0.1%3A51763%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/yBjDGTVKuuM?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A51763&widgetid=5&forigin=http%3A%2F%2F127.0.0.1%3A51763%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/zihgTDxcmIo?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A51763&widgetid=7&forigin=http%3A%2F%2F127.0.0.1%3A51763%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/PTMpOrK7pEw?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A51763&widgetid=9&forigin=http%3A%2F%2F127.0.0.1%3A51763%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/iJVtfaP4rog?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A51763&widgetid=11&forigin=http%3A%2F%2F127.0.0.1%3A51763%2F&aoriginsup=1&vf=1",
+        "/robots.txt",
+        "/wp-content/uploads/2020/09/cecilia.jpeg",
+        "/wp-content/uploads/2020/09/edward-768x768.jpeg",
+        "/wp-content/uploads/2020/09/parente-768x768.jpeg",
+        "/wp-content/uploads/2020/09/cesar.jpeg",
+        "/wp-content/uploads/2020/09/Shirley-768x768.jpeg",
+        "/wp-content/uploads/2020/09/Rita-Louzeiro.jpeg",
+        "/wp-content/uploads/2020/09/katz.jpeg",
+        "/wp-content/uploads/2020/09/perez.jpeg",
+        "/wp-content/uploads/2020/10/anabel.jpeg",
+        "/wp-content/uploads/2020/10/logo-sia-768x159.png",
+        "/wp-content/uploads/2020/03/logo-sedis.jpg",
+        "/wp-content/uploads/2020/03/logo-lais.jpg",
+        "/wp-content/uploads/2020/10/ufrrj.jpg",
+        "/wp-content/uploads/2020/10/Ufpr_logo.jpg",
+        "/wp-content/uploads/2020/10/Marca-Horizontal-Smbolo-Tipografia-001-768x406.png",
+        "/wp-content/uploads/2020/10/Marca_UFG_cor_completa_horizontal-768x539.png",
+        "/wp-content/uploads/2020/10/Uneb.png",
+        "/wp-content/uploads/2020/10/anped_redonda-768x768.png",
+        "/wp-content/uploads/2020/10/abpee-e1601937875636.jpg"
+      ]
+    },
+    "corrigido": {
+      "urlLocal": "http://127.0.0.1:51764/",
+      "execucoes": [
+        {
+          "n": 1,
+          "startedAt": "2026-11-16T18:48:35.109Z",
+          "durationMs": 10582,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 67,
+            "accessibility": 91,
+            "best-practices": 73,
+            "seo": 83
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:51764/",
+          "mainDocumentUrl": "http://127.0.0.1:51764/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2974.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 67,
+              "accessibility": 91,
+              "best-practices": 73,
+              "seo": 83
+            },
+            "fcpMs": 3533.3829,
+            "lcpMs": 11786.177199999998,
+            "tbtMs": 2,
+            "cls": 0,
+            "speedIndexMs": 3533.3829,
+            "pesoTotalBytes": 2017415,
+            "requisicoes": 64,
+            "jsNaoUsadoBytes": 0,
+            "cssNaoUsadoBytes": 25478
+          }
+        },
+        {
+          "n": 2,
+          "startedAt": "2026-11-16T18:48:55.827Z",
+          "durationMs": 10590,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 67,
+            "accessibility": 91,
+            "best-practices": 73,
+            "seo": 83
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:51764/",
+          "mainDocumentUrl": "http://127.0.0.1:51764/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2795.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 67,
+              "accessibility": 91,
+              "best-practices": 73,
+              "seo": 83
+            },
+            "fcpMs": 3531.7662,
+            "lcpMs": 11784.0216,
+            "tbtMs": 22,
+            "cls": 0,
+            "speedIndexMs": 3531.7662,
+            "pesoTotalBytes": 2017415,
+            "requisicoes": 64,
+            "jsNaoUsadoBytes": 0,
+            "cssNaoUsadoBytes": 25478
+          }
+        },
+        {
+          "n": 3,
+          "startedAt": "2026-11-16T18:49:16.669Z",
+          "durationMs": 10337,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 67,
+            "accessibility": 91,
+            "best-practices": 73,
+            "seo": 83
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:51764/",
+          "mainDocumentUrl": "http://127.0.0.1:51764/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2615.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 67,
+              "accessibility": 91,
+              "best-practices": 73,
+              "seo": 83
+            },
+            "fcpMs": 3531.0833999999995,
+            "lcpMs": 11858.1112,
+            "tbtMs": 34.000000000000455,
+            "cls": 0,
+            "speedIndexMs": 3531.0833999999995,
+            "pesoTotalBytes": 2017415,
+            "requisicoes": 64,
+            "jsNaoUsadoBytes": 0,
+            "cssNaoUsadoBytes": 25478
+          }
+        }
+      ],
+      "mediana": {
+        "criterio": "nota-performance",
+        "n": 2
+      },
+      "metricas": {
+        "notas": {
+          "performance": 67,
+          "accessibility": 91,
+          "best-practices": 73,
+          "seo": 83
+        },
+        "fcpMs": 3531.7662,
+        "lcpMs": 11784.0216,
+        "tbtMs": 22,
+        "cls": 0,
+        "speedIndexMs": 3531.7662,
+        "pesoTotalBytes": 2017415,
+        "requisicoes": 64,
+        "jsNaoUsadoBytes": 0,
+        "cssNaoUsadoBytes": 25478
+      },
+      "variacaoPerformance": {
+        "n": 3,
+        "min": 67,
+        "max": 67,
+        "amplitude": 0,
+        "media": 67,
+        "desvioPadrao": 0
+      },
+      "semantica": {
+        "status": "ok",
+        "indicadores": {
+          "divSpan": {
+            "div": 358,
+            "span": 37,
+            "total": 588,
+            "proporcao": 0.6717687074829932
+          },
+          "landmarks": {
+            "banner": 0,
+            "navigation": 2,
+            "main": 0,
+            "contentinfo": 0
+          },
+          "titulos": {
+            "total": 18,
+            "h1": 10,
+            "porNivel": [
+              10,
+              8,
+              0,
+              0,
+              0,
+              0
+            ],
+            "saltos": 0,
+            "maiorSalto": 0,
+            "primeiroNivel": 1
+          },
+          "estrutura": {
+            "article": 0,
+            "section": 25,
+            "aside": 0,
+            "figure": 11,
+            "ul": 3,
+            "ol": 0
+          },
+          "interativosFalsos": {
+            "comOnclick": 0,
+            "falsos": 0
+          },
+          "metadados": {
+            "lang": "pt-BR",
+            "temTitle": true,
+            "titleComprimento": 79,
+            "temViewport": true,
+            "temDescription": false
+          },
+          "imagens": {
+            "total": 24,
+            "semAlt": 0,
+            "altVazio": 2,
+            "semAltComAlternativa": 0
+          },
+          "campos": {
+            "total": 0,
+            "semLabel": 0,
+            "semLabelComPlaceholderOuTitle": 0
+          },
+          "obsoletas": {
+            "roteiro": 0,
+            "whatwg": 0,
+            "porTag": {}
+          },
+          "tabelas": {
+            "total": 0,
+            "layoutDeclarada": 0,
+            "layoutHeuristica": 0,
+            "dados": 0,
+            "indeterminada": 0
+          }
+        },
+        "indice": {
+          "subnotas": {
+            "landmarks": 25,
+            "titulos": 50,
+            "imagens": 100,
+            "campos": null,
+            "divSpan": 32.82312925170068,
+            "metadados": 100,
+            "interativos": null,
+            "obsoletos": 100
+          },
+          "indice": 60.352891156462576,
+          "indicePesosIguais": 67.9705215419501
+        },
+        "networkidleTimeout": false
+      },
+      "faltasNoServidor": [
+        "/_ext/www.youtube.com//embed/zihgTDxcmIo?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A51764&widgetid=1&forigin=http%3A%2F%2F127.0.0.1%3A51764%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/PTMpOrK7pEw?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A51764&widgetid=3&forigin=http%3A%2F%2F127.0.0.1%3A51764%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/iJVtfaP4rog?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A51764&widgetid=5&forigin=http%3A%2F%2F127.0.0.1%3A51764%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/wnPtaB2pvMI?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A51764&widgetid=7&forigin=http%3A%2F%2F127.0.0.1%3A51764%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/1PKM3SOYPYM?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A51764&widgetid=9&forigin=http%3A%2F%2F127.0.0.1%3A51764%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/yBjDGTVKuuM?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A51764&widgetid=11&forigin=http%3A%2F%2F127.0.0.1%3A51764%2F&aoriginsup=1&vf=1",
+        "/favicon.ico",
+        "/_ext/www.youtube.com//embed/wnPtaB2pvMI?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A51764&widgetid=1&forigin=http%3A%2F%2F127.0.0.1%3A51764%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/1PKM3SOYPYM?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A51764&widgetid=3&forigin=http%3A%2F%2F127.0.0.1%3A51764%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/yBjDGTVKuuM?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A51764&widgetid=5&forigin=http%3A%2F%2F127.0.0.1%3A51764%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/zihgTDxcmIo?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A51764&widgetid=7&forigin=http%3A%2F%2F127.0.0.1%3A51764%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/PTMpOrK7pEw?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A51764&widgetid=9&forigin=http%3A%2F%2F127.0.0.1%3A51764%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/iJVtfaP4rog?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A51764&widgetid=11&forigin=http%3A%2F%2F127.0.0.1%3A51764%2F&aoriginsup=1&vf=1",
+        "/robots.txt",
+        "/wp-content/uploads/2020/09/cecilia.jpeg",
+        "/wp-content/uploads/2020/09/edward-768x768.jpeg",
+        "/wp-content/uploads/2020/09/parente-768x768.jpeg",
+        "/wp-content/uploads/2020/09/cesar.jpeg",
+        "/wp-content/uploads/2020/09/Shirley-768x768.jpeg",
+        "/wp-content/uploads/2020/10/anped_redonda-768x768.png",
+        "/wp-content/uploads/2020/10/anabel.jpeg",
+        "/wp-content/uploads/2020/09/Rita-Louzeiro.jpeg",
+        "/wp-content/uploads/2020/10/Marca_UFG_cor_completa_horizontal-768x539.png",
+        "/wp-content/uploads/2020/10/abpee-e1601937875636.jpg",
+        "/wp-content/uploads/2020/10/Marca-Horizontal-Smbolo-Tipografia-001-768x406.png",
+        "/wp-content/uploads/2020/10/logo-sia-768x159.png",
+        "/wp-content/uploads/2020/09/katz.jpeg",
+        "/wp-content/uploads/2020/09/perez.jpeg",
+        "/wp-content/uploads/2020/10/Ufpr_logo.jpg",
+        "/wp-content/uploads/2020/10/Uneb.png",
+        "/wp-content/uploads/2020/10/ufrrj.jpg",
+        "/wp-content/uploads/2020/03/logo-sedis.jpg",
+        "/wp-content/uploads/2020/03/logo-lais.jpg"
+      ]
+    }
+  },
+  "deltas": {
+    "nota_performance": {
+      "original": 48,
+      "corrigido": 67,
+      "delta": 19
+    },
+    "nota_accessibility": {
+      "original": 91,
+      "corrigido": 91,
+      "delta": 0
+    },
+    "nota_best_practices": {
+      "original": 73,
+      "corrigido": 73,
+      "delta": 0
+    },
+    "nota_seo": {
+      "original": 83,
+      "corrigido": 83,
+      "delta": 0
+    },
+    "fcp_ms": {
+      "original": 3534.0867000000003,
+      "corrigido": 3531.7662,
+      "delta": -2.3205000000002656
+    },
+    "lcp_ms": {
+      "original": 13137.115600000001,
+      "corrigido": 11784.0216,
+      "delta": -1353.094000000001
+    },
+    "tbt_ms": {
+      "original": 1,
+      "corrigido": 22,
+      "delta": 21
+    },
+    "cls": {
+      "original": 0.4041478344256474,
+      "corrigido": 0,
+      "delta": -0.4041478344256474
+    },
+    "speed_index_ms": {
+      "original": 3534.0867000000003,
+      "corrigido": 3531.7662,
+      "delta": -2.3205000000002656
+    },
+    "peso_total_bytes": {
+      "original": 2258918,
+      "corrigido": 2017415,
+      "delta": -241503
+    },
+    "requisicoes": {
+      "original": 66,
+      "corrigido": 64,
+      "delta": -2
+    },
+    "indice_semantica": {
+      "original": 60.352891156462576,
+      "corrigido": 60.352891156462576,
+      "delta": 0
+    },
+    "indice_semantica_pesos_iguais": {
+      "original": 67.9705215419501,
+      "corrigido": 67.9705215419501,
+      "delta": 0
+    },
+    "sub_landmarks": {
+      "original": 25,
+      "corrigido": 25,
+      "delta": 0
+    },
+    "sub_titulos": {
+      "original": 50,
+      "corrigido": 50,
+      "delta": 0
+    },
+    "sub_imagens": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    },
+    "sub_campos": {
+      "original": null,
+      "corrigido": null,
+      "delta": null
+    },
+    "sub_divSpan": {
+      "original": 32.82312925170068,
+      "corrigido": 32.82312925170068,
+      "delta": 0
+    },
+    "sub_metadados": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    },
+    "sub_interativos": {
+      "original": null,
+      "corrigido": null,
+      "delta": null
+    },
+    "sub_obsoletos": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    }
+  }
+}

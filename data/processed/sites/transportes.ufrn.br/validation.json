@@ -1,0 +1,742 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T21:19:47.216Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "siteId": "transportes.ufrn.br",
+  "contexto": {
+    "grupo": "estatico",
+    "tecnologia": "estatico",
+    "tipo": "outro"
+  },
+  "recomendacoes": {
+    "total": 12,
+    "corrigidas": 2,
+    "corrigidasLlm": 0,
+    "llm": {
+      "prompt": "landmarks-v2",
+      "arquivo": "docs/prompts/landmarks-v2.md",
+      "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "effort": "low",
+      "maxTokens": 4000,
+      "execucao": {
+        "siteId": "transportes.ufrn.br",
+        "prompt": "landmarks-v2",
+        "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+        "modelo": "claude-haiku-5-5",
+        "modeloResposta": "claude-haiku-5-5",
+        "respostaId": "msg_011Ch7JecRpXTfvBNCXWDeEg",
+        "chamada": true,
+        "motivo": null,
+        "ausentes": [
+          "nav"
+        ],
+        "candidatos": 32,
+        "elegiveis": 32,
+        "stopReason": "end_turn",
+        "inputTokens": 3723,
+        "outputTokens": 550,
+        "custoUsd": 0.0006473,
+        "propostas": 0,
+        "validas": 0,
+        "rejeitadas": [],
+        "textoIgual": null,
+        "landmarksDepois": null,
+        "erro": null,
+        "duracaoMs": 3408
+      }
+    }
+  },
+  "parametros": {
+    "execucoesPorVariante": 3,
+    "formFactor": "mobile",
+    "throttlingMethod": "simulate",
+    "chromeFlagsExtras": [
+      "--host-resolver-rules=MAP * ~NOTFOUND, EXCLUDE 127.0.0.1"
+    ],
+    "userAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+    "relogioSemantica": "2026-11-09T19:15:07.121Z",
+    "relogioLighthouse": "real"
+  },
+  "ordem": [
+    {
+      "variante": "original",
+      "n": 1
+    },
+    {
+      "variante": "corrigido",
+      "n": 1
+    },
+    {
+      "variante": "original",
+      "n": 2
+    },
+    {
+      "variante": "corrigido",
+      "n": 2
+    },
+    {
+      "variante": "original",
+      "n": 3
+    },
+    {
+      "variante": "corrigido",
+      "n": 3
+    }
+  ],
+  "variantes": {
+    "original": {
+      "urlLocal": "http://127.0.0.1:53660/",
+      "execucoes": [
+        {
+          "n": 1,
+          "startedAt": "2026-11-16T21:34:02.300Z",
+          "durationMs": 8247,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 58,
+            "accessibility": 90,
+            "best-practices": 96,
+            "seo": 45
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:53660/",
+          "mainDocumentUrl": "http://127.0.0.1:53660/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 3081,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 58,
+              "accessibility": 90,
+              "best-practices": 96,
+              "seo": 45
+            },
+            "fcpMs": 5702.205835691882,
+            "lcpMs": 9632.823342767528,
+            "tbtMs": 192,
+            "cls": 0.0003655207758739723,
+            "speedIndexMs": 5702.205835691882,
+            "pesoTotalBytes": 1398898,
+            "requisicoes": 34,
+            "jsNaoUsadoBytes": 217621,
+            "cssNaoUsadoBytes": 222987
+          }
+        },
+        {
+          "n": 2,
+          "startedAt": "2026-11-16T21:34:18.440Z",
+          "durationMs": 7937,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 57,
+            "accessibility": 90,
+            "best-practices": 96,
+            "seo": 45
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:53660/",
+          "mainDocumentUrl": "http://127.0.0.1:53660/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2924.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 57,
+              "accessibility": 90,
+              "best-practices": 96,
+              "seo": 45
+            },
+            "fcpMs": 5701.5785,
+            "lcpMs": 9662.10325,
+            "tbtMs": 216,
+            "cls": 0.01822205737160443,
+            "speedIndexMs": 5701.5785,
+            "pesoTotalBytes": 1398898,
+            "requisicoes": 34,
+            "jsNaoUsadoBytes": 217621,
+            "cssNaoUsadoBytes": 222987
+          }
+        },
+        {
+          "n": 3,
+          "startedAt": "2026-11-16T21:34:34.334Z",
+          "durationMs": 7893,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 58,
+            "accessibility": 90,
+            "best-practices": 96,
+            "seo": 45
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:53660/",
+          "mainDocumentUrl": "http://127.0.0.1:53660/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2979.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 58,
+              "accessibility": 90,
+              "best-practices": 96,
+              "seo": 45
+            },
+            "fcpMs": 5701.6692,
+            "lcpMs": 9632.676800000001,
+            "tbtMs": 195,
+            "cls": 0.0003655207758739723,
+            "speedIndexMs": 5701.6692,
+            "pesoTotalBytes": 1398898,
+            "requisicoes": 34,
+            "jsNaoUsadoBytes": 217532,
+            "cssNaoUsadoBytes": 222987
+          }
+        }
+      ],
+      "mediana": {
+        "criterio": "nota-performance",
+        "n": 1
+      },
+      "metricas": {
+        "notas": {
+          "performance": 58,
+          "accessibility": 90,
+          "best-practices": 96,
+          "seo": 45
+        },
+        "fcpMs": 5702.205835691882,
+        "lcpMs": 9632.823342767528,
+        "tbtMs": 192,
+        "cls": 0.0003655207758739723,
+        "speedIndexMs": 5702.205835691882,
+        "pesoTotalBytes": 1398898,
+        "requisicoes": 34,
+        "jsNaoUsadoBytes": 217621,
+        "cssNaoUsadoBytes": 222987
+      },
+      "variacaoPerformance": {
+        "n": 3,
+        "min": 57,
+        "max": 58,
+        "amplitude": 1,
+        "media": 57.67,
+        "desvioPadrao": 0.58
+      },
+      "semantica": {
+        "status": "ok",
+        "indicadores": {
+          "divSpan": {
+            "div": 196,
+            "span": 27,
+            "total": 260,
+            "proporcao": 0.8576923076923076
+          },
+          "landmarks": {
+            "banner": 2,
+            "navigation": 0,
+            "main": 1,
+            "contentinfo": 1
+          },
+          "titulos": {
+            "total": 2,
+            "h1": 0,
+            "porNivel": [
+              0,
+              1,
+              1,
+              0,
+              0,
+              0
+            ],
+            "saltos": 0,
+            "maiorSalto": 0,
+            "primeiroNivel": 2
+          },
+          "estrutura": {
+            "article": 0,
+            "section": 4,
+            "aside": 0,
+            "figure": 0,
+            "ul": 0,
+            "ol": 0
+          },
+          "interativosFalsos": {
+            "comOnclick": 0,
+            "falsos": 0
+          },
+          "metadados": {
+            "lang": "en-US",
+            "temTitle": true,
+            "titleComprimento": 6,
+            "temViewport": true,
+            "temDescription": false
+          },
+          "imagens": {
+            "total": 5,
+            "semAlt": 5,
+            "altVazio": 0,
+            "semAltComAlternativa": 1
+          },
+          "campos": {
+            "total": 1,
+            "semLabel": 0,
+            "semLabelComPlaceholderOuTitle": 0
+          },
+          "obsoletas": {
+            "roteiro": 0,
+            "whatwg": 0,
+            "porTag": {}
+          },
+          "tabelas": {
+            "total": 0,
+            "layoutDeclarada": 0,
+            "layoutHeuristica": 0,
+            "dados": 0,
+            "indeterminada": 0
+          }
+        },
+        "indice": {
+          "subnotas": {
+            "landmarks": 75,
+            "titulos": 50,
+            "imagens": 0,
+            "campos": 100,
+            "divSpan": 14.230769230769235,
+            "metadados": 100,
+            "interativos": null,
+            "obsoletos": 100
+          },
+          "indice": 59.392712550607285,
+          "indicePesosIguais": 62.747252747252745
+        },
+        "networkidleTimeout": false
+      },
+      "faltasNoServidor": [
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794251707121&errorSender_sendTimeMs=1794251707121&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794251707121&errorSender_sendTimeMs=1794251707121&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794251707121&errorSender_sendTimeMs=1794251707121&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794251707121&errorSender_sendTimeMs=1794251707121&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794251707121&errorSender_sendTimeMs=1794251707121&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AMd9ENb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AvVEdxc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794251707121&errorSender_sendTimeMs=1794251707121&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Ao1L5Wb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AzJMuOc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AMd9ENb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AvVEdxc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794251707121&errorSender_sendTimeMs=1794251707121&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864844445&errorSender_sendTimeMs=1794864844446&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864844451&errorSender_sendTimeMs=1794864844468&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864844452&errorSender_sendTimeMs=1794864844482&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864844456&errorSender_sendTimeMs=1794864844486&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864844458&errorSender_sendTimeMs=1794864844488&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AMd9ENb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AvVEdxc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864844458&errorSender_sendTimeMs=1794864844490&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Ao1L5Wb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AzJMuOc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AMd9ENb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AvVEdxc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864844478&errorSender_sendTimeMs=1794864844492&errorSenderType=MemoryErrorSender",
+        "/_ext/www.gstatic.com/images/branding/productlogos/sites_2026/v3/ico/sites_2026_16dp.ico",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Ao1L5Wb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AzJMuOc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AMd9ENb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AvVEdxc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864844478&errorSender_sendTimeMs=1794864844494&errorSenderType=MemoryErrorSender",
+        "/robots.txt",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864849900&errorSender_sendTimeMs=1794864849902&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864860590&errorSender_sendTimeMs=1794864860591&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864860596&errorSender_sendTimeMs=1794864860614&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864860597&errorSender_sendTimeMs=1794864860624&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864860601&errorSender_sendTimeMs=1794864860637&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864860602&errorSender_sendTimeMs=1794864860640&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AMd9ENb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AvVEdxc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864860603&errorSender_sendTimeMs=1794864860643&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Ao1L5Wb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AzJMuOc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AMd9ENb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AvVEdxc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864860632&errorSender_sendTimeMs=1794864860648&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Ao1L5Wb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AzJMuOc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AMd9ENb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AvVEdxc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864860633&errorSender_sendTimeMs=1794864860653&errorSenderType=MemoryErrorSender",
+        "/_ext/www.gstatic.com/_/atari/_/js/k=atari.vw.en_US.7K42jXwKoL8.O/am=AAAAYAAI/d=0/rs=AGEqA5l1O939Wm7Yi7tplrOF29wrpok45A/m=LLHPdb,sy2x,ws9Tlc,cEt90b,sy8q,KUM7Z,MpJwZc,n73qwf,A4UTCb,sy2w,L1AAkb,aW3pY,V3dDOb,sy2s,sy39,owcnme,sy3a,sy3b,O6y8ed,sy14,sy13,sy12,sy1i,syx,sy1p,syj,sy1e,sy1c,sy1f,sy1n,sy1k,sy1o,syf,sy1h,sy1d,sy1j,sy1l,syc,sy1m,mzzZzc,sy1g,syt,sy36,CHCSlb,fmklff,qAKInc,sy3n,YXyON,sy3t,sy3s,iTeaXe,sy7j,abQiW,syw,sy3c,pxq3x,sy3d,syq,sy3y,sy3e,syy,sy29,sy4u,sy7i,sy3f,sy7h,EGNJFf,sy2v,N5Lqpc,ENNBBf,syd,syp,sy3i,yf2Bs,TGYpv,syk,syn,syo,sy3j,sy3k,iwfZq,XVMNvd,sy8n,yxTchf,sy8o,sy8p,xQtZb,iSvg6e,m9oV,sy2z,RAnnUd,i5dxUd,sy2y,sy30,sy31,sy2e,etBPYb,i5H9N,SU9Rsf,sy32,sy33,sy34,sy35,sy2c,sy2f,PHUIyb,qNG0Fc,syu,syv,syz,qTnoBf,NJ1rfe,ywOR5c,sy37,sy38,sye,wg1P6b,EcW08c,sy3g,sy3h,t8tqF,eEDsnd,sy3w,sy3x,sy3u,sy3v,sy3r,sy3z,sy40,pc62j,qEW1W,oNFsLb,sy10,sy11,sys,RRzQxe,qddgKe,sy7l,SM1lmd,sy3p,sy3q,sy3l,sy3o,YV8yqd,sya,sy9,sy17,sy21,yyxWAc,sy0,sy1,sy7,sy2d,sy6,sy2b,sy2g,sy2a,sy28,sy2h,sy2i,sy1t,sy5v,syr,sy19,sy20,sy7c,syb,sy4n,sy74,sy18,fNFZH,sy7k,sy4t,sy2j,i16Xfc,sy4f,zJMuOc,RrXLpc,sy43,sy47,sy4a,sy4g,sy4h,sy4j,sy4k,sy4i,tCGzVe,Ej8J2c,odWSx,cgRV2c,sy1z,sy5b,o1L5Wb,X4BaPc,vVEdxc,sy4,sy5,sy4m,RQOkef,sy25,sy24,sy26,sy8,sy16,sy1v,sy1w,sy23,gaMBzf,sy75,sy27,fVuHhf,sy7a,j1RDQb,sy4p,sy4x,sy4w,sy4r,syg,sy4o,sy4s,syi,sy1s,sy46,sy4l,sy4q,sy4v,sy4y,Md9ENb",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864876437&errorSender_sendTimeMs=1794864876437&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864876445&errorSender_sendTimeMs=1794864876464&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864876446&errorSender_sendTimeMs=1794864876474&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864876449&errorSender_sendTimeMs=1794864876482&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864876450&errorSender_sendTimeMs=1794864876485&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AMd9ENb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AvVEdxc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864876451&errorSender_sendTimeMs=1794864876488&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Ao1L5Wb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AzJMuOc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AMd9ENb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AvVEdxc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864876479&errorSender_sendTimeMs=1794864876490&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53660%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Ao1L5Wb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AzJMuOc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AMd9ENb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AvVEdxc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864876480&errorSender_sendTimeMs=1794864876493&errorSenderType=MemoryErrorSender"
+      ]
+    },
+    "corrigido": {
+      "urlLocal": "http://127.0.0.1:53661/",
+      "execucoes": [
+        {
+          "n": 1,
+          "startedAt": "2026-11-16T21:34:10.547Z",
+          "durationMs": 7892,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 58,
+            "accessibility": 90,
+            "best-practices": 96,
+            "seo": 45
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:53661/",
+          "mainDocumentUrl": "http://127.0.0.1:53661/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2969.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 58,
+              "accessibility": 90,
+              "best-practices": 96,
+              "seo": 45
+            },
+            "fcpMs": 5701.66027977842,
+            "lcpMs": 8316.64111911368,
+            "tbtMs": 200,
+            "cls": 0.05154110691815497,
+            "speedIndexMs": 5701.66027977842,
+            "pesoTotalBytes": 1219217,
+            "requisicoes": 24,
+            "jsNaoUsadoBytes": 102283,
+            "cssNaoUsadoBytes": 222987
+          }
+        },
+        {
+          "n": 2,
+          "startedAt": "2026-11-16T21:34:26.377Z",
+          "durationMs": 7957,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 60,
+            "accessibility": 90,
+            "best-practices": 96,
+            "seo": 45
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:53661/",
+          "mainDocumentUrl": "http://127.0.0.1:53661/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2942.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 60,
+              "accessibility": 90,
+              "best-practices": 96,
+              "seo": 45
+            },
+            "fcpMs": 5702.387900000001,
+            "lcpMs": 8202.96975,
+            "tbtMs": 118.09697499999993,
+            "cls": 0.05154110691815497,
+            "speedIndexMs": 5702.387900000001,
+            "pesoTotalBytes": 1219217,
+            "requisicoes": 25,
+            "jsNaoUsadoBytes": 102283,
+            "cssNaoUsadoBytes": 222987
+          }
+        },
+        {
+          "n": 3,
+          "startedAt": "2026-11-16T21:34:42.228Z",
+          "durationMs": 8113,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 57,
+            "accessibility": 90,
+            "best-practices": 96,
+            "seo": 45
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:53661/",
+          "mainDocumentUrl": "http://127.0.0.1:53661/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2814.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 57,
+              "accessibility": 90,
+              "best-practices": 96,
+              "seo": 45
+            },
+            "fcpMs": 5701.358532491223,
+            "lcpMs": 9851.471928701729,
+            "tbtMs": 177,
+            "cls": 0.06881936628808702,
+            "speedIndexMs": 5701.358532491223,
+            "pesoTotalBytes": 1398912,
+            "requisicoes": 34,
+            "jsNaoUsadoBytes": 217532,
+            "cssNaoUsadoBytes": 222987
+          }
+        }
+      ],
+      "mediana": {
+        "criterio": "nota-performance",
+        "n": 1
+      },
+      "metricas": {
+        "notas": {
+          "performance": 58,
+          "accessibility": 90,
+          "best-practices": 96,
+          "seo": 45
+        },
+        "fcpMs": 5701.66027977842,
+        "lcpMs": 8316.64111911368,
+        "tbtMs": 200,
+        "cls": 0.05154110691815497,
+        "speedIndexMs": 5701.66027977842,
+        "pesoTotalBytes": 1219217,
+        "requisicoes": 24,
+        "jsNaoUsadoBytes": 102283,
+        "cssNaoUsadoBytes": 222987
+      },
+      "variacaoPerformance": {
+        "n": 3,
+        "min": 57,
+        "max": 60,
+        "amplitude": 3,
+        "media": 58.33,
+        "desvioPadrao": 1.53
+      },
+      "semantica": {
+        "status": "ok",
+        "indicadores": {
+          "divSpan": {
+            "div": 196,
+            "span": 27,
+            "total": 260,
+            "proporcao": 0.8576923076923076
+          },
+          "landmarks": {
+            "banner": 2,
+            "navigation": 0,
+            "main": 1,
+            "contentinfo": 1
+          },
+          "titulos": {
+            "total": 2,
+            "h1": 0,
+            "porNivel": [
+              0,
+              1,
+              1,
+              0,
+              0,
+              0
+            ],
+            "saltos": 0,
+            "maiorSalto": 0,
+            "primeiroNivel": 2
+          },
+          "estrutura": {
+            "article": 0,
+            "section": 4,
+            "aside": 0,
+            "figure": 0,
+            "ul": 0,
+            "ol": 0
+          },
+          "interativosFalsos": {
+            "comOnclick": 0,
+            "falsos": 0
+          },
+          "metadados": {
+            "lang": "en-US",
+            "temTitle": true,
+            "titleComprimento": 6,
+            "temViewport": true,
+            "temDescription": false
+          },
+          "imagens": {
+            "total": 5,
+            "semAlt": 5,
+            "altVazio": 0,
+            "semAltComAlternativa": 1
+          },
+          "campos": {
+            "total": 1,
+            "semLabel": 0,
+            "semLabelComPlaceholderOuTitle": 0
+          },
+          "obsoletas": {
+            "roteiro": 0,
+            "whatwg": 0,
+            "porTag": {}
+          },
+          "tabelas": {
+            "total": 0,
+            "layoutDeclarada": 0,
+            "layoutHeuristica": 0,
+            "dados": 0,
+            "indeterminada": 0
+          }
+        },
+        "indice": {
+          "subnotas": {
+            "landmarks": 75,
+            "titulos": 50,
+            "imagens": 0,
+            "campos": 100,
+            "divSpan": 14.230769230769235,
+            "metadados": 100,
+            "interativos": null,
+            "obsoletos": 100
+          },
+          "indice": 59.392712550607285,
+          "indicePesosIguais": 62.747252747252745
+        },
+        "networkidleTimeout": false
+      },
+      "faltasNoServidor": [
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53661%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794251707121&errorSender_sendTimeMs=1794251707121&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53661%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794251707121&errorSender_sendTimeMs=1794251707121&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53661%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794251707121&errorSender_sendTimeMs=1794251707121&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53661%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794251707121&errorSender_sendTimeMs=1794251707121&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53661%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794251707121&errorSender_sendTimeMs=1794251707121&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53661%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AMd9ENb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AvVEdxc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794251707121&errorSender_sendTimeMs=1794251707121&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53661%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Ao1L5Wb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AzJMuOc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AMd9ENb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AvVEdxc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794251707121&errorSender_sendTimeMs=1794251707121&errorSenderType=MemoryErrorSender",
+        "/_ext/www.gstatic.com/_/atari/_/js/k=atari.vw.en_US.7K42jXwKoL8.O/am=AAAAYAAI/d=0/rs=AGEqA5l1O939Wm7Yi7tplrOF29wrpok45A/m=LLHPdb,sy2x,ws9Tlc,cEt90b,sy8q,KUM7Z,MpJwZc,n73qwf,A4UTCb,sy2w,L1AAkb,aW3pY,V3dDOb,sy2s,sy39,owcnme,sy3a,sy3b,O6y8ed,sy14,sy13,sy12,sy1i,syx,sy1p,syj,sy1e,sy1c,sy1f,sy1n,sy1k,sy1o,syf,sy1h,sy1d,sy1j,sy1l,syc,sy1m,mzzZzc,sy1g,syt,sy36,CHCSlb,fmklff,qAKInc,sy3n,YXyON,sy3t,sy3s,iTeaXe,sy7j,abQiW,syw,sy3c,pxq3x,sy3d,syq,sy3y,sy3e,syy,sy29,sy4u,sy7i,sy3f,sy7h,EGNJFf,sy2v,N5Lqpc,ENNBBf,syd,syp,sy3i,yf2Bs,TGYpv,syk,syn,syo,sy3j,sy3k,iwfZq,XVMNvd,sy8n,yxTchf,sy8o,sy8p,xQtZb,iSvg6e,m9oV,sy2z,RAnnUd,i5dxUd,sy2y,sy30,sy31,sy2e,etBPYb,i5H9N,SU9Rsf,sy32,sy33,sy34,sy35,sy2c,sy2f,PHUIyb,qNG0Fc,syu,syv,syz,qTnoBf,NJ1rfe,ywOR5c,sy37,sy38,sye,wg1P6b,EcW08c,sy3g,sy3h,t8tqF,eEDsnd,sy3w,sy3x,sy3u,sy3v,sy3r,sy3z,sy40,pc62j,qEW1W,oNFsLb,sy10,sy11,sys,RRzQxe,qddgKe,sy7l,SM1lmd,sy3p,sy3q,sy3l,sy3o,YV8yqd,sya,sy9,sy17,sy21,yyxWAc,sy0,sy1,sy7,sy2d,sy6,sy2b,sy2g,sy2a,sy28,sy2h,sy2i,sy1t,sy5v,syr,sy19,sy20,sy7c,syb,sy4n,sy74,sy18,fNFZH,sy7k,sy4t,sy2j,i16Xfc,sy4f,zJMuOc,RrXLpc,sy43,sy47,sy4a,sy4g,sy4h,sy4j,sy4k,sy4i,tCGzVe,Ej8J2c,odWSx,cgRV2c,sy1z,sy5b,o1L5Wb,X4BaPc,vVEdxc,sy4,sy5,sy4m,RQOkef,sy25,sy24,sy26,sy8,sy16,sy1v,sy1w,sy23,gaMBzf,sy75,sy27,fVuHhf,sy7a,j1RDQb,sy4p,sy4x,sy4w,sy4r,syg,sy4o,sy4s,syi,sy1s,sy46,sy4l,sy4q,sy4v,sy4y,Md9ENb",
+        "/_ext/www.gstatic.com/images/branding/productlogos/sites_2026/v3/ico/sites_2026_16dp.ico",
+        "/robots.txt",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53661%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864873537&errorSender_sendTimeMs=1794864873537&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53661%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864873542&errorSender_sendTimeMs=1794864873576&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53661%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864873543&errorSender_sendTimeMs=1794864873581&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53661%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864873546&errorSender_sendTimeMs=1794864873584&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53661%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864873547&errorSender_sendTimeMs=1794864873586&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53661%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AMd9ENb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AvVEdxc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864873547&errorSender_sendTimeMs=1794864873588&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53661%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864884408&errorSender_sendTimeMs=1794864884408&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53661%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864884413&errorSender_sendTimeMs=1794864884427&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53661%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864884414&errorSender_sendTimeMs=1794864884435&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53661%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864884416&errorSender_sendTimeMs=1794864884438&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53661%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864884417&errorSender_sendTimeMs=1794864884442&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53661%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AMd9ENb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AvVEdxc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864884418&errorSender_sendTimeMs=1794864884445&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53661%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Ao1L5Wb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AzJMuOc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AMd9ENb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AvVEdxc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864884478&errorSender_sendTimeMs=1794864884478&errorSenderType=MemoryErrorSender",
+        "/_/view/jserror?script=http%3A%2F%2F127.0.0.1%3A53661%2F&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Ao1L5Wb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AzJMuOc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AMd9ENb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AvVEdxc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aj1RDQb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARQOkef%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AX4BaPc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ARrXLpc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AfNFZH%24%24%3A%20Failed%20to%20construct%20%27URL%27%3A%20Invalid%20URL&line=Not%20available&errorSender_enqueueTimeMs=1794864884480&errorSender_sendTimeMs=1794864884482&errorSenderType=MemoryErrorSender"
+      ]
+    }
+  },
+  "deltas": {
+    "nota_performance": {
+      "original": 58,
+      "corrigido": 58,
+      "delta": 0
+    },
+    "nota_accessibility": {
+      "original": 90,
+      "corrigido": 90,
+      "delta": 0
+    },
+    "nota_best_practices": {
+      "original": 96,
+      "corrigido": 96,
+      "delta": 0
+    },
+    "nota_seo": {
+      "original": 45,
+      "corrigido": 45,
+      "delta": 0
+    },
+    "fcp_ms": {
+      "original": 5702.205835691882,
+      "corrigido": 5701.66027977842,
+      "delta": -0.5455559134625219
+    },
+    "lcp_ms": {
+      "original": 9632.823342767528,
+      "corrigido": 8316.64111911368,
+      "delta": -1316.1822236538483
+    },
+    "tbt_ms": {
+      "original": 192,
+      "corrigido": 200,
+      "delta": 8
+    },
+    "cls": {
+      "original": 0.0003655207758739723,
+      "corrigido": 0.05154110691815497,
+      "delta": 0.051175586142281
+    },
+    "speed_index_ms": {
+      "original": 5702.205835691882,
+      "corrigido": 5701.66027977842,
+      "delta": -0.5455559134625219
+    },
+    "peso_total_bytes": {
+      "original": 1398898,
+      "corrigido": 1219217,
+      "delta": -179681
+    },
+    "requisicoes": {
+      "original": 34,
+      "corrigido": 24,
+      "delta": -10
+    },
+    "indice_semantica": {
+      "original": 59.392712550607285,
+      "corrigido": 59.392712550607285,
+      "delta": 0
+    },
+    "indice_semantica_pesos_iguais": {
+      "original": 62.747252747252745,
+      "corrigido": 62.747252747252745,
+      "delta": 0
+    },
+    "sub_landmarks": {
+      "original": 75,
+      "corrigido": 75,
+      "delta": 0
+    },
+    "sub_titulos": {
+      "original": 50,
+      "corrigido": 50,
+      "delta": 0
+    },
+    "sub_imagens": {
+      "original": 0,
+      "corrigido": 0,
+      "delta": 0
+    },
+    "sub_campos": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    },
+    "sub_divSpan": {
+      "original": 14.230769230769235,
+      "corrigido": 14.230769230769235,
+      "delta": 0
+    },
+    "sub_metadados": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    },
+    "sub_interativos": {
+      "original": null,
+      "corrigido": null,
+      "delta": null
+    },
+    "sub_obsoletos": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    }
+  }
+}

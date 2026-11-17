@@ -1,0 +1,761 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T18:36:05.988Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12"
+    },
+    "gitCommit": "107f56e3ef3e38e7406db9e7ef9ab0d48a1ce060",
+    "gitDirty": true
+  },
+  "siteId": "agir.ufrn.br",
+  "contexto": {
+    "grupo": "framework-js",
+    "tecnologia": "framework-js",
+    "tipo": "unidade"
+  },
+  "recomendacoes": {
+    "total": 145,
+    "corrigidas": 136,
+    "corrigidasLlm": 0,
+    "llm": {
+      "prompt": "landmarks-v1",
+      "arquivo": "docs/prompts/landmarks-v1.md",
+      "sha256": "b19e8d1c3e0f0f5b100a0b4fc27d0e7d609945f7d6b19c65ed5e609bfbf4e31a",
+      "modelo": "claude-haiku-5-5",
+      "effort": "low",
+      "maxTokens": 4000,
+      "execucao": {
+        "siteId": "agir.ufrn.br",
+        "prompt": "landmarks-v1",
+        "promptSha256": "b19e8d1c3e0f0f5b100a0b4fc27d0e7d609945f7d6b19c65ed5e609bfbf4e31a",
+        "modelo": "claude-haiku-5-5",
+        "modeloResposta": "claude-haiku-5-5",
+        "respostaId": "msg_011Ch762pVTJguQh6imMnkez",
+        "chamada": true,
+        "motivo": null,
+        "ausentes": [
+          "main"
+        ],
+        "candidatos": 3,
+        "elegiveis": 3,
+        "stopReason": "end_turn",
+        "inputTokens": 1447,
+        "outputTokens": 151,
+        "custoUsd": 0.0002202,
+        "propostas": 0,
+        "validas": 0,
+        "rejeitadas": [],
+        "textoIgual": null,
+        "landmarksDepois": null,
+        "erro": null,
+        "duracaoMs": 3782
+      }
+    }
+  },
+  "parametros": {
+    "execucoesPorVariante": 3,
+    "formFactor": "mobile",
+    "throttlingMethod": "simulate",
+    "chromeFlagsExtras": [
+      "--host-resolver-rules=MAP * ~NOTFOUND, EXCLUDE 127.0.0.1"
+    ],
+    "userAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+    "relogioSemantica": "2026-11-09T19:22:59.574Z",
+    "relogioLighthouse": "real"
+  },
+  "ordem": [
+    {
+      "variante": "original",
+      "n": 1
+    },
+    {
+      "variante": "corrigido",
+      "n": 1
+    },
+    {
+      "variante": "original",
+      "n": 2
+    },
+    {
+      "variante": "corrigido",
+      "n": 2
+    },
+    {
+      "variante": "original",
+      "n": 3
+    },
+    {
+      "variante": "corrigido",
+      "n": 3
+    }
+  ],
+  "variantes": {
+    "original": {
+      "urlLocal": "http://127.0.0.1:54760/",
+      "execucoes": [
+        {
+          "n": 1,
+          "startedAt": "2026-11-16T18:46:20.841Z",
+          "durationMs": 10276,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 57,
+            "accessibility": 68,
+            "best-practices": 92,
+            "seo": 91
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:54760/",
+          "mainDocumentUrl": "http://127.0.0.1:54760/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2763.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 57,
+              "accessibility": 68,
+              "best-practices": 92,
+              "seo": 91
+            },
+            "fcpMs": 4427.308625000001,
+            "lcpMs": 14858.311050000002,
+            "tbtMs": 324.961725000001,
+            "cls": 0.001385761467477185,
+            "speedIndexMs": 4427.308625000001,
+            "pesoTotalBytes": 3301596,
+            "requisicoes": 102,
+            "jsNaoUsadoBytes": 147644,
+            "cssNaoUsadoBytes": 28626
+          }
+        },
+        {
+          "n": 2,
+          "startedAt": "2026-11-16T18:46:41.588Z",
+          "durationMs": 10242,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 57,
+            "accessibility": 68,
+            "best-practices": 92,
+            "seo": 91
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:54760/",
+          "mainDocumentUrl": "http://127.0.0.1:54760/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2604,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 57,
+              "accessibility": 68,
+              "best-practices": 92,
+              "seo": 91
+            },
+            "fcpMs": 4328.968344706877,
+            "lcpMs": 15085.686040944762,
+            "tbtMs": 326.09366894137565,
+            "cls": 0.001385761467477185,
+            "speedIndexMs": 4328.968344706877,
+            "pesoTotalBytes": 3301596,
+            "requisicoes": 102,
+            "jsNaoUsadoBytes": 147612,
+            "cssNaoUsadoBytes": 28626
+          }
+        },
+        {
+          "n": 3,
+          "startedAt": "2026-11-16T18:47:02.770Z",
+          "durationMs": 12136,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 53,
+            "accessibility": 68,
+            "best-practices": 92,
+            "seo": 91
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:54760/",
+          "mainDocumentUrl": "http://127.0.0.1:54760/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2720.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 53,
+              "accessibility": 68,
+              "best-practices": 92,
+              "seo": 91
+            },
+            "fcpMs": 4321.332397825319,
+            "lcpMs": 15244.196632171152,
+            "tbtMs": 437.5,
+            "cls": 0.001385761467477185,
+            "speedIndexMs": 4321.332397825319,
+            "pesoTotalBytes": 3301596,
+            "requisicoes": 103,
+            "jsNaoUsadoBytes": 145901,
+            "cssNaoUsadoBytes": 28626
+          }
+        }
+      ],
+      "mediana": {
+        "criterio": "nota-performance",
+        "n": 1
+      },
+      "metricas": {
+        "notas": {
+          "performance": 57,
+          "accessibility": 68,
+          "best-practices": 92,
+          "seo": 91
+        },
+        "fcpMs": 4427.308625000001,
+        "lcpMs": 14858.311050000002,
+        "tbtMs": 324.961725000001,
+        "cls": 0.001385761467477185,
+        "speedIndexMs": 4427.308625000001,
+        "pesoTotalBytes": 3301596,
+        "requisicoes": 102,
+        "jsNaoUsadoBytes": 147644,
+        "cssNaoUsadoBytes": 28626
+      },
+      "variacaoPerformance": {
+        "n": 3,
+        "min": 53,
+        "max": 57,
+        "amplitude": 4,
+        "media": 55.67,
+        "desvioPadrao": 2.31
+      },
+      "semantica": {
+        "status": "ok",
+        "indicadores": {
+          "divSpan": {
+            "div": 195,
+            "span": 53,
+            "total": 557,
+            "proporcao": 0.4452423698384201
+          },
+          "landmarks": {
+            "banner": 1,
+            "navigation": 2,
+            "main": 0,
+            "contentinfo": 1
+          },
+          "titulos": {
+            "total": 43,
+            "h1": 2,
+            "porNivel": [
+              2,
+              9,
+              2,
+              30,
+              0,
+              0
+            ],
+            "saltos": 6,
+            "maiorSalto": 3,
+            "primeiroNivel": 1
+          },
+          "estrutura": {
+            "article": 0,
+            "section": 12,
+            "aside": 0,
+            "figure": 0,
+            "ul": 4,
+            "ol": 0
+          },
+          "interativosFalsos": {
+            "comOnclick": 0,
+            "falsos": 0
+          },
+          "metadados": {
+            "lang": null,
+            "temTitle": true,
+            "titleComprimento": 54,
+            "temViewport": true,
+            "temDescription": true
+          },
+          "imagens": {
+            "total": 69,
+            "semAlt": 32,
+            "altVazio": 0,
+            "semAltComAlternativa": 0
+          },
+          "campos": {
+            "total": 2,
+            "semLabel": 2,
+            "semLabelComPlaceholderOuTitle": 2
+          },
+          "obsoletas": {
+            "roteiro": 0,
+            "whatwg": 0,
+            "porTag": {}
+          },
+          "tabelas": {
+            "total": 0,
+            "layoutDeclarada": 0,
+            "layoutHeuristica": 0,
+            "dados": 0,
+            "indeterminada": 0
+          }
+        },
+        "indice": {
+          "subnotas": {
+            "landmarks": 75,
+            "titulos": 42.85714285714286,
+            "imagens": 53.623188405797094,
+            "campos": 0,
+            "divSpan": 55.475763016158,
+            "metadados": 50,
+            "interativos": null,
+            "obsoletos": 100
+          },
+          "indice": 49.64471908833046,
+          "indicePesosIguais": 53.850870611299705
+        },
+        "networkidleTimeout": false
+      },
+      "faltasNoServidor": [
+        "/_nuxt/builds/meta/28d76c69-cd2b-4dd9-914a-bed079ec1a64.json",
+        "/_ext/www.google.com/g/collect?v=2&tid=G-5NE4MB39N2&gtm=45je6b61h2v9234314960za20czd9234314960xf4&_p=1794252179574&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=210933289.1794252180&frm=0&ngs=1&pscdl=noapi&rcb=3&sr=412x823&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4%7CHeadlessChrome%3B156.0.8078.4&uam=&uamb=1&uap=Windows&uapv=&uaw=0&ul=pt-br&_s=1&tag_exp=115938466~115938468~118012008~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121246026~121246034~123814183&sid=1794252179&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2F&dt=Centro%20de%20Inova%C3%A7%C3%A3o%20tecnol%C3%B3gica%20em%20Natal%2FRN%20%7C%20AGIR%20UFRN&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=252&gaf=1",
+        "/_ext/www.google.com/g/collect?v=2&tid=G-5NE4MB39N2&gtm=45je6b61h2v9234314960za20czd9234314960xf4&_p=1794854782821&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1597958061.1794854783&frm=0&ngs=1&pscdl=noapi&rcb=13&sr=412x823&uaa=&uab=&uafvl=&uam=moto%20g%20power%20(2022)&uamb=1&uap=Android&uapv=11.0&uaw=0&ul=pt-br&_s=1&tag_exp=115616986~115938465~115938468~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121246026~121246034~123814183&sid=1794854783&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2F&dt=Centro%20de%20Inova%C3%A7%C3%A3o%20tecnol%C3%B3gica%20em%20Natal%2FRN%20%7C%20AGIR%20UFRN&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=309&gaf=1",
+        "/favicon.ico",
+        "/robots.txt",
+        "/_nuxt/Btc9bULA.js",
+        "/_nuxt/Loading.wXLlon4t.css",
+        "/_nuxt/BbIPH271.js",
+        "/_nuxt/GlKinJbn.js",
+        "/_nuxt/time.DuuRDyk6.css",
+        "/_nuxt/sobre.DR1Qqesi.css",
+        "/_nuxt/6u3wsiga.js",
+        "/_nuxt/DtILPcOQ.js",
+        "/_nuxt/DpK-iTid.js",
+        "/_nuxt/propriedade-intelectual.C-Y3eBuh.css",
+        "/_nuxt/DV0qQlkB.js",
+        "/_nuxt/CH_ZsmxS.js",
+        "/_nuxt/transferencia-tecnologia.0lC7vk5W.css",
+        "/_nuxt/C5RY_pRt.js",
+        "/_nuxt/CwxSLgS2.js",
+        "/_nuxt/estimulo-parceria.B1A3tfJX.css",
+        "/_nuxt/apoio-a-startups.CycORdcE.css",
+        "/_nuxt/BreBd6UC.js",
+        "/_nuxt/lWQbLdxW.js",
+        "/_nuxt/index.Q-6hEdlm.css",
+        "/_nuxt/DNdd8lxf.js",
+        "/_nuxt/_slug_.B19TK42j.css",
+        "/_nuxt/BVGIrtkB.js",
+        "/_nuxt/MzWPFRqp.js",
+        "/_nuxt/SectionNewsletter.BN4jQvz3.css",
+        "/_nuxt/index.qn-llSK6.css",
+        "/_nuxt/BK1lipFy.js",
+        "/_nuxt/eventos.DORWfhPi.css",
+        "/_nuxt/DWeyy5Nu.js",
+        "/_nuxt/A6v1nqrl.js",
+        "/_nuxt/apoio-fomento-inovacao.CYABnkKu.css",
+        "/_nuxt/nQMDsEmb.js",
+        "/_ext/www.google.com/g/collect?v=2&tid=G-5NE4MB39N2&gtm=45je6b61h2v9234314960za20czd9234314960xf4&_p=1794854803587&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1069388016.1794854804&frm=0&ngs=1&pscdl=noapi&rcb=18&sr=412x823&uaa=&uab=&uafvl=&uam=moto%20g%20power%20(2022)&uamb=1&uap=Android&uapv=11.0&uaw=0&ul=pt-br&_s=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119793974~120213116~120385423~120412526~120420416~120469145~120469153~121246026~121246034~123329125~123814185&sid=1794854803&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2F&dt=Centro%20de%20Inova%C3%A7%C3%A3o%20tecnol%C3%B3gica%20em%20Natal%2FRN%20%7C%20AGIR%20UFRN&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=329&gaf=1",
+        "/_ext/www.google.com/g/collect?v=2&tid=G-5NE4MB39N2&gtm=45je6b61h2v9234314960za20czd9234314960xf4&_p=1794854824853&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1688950324.1794854825&frm=0&ngs=1&pscdl=noapi&rcb=16&sr=412x823&uaa=&uab=&uafvl=&uam=moto%20g%20power%20(2022)&uamb=1&uap=Android&uapv=11.0&uaw=0&ul=pt-br&_s=1&tag_exp=115616986~115938466~115938469~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121246026~121246034~123814185&sid=1794854825&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2F&dt=Centro%20de%20Inova%C3%A7%C3%A3o%20tecnol%C3%B3gica%20em%20Natal%2FRN%20%7C%20AGIR%20UFRN&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=344&gaf=1"
+      ]
+    },
+    "corrigido": {
+      "urlLocal": "http://127.0.0.1:54761/",
+      "execucoes": [
+        {
+          "n": 1,
+          "startedAt": "2026-11-16T18:46:31.117Z",
+          "durationMs": 10472,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 58,
+            "accessibility": 73,
+            "best-practices": 88,
+            "seo": 91
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:54761/",
+          "mainDocumentUrl": "http://127.0.0.1:54761/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2579.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 58,
+              "accessibility": 73,
+              "best-practices": 88,
+              "seo": 91
+            },
+            "fcpMs": 4427.245375,
+            "lcpMs": 14859.430575000002,
+            "tbtMs": 300.0000000000018,
+            "cls": 0.0007245227817827613,
+            "speedIndexMs": 4427.245375,
+            "pesoTotalBytes": 3099230,
+            "requisicoes": 83,
+            "jsNaoUsadoBytes": 147531,
+            "cssNaoUsadoBytes": 28626
+          }
+        },
+        {
+          "n": 2,
+          "startedAt": "2026-11-16T18:46:51.830Z",
+          "durationMs": 10940,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 59,
+            "accessibility": 73,
+            "best-practices": 88,
+            "seo": 91
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:54761/",
+          "mainDocumentUrl": "http://127.0.0.1:54761/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2705,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 59,
+              "accessibility": 73,
+              "best-practices": 88,
+              "seo": 91
+            },
+            "fcpMs": 4321.124218472045,
+            "lcpMs": 14936.045936054641,
+            "tbtMs": 251.5,
+            "cls": 0.0007245227817827613,
+            "speedIndexMs": 4321.124218472045,
+            "pesoTotalBytes": 3099230,
+            "requisicoes": 83,
+            "jsNaoUsadoBytes": 147527,
+            "cssNaoUsadoBytes": 28626
+          }
+        },
+        {
+          "n": 3,
+          "startedAt": "2026-11-16T18:47:14.906Z",
+          "durationMs": 12635,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 58,
+            "accessibility": 73,
+            "best-practices": 88,
+            "seo": 91
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:54761/",
+          "mainDocumentUrl": "http://127.0.0.1:54761/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2818.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 58,
+              "accessibility": 73,
+              "best-practices": 88,
+              "seo": 91
+            },
+            "fcpMs": 4430.625794161667,
+            "lcpMs": 14873.628335478998,
+            "tbtMs": 298.4999999999991,
+            "cls": 0.0007245227817827613,
+            "speedIndexMs": 4430.625794161667,
+            "pesoTotalBytes": 3099230,
+            "requisicoes": 83,
+            "jsNaoUsadoBytes": 147564,
+            "cssNaoUsadoBytes": 28626
+          }
+        }
+      ],
+      "mediana": {
+        "criterio": "nota-performance",
+        "n": 3
+      },
+      "metricas": {
+        "notas": {
+          "performance": 58,
+          "accessibility": 73,
+          "best-practices": 88,
+          "seo": 91
+        },
+        "fcpMs": 4430.625794161667,
+        "lcpMs": 14873.628335478998,
+        "tbtMs": 298.4999999999991,
+        "cls": 0.0007245227817827613,
+        "speedIndexMs": 4430.625794161667,
+        "pesoTotalBytes": 3099230,
+        "requisicoes": 83,
+        "jsNaoUsadoBytes": 147564,
+        "cssNaoUsadoBytes": 28626
+      },
+      "variacaoPerformance": {
+        "n": 3,
+        "min": 58,
+        "max": 59,
+        "amplitude": 1,
+        "media": 58.33,
+        "desvioPadrao": 0.58
+      },
+      "semantica": {
+        "status": "ok",
+        "indicadores": {
+          "divSpan": {
+            "div": 195,
+            "span": 53,
+            "total": 557,
+            "proporcao": 0.4452423698384201
+          },
+          "landmarks": {
+            "banner": 1,
+            "navigation": 2,
+            "main": 0,
+            "contentinfo": 1
+          },
+          "titulos": {
+            "total": 43,
+            "h1": 2,
+            "porNivel": [
+              2,
+              9,
+              2,
+              30,
+              0,
+              0
+            ],
+            "saltos": 6,
+            "maiorSalto": 3,
+            "primeiroNivel": 1
+          },
+          "estrutura": {
+            "article": 0,
+            "section": 12,
+            "aside": 0,
+            "figure": 0,
+            "ul": 4,
+            "ol": 0
+          },
+          "interativosFalsos": {
+            "comOnclick": 0,
+            "falsos": 0
+          },
+          "metadados": {
+            "lang": "pt-BR",
+            "temTitle": true,
+            "titleComprimento": 54,
+            "temViewport": true,
+            "temDescription": true
+          },
+          "imagens": {
+            "total": 69,
+            "semAlt": 32,
+            "altVazio": 0,
+            "semAltComAlternativa": 0
+          },
+          "campos": {
+            "total": 2,
+            "semLabel": 2,
+            "semLabelComPlaceholderOuTitle": 2
+          },
+          "obsoletas": {
+            "roteiro": 0,
+            "whatwg": 0,
+            "porTag": {}
+          },
+          "tabelas": {
+            "total": 0,
+            "layoutDeclarada": 0,
+            "layoutHeuristica": 0,
+            "dados": 0,
+            "indeterminada": 0
+          }
+        },
+        "indice": {
+          "subnotas": {
+            "landmarks": 75,
+            "titulos": 42.85714285714286,
+            "imagens": 53.623188405797094,
+            "campos": 0,
+            "divSpan": 55.475763016158,
+            "metadados": 100,
+            "interativos": null,
+            "obsoletos": 100
+          },
+          "indice": 54.907876983067304,
+          "indicePesosIguais": 60.99372775415685
+        },
+        "networkidleTimeout": false
+      },
+      "faltasNoServidor": [
+        "/_ext/www.google.com/g/collect?v=2&tid=G-5NE4MB39N2&gtm=45je6b61h2v9234314960za20czd9234314960xf4&_p=1794252179574&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=316164958.1794252180&frm=0&ngs=1&pscdl=noapi&rcb=12&sr=412x823&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4%7CHeadlessChrome%3B156.0.8078.4&uam=&uamb=1&uap=Windows&uapv=&uaw=0&ul=pt-br&_s=1&tag_exp=115616986~115938465~115938468~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121246026~121246034~123814183&sid=1794252179&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2F&dt=Centro%20de%20Inova%C3%A7%C3%A3o%20tecnol%C3%B3gica%20em%20Natal%2FRN%20%7C%20AGIR%20UFRN&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=194&gaf=1",
+        "/_ext/www.google.com/g/collect?v=2&tid=G-5NE4MB39N2&gtm=45je6b61h2v9234314960za20czd9234314960xf4&_p=1794854793035&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1329745110.1794854793&frm=0&ngs=1&pscdl=noapi&rcb=0&sr=412x823&uaa=&uab=&uafvl=&uam=moto%20g%20power%20(2022)&uamb=1&uap=Android&uapv=11.0&uaw=0&ul=pt-br&_s=1&tag_exp=115938465~115938468~118897920~118897930~119793973~120213116~120385423~120412526~120420416~120469145~120469153~121246026~121246034~123329123~123814183&sid=1794854793&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2F&dt=Centro%20de%20Inova%C3%A7%C3%A3o%20tecnol%C3%B3gica%20em%20Natal%2FRN%20%7C%20AGIR%20UFRN&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=335&gaf=1",
+        "/favicon.ico",
+        "/_nuxt/builds/meta/28d76c69-cd2b-4dd9-914a-bed079ec1a64.json",
+        "/robots.txt",
+        "/_nuxt/Btc9bULA.js",
+        "/_nuxt/Loading.wXLlon4t.css",
+        "/_nuxt/BbIPH271.js",
+        "/_nuxt/GlKinJbn.js",
+        "/_nuxt/time.DuuRDyk6.css",
+        "/_nuxt/sobre.DR1Qqesi.css",
+        "/_nuxt/6u3wsiga.js",
+        "/_nuxt/DtILPcOQ.js",
+        "/_nuxt/DpK-iTid.js",
+        "/_nuxt/DV0qQlkB.js",
+        "/_nuxt/propriedade-intelectual.C-Y3eBuh.css",
+        "/_nuxt/transferencia-tecnologia.0lC7vk5W.css",
+        "/_nuxt/estimulo-parceria.B1A3tfJX.css",
+        "/_nuxt/apoio-a-startups.CycORdcE.css",
+        "/_nuxt/CH_ZsmxS.js",
+        "/_nuxt/C5RY_pRt.js",
+        "/_nuxt/CwxSLgS2.js",
+        "/_nuxt/BreBd6UC.js",
+        "/_nuxt/lWQbLdxW.js",
+        "/_nuxt/index.Q-6hEdlm.css",
+        "/_nuxt/DNdd8lxf.js",
+        "/_nuxt/_slug_.B19TK42j.css",
+        "/_nuxt/BVGIrtkB.js",
+        "/_nuxt/MzWPFRqp.js",
+        "/_nuxt/SectionNewsletter.BN4jQvz3.css",
+        "/_nuxt/index.qn-llSK6.css",
+        "/_nuxt/BK1lipFy.js",
+        "/_nuxt/DWeyy5Nu.js",
+        "/_nuxt/eventos.DORWfhPi.css",
+        "/_nuxt/A6v1nqrl.js",
+        "/_nuxt/nQMDsEmb.js",
+        "/_nuxt/apoio-fomento-inovacao.CYABnkKu.css",
+        "/_ext/www.google.com/g/collect?v=2&tid=G-5NE4MB39N2&gtm=45je6b61h2v9234314960za20czd9234314960xf4&_p=1794854813759&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1751522347.1794854814&frm=0&ngs=1&pscdl=noapi&rcb=8&sr=412x823&uaa=&uab=&uafvl=&uam=moto%20g%20power%20(2022)&uamb=1&uap=Android&uapv=11.0&uaw=0&ul=pt-br&_s=1&tag_exp=115938465~115938469~118897920~118897930~120213116~120385422~120412526~120420414~120469145~120469153~121246026~121246034~123329123~123814185&sid=1794854814&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2F&dt=Centro%20de%20Inova%C3%A7%C3%A3o%20tecnol%C3%B3gica%20em%20Natal%2FRN%20%7C%20AGIR%20UFRN&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=305&gaf=1",
+        "/_ext/www.google.com/g/collect?v=2&tid=G-5NE4MB39N2&gtm=45je6b61h2v9234314960za20czd9234314960xf4&_p=1794854837038&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1887995973.1794854837&frm=0&ngs=1&pscdl=noapi&rcb=8&sr=412x823&uaa=&uab=&uafvl=&uam=moto%20g%20power%20(2022)&uamb=1&uap=Android&uapv=11.0&uaw=0&ul=pt-br&_s=1&tag_exp=115938466~115938468~118897920~118897930~120213116~120385422~120412526~120420416~120469145~120469153~121246026~121246034~123329123~123814185&sid=1794854837&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2F&dt=Centro%20de%20Inova%C3%A7%C3%A3o%20tecnol%C3%B3gica%20em%20Natal%2FRN%20%7C%20AGIR%20UFRN&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=344&gaf=1"
+      ]
+    }
+  },
+  "deltas": {
+    "nota_performance": {
+      "original": 57,
+      "corrigido": 58,
+      "delta": 1
+    },
+    "nota_accessibility": {
+      "original": 68,
+      "corrigido": 73,
+      "delta": 5
+    },
+    "nota_best_practices": {
+      "original": 92,
+      "corrigido": 88,
+      "delta": -4
+    },
+    "nota_seo": {
+      "original": 91,
+      "corrigido": 91,
+      "delta": 0
+    },
+    "fcp_ms": {
+      "original": 4427.308625000001,
+      "corrigido": 4430.625794161667,
+      "delta": 3.317169161666243
+    },
+    "lcp_ms": {
+      "original": 14858.311050000002,
+      "corrigido": 14873.628335478998,
+      "delta": 15.317285478995473
+    },
+    "tbt_ms": {
+      "original": 324.961725000001,
+      "corrigido": 298.4999999999991,
+      "delta": -26.461725000001934
+    },
+    "cls": {
+      "original": 0.001385761467477185,
+      "corrigido": 0.0007245227817827613,
+      "delta": -0.0006612386856944236
+    },
+    "speed_index_ms": {
+      "original": 4427.308625000001,
+      "corrigido": 4430.625794161667,
+      "delta": 3.317169161666243
+    },
+    "peso_total_bytes": {
+      "original": 3301596,
+      "corrigido": 3099230,
+      "delta": -202366
+    },
+    "requisicoes": {
+      "original": 102,
+      "corrigido": 83,
+      "delta": -19
+    },
+    "indice_semantica": {
+      "original": 49.64471908833046,
+      "corrigido": 54.907876983067304,
+      "delta": 5.2631578947368425
+    },
+    "indice_semantica_pesos_iguais": {
+      "original": 53.850870611299705,
+      "corrigido": 60.99372775415685,
+      "delta": 7.142857142857146
+    },
+    "sub_landmarks": {
+      "original": 75,
+      "corrigido": 75,
+      "delta": 0
+    },
+    "sub_titulos": {
+      "original": 42.85714285714286,
+      "corrigido": 42.85714285714286,
+      "delta": 0
+    },
+    "sub_imagens": {
+      "original": 53.623188405797094,
+      "corrigido": 53.623188405797094,
+      "delta": 0
+    },
+    "sub_campos": {
+      "original": 0,
+      "corrigido": 0,
+      "delta": 0
+    },
+    "sub_divSpan": {
+      "original": 55.475763016158,
+      "corrigido": 55.475763016158,
+      "delta": 0
+    },
+    "sub_metadados": {
+      "original": 50,
+      "corrigido": 100,
+      "delta": 50
+    },
+    "sub_interativos": {
+      "original": null,
+      "corrigido": null,
+      "delta": null
+    },
+    "sub_obsoletos": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    }
+  }
+}

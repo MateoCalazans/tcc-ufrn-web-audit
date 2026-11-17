@@ -1,0 +1,2036 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T21:05:15.459Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12",
+      "diff": "9.0.0",
+      "@anthropic-ai/sdk": "1.8.0"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "id": "lahmed.ce.ufrn.br",
+  "url": "https://www.lahmed.ce.ufrn.br/",
+  "fonte": {
+    "html": "index.html",
+    "codificacao": "utf-8",
+    "bom": false,
+    "har": true,
+    "lighthouse": "lh1.json",
+    "lighthouseVersion": "13.5.0"
+  },
+  "regras": [
+    {
+      "id": "html-lang",
+      "dimensao": "semantica",
+      "descricao": "O elemento <html> declara o idioma da página (atributo lang)."
+    },
+    {
+      "id": "meta-viewport",
+      "dimensao": "performance",
+      "descricao": "A página declara <meta name=\"viewport\"> adequada a telas móveis, sem bloquear o zoom."
+    },
+    {
+      "id": "img-dimensions",
+      "dimensao": "performance",
+      "descricao": "Toda <img> declara width e height, para o navegador reservar o espaço antes do download."
+    },
+    {
+      "id": "img-lazy",
+      "dimensao": "performance",
+      "descricao": "<img> depois das 3 primeiras do documento usa loading=\"lazy\" (exceto a imagem LCP)."
+    },
+    {
+      "id": "obsolete-tags",
+      "dimensao": "semantica",
+      "descricao": "Sem elementos obsoletos do WHATWG (center, font, marquee…); <font> simples vira <span style>."
+    },
+    {
+      "id": "heading-skip",
+      "dimensao": "semantica",
+      "descricao": "Títulos não pulam níveis ao descer na hierarquia (h1 → h3, por exemplo)."
+    },
+    {
+      "id": "fake-button",
+      "dimensao": "semantica",
+      "descricao": "Elementos clicáveis são <button>/<a>, não div/span com onclick."
+    },
+    {
+      "id": "render-blocking-hint",
+      "dimensao": "performance",
+      "descricao": "Scripts e folhas de estilo que o Lighthouse aponta como bloqueantes são adiados quando não são críticos."
+    },
+    {
+      "id": "landmarks-llm",
+      "dimensao": "semantica",
+      "descricao": "Landmarks ausentes propostos por LLM sobre <div>, <section> ou <article> existentes (landmarks-v2, claude-haiku-5-5)."
+    }
+  ],
+  "llm": {
+    "prompt": "landmarks-v2",
+    "arquivo": "docs/prompts/landmarks-v2.md",
+    "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+    "modelo": "claude-haiku-5-5",
+    "effort": "low",
+    "maxTokens": 4000,
+    "execucao": {
+      "siteId": "lahmed.ce.ufrn.br",
+      "prompt": "landmarks-v2",
+      "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "modeloResposta": "claude-haiku-5-5",
+      "respostaId": "msg_011Ch7J6AUTuRaGEFVja4K7M",
+      "chamada": true,
+      "motivo": null,
+      "ausentes": [
+        "main"
+      ],
+      "candidatos": 9,
+      "elegiveis": 9,
+      "stopReason": "end_turn",
+      "inputTokens": 2028,
+      "outputTokens": 150,
+      "custoUsd": 0.00027780000000000003,
+      "propostas": 0,
+      "validas": 0,
+      "rejeitadas": [],
+      "textoIgual": null,
+      "landmarksDepois": null,
+      "erro": null,
+      "duracaoMs": 2379
+    }
+  },
+  "resumo": {
+    "total": 42,
+    "corrigidas": 33,
+    "porRegra": {
+      "html-lang": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "meta-viewport": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "img-dimensions": {
+        "total": 33,
+        "corrigidas": 31
+      },
+      "img-lazy": {
+        "total": 2,
+        "corrigidas": 2
+      },
+      "obsolete-tags": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "heading-skip": {
+        "total": 1,
+        "corrigidas": 0
+      },
+      "fake-button": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "render-blocking-hint": {
+        "total": 6,
+        "corrigidas": 0
+      },
+      "landmarks-llm": {
+        "total": 0,
+        "corrigidas": 0
+      }
+    },
+    "porDimensao": {
+      "performance": 41,
+      "semantica": 1
+    }
+  },
+  "guardaImagens": {
+    "imagens": [
+      {
+        "recomendacao": "img-dimensions-1",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "mudou"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 175,
+              "altura": 35,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 601,
+              "altura": 35,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 250,
+              "altura": 50,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 601,
+              "altura": 50,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-2",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 412,
+              "altura": 258,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 412,
+              "altura": 258,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 675,
+              "altura": 422,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 675,
+              "altura": 422,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-3",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 412,
+              "altura": 258,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 412,
+              "altura": 258,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 675,
+              "altura": 422,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 675,
+              "altura": 422,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-4",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 388,
+              "altura": 259,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 388,
+              "altura": 259,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 546,
+              "altura": 365,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 546,
+              "altura": 365,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-5",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 308,
+              "altura": 114,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 308,
+              "altura": 114,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 308,
+              "altura": 114,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 308,
+              "altura": 114,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-6",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 32,
+              "altura": 37,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 32,
+              "altura": 37,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 32,
+              "altura": 37,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 32,
+              "altura": 37,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-7",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 35,
+              "altura": 36,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 35,
+              "altura": 36,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 35,
+              "altura": 36,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 35,
+              "altura": 36,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-8",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 35,
+              "altura": 36,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 35,
+              "altura": 36,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 35,
+              "altura": 36,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 35,
+              "altura": 36,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-9",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 388,
+              "altura": 325,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 388,
+              "altura": 325,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 546,
+              "altura": 458,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 546,
+              "altura": 458,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-10",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-11",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-12",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-13",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-14",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-15",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-16",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-17",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-18",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-19",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-20",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-21",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-22",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-23",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-24",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-25",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-26",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-27",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-28",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-29",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-30",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 240,
+              "altura": 200,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 216,
+              "altura": 200,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-31",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 412,
+              "altura": 951,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 412,
+              "altura": 951,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 1350,
+              "altura": 807,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 1350,
+              "altura": 807,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-33",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 80,
+              "altura": 26,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 80,
+              "altura": 26,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 80,
+              "altura": 26,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 80,
+              "altura": 26,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      }
+    ],
+    "mantidas": 31,
+    "desfeitas": 1,
+    "erro": null
+  },
+  "recommendations": [
+    {
+      "id": "img-dimensions-1",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/themes/lahmed-site/frontend-portal/dist/img/header/logo.png\" alt=\"logo\">",
+      "posicao": {
+        "linha": 149,
+        "coluna": 9
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"601\" height=\"120\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: mudou)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-2",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"section-banner__thumbnail\" src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2021/01/Banner-quem-somos-LAHMED-Laboratorio-de-Historia-e-Memoria-da-Educacao-768x576.jpg\" alt=\"Sobre o L…",
+      "posicao": {
+        "linha": 198,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"768\" height=\"576\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 28489,
+          "fim": 28489,
+          "texto": " width=\"768\" height=\"576\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-3",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"section-banner__thumbnail\" src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2023/04/Quem-Somos-pag-interna-LAHMED-Laboratorio-de-Historia-e-Memoria-da-Educacao-768x512.jpg\" alt=\"2º C…",
+      "posicao": {
+        "linha": 219,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"768\" height=\"512\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 29475,
+          "fim": 29475,
+          "texto": " width=\"768\" height=\"512\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-4",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2023/04/Quem-Somos-LAHMED-Laboratorio-de-Historia-e-Memoria-da-Educacao-768x513.jpg\" title=\"LAHMED\" alt=\"\" loading=\"lazy\" />",
+      "posicao": {
+        "linha": 255,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"768\" height=\"513\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 30916,
+          "fim": 30916,
+          "texto": " width=\"768\" height=\"513\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-5",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2023/03/logo-about.png\" title=\"LAHMED\" alt=\"\" loading=\"lazy\" />",
+      "posicao": {
+        "linha": 264,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"309\" height=\"114\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 31268,
+          "fim": 31268,
+          "texto": " width=\"309\" height=\"114\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-6",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2023/03/project-icon-01.png\" title=\"Ensino\" alt=\"\" loading=\"lazy\" />",
+      "posicao": {
+        "linha": 299,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"32\" height=\"37\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 33022,
+          "fim": 33022,
+          "texto": " width=\"32\" height=\"37\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-7",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2023/03/project-icon-02.png\" title=\"Pesquisa\" alt=\"\" loading=\"lazy\" />",
+      "posicao": {
+        "linha": 314,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"35\" height=\"36\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 33835,
+          "fim": 33835,
+          "texto": " width=\"35\" height=\"36\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-8",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2023/03/project-icon-03.png\" title=\"Extensão\" alt=\"\" loading=\"lazy\" />",
+      "posicao": {
+        "linha": 329,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"35\" height=\"36\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 34650,
+          "fim": 34650,
+          "texto": " width=\"35\" height=\"36\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-9",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2023/04/Acervo-LAHMED-Laboratorio-de-Historia-e-Memoria-da-Educacao.png\" title=\"Acervo\" alt=\"\" loading=\"lazy\" />",
+      "posicao": {
+        "linha": 359,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"600\" height=\"503\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 35662,
+          "fim": 35662,
+          "texto": " width=\"600\" height=\"503\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-10",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2023/03/em-breve.jpg\" title=\"Postagem 5\" alt=\"\" loading=\"lazy\" />",
+      "posicao": {
+        "linha": 396,
+        "coluna": 21
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"600\" height=\"600\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 37386,
+          "fim": 37386,
+          "texto": " width=\"600\" height=\"600\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-11",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2023/03/em-breve.jpg\" title=\"Postagem 4\" alt=\"\" loading=\"lazy\" />",
+      "posicao": {
+        "linha": 412,
+        "coluna": 21
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"600\" height=\"600\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 38110,
+          "fim": 38110,
+          "texto": " width=\"600\" height=\"600\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-12",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2023/03/em-breve.jpg\" title=\"Postagem 3\" alt=\"\" loading=\"lazy\" />",
+      "posicao": {
+        "linha": 428,
+        "coluna": 21
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"600\" height=\"600\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 38834,
+          "fim": 38834,
+          "texto": " width=\"600\" height=\"600\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-13",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2023/03/em-breve.jpg\" title=\"Postagem 2\" alt=\"\" loading=\"lazy\" />",
+      "posicao": {
+        "linha": 444,
+        "coluna": 21
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"600\" height=\"600\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 39558,
+          "fim": 39558,
+          "texto": " width=\"600\" height=\"600\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-14",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2023/03/em-breve.jpg\" title=\"Postagem 1\" alt=\"\" loading=\"lazy\" />",
+      "posicao": {
+        "linha": 460,
+        "coluna": 21
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"600\" height=\"600\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 40282,
+          "fim": 40282,
+          "texto": " width=\"600\" height=\"600\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-15",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2023/03/em-breve.jpg\" title=\"Notícia 05\" alt=\"\" loading=\"lazy\" />",
+      "posicao": {
+        "linha": 511,
+        "coluna": 21
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"600\" height=\"600\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 42093,
+          "fim": 42093,
+          "texto": " width=\"600\" height=\"600\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-16",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2023/03/em-breve.jpg\" title=\"Notícia 03\" alt=\"\" loading=\"lazy\" />",
+      "posicao": {
+        "linha": 527,
+        "coluna": 21
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"600\" height=\"600\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 42825,
+          "fim": 42825,
+          "texto": " width=\"600\" height=\"600\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-17",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2023/03/em-breve.jpg\" title=\"Notícia 04\" alt=\"\" loading=\"lazy\" />",
+      "posicao": {
+        "linha": 543,
+        "coluna": 21
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"600\" height=\"600\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 43557,
+          "fim": 43557,
+          "texto": " width=\"600\" height=\"600\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-18",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2023/03/em-breve.jpg\" title=\"Notícia 02\" alt=\"\" loading=\"lazy\" />",
+      "posicao": {
+        "linha": 559,
+        "coluna": 21
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"600\" height=\"600\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 44289,
+          "fim": 44289,
+          "texto": " width=\"600\" height=\"600\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-19",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2023/03/em-breve.jpg\" title=\"Notícia 101\" alt=\"\" loading=\"lazy\" />",
+      "posicao": {
+        "linha": 575,
+        "coluna": 21
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"600\" height=\"600\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 45022,
+          "fim": 45022,
+          "texto": " width=\"600\" height=\"600\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-20",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2023/04/Lahmed-imagem-aguarde-768x670.jpg\" title=\"2º Ciclo de Palestras do LAHMED\" alt=\"\" loading=\"lazy\" />",
+      "posicao": {
+        "linha": 626,
+        "coluna": 21
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"768\" height=\"670\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 46960,
+          "fim": 46960,
+          "texto": " width=\"768\" height=\"670\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-21",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2023/04/COHISME-2022-1-768x670.png\" title=\"VI Colóquio História e Memória da Educação no Rio Grande do Norte &#8211; ISSN 2526-8147\" alt=\"\" …",
+      "posicao": {
+        "linha": 642,
+        "coluna": 21
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"768\" height=\"670\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 47880,
+          "fim": 47880,
+          "texto": " width=\"768\" height=\"670\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-22",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2023/04/Lahmed-imagem-aguarde-768x670.jpg\" title=\"1º Ciclo de Palestras do LAHMED\" alt=\"\" loading=\"lazy\" />",
+      "posicao": {
+        "linha": 658,
+        "coluna": 21
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"768\" height=\"670\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 48747,
+          "fim": 48747,
+          "texto": " width=\"768\" height=\"670\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-23",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2023/04/e-historia-da-educacao-768x670.png\" title=\"e-história da educação\" alt=\"\" loading=\"lazy\" />",
+      "posicao": {
+        "linha": 674,
+        "coluna": 21
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"768\" height=\"670\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 49551,
+          "fim": 49551,
+          "texto": " width=\"768\" height=\"670\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-24",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2023/04/COHISME-2021-2-1-768x670.png\" title=\"V Colóquio História e Memória da Educação no Rio Grande do Norte &#8211; ISSN 2526-8147\" alt=\"\"…",
+      "posicao": {
+        "linha": 690,
+        "coluna": 21
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"768\" height=\"670\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 50459,
+          "fim": 50459,
+          "texto": " width=\"768\" height=\"670\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-25",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2023/04/100-anos-da-criacao-da-Revista-Pedagogium-LAHMED-768x670.png\" title=\"100 anos da criação da Revista Pedagogium\" alt=\"\" loading=\"lazy…",
+      "posicao": {
+        "linha": 706,
+        "coluna": 21
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"768\" height=\"670\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 51344,
+          "fim": 51344,
+          "texto": " width=\"768\" height=\"670\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-26",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2023/04/O-que-sao-os-fundamentos-da-educacao-LAHMED-768x670.png\" title=\"Fundamentos da Educação ao Vivo\" alt=\"\" loading=\"lazy\" />",
+      "posicao": {
+        "linha": 722,
+        "coluna": 21
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"768\" height=\"670\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 52203,
+          "fim": 52203,
+          "texto": " width=\"768\" height=\"670\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-27",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2023/04/Lahmed-imagem-aguarde-768x670.jpg\" title=\"IV Colóquio História e Memória da Educação no Rio Grande do Norte &#8211; ISSN 2526-8147\" …",
+      "posicao": {
+        "linha": 738,
+        "coluna": 21
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"768\" height=\"670\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 53120,
+          "fim": 53120,
+          "texto": " width=\"768\" height=\"670\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-28",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2023/04/Lahmed-imagem-aguarde-768x670.jpg\" title=\"III Colóquio História e Memória da Educação no Rio Grande do Norte &#8211; ISSN 2526-8147\"…",
+      "posicao": {
+        "linha": 754,
+        "coluna": 21
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"768\" height=\"670\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 54065,
+          "fim": 54065,
+          "texto": " width=\"768\" height=\"670\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-29",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2023/04/Lahmed-imagem-aguarde-768x670.jpg\" title=\"II Colóquio História e Memória da Educação no Rio Grande do Norte &#8211; ISSN 2526-8147\" …",
+      "posicao": {
+        "linha": 770,
+        "coluna": 21
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"768\" height=\"670\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 55007,
+          "fim": 55007,
+          "texto": " width=\"768\" height=\"670\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-30",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2023/04/Lahmed-imagem-aguarde-768x670.jpg\" title=\"I Colóquio História e Memória da Educação no Rio Grande do Norte &#8211; ISSN 2526-8147\" a…",
+      "posicao": {
+        "linha": 786,
+        "coluna": 21
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"768\" height=\"670\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 55946,
+          "fim": 55946,
+          "texto": " width=\"768\" height=\"670\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-31",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"parallax parallax-bg\" src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2023/04/Fale-Conosco-LAHMED-Laboratorio-de-Historia-e-Memoria-da-Educacao.jpg\" alt=\"Contato\" data-rellax-percen…",
+      "posicao": {
+        "linha": 829,
+        "coluna": 9
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1500\" height=\"1004\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 57312,
+          "fim": 57312,
+          "texto": " width=\"1500\" height=\"1004\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-32",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/themes/lahmed-site/frontend-portal/dist/img/footer/logo-footer.png\" alt=\"logo\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 856,
+        "coluna": 11
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-33",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/themes/lahmed-site/frontend-portal/dist/img/footer/interativa.png\" alt=\"Site desenvolvido pela Interativa Digital\" title=\"Interativa Digital - Desde…",
+      "posicao": {
+        "linha": 907,
+        "coluna": 11
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"80\" height=\"26\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 61641,
+          "fim": 61641,
+          "texto": " width=\"80\" height=\"26\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-1",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"parallax parallax-bg\" src=\"https://www.lahmed.ce.ufrn.br/wp-content/uploads/2023/04/Fale-Conosco-LAHMED-Laboratorio-de-Historia-e-Memoria-da-Educacao.jpg\" alt=\"Contato\" data-rellax-percen…",
+      "posicao": {
+        "linha": 829,
+        "coluna": 9
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "31ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 57063,
+          "fim": 57063,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-2",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://www.lahmed.ce.ufrn.br/wp-content/themes/lahmed-site/frontend-portal/dist/img/footer/interativa.png\" alt=\"Site desenvolvido pela Interativa Digital\" title=\"Interativa Digital - Desde…",
+      "posicao": {
+        "linha": 907,
+        "coluna": 11
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "33ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 61390,
+          "fim": 61390,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "heading-skip-1",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h4 class=\"section-projects__title\">",
+      "posicao": {
+        "linha": 307,
+        "coluna": 23
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 2 para o nível 4: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h3 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-1",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link href=\"https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ita…",
+      "posicao": {
+        "linha": 9,
+        "coluna": 3
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (1079 ms de bloqueio, 1.1 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-2",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script src=\"https://kit.fontawesome.com/a86158e74e.js\" crossorigin=\"anonymous\">",
+      "posicao": {
+        "linha": 11,
+        "coluna": 3
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (966 ms de bloqueio, 0.0 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-3",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='styles-theme-css' href='https://www.lahmed.ce.ufrn.br/wp-content/themes/lahmed-site/frontend-portal/dist/css/style.min.css?ver=7.1.4' media='all' />",
+      "posicao": {
+        "linha": 33,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (1694 ms de bloqueio, 67.9 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-4",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='contact-form-7-css' href='https://www.lahmed.ce.ufrn.br/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.2.4.1' media='all' />",
+      "posicao": {
+        "linha": 65,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (642 ms de bloqueio, 4.2 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-5",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script id=\"jquery-core-js\" src=\"https://www.lahmed.ce.ufrn.br/wp-includes/js/jquery/jquery.min.js?ver=3.7.1\">",
+      "posicao": {
+        "linha": 66,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (1694 ms de bloqueio, 33.0 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-6",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script id=\"jquery-migrate-js\" src=\"https://www.lahmed.ce.ufrn.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1\">",
+      "posicao": {
+        "linha": 67,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (853 ms de bloqueio, 8.1 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    }
+  ]
+}

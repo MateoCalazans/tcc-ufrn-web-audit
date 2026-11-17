@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html class='v2' dir='ltr' lang='pt-BR' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<link href='https://www.blogger.com/static/v1/widgets/2872013778-css_bundle_v2.css' rel='stylesheet' type='text/css'/>
+<meta content='width=1100' name='viewport'/>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<meta content='blogger' name='generator'/>
+<link href='https://xifncis.ufrn.br/favicon.ico' rel='icon' type='image/x-icon'/>
+<link href='https://xifncis.ufrn.br/2024/08/programacao-oficial.html' rel='canonical'/>
+<link rel="alternate" type="application/atom+xml" title="XI FNCIS - Atom" href="https://xifncis.ufrn.br/feeds/posts/default" />
+<link rel="alternate" type="application/rss+xml" title="XI FNCIS - RSS" href="https://xifncis.ufrn.br/feeds/posts/default?alt=rss" />
+<link rel="service.post" type="application/atom+xml" title="XI FNCIS - Atom" href="https://www.blogger.com/feeds/7145282250848128187/posts/default" />
+
+<link rel="alternate" type="application/atom+xml" title="XI FNCIS - Atom" href="https://xifncis.ufrn.br/feeds/1278315494471339393/comments/default" />
+<!--Can't find substitution for tag [blog.ieCssRetrofitLinks]-->
+<link href='https://lh7-rt.googleusercontent.com/docsz/AD_4nXe3FHUlEwAsIZrd6CVYln-jZ-Z4mS11IQVQkKrubLvyFaOmnmqPniLEK7wCqPKRUAvRorQRPEx2-Q6zEpfy_A-dg8Db0pCTkLwXwksJv4mLbiXxlUi0jCMNNS0lQ23avleVyrGgC3Nc7S55DJqQ9fpXoA39wgUbwP3ZajYQQhq6dEqelhEH4h8?key=SbS7NvkwEudaujZTWyFVyA' rel='image_src'/>
+<meta content='https://xifncis.ufrn.br/2024/08/programacao-oficial.html' property='og:url'/>
+<meta content='XI FNCIS' property='og:title'/>
+<meta content='UNIVERSIDADE FEDERAL DO RIO GRANDE DO NORTE COMISSÃO INTERNA DE SUPERVISÃO (CIS) XI FÓRUM NACIONAL DAS COMISSÕES INTERNAS DE SUPERVISÃO (FNC...' property='og:description'/>
+<meta content='https://lh7-rt.googleusercontent.com/docsz/AD_4nXe3FHUlEwAsIZrd6CVYln-jZ-Z4mS11IQVQkKrubLvyFaOmnmqPniLEK7wCqPKRUAvRorQRPEx2-Q6zEpfy_A-dg8Db0pCTkLwXwksJv4mLbiXxlUi0jCMNNS0lQ23avleVyrGgC3Nc7S55DJqQ9fpXoA39wgUbwP3ZajYQQhq6dEqelhEH4h8=w1200-h630-p-k-no-nu?key=SbS7NvkwEudaujZTWyFVyA' property='og:image'/>
+<title>XI FNCIS</title>
+<style id='page-skin-1' type='text/css'><!--
+/*
+-----------------------------------------------
+Blogger Template Style
+Name:     Travel
+Designer: Sookhee Lee
+URL:      www.plyfly.net
+----------------------------------------------- */
+/* Variable definitions
+====================
+<Variable name="keycolor" description="Main Color" type="color" default="#539bcd"/>
+<Group description="Page Text" selector="body">
+<Variable name="body.font" description="Font" type="font"
+default="normal normal 13px 'Trebuchet MS',Trebuchet,sans-serif"/>
+<Variable name="body.text.color" description="Text Color" type="color" default="#bbbbbb"/>
+</Group>
+<Group description="Backgrounds" selector=".body-fauxcolumns-outer">
+<Variable name="body.background.color" description="Outer Background" type="color" default="#539bcd"/>
+<Variable name="content.background.color" description="Main Background" type="color" default="transparent"/>
+</Group>
+<Group description="Links" selector=".main-outer">
+<Variable name="link.color" description="Link Color" type="color" default="#ff9900"/>
+<Variable name="link.visited.color" description="Visited Color" type="color" default="#b87209"/>
+<Variable name="link.hover.color" description="Hover Color" type="color" default="#ff9900"/>
+</Group>
+<Group description="Blog Title" selector=".header h1">
+<Variable name="header.font" description="Font" type="font"
+default="normal normal 60px 'Trebuchet MS',Trebuchet,sans-serif"/>
+<Variable name="header.text.color" description="Text Color" type="color" default="#ffffff" />
+</Group>
+<Group description="Blog Description" selector=".header .description">
+<Variable name="description.text.color" description="Description Color" type="color"
+default="#000000" />
+</Group>
+<Group description="Tabs Text" selector=".tabs-inner .widget li a">
+<Variable name="tabs.font" description="Font" type="font"
+default="normal bold 16px 'Trebuchet MS',Trebuchet,sans-serif"/>
+<Variable name="tabs.text.color" description="Text Color" type="color" default="#ffffff"/>
+<Variable name="tabs.selected.text.color" description="Selected Color" type="color" default="#ffffff"/>
+</Group>
+<Group description="Tabs Background" selector=".tabs-outer .PageList">
+<Variable name="tabs.background.color" description="Background Color" type="color" default="transparent"/>
+<Variable name="tabs.selected.background.color" description="Selected Color" type="color" default="transparent"/>
+</Group>
+<Group description="Date Header" selector=".main-inner h2.date-header">
+<Variable name="date.font" description="Font" type="font"
+default="normal normal 14px 'Trebuchet MS',Trebuchet,sans-serif"/>
+<Variable name="date.text.color" description="Text Color" type="color" default="#000000"/>
+</Group>
+<Group description="Post Title" selector="h3.post-title a">
+<Variable name="post.title.font" description="Font" type="font"
+default="normal bold 20px 'Trebuchet MS',Trebuchet,sans-serif"/>
+<Variable name="post.title.text.color" description="Text Color" type="color"
+default="#ffffff"/>
+</Group>
+<Group description="Post Background" selector=".column-center-inner">
+<Variable name="post.background.color" description="Background Color" type="color"
+default="transparent"/>
+<Variable name="post.background.url" description="Post Background URL" type="url" default="none"/>
+</Group>
+<Group description="Gadget Title Color" selector="h2">
+<Variable name="widget.title.font" description="Font" type="font"
+default="normal bold 14px 'Trebuchet MS',Trebuchet,sans-serif"/>
+<Variable name="widget.title.text.color" description="Title Color" type="color" default="#ffffff"/>
+</Group>
+<Group description="Gadget Text" selector=".footer-inner .widget, .sidebar .widget">
+<Variable name="widget.font" description="Font" type="font"
+default="normal normal 13px 'Trebuchet MS',Trebuchet,sans-serif"/>
+<Variable name="widget.text.color" description="Text Color" type="color" default="#000000"/>
+</Group>
+<Group description="Gadget Links" selector=".sidebar .widget">
+<Variable name="widget.link.color" description="Link Color" type="color" default="#000000"/>
+<Variable name="widget.link.visited.color" description="Visited Color" type="color" default="#092bb5"/>
+<Variable name="widget.alternate.text.color" description="Alternate Color" type="color" default="#ffffff"/>
+</Group>
+<Group description="Sidebar Background" selector=".column-left-inner .column-right-inner">
+<Variable name="widget.outer.background.color" description="Background Color" type="color" default="transparent" />
+<Variable name="widget.border.bevel.color" description="Bevel Color" type="color" default="transparent" />
+</Group>
+<Variable name="body.background" description="Body Background" type="background"
+color="#B51200" default="$(color) none repeat-x scroll top center"/>
+<Variable name="content.background" description="Content Background" type="background"
+color="transparent" default="$(color) none repeat scroll top center"/>
+<Variable name="comments.background" description="Comments Background" type="background"
+default="#cccccc none repeat scroll top center"/>
+<Variable name="content.imageBorder.top.space" description="Content Image Border Top Space" type="length" default="0" min="0" max="100px"/>
+<Variable name="content.imageBorder.top" description="Content Image Border Top" type="url" default="none"/>
+<Variable name="content.margin" description="Content Margin Top" type="length" default="20px" min="0" max="100px"/>
+<Variable name="content.padding" description="Content Padding" type="length" default="20px" min="0" max="100px"/>
+<Variable name="content.posts.padding" description="Posts Content Padding" type="length" default="10px" min="0" max="100px"/>
+<Variable name="tabs.background.gradient" description="Tabs Background Gradient" type="url"
+default="url(https://resources.blogblog.com/blogblog/data/1kt/travel/bg_black_50.png)"/>
+<Variable name="tabs.selected.background.gradient" description="Tabs Selected Background Gradient" type="url"
+default="url(https://resources.blogblog.com/blogblog/data/1kt/travel/bg_black_50.png)"/>
+<Variable name="widget.outer.background.gradient" description="Sidebar Gradient" type="url"
+default="url(https://resources.blogblog.com/blogblog/data/1kt/travel/bg_black_50.png)"/>
+<Variable name="footer.background.gradient" description="Footer Background Gradient" type="url" default="none"/>
+<Variable name="mobile.background.overlay" description="Mobile Background Overlay" type="string"
+default="transparent none repeat scroll top left"/>
+<Variable name="mobile.button.color" description="Mobile Button Color" type="color" default="#ffffff" />
+<Variable name="startSide" description="Side where text starts in blog language" type="automatic" default="left"/>
+<Variable name="endSide" description="Side where text ends in blog language" type="automatic" default="right"/>
+*/
+/* Content
+----------------------------------------------- */
+body {
+word-wrap: break-word;
+overflow-wrap: break-word;
+font: normal normal 13px 'Trebuchet MS',Trebuchet,sans-serif;
+color: #000000;
+background: #f9edbe url(https://blogger.googleusercontent.com/img/a/AVvXsEgk0MTLH8ircPVQ22L9cnvMpUOCEiOqUNrakGenS1rH25bQC5g7u0QRIDau7NcApCV0FznQCywZV_eClFw8NTostHdVYdzAKKC_7fdQODlv-A_F7qloWDbCsfcyw04bsmOJ1hrLV9YgzLzvKTYVBchlIEaCUu_QFsda_fJ7FdHLUVVwl9FjlSsvBloOs9wt=s1600) no-repeat fixed top center;
+}
+html body .region-inner {
+min-width: 0;
+max-width: 100%;
+width: auto;
+}
+a:link {
+text-decoration:none;
+color: #0033fd;
+}
+a:visited {
+text-decoration:none;
+color: #092bb5;
+}
+a:hover {
+text-decoration:underline;
+color: #0033fd;
+}
+.container, .content-outer, .main-inner {
+max-width: 100%;
+width: auto;
+}
+.content-outer .content-cap-top {
+height: 0;
+background: transparent none repeat-x scroll top center;
+}
+.content-outer {
+margin: 0 auto;
+padding-top: 0;
+}
+.content-inner {
+background: transparent none repeat-x scroll top center;
+background-position: left -0;
+background-color: transparent;
+padding: 30px;
+}
+.main-inner .date-outer {
+margin-bottom: 2em;
+}
+/* Header
+----------------------------------------------- */
+.header-inner .Header .titlewrapper,
+.header-inner .Header .descriptionwrapper {
+padding-left: 10px;
+padding-right: 10px;
+}
+.Header h1 {
+font: normal normal 60px 'Trebuchet MS',Trebuchet,sans-serif;
+color: #000000;
+}
+.Header h1 a {
+color: #000000;
+}
+.Header .description {
+color: #666666;
+font-size: 130%;
+}
+/* Tabs
+----------------------------------------------- */
+.tabs-inner {
+margin: 1em 0 0;
+padding: 0;
+}
+.tabs-inner .section {
+margin: 0;
+}
+.tabs-inner .widget ul {
+padding: 0;
+background: rgba(0,0,0,0) url(https://resources.blogblog.com/blogblog/data/1kt/travel/bg_black_50.png) repeat scroll top center;
+}
+.tabs-inner .widget li {
+border: none;
+}
+.tabs-inner .widget li a {
+display: inline-block;
+padding: 1em 1.5em;
+color: #ffffff;
+font: normal bold 16px 'Trebuchet MS',Trebuchet,sans-serif;
+}
+.tabs-inner .widget li.selected a,
+.tabs-inner .widget li a:hover {
+position: relative;
+z-index: 1;
+background: rgba(0,0,0,0) url(https://resources.blogblog.com/blogblog/data/1kt/travel/bg_black_50.png) repeat scroll top center;
+color: #ffffff;
+}
+/* Headings
+----------------------------------------------- */
+h2 {
+font: normal bold 14px 'Trebuchet MS',Trebuchet,sans-serif;
+color: #ffffff;
+}
+.main-inner h2.date-header {
+font: normal normal 14px 'Trebuchet MS',Trebuchet,sans-serif;
+color: #666666;
+}
+.footer-inner .widget h2,
+.sidebar .widget h2 {
+padding-bottom: .5em;
+}
+/* Main
+----------------------------------------------- */
+.main-inner {
+padding: 30px 0;
+}
+.main-inner .column-center-inner {
+padding: 20px 0;
+}
+.main-inner .column-center-inner .section {
+margin: 0 20px;
+}
+.main-inner .column-right-inner {
+margin-left: 30px;
+}
+.main-inner .fauxcolumn-right-outer .fauxcolumn-inner {
+margin-left: 30px;
+background: rgba(0,0,0,0) url(https://resources.blogblog.com/blogblog/data/1kt/travel/bg_black_50.png) repeat scroll top left;
+}
+.main-inner .column-left-inner {
+margin-right: 30px;
+}
+.main-inner .fauxcolumn-left-outer .fauxcolumn-inner {
+margin-right: 30px;
+background: rgba(0,0,0,0) url(https://resources.blogblog.com/blogblog/data/1kt/travel/bg_black_50.png) repeat scroll top left;
+}
+.main-inner .column-left-inner,
+.main-inner .column-right-inner {
+padding: 15px 0;
+}
+/* Posts
+----------------------------------------------- */
+h3.post-title {
+margin-top: 20px;
+}
+h3.post-title a {
+font: normal bold 20px 'Trebuchet MS',Trebuchet,sans-serif;
+color: #000000;
+}
+h3.post-title a:hover {
+text-decoration: underline;
+}
+.main-inner .column-center-outer {
+background: #ffffff none repeat scroll top left;
+_background-image: none;
+}
+.post-body {
+line-height: 1.4;
+position: relative;
+}
+.post-header {
+margin: 0 0 1em;
+line-height: 1.6;
+}
+.post-footer {
+margin: .5em 0;
+line-height: 1.6;
+}
+#blog-pager {
+font-size: 140%;
+}
+#comments {
+background: #cccccc none repeat scroll top center;
+padding: 15px;
+}
+#comments .comment-author {
+padding-top: 1.5em;
+}
+#comments h4,
+#comments .comment-author a,
+#comments .comment-timestamp a {
+color: #000000;
+}
+#comments .comment-author:first-child {
+padding-top: 0;
+border-top: none;
+}
+.avatar-image-container {
+margin: .2em 0 0;
+}
+/* Comments
+----------------------------------------------- */
+#comments a {
+color: #000000;
+}
+.comments .comments-content .icon.blog-author {
+background-repeat: no-repeat;
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB9sLFwMeCjjhcOMAAAD+SURBVDjLtZSvTgNBEIe/WRRnm3U8RC1neQdsm1zSBIU9VVF1FkUguQQsD9ITmD7ECZIJSE4OZo9stoVjC/zc7ky+zH9hXwVwDpTAWWLrgS3QAe8AZgaAJI5zYAmc8r0G4AHYHQKVwII8PZrZFsBFkeRCABYiMh9BRUhnSkPTNCtVXYXURi1FpBDgArj8QU1eVXUzfnjv7yP7kwu1mYrkWlU33vs1QNu2qU8pwN0UpKoqokjWwCztrMuBhEhmh8bD5UDqur75asbcX0BGUB9/HAMB+r32hznJgXy2v0sGLBcyAJ1EK3LFcbo1s91JeLwAbwGYu7TP/3ZGfnXYPgAVNngtqatUNgAAAABJRU5ErkJggg==);
+}
+.comments .comments-content .loadmore a {
+border-top: 1px solid #000000;
+border-bottom: 1px solid #000000;
+}
+.comments .comment-thread.inline-thread {
+background: #ffffff;
+}
+.comments .continue {
+border-top: 2px solid #000000;
+}
+/* Widgets
+----------------------------------------------- */
+.sidebar .widget {
+border-bottom: 2px solid rgba(0,0,0,0);
+padding-bottom: 10px;
+margin: 10px 0;
+}
+.sidebar .widget:first-child {
+margin-top: 0;
+}
+.sidebar .widget:last-child {
+border-bottom: none;
+margin-bottom: 0;
+padding-bottom: 0;
+}
+.footer-inner .widget,
+.sidebar .widget {
+font: normal normal 13px 'Trebuchet MS',Trebuchet,sans-serif;
+color: #ffffff;
+}
+.sidebar .widget a:link {
+color: #ffffff;
+text-decoration: none;
+}
+.sidebar .widget a:visited {
+color: #ffffff;
+}
+.sidebar .widget a:hover {
+color: #ffffff;
+text-decoration: underline;
+}
+.footer-inner .widget a:link {
+color: #0033fd;
+text-decoration: none;
+}
+.footer-inner .widget a:visited {
+color: #092bb5;
+}
+.footer-inner .widget a:hover {
+color: #0033fd;
+text-decoration: underline;
+}
+.widget .zippy {
+color: #ffffff;
+}
+.footer-inner {
+background: transparent url(https://resources.blogblog.com/blogblog/data/1kt/travel/bg_black_50.png) repeat scroll top center;
+}
+/* Mobile
+----------------------------------------------- */
+body.mobile  {
+background-size: 100% auto;
+}
+body.mobile .AdSense {
+margin: 0 -10px;
+}
+.mobile .body-fauxcolumn-outer {
+background: transparent none repeat scroll top left;
+}
+.mobile .footer-inner .widget a:link {
+color: #ffffff;
+text-decoration: none;
+}
+.mobile .footer-inner .widget a:visited {
+color: #ffffff;
+}
+.mobile-post-outer a {
+color: #000000;
+}
+.mobile-link-button {
+background-color: #0033fd;
+}
+.mobile-link-button a:link, .mobile-link-button a:visited {
+color: #ffffff;
+}
+.mobile-index-contents {
+color: #000000;
+}
+.mobile .tabs-inner .PageList .widget-content {
+background: rgba(0,0,0,0) url(https://resources.blogblog.com/blogblog/data/1kt/travel/bg_black_50.png) repeat scroll top center;
+color: #ffffff;
+}
+.mobile .tabs-inner .PageList .widget-content .pagelist-arrow {
+border-left: 1px solid #ffffff;
+}
+
+--></style>
+<style id='template-skin-1' type='text/css'><!--
+body {
+min-width: 1049px;
+}
+.content-outer, .content-fauxcolumn-outer, .region-inner {
+min-width: 1049px;
+max-width: 1049px;
+_width: 1049px;
+}
+.main-inner .columns {
+padding-left: 0;
+padding-right: 310px;
+}
+.main-inner .fauxcolumn-center-outer {
+left: 0;
+right: 310px;
+/* IE6 does not respect left and right together */
+_width: expression(this.parentNode.offsetWidth -
+parseInt("0") -
+parseInt("310px") + 'px');
+}
+.main-inner .fauxcolumn-left-outer {
+width: 0;
+}
+.main-inner .fauxcolumn-right-outer {
+width: 310px;
+}
+.main-inner .column-left-outer {
+width: 0;
+right: 100%;
+margin-left: -0;
+}
+.main-inner .column-right-outer {
+width: 310px;
+margin-right: -310px;
+}
+#layout {
+min-width: 0;
+}
+#layout .content-outer {
+min-width: 0;
+width: 800px;
+}
+#layout .region-inner {
+min-width: 0;
+width: auto;
+}
+body#layout div.add_widget {
+padding: 8px;
+}
+body#layout div.add_widget a {
+margin-left: 32px;
+}
+--></style>
+<style>
+    body {background-image:url(https\:\/\/blogger.googleusercontent.com\/img\/a\/AVvXsEgk0MTLH8ircPVQ22L9cnvMpUOCEiOqUNrakGenS1rH25bQC5g7u0QRIDau7NcApCV0FznQCywZV_eClFw8NTostHdVYdzAKKC_7fdQODlv-A_F7qloWDbCsfcyw04bsmOJ1hrLV9YgzLzvKTYVBchlIEaCUu_QFsda_fJ7FdHLUVVwl9FjlSsvBloOs9wt=s1600);}
+    
+@media (max-width: 200px) { body {background-image:url(https\:\/\/blogger.googleusercontent.com\/img\/a\/AVvXsEgk0MTLH8ircPVQ22L9cnvMpUOCEiOqUNrakGenS1rH25bQC5g7u0QRIDau7NcApCV0FznQCywZV_eClFw8NTostHdVYdzAKKC_7fdQODlv-A_F7qloWDbCsfcyw04bsmOJ1hrLV9YgzLzvKTYVBchlIEaCUu_QFsda_fJ7FdHLUVVwl9FjlSsvBloOs9wt=w200);}}
+@media (max-width: 400px) and (min-width: 201px) { body {background-image:url(https\:\/\/blogger.googleusercontent.com\/img\/a\/AVvXsEgk0MTLH8ircPVQ22L9cnvMpUOCEiOqUNrakGenS1rH25bQC5g7u0QRIDau7NcApCV0FznQCywZV_eClFw8NTostHdVYdzAKKC_7fdQODlv-A_F7qloWDbCsfcyw04bsmOJ1hrLV9YgzLzvKTYVBchlIEaCUu_QFsda_fJ7FdHLUVVwl9FjlSsvBloOs9wt=w400);}}
+@media (max-width: 800px) and (min-width: 401px) { body {background-image:url(https\:\/\/blogger.googleusercontent.com\/img\/a\/AVvXsEgk0MTLH8ircPVQ22L9cnvMpUOCEiOqUNrakGenS1rH25bQC5g7u0QRIDau7NcApCV0FznQCywZV_eClFw8NTostHdVYdzAKKC_7fdQODlv-A_F7qloWDbCsfcyw04bsmOJ1hrLV9YgzLzvKTYVBchlIEaCUu_QFsda_fJ7FdHLUVVwl9FjlSsvBloOs9wt=w800);}}
+@media (max-width: 1200px) and (min-width: 801px) { body {background-image:url(https\:\/\/blogger.googleusercontent.com\/img\/a\/AVvXsEgk0MTLH8ircPVQ22L9cnvMpUOCEiOqUNrakGenS1rH25bQC5g7u0QRIDau7NcApCV0FznQCywZV_eClFw8NTostHdVYdzAKKC_7fdQODlv-A_F7qloWDbCsfcyw04bsmOJ1hrLV9YgzLzvKTYVBchlIEaCUu_QFsda_fJ7FdHLUVVwl9FjlSsvBloOs9wt=w1200);}}
+/* Last tag covers anything over one higher than the previous max-size cap. */
+@media (min-width: 1201px) { body {background-image:url(https\:\/\/blogger.googleusercontent.com\/img\/a\/AVvXsEgk0MTLH8ircPVQ22L9cnvMpUOCEiOqUNrakGenS1rH25bQC5g7u0QRIDau7NcApCV0FznQCywZV_eClFw8NTostHdVYdzAKKC_7fdQODlv-A_F7qloWDbCsfcyw04bsmOJ1hrLV9YgzLzvKTYVBchlIEaCUu_QFsda_fJ7FdHLUVVwl9FjlSsvBloOs9wt=w1600);}}
+  </style>
+<link href='https://www.blogger.com/dyncss/7145282250848128187/authorization.css?zx=9027331c-4c19-4496-a52c-57c050d633d2' media='none' onload='if(media!=&#39;all&#39;)media=&#39;all&#39;' rel='stylesheet'/><noscript><link href='https://www.blogger.com/dyncss/7145282250848128187/authorization.css?zx=9027331c-4c19-4496-a52c-57c050d633d2' rel='stylesheet'/></noscript>
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+
+</head>
+<body class='loading'>
+<div class='navbar no-items section' id='navbar' name='Navbar'>
+</div>
+<div class='body-fauxcolumns'>
+<div class='fauxcolumn-outer body-fauxcolumn-outer'>
+<div class='cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left'>
+<div class='fauxborder-right'></div>
+<div class='fauxcolumn-inner'>
+</div>
+</div>
+<div class='cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+</div>
+<div class='content'>
+<div class='content-fauxcolumns'>
+<div class='fauxcolumn-outer content-fauxcolumn-outer'>
+<div class='cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left'>
+<div class='fauxborder-right'></div>
+<div class='fauxcolumn-inner'>
+</div>
+</div>
+<div class='cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+</div>
+<div class='content-outer'>
+<div class='content-cap-top cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left content-fauxborder-left'>
+<div class='fauxborder-right content-fauxborder-right'></div>
+<div class='content-inner'>
+<header>
+<div class='header-outer'>
+<div class='header-cap-top cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left header-fauxborder-left'>
+<div class='fauxborder-right header-fauxborder-right'></div>
+<div class='region-inner header-inner'>
+<div class='header section' id='header' name='Cabeçalho'><div class='widget Header' data-version='1' id='Header1'>
+<div id='header-inner'>
+<a href='https://xifncis.ufrn.br/' style='display: block'>
+<img alt='XI FNCIS' height='104px; ' id='Header1_headerimg' src='https://blogger.googleusercontent.com/img/a/AVvXsEioObDqtz6rAuMv27_VNx49EPV8bRPHr8WQg0urZ69DPjouqKjm2WSH_PFC97ZG0FdI_0hZNyKC670VkKwaZ2xMxfOlIe3f64NIVr73yNtJ_J0c1zu3slH5tqexcgu7ArOAXtSn_uYceSf4x_aQ2LeLhh9jsVzVm66RzsHBU96vas4sQ5p0bQbScHJZRgK2=s680' style='display: block' width='680px; '>
+</img>
+</a>
+</div>
+</div></div>
+</div>
+</div>
+<div class='header-cap-bottom cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+</header>
+<div class='tabs-outer'>
+<div class='tabs-cap-top cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left tabs-fauxborder-left'>
+<div class='fauxborder-right tabs-fauxborder-right'></div>
+<div class='region-inner tabs-inner'>
+<div class='tabs no-items section' id='crosscol' name='Entre colunas'></div>
+<div class='tabs no-items section' id='crosscol-overflow' name='Cross-Column 2'></div>
+</div>
+</div>
+<div class='tabs-cap-bottom cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+<div class='main-outer'>
+<div class='main-cap-top cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left main-fauxborder-left'>
+<div class='fauxborder-right main-fauxborder-right'></div>
+<div class='region-inner main-inner'>
+<div class='columns fauxcolumns'>
+<div class='fauxcolumn-outer fauxcolumn-center-outer'>
+<div class='cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left'>
+<div class='fauxborder-right'></div>
+<div class='fauxcolumn-inner'>
+</div>
+</div>
+<div class='cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+<div class='fauxcolumn-outer fauxcolumn-left-outer'>
+<div class='cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left'>
+<div class='fauxborder-right'></div>
+<div class='fauxcolumn-inner'>
+</div>
+</div>
+<div class='cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+<div class='fauxcolumn-outer fauxcolumn-right-outer'>
+<div class='cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left'>
+<div class='fauxborder-right'></div>
+<div class='fauxcolumn-inner'>
+</div>
+</div>
+<div class='cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+<!-- corrects IE6 width calculation -->
+<div class='columns-inner'>
+<div class='column-center-outer'>
+<div class='column-center-inner'>
+<main class='main section' id='main' name='Principal'><div class='widget Blog' data-version='1' id='Blog1'>
+<div class='blog-posts hfeed'>
+
+          <div class="date-outer">
+        
+
+          <div class="date-posts">
+        
+<div class='post-outer'>
+<div class='post hentry uncustomized-post-template' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
+<meta content='https://lh7-rt.googleusercontent.com/docsz/AD_4nXe3FHUlEwAsIZrd6CVYln-jZ-Z4mS11IQVQkKrubLvyFaOmnmqPniLEK7wCqPKRUAvRorQRPEx2-Q6zEpfy_A-dg8Db0pCTkLwXwksJv4mLbiXxlUi0jCMNNS0lQ23avleVyrGgC3Nc7S55DJqQ9fpXoA39wgUbwP3ZajYQQhq6dEqelhEH4h8?key=SbS7NvkwEudaujZTWyFVyA' itemprop='image_url'/>
+<meta content='7145282250848128187' itemprop='blogId'/>
+<meta content='1278315494471339393' itemprop='postId'/>
+<a name='1278315494471339393'></a>
+<div class='post-header'>
+<div class='post-header-line-1'></div>
+</div>
+<div class='post-body entry-content' id='post-body-1278315494471339393' itemprop='description articleBody'>
+<div class="separator" style="clear: both; text-align: center;"><span style="border: none; display: inline-block; height: 80px; margin-left: 1em; margin-right: 1em; overflow: hidden; width: 71px;"><img alt="Portal da UFRN" height="80" src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXe3FHUlEwAsIZrd6CVYln-jZ-Z4mS11IQVQkKrubLvyFaOmnmqPniLEK7wCqPKRUAvRorQRPEx2-Q6zEpfy_A-dg8Db0pCTkLwXwksJv4mLbiXxlUi0jCMNNS0lQ23avleVyrGgC3Nc7S55DJqQ9fpXoA39wgUbwP3ZajYQQhq6dEqelhEH4h8?key=SbS7NvkwEudaujZTWyFVyA" style="margin-left: 0px; margin-top: 0px;" width="71" /></span></div><div class="separator" style="clear: both; text-align: center;"><span id="docs-internal-guid-d1ff6ed8-7fff-9fca-62c4-f8982beddf41"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt;"><span style="font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">UNIVERSIDADE FEDERAL DO RIO GRANDE DO NORTE</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt;"><span style="font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">COMISSÃO INTERNA DE SUPERVISÃO (CIS)</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt;"><span style="font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">XI FÓRUM NACIONAL DAS COMISSÕES INTERNAS DE SUPERVISÃO (FNCIS)</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt;"><span style="font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">TEMA: </span><span style="font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">A REESTRUTURAÇÃO DA CARREIRA E O FUTURO DO PCCTAE</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt;"><br /></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt;"><br /></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: left;"><span style="background-color: transparent; color: black; font-family: 'Times New Roman',serif; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 700; text-decoration: none; vertical-align: baseline; white-space: pre;">Data: </span><span style="background-color: transparent; color: black; font-family: 'Times New Roman',serif; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre;">25 a 29 de novembro de 2024</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt;"><br /></p></span></div><div class="separator" style="clear: both; color: black; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; text-align: left;"><span><div style="line-height: 1.2;"><span style="font-weight: 700;">Local: </span><span>Auditório Otto de Brito Guerra da Universidade Federal do Rio Grande do Norte - UFRN, situado na Avenida Senador Salgado Filho, 3000 - Lagoa Nova, Campus Central - Natal/RN</span></div></span></div><div class="separator" style="clear: both; text-align: center;"><span><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt;"><b style="font-weight: normal;"><br /></b></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: left;"><span style="background-color: transparent; color: black; font-family: 'Times New Roman',serif; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 700; text-decoration: none; vertical-align: baseline; white-space: pre;">Contato: </span><span style="background-color: transparent; color: black; font-family: 'Times New Roman',serif; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre;">cis@ufrn.br</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: left;"><span style="background-color: transparent; color: black; font-family: 'Times New Roman',serif; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre;"><br /></span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: left;"><br /></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: left;"><span style="background-color: transparent; color: black; font-family: 'Times New Roman',serif; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre;"><span id="docs-internal-guid-9e3d425b-7fff-631a-0ed3-e06a516d8ba9"><span style="font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; text-wrap: wrap; vertical-align: baseline;">Taxa da &nbsp; inscrição:</span><span style="font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; text-wrap: wrap; vertical-align: baseline;"> R$120,00</span></span></span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt;"><br /></p><div style="text-align: left;"><span style="font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">Link para inscrição: </span><span style="font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"><a href="https://forms.gle/NmB4gPGgX1Tznhs96">https://forms.gle/NmB4gPGgX1Tznhs96</a></span></div><p></p><div><br /><span id="docs-internal-guid-80674738-7fff-6683-0d8a-301e33770529"><div align="left" dir="ltr" style="margin-left: -0.25pt;"><table style="border-collapse: collapse; border: none;"><colgroup><col width="96"></col><col width="154"></col><col width="433"></col></colgroup><tbody><tr style="height: 0pt;"><td colspan="3" style="background-color: #ed7d31; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">PROGRAMAÇÃO</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f7cbac; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">DATA</span></p></td><td style="background-color: #f7cbac; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">DIA DA SEMANA</span></p></td><td style="background-color: #f7cbac; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">ATIVIDADES</span></p></td></tr><tr style="height: 0pt;"><td rowspan="6" style="background-color: #bfbfbf; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">25/11/2024</span></p></td><td rowspan="6" style="background-color: #d8d8d8; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">SEGUNDA-FEIRA</span></p></td><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">14h</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"> &#8211; Credenciamento (Até 14h do dia 26/11/2024)</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">17h</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"> &#8211; Abertura oficial</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">19h </span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">&#8211; Conferência de abertura</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">Título</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">: Perspectivas para carreiras e cargos da administração federal: criação, racionalização e reestruturação (Portaria MGI nº 5.127, de 13 de agosto de 2024)</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">Palestrante</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">: Mirian Dantas dos Santos (UFRN/Forgepe)</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">20h30</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"> &#8211; Café cultural</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">22h</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"> &#8211; Encerramento</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"></p></td></tr><tr style="height: 0pt;"><td colspan="3" style="background-color: #bfbfbf; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><br /></td></tr><tr style="height: 0pt;"><td rowspan="11" style="background-color: #bfbfbf; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">26/11/2024</span></p></td><td rowspan="11" style="background-color: #d8d8d8; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">TERÇA-FEIRA</span></p></td><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">8h&nbsp;</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">&#8211; Orientações, avisos, ordem do dia</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">8h30 </span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">&#8211; Aprovação do regimento do fórum e composição do grupo de trabalho para a redação da Carta de Natal</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">9h</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"> &#8211; Palestra</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">Título</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">: A reestruturação da carreira dos servidores técnico-administrativos das Instituições Federais de Ensino Superior (Ifes) e o futuro do PCCTAE</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">Palestrante</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">: </span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; text-align: center; white-space-collapse: preserve;">Daniel Farias e Marcelo Rosa (Coordenação Jurídica e Relações de Trabalho/Fasubra)</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">10h30</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"> &#8211; Intervalo</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">11h</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"> &#8211; Interação com os participantes</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">12h</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"> &#8211; Intervalo para almoço</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">14h </span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">&#8211; Encerramento do credenciamento</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">14h </span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">&#8211; Palestra</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">&nbsp;</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">Título</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">: O Reconhecimento de Saberes e Competências (RSC) para a carreira dos servidores técnico-administrativos das Instituições Federais de Ensino Superior (Ifes): desafios e possibilidades</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">Palestrante</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">: </span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; text-align: center; white-space-collapse: preserve;">Grazielle Nayara Felício Silva (IFSP e CNS/Sinasefe) e William do Nascimento Carvalho (Colégio Pedro II e CNS/Sinasefe)</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">15h30</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"> &#8211; Intervalo</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">16h </span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">&#8211;</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;"> </span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">Interação com os participantes&nbsp;</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">17h </span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">&#8211; Resumo do dia, informes</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">18h </span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">&#8211; Encerramento</span></p></td></tr><tr style="height: 0pt;"><td colspan="3" style="background-color: #bfbfbf; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><br /></td></tr><tr style="height: 0pt;"><td rowspan="10" style="background-color: #bfbfbf; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">27/11/2024</span></p></td><td rowspan="10" style="background-color: #d8d8d8; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">QUARTA-FEIRA</span></p></td><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">8h</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"> &#8211; Orientações, avisos, ordem do dia</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">9h</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"> &#8211; Palestra</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">&nbsp;</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">Título</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">: O processo de regulamentação do termo de Acordo de Greve nº 11/2024 no âmbito da Comissão Nacional de Supervisão de Carreira (CNSC)</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">Palestrante</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">:</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;"> </span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">Vânia Helena Gonçalves (UFSCar e CNSC/Fasubra), Leewertton de Souza Marreiro (IFPB e CNS/Sinasefe) e </span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; text-align: center; white-space-collapse: preserve;">Nilva Celestina do Carmo (CNS/MEC)</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">10h30 </span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">&#8211; Intervalo</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">11h</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"> &#8211; Interação com os participantes</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">12h</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"> &#8211; Intervalo para almoço</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">14h</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"> &#8211; Palestra</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">Título</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">: A política de gestão por desempenho do PGD e seus impactos para as Instituições Federais de Ensino Superior (Ifes) e para os servidores técnico-administrativos</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">Palestrante</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">: Regiane Miranda Santos (UFG) e </span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; text-align: center; white-space-collapse: preserve;">Joade Cortez Gomes (Pró-Reitor Adjunto de Gestão de Pessoas da UFRN)</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">15h30 </span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">&#8211; Intervalo</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">16h</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"> &#8211; Interação com os participantes</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">17h</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"> &#8211; Resumo do dia, informes</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">18h </span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">&#8211; Encerramento</span></p></td></tr><tr style="height: 0pt;"><td colspan="3" style="background-color: #bfbfbf; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><br /></td></tr><tr style="height: 0pt;"><td rowspan="12" style="background-color: #bfbfbf; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">28/11/2024</span></p></td><td rowspan="12" style="background-color: #d8d8d8; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">QUINTA-FEIRA</span></p></td><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">8h</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"> &#8211; Orientações, avisos, ordem do dia</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">9h </span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">&#8211; Roda de conversa</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">Título</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">: A atuação de Comissões Internas de Supervisão (CIS) nas Instituições Federais de Ensino Superior (Ifes) no Brasil</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">Participantes</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">: Lúcia Vinhas (CIS/UFF), Alice de Souza Ribeiro (CIS/IFFar), Alexsandro Justino (CIS/UFRN)</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">10h30 </span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">&#8211; Intervalo</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">11h</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"> &#8211; Interação com os participantes</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">12h</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"> &#8211; Intervalo para almoço</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">14h</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"> &#8211; Roda de conversa&nbsp;</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">Título</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">: Assédio e discriminação: o que é e o que caracterizam essas práticas, e a política de prevenção e enfrentamento ao assédio e a discriminação no âmbito da UFRN (Decreto nº 12.122, de 30 de julho de 2024; Resolução nº 009/2023 &#8211; Consepe/Consad, de 12 de dezembro de 2023)&nbsp;</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">Participantes</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">: Julliana da Costa Macêdo Paiva e Mariana de Siqueira - Núcleo de Apoio às Pessoas em Situação de Violência da UFRN</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">15h </span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">&#8211; Interação com os participantes</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">15h30 </span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">&#8211; Intervalo</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">16h</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"> &#8211; Roda de conversa</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">Título</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">: </span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; text-align: center; white-space-collapse: preserve;">A racionalização dos cargos na carreira dos servidores técnico-administrativos</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">Participantes</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">: </span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; text-align: center; white-space-collapse: preserve;">Vânia Helena Gonçalves (UFSCar e CNSC/Fasubra) e Roni Rodrigues da Silva (IFMT e Coordenador de Pessoal Técnico-Administrativo &#8211; SINASEFE NACIONAL)</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">17h </span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">&#8211; Interação com os participantes</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">17h30</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"> &#8211; Resumo do dia, informes</span></p></td></tr><tr style="height: 19.55pt;"><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">18h</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"> &#8211; Encerramento</span></p></td></tr><tr style="height: 0pt;"><td colspan="3" style="background-color: #bfbfbf; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><br /></td></tr><tr style="height: 0pt;"><td style="background-color: #bfbfbf; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">29/11/2024</span></p></td><td style="background-color: #d8d8d8; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">SEXTA-FEIRA</span></p></td><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">8h</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"> &#8211; Orientações, avisos, ordem do dia</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #bfbfbf; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><br /></td><td style="background-color: #d8d8d8; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><br /></td><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">9h</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"> &#8211; Plenária sobre a Carta de Natal</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #bfbfbf; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><br /></td><td style="background-color: #d8d8d8; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><br /></td><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">10h30 </span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">&#8211; Intervalo</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #bfbfbf; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><br /></td><td style="background-color: #d8d8d8; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><br /></td><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">11h</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"> &#8211; Continuidade da Plenária sobre a Carta de Natal</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #bfbfbf; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><br /></td><td style="background-color: #d8d8d8; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><br /></td><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">12h </span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">&#8211; Intervalo para almoço</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #bfbfbf; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><br /></td><td style="background-color: #d8d8d8; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><br /></td><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">14h</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"> &#8211; Mesa-redonda</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">Título</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">: O histórico dos Fóruns de Comissões Internas de Supervisão (CIS) no Brasil: desafios e contribuições</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">Participantes</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">: Marcos Acioly (UFRPE) e Silvio Roberto Ramos (UFRGS)</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #bfbfbf; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><br /></td><td style="background-color: #d8d8d8; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><br /></td><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">15h30</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"> </span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">&#8211; </span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">Avaliação do XI FNCIS e encaminhamentos</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">Coordenadores: </span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">Áurea Nascimento da Silva e Alexsandro Justino Dionisio</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #bfbfbf; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><br /></td><td style="background-color: #d8d8d8; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><br /></td><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">16h</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"> &#8211; Atividade Cultural&nbsp;</span></p></td></tr><tr style="height: 0pt;"><td style="background-color: #bfbfbf; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><br /></td><td style="background-color: #d8d8d8; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><br /></td><td style="background-color: #f2f2f2; border-bottom: solid #000000 0.5pt; border-color: rgb(0, 0, 0); border-left: solid #000000 0.5pt; border-right: solid #000000 0.5pt; border-style: solid; border-top: solid #000000 0.5pt; border-width: 0.5pt; overflow-wrap: break-word; overflow: hidden; padding: 0pt 5.4pt; vertical-align: top;"><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: justify;"><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline; white-space-collapse: preserve;">18h</span><span style="background-color: transparent; font-family: &quot;Times New Roman&quot;, serif; font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"> &#8211; Encerramento</span></p></td></tr></tbody></table></div></span></div><div><span style="font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"><span id="docs-internal-guid-f7561f8f-7fff-d815-4390-036a1338bf9b"><div align="left" dir="ltr" style="margin-left: -0.25pt;"><span id="docs-internal-guid-9312c9e6-7fff-7363-8279-c8cb9895a7e6"><p style="font-family: &quot;Times New Roman&quot;, serif; font-weight: normal; line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial, sans-serif" style="font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline;"><br /></span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial,sans-serif" style="background-color: transparent; color: black; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 700; text-decoration: none; vertical-align: baseline; white-space: pre;">Comissão organizadora</span></p><p style="font-family: &quot;Times New Roman&quot;, serif; font-weight: normal; line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial, sans-serif" style="font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline;"><b id="docs-internal-guid-672683e7-7fff-2b6f-8194-59256dc928b8" style="font-weight: normal;"><br /><br /></b></span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial,sans-serif" style="background-color: transparent; color: black; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 700; text-decoration: none; vertical-align: baseline; white-space: pre;">Coordenação e secretaria</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial,sans-serif" style="background-color: transparent; color: black; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre;">Áurea Nascimento da Silva</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial,sans-serif" style="background-color: transparent; color: black; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre;">Alexsandro Justino Dionisio</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial,sans-serif" style="background-color: transparent; color: black; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre;">Karla Geane de Oliveira</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial,sans-serif" style="background-color: transparent; color: black; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre;">Mayane Paulino de Brito e Silva</span></p><p style="font-family: &quot;Times New Roman&quot;, serif; font-weight: normal; line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial, sans-serif" style="font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline;"><b style="font-weight: normal;"><br /></b></span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial,sans-serif" style="background-color: transparent; color: black; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 700; text-decoration: none; vertical-align: baseline; white-space: pre;">Comunicação</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial,sans-serif" style="background-color: transparent; color: black; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre;">Fernando Antonny Guerra Alves</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial,sans-serif" style="background-color: transparent; color: black; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre;">Leila Maria Araújo Vidal</span></p><p style="font-family: &quot;Times New Roman&quot;, serif; font-weight: normal; line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial, sans-serif" style="font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline;"><b style="font-weight: normal;"><br /></b></span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial,sans-serif" style="background-color: transparent; color: black; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 700; text-decoration: none; vertical-align: baseline; white-space: pre;">Infraestrutura</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial,sans-serif" style="background-color: transparent; color: black; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre;">Adilson Nunes de Carvalho</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial,sans-serif" style="background-color: transparent; color: black; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre;">Roberto Luiz Machado da Silva</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial,sans-serif" style="background-color: transparent; color: black; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre;">Tházia Maria de Almeida Maia</span></p><p style="font-family: &quot;Times New Roman&quot;, serif; font-weight: normal; line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial, sans-serif" style="font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline;"><b style="font-weight: normal;"><br /></b></span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial,sans-serif" style="background-color: transparent; color: black; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 700; text-decoration: none; vertical-align: baseline; white-space: pre;">Suporte de Tecnologia</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial,sans-serif" style="background-color: transparent; color: black; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre;">Alexsandro Justino Dionisio</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial,sans-serif" style="background-color: transparent; color: black; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre;">João Batista Xavier</span></p><p style="font-family: &quot;Times New Roman&quot;, serif; font-weight: normal; line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial, sans-serif" style="font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline;"><b style="font-weight: normal;"><br /></b></span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial,sans-serif" style="background-color: transparent; color: black; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 700; text-decoration: none; vertical-align: baseline; white-space: pre;">Assessoria - CIS/UFRPE</span></p><p style="font-family: &quot;Times New Roman&quot;, serif; font-weight: normal; line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial, sans-serif" style="font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline;"><b style="font-weight: normal;"><br /></b></span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial,sans-serif" style="background-color: transparent; color: black; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre;">Nicodemos Felipe de Souza</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial,sans-serif" style="background-color: transparent; color: black; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre;">Magna Suely Gomes da Silva</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial,sans-serif" style="background-color: transparent; color: black; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre;">Marcos Antônio de Brederode Acioly</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial,sans-serif" style="background-color: transparent; color: black; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre;">Mozart Robério de Sá Siqueira</span></p><p style="font-family: &quot;Times New Roman&quot;, serif; font-weight: normal; line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial, sans-serif" style="font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline;"><b style="font-weight: normal;"><br /><br /></b></span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial,sans-serif" style="background-color: transparent; color: black; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 700; text-decoration: none; vertical-align: baseline; white-space: pre;">Colaborações</span></p><p style="font-family: &quot;Times New Roman&quot;, serif; font-weight: normal; line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial, sans-serif" style="font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline;"><b style="font-weight: normal;"><br /></b></span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial,sans-serif" style="background-color: transparent; color: black; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre;">Ana Paula Resende</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial,sans-serif" style="background-color: transparent; color: black; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre;">Produtora Visual (UFRN)</span></p><p style="font-family: &quot;Times New Roman&quot;, serif; font-weight: normal; line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial, sans-serif" style="font-size: 12pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; font-weight: 700; vertical-align: baseline;"><b style="font-weight: normal;"><br /></b></span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial,sans-serif" style="background-color: transparent; color: black; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre;">Érica Simony Fernandes de Melo Guerra</span></p><p dir="ltr" style="line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span face="Arial,sans-serif" style="background-color: transparent; color: black; font-size: 12pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre;">Laboratório de Acessibilidade (BCZM/UFRN)</span></p><p style="font-family: &quot;Times New Roman&quot;, serif; font-weight: normal; line-height: 1.2; margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><br /></p></span></div></span></span></div></span></div><p><span id="docs-internal-guid-873c069a-7fff-6330-f102-5343263b5435"><span face="Calibri, sans-serif" style="font-size: 10pt; font-variant-alternates: normal; font-variant-east-asian: normal; font-variant-numeric: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"></span></span></p>
+<div style='clear: both;'></div>
+</div>
+<div class='post-footer'>
+<div class='post-footer-line post-footer-line-1'>
+<span class='post-author vcard'>
+</span>
+<span class='post-timestamp'>
+at
+<meta content='https://xifncis.ufrn.br/2024/08/programacao-oficial.html' itemprop='url'/>
+<a class='timestamp-link' href='https://xifncis.ufrn.br/2024/08/programacao-oficial.html' rel='bookmark' title='permanent link'><abbr class='published' itemprop='datePublished' title='2024-08-29T05:45:00-07:00'>agosto 29, 2024</abbr></a>
+</span>
+<span class='post-comment-link'>
+</span>
+<span class='post-icons'>
+</span>
+<div class='post-share-buttons goog-inline-block'>
+<a class='goog-inline-block share-button sb-email' href='https://www.blogger.com/share-post/7145282250848128187/1278315494471339393?https=true&target=email' target='_blank' title='Enviar por e-mail'><span class='share-button-link-text'>Enviar por e-mail</span></a><a class='goog-inline-block share-button sb-blog' href='https://www.blogger.com/share-post/7145282250848128187/1278315494471339393?https=true&target=blog' onclick='window.open(this.href, "_blank", "height=270,width=475"); return false;' target='_blank' title='Postar no blog!'><span class='share-button-link-text'>Postar no blog!</span></a><a class='goog-inline-block share-button sb-twitter' href='https://www.blogger.com/share-post/7145282250848128187/1278315494471339393?https=true&target=twitter' target='_blank' title='Compartilhar no X'><span class='share-button-link-text'>Compartilhar no X</span></a><a class='goog-inline-block share-button sb-facebook' href='https://www.blogger.com/share-post/7145282250848128187/1278315494471339393?https=true&target=facebook' onclick='window.open(this.href, "_blank", "height=430,width=640"); return false;' target='_blank' title='Compartilhar no Facebook'><span class='share-button-link-text'>Compartilhar no Facebook</span></a><a class='goog-inline-block share-button sb-pinterest' href='https://www.blogger.com/share-post/7145282250848128187/1278315494471339393?https=true&target=pinterest' target='_blank' title='Compartilhar com o Pinterest'><span class='share-button-link-text'>Compartilhar com o Pinterest</span></a>
+</div>
+</div>
+<div class='post-footer-line post-footer-line-2'>
+<span class='post-labels'>
+Labels:
+<a href='https://xifncis.ufrn.br/search/label/PROGRAMA%C3%87%C3%83O%20OFICIAL' rel='tag'>PROGRAMAÇÃO OFICIAL</a>
+</span>
+</div>
+<div class='post-footer-line post-footer-line-3'>
+<span class='post-location'>
+</span>
+</div>
+</div>
+</div>
+<div class='comments' id='comments'>
+<a name='comments'></a>
+</div>
+</div>
+
+        </div></div>
+      
+</div>
+<div class='blog-pager' id='blog-pager'>
+<span id='blog-pager-newer-link'>
+<a class='blog-pager-newer-link' href='https://xifncis.ufrn.br/2024/08/comunicados.html' id='Blog1_blog-pager-newer-link' title='Postagem mais recente'>Postagem mais recente</a>
+</span>
+<span id='blog-pager-older-link'>
+<a class='blog-pager-older-link' href='https://xifncis.ufrn.br/2024/08/carta-de-natal-xi-fncis.html' id='Blog1_blog-pager-older-link' title='Postagem mais antiga'>Postagem mais antiga</a>
+</span>
+<a class='home-link' href='https://xifncis.ufrn.br/'>Página inicial</a>
+</div>
+<div class='clear'></div>
+<div class='post-feeds'>
+</div>
+</div></main>
+</div>
+</div>
+<div class='column-left-outer'>
+<div class='column-left-inner'>
+<aside>
+</aside>
+</div>
+</div>
+<nav class='column-right-outer'>
+<div class='column-right-inner'>
+<aside>
+<div class='sidebar section' id='sidebar-right-1'><div class='widget PageList' data-version='1' id='PageList1'>
+<h2>Páginas</h2>
+<div class='widget-content'>
+<ul>
+<li>
+<a href='http://xifncis.ufrn.br/'>PÁGINA INICIAL</a>
+</li>
+<li>
+<a href='https://xifncis.ufrn.br/2024/08/programacao-oficial.html'>PROGRAMAÇÃO OFICIAL</a>
+</li>
+<li>
+<a href='https://xifncis.ufrn.br/2024/08/comunicados.html'>COMUNICADOS</a>
+</li>
+<li>
+<a href='https://xifncis.ufrn.br/2024/08/regimento-interno-x-fncis.html'>REGIMENTO INTERNO</a>
+</li>
+<li>
+<a href='https://xifncis.ufrn.br/2024/08/carta-de-natal-xi-fncis.html'>CARTA DE NATAL - XI FNCIS</a>
+</li>
+<li>
+<a href='https://xifncis.ufrn.br/2024/08/fotos.html'>FOTOS</a>
+</li>
+<li>
+<a href='https://xifncis.ufrn.br/2024/09/dicas-e-sugestoes.html'>DICAS E SUGESTÕES</a>
+</li>
+<li>
+<a href='https://xifncis.ufrn.br/2024/12/arquivos-do-xi-forum-nacional-das.html'>ARQUIVOS DO FÓRUM</a>
+</li>
+</ul>
+<div class='clear'></div>
+</div>
+</div></div>
+<table border='0' cellpadding='0' cellspacing='0' class='section-columns columns-2'>
+<tbody>
+<tr>
+<td class='first columns-cell'>
+<div class='sidebar no-items section' id='sidebar-right-2-1'></div>
+</td>
+<td class='columns-cell'>
+<div class='sidebar no-items section' id='sidebar-right-2-2'></div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class='sidebar no-items section' id='sidebar-right-3'></div>
+</aside>
+</div>
+</nav>
+</div>
+<div style='clear: both'></div>
+<!-- columns -->
+</div>
+<!-- main -->
+</div>
+</div>
+<div class='main-cap-bottom cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+<footer>
+<div class='footer-outer'>
+<div class='footer-cap-top cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left footer-fauxborder-left'>
+<div class='fauxborder-right footer-fauxborder-right'></div>
+<div class='region-inner footer-inner'>
+<div class='foot section' id='footer-1'><div class='widget Image' data-version='1' id='Image1'>
+<div class='widget-content'>
+<img alt='' height='104' id='Image1_img' loading='lazy' sizes='auto, 100vw' src='https://blogger.googleusercontent.com/img/a/AVvXsEi9fnhQbsb9rrjd-vc-XVRUooBUnX3xMXbO5Ps1pkZuGeSQVNpDBFakMEyrUmuRohwA3ZnvkDwvw7KTK5bH-tB2akhrhtk8TVOKkIBk9BCMaEJ4DxeosltAcFtv9DwECOoWPDPalZsrALPVQ782HE-buL7YThpYKivvtlueXgGZQOh6J646Gz386ra49fEm=s680' srcset='https://blogger.googleusercontent.com/img/a/AVvXsEi9fnhQbsb9rrjd-vc-XVRUooBUnX3xMXbO5Ps1pkZuGeSQVNpDBFakMEyrUmuRohwA3ZnvkDwvw7KTK5bH-tB2akhrhtk8TVOKkIBk9BCMaEJ4DxeosltAcFtv9DwECOoWPDPalZsrALPVQ782HE-buL7YThpYKivvtlueXgGZQOh6J646Gz386ra49fEm=s72 72w, https://blogger.googleusercontent.com/img/a/AVvXsEi9fnhQbsb9rrjd-vc-XVRUooBUnX3xMXbO5Ps1pkZuGeSQVNpDBFakMEyrUmuRohwA3ZnvkDwvw7KTK5bH-tB2akhrhtk8TVOKkIBk9BCMaEJ4DxeosltAcFtv9DwECOoWPDPalZsrALPVQ782HE-buL7YThpYKivvtlueXgGZQOh6J646Gz386ra49fEm=s128 128w, https://blogger.googleusercontent.com/img/a/AVvXsEi9fnhQbsb9rrjd-vc-XVRUooBUnX3xMXbO5Ps1pkZuGeSQVNpDBFakMEyrUmuRohwA3ZnvkDwvw7KTK5bH-tB2akhrhtk8TVOKkIBk9BCMaEJ4DxeosltAcFtv9DwECOoWPDPalZsrALPVQ782HE-buL7YThpYKivvtlueXgGZQOh6J646Gz386ra49fEm=s220 220w, https://blogger.googleusercontent.com/img/a/AVvXsEi9fnhQbsb9rrjd-vc-XVRUooBUnX3xMXbO5Ps1pkZuGeSQVNpDBFakMEyrUmuRohwA3ZnvkDwvw7KTK5bH-tB2akhrhtk8TVOKkIBk9BCMaEJ4DxeosltAcFtv9DwECOoWPDPalZsrALPVQ782HE-buL7YThpYKivvtlueXgGZQOh6J646Gz386ra49fEm=s400 400w, https://blogger.googleusercontent.com/img/a/AVvXsEi9fnhQbsb9rrjd-vc-XVRUooBUnX3xMXbO5Ps1pkZuGeSQVNpDBFakMEyrUmuRohwA3ZnvkDwvw7KTK5bH-tB2akhrhtk8TVOKkIBk9BCMaEJ4DxeosltAcFtv9DwECOoWPDPalZsrALPVQ782HE-buL7YThpYKivvtlueXgGZQOh6J646Gz386ra49fEm=s640 640w, https://blogger.googleusercontent.com/img/a/AVvXsEi9fnhQbsb9rrjd-vc-XVRUooBUnX3xMXbO5Ps1pkZuGeSQVNpDBFakMEyrUmuRohwA3ZnvkDwvw7KTK5bH-tB2akhrhtk8TVOKkIBk9BCMaEJ4DxeosltAcFtv9DwECOoWPDPalZsrALPVQ782HE-buL7YThpYKivvtlueXgGZQOh6J646Gz386ra49fEm=s800 800w, https://blogger.googleusercontent.com/img/a/AVvXsEi9fnhQbsb9rrjd-vc-XVRUooBUnX3xMXbO5Ps1pkZuGeSQVNpDBFakMEyrUmuRohwA3ZnvkDwvw7KTK5bH-tB2akhrhtk8TVOKkIBk9BCMaEJ4DxeosltAcFtv9DwECOoWPDPalZsrALPVQ782HE-buL7YThpYKivvtlueXgGZQOh6J646Gz386ra49fEm=s1024 1024w, https://blogger.googleusercontent.com/img/a/AVvXsEi9fnhQbsb9rrjd-vc-XVRUooBUnX3xMXbO5Ps1pkZuGeSQVNpDBFakMEyrUmuRohwA3ZnvkDwvw7KTK5bH-tB2akhrhtk8TVOKkIBk9BCMaEJ4DxeosltAcFtv9DwECOoWPDPalZsrALPVQ782HE-buL7YThpYKivvtlueXgGZQOh6J646Gz386ra49fEm=s1280 1280w, https://blogger.googleusercontent.com/img/a/AVvXsEi9fnhQbsb9rrjd-vc-XVRUooBUnX3xMXbO5Ps1pkZuGeSQVNpDBFakMEyrUmuRohwA3ZnvkDwvw7KTK5bH-tB2akhrhtk8TVOKkIBk9BCMaEJ4DxeosltAcFtv9DwECOoWPDPalZsrALPVQ782HE-buL7YThpYKivvtlueXgGZQOh6J646Gz386ra49fEm=s1600 1600w' width='680'>
+</img>
+<br/>
+</div>
+<div class='clear'></div>
+</div><div class='widget BlogSearch' data-version='1' id='BlogSearch1'>
+<h2 class='title'>Pesquisar este blog</h2>
+<div class='widget-content'>
+<div id='BlogSearch1_form'>
+<form action='https://xifncis.ufrn.br/search' class='gsc-search-box' target='_top'>
+<table cellpadding='0' cellspacing='0' class='gsc-search-box'>
+<tbody>
+<tr>
+<td class='gsc-input'>
+<input autocomplete='off' class='gsc-input' name='q' size='10' title='search' type='text' value=''/>
+</td>
+<td class='gsc-search-button'>
+<input class='gsc-search-button' title='search' type='submit' value='Pesquisar'/>
+</td>
+</tr>
+</tbody>
+</table>
+</form>
+</div>
+</div>
+<div class='clear'></div>
+</div>
+</div>
+<table border='0' cellpadding='0' cellspacing='0' class='section-columns columns-2'>
+<tbody>
+<tr>
+<td class='first columns-cell'>
+<div class='foot section' id='footer-2-1'><div class='widget ReportAbuse' data-version='1' id='ReportAbuse1'>
+<h3 class='title'>
+<a class='report_abuse' href='https://www.blogger.com/go/report-abuse' rel='noopener nofollow' target='_blank'>
+Denunciar abuso
+</a>
+</h3>
+</div></div>
+</td>
+<td class='columns-cell'>
+<div class='foot no-items section' id='footer-2-2'>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- outside of the include in order to lock Attribution widget -->
+<div class='foot section' id='footer-3' name='Rodapé'><div class='widget Attribution' data-version='1' id='Attribution1'>
+<div class='widget-content' style='text-align: center;'>
+Tecnologia do <a href='https://www.blogger.com' target='_blank'>Blogger</a>.
+</div>
+<div class='clear'></div>
+</div></div>
+</div>
+</div>
+<div class='footer-cap-bottom cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+</footer>
+<!-- content -->
+</div>
+</div>
+<div class='content-cap-bottom cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+</div>
+<script type='text/javascript'>
+    window.setTimeout(function() {
+        document.body.className = document.body.className.replace('loading', '');
+      }, 10);
+  </script>
+
+<script type="text/javascript" src="https://www.blogger.com/static/v1/widgets/2650890479-widgets.js"></script>
+<script type='text/javascript'>
+window['__wavt'] = 'AKZvMzuqIKrgu5O5eixNRJW9cNIc:1794249042554';_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d7145282250848128187','//xifncis.ufrn.br/2024/08/programacao-oficial.html','7145282250848128187');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '7145282250848128187', 'title': 'XI FNCIS', 'url': 'https://xifncis.ufrn.br/2024/08/programacao-oficial.html', 'canonicalUrl': 'https://xifncis.ufrn.br/2024/08/programacao-oficial.html', 'homepageUrl': 'https://xifncis.ufrn.br/', 'searchUrl': 'https://xifncis.ufrn.br/search', 'canonicalHomepageUrl': 'https://xifncis.ufrn.br/', 'blogspotFaviconUrl': 'https://xifncis.ufrn.br/favicon.ico', 'bloggerUrl': 'https://www.blogger.com', 'hasCustomDomain': true, 'httpsEnabled': true, 'enabledCommentProfileImages': true, 'gPlusViewType': 'FILTERED_POSTMOD', 'adultContent': false, 'analyticsAccountNumber': '', 'encoding': 'UTF-8', 'locale': 'pt-BR', 'localeUnderscoreDelimited': 'pt_br', 'languageDirection': 'ltr', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'isDynamicViewsAvailable': true, 'feedLinks': '\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22XI FNCIS - Atom\x22 href\x3d\x22https://xifncis.ufrn.br/feeds/posts/default\x22 /\x3e\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/rss+xml\x22 title\x3d\x22XI FNCIS - RSS\x22 href\x3d\x22https://xifncis.ufrn.br/feeds/posts/default?alt\x3drss\x22 /\x3e\n\x3clink rel\x3d\x22service.post\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22XI FNCIS - Atom\x22 href\x3d\x22https://www.blogger.com/feeds/7145282250848128187/posts/default\x22 /\x3e\n\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22XI FNCIS - Atom\x22 href\x3d\x22https://xifncis.ufrn.br/feeds/1278315494471339393/comments/default\x22 /\x3e\n', 'meTag': '', 'adsenseHostId': 'ca-host-pub-1556223355139109', 'adsenseHasAds': false, 'adsenseAutoAds': false, 'boqCommentIframeForm': true, 'loginRedirectParam': '', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/bc04e140f0b1968d', 'plusOneApiSrc': 'https://apis.google.com/js/platform.js', 'disableGComments': true, 'interstitialAccepted': false, 'sharing': {'platforms': [{'name': 'Gerar link', 'key': 'link', 'shareMessage': 'Gerar link', 'target': ''}, {'name': 'Facebook', 'key': 'facebook', 'shareMessage': 'Compartilhar no Facebook', 'target': 'facebook'}, {'name': 'Postar no blog!', 'key': 'blogThis', 'shareMessage': 'Postar no blog!', 'target': 'blog'}, {'name': 'X', 'key': 'twitter', 'shareMessage': 'Compartilhar no X', 'target': 'twitter'}, {'name': 'Pinterest', 'key': 'pinterest', 'shareMessage': 'Compartilhar no Pinterest', 'target': 'pinterest'}, {'name': 'E-mail', 'key': 'email', 'shareMessage': 'E-mail', 'target': 'email'}], 'disableGooglePlus': true, 'googlePlusShareButtonWidth': 0, 'googlePlusBootstrap': '\x3cscript type\x3d\x22text/javascript\x22\x3ewindow.___gcfg \x3d {\x27lang\x27: \x27pt_BR\x27};\x3c/script\x3e'}, 'hasCustomJumpLinkMessage': true, 'jumpLinkMessage': 'Read more \xbb', 'pageType': 'item', 'postId': '1278315494471339393', 'postImageThumbnailUrl': 'https://lh7-rt.googleusercontent.com/docsz/AD_4nXe3FHUlEwAsIZrd6CVYln-jZ-Z4mS11IQVQkKrubLvyFaOmnmqPniLEK7wCqPKRUAvRorQRPEx2-Q6zEpfy_A-dg8Db0pCTkLwXwksJv4mLbiXxlUi0jCMNNS0lQ23avleVyrGgC3Nc7S55DJqQ9fpXoA39wgUbwP3ZajYQQhq6dEqelhEH4h8\x3ds72-c?key\x3dSbS7NvkwEudaujZTWyFVyA', 'postImageUrl': 'https://lh7-rt.googleusercontent.com/docsz/AD_4nXe3FHUlEwAsIZrd6CVYln-jZ-Z4mS11IQVQkKrubLvyFaOmnmqPniLEK7wCqPKRUAvRorQRPEx2-Q6zEpfy_A-dg8Db0pCTkLwXwksJv4mLbiXxlUi0jCMNNS0lQ23avleVyrGgC3Nc7S55DJqQ9fpXoA39wgUbwP3ZajYQQhq6dEqelhEH4h8?key\x3dSbS7NvkwEudaujZTWyFVyA', 'pageName': '', 'pageTitle': 'XI FNCIS'}}, {'name': 'features', 'data': {}}, {'name': 'messages', 'data': {'edit': 'Editar', 'linkCopiedToClipboard': 'Link copiado para a \xe1rea de transfer\xeancia.', 'ok': 'Ok', 'postLink': 'Link da postagem'}}, {'name': 'template', 'data': {'name': 'custom', 'localizedName': 'Personalizar', 'isResponsive': false, 'isAlternateRendering': false, 'isCustom': true}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\x3dclassic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\x3dflipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\x3dmagazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\x3dmosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\x3dsidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\x3dsnapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\x3dtimeslide'}, 'isMobile': false, 'title': 'XI FNCIS', 'description': 'UNIVERSIDADE FEDERAL DO RIO GRANDE DO NORTE COMISS\xc3O INTERNA DE SUPERVIS\xc3O (CIS) XI F\xd3RUM NACIONAL DAS COMISS\xd5ES INTERNAS DE SUPERVIS\xc3O (FNC...', 'featuredImage': 'https://lh7-rt.googleusercontent.com/docsz/AD_4nXe3FHUlEwAsIZrd6CVYln-jZ-Z4mS11IQVQkKrubLvyFaOmnmqPniLEK7wCqPKRUAvRorQRPEx2-Q6zEpfy_A-dg8Db0pCTkLwXwksJv4mLbiXxlUi0jCMNNS0lQ23avleVyrGgC3Nc7S55DJqQ9fpXoA39wgUbwP3ZajYQQhq6dEqelhEH4h8?key\x3dSbS7NvkwEudaujZTWyFVyA', 'url': 'https://xifncis.ufrn.br/2024/08/programacao-oficial.html', 'type': 'item', 'isSingleItem': true, 'isMultipleItems': false, 'isError': false, 'isPage': false, 'isPost': true, 'isHomepage': false, 'isArchive': false, 'isLabelSearch': false, 'postId': 1278315494471339393}}]);
+_WidgetManager._RegisterWidget('_HeaderView', new _WidgetInfo('Header1', 'header', document.getElementById('Header1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'main', document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'lightboxEnabled': true, 'lightboxModuleUrl': 'https://www.blogger.com/static/v1/jsbin/1945932424-lbx__pt_br.js', 'lightboxCssUrl': 'https://www.blogger.com/static/v1/v-css/828616780-lightbox_bundle.css'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_PageListView', new _WidgetInfo('PageList1', 'sidebar-right-1', document.getElementById('PageList1'), {'title': 'P\xe1ginas', 'links': [{'isCurrentPage': false, 'href': 'http://xifncis.ufrn.br/', 'title': 'P\xc1GINA INICIAL'}, {'isCurrentPage': false, 'href': 'https://xifncis.ufrn.br/2024/08/programacao-oficial.html', 'title': 'PROGRAMA\xc7\xc3O OFICIAL'}, {'isCurrentPage': false, 'href': 'https://xifncis.ufrn.br/2024/08/comunicados.html', 'title': 'COMUNICADOS'}, {'isCurrentPage': false, 'href': 'https://xifncis.ufrn.br/2024/08/regimento-interno-x-fncis.html', 'title': 'REGIMENTO INTERNO'}, {'isCurrentPage': false, 'href': 'https://xifncis.ufrn.br/2024/08/carta-de-natal-xi-fncis.html', 'title': 'CARTA DE NATAL - XI FNCIS'}, {'isCurrentPage': false, 'href': 'https://xifncis.ufrn.br/2024/08/fotos.html', 'title': 'FOTOS'}, {'isCurrentPage': false, 'href': 'https://xifncis.ufrn.br/2024/09/dicas-e-sugestoes.html', 'title': 'DICAS E SUGEST\xd5ES'}, {'isCurrentPage': false, 'href': 'https://xifncis.ufrn.br/2024/12/arquivos-do-xi-forum-nacional-das.html', 'title': 'ARQUIVOS DO F\xd3RUM'}], 'mobile': false, 'showPlaceholder': true, 'hasCurrentPage': false}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_ImageView', new _WidgetInfo('Image1', 'footer-1', document.getElementById('Image1'), {'resize': false}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogSearchView', new _WidgetInfo('BlogSearch1', 'footer-1', document.getElementById('BlogSearch1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_ReportAbuseView', new _WidgetInfo('ReportAbuse1', 'footer-2-1', document.getElementById('ReportAbuse1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_AttributionView', new _WidgetInfo('Attribution1', 'footer-3', document.getElementById('Attribution1'), {}, 'displayModeFull'));
+</script>
+</body>
+</html>

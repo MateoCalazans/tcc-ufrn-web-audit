@@ -1,0 +1,756 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T19:54:45.097Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12"
+    },
+    "gitCommit": "35192446fa4c70dad6b3eb15bfdec2bff375c62c",
+    "gitDirty": true
+  },
+  "siteId": "3cnienssup.ufrn.br",
+  "contexto": {
+    "grupo": "wordpress",
+    "tecnologia": "wordpress",
+    "tipo": "evento"
+  },
+  "recomendacoes": {
+    "total": 35,
+    "corrigidas": 6,
+    "corrigidasLlm": 2,
+    "llm": {
+      "prompt": "landmarks-v2",
+      "arquivo": "docs/prompts/landmarks-v2.md",
+      "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "effort": "low",
+      "maxTokens": 4000,
+      "execucao": {
+        "siteId": "3cnienssup.ufrn.br",
+        "prompt": "landmarks-v2",
+        "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+        "modelo": "claude-haiku-5-5",
+        "modeloResposta": "claude-haiku-5-5",
+        "respostaId": "msg_011Ch7C92pE6qvgkJYvmdVGk",
+        "chamada": true,
+        "motivo": null,
+        "ausentes": [
+          "header",
+          "main",
+          "footer"
+        ],
+        "candidatos": 10,
+        "elegiveis": 10,
+        "stopReason": "end_turn",
+        "inputTokens": 2381,
+        "outputTokens": 498,
+        "custoUsd": 0.0004871,
+        "propostas": 2,
+        "validas": 2,
+        "rejeitadas": [],
+        "textoIgual": true,
+        "landmarksDepois": {
+          "banner": 1,
+          "navigation": 2,
+          "main": 0,
+          "contentinfo": 1
+        },
+        "erro": null,
+        "duracaoMs": 4974
+      }
+    }
+  },
+  "parametros": {
+    "execucoesPorVariante": 3,
+    "formFactor": "mobile",
+    "throttlingMethod": "simulate",
+    "chromeFlagsExtras": [
+      "--host-resolver-rules=MAP * ~NOTFOUND, EXCLUDE 127.0.0.1"
+    ],
+    "userAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+    "relogioSemantica": "2026-11-09T18:06:47.370Z",
+    "relogioLighthouse": "real"
+  },
+  "ordem": [
+    {
+      "variante": "original",
+      "n": 1
+    },
+    {
+      "variante": "corrigido",
+      "n": 1
+    },
+    {
+      "variante": "original",
+      "n": 2
+    },
+    {
+      "variante": "corrigido",
+      "n": 2
+    },
+    {
+      "variante": "original",
+      "n": 3
+    },
+    {
+      "variante": "corrigido",
+      "n": 3
+    }
+  ],
+  "variantes": {
+    "original": {
+      "urlLocal": "http://127.0.0.1:56782/",
+      "execucoes": [
+        {
+          "n": 1,
+          "startedAt": "2026-11-16T20:01:41.265Z",
+          "durationMs": 11842,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 48,
+            "accessibility": 91,
+            "best-practices": 73,
+            "seo": 83
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:56782/",
+          "mainDocumentUrl": "http://127.0.0.1:56782/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2471,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 48,
+              "accessibility": 91,
+              "best-practices": 73,
+              "seo": 83
+            },
+            "fcpMs": 3538.4429999999998,
+            "lcpMs": 13217.924,
+            "tbtMs": 26,
+            "cls": 0.4041478344256474,
+            "speedIndexMs": 3538.4429999999998,
+            "pesoTotalBytes": 2258918,
+            "requisicoes": 66,
+            "jsNaoUsadoBytes": 0,
+            "cssNaoUsadoBytes": 25478
+          }
+        },
+        {
+          "n": 2,
+          "startedAt": "2026-11-16T20:02:05.064Z",
+          "durationMs": 11665,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 48,
+            "accessibility": 91,
+            "best-practices": 73,
+            "seo": 83
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:56782/",
+          "mainDocumentUrl": "http://127.0.0.1:56782/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2402.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 48,
+              "accessibility": 91,
+              "best-practices": 73,
+              "seo": 83
+            },
+            "fcpMs": 3541.2519,
+            "lcpMs": 13071.6692,
+            "tbtMs": 15,
+            "cls": 0.4041478344256474,
+            "speedIndexMs": 3541.2519,
+            "pesoTotalBytes": 2258918,
+            "requisicoes": 66,
+            "jsNaoUsadoBytes": 0,
+            "cssNaoUsadoBytes": 25478
+          }
+        },
+        {
+          "n": 3,
+          "startedAt": "2026-11-16T20:02:27.941Z",
+          "durationMs": 10336,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 48,
+            "accessibility": 91,
+            "best-practices": 73,
+            "seo": 83
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:56782/",
+          "mainDocumentUrl": "http://127.0.0.1:56782/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2410.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 48,
+              "accessibility": 91,
+              "best-practices": 73,
+              "seo": 83
+            },
+            "fcpMs": 3534.484922294172,
+            "lcpMs": 13062.646563058894,
+            "tbtMs": 3,
+            "cls": 0.4041478344256474,
+            "speedIndexMs": 3534.484922294172,
+            "pesoTotalBytes": 2258918,
+            "requisicoes": 66,
+            "jsNaoUsadoBytes": 0,
+            "cssNaoUsadoBytes": 25478
+          }
+        }
+      ],
+      "mediana": {
+        "criterio": "nota-performance",
+        "n": 2
+      },
+      "metricas": {
+        "notas": {
+          "performance": 48,
+          "accessibility": 91,
+          "best-practices": 73,
+          "seo": 83
+        },
+        "fcpMs": 3541.2519,
+        "lcpMs": 13071.6692,
+        "tbtMs": 15,
+        "cls": 0.4041478344256474,
+        "speedIndexMs": 3541.2519,
+        "pesoTotalBytes": 2258918,
+        "requisicoes": 66,
+        "jsNaoUsadoBytes": 0,
+        "cssNaoUsadoBytes": 25478
+      },
+      "variacaoPerformance": {
+        "n": 3,
+        "min": 48,
+        "max": 48,
+        "amplitude": 0,
+        "media": 48,
+        "desvioPadrao": 0
+      },
+      "semantica": {
+        "status": "ok",
+        "indicadores": {
+          "divSpan": {
+            "div": 358,
+            "span": 37,
+            "total": 588,
+            "proporcao": 0.6717687074829932
+          },
+          "landmarks": {
+            "banner": 0,
+            "navigation": 2,
+            "main": 0,
+            "contentinfo": 0
+          },
+          "titulos": {
+            "total": 18,
+            "h1": 10,
+            "porNivel": [
+              10,
+              8,
+              0,
+              0,
+              0,
+              0
+            ],
+            "saltos": 0,
+            "maiorSalto": 0,
+            "primeiroNivel": 1
+          },
+          "estrutura": {
+            "article": 0,
+            "section": 25,
+            "aside": 0,
+            "figure": 11,
+            "ul": 3,
+            "ol": 0
+          },
+          "interativosFalsos": {
+            "comOnclick": 0,
+            "falsos": 0
+          },
+          "metadados": {
+            "lang": "pt-BR",
+            "temTitle": true,
+            "titleComprimento": 79,
+            "temViewport": true,
+            "temDescription": false
+          },
+          "imagens": {
+            "total": 24,
+            "semAlt": 0,
+            "altVazio": 2,
+            "semAltComAlternativa": 0
+          },
+          "campos": {
+            "total": 0,
+            "semLabel": 0,
+            "semLabelComPlaceholderOuTitle": 0
+          },
+          "obsoletas": {
+            "roteiro": 0,
+            "whatwg": 0,
+            "porTag": {}
+          },
+          "tabelas": {
+            "total": 0,
+            "layoutDeclarada": 0,
+            "layoutHeuristica": 0,
+            "dados": 0,
+            "indeterminada": 0
+          }
+        },
+        "indice": {
+          "subnotas": {
+            "landmarks": 25,
+            "titulos": 50,
+            "imagens": 100,
+            "campos": null,
+            "divSpan": 32.82312925170068,
+            "metadados": 100,
+            "interativos": null,
+            "obsoletos": 100
+          },
+          "indice": 60.352891156462576,
+          "indicePesosIguais": 67.9705215419501
+        },
+        "networkidleTimeout": false
+      },
+      "faltasNoServidor": [
+        "/_ext/www.youtube.com//embed/zihgTDxcmIo?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A56782&widgetid=1&forigin=http%3A%2F%2F127.0.0.1%3A56782%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/PTMpOrK7pEw?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A56782&widgetid=3&forigin=http%3A%2F%2F127.0.0.1%3A56782%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/iJVtfaP4rog?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A56782&widgetid=5&forigin=http%3A%2F%2F127.0.0.1%3A56782%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/wnPtaB2pvMI?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A56782&widgetid=7&forigin=http%3A%2F%2F127.0.0.1%3A56782%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/1PKM3SOYPYM?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A56782&widgetid=9&forigin=http%3A%2F%2F127.0.0.1%3A56782%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/yBjDGTVKuuM?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A56782&widgetid=11&forigin=http%3A%2F%2F127.0.0.1%3A56782%2F&aoriginsup=1&vf=1",
+        "/favicon.ico",
+        "/_ext/www.youtube.com//embed/wnPtaB2pvMI?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A56782&widgetid=1&forigin=http%3A%2F%2F127.0.0.1%3A56782%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/1PKM3SOYPYM?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A56782&widgetid=3&forigin=http%3A%2F%2F127.0.0.1%3A56782%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/yBjDGTVKuuM?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A56782&widgetid=5&forigin=http%3A%2F%2F127.0.0.1%3A56782%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/zihgTDxcmIo?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A56782&widgetid=7&forigin=http%3A%2F%2F127.0.0.1%3A56782%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/PTMpOrK7pEw?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A56782&widgetid=9&forigin=http%3A%2F%2F127.0.0.1%3A56782%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/iJVtfaP4rog?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A56782&widgetid=11&forigin=http%3A%2F%2F127.0.0.1%3A56782%2F&aoriginsup=1&vf=1",
+        "/robots.txt",
+        "/wp-content/uploads/2020/09/cecilia.jpeg",
+        "/wp-content/uploads/2020/09/edward-768x768.jpeg",
+        "/wp-content/uploads/2020/09/parente-768x768.jpeg",
+        "/wp-content/uploads/2020/09/cesar.jpeg",
+        "/wp-content/uploads/2020/09/Shirley-768x768.jpeg",
+        "/wp-content/uploads/2020/09/Rita-Louzeiro.jpeg",
+        "/wp-content/uploads/2020/09/katz.jpeg",
+        "/wp-content/uploads/2020/09/perez.jpeg",
+        "/wp-content/uploads/2020/10/anabel.jpeg",
+        "/wp-content/uploads/2020/10/logo-sia-768x159.png",
+        "/wp-content/uploads/2020/03/logo-sedis.jpg",
+        "/wp-content/uploads/2020/03/logo-lais.jpg",
+        "/wp-content/uploads/2020/10/ufrrj.jpg",
+        "/wp-content/uploads/2020/10/Ufpr_logo.jpg",
+        "/wp-content/uploads/2020/10/Marca-Horizontal-Smbolo-Tipografia-001-768x406.png",
+        "/wp-content/uploads/2020/10/Marca_UFG_cor_completa_horizontal-768x539.png",
+        "/wp-content/uploads/2020/10/Uneb.png",
+        "/wp-content/uploads/2020/10/anped_redonda-768x768.png",
+        "/wp-content/uploads/2020/10/abpee-e1601937875636.jpg"
+      ]
+    },
+    "corrigido": {
+      "urlLocal": "http://127.0.0.1:56783/",
+      "execucoes": [
+        {
+          "n": 1,
+          "startedAt": "2026-11-16T20:01:53.108Z",
+          "durationMs": 11956,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 67,
+            "accessibility": 91,
+            "best-practices": 73,
+            "seo": 83
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:56783/",
+          "mainDocumentUrl": "http://127.0.0.1:56783/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2003.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 67,
+              "accessibility": 91,
+              "best-practices": 73,
+              "seo": 83
+            },
+            "fcpMs": 3536.1483,
+            "lcpMs": 11864.8644,
+            "tbtMs": 93,
+            "cls": 0,
+            "speedIndexMs": 3536.1483,
+            "pesoTotalBytes": 2017436,
+            "requisicoes": 64,
+            "jsNaoUsadoBytes": 0,
+            "cssNaoUsadoBytes": 25478
+          }
+        },
+        {
+          "n": 2,
+          "startedAt": "2026-11-16T20:02:16.729Z",
+          "durationMs": 11212,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 67,
+            "accessibility": 91,
+            "best-practices": 73,
+            "seo": 83
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:56783/",
+          "mainDocumentUrl": "http://127.0.0.1:56783/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2263.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 67,
+              "accessibility": 91,
+              "best-practices": 73,
+              "seo": 83
+            },
+            "fcpMs": 3535.749,
+            "lcpMs": 11789.331999999999,
+            "tbtMs": 57,
+            "cls": 0,
+            "speedIndexMs": 3535.749,
+            "pesoTotalBytes": 2017436,
+            "requisicoes": 64,
+            "jsNaoUsadoBytes": 0,
+            "cssNaoUsadoBytes": 25478
+          }
+        },
+        {
+          "n": 3,
+          "startedAt": "2026-11-16T20:02:38.277Z",
+          "durationMs": 12046,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 67,
+            "accessibility": 91,
+            "best-practices": 73,
+            "seo": 83
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:56783/",
+          "mainDocumentUrl": "http://127.0.0.1:56783/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2406.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 67,
+              "accessibility": 91,
+              "best-practices": 73,
+              "seo": 83
+            },
+            "fcpMs": 3537.5156999999995,
+            "lcpMs": 11791.687600000001,
+            "tbtMs": 25.999999999999545,
+            "cls": 0,
+            "speedIndexMs": 3537.5156999999995,
+            "pesoTotalBytes": 2017436,
+            "requisicoes": 64,
+            "jsNaoUsadoBytes": 0,
+            "cssNaoUsadoBytes": 25478
+          }
+        }
+      ],
+      "mediana": {
+        "criterio": "nota-performance",
+        "n": 2
+      },
+      "metricas": {
+        "notas": {
+          "performance": 67,
+          "accessibility": 91,
+          "best-practices": 73,
+          "seo": 83
+        },
+        "fcpMs": 3535.749,
+        "lcpMs": 11789.331999999999,
+        "tbtMs": 57,
+        "cls": 0,
+        "speedIndexMs": 3535.749,
+        "pesoTotalBytes": 2017436,
+        "requisicoes": 64,
+        "jsNaoUsadoBytes": 0,
+        "cssNaoUsadoBytes": 25478
+      },
+      "variacaoPerformance": {
+        "n": 3,
+        "min": 67,
+        "max": 67,
+        "amplitude": 0,
+        "media": 67,
+        "desvioPadrao": 0
+      },
+      "semantica": {
+        "status": "ok",
+        "indicadores": {
+          "divSpan": {
+            "div": 358,
+            "span": 37,
+            "total": 588,
+            "proporcao": 0.6717687074829932
+          },
+          "landmarks": {
+            "banner": 1,
+            "navigation": 2,
+            "main": 0,
+            "contentinfo": 1
+          },
+          "titulos": {
+            "total": 18,
+            "h1": 10,
+            "porNivel": [
+              10,
+              8,
+              0,
+              0,
+              0,
+              0
+            ],
+            "saltos": 0,
+            "maiorSalto": 0,
+            "primeiroNivel": 1
+          },
+          "estrutura": {
+            "article": 0,
+            "section": 23,
+            "aside": 0,
+            "figure": 11,
+            "ul": 3,
+            "ol": 0
+          },
+          "interativosFalsos": {
+            "comOnclick": 0,
+            "falsos": 0
+          },
+          "metadados": {
+            "lang": "pt-BR",
+            "temTitle": true,
+            "titleComprimento": 79,
+            "temViewport": true,
+            "temDescription": false
+          },
+          "imagens": {
+            "total": 24,
+            "semAlt": 0,
+            "altVazio": 2,
+            "semAltComAlternativa": 0
+          },
+          "campos": {
+            "total": 0,
+            "semLabel": 0,
+            "semLabelComPlaceholderOuTitle": 0
+          },
+          "obsoletas": {
+            "roteiro": 0,
+            "whatwg": 0,
+            "porTag": {}
+          },
+          "tabelas": {
+            "total": 0,
+            "layoutDeclarada": 0,
+            "layoutHeuristica": 0,
+            "dados": 0,
+            "indeterminada": 0
+          }
+        },
+        "indice": {
+          "subnotas": {
+            "landmarks": 75,
+            "titulos": 50,
+            "imagens": 100,
+            "campos": null,
+            "divSpan": 32.82312925170068,
+            "metadados": 100,
+            "interativos": null,
+            "obsoletos": 100
+          },
+          "indice": 72.85289115646258,
+          "indicePesosIguais": 76.30385487528345
+        },
+        "networkidleTimeout": false
+      },
+      "faltasNoServidor": [
+        "/_ext/www.youtube.com//embed/zihgTDxcmIo?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A56783&widgetid=1&forigin=http%3A%2F%2F127.0.0.1%3A56783%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/PTMpOrK7pEw?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A56783&widgetid=3&forigin=http%3A%2F%2F127.0.0.1%3A56783%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/iJVtfaP4rog?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A56783&widgetid=5&forigin=http%3A%2F%2F127.0.0.1%3A56783%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/wnPtaB2pvMI?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A56783&widgetid=7&forigin=http%3A%2F%2F127.0.0.1%3A56783%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/1PKM3SOYPYM?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A56783&widgetid=9&forigin=http%3A%2F%2F127.0.0.1%3A56783%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/yBjDGTVKuuM?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A56783&widgetid=11&forigin=http%3A%2F%2F127.0.0.1%3A56783%2F&aoriginsup=1&vf=1",
+        "/favicon.ico",
+        "/_ext/www.youtube.com//embed/wnPtaB2pvMI?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A56783&widgetid=1&forigin=http%3A%2F%2F127.0.0.1%3A56783%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/1PKM3SOYPYM?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A56783&widgetid=3&forigin=http%3A%2F%2F127.0.0.1%3A56783%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/yBjDGTVKuuM?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A56783&widgetid=5&forigin=http%3A%2F%2F127.0.0.1%3A56783%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/zihgTDxcmIo?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A56783&widgetid=7&forigin=http%3A%2F%2F127.0.0.1%3A56783%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/PTMpOrK7pEw?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A56783&widgetid=9&forigin=http%3A%2F%2F127.0.0.1%3A56783%2F&aoriginsup=1&vf=1",
+        "/_ext/www.youtube.com//embed/iJVtfaP4rog?controls=0&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A56783&widgetid=11&forigin=http%3A%2F%2F127.0.0.1%3A56783%2F&aoriginsup=1&vf=1",
+        "/robots.txt",
+        "/wp-content/uploads/2020/09/cecilia.jpeg",
+        "/wp-content/uploads/2020/09/edward-768x768.jpeg",
+        "/wp-content/uploads/2020/09/parente-768x768.jpeg",
+        "/wp-content/uploads/2020/09/cesar.jpeg",
+        "/wp-content/uploads/2020/09/Shirley-768x768.jpeg",
+        "/wp-content/uploads/2020/09/Rita-Louzeiro.jpeg",
+        "/wp-content/uploads/2020/09/katz.jpeg",
+        "/wp-content/uploads/2020/09/perez.jpeg",
+        "/wp-content/uploads/2020/10/anabel.jpeg",
+        "/wp-content/uploads/2020/10/logo-sia-768x159.png",
+        "/wp-content/uploads/2020/03/logo-sedis.jpg",
+        "/wp-content/uploads/2020/03/logo-lais.jpg",
+        "/wp-content/uploads/2020/10/ufrrj.jpg",
+        "/wp-content/uploads/2020/10/Ufpr_logo.jpg",
+        "/wp-content/uploads/2020/10/Marca-Horizontal-Smbolo-Tipografia-001-768x406.png",
+        "/wp-content/uploads/2020/10/Marca_UFG_cor_completa_horizontal-768x539.png",
+        "/wp-content/uploads/2020/10/Uneb.png",
+        "/wp-content/uploads/2020/10/anped_redonda-768x768.png",
+        "/wp-content/uploads/2020/10/abpee-e1601937875636.jpg"
+      ]
+    }
+  },
+  "deltas": {
+    "nota_performance": {
+      "original": 48,
+      "corrigido": 67,
+      "delta": 19
+    },
+    "nota_accessibility": {
+      "original": 91,
+      "corrigido": 91,
+      "delta": 0
+    },
+    "nota_best_practices": {
+      "original": 73,
+      "corrigido": 73,
+      "delta": 0
+    },
+    "nota_seo": {
+      "original": 83,
+      "corrigido": 83,
+      "delta": 0
+    },
+    "fcp_ms": {
+      "original": 3541.2519,
+      "corrigido": 3535.749,
+      "delta": -5.502900000000409
+    },
+    "lcp_ms": {
+      "original": 13071.6692,
+      "corrigido": 11789.331999999999,
+      "delta": -1282.3372000000018
+    },
+    "tbt_ms": {
+      "original": 15,
+      "corrigido": 57,
+      "delta": 42
+    },
+    "cls": {
+      "original": 0.4041478344256474,
+      "corrigido": 0,
+      "delta": -0.4041478344256474
+    },
+    "speed_index_ms": {
+      "original": 3541.2519,
+      "corrigido": 3535.749,
+      "delta": -5.502900000000409
+    },
+    "peso_total_bytes": {
+      "original": 2258918,
+      "corrigido": 2017436,
+      "delta": -241482
+    },
+    "requisicoes": {
+      "original": 66,
+      "corrigido": 64,
+      "delta": -2
+    },
+    "indice_semantica": {
+      "original": 60.352891156462576,
+      "corrigido": 72.85289115646258,
+      "delta": 12.5
+    },
+    "indice_semantica_pesos_iguais": {
+      "original": 67.9705215419501,
+      "corrigido": 76.30385487528345,
+      "delta": 8.333333333333343
+    },
+    "sub_landmarks": {
+      "original": 25,
+      "corrigido": 75,
+      "delta": 50
+    },
+    "sub_titulos": {
+      "original": 50,
+      "corrigido": 50,
+      "delta": 0
+    },
+    "sub_imagens": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    },
+    "sub_campos": {
+      "original": null,
+      "corrigido": null,
+      "delta": null
+    },
+    "sub_divSpan": {
+      "original": 32.82312925170068,
+      "corrigido": 32.82312925170068,
+      "delta": 0
+    },
+    "sub_metadados": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    },
+    "sub_interativos": {
+      "original": null,
+      "corrigido": null,
+      "delta": null
+    },
+    "sub_obsoletos": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    }
+  }
+}

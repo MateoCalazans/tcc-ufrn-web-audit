@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <link rel="shortcut icon" href="images/logo1.png"/>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>Lehs</title>
+      <!-- Bootstrap core CSS -->
+      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Custom styles for this template -->
+      <link href="css/full-width-pics.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/carrousel.css">
+      <link rel="stylesheet" href="css/style.css">
+
+      <style>
+         /* Banner institucional do LEHS */
+         .lehs-banner {
+            width: 100vw;
+            height: 100vh;
+            min-height: 520px;
+            margin-left: calc(50% - 50vw);
+            background-color: #ffffff;
+            overflow: hidden;
+            border-top: 1px solid rgba(0,0,0,.04);
+            border-bottom: 1px solid rgba(0,0,0,.08);
+         }
+
+         .lehs-banner img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+            max-width: none;
+         }
+
+         /* Espaçamento geral: mantém a estrutura original, mas elimina vazios excessivos. */
+         html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 78px;
+         }
+
+         section {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+            scroll-margin-top: 78px;
+         }
+
+         section.py-5 {
+            padding-top: 1.25rem !important;
+            padding-bottom: 1.25rem !important;
+         }
+
+         /* Mantém os cards e elementos internos com uma margem visual equilibrada. */
+         section .mt-5 {
+            margin-top: 1.25rem !important;
+         }
+
+         section .service-box {
+            margin-bottom: 0 !important;
+         }
+
+         /* Centralização real da capa do portfólio. */
+         #portfolio-items {
+            width: 100% !important;
+            text-align: center !important;
+         }
+
+         #portfolio-items a {
+            display: inline-block;
+         }
+
+         #portfolio-items img {
+            display: block;
+            margin: 0 auto;
+         }
+
+         /* Mapa na seção Contato */
+         #googleMap {
+            width: 100%;
+            height: 400px;
+            margin-top: 0 !important;
+            overflow: hidden;
+         }
+
+         #googleMap iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+         }
+
+         @media (max-width: 768px) {
+            .lehs-banner {
+               min-height: 420px;
+            }
+
+            section.py-5 {
+               padding-top: 1rem !important;
+               padding-bottom: 1rem !important;
+            }
+
+            section .mt-5 {
+               margin-top: 1rem !important;
+            }
+
+            #googleMap {
+               height: 320px;
+            }
+         }
+      </style>
+
+   </head>
+   <body style="background-color:#f0ede6;">
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark  fixed-top"
+      style="background-color:#353A40;">
+         <div class="container">
+            <a class="navbar-brand" href="#"><img src="images/logonova.png" alt="LEHS" width="70" height="70"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                     <a class="nav-link" href="#home">Início
+                     <span class="sr-only">(current)</span>
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#sobre">Sobre</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#portfolio">Portfólio</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#membros">Membros</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#projetos">Projetos</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#eve">Eventos</a>
+                   </li>
+                   <li class="nav-item">
+                    <a class="nav-link" href="#liv">Livros</a>
+                 </li>
+                   <li class="nav-item">
+                     <a class="nav-link" href="#prod">Produções</a>
+                  </li>                  
+                    <li class="nav-item">
+                     <a class="nav-link" href="#cont">Contato</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <!-- Header -->
+      <header class="lehs-banner" id="home">
+         <img src="images/banner_lehs_branco.png" alt="Laboratório de Experimentação em História Social — LEHS" width="1688" height="932">
+      </header>
+      <!-- Content section -->
+      <section id="sobre" class="py-5 " style="padding-bottom: 0;">
+         <div class="container text-left">
+            <h1>Sobre o LEHS</h1>
+            <div class="s2 text-center">
+               <div class="row center">                  
+                  <div class="col-lg-4 col-md-6 col-xs-6 text-center center">
+                     <div class="service-box mt-5 mx-auto">
+                        <img src="images/pesquisa.png" width="150px" height="150">
+                        <h3 class="mb-3">Pesquisa</h3>
+                        <!--  <p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p> -->
+                     </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-xs-6 text-center">
+                     <div class="service-box mt-5 mx-auto">
+                        <img loading="lazy" src="images/banco.png" width="150px" height="150">
+                        <h3 class="mb-3">Banco de dados</h3>
+                        <!--      <p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p> -->
+                     </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-xs-6 text-center">
+                     <div class="service-box mt-5 mx-auto">
+                        <img loading="lazy" src="images/equipe.png" width="300px" height="151">
+                        <h3 class="mb-3">Equipe técnica</h3>
+                        <!--      <p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p> -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <p class="texto-just">O Laboratório de Experimentação em História Social, LEHS, é uma iniciativa dedicada ao ensino, à pesquisa, à inovação metodológica e ao incentivo da práxis de experimentação e de colaboração no cotidiano do(a) historiador(a). Os projetos que o LEHS desenvolve estão intimamente ligados à construção de bancos de dados e transcrição de documentos manuscritos, tendo em vista a consulta e disponibilização de informações relativas à história do Brasil com foco no Rio Grande do Norte. Os projetos trabalham, sobretudo, com fontes primárias variadas: cartas de sesmarias, cartas de aforamento, cartas patentes, registros paroquiais de batismo, casamento e óbito, material constante na Coleção Resgate, correspondência dos presidentes de província, jornais do século XIX, inventários.</p>
+            <p style="padding-bottom: 0" class="texto-just">O objetivo do laboratório é levar aos alunos as problemáticas clássicas da história social (preocupação com a média duração, agentes, grupos sociais e processos de transformação social), juntamente com o aprendizado, discussão e experimentação de conceitos, problemas e tecnologia do século XXI. Como exemplo, o melhor tratamento e processamento de fontes seriais, o método onomástico, a ênfase na descoberta e análise de novas fontes primárias e a utilização de bases de dados computacionais que possibilitem a recomposição de trajetórias, estratégias e redes sociais dos agentes envolvidos nos processos que se interessa recompor.</p>
+         </div>
+      </section><!-- Content section -->
+       <section id="portfolio" class="py-5 content-2" style="margin-top: 0px;">
+          <div class="container text-left">
+             <h1>Portfólio</h1>
+             <div class="s2 text-center">
+                <div class="row">
+                   <div id="portfolio-items" style="width: -webkit-fill-available; text-align: center;">
+                      <a href="docs/portfolio.pdf" target="_blank">
+                         <img loading="lazy" src="images/portfolio/capa.jpg"
+                              alt="Portfólio Institucional do LEHS"
+                              class="d-block images" width="407" height="600" style="margin: 0 auto;">
+                      </a>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </section>
+      <section id="membros" class="py-5 content-2">
+         <div class="container text-left">
+            <h1>Membros</h1>
+            <ul class="nav nav-pills nav-fill">
+                <div class="btn-group btn-group-toggle btn-block btn-lg" >
+                    <button type="button" class="btn btn-secondary  btn-lg btn-block ck1" id="um">Coordenação</button>
+                    <button type="button" class="btn btn-secondary  btn-lg btn-block" id="dois">Colaboradores</button>
+                    <button type="button" class="btn btn-secondary  btn-lg btn-block" id="tres">Equipe</button>
+                </div>
+              </ul>
+            <div class="carrousel">
+              <div class="tapa" id="move">
+              </div>
+              <!-- controls -->
+              <div class="cont">
+                <div class="left controls" id="l"><img loading="lazy" src="images/prev.png" style="width: 20px; margin-left: 0px;"></div>
+                <div class="right controls" id="r"><img loading="lazy" src="images/next.png" style="width: 20px; margin-left: 7px;"></div>
+              </div>
+            </div>
+         </div>
+      </section>
+        <!-- Content section -->
+        <!-- modais -->
+        <!-- modais -->
+        <div class="modal fade modoal-size" id="Digitalizacao" tabindex="-1" role="dialog" aria-labelledby="DigitalizacaoTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-center" id="exampleModalLongTitle">DIGITALIZAÇÃO DOS REGISTROS PAROQUIAIS DA CÚRIA METROPOLITANA DE NATAL</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="col-md-4">
+                          <img loading="lazy" src="images/projetos/curia.jpg" class="imgPr" width="315" height="209">
+                        </div>
+                        <div class="col-md-4 col-md-offset-3 mods text-center">
+                            <button type="button" class="btn btn-secondary btn-lg btn-block modlslink">
+                              <a href="https://eap.bl.uk/project/EAP505" class="links" onclick='window.open(this.href); return false;' onkeypress='window.open(this.href); return false;'>Acessar a plataforma</a>
+                            </button>
+                        </div>
+                      </div>
+                      <div class="col-md-6 ml-auto">
+                        <p class="txtA">O projeto visa digitalizar os registros paroquiais que se encontram na Cúria Metropolitana de Natal. Tais registros são compostos por
+                          livros de batismo, casamento e óbito, e remontam à primeira metade do século XVIII, prosseguindo até o século XX, de várias freguesias
+                          do Rio Grande do Norte, sendo de imensa importância para o público potiguar que os livros paroquiais sejam digitalizados para que se
+                          preserve a memória destes registros. Além de ser um serviço para a comunidade potiguar, tais registros podem possibilitar pesquisas
+                          acadêmicas relativas à demografia histórica, bem como a utilização destes documentos em sala de aula, como forma a instigar o uso de
+                          fontes primárias para que os alunos percebam melhor a importância da pesquisa e sua relação com o ensino.
+                      </p>
+                    </div>
+                  </div>
+                </div>  
+              </div>            
+            </div>
+          </div>
+        </div> 
+        <!-- SILB -->
+        <div class="modal fade modoal-size" id="silb" tabindex="-1" role="dialog" aria-labelledby="silbTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header" style="width: 100%;">
+                  <h5 class="modal-title text-center text-center1" id="exampleModalLongTitle">SILB: Sesmarias do Império Luso-Brasileiro</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="col-md-4">
+                            <img loading="lazy" src="images/projetos/silbnova.jpg" class="imgPr" width="883" height="721">
+                          </div>
+                          <div class="col-md-4 col-md-offset-3 mods text-center">
+                              <button type="button" class="btn btn-secondary btn-lg btn-block modlslink">
+                                <a href="http://plataformasilb.cchla.ufrn.br/" class="links" onclick='window.open(this.href); return false;' onkeypress='window.open(this.href); return false;'>Acessar a plataforma</a>
+                              </button>
+                          </div>
+                        </div>
+                        <div class="col-md-6 ml-auto">
+                          <p class="txtA">
+                              Projeto que envolve pesquisa, extensão e ensino, vinculado à linha “Terra, trabalho e poder”
+                              do grupo de pesquisa “Formação dos espaços coloniais: economia, sociedade e cultura”. O projeto
+                              pretende disponibilizar por meio de um banco de dados de fácil acesso, a Plataforma SILB (Sesmarias
+                              do Império Luso-Brasileiro), informações relativas às sesmarias do Brasil (títulos de terra do período
+                              colonial e início do Império), bem como os documentos transcritos na íntegra. O projeto tem como função
+                              social permitir o acesso a aproximadamente 16 mil documentos, ação que permitirá os desdobramentos de
+                              pesquisas acadêmicas, como também possibilitará o uso destes documentos em sala de aula, aproximando os
+                              alunos de graduação de documentos históricos e da pesquisa.                          
+                      </div>
+                    </div>
+                  </div>  
+                </div>            
+              </div>
+            </div>
+          </div> 
+
+
+        <div class="modal fade modoal-size" id="jogos" tabindex="-1" role="dialog" aria-labelledby="jogosTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title text-center text-center1" id="exampleModalLongTitle">PRODUÇÃO DE JOGOS</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <img loading="lazy" src="images/projetos/jogos.jpg" class="imgPr1" width="300" height="225">
+                      </div>
+                      <div class="col-md-6 ml-auto">
+                        <p class="txtA">
+                          Promove o uso de fontes primárias em sala de aula como estímulo à maior reflexão do papel e ação do historiador
+                          no ensino, na pesquisa e sua atuação junto à sociedade. O projeto visa melhorar o ensino de graduação através 
+                          da organização de fontes primárias, bem como incentivar monitores à atividade docente.
+                        </p>
+                      </div>
+                    </div>              
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          
+          <div class="modal fade modoal-size" id="naca" tabindex="-1" role="dialog" aria-labelledby="nacaTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title text-captilize" id="exampleModalLongTitle">NACAOB</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <img loading="lazy" src="images/projetos/nacaob.png" class="imgPr1" width="189" height="63">
+                        </div>
+                        <div class="col-md-6 ml-auto">
+                          <p class="txtA">
+                              Software desenvolvido por Dario Scott e Ana Silvia Volpi Scott para inclusão de registros paroquiais e outras fontes nominativas para possibilitar a reconstituição de famílias a partir da metodologia proposta por Louis Henry. O sistema foi desenvolvido em C# e utiliza um banco de dados SQL. Atualmente o software é utilizado por pesquisadores integrantes do GP Demografia & História do CNPq lotados em diversas instituições de ensino superior no paí­s (UNICAMP, UFPA, UFRN, UNISINOS entre outras), que participam do projeto coordenado pelo Prof. Sergio Nadalin (Além do Centro-Sul: por uma história da população nos extremos dos domí­nios lusos na América.
+                          </p>
+                        </div>
+                      </div>              
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal fade modoal-size" id="lnotas" tabindex="-1" role="dialog" aria-labelledby="lnotasTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title text-captilize" id="exampleModalLongTitle"> AS ESCRITURAS DA CABEÇA POLÍTICA DO ESTADO DO BRASIL: CONSTRUÇÃO DE UM BANCO DE DADOS DOS LIVROS DE NOTAS DE SALVADOR DA BAHIA, 1664-1803</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="container-fluid">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <img loading="lazy" src="images/projetos/livrodenotas.png" class="imgPr" width="938" height="535">
+                          </div>
+                          <div class="col-md-6 ml-auto">
+                            <p class="txtA">
+                                 Este projeto objetiva elaborar um banco de dados de todas as escrituras públicas dos tabelionatos (Ofícios de Notas) da antiga América portuguesa entre os séculos XVI e XVIII. Tais escrituras legalizavam e publicizavam, como até hoje o fazem, diferentes atos da sociedade. Nelas temos vendas, créditos, contratos de casamento, testamentos, alforrias, patrimônios para vida eclesiástica, procurações etc. Portanto, a sociedade ao rés do chão. O ponto de partida serão os tabelionatos da cidade de Salvador da Bahia, por ser a cabeça política do então Estado do Brasil, disponibilizados no site da British Library, para o período de 1664 a 1807 (76.472 imagens). Essas escrituras serão transcritas com o auxílio do aplicativo Transkribus (a transcrição manual de 15% do documento gera modelos que transcrevem o restante) e contém, ainda, ferramentas de busca. Em seguida, será elaborado um banco de dados permitindo investigações na área das Ciências Humanas. Esse banco será hospedado em universidades públicas e, via internet, franqueado ao público em geral. Aquelas escrituras servem a diversas metodologias da historiografia. Para os adeptos da história serial dos Annales, é possível estudar as mudanças e permanências da sociedade; no caso de séries temporais das vendas, dos créditos etc. Para a micro-história o tabelionato registrava, ao menos, parte das relações vividas pelos agentes da sociedade. Assim, tendo como fio de Ariane os nomes das pessoas em tais papéis, vendas, contratos de casamentos, testamentos etc. poder-se-á entender a lógica da sociedade. Seja qual for o método adotado para estudo e uso do banco de dados sobre as escrituras, dará solidez empírica para a ainda jovem historiografia brasileira; auxiliando para melhor compreensão da sociedade contemporânea e solução de seus problemas. O projeto será capitaneado pelo grupo de pesquisa Antigo Regime nos Trópicos da UFRJ e credenciado no CNPq, em rede com pesquisadores de diferentes Universidades públicas do Brasil, entre elas a UFRN, representada pelo LEHS.
+                            </p>
+                          </div>
+                        </div>              
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+           
+
+           <div class="modal fade modoal-size" id="bicen" tabindex="-1" role="dialog" aria-labelledby="bicenTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header" style="width: 100%;">
+                  <h5 class="modal-title text-center text-center1" id="exampleModalLongTitle">200 ANOS DA INDEPENDÊNCIA DO BRASIL</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="col-md-4">
+                            <img loading="lazy" src="images/projetos/bicen.png" class="imgPr" width="493" height="441">
+                          </div>
+                          <div class="col-md-4 col-md-offset-3 mods text-center">
+                              <button type="button" class="btn btn-secondary btn-lg btn-block modlslink">
+                                <a href="https://www.instagram.com/bicentenarionorn/" class="links" onclick='window.open(this.href); return false;' onkeypress='window.open(this.href); return false;'>Acessar o Instagram</a>
+                              </button>
+                          </div>
+                        </div>
+                        <div class="col-md-6 ml-auto">
+                          <p class="txtA">
+                              O projeto 200 anos da Independência do Brasil foi desenvolvido com o objetivo de organização e realização de ações que promovam a  reflexão e a discussão historiográfica sobre a Independência do Brasil, dando destaque ao contexto do Rio Grande do Norte nesse período. Entre as ações programa está a exposição itinerária “Bicentenário da Independência”; o ciclo de conferências “Reflexões sobre o bicentenário”, o qual teve como convidados importantes nomes da historiografia brasileira, tais como Lilia Schwarcz, João Paulo Pimenta e Miriam Dolhnikoff; e em breve terá o lançamento de um livro de fontes com documentos inéditos sobre o RN entre o período de 1810 e 1830, além de um podcast com os convidados do ciclo de conferências.                          
+                      </div>
+                    </div>
+                  </div>  
+                </div>            
+              </div>
+            </div>
+          </div>
+
+
+              <div class="modal fade modoal-size" id="projs" tabindex="-1" role="dialog" aria-labelledby="projsTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title text-captilize text-center1 txtA" id="exampleModalLongTitle">PROJETOS DESENVOLVIDOS PELO LEHS</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="container-fluid">
+                          <div class="row">
+                            <div class="sm-9">
+                              <div class="col-md-6">
+                                <img loading="lazy" src="images/produzir2.jpg" style="height:1900px;margin-left: -30px;margin-top: -15px" width="1240" height="2953">
+                                <img loading="lazy" src="images/capriferiaspp.jpg" style="height:999px;margin-left: -30px;margin-top: -15px" width="6299" height="7874">
+                              </div>
+                            </div>                            
+                          </div>              
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!-- 
+
+                   -->
+      <section id="projetos" class="py-5">
+         <div class="container text-left">
+            <h1>Projetos</h1>
+             <div class="s2 text-center">
+               <div class="row">
+                  <div class="col-lg-3 col-md-6 text-left">
+                     <div class="service-box mt-5 mx-auto">
+                        <div class="card-header" style="background-image: url(images/projetos/curia.jpg);" data-toggle="modal" data-target="#Digitalizacao">
+                        </div>
+                        <div class="card-body"><p>DIGITALIZAÇÃO DOS REGISTROS</p></div>
+                     </div>
+                  </div>
+                   <div class="col-lg-3 col-md-6 text-left">
+                     <div class="service-box mt-5 mx-auto">
+                        <div class="card-header" style="background-image: url(images/projetos/nacaob1.png);" data-toggle="modal" data-target="#naca">
+                        </div>
+                        <div class="card-body"><p>NACAOB</p></div>
+                     </div>
+                  </div>
+                   <div class="col-lg-3 col-md-6 text-left">
+                     <div class="service-box mt-5 mx-auto">
+                        <div class="card-header text-center" style="background-image: url(images/projetos/livrodenotas.png);" data-toggle="modal" data-target="#lnotas">
+                        </div>
+                        <div class="card-body"><p>LIVRO DE NOTAS: AS ESCRITURAS DA CABEÇA POLÍTICA DO ESTADO DO BRASIL </p></div>
+                     </div>
+                  </div>
+                   <div class="col-lg-3 col-md-6 text-left">
+                     <div class="service-box mt-5 mx-auto">
+                        <div class="card-header" style="background-image: url(images/projetos/jogos.jpg);"  data-toggle="modal" data-target="#jogos">
+                        </div>
+                        <div class="card-body"><p>PRODUÇÃO DE JOGOS</p></div>
+                     </div>
+                  </div>
+               </div>
+               <!-- row -->
+                <div class="row">
+                  <div class="col-lg-3 col-md-6 text-left">
+                     <div class="service-box mt-5 mx-auto">
+                        <div class="card-header" style="background-image: url(images/projetos/silb.jpg);" data-toggle="modal" data-target="#silb">
+                        </div>
+                        <div class="card-body"><p>PLATAFORMA SILB</p></div>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 text-left">
+                     <div class="service-box mt-5 mx-auto">
+                        <div class="card-header" style="background-image: url(images/projetos/200anos.png)" data-toggle="modal" data-target="#bicen">
+                        </div>
+                        <div class="card-body"><p>BICENTENÁRIO</p></div>
+                     </div>
+                  </div>
+                   <div class="col-lg-3 col-md-6 text-left">
+                     <div class="service-box mt-5 mx-auto">
+                        <div class="card-header " style="background-image: url(images/logo_lehs.jpg); background-size: 100%; background-repeat: no-repeat; transform: translateY(500px;)" data-toggle="modal" data-target="#projs">
+                        </div>
+                        <div class="card-body"><p class="text-uppercase">atividades</p></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+        <!-- Content section -->
+      <!-- 
+PARTE DE EVENTOS
+ -->
+
+ <div class="modal fade modoal-size" id="ENCONTRO" tabindex="-1" role="dialog" aria-labelledby="ENCONTROTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLongTitle">	I ENCONTROS IMPERIAIS: Sociedade e política no Brasil Oitocentista</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="col-md-4">
+                  <img loading="lazy" src="images/projetos/I_Encontro.JPG" class="imgPr" width="461" height="584">
+                </div>
+                <div class="col-md-4 col-md-offset-3 mods text-center">
+                    <button type="button" class="btn btn-secondary btn-lg btn-block modlslink">
+                      <a href="Encontro.pdf" class="links" onclick='window.open(this.href); return false;' onkeypress='window.open(this.href); return false;'>Ver Anais</a>
+                    </button>
+                </div>
+              </div>
+              <div class="col-md-6 ml-auto">
+                <p class="txtA">O I Encontros Imperiais é uma proposição de pesquisadores que integram o Laboratório de Experimentação
+                  em História Social (LEHS), cujo interesse de investigação tem ênfase na história do Brasil oitocentista. A realização
+                  de encontros bienalmente sobre a História do Brasil Império objetiva fomentar e divulgar o conhecimento produzido
+                  pesquisadores (professores e alunos dos cursos de graduação e pós-graduação das Universidades brasileiras). 
+                  Esta primeira edição contará com a adesão antecipada de pesquisadores de instituições acadêmicas do Rio Grande
+                  do Norte, da Paraíba, do Maranhão, do Rio de Janeiro e do Ceará. Pretende-se também alcançar um público vindo de outros
+                  estados para apresentação de comunicações orais nos Grupos de Trabalho. O evento consistirá na realização de palestras, mesas redondas e comunicações orais.
+              </p>
+            </div>
+          </div>
+        </div>  
+      </div>            
+    </div>
+  </div>
+</div> 
+
+
+
+
+<div class="modal fade modoal-size" id="eihc" tabindex="-1" role="dialog" aria-labelledby="eihcTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content" style="height: 500px;">
+        <div class="modal-header">
+          <h5 class="modal-title text-center" id="exampleModalLongTitle">VII EIHC: Encontro Internacional de História Colonial</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="col-md-4">
+                    <img loading="lazy" src="images/projetos/EIHC.png" class="imgPr" width="2152" height="1856">
+                  </div>
+                  <div class="col-md-4 col-md-offset-3 mods text-center" style="margin-top: 0px;">
+                      <button type="button" class="btn btn-secondary btn-lg btn-block modlslink">
+                        <a href="http://viieihc.wixsite.com/eihc-2018" class="links" onclick='window.open(this.href); return false;' onkeypress='window.open(this.href); return false;'>Acessar Site</a>
+                      </button>
+                  </div>
+                </div>
+                <div class="col-md-6 ml-auto">
+                  <p class="txtA" style="margin-top: 50px;">
+                      Com o tema Espaços coloniais: domínios, poderes e
+                      representações, o VII EIHC celebra seu décimo primeiro 
+                      ano de existência, na cidade de Natal, promovido pela 
+                      UNiversidade Federal do Rio Grande do Norte (UFRN).
+                      O evento marcará a reunião de experts de vários 
+                      campos da História Colonial em conferências,
+                      mesas redondas e simpósios temáticos, além do
+                      lançamento de obras recentemente publicadas.
+              </div>
+            </div>
+          </div>  
+        </div>            
+      </div>
+    </div>
+  </div> 
+
+<div class="modal fade modoal-size" id="Ecoloniais" tabindex="-1" role="dialog" aria-labelledby="EcoloniaisTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLongTitle"> ENCONTROS COLONIAIS</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="col-md-4">
+                  <img loading="lazy" src="images/projetos/logoencontrocoloniais.jpg" class="imgPr" width="960" height="959">
+                </div>
+                <div class="col-md-4 col-md-offset-3 mods text-center" style="margin-top: 0px;">
+                      <button type="button" class="btn btn-secondary btn-lg btn-block modlslink">
+                        <a href="https://encontroscoloniais.cchla.ufrn.br/sobre/" class="links" onclick='window.open(this.href); return false;' onkeypress='window.open(this.href); return false;'>Acessar Site</a>
+                      </button>
+                  </div>
+              </div>
+              <div class="col-md-6 ml-auto">
+                <p class="txtA">Os Encontros Coloniais surgiram como uma forma de reunir pesquisadores que trabalham com o período colonial. Inicialmente, o evento foi pensado para promover a ampliação do diálogo entre professores, pesquisadores e alunos integrantes do REHS. Organizado pelo Laboratório de Experimentação em História Social (LEHS), vinculado ao Departamento da História da Universidade Federal do Rio Grande do Norte (UFRN), o LEHS-UFRN compõe o grupo de pesquisa Rede de Experimentação em História Social (REHS), que atualmente congrega três laboratórios (na UFRN, na UFRJ e na UnB).
+              </p>
+            </div>
+          </div>
+        </div>  
+      </div>            
+    </div>
+  </div>
+</div>
+
+<div class="modal fade modoal-size" id="DLocais" tabindex="-1" role="dialog" aria-labelledby="EcoloniaisTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLongTitle">DIREITOS LOCAIS NO MUNDO IBERO-AMERICANO</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="col-md-4">
+                  <img loading="lazy" src="images/projetos/direitos_locais.jpg" class="imgPr" width="942" height="516">
+                </div>
+                <div class="col-md-4 col-md-offset-3 mods text-center" style="margin-top: 0px;">
+                      <button type="button" class="btn btn-secondary btn-lg btn-block modlslink">
+                        <a href="https://direitoslocais2024.lehs.ufrn.br/" class="links" onclick='window.open(this.href); return false;' onkeypress='window.open(this.href); return false;'>Acessar Site</a>
+                      </button>
+                  </div>
+              </div>
+              <div class="col-md-6 ml-auto">
+                <p class="txtA">O evento “Direitos Locais no Mundo Ibero-americano” pretende aprofundar a discussão sobre as diversas concepções do direito no período moderno, 
+                                com foco para as diversas localidades da América Ibérica e Península Ibérica. Desde o medievo até o constitucionalismo, estas sociedades viviam 
+                                uma miríade de direitos, como o régio, canônico, local, romano, entre outros. Portanto, almeja-se discutir como as instituições locais reagiam ou 
+                                reinterpretavam ou mesmo traduziam os outros direitos na sua prática cotidiana. 
+              </p>
+            </div>
+          </div>
+        </div>  
+      </div>            
+    </div>
+  </div>
+</div>
+ 
+<div class="modal fade modoal-size" id="SILB" tabindex="-1" role="dialog" aria-labelledby="EcoloniaisTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLongTitle">PLATAFORMA SESMARIAS DO IMPÉRIO LUSO-BRASILEIRO (SÉCULOS XIV - XIX) </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="col-md-4">
+                  <img loading="lazy" src="images/projetos/silb.jpg" class="imgPr" width="883" height="721">
+                </div>
+                <div class="col-md-4 col-md-offset-3 mods text-center" style="margin-top: 0px;">
+                      <button type="button" class="btn btn-secondary btn-lg btn-block modlslink">
+                        <a href="http://plataformasilb.cchla.ufrn.br/" class="links" onclick='window.open(this.href); return false;' onkeypress='window.open(this.href); return false;'>Acessar Site</a>
+                      </button>
+                  </div>
+              </div>
+              <div class="col-md-6 ml-auto">
+                <p class="txtA">A PLATAFORMA SILB é uma base de dados contendo informações das sesmarias concedidas pela Coroa portuguesa no mundo atlântico. 
+                                A Plataforma SILB tem como objetivo facilitar o acesso às informações de quase 16 mil cartas de sesmarias concedidas na América 
+                                portuguesa, tanto por governadores como capitães mores. Pretende-se a curto prazo incluir as sesmarias distribuídas na África e 
+                                nas Ilhas atlânticas. Na petição por uma carta de sesmaria, o requerente devia justificar seu pedido, e quando recebesse a carta 
+                                de concessão havia uma serie de obrigações entre as quais estava a necessidade do cultivo, da demarcação e da confirmação real, 
+                                embora a maioria das cartas não tenha sido confirmada pelo rei. 
+              </p>
+            </div>
+          </div>
+        </div>  
+      </div>            
+    </div>
+  </div>
+</div>
+
+ <section id="eve" class="py-5">
+        <div class="container text-center">
+           <h1>Eventos</h1>
+            <div class="s2 text-center">
+              <div class="row">
+                 <div class="col-lg-3 col-md-6 text-center center">
+                    <div class="service-box mt-5 mx-auto">
+                       <div class="card-header ImgEnc" style="background-image: url(images/projetos/I_Encontro.JPG);" data-toggle="modal" data-target="#ENCONTRO">
+                       </div>
+                       <div class="card-body"><p>I ENCONTROS IMPERIAL</p></div>
+                    </div>
+                 </div>
+
+                 <div class="col-lg-3 col-md-6 text-center center">
+                    <div class="service-box mt-5 mx-auto">
+                       <div class="card-header" style="background-image: url(images/projetos/EIHC1.png);" data-toggle="modal" data-target="#eihc">
+                       </div>
+                       <div class="card-body"><p>VII EIHC</p></div>
+                    </div>
+                 </div>
+
+                 <div class="col-lg-3 col-md-6 text-center center">
+                    <div class="service-box mt-5 mx-auto">
+                      <div class="card-header" style="background-image: url(images/projetos/logoencontrocoloniais.jpg);" data-toggle="modal" data-target="#Ecoloniais">
+                       </div>
+                       <div class="card-body"><p>ENCONTROS COLONIAIS</p></div>
+                    </div>
+                 </div>               
+              
+               
+               <div class="col-lg-3 col-md-6 text-center center">
+                    <div class="service-box mt-5 mx-auto">
+                      <div class="card-header" style="background-image: url(images/projetos/direitos_locais.jpg);" data-toggle="modal" data-target="#DLocais">
+                       </div>
+                       <div class="card-body"><p>DIREITOS LOCAIS NO MUNDO IBERO-AMERICANO</p></div>
+                    </div>
+                 </div>               
+              </div>
+        </div>
+              
+           </div>
+        
+     </section>
+      <section id="liv" class="py-5 content-2" style="margin-top: 0px;">
+         <div class="container text-left">
+            <h1>Livros</h1>
+            <div class="s2 text-center">
+               <div class="row">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="width: -webkit-fill-available;">
+                  <div class="carousel-inner" id="livris">
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon controls" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon controls" aria-hidden="true"></span>
+                    <span class="sr-only">Próximo</span>
+                  </a>
+                </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section id="prod" class="py-5 content-2" style="margin-top: 0px;">
+         <div class="container text-left">
+            <h1>PRODUÇÕES ACADÊMICA</h1>
+            <div class="s2 text-center">
+               <div class="row">
+                  <nav class="nav nav-pills btn-group sm-lg nav-justified" style="width: 1120px">
+                      <a class="nav-item nav-link btn-secondary btn active" id="ein">Artigos</a>
+                      <a class="nav-item nav-link btn-secondary btn active" id="zwei">Dissertações</a>
+                      <a class="nav-item nav-link btn-secondary btn active" id="drei">Vídeos</a>
+                    </nav>
+                  <div class="carrousel" style="margin-top: 0%">
+                      <div class="service-box mt-5 mx-auto texto-just" id="textos" style="height: 400px;background-color: 0;overflow-y: auto;">                       
+                      </div>
+                    </div>
+               </div>
+            </div>
+         </div>
+      </section>
+              <!-- Content section -->
+        <section id="cont" class="py-5">
+         <div class="container text-left">
+            <h1 style="margin-bottom: 50px">Contato</h1>
+            <div class="s2 text-center">
+               <div class="row">
+                  <div class="col-lg-6 col-md-6 text-left">
+                      <form action="mail.php" method="post" accept-charset="UTF-8">
+                        <input type="text" id="fname" name="firstname" required maxlength="120" autocomplete="name" placeholder="Nome">
+                        <input type="email" id="fmail" name="mail" required maxlength="254" autocomplete="email" placeholder="E-mail">
+                        <input type="text" id="fsubject" name="subject" required maxlength="180" placeholder="Assunto">
+                        <textarea id="ftext" name="text" required maxlength="10000" placeholder="Menssagem" style="height:200px;resize: none;"></textarea>  
+                        <input type="submit" value="enviar">
+                      </form>
+                  </div>
+                  <div class="col-lg-6 col-md-6 text-left">
+                     <div class="service-box mt-5 mx-auto">
+                        <div id="googleMap">
+                          <iframe
+                            width="600"
+                            height="450"
+                            frameborder="0" style="border:0"
+                            src="https://www.google.com/maps?cid=10137035022027299367&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                          </iframe>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Footer -->
+      <footer class="py-5" style="background-color:#353a40;">
+         <div class="container">
+            <div class="row">
+            <div class="col-md-6 mb-md-0 mb-3 col-xl-3" style="margin-right: -50px">
+              <img loading="lazy" src="images/logocheia.png" alt="Centro de Cinências Humanas, Letras e Artes" class="imgFooter">
+            </div>             
+                <div class="col-md-6 mb-md-0 mb-3 col-xl-3 txtB">
+                  <p class="pfq">LEHS - Laboratório de Experimentação em História Social</p>
+                  </div>
+
+                <div class="col-md-6 mb-md-0 mb-4 col-xl-3 txtB">
+                  <p>CCHLA  - UFRN - Av. Senador Salgado Filho, 3000 <br>
+                  Lagoa Nova, CEP 59.078.970 - Natal/RN<br>
+                  (84) 3342-2246 -  Sala: 122 <br> Ramal 777 <br>
+                  Instagram: @LEHS.UFRN</p>
+                </div>
+                <div class="col-md-6 mb-md-0 mb-3 col-xl-3">
+                  <a href="http://www.cchla.ufrn.br"><img loading="lazy" src="images/logocchla.png" class="imgFooter imgFooter1"></a>
+                  <a href="http://www.ufrn.br/"><img loading="lazy" src="images/ufrn-logo.png" class="imgFooter"></a>
+                  <!-- <p class="textb" style=" color: white"> Apoio: </p>-->
+                  <a href="http://proprietas.com.br/"><img loading="lazy" src="images/proprietas.jpg" class="imgFooter"></a>
+                </div>
+              </div>            
+         </div>
+         <!-- /.container -->
+         <p class="m-0 text-center txtB foot">&copy; LEHS - Laboratório de Experimentação em História Social | UFRN 2018</p>
+      </footer>
+      <!-- Bootstrap core JavaScript -->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script>
+      $(document).ready(function(){
+        // Add smooth scrolling to all links in navbar + footer link
+        $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 700, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = "";
+            });
+          } // End if 
+        });
+      })
+      </script>
+      <script src="js/data.js"></script>
+      <script src="js/carrousel.js"></script>
+   </body>
+</html>
+

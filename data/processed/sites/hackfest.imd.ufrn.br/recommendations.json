@@ -1,0 +1,1292 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T21:05:15.459Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12",
+      "diff": "9.0.0",
+      "@anthropic-ai/sdk": "1.8.0"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "id": "hackfest.imd.ufrn.br",
+  "url": "https://hackfest.imd.ufrn.br/",
+  "fonte": {
+    "html": "index.html",
+    "codificacao": "utf-8",
+    "bom": false,
+    "har": true,
+    "lighthouse": "lh1.json",
+    "lighthouseVersion": "13.5.0"
+  },
+  "regras": [
+    {
+      "id": "html-lang",
+      "dimensao": "semantica",
+      "descricao": "O elemento <html> declara o idioma da página (atributo lang)."
+    },
+    {
+      "id": "meta-viewport",
+      "dimensao": "performance",
+      "descricao": "A página declara <meta name=\"viewport\"> adequada a telas móveis, sem bloquear o zoom."
+    },
+    {
+      "id": "img-dimensions",
+      "dimensao": "performance",
+      "descricao": "Toda <img> declara width e height, para o navegador reservar o espaço antes do download."
+    },
+    {
+      "id": "img-lazy",
+      "dimensao": "performance",
+      "descricao": "<img> depois das 3 primeiras do documento usa loading=\"lazy\" (exceto a imagem LCP)."
+    },
+    {
+      "id": "obsolete-tags",
+      "dimensao": "semantica",
+      "descricao": "Sem elementos obsoletos do WHATWG (center, font, marquee…); <font> simples vira <span style>."
+    },
+    {
+      "id": "heading-skip",
+      "dimensao": "semantica",
+      "descricao": "Títulos não pulam níveis ao descer na hierarquia (h1 → h3, por exemplo)."
+    },
+    {
+      "id": "fake-button",
+      "dimensao": "semantica",
+      "descricao": "Elementos clicáveis são <button>/<a>, não div/span com onclick."
+    },
+    {
+      "id": "render-blocking-hint",
+      "dimensao": "performance",
+      "descricao": "Scripts e folhas de estilo que o Lighthouse aponta como bloqueantes são adiados quando não são críticos."
+    },
+    {
+      "id": "landmarks-llm",
+      "dimensao": "semantica",
+      "descricao": "Landmarks ausentes propostos por LLM sobre <div>, <section> ou <article> existentes (landmarks-v2, claude-haiku-5-5)."
+    }
+  ],
+  "llm": {
+    "prompt": "landmarks-v2",
+    "arquivo": "docs/prompts/landmarks-v2.md",
+    "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+    "modelo": "claude-haiku-5-5",
+    "effort": "low",
+    "maxTokens": 4000,
+    "execucao": {
+      "siteId": "hackfest.imd.ufrn.br",
+      "prompt": "landmarks-v2",
+      "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "modeloResposta": "claude-haiku-5-5",
+      "respostaId": "msg_011Ch7J1deD82GXieKdfDs8D",
+      "chamada": true,
+      "motivo": null,
+      "ausentes": [
+        "main",
+        "footer"
+      ],
+      "candidatos": 57,
+      "elegiveis": 57,
+      "stopReason": "end_turn",
+      "inputTokens": 6543,
+      "outputTokens": 607,
+      "custoUsd": 0.0009578000000000001,
+      "propostas": 1,
+      "validas": 1,
+      "rejeitadas": [],
+      "textoIgual": true,
+      "landmarksDepois": {
+        "banner": 1,
+        "navigation": 1,
+        "main": 0,
+        "contentinfo": 1
+      },
+      "erro": "CSS depende da tag: section",
+      "duracaoMs": 3866
+    }
+  },
+  "resumo": {
+    "total": 62,
+    "corrigidas": 37,
+    "porRegra": {
+      "html-lang": {
+        "total": 1,
+        "corrigidas": 0
+      },
+      "meta-viewport": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "img-dimensions": {
+        "total": 1,
+        "corrigidas": 0
+      },
+      "img-lazy": {
+        "total": 37,
+        "corrigidas": 37
+      },
+      "obsolete-tags": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "heading-skip": {
+        "total": 12,
+        "corrigidas": 0
+      },
+      "fake-button": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "render-blocking-hint": {
+        "total": 10,
+        "corrigidas": 0
+      },
+      "landmarks-llm": {
+        "total": 1,
+        "corrigidas": 0
+      }
+    },
+    "porDimensao": {
+      "performance": 48,
+      "semantica": 14
+    }
+  },
+  "guardaImagens": {
+    "imagens": [
+      {
+        "recomendacao": "img-dimensions-1",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "mudou"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 344,
+              "altura": 107,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 344,
+              "altura": 534,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 712,
+              "altura": 222,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 712,
+              "altura": 534,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      }
+    ],
+    "mantidas": 0,
+    "desfeitas": 1,
+    "erro": null
+  },
+  "recommendations": [
+    {
+      "id": "html-lang-1",
+      "regra": "html-lang",
+      "severidade": "info",
+      "dimensao": "semantica",
+      "evidencia": "<html lang=\"en\">",
+      "posicao": {
+        "linha": 2,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "lang=\"en\" declara um idioma diferente do português: conferir se é o idioma principal da página.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-1",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"images/logo-header2.png\" class=\"img-header\">",
+      "posicao": {
+        "linha": 107,
+        "coluna": 9
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1713\" height=\"534\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: mudou)",
+      "edicoes": []
+    },
+    {
+      "id": "img-lazy-1",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"images/silver-medal.svg\" width=\"80\" height=\"100\" />",
+      "posicao": {
+        "linha": 261,
+        "coluna": 18
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "4ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 11936,
+          "fim": 11936,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-2",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"images/bronze-medal.svg\" width=\"80\" height=\"100\" />",
+      "posicao": {
+        "linha": 272,
+        "coluna": 18
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "5ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 12395,
+          "fim": 12395,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-3",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/AdrianaCarlaOliveira.jpg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 319,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "6ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 14285,
+          "fim": 14285,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-4",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/AndreLuizMonteirodaRocha.jpg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 327,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "7ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 14720,
+          "fim": 14720,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-5",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/DanielBramatti.jpg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 334,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "8ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 15123,
+          "fim": 15123,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-6",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/FabioMangueiradaCruz.jpeg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 342,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "9ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 15539,
+          "fim": 15539,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-7",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/FaustoFrança.jpg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 352,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "10ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 16037,
+          "fim": 16037,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-8",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/JulianaSakai.jpg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 360,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "11ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 16483,
+          "fim": 16483,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-9",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/LuizFelipeCarvalhodaSilva.gif\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 367,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "12ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 16850,
+          "fim": 16850,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-10",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/NeyRibas.jpg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 374,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "13ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 17253,
+          "fim": 17253,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-11",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/OctavioCelsoGondimPauloNeto.jpg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 383,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "14ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 17690,
+          "fim": 17690,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-12",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/AlmirSanches.jpg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 391,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "15ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 18127,
+          "fim": 18127,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-13",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/AlvaroJusten.jpg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 399,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "16ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 18577,
+          "fim": 18577,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-14",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/BetaniaLeite.jpg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 406,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "17ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 18924,
+          "fim": 18924,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-15",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/ClaudioTerr.jpg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 416,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "18ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 19403,
+          "fim": 19403,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-16",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/JoséHervalSampaioJunior.png\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 424,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "19ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 19814,
+          "fim": 19814,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-17",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/EudoRodriguesLeite.jpg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 432,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "20ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 20253,
+          "fim": 20253,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-18",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/EliasJacob.jpg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 440,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "21ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 20668,
+          "fim": 20668,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-19",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/FernandaTavora.png\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 450,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "22ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 21142,
+          "fim": 21142,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-20",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/MárcioBraga.jpeg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 457,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "23ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 21493,
+          "fim": 21493,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-21",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/MarceloDeBritoVidal.jpg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 465,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "24ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 21874,
+          "fim": 21874,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-22",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/MarcosGerhardt.jpg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 472,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "25ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 22266,
+          "fim": 22266,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-23",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/NélioCacho.jpg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 481,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "26ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 22722,
+          "fim": 22722,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-24",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/ThiagoFerreiraDias.jpg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 489,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "27ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 23132,
+          "fim": 23132,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-25",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/MarioSérgioQueiroz.png\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 497,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "28ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 23559,
+          "fim": 23559,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-26",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/RichardEncinas.jpg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 504,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "29ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 23924,
+          "fim": 23924,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-27",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/NazarenoAndradeUFCG.jpeg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 514,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "30ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 24403,
+          "fim": 24403,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-28",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/FotodeLucianaAsper.jpeg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 522,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "31ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 24835,
+          "fim": 24835,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-29",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/CristianoFerri.jpeg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 530,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "32ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 25256,
+          "fim": 25256,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-30",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/CésarMedeirosCupertino.jpg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 537,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "33ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 25636,
+          "fim": 25636,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-31",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/FelipeLeitãoValadaresRoqueteCade.jpeg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 546,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "34ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 26084,
+          "fim": 26084,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-32",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/FelipeMagnoBarrosdeOliveiraDolmen.jpg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 554,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "35ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 26527,
+          "fim": 26527,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-33",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/AdrianoAlmeidaRodriguesSecretariadeEstadodaTributação.jpg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 561,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "36ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 26910,
+          "fim": 26910,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-34",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/MariaEugêniaBatistaCordeiroLABLDGAECOMPRN.jpeg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 568,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "37ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 27335,
+          "fim": 27335,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-35",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/MaurícioRamalhoPong.jpeg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 577,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "38ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 27807,
+          "fim": 27807,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-36",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/NartoJúniorPong.jpeg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 584,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "39ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 28160,
+          "fim": 28160,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-37",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"150\" height=\"150\" src=\"./images/palestrantes/RicardoLuizPong.jpeg\" class=\"rounded-circle\" alt=\"TEste\">",
+      "posicao": {
+        "linha": 591,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "40ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 28507,
+          "fim": 28507,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "heading-skip-1",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h4 class=\"font-tech-white\">",
+      "posicao": {
+        "linha": 651,
+        "coluna": 17
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 2 para o nível 4: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h3 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "heading-skip-2",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h5 class=\"font-tech-white\">",
+      "posicao": {
+        "linha": 744,
+        "coluna": 19
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 3 para o nível 5: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h4 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "heading-skip-3",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h5 class=\"font-tech-white\">",
+      "posicao": {
+        "linha": 815,
+        "coluna": 17
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 3 para o nível 5: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h4 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "heading-skip-4",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h5 class=\"card-title\">",
+      "posicao": {
+        "linha": 929,
+        "coluna": 21
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 2 para o nível 5: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h3 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "heading-skip-5",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h5 class=\"card-title\">",
+      "posicao": {
+        "linha": 942,
+        "coluna": 21
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 2 para o nível 5: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h3 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "heading-skip-6",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h5 class=\"card-title\">",
+      "posicao": {
+        "linha": 955,
+        "coluna": 21
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 2 para o nível 5: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h3 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "heading-skip-7",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h5 class=\"card-title\">",
+      "posicao": {
+        "linha": 970,
+        "coluna": 21
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 2 para o nível 5: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h3 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "heading-skip-8",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h5 class=\"card-title\">",
+      "posicao": {
+        "linha": 984,
+        "coluna": 21
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 2 para o nível 5: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h3 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "heading-skip-9",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h5 class=\"card-title\">",
+      "posicao": {
+        "linha": 998,
+        "coluna": 21
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 2 para o nível 5: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h3 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "heading-skip-10",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h5 class=\"card-title\">",
+      "posicao": {
+        "linha": 1011,
+        "coluna": 21
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 2 para o nível 5: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h3 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "heading-skip-11",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h5 class=\"card-title\">",
+      "posicao": {
+        "linha": 1024,
+        "coluna": 21
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 2 para o nível 5: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h3 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "heading-skip-12",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h5 class=\"mb-0\">",
+      "posicao": {
+        "linha": 1061,
+        "coluna": 25
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 2 para o nível 5: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h3 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-1",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link href=\"vendor/bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\">",
+      "posicao": {
+        "linha": 15,
+        "coluna": 5
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (4645 ms de bloqueio, 149.8 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-2",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link href=\"css/scrolling-nav.css\" rel=\"stylesheet\">",
+      "posicao": {
+        "linha": 18,
+        "coluna": 5
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (931 ms de bloqueio, 9.3 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-3",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link href=\"https://fonts.googleapis.com/css?family=Rubik\" rel=\"stylesheet\">",
+      "posicao": {
+        "linha": 19,
+        "coluna": 5
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (939 ms de bloqueio, 0.3 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-4",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link href=\"https://fonts.googleapis.com/css?family=Share+Tech\" rel=\"stylesheet\">",
+      "posicao": {
+        "linha": 20,
+        "coluna": 5
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (209 ms de bloqueio, 0.5 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-5",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"css/animation.css\">",
+      "posicao": {
+        "linha": 22,
+        "coluna": 5
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (3407 ms de bloqueio, 76.2 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-6",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.8.1/css/all.css\" integrity=\"sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf\" crossorigin=\"anonymous\">",
+      "posicao": {
+        "linha": 23,
+        "coluna": 5
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (1399 ms de bloqueio, 13.0 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-7",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script src=\"vendor/jquery/jquery.min.js\">",
+      "posicao": {
+        "linha": 28,
+        "coluna": 5
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (3717 ms de bloqueio, 85.1 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-8",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script src=\"vendor/bootstrap/js/bootstrap.bundle.min.js\">",
+      "posicao": {
+        "linha": 29,
+        "coluna": 5
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (3407 ms de bloqueio, 74.8 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-9",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script src=\"vendor/jquery-easing/jquery.easing.min.js\">",
+      "posicao": {
+        "linha": 31,
+        "coluna": 5
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (467 ms de bloqueio, 2.7 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-10",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script src=\"js/scrolling-nav.js\">",
+      "posicao": {
+        "linha": 34,
+        "coluna": 5
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (622 ms de bloqueio, 3.9 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "landmarks-llm-1",
+      "regra": "landmarks-llm",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<section id=\"contato\" class=\"bg-premiacao\">",
+      "posicao": {
+        "linha": 642,
+        "coluna": 9
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Landmark contentinfo ausente: trocar este <section> por <footer>. Justificativa do modelo: \"Seção final da página (id=contato) com e-mail, telefone, redes sociais (Facebook, Instagram, Twitter), comissão e 6 links, o que corresponde ao rodapé institucional.\". Proposta gerada por LLM (landmarks-v2, claude-haiku-5-5, candidato c9); conferir CSS e scripts que selecionem \"section\" neste elemento. Sem correção automática: o CSS da página seleciona pela tag (section); ajustar os seletores antes de trocar.",
+      "edicoes": []
+    }
+  ]
+}

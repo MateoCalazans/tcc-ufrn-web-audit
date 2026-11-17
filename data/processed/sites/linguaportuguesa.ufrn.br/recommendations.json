@@ -1,0 +1,905 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T23:30:44.811Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12",
+      "diff": "9.0.0",
+      "@anthropic-ai/sdk": "1.8.0"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "id": "linguaportuguesa.ufrn.br",
+  "url": "http://linguaportuguesa.ufrn.br/",
+  "fonte": {
+    "html": "index.html",
+    "codificacao": "utf-8",
+    "bom": false,
+    "har": true,
+    "lighthouse": null,
+    "lighthouseVersion": null
+  },
+  "regras": [
+    {
+      "id": "html-lang",
+      "dimensao": "semantica",
+      "descricao": "O elemento <html> declara o idioma da página (atributo lang)."
+    },
+    {
+      "id": "meta-viewport",
+      "dimensao": "performance",
+      "descricao": "A página declara <meta name=\"viewport\"> adequada a telas móveis, sem bloquear o zoom."
+    },
+    {
+      "id": "img-dimensions",
+      "dimensao": "performance",
+      "descricao": "Toda <img> declara width e height, para o navegador reservar o espaço antes do download."
+    },
+    {
+      "id": "img-lazy",
+      "dimensao": "performance",
+      "descricao": "<img> depois das 3 primeiras do documento usa loading=\"lazy\" (exceto a imagem LCP)."
+    },
+    {
+      "id": "obsolete-tags",
+      "dimensao": "semantica",
+      "descricao": "Sem elementos obsoletos do WHATWG (center, font, marquee…); <font> simples vira <span style>."
+    },
+    {
+      "id": "heading-skip",
+      "dimensao": "semantica",
+      "descricao": "Títulos não pulam níveis ao descer na hierarquia (h1 → h3, por exemplo)."
+    },
+    {
+      "id": "fake-button",
+      "dimensao": "semantica",
+      "descricao": "Elementos clicáveis são <button>/<a>, não div/span com onclick."
+    },
+    {
+      "id": "render-blocking-hint",
+      "dimensao": "performance",
+      "descricao": "Scripts e folhas de estilo que o Lighthouse aponta como bloqueantes são adiados quando não são críticos."
+    },
+    {
+      "id": "landmarks-llm",
+      "dimensao": "semantica",
+      "descricao": "Landmarks ausentes propostos por LLM sobre <div>, <section> ou <article> existentes (landmarks-v2, claude-haiku-5-5)."
+    }
+  ],
+  "llm": {
+    "prompt": "landmarks-v2",
+    "arquivo": "docs/prompts/landmarks-v2.md",
+    "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+    "modelo": "claude-haiku-5-5",
+    "effort": "low",
+    "maxTokens": 4000,
+    "execucao": {
+      "siteId": "linguaportuguesa.ufrn.br",
+      "prompt": "landmarks-v2",
+      "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "modeloResposta": null,
+      "respostaId": null,
+      "chamada": false,
+      "motivo": "nenhum candidato",
+      "ausentes": [
+        "header",
+        "nav",
+        "main",
+        "footer"
+      ],
+      "candidatos": 0,
+      "elegiveis": 0,
+      "stopReason": null,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "custoUsd": null,
+      "propostas": 0,
+      "validas": 0,
+      "rejeitadas": [],
+      "textoIgual": null,
+      "landmarksDepois": null,
+      "erro": null,
+      "duracaoMs": 1
+    }
+  },
+  "resumo": {
+    "total": 22,
+    "corrigidas": 21,
+    "porRegra": {
+      "html-lang": {
+        "total": 1,
+        "corrigidas": 1
+      },
+      "meta-viewport": {
+        "total": 1,
+        "corrigidas": 1
+      },
+      "img-dimensions": {
+        "total": 9,
+        "corrigidas": 9
+      },
+      "img-lazy": {
+        "total": 10,
+        "corrigidas": 10
+      },
+      "obsolete-tags": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "heading-skip": {
+        "total": 1,
+        "corrigidas": 0
+      },
+      "fake-button": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "render-blocking-hint": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "landmarks-llm": {
+        "total": 0,
+        "corrigidas": 0
+      }
+    },
+    "porDimensao": {
+      "performance": 20,
+      "semantica": 2
+    }
+  },
+  "guardaImagens": {
+    "imagens": [
+      {
+        "recomendacao": "img-dimensions-1",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 369,
+              "altura": 60,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 369,
+              "altura": 60,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 369,
+              "altura": 60,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 369,
+              "altura": 60,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-2",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 54,
+              "altura": 36,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 54,
+              "altura": 36,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 54,
+              "altura": 36,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 54,
+              "altura": 36,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-3",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 51,
+              "altura": 36,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 51,
+              "altura": 36,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 51,
+              "altura": 36,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 51,
+              "altura": 36,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-4",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 54,
+              "altura": 36,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 54,
+              "altura": 36,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 54,
+              "altura": 36,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 54,
+              "altura": 36,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-5",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 72,
+              "altura": 36,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 72,
+              "altura": 36,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 72,
+              "altura": 36,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 72,
+              "altura": 36,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-6",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 51,
+              "altura": 36,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 51,
+              "altura": 36,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 51,
+              "altura": 36,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 51,
+              "altura": 36,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-7",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 54,
+              "altura": 36,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 54,
+              "altura": 36,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 54,
+              "altura": 36,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 54,
+              "altura": 36,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-8",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 72,
+              "altura": 36,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 72,
+              "altura": 36,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 72,
+              "altura": 36,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 72,
+              "altura": 36,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-9",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 72,
+              "altura": 36,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 72,
+              "altura": 36,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 72,
+              "altura": 36,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 72,
+              "altura": 36,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      }
+    ],
+    "mantidas": 9,
+    "desfeitas": 0,
+    "erro": null
+  },
+  "recommendations": [
+    {
+      "id": "html-lang-1",
+      "regra": "html-lang",
+      "severidade": "alta",
+      "dimensao": "semantica",
+      "evidencia": "<html>",
+      "posicao": {
+        "linha": 1,
+        "coluna": 1
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "O <html> não tem o atributo lang: leitores de tela não sabem em que idioma ler a página. Declarar lang=\"pt-BR\".",
+      "edicoes": [
+        {
+          "inicio": 5,
+          "fim": 5,
+          "texto": " lang=\"pt-BR\""
+        }
+      ]
+    },
+    {
+      "id": "meta-viewport-1",
+      "regra": "meta-viewport",
+      "severidade": "alta",
+      "dimensao": "performance",
+      "evidencia": "<head>",
+      "posicao": {
+        "linha": 4,
+        "coluna": 1
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "Não há <meta name=\"viewport\">: no celular a página é desenhada como desktop e reduzida. Declarar content=\"width=device-width, initial-scale=1\".",
+      "edicoes": [
+        {
+          "inicio": 15,
+          "fim": 15,
+          "texto": "\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-1",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"figuras/titulo.gif\" alt=\"A língua portuguesa\">",
+      "posicao": {
+        "linha": 22,
+        "coluna": 4
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"369\" height=\"60\" (dimensões do arquivo, gif). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 665,
+          "fim": 665,
+          "texto": " width=\"369\" height=\"60\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-2",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<IMG SRC=\"figuras/ang-flag.gif\">",
+      "posicao": {
+        "linha": 111,
+        "coluna": 5
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"54\" height=\"36\" (dimensões do arquivo, gif). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 4006,
+          "fim": 4006,
+          "texto": " width=\"54\" height=\"36\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-3",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<IMG SRC=\"figuras/bra-flag.gif\">",
+      "posicao": {
+        "linha": 112,
+        "coluna": 5
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"51\" height=\"36\" (dimensões do arquivo, gif). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 4048,
+          "fim": 4048,
+          "texto": " width=\"51\" height=\"36\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-4",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<IMG SRC=\"figuras/cab-flag.gif\">",
+      "posicao": {
+        "linha": 113,
+        "coluna": 5
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"54\" height=\"36\" (dimensões do arquivo, gif). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 4090,
+          "fim": 4090,
+          "texto": " width=\"54\" height=\"36\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-5",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<IMG SRC=\"figuras/gui-flag.gif\">",
+      "posicao": {
+        "linha": 114,
+        "coluna": 5
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"72\" height=\"36\" (dimensões do arquivo, gif). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 4132,
+          "fim": 4132,
+          "texto": " width=\"72\" height=\"36\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-6",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<IMG SRC=\"figuras/moc-flag.gif\">",
+      "posicao": {
+        "linha": 115,
+        "coluna": 5
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"51\" height=\"36\" (dimensões do arquivo, gif). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 4174,
+          "fim": 4174,
+          "texto": " width=\"51\" height=\"36\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-7",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<IMG SRC=\"figuras/por-flag.gif\">",
+      "posicao": {
+        "linha": 116,
+        "coluna": 5
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"54\" height=\"36\" (dimensões do arquivo, gif). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 4216,
+          "fim": 4216,
+          "texto": " width=\"54\" height=\"36\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-8",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<IMG SRC=\"figuras/sao-flag.gif\">",
+      "posicao": {
+        "linha": 117,
+        "coluna": 5
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"72\" height=\"36\" (dimensões do arquivo, gif). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 4258,
+          "fim": 4258,
+          "texto": " width=\"72\" height=\"36\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-9",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<IMG SRC=\"figuras/tim-flag.gif\">",
+      "posicao": {
+        "linha": 118,
+        "coluna": 5
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"72\" height=\"36\" (dimensões do arquivo, gif). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 4300,
+          "fim": 4300,
+          "texto": " width=\"72\" height=\"36\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-1",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"figuras/direita.gif\" alt=\"&gt;\" height=\"7\" width=\"11\">",
+      "posicao": {
+        "linha": 97,
+        "coluna": 4
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "4ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 3669,
+          "fim": 3669,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-2",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<IMG SRC=\"figuras/ang-flag.gif\">",
+      "posicao": {
+        "linha": 111,
+        "coluna": 5
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "5ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 3979,
+          "fim": 3979,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-3",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<IMG SRC=\"figuras/bra-flag.gif\">",
+      "posicao": {
+        "linha": 112,
+        "coluna": 5
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "6ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 4021,
+          "fim": 4021,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-4",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<IMG SRC=\"figuras/cab-flag.gif\">",
+      "posicao": {
+        "linha": 113,
+        "coluna": 5
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "7ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 4063,
+          "fim": 4063,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-5",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<IMG SRC=\"figuras/gui-flag.gif\">",
+      "posicao": {
+        "linha": 114,
+        "coluna": 5
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "8ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 4105,
+          "fim": 4105,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-6",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<IMG SRC=\"figuras/moc-flag.gif\">",
+      "posicao": {
+        "linha": 115,
+        "coluna": 5
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "9ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 4147,
+          "fim": 4147,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-7",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<IMG SRC=\"figuras/por-flag.gif\">",
+      "posicao": {
+        "linha": 116,
+        "coluna": 5
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "10ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 4189,
+          "fim": 4189,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-8",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<IMG SRC=\"figuras/sao-flag.gif\">",
+      "posicao": {
+        "linha": 117,
+        "coluna": 5
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "11ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 4231,
+          "fim": 4231,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-9",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<IMG SRC=\"figuras/tim-flag.gif\">",
+      "posicao": {
+        "linha": 118,
+        "coluna": 5
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "12ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 4273,
+          "fim": 4273,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-10",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"figuras/direita.gif\" alt=\"&gt;\" height=\"7\" width=\"11\">",
+      "posicao": {
+        "linha": 198,
+        "coluna": 4
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "13ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 6681,
+          "fim": 6681,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "heading-skip-1",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<H4>",
+      "posicao": {
+        "linha": 123,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 1 para o nível 4: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h2 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    }
+  ]
+}

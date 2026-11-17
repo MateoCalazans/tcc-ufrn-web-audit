@@ -1,0 +1,512 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T21:05:15.459Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12",
+      "diff": "9.0.0",
+      "@anthropic-ai/sdk": "1.8.0"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "id": "transportes.ufrn.br",
+  "url": "https://transportes.ufrn.br/",
+  "fonte": {
+    "html": "index.html",
+    "codificacao": "utf-8",
+    "bom": false,
+    "har": true,
+    "lighthouse": "lh1.json",
+    "lighthouseVersion": "13.5.0"
+  },
+  "regras": [
+    {
+      "id": "html-lang",
+      "dimensao": "semantica",
+      "descricao": "O elemento <html> declara o idioma da página (atributo lang)."
+    },
+    {
+      "id": "meta-viewport",
+      "dimensao": "performance",
+      "descricao": "A página declara <meta name=\"viewport\"> adequada a telas móveis, sem bloquear o zoom."
+    },
+    {
+      "id": "img-dimensions",
+      "dimensao": "performance",
+      "descricao": "Toda <img> declara width e height, para o navegador reservar o espaço antes do download."
+    },
+    {
+      "id": "img-lazy",
+      "dimensao": "performance",
+      "descricao": "<img> depois das 3 primeiras do documento usa loading=\"lazy\" (exceto a imagem LCP)."
+    },
+    {
+      "id": "obsolete-tags",
+      "dimensao": "semantica",
+      "descricao": "Sem elementos obsoletos do WHATWG (center, font, marquee…); <font> simples vira <span style>."
+    },
+    {
+      "id": "heading-skip",
+      "dimensao": "semantica",
+      "descricao": "Títulos não pulam níveis ao descer na hierarquia (h1 → h3, por exemplo)."
+    },
+    {
+      "id": "fake-button",
+      "dimensao": "semantica",
+      "descricao": "Elementos clicáveis são <button>/<a>, não div/span com onclick."
+    },
+    {
+      "id": "render-blocking-hint",
+      "dimensao": "performance",
+      "descricao": "Scripts e folhas de estilo que o Lighthouse aponta como bloqueantes são adiados quando não são críticos."
+    },
+    {
+      "id": "landmarks-llm",
+      "dimensao": "semantica",
+      "descricao": "Landmarks ausentes propostos por LLM sobre <div>, <section> ou <article> existentes (landmarks-v2, claude-haiku-5-5)."
+    }
+  ],
+  "llm": {
+    "prompt": "landmarks-v2",
+    "arquivo": "docs/prompts/landmarks-v2.md",
+    "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+    "modelo": "claude-haiku-5-5",
+    "effort": "low",
+    "maxTokens": 4000,
+    "execucao": {
+      "siteId": "transportes.ufrn.br",
+      "prompt": "landmarks-v2",
+      "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "modeloResposta": "claude-haiku-5-5",
+      "respostaId": "msg_011Ch7JecRpXTfvBNCXWDeEg",
+      "chamada": true,
+      "motivo": null,
+      "ausentes": [
+        "nav"
+      ],
+      "candidatos": 32,
+      "elegiveis": 32,
+      "stopReason": "end_turn",
+      "inputTokens": 3723,
+      "outputTokens": 550,
+      "custoUsd": 0.0006473,
+      "propostas": 0,
+      "validas": 0,
+      "rejeitadas": [],
+      "textoIgual": null,
+      "landmarksDepois": null,
+      "erro": null,
+      "duracaoMs": 3408
+    }
+  },
+  "resumo": {
+    "total": 12,
+    "corrigidas": 2,
+    "porRegra": {
+      "html-lang": {
+        "total": 1,
+        "corrigidas": 0
+      },
+      "meta-viewport": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "img-dimensions": {
+        "total": 5,
+        "corrigidas": 0
+      },
+      "img-lazy": {
+        "total": 2,
+        "corrigidas": 2
+      },
+      "obsolete-tags": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "heading-skip": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "fake-button": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "render-blocking-hint": {
+        "total": 4,
+        "corrigidas": 0
+      },
+      "landmarks-llm": {
+        "total": 0,
+        "corrigidas": 0
+      }
+    },
+    "porDimensao": {
+      "performance": 11,
+      "semantica": 1
+    }
+  },
+  "guardaImagens": {
+    "imagens": [
+      {
+        "recomendacao": "img-dimensions-1",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "mudou"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 142,
+              "altura": 56,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 225,
+              "altura": 56,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 142,
+              "altura": 56,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 225,
+              "altura": 56,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-2",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "mudou"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 171,
+              "altura": 169,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 171,
+              "altura": 505,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 168,
+              "altura": 166,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 168,
+              "altura": 505,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-3",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "mudou"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 171,
+              "altura": 122,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 171,
+              "altura": 537,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 168,
+              "altura": 119,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 168,
+              "altura": 537,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-4",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "mudou"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 172,
+              "altura": 168,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 172,
+              "altura": 583,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 169,
+              "altura": 165,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 169,
+              "altura": 583,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-5",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "mudou"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 171,
+              "altura": 162,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 171,
+              "altura": 203,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 168,
+              "altura": 159,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 168,
+              "altura": 203,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      }
+    ],
+    "mantidas": 0,
+    "desfeitas": 5,
+    "erro": null
+  },
+  "recommendations": [
+    {
+      "id": "html-lang-1",
+      "regra": "html-lang",
+      "severidade": "info",
+      "dimensao": "semantica",
+      "evidencia": "<html lang=\"en-US\" itemscope itemtype=\"http://schema.org/WebPage\">",
+      "posicao": {
+        "linha": 1,
+        "coluna": 16
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "lang=\"en-US\" declara um idioma diferente do português: conferir se é o idioma principal da página.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-1",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQcNUud9a3CyEiLlh496sv8ErtPVRVMLCvXXITPF2kFAwyibPWO-bLyC8pc7itztnuQa2aq3M1h1JpEQAvBh-9SPY9PgLK1Fm6K0PYY_IkkBxFHG5YNSUW18BTaTBjK4sNK…",
+      "posicao": {
+        "linha": 103,
+        "coluna": 9895
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"594\" height=\"188\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: mudou)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-2",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQfEX5ALLQ8KxM76dec4_FEEHXXIoicu5iPXAI8ugy6geXN9VgVxRBP9-f7CWskGwUFeDmXwPRT2SrsoJRs8P2CcPJonAbhjMl-rJE0ZBm7SMIPSg8sQ9D4Sxb1I0DMVn3a…",
+      "posicao": {
+        "linha": 103,
+        "coluna": 13100
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"511\" height=\"505\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: mudou)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-3",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQcNk1SoqatCLaoL8paLqe0Lh3QH6-hyXhckJt5gnjmbEqLwldt8deiJEBaD9P_h5JSXR4YLIysItjdAjK3oMIvogXmHce4NgUXaP2yskgqAb3cRABGFHzXwpIipQDI5Mou…",
+      "posicao": {
+        "linha": 103,
+        "coluna": 15015
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"755\" height=\"537\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: mudou)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-4",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQfQ9-wLfOkhInDhlIPQQJrL4p1AlzjNZuhPC8eiNJj036QMb0ggjxeeQCTdhDT7_kRtKOpHQUfR8EiScaLm8JTEvyo6J6QrIpZVfLG5grVs9GaNaWihflKXJj4c5kZjRfP…",
+      "posicao": {
+        "linha": 103,
+        "coluna": 17360
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"597\" height=\"583\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: mudou)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-5",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQc-7S2aDN-OUMGtFxiOOAFabolLvkrqS1ui6FrsUrM4S0Edhc0hVZ1qGNMIOFGV-gqp0kaoN0sHc8GzOMmxO1lPqH01wyfZP0XQD05Z_bWUFv_a7jrErXsBJLHOICjdC33…",
+      "posicao": {
+        "linha": 103,
+        "coluna": 19478
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"214\" height=\"203\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: mudou)",
+      "edicoes": []
+    },
+    {
+      "id": "img-lazy-1",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQfQ9-wLfOkhInDhlIPQQJrL4p1AlzjNZuhPC8eiNJj036QMb0ggjxeeQCTdhDT7_kRtKOpHQUfR8EiScaLm8JTEvyo6J6QrIpZVfLG5grVs9GaNaWihflKXJj4c5kZjRfP…",
+      "posicao": {
+        "linha": 103,
+        "coluna": 17360
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "4ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 104071,
+          "fim": 104071,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-2",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQc-7S2aDN-OUMGtFxiOOAFabolLvkrqS1ui6FrsUrM4S0Edhc0hVZ1qGNMIOFGV-gqp0kaoN0sHc8GzOMmxO1lPqH01wyfZP0XQD05Z_bWUFv_a7jrErXsBJLHOICjdC33…",
+      "posicao": {
+        "linha": 103,
+        "coluna": 19478
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "5ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 106189,
+          "fim": 106189,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "render-blocking-hint-1",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link href=\"https://fonts.googleapis.com/css?family=PT%20Sans%3A400%2C700%7CMerriweather%3A400%2C700&display=swap\" rel=\"stylesheet\" nonce=\"pYtQcgzJwrC1NxilskPqJA\">",
+      "posicao": {
+        "linha": 14,
+        "coluna": 1236
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (1047 ms de bloqueio, 0.8 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-2",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link href=\"https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:300,400,500,700|Source+Code+Pro:400,700&display=swap\" rel=\"stylesheet\" nonce=\"pYtQcgzJwrC1NxilskPqJA\">",
+      "posicao": {
+        "linha": 14,
+        "coluna": 1399
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (239 ms de bloqueio, 0.5 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-3",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"https://www.gstatic.com/_/atari/_/ss/k=atari.vw.FdCCmLj_-18.L.X.O/am=AAAAYAAI/d=1/rs=AGEqA5n0xDEdNb8kZN9KvVeGKVosSfnN8Q\" data-id=\"_cl\" nonce=\"pYtQcgzJwrC1NxilskPqJA\">",
+      "posicao": {
+        "linha": 14,
+        "coluna": 2110
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (2308 ms de bloqueio, 221.3 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-4",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script src=\"https://apis.google.com/js/client.js?onload=gapiLoaded\" nonce=\"fb5rNdKwRj_2nVSNKkDPpQ\">",
+      "posicao": {
+        "linha": 14,
+        "coluna": 32794
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (950 ms de bloqueio, 6.3 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    }
+  ]
+}

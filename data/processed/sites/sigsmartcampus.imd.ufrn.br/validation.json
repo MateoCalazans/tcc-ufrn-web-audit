@@ -1,0 +1,708 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T21:19:47.216Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "siteId": "sigsmartcampus.imd.ufrn.br",
+  "contexto": {
+    "grupo": "estatico",
+    "tecnologia": "estatico",
+    "tipo": "outro"
+  },
+  "recomendacoes": {
+    "total": 2,
+    "corrigidas": 1,
+    "corrigidasLlm": 0,
+    "llm": {
+      "prompt": "landmarks-v2",
+      "arquivo": "docs/prompts/landmarks-v2.md",
+      "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "effort": "low",
+      "maxTokens": 4000,
+      "execucao": {
+        "siteId": "sigsmartcampus.imd.ufrn.br",
+        "prompt": "landmarks-v2",
+        "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+        "modelo": "claude-haiku-5-5",
+        "modeloResposta": null,
+        "respostaId": null,
+        "chamada": false,
+        "motivo": "nenhum candidato",
+        "ausentes": [
+          "header",
+          "nav",
+          "main",
+          "footer"
+        ],
+        "candidatos": 0,
+        "elegiveis": 0,
+        "stopReason": null,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "custoUsd": null,
+        "propostas": 0,
+        "validas": 0,
+        "rejeitadas": [],
+        "textoIgual": null,
+        "landmarksDepois": null,
+        "erro": null,
+        "duracaoMs": 0
+      }
+    }
+  },
+  "parametros": {
+    "execucoesPorVariante": 3,
+    "formFactor": "mobile",
+    "throttlingMethod": "simulate",
+    "chromeFlagsExtras": [
+      "--host-resolver-rules=MAP * ~NOTFOUND, EXCLUDE 127.0.0.1"
+    ],
+    "userAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+    "relogioSemantica": "2026-11-09T22:29:22.483Z",
+    "relogioLighthouse": "real"
+  },
+  "ordem": [
+    {
+      "variante": "corrigido",
+      "n": 1
+    },
+    {
+      "variante": "original",
+      "n": 1
+    },
+    {
+      "variante": "corrigido",
+      "n": 2
+    },
+    {
+      "variante": "original",
+      "n": 2
+    },
+    {
+      "variante": "corrigido",
+      "n": 3
+    },
+    {
+      "variante": "original",
+      "n": 3
+    }
+  ],
+  "variantes": {
+    "original": {
+      "urlLocal": "http://127.0.0.1:49972/",
+      "execucoes": [
+        {
+          "n": 1,
+          "startedAt": "2026-11-16T21:19:58.556Z",
+          "durationMs": 10234,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 56,
+            "accessibility": 66,
+            "best-practices": 96,
+            "seo": 91
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:49972/telas/",
+          "mainDocumentUrl": "http://127.0.0.1:49972/telas/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2785.5,
+          "runWarnings": [
+            "The page may not be loading as expected because your test URL (http://127.0.0.1:49972/) was redirected to http://127.0.0.1:49972/telas/. Try testing the second URL directly."
+          ],
+          "metricas": {
+            "notas": {
+              "performance": 56,
+              "accessibility": 66,
+              "best-practices": 96,
+              "seo": 91
+            },
+            "fcpMs": 6652.323200000001,
+            "lcpMs": 21249.864,
+            "tbtMs": 145,
+            "cls": 0,
+            "speedIndexMs": 7416.278801963477,
+            "pesoTotalBytes": 3737717,
+            "requisicoes": 55,
+            "jsNaoUsadoBytes": 114985,
+            "cssNaoUsadoBytes": 31968
+          }
+        },
+        {
+          "n": 2,
+          "startedAt": "2026-11-16T21:20:17.183Z",
+          "durationMs": 10185,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 58,
+            "accessibility": 66,
+            "best-practices": 96,
+            "seo": 91
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:49972/telas/",
+          "mainDocumentUrl": "http://127.0.0.1:49972/telas/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2722,
+          "runWarnings": [
+            "The page may not be loading as expected because your test URL (http://127.0.0.1:49972/) was redirected to http://127.0.0.1:49972/telas/. Try testing the second URL directly."
+          ],
+          "metricas": {
+            "notas": {
+              "performance": 58,
+              "accessibility": 66,
+              "best-practices": 96,
+              "seo": 91
+            },
+            "fcpMs": 6619.084,
+            "lcpMs": 21239.68,
+            "tbtMs": 135,
+            "cls": 0,
+            "speedIndexMs": 6619.084,
+            "pesoTotalBytes": 3737717,
+            "requisicoes": 55,
+            "jsNaoUsadoBytes": 114985,
+            "cssNaoUsadoBytes": 31968
+          }
+        },
+        {
+          "n": 3,
+          "startedAt": "2026-11-16T21:20:35.507Z",
+          "durationMs": 9061,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 58,
+            "accessibility": 66,
+            "best-practices": 96,
+            "seo": 91
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:49972/telas/",
+          "mainDocumentUrl": "http://127.0.0.1:49972/telas/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2813,
+          "runWarnings": [
+            "The page may not be loading as expected because your test URL (http://127.0.0.1:49972/) was redirected to http://127.0.0.1:49972/telas/. Try testing the second URL directly."
+          ],
+          "metricas": {
+            "notas": {
+              "performance": 58,
+              "accessibility": 66,
+              "best-practices": 96,
+              "seo": 91
+            },
+            "fcpMs": 6629.781049999999,
+            "lcpMs": 21247.908499999998,
+            "tbtMs": 107,
+            "cls": 0,
+            "speedIndexMs": 6629.781049999999,
+            "pesoTotalBytes": 3737717,
+            "requisicoes": 55,
+            "jsNaoUsadoBytes": 114985,
+            "cssNaoUsadoBytes": 31968
+          }
+        }
+      ],
+      "mediana": {
+        "criterio": "nota-performance",
+        "n": 2
+      },
+      "metricas": {
+        "notas": {
+          "performance": 58,
+          "accessibility": 66,
+          "best-practices": 96,
+          "seo": 91
+        },
+        "fcpMs": 6619.084,
+        "lcpMs": 21239.68,
+        "tbtMs": 135,
+        "cls": 0,
+        "speedIndexMs": 6619.084,
+        "pesoTotalBytes": 3737717,
+        "requisicoes": 55,
+        "jsNaoUsadoBytes": 114985,
+        "cssNaoUsadoBytes": 31968
+      },
+      "variacaoPerformance": {
+        "n": 3,
+        "min": 56,
+        "max": 58,
+        "amplitude": 2,
+        "media": 57.33,
+        "desvioPadrao": 1.15
+      },
+      "semantica": {
+        "status": "ok",
+        "indicadores": {
+          "divSpan": {
+            "div": 21,
+            "span": 10,
+            "total": 80,
+            "proporcao": 0.3875
+          },
+          "landmarks": {
+            "banner": 0,
+            "navigation": 1,
+            "main": 0,
+            "contentinfo": 1
+          },
+          "titulos": {
+            "total": 6,
+            "h1": 0,
+            "porNivel": [
+              0,
+              0,
+              2,
+              4,
+              0,
+              0
+            ],
+            "saltos": 0,
+            "maiorSalto": 0,
+            "primeiroNivel": 3
+          },
+          "estrutura": {
+            "article": 1,
+            "section": 2,
+            "aside": 0,
+            "figure": 4,
+            "ul": 2,
+            "ol": 0
+          },
+          "interativosFalsos": {
+            "comOnclick": 0,
+            "falsos": 0
+          },
+          "metadados": {
+            "lang": null,
+            "temTitle": true,
+            "titleComprimento": 14,
+            "temViewport": true,
+            "temDescription": true
+          },
+          "imagens": {
+            "total": 6,
+            "semAlt": 4,
+            "altVazio": 0,
+            "semAltComAlternativa": 0
+          },
+          "campos": {
+            "total": 0,
+            "semLabel": 0,
+            "semLabelComPlaceholderOuTitle": 0
+          },
+          "obsoletas": {
+            "roteiro": 0,
+            "whatwg": 0,
+            "porTag": {}
+          },
+          "tabelas": {
+            "total": 0,
+            "layoutDeclarada": 0,
+            "layoutHeuristica": 0,
+            "dados": 0,
+            "indeterminada": 0
+          }
+        },
+        "indice": {
+          "subnotas": {
+            "landmarks": 50,
+            "titulos": 50,
+            "imagens": 33.333333333333336,
+            "campos": null,
+            "divSpan": 61.25000000000001,
+            "metadados": 50,
+            "interativos": null,
+            "obsoletos": 100
+          },
+          "indice": 51.40625,
+          "indicePesosIguais": 57.430555555555564
+        },
+        "networkidleTimeout": false
+      },
+      "faltasNoServidor": [
+        "/_ext/ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js",
+        "/resources/img/favicon.ico",
+        "/robots.txt",
+        "/resources/vendor/toastr/toastr.js.map",
+        "/resources/vendor/underscore/underscore-min.map"
+      ]
+    },
+    "corrigido": {
+      "urlLocal": "http://127.0.0.1:49973/",
+      "execucoes": [
+        {
+          "n": 1,
+          "startedAt": "2026-11-16T21:19:49.177Z",
+          "durationMs": 9378,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 57,
+            "accessibility": 66,
+            "best-practices": 96,
+            "seo": 91
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:49973/telas/",
+          "mainDocumentUrl": "http://127.0.0.1:49973/telas/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2609,
+          "runWarnings": [
+            "The page may not be loading as expected because your test URL (http://127.0.0.1:49973/) was redirected to http://127.0.0.1:49973/telas/. Try testing the second URL directly."
+          ],
+          "metricas": {
+            "notas": {
+              "performance": 57,
+              "accessibility": 66,
+              "best-practices": 96,
+              "seo": 91
+            },
+            "fcpMs": 6643.274399999999,
+            "lcpMs": 21258.288,
+            "tbtMs": 141,
+            "cls": 0,
+            "speedIndexMs": 6643.274399999999,
+            "pesoTotalBytes": 3737763,
+            "requisicoes": 55,
+            "jsNaoUsadoBytes": 114985,
+            "cssNaoUsadoBytes": 31968
+          }
+        },
+        {
+          "n": 2,
+          "startedAt": "2026-11-16T21:20:08.791Z",
+          "durationMs": 8393,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 58,
+            "accessibility": 66,
+            "best-practices": 96,
+            "seo": 91
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:49973/telas/",
+          "mainDocumentUrl": "http://127.0.0.1:49973/telas/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2730,
+          "runWarnings": [
+            "The page may not be loading as expected because your test URL (http://127.0.0.1:49973/) was redirected to http://127.0.0.1:49973/telas/. Try testing the second URL directly."
+          ],
+          "metricas": {
+            "notas": {
+              "performance": 58,
+              "accessibility": 66,
+              "best-practices": 96,
+              "seo": 91
+            },
+            "fcpMs": 6619.167200000003,
+            "lcpMs": 21239.744,
+            "tbtMs": 134,
+            "cls": 0,
+            "speedIndexMs": 6619.167200000003,
+            "pesoTotalBytes": 3737763,
+            "requisicoes": 55,
+            "jsNaoUsadoBytes": 114985,
+            "cssNaoUsadoBytes": 31968
+          }
+        },
+        {
+          "n": 3,
+          "startedAt": "2026-11-16T21:20:27.369Z",
+          "durationMs": 8137,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 58,
+            "accessibility": 66,
+            "best-practices": 96,
+            "seo": 91
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:49973/telas/",
+          "mainDocumentUrl": "http://127.0.0.1:49973/telas/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2805.5,
+          "runWarnings": [
+            "The page may not be loading as expected because your test URL (http://127.0.0.1:49973/) was redirected to http://127.0.0.1:49973/telas/. Try testing the second URL directly."
+          ],
+          "metricas": {
+            "notas": {
+              "performance": 58,
+              "accessibility": 66,
+              "best-practices": 96,
+              "seo": 91
+            },
+            "fcpMs": 6627.91425,
+            "lcpMs": 21246.4725,
+            "tbtMs": 124,
+            "cls": 0,
+            "speedIndexMs": 6627.91425,
+            "pesoTotalBytes": 3737763,
+            "requisicoes": 55,
+            "jsNaoUsadoBytes": 114985,
+            "cssNaoUsadoBytes": 31968
+          }
+        }
+      ],
+      "mediana": {
+        "criterio": "nota-performance",
+        "n": 2
+      },
+      "metricas": {
+        "notas": {
+          "performance": 58,
+          "accessibility": 66,
+          "best-practices": 96,
+          "seo": 91
+        },
+        "fcpMs": 6619.167200000003,
+        "lcpMs": 21239.744,
+        "tbtMs": 134,
+        "cls": 0,
+        "speedIndexMs": 6619.167200000003,
+        "pesoTotalBytes": 3737763,
+        "requisicoes": 55,
+        "jsNaoUsadoBytes": 114985,
+        "cssNaoUsadoBytes": 31968
+      },
+      "variacaoPerformance": {
+        "n": 3,
+        "min": 57,
+        "max": 58,
+        "amplitude": 1,
+        "media": 57.67,
+        "desvioPadrao": 0.58
+      },
+      "semantica": {
+        "status": "ok",
+        "indicadores": {
+          "divSpan": {
+            "div": 21,
+            "span": 10,
+            "total": 80,
+            "proporcao": 0.3875
+          },
+          "landmarks": {
+            "banner": 0,
+            "navigation": 1,
+            "main": 0,
+            "contentinfo": 1
+          },
+          "titulos": {
+            "total": 6,
+            "h1": 0,
+            "porNivel": [
+              0,
+              0,
+              2,
+              4,
+              0,
+              0
+            ],
+            "saltos": 0,
+            "maiorSalto": 0,
+            "primeiroNivel": 3
+          },
+          "estrutura": {
+            "article": 1,
+            "section": 2,
+            "aside": 0,
+            "figure": 4,
+            "ul": 2,
+            "ol": 0
+          },
+          "interativosFalsos": {
+            "comOnclick": 0,
+            "falsos": 0
+          },
+          "metadados": {
+            "lang": null,
+            "temTitle": true,
+            "titleComprimento": 14,
+            "temViewport": true,
+            "temDescription": true
+          },
+          "imagens": {
+            "total": 6,
+            "semAlt": 4,
+            "altVazio": 0,
+            "semAltComAlternativa": 0
+          },
+          "campos": {
+            "total": 0,
+            "semLabel": 0,
+            "semLabelComPlaceholderOuTitle": 0
+          },
+          "obsoletas": {
+            "roteiro": 0,
+            "whatwg": 0,
+            "porTag": {}
+          },
+          "tabelas": {
+            "total": 0,
+            "layoutDeclarada": 0,
+            "layoutHeuristica": 0,
+            "dados": 0,
+            "indeterminada": 0
+          }
+        },
+        "indice": {
+          "subnotas": {
+            "landmarks": 50,
+            "titulos": 50,
+            "imagens": 33.333333333333336,
+            "campos": null,
+            "divSpan": 61.25000000000001,
+            "metadados": 50,
+            "interativos": null,
+            "obsoletos": 100
+          },
+          "indice": 51.40625,
+          "indicePesosIguais": 57.430555555555564
+        },
+        "networkidleTimeout": false
+      },
+      "faltasNoServidor": [
+        "/_ext/ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js",
+        "/resources/img/favicon.ico",
+        "/robots.txt",
+        "/resources/vendor/toastr/toastr.js.map",
+        "/resources/vendor/underscore/underscore-min.map"
+      ]
+    }
+  },
+  "deltas": {
+    "nota_performance": {
+      "original": 58,
+      "corrigido": 58,
+      "delta": 0
+    },
+    "nota_accessibility": {
+      "original": 66,
+      "corrigido": 66,
+      "delta": 0
+    },
+    "nota_best_practices": {
+      "original": 96,
+      "corrigido": 96,
+      "delta": 0
+    },
+    "nota_seo": {
+      "original": 91,
+      "corrigido": 91,
+      "delta": 0
+    },
+    "fcp_ms": {
+      "original": 6619.084,
+      "corrigido": 6619.167200000003,
+      "delta": 0.08320000000276195
+    },
+    "lcp_ms": {
+      "original": 21239.68,
+      "corrigido": 21239.744,
+      "delta": 0.0639999999984866
+    },
+    "tbt_ms": {
+      "original": 135,
+      "corrigido": 134,
+      "delta": -1
+    },
+    "cls": {
+      "original": 0,
+      "corrigido": 0,
+      "delta": 0
+    },
+    "speed_index_ms": {
+      "original": 6619.084,
+      "corrigido": 6619.167200000003,
+      "delta": 0.08320000000276195
+    },
+    "peso_total_bytes": {
+      "original": 3737717,
+      "corrigido": 3737763,
+      "delta": 46
+    },
+    "requisicoes": {
+      "original": 55,
+      "corrigido": 55,
+      "delta": 0
+    },
+    "indice_semantica": {
+      "original": 51.40625,
+      "corrigido": 51.40625,
+      "delta": 0
+    },
+    "indice_semantica_pesos_iguais": {
+      "original": 57.430555555555564,
+      "corrigido": 57.430555555555564,
+      "delta": 0
+    },
+    "sub_landmarks": {
+      "original": 50,
+      "corrigido": 50,
+      "delta": 0
+    },
+    "sub_titulos": {
+      "original": 50,
+      "corrigido": 50,
+      "delta": 0
+    },
+    "sub_imagens": {
+      "original": 33.333333333333336,
+      "corrigido": 33.333333333333336,
+      "delta": 0
+    },
+    "sub_campos": {
+      "original": null,
+      "corrigido": null,
+      "delta": null
+    },
+    "sub_divSpan": {
+      "original": 61.25000000000001,
+      "corrigido": 61.25000000000001,
+      "delta": 0
+    },
+    "sub_metadados": {
+      "original": 50,
+      "corrigido": 50,
+      "delta": 0
+    },
+    "sub_interativos": {
+      "original": null,
+      "corrigido": null,
+      "delta": null
+    },
+    "sub_obsoletos": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    }
+  }
+}

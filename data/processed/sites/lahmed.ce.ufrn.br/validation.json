@@ -1,0 +1,707 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T21:19:47.216Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "siteId": "lahmed.ce.ufrn.br",
+  "contexto": {
+    "grupo": "wordpress",
+    "tecnologia": "wordpress",
+    "tipo": "laboratorio"
+  },
+  "recomendacoes": {
+    "total": 42,
+    "corrigidas": 33,
+    "corrigidasLlm": 0,
+    "llm": {
+      "prompt": "landmarks-v2",
+      "arquivo": "docs/prompts/landmarks-v2.md",
+      "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "effort": "low",
+      "maxTokens": 4000,
+      "execucao": {
+        "siteId": "lahmed.ce.ufrn.br",
+        "prompt": "landmarks-v2",
+        "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+        "modelo": "claude-haiku-5-5",
+        "modeloResposta": "claude-haiku-5-5",
+        "respostaId": "msg_011Ch7J6AUTuRaGEFVja4K7M",
+        "chamada": true,
+        "motivo": null,
+        "ausentes": [
+          "main"
+        ],
+        "candidatos": 9,
+        "elegiveis": 9,
+        "stopReason": "end_turn",
+        "inputTokens": 2028,
+        "outputTokens": 150,
+        "custoUsd": 0.00027780000000000003,
+        "propostas": 0,
+        "validas": 0,
+        "rejeitadas": [],
+        "textoIgual": null,
+        "landmarksDepois": null,
+        "erro": null,
+        "duracaoMs": 2379
+      }
+    }
+  },
+  "parametros": {
+    "execucoesPorVariante": 3,
+    "formFactor": "mobile",
+    "throttlingMethod": "simulate",
+    "chromeFlagsExtras": [
+      "--host-resolver-rules=MAP * ~NOTFOUND, EXCLUDE 127.0.0.1"
+    ],
+    "userAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+    "relogioSemantica": "2026-11-09T21:24:49.104Z",
+    "relogioLighthouse": "real"
+  },
+  "ordem": [
+    {
+      "variante": "corrigido",
+      "n": 1
+    },
+    {
+      "variante": "original",
+      "n": 1
+    },
+    {
+      "variante": "corrigido",
+      "n": 2
+    },
+    {
+      "variante": "original",
+      "n": 2
+    },
+    {
+      "variante": "corrigido",
+      "n": 3
+    },
+    {
+      "variante": "original",
+      "n": 3
+    }
+  ],
+  "variantes": {
+    "original": {
+      "urlLocal": "http://127.0.0.1:57258/",
+      "execucoes": [
+        {
+          "n": 1,
+          "startedAt": "2026-11-16T21:45:44.508Z",
+          "durationMs": 10012,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 54,
+            "accessibility": 89,
+            "best-practices": 92,
+            "seo": 92
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:57258/",
+          "mainDocumentUrl": "http://127.0.0.1:57258/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2838.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 54,
+              "accessibility": 89,
+              "best-practices": 92,
+              "seo": 92
+            },
+            "fcpMs": 8516.6318,
+            "lcpMs": 21163.375525000003,
+            "tbtMs": 180.4999999999991,
+            "cls": 0.01349553525669009,
+            "speedIndexMs": 8516.6318,
+            "pesoTotalBytes": 4740279,
+            "requisicoes": 66,
+            "jsNaoUsadoBytes": 175406,
+            "cssNaoUsadoBytes": 60711
+          }
+        },
+        {
+          "n": 2,
+          "startedAt": "2026-11-16T21:46:04.539Z",
+          "durationMs": 9631,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 54,
+            "accessibility": 89,
+            "best-practices": 92,
+            "seo": 92
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:57258/",
+          "mainDocumentUrl": "http://127.0.0.1:57258/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2976.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 54,
+              "accessibility": 89,
+              "best-practices": 92,
+              "seo": 92
+            },
+            "fcpMs": 8566.9176,
+            "lcpMs": 21238.074900000003,
+            "tbtMs": 176,
+            "cls": 0.01349553525669009,
+            "speedIndexMs": 8566.9176,
+            "pesoTotalBytes": 4740279,
+            "requisicoes": 66,
+            "jsNaoUsadoBytes": 175406,
+            "cssNaoUsadoBytes": 60711
+          }
+        },
+        {
+          "n": 3,
+          "startedAt": "2026-11-16T21:46:23.987Z",
+          "durationMs": 9360,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 54,
+            "accessibility": 89,
+            "best-practices": 92,
+            "seo": 92
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:57258/",
+          "mainDocumentUrl": "http://127.0.0.1:57258/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 3008.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 54,
+              "accessibility": 89,
+              "best-practices": 92,
+              "seo": 92
+            },
+            "fcpMs": 8567.5778,
+            "lcpMs": 21534.122274999998,
+            "tbtMs": 174.5,
+            "cls": 0.01349553525669009,
+            "speedIndexMs": 8567.5778,
+            "pesoTotalBytes": 4740279,
+            "requisicoes": 66,
+            "jsNaoUsadoBytes": 174880,
+            "cssNaoUsadoBytes": 60711
+          }
+        }
+      ],
+      "mediana": {
+        "criterio": "nota-performance",
+        "n": 2
+      },
+      "metricas": {
+        "notas": {
+          "performance": 54,
+          "accessibility": 89,
+          "best-practices": 92,
+          "seo": 92
+        },
+        "fcpMs": 8566.9176,
+        "lcpMs": 21238.074900000003,
+        "tbtMs": 176,
+        "cls": 0.01349553525669009,
+        "speedIndexMs": 8566.9176,
+        "pesoTotalBytes": 4740279,
+        "requisicoes": 66,
+        "jsNaoUsadoBytes": 175406,
+        "cssNaoUsadoBytes": 60711
+      },
+      "variacaoPerformance": {
+        "n": 3,
+        "min": 54,
+        "max": 54,
+        "amplitude": 0,
+        "media": 54,
+        "desvioPadrao": 0
+      },
+      "semantica": {
+        "status": "ok",
+        "indicadores": {
+          "divSpan": {
+            "div": 190,
+            "span": 5,
+            "total": 430,
+            "proporcao": 0.45348837209302323
+          },
+          "landmarks": {
+            "banner": 1,
+            "navigation": 1,
+            "main": 0,
+            "contentinfo": 1
+          },
+          "titulos": {
+            "total": 13,
+            "h1": 4,
+            "porNivel": [
+              4,
+              6,
+              0,
+              3,
+              0,
+              0
+            ],
+            "saltos": 1,
+            "maiorSalto": 2,
+            "primeiroNivel": 1
+          },
+          "estrutura": {
+            "article": 0,
+            "section": 8,
+            "aside": 0,
+            "figure": 0,
+            "ul": 6,
+            "ol": 0
+          },
+          "interativosFalsos": {
+            "comOnclick": 0,
+            "falsos": 0
+          },
+          "metadados": {
+            "lang": "pt-BR",
+            "temTitle": true,
+            "titleComprimento": 76,
+            "temViewport": true,
+            "temDescription": true
+          },
+          "imagens": {
+            "total": 41,
+            "semAlt": 0,
+            "altVazio": 33,
+            "semAltComAlternativa": 0
+          },
+          "campos": {
+            "total": 0,
+            "semLabel": 0,
+            "semLabelComPlaceholderOuTitle": 0
+          },
+          "obsoletas": {
+            "roteiro": 0,
+            "whatwg": 0,
+            "porTag": {}
+          },
+          "tabelas": {
+            "total": 0,
+            "layoutDeclarada": 0,
+            "layoutHeuristica": 0,
+            "dados": 0,
+            "indeterminada": 0
+          }
+        },
+        "indice": {
+          "subnotas": {
+            "landmarks": 75,
+            "titulos": 45.83333333333333,
+            "imagens": 100,
+            "campos": null,
+            "divSpan": 54.65116279069768,
+            "metadados": 100,
+            "interativos": null,
+            "obsoletos": 100
+          },
+          "indice": 74.53972868217053,
+          "indicePesosIguais": 79.24741602067184
+        },
+        "networkidleTimeout": false
+      },
+      "faltasNoServidor": [
+        "/_ext/kit.fontawesome.com/a86158e74e.js",
+        "/_ext/www.google.com/g/collect?v=2&tid=G-G5JK9MQC5S&gtm=45je6b50v9122470477za20czd9122470477xf4&_p=1794259489104&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=637519561.1794259489&frm=0&ngs=1&pscdl=noapi&rcb=18&sr=412x823&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4%7CHeadlessChrome%3B156.0.8078.4&uam=&uamb=1&uap=Windows&uapv=&uaw=0&ul=pt-br&_s=1&tag_exp=115938465~115938469~118897920~118897930~120213116~120385422~120412526~120420414~120469145~120469153~121246026~121246034~123329125~123814183&sid=1794259489&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2F&dt=LAHMED%20-%20Rio%20Grande%20do%20Norte%20-%20Laborat%C3%B3rio%20de%20Hist%C3%B3ria%20e%20Mem%C3%B3ria%20da%20Educa%C3%A7%C3%A3o&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=294&gaf=1",
+        "/wp-content/themes/lahmed-site/frontend-portal/dist/img/favicons/manifest.json",
+        "/_ext/www.google.com/g/collect?v=2&tid=G-G5JK9MQC5S&gtm=45je6b50v9122470477za20czd9122470477xf4&_p=1794865546468&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1509360168.1794865547&frm=0&ngs=1&pscdl=noapi&rcb=8&sr=412x823&uaa=&uab=&uafvl=&uam=moto%20g%20power%20(2022)&uamb=1&uap=Android&uapv=11.0&uaw=0&ul=pt-br&_s=1&tag_exp=115938466~115938469~118897920~118897930~120213116~120385422~120412526~120420416~120469145~120469153~121246026~121246034~123329124~123814183&sid=1794865546&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2F&dt=LAHMED%20-%20Rio%20Grande%20do%20Norte%20-%20Laborat%C3%B3rio%20de%20Hist%C3%B3ria%20e%20Mem%C3%B3ria%20da%20Educa%C3%A7%C3%A3o&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=331&gaf=1",
+        "/wp-content/themes/lahmed-site/frontend-portal/dist/img/favicons/favicon-32x32.png",
+        "/wp-content/themes/lahmed-site/frontend-portal/dist/img/favicons/favicon-16x16.png",
+        "/wp-content/themes/lahmed-site/frontend-portal/dist/img/favicons/favicon-96x96.png",
+        "/wp-content/themes/lahmed-site/frontend-portal/dist/img/favicons/android-icon-192x192.png",
+        "/wp-content/themes/lahmed-site/frontend-portal/dist/img/footer/logo-footer.png",
+        "/robots.txt",
+        "/_ext/www.google.com/g/collect?v=2&tid=G-G5JK9MQC5S&gtm=45je6b50v9122470477za20czd9122470477xf4&_p=1794865566463&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=241319478.1794865567&frm=0&ngs=1&pscdl=noapi&rcb=15&sr=412x823&uaa=&uab=&uafvl=&uam=moto%20g%20power%20(2022)&uamb=1&uap=Android&uapv=11.0&uaw=0&ul=pt-br&_s=1&tag_exp=115616986~115938466~115938468~118897920~118897930~120213116~120385422~120412526~120420416~120469145~120469153~121246026~121246034~123814183&sid=1794865566&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2F&dt=LAHMED%20-%20Rio%20Grande%20do%20Norte%20-%20Laborat%C3%B3rio%20de%20Hist%C3%B3ria%20e%20Mem%C3%B3ria%20da%20Educa%C3%A7%C3%A3o&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=311&gaf=1",
+        "/_ext/www.google.com/g/collect?v=2&tid=G-G5JK9MQC5S&gtm=45je6b50v9122470477za20czd9122470477xf4&_p=1794865585916&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=906740884.1794865586&frm=0&ngs=1&pscdl=noapi&rcb=12&sr=412x823&uaa=&uab=&uafvl=&uam=moto%20g%20power%20(2022)&uamb=1&uap=Android&uapv=11.0&uaw=0&ul=pt-br&_s=1&tag_exp=115616985~115938465~115938469~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034~123814183&sid=1794865586&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2F&dt=LAHMED%20-%20Rio%20Grande%20do%20Norte%20-%20Laborat%C3%B3rio%20de%20Hist%C3%B3ria%20e%20Mem%C3%B3ria%20da%20Educa%C3%A7%C3%A3o&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&gap.plf=5&tfd=308&gaf=1"
+      ]
+    },
+    "corrigido": {
+      "urlLocal": "http://127.0.0.1:57259/",
+      "execucoes": [
+        {
+          "n": 1,
+          "startedAt": "2026-11-16T21:45:35.072Z",
+          "durationMs": 9436,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 54,
+            "accessibility": 89,
+            "best-practices": 92,
+            "seo": 92
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:57259/",
+          "mainDocumentUrl": "http://127.0.0.1:57259/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 3056.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 54,
+              "accessibility": 89,
+              "best-practices": 92,
+              "seo": 92
+            },
+            "fcpMs": 8567.5484,
+            "lcpMs": 21013.27825,
+            "tbtMs": 173,
+            "cls": 0.01349553525669009,
+            "speedIndexMs": 8567.5484,
+            "pesoTotalBytes": 4705799,
+            "requisicoes": 64,
+            "jsNaoUsadoBytes": 175406,
+            "cssNaoUsadoBytes": 60711
+          }
+        },
+        {
+          "n": 2,
+          "startedAt": "2026-11-16T21:45:54.520Z",
+          "durationMs": 10018,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 54,
+            "accessibility": 89,
+            "best-practices": 92,
+            "seo": 92
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:57259/",
+          "mainDocumentUrl": "http://127.0.0.1:57259/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2884,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 54,
+              "accessibility": 89,
+              "best-practices": 92,
+              "seo": 92
+            },
+            "fcpMs": 8567.211,
+            "lcpMs": 21010.645625000005,
+            "tbtMs": 186,
+            "cls": 0.01349553525669009,
+            "speedIndexMs": 8567.211,
+            "pesoTotalBytes": 4705799,
+            "requisicoes": 64,
+            "jsNaoUsadoBytes": 175406,
+            "cssNaoUsadoBytes": 60711
+          }
+        },
+        {
+          "n": 3,
+          "startedAt": "2026-11-16T21:46:14.170Z",
+          "durationMs": 9816,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 55,
+            "accessibility": 89,
+            "best-practices": 92,
+            "seo": 92
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:57259/",
+          "mainDocumentUrl": "http://127.0.0.1:57259/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2990.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 55,
+              "accessibility": 89,
+              "best-practices": 92,
+              "seo": 92
+            },
+            "fcpMs": 8513.4426,
+            "lcpMs": 20787.092149999993,
+            "tbtMs": 166,
+            "cls": 0.01349553525669009,
+            "speedIndexMs": 8513.4426,
+            "pesoTotalBytes": 4705799,
+            "requisicoes": 64,
+            "jsNaoUsadoBytes": 175374,
+            "cssNaoUsadoBytes": 60711
+          }
+        }
+      ],
+      "mediana": {
+        "criterio": "nota-performance",
+        "n": 2
+      },
+      "metricas": {
+        "notas": {
+          "performance": 54,
+          "accessibility": 89,
+          "best-practices": 92,
+          "seo": 92
+        },
+        "fcpMs": 8567.211,
+        "lcpMs": 21010.645625000005,
+        "tbtMs": 186,
+        "cls": 0.01349553525669009,
+        "speedIndexMs": 8567.211,
+        "pesoTotalBytes": 4705799,
+        "requisicoes": 64,
+        "jsNaoUsadoBytes": 175406,
+        "cssNaoUsadoBytes": 60711
+      },
+      "variacaoPerformance": {
+        "n": 3,
+        "min": 54,
+        "max": 55,
+        "amplitude": 1,
+        "media": 54.33,
+        "desvioPadrao": 0.58
+      },
+      "semantica": {
+        "status": "ok",
+        "indicadores": {
+          "divSpan": {
+            "div": 190,
+            "span": 5,
+            "total": 430,
+            "proporcao": 0.45348837209302323
+          },
+          "landmarks": {
+            "banner": 1,
+            "navigation": 1,
+            "main": 0,
+            "contentinfo": 1
+          },
+          "titulos": {
+            "total": 13,
+            "h1": 4,
+            "porNivel": [
+              4,
+              6,
+              0,
+              3,
+              0,
+              0
+            ],
+            "saltos": 1,
+            "maiorSalto": 2,
+            "primeiroNivel": 1
+          },
+          "estrutura": {
+            "article": 0,
+            "section": 8,
+            "aside": 0,
+            "figure": 0,
+            "ul": 6,
+            "ol": 0
+          },
+          "interativosFalsos": {
+            "comOnclick": 0,
+            "falsos": 0
+          },
+          "metadados": {
+            "lang": "pt-BR",
+            "temTitle": true,
+            "titleComprimento": 76,
+            "temViewport": true,
+            "temDescription": true
+          },
+          "imagens": {
+            "total": 41,
+            "semAlt": 0,
+            "altVazio": 33,
+            "semAltComAlternativa": 0
+          },
+          "campos": {
+            "total": 0,
+            "semLabel": 0,
+            "semLabelComPlaceholderOuTitle": 0
+          },
+          "obsoletas": {
+            "roteiro": 0,
+            "whatwg": 0,
+            "porTag": {}
+          },
+          "tabelas": {
+            "total": 0,
+            "layoutDeclarada": 0,
+            "layoutHeuristica": 0,
+            "dados": 0,
+            "indeterminada": 0
+          }
+        },
+        "indice": {
+          "subnotas": {
+            "landmarks": 75,
+            "titulos": 45.83333333333333,
+            "imagens": 100,
+            "campos": null,
+            "divSpan": 54.65116279069768,
+            "metadados": 100,
+            "interativos": null,
+            "obsoletos": 100
+          },
+          "indice": 74.53972868217053,
+          "indicePesosIguais": 79.24741602067184
+        },
+        "networkidleTimeout": false
+      },
+      "faltasNoServidor": [
+        "/_ext/kit.fontawesome.com/a86158e74e.js",
+        "/_ext/www.google.com/g/collect?v=2&tid=G-G5JK9MQC5S&gtm=45je6b50v9122470477za20czd9122470477xf4&_p=1794259489104&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=244458693.1794259489&frm=0&ngs=1&pscdl=noapi&rcb=5&sr=412x823&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4%7CHeadlessChrome%3B156.0.8078.4&uam=&uamb=1&uap=Windows&uapv=&uaw=0&ul=pt-br&_s=1&tag_exp=115938466~115938468~118897920~118897930~120213116~120385422~120412528~120420416~120469145~120469153~121246026~121246034~123329125~123814183&sid=1794259489&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2F&dt=LAHMED%20-%20Rio%20Grande%20do%20Norte%20-%20Laborat%C3%B3rio%20de%20Hist%C3%B3ria%20e%20Mem%C3%B3ria%20da%20Educa%C3%A7%C3%A3o&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=295&gaf=1",
+        "/wp-content/themes/lahmed-site/frontend-portal/dist/img/favicons/manifest.json",
+        "/_ext/www.google.com/g/collect?v=2&tid=G-G5JK9MQC5S&gtm=45je6b50v9122470477za20czd9122470477xf4&_p=1794865537010&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=84243381.1794865537&frm=0&ngs=1&pscdl=noapi&rcb=3&sr=412x823&uaa=&uab=&uafvl=&uam=moto%20g%20power%20(2022)&uamb=1&uap=Android&uapv=11.0&uaw=0&ul=pt-br&_s=1&tag_exp=115616986~115938466~115938468~118897920~118897930~120213116~120385422~120412526~120420414~120469145~120469153~121246026~121246034~123329125~123630400~123814183&sid=1794865537&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2F&dt=LAHMED%20-%20Rio%20Grande%20do%20Norte%20-%20Laborat%C3%B3rio%20de%20Hist%C3%B3ria%20e%20Mem%C3%B3ria%20da%20Educa%C3%A7%C3%A3o&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=312&gaf=1",
+        "/wp-content/themes/lahmed-site/frontend-portal/dist/img/favicons/favicon-32x32.png",
+        "/wp-content/themes/lahmed-site/frontend-portal/dist/img/favicons/favicon-16x16.png",
+        "/wp-content/themes/lahmed-site/frontend-portal/dist/img/favicons/favicon-96x96.png",
+        "/wp-content/themes/lahmed-site/frontend-portal/dist/img/favicons/android-icon-192x192.png",
+        "/wp-content/themes/lahmed-site/frontend-portal/dist/img/footer/logo-footer.png",
+        "/robots.txt",
+        "/_ext/www.google.com/g/collect?v=2&tid=G-G5JK9MQC5S&gtm=45je6b50v9122470477za20czd9122470477xf4&_p=1794865556552&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1672216283.1794865557&frm=0&ngs=1&pscdl=noapi&rcb=12&sr=412x823&uaa=&uab=&uafvl=&uam=moto%20g%20power%20(2022)&uamb=1&uap=Android&uapv=11.0&uaw=0&ul=pt-br&_s=1&tag_exp=115616986~115938466~115938468~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121246026~121246034~123329123~123814185&sid=1794865556&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2F&dt=LAHMED%20-%20Rio%20Grande%20do%20Norte%20-%20Laborat%C3%B3rio%20de%20Hist%C3%B3ria%20e%20Mem%C3%B3ria%20da%20Educa%C3%A7%C3%A3o&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=317&gaf=1",
+        "/_ext/www.google.com/g/collect?v=2&tid=G-G5JK9MQC5S&gtm=45je6b50v9122470477za20czd9122470477xf4&_p=1794865576122&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1154271024.1794865576&frm=0&ngs=1&pscdl=noapi&rcb=5&sr=412x823&uaa=&uab=&uafvl=&uam=moto%20g%20power%20(2022)&uamb=1&uap=Android&uapv=11.0&uaw=0&ul=pt-br&_s=1&tag_exp=115616986~115938466~115938468~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034~123814183&sid=1794865576&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2F&dt=LAHMED%20-%20Rio%20Grande%20do%20Norte%20-%20Laborat%C3%B3rio%20de%20Hist%C3%B3ria%20e%20Mem%C3%B3ria%20da%20Educa%C3%A7%C3%A3o&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=304&gaf=1"
+      ]
+    }
+  },
+  "deltas": {
+    "nota_performance": {
+      "original": 54,
+      "corrigido": 54,
+      "delta": 0
+    },
+    "nota_accessibility": {
+      "original": 89,
+      "corrigido": 89,
+      "delta": 0
+    },
+    "nota_best_practices": {
+      "original": 92,
+      "corrigido": 92,
+      "delta": 0
+    },
+    "nota_seo": {
+      "original": 92,
+      "corrigido": 92,
+      "delta": 0
+    },
+    "fcp_ms": {
+      "original": 8566.9176,
+      "corrigido": 8567.211,
+      "delta": 0.2933999999986554
+    },
+    "lcp_ms": {
+      "original": 21238.074900000003,
+      "corrigido": 21010.645625000005,
+      "delta": -227.4292749999986
+    },
+    "tbt_ms": {
+      "original": 176,
+      "corrigido": 186,
+      "delta": 10
+    },
+    "cls": {
+      "original": 0.01349553525669009,
+      "corrigido": 0.01349553525669009,
+      "delta": 0
+    },
+    "speed_index_ms": {
+      "original": 8566.9176,
+      "corrigido": 8567.211,
+      "delta": 0.2933999999986554
+    },
+    "peso_total_bytes": {
+      "original": 4740279,
+      "corrigido": 4705799,
+      "delta": -34480
+    },
+    "requisicoes": {
+      "original": 66,
+      "corrigido": 64,
+      "delta": -2
+    },
+    "indice_semantica": {
+      "original": 74.53972868217053,
+      "corrigido": 74.53972868217053,
+      "delta": 0
+    },
+    "indice_semantica_pesos_iguais": {
+      "original": 79.24741602067184,
+      "corrigido": 79.24741602067184,
+      "delta": 0
+    },
+    "sub_landmarks": {
+      "original": 75,
+      "corrigido": 75,
+      "delta": 0
+    },
+    "sub_titulos": {
+      "original": 45.83333333333333,
+      "corrigido": 45.83333333333333,
+      "delta": 0
+    },
+    "sub_imagens": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    },
+    "sub_campos": {
+      "original": null,
+      "corrigido": null,
+      "delta": null
+    },
+    "sub_divSpan": {
+      "original": 54.65116279069768,
+      "corrigido": 54.65116279069768,
+      "delta": 0
+    },
+    "sub_metadados": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    },
+    "sub_interativos": {
+      "original": null,
+      "corrigido": null,
+      "delta": null
+    },
+    "sub_obsoletos": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    }
+  }
+}

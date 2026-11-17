@@ -1,0 +1,625 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head>
+    <title>PROGRAD [Pr&oacute;-Reitoria de Gradua&ccedil;&atilde;o / UFRN]</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="language" content="Portuguese">
+    <meta name="description" content="PROGRAD - Pró-Reitoria de Graduação">
+    <meta name="keywords" content="prograd, pro-reitoria de graduacao ufrn, prograd ufrn, graduacao, ensino, acadêmico, ufrn, cursos">
+    <meta name="reply-to" content="atendimento@prograd.ufrn.br">
+    <meta name="copyright" content="www.prograd.ufrn.br">
+    <meta name="category" content="Pró-Reitoria de Graduação">
+    <meta name="Robots" content="Index,Follow">
+
+    <meta name="author" content="Andressa Kroeff Pires e Victor Hugo - SINFO">
+    <link rev=made href="mailto:webmaster@info.ufrn.br">
+
+    <!-- Icone do site -->
+	<link rel="shortcut icon" href="img/prograd.ico">
+
+    <!-- Estilo geral -->
+	<link rel="stylesheet" type="text/css" href="css/geral.css?v=2.0.0" />
+	<link rel="stylesheet" type="text/css" href="css/barragoverno.css?v=2.0.0" />
+<script type="text/javascript" src="https://arquivos.info.ufrn.br/arquivos/2023032242cfad1243936953c7d717b89d/STICookieConsent.js"></script>
+</head>
+<body>
+<div id="barra-brasil" style="height: 23px; width: 100%; opacity: 0.1;">
+    <ul id="menu-barra-temp" style="list-style:none;">
+        <li style="display:inline; float:left; padding-right:10px; margin-right:10px;">
+            <a href="https://www.gov.br/pt-br" style="text-decoration:none; color: transparent;">Portal do Governo Brasileiro</a>
+        </li>
+    </ul>
+</div>
+	<div id="bg">
+    	<div id="bg_rodape">
+
+            <!-- topo -->
+            <header id="topo">
+
+                <!-- informacoes na direita -->
+                <div id="bloco_direita">
+
+                    <!-- ufrn -->
+                    <div id="ufrn">
+                        <a href="https://ufrn.br" target="_blank">
+                            <img src="img/logo_ufrn.png" title="Acesse o Portal da UFRN" alt="Logomarca da UFRN" width="42" height="14" />
+                        </a>
+                    </div>
+
+                    <!-- busca -->
+                    <div id="busca">
+                        <form id="form_busca" action="busca.php" method="get">
+                            <label>Busca</label>
+                            <input type="text" name="s" id="chave" value="" />
+                            <input type="button" class="bt_busca" value="OK" onClick="verifBusca()" />
+                        </form>
+                    </div>
+
+                    <!-- atalhos -->
+                    <div id="atalhos">
+                        <ul>
+                            <li>
+                                <a href="index.php" class="ico_inicial" title="Ir para a página inicial">Inicial</a>
+                            </li>
+                            <li class="separador"></li>
+                            <li>
+                                <a href="https://mail.ufrn.br/" class="ico_webmail" title="Acesse aqui o webmail" target="_blank">Webmail</a>
+                            </li>
+                            <li class="separador"></li>
+                            <li>
+                                <a href="contato.php" class="ico_contato" title="Entre em contato conosco">Contato</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- FIM - informacoes na direita -->
+
+                <!-- logo -->
+                <div id="logo">
+                    <a href="index.php" title="Acesse a p&aacute;gina inicial do site">
+                        <img src="img/logo.png" width="618" height="66" />
+                    </a>
+                </div>
+
+            </header>
+            <!-- FIM - topo -->
+
+            			<!-- menu -->
+            <nav id="area_menu">
+            	<div id="menu">
+                	<ul>
+                    	<li><a href="#" onclick="mudarAba(1)" id="link_1">Institucional</a></li>
+                    	<li><a href="#" onclick="mudarAba(2)" id="link_2">Acad&ecirc;mico</a></li>
+                    	<li><a href="#" onclick="mudarAba(3)" id="link_3">Editais</a></li>
+                    	<li><a href="#" onclick="mudarAba(4)" id="link_4">Documentos</a></li>
+                    	<li><a href="#" onclick="mudarAba(5)" id="link_5">Programas e Projetos</a></li>
+                    	<li><a href="noticias.php">Not&iacute;cias</a></li>
+                        <li><a href="pagina.php?a=publicacao">Publica&ccedil;&otilde;es</a></li>
+                    	                    </ul>
+                </div>
+
+                <div id="aba_1" class="area_submenu">
+                	<div class="submenu" id="oculta_1">
+                    	<div class="area_aba">
+                            <div class="area_link tamanho_2">
+                            	<span class="titulo"><a href="#">PR&oacute;-REITORIA DE GRADUA&Ccedil;&Atilde;O (PROGRAD)</a></span>
+                                <ul>
+                                    <li><a href="pagina.php?a=gabinete" class="azul"><label>&raquo;</label> Gabinete do Pró-Reitor</a></li>
+                                </ul>
+                            </div>
+                            <div class="area_link tamanho_2 ultimo">
+                            	<span class="titulo"><a href="#">DIRETORIAS</a></span>
+                                <ul>
+                                    <li><a href="pagina.php?a=ddped" class="azul"><label>&raquo;</label> Desenvolvimento Pedagógico</a></li>
+                                    <li><a href="pagina.php?a=daca" class="azul"><label>&raquo;</label> Administracão e Controle Acadêmico</a></li>
+                                </ul>
+                          	</div>
+                        	<div class="area_link tamanho_1 linha_inferior">
+                            	<span class="titulo"><a href="pagina.php?a=camara_graduacao">C&Acirc;MARA DE GRADUA&Ccedil;&Atilde;O</a></span>
+                            </div>
+                            <div class="area_link tamanho_1 linha_inferior">
+                            	<span class="titulo"><a href="pagina.php?a=organograma">ORGANOGRAMA</a></span>
+                            </div>
+                            <div class="area_link tamanho_1 linha_inferior ultimo">
+                            	<span class="titulo"><a href="pagina.php?a=horario_atendimento">HOR&Aacute;RIO DE ATENDIMENTO E CONTATOS</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="aba_2" class="area_submenu">
+                	<div class="submenu" id="oculta_2">
+                    	<div class="area_aba">
+                        	<div class="area_link tamanho_1">
+                            	<span class="titulo"><a href="documento.php?id=347559761">CALEND&Aacute;RIO ACAD&Ecirc;MICO</a></span>
+                            </div>
+                        	<div class="area_link tamanho_1 ">
+                            	<span class="titulo"><a href="pagina.php?a=cursos">CURSOS DE GRADUA&Ccedil;&Atilde;O</a></span>
+                            </div>
+                            <div class="area_link tamanho_1 ultimo">
+                            	<span class="titulo"><a href="pagina.php?a=revalidacao_diploma">REVALIDA&Ccedil;&Atilde;O DE DIPLOMA</a></span>
+                            </div>
+                        	<div class="area_link tamanho_3 linha_inferior">
+                            	<span class="titulo"><a href="#">FORMAS DE INGRESSO</a></span>
+                            	<ul>
+                                	<li class="menor"><a href="pagina.php?a=fi_vestibular" class="azul"><label>&raquo;</label> Vestibular</a></li>
+                                	<li class="menor"><a href="pagina.php?a=fi_vest_distancia" class="azul"><label>&raquo;</label> Vestibular &agrave; dist&acirc;ncia</a></li>
+                                	<li class="menor"><a href="pagina.php?a=fi_sisu" class="azul"><label>&raquo;</label> SISU</a></li>
+                                	<li class="menor"><a href="pagina.php?a=fi_trans_com" class="azul"><label>&raquo;</label> Transfer&ecirc;ncia Compuls&oacute;ria</a></li>
+                                	<li class="menor"><a href="pagina.php?a=fi_trans_vol" class="azul"><label>&raquo;</label> Transfer&ecirc;ncia Volunt&aacute;ria</a></li>
+                                	<li class="menor"><a href="pagina.php?a=fi_reingresso" class="azul"><label>&raquo;</label> Reingresso Graduado</a></li>
+                                	<li class="menor"><a href="pagina.php?a=fi_reopcao" class="azul"><label>&raquo;</label> Reop&ccedil;&atilde;o</a></li>
+                                	<li class="menor"><a href="pagina.php?a=fi_pecg" class="azul"><label>&raquo;</label> PEC-G</a></li>
+                                	<li class="menor"><a href="pagina.php?a=fi_aluno_especial" class="azul"><label>&raquo;</label> Aluno Especial</a></li>
+                                	<li class="menor"><a href="pagina.php?a=fi_mob_estudantil" class="azul"><label>&raquo;</label> Mobilidade Nacional</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="aba_3" class="area_submenu">
+                	<div class="submenu" id="oculta_3">
+                    	<div class="area_aba">
+                        	<div class="area_link tamanho_1">
+                            	<span class="titulo"><a href="documento.php?id=86686405">PUBLICADOS</a></span>                               
+                            </div>
+                            <div class="area_link tamanho_1">
+                            	<span class="titulo"><a href="documento.php?id=86686406">ABERTOS</a></span>                               
+                            </div>
+                        	<div class="area_link tamanho_1 ultimo">
+                            	<span class="titulo"><a href="documento.php?id=86686407">CONCLU&Iacute;DOS</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="aba_4" class="area_submenu">
+                	<div class="submenu" id="oculta_4">
+                    	<div class="area_aba">
+                        	<div class="area_link tamanho_1">
+                            	<span class="titulo"><a href="documento.php?id=86686400">RESULTADOS DA C&Acirc;MARA DE GRADUA&Ccedil;&Atilde;O</a></span>                               
+                            </div>
+                            <div class="area_link tamanho_1">
+                            	<span class="titulo"><a href="documento.php?id=86686401">RESOLU&Ccedil;&Otilde;ES</a></span>                               
+                            </div>
+                        	<div class="area_link tamanho_1 ultimo">
+                            	<span class="titulo"><a href="documento.php?id=308540975">Melhoria da Qualidade dos Cursos</a></span>
+                            </div>
+                            <div class="area_link tamanho_1 linha_inferior">
+                            	<span class="titulo"><a href="documento.php?id=86686403">PROCEDIMENTOS</a></span>                               
+                            </div>
+                            <div class="area_link tamanho_1 linha_inferior">
+                            	<span class="titulo"><a href="documento.php?id=88859003">FORMUL&Aacute;RIOS</a></span>                               
+                            </div>
+                            <div class="area_link tamanho_1 linha_inferior ultimo">
+                            	<span class="titulo"><a href="documento.php?id=261069901">Manuais</a></span>                               
+                            </div>
+                            <div class="area_link tamanho_1 linha_inferior">
+                            	<span class="titulo"><a href="documento.php?id=541773393">Portarias e Instruções Normativas</a></span>                               
+                            </div>
+                            <div class="area_link tamanho_1 linha_inferior">
+                            	<span class="titulo"><a href="documentos.php">TODOS</a></span>                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="aba_5" class="area_submenu">
+                	<div class="submenu" id="oculta_5">
+                    	<div class="area_aba">
+                            <div class="area_link tamanho_1">
+                                <span class="titulo"><a href="pagina.php?a=eventos_academicos">Eventos</a></span>                               
+                            </div>
+                        	<div class="area_link tamanho_1">
+                            	<span class="titulo"><a href="pagina.php?a=prog_pamqeg">PAMQEG</a></span>                               
+                            </div>
+                            <div class="area_link tamanho_1 ultimo">
+                            	<span class="titulo"><a href="pagina.php?a=prog_proceem">PROCEEM</a></span>                               
+                            </div>
+                        	<div class="area_link tamanho_1 linha_inferior">
+                            	<span class="titulo"><a href="pagina.php?a=prog_pet">PET</a></span>
+                            </div>
+                            <div class="area_link tamanho_1 linha_inferior">
+                            	<span class="titulo"><a href="pagina.php?a=prog_monitoria">MONITORIA</a></span>                               
+                            </div>
+                            <div class="area_link tamanho_1 linha_inferior ultimo">
+                            	<span class="titulo"><a href="pagina.php?a=prog_pibid">PIBID</a></span>                               
+                            </div>
+                            <div class="area_link tamanho_1 linha_inferior">
+                            	<span class="titulo"><a href="pagina.php?a=prog_pap">PAP</a></span>                               
+                            </div>
+                            <div class="area_link tamanho_1 linha_inferior">
+                            	<span class="titulo"><a href="pagina.php?a=prog_prodocencia">PRODOC&Ecirc;NCIA</a></span>                               
+                            </div>
+                            <div class="area_link tamanho_1 linha_inferior ultimo">
+                            	<span class="titulo"><a href="pagina.php?a=eipe">EIPE</a></span>                               
+                            </div>
+                            <div class="area_link tamanho_1 linha_inferior">
+                            	<span class="titulo"><a href="pagina.php?a=prog_tutoria">TUTORIA</a></span>                               
+                            </div>
+                            <div class="area_link tamanho_1 linha_inferior">
+                            	<span class="titulo"><a href="pagina.php?a=prog_suplensino">SUPLEMENTARES</a></span>                               
+                            </div>
+                            <div class="area_link tamanho_1 linha_inferior ultimo">
+                            	<span class="titulo"><a href="pagina.php?a=residen_pedagogica">Residência Pedagógica</a></span>                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </nav>
+            <!-- FIM - menu -->			<!-- estrutura -->
+            <div id="estrutura">
+
+                <!-- conteudo -->
+                <main id="conteudo">
+					<div id="coluna_esquerda">
+                    	<div class="titulo">Acesso Fácil</div>
+                        <div class="links_acessados">
+                            <a href="pagina.php?a=gabinete">
+                                <label>
+                                	Pró-Reitoria de Graduação
+                                </label>
+                            </a>
+                            <a href="pagina.php?a=daca">
+                                <label>
+                                	Controle Acadêmico (DACA)
+                                </label>
+                            </a>
+                            <a href="pagina.php?a=ddped">
+                                <label>
+                                	Desenvolvimento Pedagógico (DDPed)
+                                </label>
+                            </a>
+                            <a href="pagina.php?a=camara_graduacao">
+                                <label>
+                                	Câmara de Graduação
+                                </label>
+                            </a>
+                            <a href="pagina.php?a=formas_ingresso">
+                                <label>
+                                	Formas de Ingresso
+                                </label>
+                            </a>
+                            <a href="pagina.php?a=fi_mob_estudantil">
+                                <label>
+                                	Mobilidade Nacional
+                                </label>
+                            </a>
+                        </div>
+
+                        <div class="titulo">Enquete</div>
+                        <div class="area_enquete">
+                            <div class="enquete">
+                                <iframe scrolling="auto" frameborder="0" width="100%" height="170px" src="https://sistemas.ufrn.br/gerenciadorportais/public/prograd/enquete/"></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="meio">
+
+                        <!-- cursos_pos -->
+                        <div class="publico_externo">
+                        	<div class="titulo">
+	                                <span class="semlinha">
+	                                    Público Externo	                                </span>
+	                            </div>
+
+                        	<div class="alinhamento">
+                                <p class="tamanho_fonte" style="text-align: right;">&nbsp;</p>
+<p class="tamanho_fonte" style="text-align: right;">&nbsp;</p>
+<p class="tamanho_fonte">&nbsp;</p>
+<p class="tamanho_fonte">&nbsp;</p>
+<table style="margin-left: auto; margin-right: auto;" border="0">
+<tbody>
+<tr>
+<td style="text-align: center;" align="center" valign="middle">
+<p class="tamanho_fonte"><span style="color: #333399;"><a title="Solicita&ccedil;&otilde;es Remotas" href="https://prograd.ufrn.br/documento.php?id=348498374" target="_self"><span style="color: #333399;"><img style="border: 0px none;" src="https://sistemas.ufrn.br/shared/verImagem?salvar=false&amp;idArquivo=10505670&amp;key=a8c67d791eedc7936655db1584ab7c6f" alt="" width="350" height="72" /></span></a>&nbsp;</span></p>
+<p class="tamanho_fonte">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+</td>
+<td style="text-align: center;" align="center" valign="middle">&nbsp;</td>
+<td>
+<p class="tamanho_fonte">&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;" align="center" valign="middle">
+<p class="tamanho_fonte"><span style="color: #333333; font-size: small;"><strong><span class="tamanho_fonte">O Atendimento Remoto da PROGRAD &eacute; realizado pelos canais:</span></strong></span><br /><span style="color: #333333; font-size: small;"><strong><span class="tamanho_fonte">E-mail: </span></strong><span class="tamanho_fonte">atendimento@prograd.ufrn.br</span></span><br /><span style="color: #333333; font-size: small;"><strong><span class="tamanho_fonte">Whattsapp: </span></strong><span class="tamanho_fonte">+55 84 991936306</span></span></p>
+<p class="tamanho_fonte"><span style="color: #333333; font-size: small;"><span class="tamanho_fonte"><br /></span></span></p>
+<p class="tamanho_fonte"><strong><span style="color: #0000ff; font-size: small;"><span class="tamanho_fonte"><a href="https://www.prograd.ufrn.br/pagina.php?a=horario_atendimento"><span class="tamanho_fonte" style="color: #0000ff;">Contatos de atendimento dos setores - PROGRAD</span></a></span></span></strong></p>
+<p class="tamanho_fonte"><strong><span style="color: #0000ff; font-size: small;"><span class="tamanho_fonte"><span class="tamanho_fonte" style="color: #0000ff;"><br /></span></span></span></strong></p>
+<p class="tamanho_fonte"><strong><span style="color: #0000ff; font-size: small;"><span class="tamanho_fonte"><span class="tamanho_fonte" style="color: #0000ff;"><br /></span></span></span></strong></p>
+</td>
+<td style="text-align: center;" align="center" valign="middle">&nbsp;</td>
+<td>
+<p class="tamanho_fonte">&nbsp;</p>
+<p class="tamanho_fonte">&nbsp;</p>
+<p class="tamanho_fonte">&nbsp;</p>
+<p class="tamanho_fonte">&nbsp;</p>
+<p class="tamanho_fonte">&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div align="center"><hr style="border: 1px solid blue;" align="center" noshade="noshade" size="3" width="100%" /></div>
+<p style="text-align: center;"><strong style="font-size: small;"><img loading="lazy" style="border: 0px none;" src="https://sistemas.ufrn.br/shared/verImagem?salvar=false&amp;idArquivo=9815260&amp;key=2e28eb8645d0e12dd2c4eba895645ecf" alt="" width="128" height="48" /><br style="border: 1px solid blue;" /></strong><a href="http://www.prograd.ufrn.br/documento.php?id=471797750"><span style="color: #000000; font-size: small;">As informa&ccedil;&otilde;es sobre a solicita&ccedil;&atilde;o para revalida&ccedil;&atilde;o de diploma de medicina via Revalida podem ser consultas na se&ccedil;&atilde;o de <span style="color: #0000ff;"><strong><span style="color: #0000ff;">REVALIDA</span></strong></span>.</span><span class="tamanho_fonte" style="font-size: small;">&nbsp;</span></a></p>
+<p style="text-align: center;"><span class="tamanho_fonte" style="font-size: small;"><span style="color: #0000ff;"><strong><span style="color: #ff0000;"><br /></span></strong></span></span></p>
+<p style="text-align: center;"><span class="tamanho_fonte" style="font-size: small;"><span style="color: #0000ff;"><strong>REVALIDA 2025/2: <span class="tamanho_fonte" style="text-decoration: underline;"><a href="https://calendar.app.google/FLYFHg56y8fK3R6n8">Clique aqui para agendar sua revalida&ccedil;&atilde;o.&nbsp;</a></span></strong></span></span></p>
+<p style="text-align: center;"><span class="tamanho_fonte" style="font-size: small;"><span style="color: #0000ff;"><strong><br /></strong></span></span></p>
+<p style="text-align: center;"><span style="color: #ff0000; font-size: small;"><strong>Aten&ccedil;&atilde;o:</strong>&nbsp;Para a revalida&ccedil;&atilde;o, o atendimento ocorrer&aacute; exclusivamente no hor&aacute;rio previamente agendado. N&atilde;o ser&atilde;o atendidas pessoas que comparecerem em hor&aacute;rio diferente do agendado.</span></p>
+<p style="text-align: center;"><a href="https://calendar.app.google/FLYFHg56y8fK3R6n8"><span class="tamanho_fonte" style="font-size: small;"><span style="color: #0000ff;"><strong><br /></strong></span></span></a></p>
+<p style="text-align: center;">&nbsp;</p>
+<div align="center"><hr style="border: 1px solid blue;" align="center" noshade="noshade" size="3" width="100%" /></div>
+<p class="tamanho_fonte">&nbsp;</p>
+<p class="tamanho_fonte">&nbsp;</p>
+<table style="margin-left: auto; margin-right: auto;" border="0">
+<tbody>
+<tr>
+<td>
+<p class="tamanho_fonte">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img loading="lazy" src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?q=80&amp;w=1170&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" width="350" height="233" /></p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;" align="center"><a href="https://www.prograd.ufrn.br/documento.php?id=687165326"><strong><br /></strong></a></p>
+<p style="text-align: center;" align="center"><span class="tamanho_fonte" style="text-decoration: underline;"><strong><span class="tamanho_fonte" style="font-size: small;"><a href="https://prograd.ufrn.br/documento.php?id=729646320"><span class="tamanho_fonte">Acesse o Edital</span>&nbsp;n&ordm; 04/2026 &ndash; PROGRAD/DDPED</a></span></strong></span></p>
+<div>
+<p class="tamanho_fonte">CHAMADA P&Uacute;BLICA PARA SUBMISS&Atilde;O DE ARTIGOS PARA PUBLICA&Ccedil;&Atilde;O &ndash; COLE&Ccedil;&Atilde;O DOC&Ecirc;NCIA UNIVERSIT&Aacute;RIA</p>
+</div>
+<p style="text-align: center;" align="center">&nbsp;</p>
+<p style="text-align: center;" align="center"><strong><a href="https://www.prograd.ufrn.br/documento.php?id=687165326"><span style="color: #0000ff;"><span style="color: #0000ff;"><br /></span></span></a></strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="tamanho_fonte" style="text-align: center;"><a href="https://www.prograd.ufrn.br/documento.php?id=687165326">&nbsp;</a></p>
+<div align="center"><hr style="border: 1px solid blue;" align="center" noshade="noshade" size="3" width="100%" />
+<p class="tamanho_fonte">&nbsp;</p>
+<table border="0">
+<tbody>
+<tr>
+<td><strong><img loading="lazy" style="display: block; margin-left: auto; margin-right: auto;" src="https://prograp.ufpr.br/wp-content/uploads/2025/04/logo-parfor-equidade.jpeg" alt="" width="246" height="182" /></strong></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><span class="tamanho_fonte" style="text-decoration: underline;"><span style="color: #0000ff;"><strong><a href="https://prograd.ufrn.br/documento.php?id=598025758"><span class="tamanho_fonte" style="color: #0000ff; text-decoration: underline;"><span class="tamanho_fonte"><span class="tamanho_fonte">Edital n&ordm; 04/2024 - PROGRAD - PARFOR EQUIDADE (publicado em 15/09/2026</span></span></span></a><span class="tamanho_fonte"><span class="tamanho_fonte"><span class="tamanho_fonte"><strong><a href="https://prograd.ufrn.br/documento.php?id=598025758"><span class="tamanho_fonte" style="color: #0000ff; text-decoration: underline;">)</span></a></strong></span></span></span></strong></span></span></td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p class="tamanho_fonte"><a href="https://prograd.ufrn.br/documento.php?id=598025758"><br /></a></p>
+<p class="tamanho_fonte"><strong><br /></strong></p>
+<p class="tamanho_fonte">&nbsp;</p>
+<div align="center">
+<div><strong><span class="tamanho_fonte"><span class="tamanho_fonte"><span class="tamanho_fonte"><br /></span></span></span></strong></div>
+</div>
+<p class="tamanho_fonte" style="text-align: left;">&nbsp;</p>
+</div>                            </div>
+                        </div>
+
+                        <!-- area do discentes -->
+                        <div class="chamada com_borda">
+                            <div class="titulo">
+                                <span class="semlinha">
+                                   Discentes                                </span>
+                            </div>
+                            <ul class="lista">
+<li><a href="http://www.prograd.ufrn.br/pagina.php?a=horario_atendimento"><label>&raquo;</label> Atendimento (Telefones e Hor&aacute;rios)</a></li>
+<li><a title="Regulamento dos Cursos de Gradua&ccedil;&atilde;o" href="http://prograd.ufrn.br/documento.php?id=86686401" target="_blank"><label>&raquo;</label> Regulamento dos Cursos de Gradua&ccedil;&atilde;o</a></li>
+<li><a href="http://www.prograd.ufrn.br/documento.php?id=347559761"><label>&raquo;</label> Calend&aacute;rios Universit&aacute;rios </a></li>
+<li><a title="Est&aacute;gios UFRN" href="https://prograd.ufrn.br/pagina.php?a=ext_estagios" target="_blank"><label>&raquo;&nbsp;</label>Est&aacute;gios</a></li>
+<li><a href="http://www.prograd.ufrn.br/documento.php?id=467816010"><label>&raquo;&nbsp;</label></a><a href="http://prograd.ufrn.br/pagina.php?a=fi_aluno_especial">Aluno Especial</a></li>
+<li><a href="http://www.prograd.ufrn.br/documento.php?id=467816010"><label>&raquo;&nbsp;</label></a><a href="http://prograd.ufrn.br/pagina.php?a=revalidacao_diploma">Revalida&ccedil;&atilde;o de Diplomas</a></li>
+<li><a title="P&eacute; de Meia - Licenciaturas" href="https://prograd.ufrn.br/pagina.php?a=pedemeia"><label>&raquo;&nbsp;</label>P&eacute; de Meia - Licenciaturas</a></li>
+</ul>                        </div>
+
+                        <!-- area do docentes -->
+                        <div class="chamada">
+                            <div class="titulo">
+                                <span class="semlinha">
+									Docentes                                </span>
+                            </div>
+                            <ul class="lista">
+<li><span class="tamanho_fonte"><a href="http://www.prograd.ufrn.br/pagina.php?a=horario_atendimento"><label>&raquo;</label> Atendimento (Telefones e Hor&aacute;rios)</a></span></li>
+<li><span class="tamanho_fonte"><a href="http://www.prograd.ufrn.br/pagina.php?a=for_coord"><label>&raquo;&nbsp;</label>F&oacute;rum dos Coordenadores</a></span></li>
+<li><a href="https://prograd.ufrn.br/documento.php?id=308540975"><label>&raquo;</label> Pol&iacute;tica de Melhoria da Qualidade dos Cursos de Gradua&ccedil;&atilde;o</a></li>
+<li><a href="http://www.prograd.ufrn.br/documento.php?id=112583951"><label>&raquo;</label> </a><a href="http://www.prograd.ufrn.br/documento.php?id=467816010">ENADE</a></li>
+<li><a href="http://www.prograd.ufrn.br/documento.php?id=112583951"><label>&raquo;</label> </a><a href="http://prograd.ufrn.br/documento.php?id=179193226">Avalia&ccedil;&atilde;o de Cursos</a><span class="tamanho_fonte"><br /></span></li>
+<li><a href="http://www.prograd.ufrn.br/documento.php?id=312960815"><label>&raquo;</label>&nbsp;Cartilhas sobre Necessidades Especiais</a></li>
+</ul>                        </div>
+
+						<!-- Destaques (noticias) -->
+						<div class="titulo titulo_noticia">
+                        	<span class="semlinha">
+	                            Notícias
+                            </span>
+						</div>
+						<div class="destaque">
+                        	<ul id="noticias">
+                                <li class="d_conteudo">
+                                    <span class="d_titulo">
+                                        PROGRAD divulga Edital de Projetos de Tutoria Acadêmica para o ano de 2027                                    </span>
+                                    <p>
+                                        <a href="noticia.php?id=73271529">
+											A Universidade Federal do Rio Grande do Norte (UFRN), por interm&eacute;dio da Pr&oacute;-Reitoria de Gradua&ccedil;&atilde;o (PROGRAD), utilizando-se de recursos do or&ccedil;amento pr&oacute;prio da UFRN, torna p&uacute;blico o edital com as normas e condi&ccedil;&otilde;es para submiss&atilde;o de projetos de ensino referentes ao Programa de Tutoria Acad&ecirc;mica para ...                                        </a>
+                                        <a href="noticia.php?id=73271529" class="d_link">
+                                            Leia mais &raquo;
+                                        </a>
+                                    </p>
+								</li>
+                                <li class="d_conteudo">
+                                    <span class="d_titulo">
+                                        PROGRAD divulga Editais de Projetos de Monitoria para o ano de 2027                                    </span>
+                                    <p>
+                                        <a href="noticia.php?id=73231840">
+											A Universidade Federal do Rio Grande do Norte - UFRN, por interm&eacute;dio da Pr&oacute;-Reitoria de Gradua&ccedil;&atilde;o - PROGRAD, utilizando-se de recursos do or&ccedil;amento pr&oacute;prio da UFRN, torna p&uacute;blico os editais com as normas e condi&ccedil;&otilde;es para submiss&atilde;o de projetos de ensino referentes ao Programa de Monitoria aberto &agrave; pa...                                        </a>
+                                        <a href="noticia.php?id=73231840" class="d_link">
+                                            Leia mais &raquo;
+                                        </a>
+                                    </p>
+								</li>
+                                <li class="d_conteudo">
+                                    <span class="d_titulo">
+                                        PROGRAD abre chamada para submissão de artigos sobre ações de ensino do PROCEEM                                    </span>
+                                    <p>
+                                        <a href="noticia.php?id=72966209">
+											A Pr&oacute;-Reitoria de Gradua&ccedil;&atilde;o (PROGRAD) abrir&aacute; chamada para submiss&atilde;o de artigos que ir&atilde;o compor o segundo volume da Cole&ccedil;&atilde;o Doc&ecirc;ncia Universit&aacute;ria.  A publica&ccedil;&atilde;o reunir&aacute; relatos de a&ccedil;&otilde;es de ensino desenvolvidas no &acirc;mbito do Programa Complementar de Estudos do Ensino M&eacute;dio (PROCEEM), com o objetivo de...                                        </a>
+                                        <a href="noticia.php?id=72966209" class="d_link">
+                                            Leia mais &raquo;
+                                        </a>
+                                    </p>
+								</li>
+                                <li class="d_conteudo">
+                                    <span class="d_titulo">
+                                        PROGRAD divulga edital para preenchimento de vagas no grupo PET Química                                    </span>
+                                    <p>
+                                        <a href="noticia.php?id=72812853">
+											O Programa de Educa&ccedil;&atilde;o Tutorial (PET) da UFRN abre inscri&ccedil;&otilde;es para o processo seletivo de vagas para o grupo PET Qu&iacute;mica. Est&atilde;o abertas 02 (duas) vagas para bolsistas e 02 (duas) vagas para volunt&aacute;rios, para estudantes de gradua&ccedil;&atilde;o nos cursos de Bacharelado ou Licenciatura em Qu&iacute;mica da UFRN.A inscr...                                        </a>
+                                        <a href="noticia.php?id=72812853" class="d_link">
+                                            Leia mais &raquo;
+                                        </a>
+                                    </p>
+								</li>
+                                <li class="d_conteudo">
+                                    <span class="d_titulo">
+                                        PROGRAD divulga edital 2027 do Programa de Apoio à Melhoria da Qualidade do Ensino de Graduação (PAMQEG) na UFRN                                    </span>
+                                    <p>
+                                        <a href="noticia.php?id=72513516">
+											A Universidade Federal do Rio Grande do Norte (UFRN), por interm&eacute;dio da Pr&oacute;-Reitoria de Gradua&ccedil;&atilde;o (PROGRAD), utilizando-se dos recursos do Fundo Acad&ecirc;mico de Ensino de Gradua&ccedil;&atilde;o, torna p&uacute;blico o edital com as normas e condi&ccedil;&otilde;es para submiss&atilde;o de projetos de ensino referentes ao Programa de Apoio &agrave; M...                                        </a>
+                                        <a href="noticia.php?id=72513516" class="d_link">
+                                            Leia mais &raquo;
+                                        </a>
+                                    </p>
+								</li>
+                            </ul>
+                            <div id="navegacao"></div>
+                            <div id="mais_noticias">
+                            	<a href="noticias.php">+ not&iacute;cias</a>
+                            </div>
+						</div>
+
+</div>
+
+<div id="coluna_direita">
+    <div class="parceiros">
+        <div class="titulo">Ações</div>
+            <a href="https://www.ufrn.br/institucional/guia-de-apoio-estudantil" title="Acesse o guia de apoio estudantil da UFRN" target="_blank">
+                <img loading="lazy" src="img/banners/bt_guia_apoio_estudantil.png" width="114" height="49" alt="guia de apoio estudantil da UFRN" />
+            </a>
+            <a href="http://www.mostradeprofissoes.prograd.ufrn.br/" title="Acesse o site do evento" target="_blank">
+                <img loading="lazy" src="img/banners/mostra_profissoes.png" alt="Mostra de Profissões" width="114" height="49" />
+            </a>
+            <a href="pagina.php?a=ext_estagios" title="Acesse a página de estágios">
+                <img loading="lazy" src="img/banners/estagios.jpg" alt="Estágios" width="114" height="49" />
+            </a>
+            <a href="pagina.php?a=publicacao" title="Acesse a p&aacute;gina de publica&ccedil;&otilde;es">
+                <img loading="lazy" src="img/banners/publicacoes.png" alt="Publica&ccedil;&otilde;es" width="114" height="49" />
+            </a>
+            <a href="documento.php?id=86686401" title="Acesse a p&aacute;gina de regulamentos dos cursos de gradua&ccedil;&atilde;o">
+                <img loading="lazy" src="img/banners/regulamentos_graduacao.png" alt="Regulamentos dos cursos de gradua&ccedil;&atilde;o" width="114" height="49" />
+            </a>
+            <a href="http://portalpap.ufrn.br/" title="Acesse o site do PAP" target="_blank">
+                <img loading="lazy" src="img/banners/portal_pap.png" alt="Portal PAP" width="114" height="49" />
+            </a>
+            <a href="http://www.pibid.ufrn.br/" title="Acesse o site do PIBID" target="_blank">
+                <img loading="lazy" src="img/banners/pibid.png" alt="PIBID" width="114" height="49" />
+            </a>
+            <a href="http://escolha.ufrn.br/" title="Acesse o site da revista" target="_blank">
+                <img loading="lazy" src="img/banners/revista_escolha.png" alt="Revista Escolh@UFRN" width="114" height="49" />
+            </a>
+        </div>
+    </div>
+
+				</main>
+            	<!-- FIM - conteudo -->
+
+                <!-- rodape -->
+                <footer id="rodape">
+                    <div class="informacoes">
+                    	Informa&ccedil;&otilde;es: (84) 3342-2299 | <a href="mailto:atendimento@prograd.ufrn.br">atendimento@prograd.ufrn.br</a>
+                    </div>
+                    <div class="direitos">
+                    	Prograd - Pr&oacute;- Reitoria de Gradua&ccedil;&atilde;o &copy; Copyright 2012 / 2026 - Todos os direitos reservados<br>
+                        <a href="https://ufrn.br" title="Acesse o Portal da UFRN" target="_blank">UFRN - Universidade Federal do Rio Grande do Norte</a>
+                    </div>
+                    <div class="desenvolvido">
+                        <label>Desenvolvido pela </label>
+                        <a href="https://info.ufrn.br" title="Acesse o Portal da Superintendência de Tecnologia da Informação" target="_blank">
+                            STI
+                        </a>
+                    </div>
+                </footer>
+            	<!-- FIM - rodape -->
+
+            </div>
+            <!-- FIM - estrutura -->
+        </div>
+	</div>
+
+	
+	<!-- Jquery e plugins -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/validacao.js"></script>
+    <script type="text/javascript" src="js/funcoes_jquery.js"></script>
+
+    <!-- Js cycle -->
+    <script type="text/javascript" src="js/jquery.cycle.all.min.js"></script>
+
+    <!-- Js fonts -->
+    <script type="text/javascript" src="js/jquery.fontsize.js"></script>
+
+    <!-- Js lightBox -->
+    <script type="text/javascript" src="js/lightbox-0.5.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/lightbox-0.5.css" media="screen" />
+
+		<!-- Js barra do governo -->
+		<script defer="defer" src="https://barra.brasil.gov.br/barra.js" type="text/javascript"></script>
+		<script src="js/barragoverno.hack.js" type="text/javascript"></script>
+
+
+    <script type="text/javascript">
+		//formata fonte
+		fontSize('.acessibilidade', '.tamanho_fonte', 9, 10, 14);
+
+		$(document).ready(function() {
+			// esconde as abas do menu
+			$('#aba_1').hide();
+			$('#aba_2').hide();
+			$('#aba_3').hide();
+			$('#aba_4').hide();
+			$('#aba_5').hide();
+			$('#aba_6').hide();
+
+			// chama a funcao para ampliar imagem - lightBox
+			$('.aumenta a').lightBox();
+
+			//cria a animacao e navegacao das noticias em destaque
+			$('#noticias').after('<div id="navegacao">').cycle({
+			    fx: 'scrollLeft',
+				speed: 500,
+				timeout: 12000,
+				pager: '#navegacao'
+			});
+
+					
+			generateCookieConsentModal(
+				"site da PROGRAD" , 
+				{
+					fontSize: '16px',
+				},
+				{ 
+					margin: 'auto',
+					width: '990px',
+					lineHeight: '1.33'
+				},
+				false
+			);
+		});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE HTML>
+
+<html lang="pt-BR">
+<head>
+    <title>LAUT</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+    <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-panels.min.js"></script>
+    <script src="js/init.js"></script>
+    <noscript>
+	   <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/skel-noscript.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-desktop.css" />
+    </noscript>
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+<style>
+ /* Estilos adicionais específicos para esta página */
+        
+		.logo {
+    text-align: center; /* Centraliza a logo horizontalmente */
+    margin-top: 20px; /* Espaço opcional acima da logo */
+}
+.logo img {
+    max-width: 100%; /* Garante que a logo não ultrapasse a largura máxima do contêiner */
+    height: auto; /* Permite que a altura seja ajustada automaticamente */
+}		
+		.pagina_justificada section {
+            margin-bottom: 40px;
+        }
+        .pagina_justificada h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .pagina_justificada .byline {
+            font-style: italic;
+            color: #777;
+            margin-bottom: 20px;
+            display: block;
+        }
+        .pagina_justificada p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .rodape {
+            background-color: #2f2f2f;
+            color: #ccc;
+            padding: 30px 0;
+        }
+        .rodape .container {
+            text-align: center;
+        }
+        .rodape .links_do_rodape {
+            list-style: none;
+            padding: 0;
+        }
+        .rodape .links_do_rodape li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .rodape .links_do_rodape li a {
+            color: #ccc;
+            text-decoration: none;
+        }
+        .rodape .links_do_rodape li a:hover {
+            text-decoration: underline;
+        }
+        #copyright {
+            background-color: #1f1f1f;
+            text-align: center;
+            color: #777;
+            padding: 10px 0;
+        }
+	
+    </style>
+</head>
+<div id="header">
+  <div class="container"> 
+   <div class="logo">
+    <!-- Logo -->
+   <div id="logo">
+     <a><img src="images/logo_laut.png" alt="" width="160" height="160"></a>
+    </div>
+<body class="homepage">
+<!-- use jssor.slider.debug.js instead for debug --> 
+<script type="text/javascript" src="js/jssor.slider.min.js"></script>
+<script>
+    jssor_1_slider_init = function() {
+        
+        var jssor_1_SlideshowTransitions = [
+          {$Duration:1200,$Opacity:2}
+        ];
+        
+        var jssor_1_options = {
+          $AutoPlay: true,
+          $SlideshowOptions: {
+            $Class: $JssorSlideshowRunner$,
+            $Transitions: jssor_1_SlideshowTransitions,
+            $TransitionsOrder: 1
+          },
+          $ArrowNavigatorOptions: {
+            $Class: $JssorArrowNavigator$
+          },
+          $BulletNavigatorOptions: {
+            $Class: $JssorBulletNavigator$
+          }
+        };
+        
+        var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+        
+        //responsive code begin
+        //you can remove responsive code if you don't want the slider scales while window resizing
+        function ScaleSlider() {
+            var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+            if (refSize) {
+                refSize = Math.min(refSize, 1920);
+                jssor_1_slider.$ScaleWidth(refSize);
+            }
+            else {
+                window.setTimeout(ScaleSlider, 30);
+            }
+        }
+        ScaleSlider();
+        $Jssor$.$AddEvent(window, "load", ScaleSlider);
+        $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+        $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+        //responsive code end
+    };
+</script>
+
+<!-- Header -->
+    <!-- Logo -->
+     <!-- Nav -->
+    <nav id="nav">
+      <ul>
+        <li class="active"><a href="index.php">INÍCIO</a></li>
+        <li><a href="servicos.php">SERVIÇOS</a></li>
+        <li><a href="projetos.php">PROJETOS</a></li>
+        <li><a href="produtos.php">PRODUTOS</a></li>
+        <li><a href="premios.php">PRÊMIOS</a></li>
+        <li><a href="noticias.php">NOTÍCIAS</a></li>
+        <li><a href="equipe.php">EQUIPE</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+</div>
+<!-- Banner --> 
+
+<!-- Apresentação de SLIDES -->
+<style>
+    /* Estilos para o banner */
+    #jssor_1 {
+        width: 25%;
+        height: 50%; /* Para ajustar a altura conforme a largura */
+        max-width: 100%; /* Garante que o slider não ultrapasse a largura máxima */
+        margin: 0 auto;
+    }
+
+    /* Estilos para a barra de navegação */
+    #nav {
+        text-align: center;
+        margin: 0;
+        padding: 10px 0;
+    }
+    #nav ul {
+        list-style: none;
+        padding: 0;
+    }
+    #nav ul li {
+        display: inline;
+        margin: 0 10px;
+    }
+    #nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+    }
+
+    /* Estilos para os serviços e seções principais */
+    .3u {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .3u img {
+        width: 100%;
+        height: auto;
+    }
+    .subtitle {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .button {
+        display: inline-block;
+        padding: 8px 16px;
+        background-color: #609c62;
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        border-radius: 4px;
+        margin-top: 10px;
+    } 
+</style>
+<div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1900px; height: 364px; overflow: hidden; visibility: hidden;"> 
+  <!-- Loading Screen -->
+  <div data-u="loading" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 364px; overflow: hidden;">
+    <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+    <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+  </div>
+  <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1900px; height: 364px; overflow: hidden;">
+    <div data-p="112.50" style="display: none;"> <img data-u="image" src="images/inicial5.jpg" width="3632" height="1384" /> </div>
+    <div data-p="112.50" style="display: none;"> <img data-u="image" src="images/inicial2.jpg" width="3640" height="728" /> </div>
+    <div data-p="112.50" style="display: none;"> <img loading="lazy" data-u="image" src="images/inicio3edit.jpg" width="3624" height="1176" /> </div>
+    <div data-p="112.50" style="display: none;"> <img loading="lazy" data-u="image" src="images/inicial4.jpg" width="3636" height="844" /> </div>
+	 <div data-p="10.10" style="display: none;"> <img loading="lazy" data-u="image" src="images/niverlaut3.jpg" width="600" height="200"/>
+	 " /> </div>
+    <a data-u="ad" href="http://www.jssor.com" style="display:none">jQuery Slider</a> </div>
+  <!-- Bullet Navigator -->
+  <div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1"> 
+    <!-- bullet navigator item prototype -->
+    <div data-u="prototype" style="width:16px;height:16px;"></div>
+  </div>
+  <!-- Arrow Navigator --> 
+  <span data-u="arrowleft" class="jssora12l" style="top:0px;left:0px;width:30px;height:46px;" data-autocenter="2"></span> <span data-u="arrowright" class="jssora12r" style="top:0px;right:0px;width:30px;height:46px;" data-autocenter="2"></span> </div>
+<script>
+        jssor_1_slider_init();
+    </script> 
+<!--FIM Apresentação de SLIDES -->
+<main id="page"> 
+  
+  <!-- Extra -->
+  <div id="marketing" class="container">
+  <header>
+  <div class="row"><h2>ALGUNS DOS NOSSOS SERVIÇOS</h2></div>
+  </header>
+    <div class="row">
+      <div class="3u">
+        <section>
+          
+          <p class="subtitle">Sintonia e avaliação de malhas de controle industriais</p>
+          <p><a ><img src="images/Controle-de-nível-redimensionado.jpg" alt="" width="262" height="160"></a></p>
+          <a href="sintoniaeavaliacao.php" class="button">Ler mais</a> </section>
+      </div>
+      <div class="3u">
+        <section>
+          
+          <p class="subtitle">Programação de sistemas supervisórios  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp</p>
+          <p><a ><img loading="lazy" src="images/sistema-supervisorio-redimensionado.jpg" alt="" width="262" height="160"></a></p>
+          <a href="programacao_supervisorio.php" class="button">Ler mais</a> </section>
+      </div>
+      <div class="3u">
+        <section>
+          
+          <p class="subtitle">Programação de Controladores Lógicos Programáveis</p>
+          <p><a ><img loading="lazy" src="images/clp-controlador-logico-programavel-redimensionado.jpg" alt="" width="262" height="160"></a></p>
+          <a href="programacao_clps.php" class="button">Ler Mais</a> </section>
+      </div>
+      <div class="3u">
+        <section>
+         
+          <p class="subtitle">Treinamento em Controle de Processos Industriais</p>
+          <p><img loading="lazy" src="images/isa-sertaozinho-realiza-treinamento-de-controle-automatico-de-processos-redimensionado.jpg" alt="" width="262" height="160"></a></p>
+          <a href="treinamento_industriais.php" class="button">Ler mais</a> </section>
+      </div>
+    </div>
+  </div>
+  <!-- /Extra --> 
+  
+  <!-- Main -->
+  <div id="main" class="container">
+    <div class="row">
+      <div id="descricao-laut" class="6u">
+        <section>
+          <header>
+            <h2>Sobre o LAUT</h2>
+          </header>
+          <div class="conteudo-descricao">
+            <div id="imagem-superior-descricao" class="imagem"> <img loading="lazy"  width="282px" height="150px" src="images/fotos/LAUT.jpg"/> </div>
+            <div id="texto-superior-descricao" class="texto">
+              <p>O Laboratório de Automação (LAUT) tem o propósito de abrigar pesquisas na área desenvolvidas pela UFRN em parceria com a Petrobras e com outras empresas.</p>
+            </div>
+          </div>
+          <div class="conteudo-descricao">
+            <div id="texto-inferior-descricao" class="texto">
+              <p>O LAUT possui uma área de 620 m<sup>2</sup> e suas instalações contém, além de 4 salas de pesquisa para estudantes, auditório com 50 lugares, sala de reuniões para 12 pessoas, biblioteca, sala de treinamento, salas para pesquisadores visitantes, sala de informática, sala reservada para empresas parceiras e sala para incubação de empresas. A idéia é, além do desenvolvimento de pesquisas, incentivar a criação de novas empresas, destinando uma sala específica para a incubação no laboratório.</p>
+            </div>
+            <div id="imagem-inferior-descricao" class="imagem"> <img loading="lazy"  width="282px" src="images/fotos/Auditorio_do_LAUT.jpg" height="212"/> </div>
+          </div>
+          
+          <!--<a href="#" class="button">Saiba Mais</a>--> 
+        </section>
+      </div>
+      <div class="3u">
+        <section class="sidebar">
+          <header>
+            <h2>ALGUNS PROJETOS DO LAUT</h2>
+          </header>
+          <ul class="style2">
+            <li> <a href="aipetro.php"><img loading="lazy" src="images/logo_aipetro.png" alt=""></a>
+              <p><a href="aipetro.php" class="a1">AIPETRO - Neste projeto são desenvolvidos sistemas computacionais para o suporte...</a></p>
+            </li>
+            <li> <a href="bcsensor.php"><img loading="lazy" src="images/logo_bcsensor.png" alt=""></a>
+              <p><a href="bcsensor.php" class="a1">BCSENSOR - O objetivo desta pesquisa é projetar e instalar em um sistema BCS ...</a></p>
+            </li>
+            <li> <a href="sonic.php"><img loading="lazy" src="images/logo_sonic.png" alt=""></a>
+              <p><a href="sonic.php" class="a1">SONIC - Este projeto está sendo desenvolvido pela mesma equipe desde ...</a></p>
+            </li>
+          </ul>
+        </section>
+      </div><div class="3u">
+	  <section>
+          <header>
+            <h2>Últimas Noticias</h2>
+          </header>
+          <ul class="style1">
+            <li img src="imagens/seta_laranja.gif"><a href="noticias.php">No dia 21 de agosto...</a></li>
+          </ul>
+		   </section>
+		   <section>
+          <header>
+            <h2>Downloads</h2>
+          </header>
+		   <ul class="style1">
+          <li><a href="https://www.overleaf.com/8694562313hwwsjsnrcfng#0527db" target="_blank">Modelo de apresentação em latex - LAUT</a></li>
+          </ul>	
+          <ul class="style1">
+            <li img src="imagens/seta_laranja.gif"><a href="arquivos/Normas_LAUT.pdf">Normas do Laboratório de Automação - LAUT</a></li>
+          </ul>
+		  <ul class="style1">
+            <li img src="imagens/seta_laranja.gif"><a href="images/logolautof.png">Nova logo - LAUT</a></li>
+          </ul>	 
+		 </section>
+		   <section>
+	  <header>
+            <h2>Siga o LAUT nas redes sociais</h2>
+          </header>
+          <ul class="style1">
+            <td><a href="https://pt-br.facebook.com/pages/category/College---University/LAUT-127092580828006/" target="_blank"><img loading="lazy" src="images/logomarcas/facecapri.png" height="40" border="0" width="40" /></a></td>
+			<td><a href="https://www.instagram.com/lautufrn/" target="_blank"><img loading="lazy" src="images/logomarcas/instalogocapri.png" height="40" border="0" width="40" /></a></td>
+			<td><a href="https://www.youtube.com/@lautufrn" target="_blank"><img loading="lazy" src="images/logomarcas/youlogocapri.png" height="40" border="0" width="40" /></a>
+          </ul>
+		  </section>
+      </div>
+	   </div>
+	   
+ <div class="12u" style="padding: 3em 0em; border-top: 1px solid #DCDCDC">
+        <section>
+              <div class="center2" >
+                <table width="100%" cellspacing="1" align="center" border="0">
+                  <tr>
+                    <td><a href="http://www.ufrn.br" target="_blank"><img loading="lazy" src="images/logomarcas/ufrnlogo.png" alt="60" width="70" height="40" border="0" /></a></td>
+                    <td><a href="http://www.dca.ufrn.br/" target="_blank"><img loading="lazy" src="images/logomarcas/DCA1.gif" alt="60" width="70" height="40" border="0" /></a></td>
+                    <td><a href="http://www.eq.ufrn.br/" target="_blank"><img loading="lazy" src="images/logomarcas/deq.png" alt="60" width="70" height="40" border="0" /></a></td>
+                    <td><a href="http://www.anp.gov.br/" target="_blank"><img loading="lazy" src="images/logomarcas/ANP1.jpg" alt="60" width="70" height="40" border="0" /></a></td>
+                    <td><a href="http://www.cnpq.br/" target="_blank"><img loading="lazy" src="images/logomarcas/CNPQ1.png" alt="60" width="70" height="40" border="0" /></a></td>
+                    <td><a href="http://www.petrobras.com.br/" target="_blank"><img loading="lazy" src="images/logomarcas/PETROBRAS1.gif" alt="60" width="70" height="40" border="0"/></a></td>
+                    <td><a href="http://www.finep.gov.br/" target="_blank"><img loading="lazy" src="images/logomarcas/FINEP2.jpg" alt="60" width="70" height="40" border="0" /></a></td>
+					<td><a href="https://www.weg.net/" target"_blank"><img loading="lazy" src="images/logomarcas/wegg.png" alt="60" width="70" height="40" border="0"/></a></td>
+				    <td><a href="https://www.smar.com.br" target"_blank"><img loading="lazy" src="images/logomarcas/smarr.png" alt="60" width="70" height="40"border="0"/></a></td>
+				 </tr>
+                </table>
+              </div>
+			   </div>
+        </section>
+      </div>
+ </main>
+
+  </div>
+  <!-- Main --> 
+  
+</div>
+<!-- /Main --> 
+
+<!-- Footer -->
+<footer class="rodape">
+  <div class="container">
+    <div class="row">
+        <div class="3u">
+          <section>
+          <a href="http://www.ufrn.br" target="_blank"><img loading="lazy" src="images/logomarcas/UFRN1.png" width="175" height="97"/></a>
+        </section>
+        </div>
+        <div class="6u">
+          <section>
+          Universidade Federal do Rio Grande do Norte <br />
+          Campus Universitário Lagoa Nova CEP: 59072-970 Natal - RN - Brasil <br />
+          E-mail: laut@dca.ufrn.br - Telefones: (84) 3342-2231 ramal 208
+		  <!-- Copyright -->
+		  <div id="copyright">
+           LAUT - UFRN © Copyright 2016-2019 - Todos os direitos reservados.
+          </div>
+        </section>
+        </div>
+        <!--<div class="6u" class="menu_do_rodape">
+          <a href="index.php">INÍCIO</a>
+          <a href="projetos.php">PROJETOS</a>
+          <a href="noticias.php">NOTÍCIAS</a>
+          <a href="equipe.php">EQUIPE</a>
+          <a href="http://www.facebook.com">SAS 2016</a>
+        </div>-->
+        <div class="3u">
+          <section>
+          <ul class="links_do_rodape">
+            <li><a href="https://sigaa.ufrn.br/sigaa/public/home.jsf" target="_blank">SIGAA</a></li> 
+			 <section>
+          <ul class="links_do_rodape">
+            <li><a href="https://sigrh.ufrn.br/sigrh/public/home.jsf" target="_blank">SIGRH</a></li> 
+			 <section>
+          <ul class="links_do_rodape">
+            <li><a href="https://sipac.ufrn.br" target="_blank">SIPAC</a></li> 
+			<section>
+            <li><a href="faleconosco.php" target="_blank">FALE CONOSCO</a></li>
+          		  </ul>
+	
+        </div>
+    </div>
+  </div>
+</footer>
+<!-- /Footer --> 
+<script src="js/scripts.js"></script>
+</body>
+</html>

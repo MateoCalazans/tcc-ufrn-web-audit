@@ -1,0 +1,353 @@
+--- a/index.html
++++ b/fixed.html
+@@ -3,7 +3,7 @@
+ <!-- PHP variables -->
+ 
+ 
+-<html>
++<html lang="pt-BR">
+   <head>
+ 
+     <!-- Metadata: language -->
+@@ -214,7 +214,7 @@
+             <!-- SLIDE #1 -->
+             <li>
+               <div class='slider_overlay'></div>
+-              <img src='img/1.jpg' alt='Slide Image 1'>
++              <img src='img/1.jpg' alt='Slide Image 1' width="1920" height="1080">
+               <div class='slider_caption'>
+                 <h2>BEM-VINDO AO <span>DCA</span></h2>
+                 <p>Departamento de Engenharia de Computação e Automação</p>   
+@@ -225,7 +225,7 @@
+             <!-- SLIDE #2 -->
+             <li>
+               <div class='slider_overlay'></div>
+-              <img src='img/2.jpg' alt='Slide Image 2'>
++              <img src='img/2.jpg' alt='Slide Image 2' width="1920" height="1080">
+               <div class='slider_caption'>
+                 <h2>BEM-VINDO AO <span>DCA</span></h2>
+                 <p>Departamento de Engenharia de Computação e Automação</p>
+@@ -236,7 +236,7 @@
+             <!-- SLIDE #3 -->
+             <li>
+               <div class='slider_overlay'></div> 
+-              <img src='img/3.jpg' alt='Slide Image 3'>
++              <img src='img/3.jpg' alt='Slide Image 3' width="1920" height="1080">
+               <div class='slider_caption'>
+                 <h2>BEM-VINDO AO <span>DCA</span></h2>
+                 <p>Departamento de Engenharia de Computação e Automação</p>
+@@ -270,7 +270,7 @@
+     <!-- 
+       # SOBRE O DCA
+     --> 
+-    <section id='about-dca'>
++    <main id='about-dca'>
+       <div class='container'>
+         <div class='row'>
+           <div class='col-lg-12 col-md-12'>
+@@ -347,7 +347,7 @@
+           </div>
+         </div>
+       </div>
+-    </section>
++    </main>
+     
+     <!-- 
+       # INFRAESTRUTURA
+@@ -372,7 +372,7 @@
+           
+           
+             <ul class='infrastructure_slider'>
+-              <li><img src='img/1.jpg' alt='DCA' data-description='Departamento de Engenharia de Computação e Automação'></li><li><img src='img/2.jpg' alt='LAUT' data-description='Laboratório de Automação em Petróleo'></li><li><img src='img/3.jpg' alt='LAMP' data-description='Laboratório de Avaliação de Medição em Petróleo'></li>            </ul>
++              <li><img src='img/1.jpg' alt='DCA' data-description='Departamento de Engenharia de Computação e Automação'></li><li><img loading="lazy" src='img/2.jpg' alt='LAUT' data-description='Laboratório de Automação em Petróleo'></li><li><img loading="lazy" src='img/3.jpg' alt='LAMP' data-description='Laboratório de Avaliação de Medição em Petróleo'></li>            </ul>
+           
+           
+ 
+@@ -407,7 +407,7 @@
+ 				  <div class='single_personnel wow fadeInUp'> 
+ 				   <a class='personnel_click_info' id='adelardo' style='pointer-events:none;cursor:default;'> 
+ 				     <div class='personnel_img personnel_img_noshow' id='prof_img_adelardo'> 
+-				       <img src='img/pessoal/adelardo.png' alt='adelardo'> 
++				       <img loading="lazy" src='img/pessoal/adelardo.png' alt='adelardo' width="160" height="160"> 
+ 				     </div> 
+ 				   </a> 
+ 				   <div class='personnel_info' id='prof_info_adelardo'> 
+@@ -425,7 +425,7 @@
+ 				  <div class='single_personnel wow fadeInUp'> 
+ 				   <a class='personnel_click_info' id='adriao' style='pointer-events:none;cursor:default;'> 
+ 				     <div class='personnel_img personnel_img_noshow' id='prof_img_adriao'> 
+-				       <img src='img/pessoal/adriao.png' alt='adriao'> 
++				       <img loading="lazy" src='img/pessoal/adriao.png' alt='adriao' width="160" height="160"> 
+ 				     </div> 
+ 				   </a> 
+ 				   <div class='personnel_info' id='prof_info_adriao'> 
+@@ -443,7 +443,7 @@
+ 				  <div class='single_personnel wow fadeInUp'> 
+ 				   <a class='personnel_click_info' id='ambj' style='pointer-events:none;cursor:default;'> 
+ 				     <div class='personnel_img personnel_img_noshow' id='prof_img_ambj'> 
+-				       <img src='img/pessoal/ambj.png' alt='ambj'> 
++				       <img loading="lazy" src='img/pessoal/ambj.png' alt='ambj' width="160" height="160"> 
+ 				     </div> 
+ 				   </a> 
+ 				   <div class='personnel_info' id='prof_info_ambj'> 
+@@ -461,7 +461,7 @@
+ 				  <div class='single_personnel wow fadeInUp'> 
+ 				   <a class='personnel_click_info' id='anderson' style='pointer-events:none;cursor:default;'> 
+ 				     <div class='personnel_img personnel_img_noshow' id='prof_img_anderson'> 
+-				       <img src='img/pessoal/anderson.png' alt='anderson'> 
++				       <img loading="lazy" src='img/pessoal/anderson.png' alt='anderson' width="160" height="160"> 
+ 				     </div> 
+ 				   </a> 
+ 				   <div class='personnel_info' id='prof_info_anderson'> 
+@@ -479,7 +479,7 @@
+ 				  <div class='single_personnel wow fadeInUp'> 
+ 				   <a class='personnel_click_info' id='maitelli' style='pointer-events:none;cursor:default;'> 
+ 				     <div class='personnel_img personnel_img_noshow' id='prof_img_maitelli'> 
+-				       <img src='img/pessoal/maitelli.png' alt='maitelli'> 
++				       <img loading="lazy" src='img/pessoal/maitelli.png' alt='maitelli' width="160" height="160"> 
+ 				     </div> 
+ 				   </a> 
+ 				   <div class='personnel_info' id='prof_info_maitelli'> 
+@@ -497,7 +497,7 @@
+ 				  <div class='single_personnel wow fadeInUp'> 
+ 				   <a class='personnel_click_info' id='andres' style='pointer-events:none;cursor:default;'> 
+ 				     <div class='personnel_img personnel_img_noshow' id='prof_img_andres'> 
+-				       <img src='img/pessoal/andres.png' alt='andres'> 
++				       <img loading="lazy" src='img/pessoal/andres.png' alt='andres' width="160" height="160"> 
+ 				     </div> 
+ 				   </a> 
+ 				   <div class='personnel_info' id='prof_info_andres'> 
+@@ -515,7 +515,7 @@
+ 				  <div class='single_personnel wow fadeInUp'> 
+ 				   <a class='personnel_click_info' id='cetdorea' style='pointer-events:none;cursor:default;'> 
+ 				     <div class='personnel_img personnel_img_noshow' id='prof_img_cetdorea'> 
+-				       <img src='img/pessoal/cetdorea.png' alt='cetdorea'> 
++				       <img loading="lazy" src='img/pessoal/cetdorea.png' alt='cetdorea' width="160" height="160"> 
+ 				     </div> 
+ 				   </a> 
+ 				   <div class='personnel_info' id='prof_info_cetdorea'> 
+@@ -533,7 +533,7 @@
+ 				  <div class='single_personnel wow fadeInUp'> 
+ 				   <a class='personnel_click_info' id='viegas' style='pointer-events:none;cursor:default;'> 
+ 				     <div class='personnel_img personnel_img_noshow' id='prof_img_viegas'> 
+-				       <img src='img/pessoal/viegas.png' alt='viegas'> 
++				       <img loading="lazy" src='img/pessoal/viegas.png' alt='viegas' width="160" height="160"> 
+ 				     </div> 
+ 				   </a> 
+ 				   <div class='personnel_info' id='prof_info_viegas'> 
+@@ -551,7 +551,7 @@
+ 				  <div class='single_personnel wow fadeInUp'> 
+ 				   <a class='personnel_click_info' id='diogo' style='pointer-events:none;cursor:default;'> 
+ 				     <div class='personnel_img personnel_img_noshow' id='prof_img_diogo'> 
+-				       <img src='img/pessoal/diogo.png' alt='diogo'> 
++				       <img loading="lazy" src='img/pessoal/diogo.png' alt='diogo' width="160" height="160"> 
+ 				     </div> 
+ 				   </a> 
+ 				   <div class='personnel_info' id='prof_info_diogo'> 
+@@ -569,7 +569,7 @@
+ 				  <div class='single_personnel wow fadeInUp'> 
+ 				   <a class='personnel_click_info' id='eduardo' style='pointer-events:none;cursor:default;'> 
+ 				     <div class='personnel_img personnel_img_noshow' id='prof_img_eduardo'> 
+-				       <img src='img/pessoal/eduardo.png' alt='eduardo'> 
++				       <img loading="lazy" src='img/pessoal/eduardo.png' alt='eduardo' width="160" height="160"> 
+ 				     </div> 
+ 				   </a> 
+ 				   <div class='personnel_info' id='prof_info_eduardo'> 
+@@ -587,7 +587,7 @@
+ 				  <div class='single_personnel wow fadeInUp'> 
+ 				   <a class='personnel_click_info' id='meneghet' style='pointer-events:none;cursor:default;'> 
+ 				     <div class='personnel_img personnel_img_noshow' id='prof_img_meneghet'> 
+-				       <img src='img/pessoal/meneghet.png' alt='meneghet'> 
++				       <img loading="lazy" src='img/pessoal/meneghet.png' alt='meneghet' width="160" height="160"> 
+ 				     </div> 
+ 				   </a> 
+ 				   <div class='personnel_info' id='prof_info_meneghet'> 
+@@ -605,7 +605,7 @@
+ 				  <div class='single_personnel wow fadeInUp'> 
+ 				   <a class='personnel_click_info' id='mota' style='pointer-events:none;cursor:default;'> 
+ 				     <div class='personnel_img personnel_img_noshow' id='prof_img_mota'> 
+-				       <img src='img/pessoal/mota.png' alt='mota'> 
++				       <img loading="lazy" src='img/pessoal/mota.png' alt='mota' width="160" height="160"> 
+ 				     </div> 
+ 				   </a> 
+ 				   <div class='personnel_info' id='prof_info_mota'> 
+@@ -623,7 +623,7 @@
+ 				  <div class='single_personnel wow fadeInUp'> 
+ 				   <a class='personnel_click_info' id='ivanovitch' style='pointer-events:none;cursor:default;'> 
+ 				     <div class='personnel_img personnel_img_noshow' id='prof_img_ivanovitch'> 
+-				       <img src='img/pessoal/ivanovitch.png' alt='ivanovitch'> 
++				       <img loading="lazy" src='img/pessoal/ivanovitch.png' alt='ivanovitch' width="160" height="160"> 
+ 				     </div> 
+ 				   </a> 
+ 				   <div class='personnel_info' id='prof_info_ivanovitch'> 
+@@ -641,7 +641,7 @@
+ 				  <div class='single_personnel wow fadeInUp'> 
+ 				   <a class='personnel_click_info' id='ivonildo' style='pointer-events:none;cursor:default;'> 
+ 				     <div class='personnel_img personnel_img_noshow' id='prof_img_ivonildo'> 
+-				       <img src='img/pessoal/ivonildo.png' alt='ivonildo'> 
++				       <img loading="lazy" src='img/pessoal/ivonildo.png' alt='ivonildo' width="160" height="160"> 
+ 				     </div> 
+ 				   </a> 
+ 				   <div class='personnel_info' id='prof_info_ivonildo'> 
+@@ -659,7 +659,7 @@
+ 				  <div class='single_personnel wow fadeInUp'> 
+ 				   <a class='personnel_click_info' id='affonso' style='pointer-events:none;cursor:default;'> 
+ 				     <div class='personnel_img personnel_img_noshow' id='prof_img_affonso'> 
+-				       <img src='img/pessoal/affonso.png' alt='affonso'> 
++				       <img loading="lazy" src='img/pessoal/affonso.png' alt='affonso' width="160" height="160"> 
+ 				     </div> 
+ 				   </a> 
+ 				   <div class='personnel_info' id='prof_info_affonso'> 
+@@ -677,7 +677,7 @@
+ 				  <div class='single_personnel wow fadeInUp'> 
+ 				   <a class='personnel_click_info' id='lfelipe' style='pointer-events:none;cursor:default;'> 
+ 				     <div class='personnel_img personnel_img_noshow' id='prof_img_lfelipe'> 
+-				       <img src='img/pessoal/lfelipe.png' alt='lfelipe'> 
++				       <img loading="lazy" src='img/pessoal/lfelipe.png' alt='lfelipe' width="160" height="160"> 
+ 				     </div> 
+ 				   </a> 
+ 				   <div class='personnel_info' id='prof_info_lfelipe'> 
+@@ -695,7 +695,7 @@
+ 				  <div class='single_personnel wow fadeInUp'> 
+ 				   <a class='personnel_click_info' id='lmarcos' style='pointer-events:none;cursor:default;'> 
+ 				     <div class='personnel_img personnel_img_noshow' id='prof_img_lmarcos'> 
+-				       <img src='img/pessoal/lmarcos.png' alt='lmarcos'> 
++				       <img loading="lazy" src='img/pessoal/lmarcos.png' alt='lmarcos' width="160" height="160"> 
+ 				     </div> 
+ 				   </a> 
+ 				   <div class='personnel_info' id='prof_info_lmarcos'> 
+@@ -713,7 +713,7 @@
+ 				  <div class='single_personnel wow fadeInUp'> 
+ 				   <a class='personnel_click_info' id='firmino' style='pointer-events:none;cursor:default;'> 
+ 				     <div class='personnel_img personnel_img_noshow' id='prof_img_firmino'> 
+-				       <img src='img/pessoal/nophoto.png' alt='firmino'> 
++				       <img loading="lazy" src='img/pessoal/nophoto.png' alt='firmino' width="160" height="160"> 
+ 				     </div> 
+ 				   </a> 
+ 				   <div class='personnel_info' id='prof_info_firmino'> 
+@@ -731,7 +731,7 @@
+ 				  <div class='single_personnel wow fadeInUp'> 
+ 				   <a class='personnel_click_info' id='mfernandes' style='pointer-events:none;cursor:default;'> 
+ 				     <div class='personnel_img personnel_img_noshow' id='prof_img_mfernandes'> 
+-				       <img src='img/pessoal/mfernandes.png' alt='mfernandes'> 
++				       <img loading="lazy" src='img/pessoal/mfernandes.png' alt='mfernandes' width="160" height="160"> 
+ 				     </div> 
+ 				   </a> 
+ 				   <div class='personnel_info' id='prof_info_mfernandes'> 
+@@ -749,7 +749,7 @@
+ 				  <div class='single_personnel wow fadeInUp'> 
+ 				   <a class='personnel_click_info' id='pablo' style='pointer-events:none;cursor:default;'> 
+ 				     <div class='personnel_img personnel_img_noshow' id='prof_img_pablo'> 
+-				       <img src='img/pessoal/pablo.png' alt='pablo'> 
++				       <img loading="lazy" src='img/pessoal/pablo.png' alt='pablo' width="160" height="160"> 
+ 				     </div> 
+ 				   </a> 
+ 				   <div class='personnel_info' id='prof_info_pablo'> 
+@@ -767,7 +767,7 @@
+ 				  <div class='single_personnel wow fadeInUp'> 
+ 				   <a class='personnel_click_info' id='pmotta' style='pointer-events:none;cursor:default;'> 
+ 				     <div class='personnel_img personnel_img_noshow' id='prof_img_pmotta'> 
+-				       <img src='img/pessoal/nophoto.png' alt='pmotta'> 
++				       <img loading="lazy" src='img/pessoal/nophoto.png' alt='pmotta' width="160" height="160"> 
+ 				     </div> 
+ 				   </a> 
+ 				   <div class='personnel_info' id='prof_info_pmotta'> 
+@@ -785,7 +785,7 @@
+ 				  <div class='single_personnel wow fadeInUp'> 
+ 				   <a class='personnel_click_info' id='ricardo' style='pointer-events:none;cursor:default;'> 
+ 				     <div class='personnel_img personnel_img_noshow' id='prof_img_ricardo'> 
+-				       <img src='img/pessoal/ricardo.png' alt='ricardo'> 
++				       <img loading="lazy" src='img/pessoal/ricardo.png' alt='ricardo' width="160" height="160"> 
+ 				     </div> 
+ 				   </a> 
+ 				   <div class='personnel_info' id='prof_info_ricardo'> 
+@@ -803,7 +803,7 @@
+ 				  <div class='single_personnel wow fadeInUp'> 
+ 				   <a class='personnel_click_info' id='samuel' style='pointer-events:none;cursor:default;'> 
+ 				     <div class='personnel_img personnel_img_noshow' id='prof_img_samuel'> 
+-				       <img src='img/pessoal/samuel.png' alt='samuel'> 
++				       <img loading="lazy" src='img/pessoal/samuel.png' alt='samuel' width="160" height="160"> 
+ 				     </div> 
+ 				   </a> 
+ 				   <div class='personnel_info' id='prof_info_samuel'> 
+@@ -821,7 +821,7 @@
+ 				  <div class='single_personnel wow fadeInUp'> 
+ 				   <a class='personnel_click_info' id='catunda' style='pointer-events:none;cursor:default;'> 
+ 				     <div class='personnel_img personnel_img_noshow' id='prof_img_catunda'> 
+-				       <img src='img/pessoal/catunda.png' alt='catunda'> 
++				       <img loading="lazy" src='img/pessoal/catunda.png' alt='catunda' width="160" height="160"> 
+ 				     </div> 
+ 				   </a> 
+ 				   <div class='personnel_info' id='prof_info_catunda'> 
+@@ -839,7 +839,7 @@
+ 				  <div class='single_personnel wow fadeInUp'> 
+ 				   <a class='personnel_click_info' id='tbarros' style='pointer-events:none;cursor:default;'> 
+ 				     <div class='personnel_img personnel_img_noshow' id='prof_img_tbarros'> 
+-				       <img src='img/pessoal/tbarros.png' alt='tbarros'> 
++				       <img loading="lazy" src='img/pessoal/tbarros.png' alt='tbarros' width="160" height="160"> 
+ 				     </div> 
+ 				   </a> 
+ 				   <div class='personnel_info' id='prof_info_tbarros'> 
+@@ -883,7 +883,7 @@
+ 				  <div class='single_personnel wow fadeInUp'> 
+ 				   <a class='personnel_click_info' id='flavio' style='pointer-events:none;cursor:default;'> 
+ 				     <div class='personnel_img personnel_img_noshow' id='prof_img_flavio'> 
+-				       <img src='img/pessoal/flavio.png' alt='flavio'> 
++				       <img loading="lazy" src='img/pessoal/flavio.png' alt='flavio' width="160" height="160"> 
+ 				     </div> 
+ 				   </a> 
+ 				   <div class='personnel_info' id='prof_info_flavio'> 
+@@ -900,7 +900,7 @@
+ 				  <div class='single_personnel wow fadeInUp'> 
+ 				   <a class='personnel_click_info' id='andrepires' style='pointer-events:none;cursor:default;'> 
+ 				     <div class='personnel_img personnel_img_noshow' id='prof_img_andrepires'> 
+-				       <img src='img/pessoal/andrepires.png' alt='andrepires'> 
++				       <img loading="lazy" src='img/pessoal/andrepires.png' alt='andrepires' width="160" height="160"> 
+ 				     </div> 
+ 				   </a> 
+ 				   <div class='personnel_info' id='prof_info_andrepires'> 
+@@ -917,7 +917,7 @@
+ 				  <div class='single_personnel wow fadeInUp'> 
+ 				   <a class='personnel_click_info' id='diegomoura' style='pointer-events:none;cursor:default;'> 
+ 				     <div class='personnel_img personnel_img_noshow' id='prof_img_diegomoura'> 
+-				       <img src='img/pessoal/diegomoura.png' alt='diegomoura'> 
++				       <img loading="lazy" src='img/pessoal/diegomoura.png' alt='diegomoura' width="160" height="160"> 
+ 				     </div> 
+ 				   </a> 
+ 				   <div class='personnel_info' id='prof_info_diegomoura'> 
+@@ -934,7 +934,7 @@
+ 				  <div class='single_personnel wow fadeInUp'> 
+ 				   <a class='personnel_click_info' id='fabricio' style='pointer-events:none;cursor:default;'> 
+ 				     <div class='personnel_img personnel_img_noshow' id='prof_img_fabricio'> 
+-				       <img src='img/pessoal/nophoto.png' alt='fabricio'> 
++				       <img loading="lazy" src='img/pessoal/nophoto.png' alt='fabricio' width="160" height="160"> 
+ 				     </div> 
+ 				   </a> 
+ 				   <div class='personnel_info' id='prof_info_fabricio'> 
+@@ -951,7 +951,7 @@
+ 				  <div class='single_personnel wow fadeInUp'> 
+ 				   <a class='personnel_click_info' id='joaopaulo' style='pointer-events:none;cursor:default;'> 
+ 				     <div class='personnel_img personnel_img_noshow' id='prof_img_joaopaulo'> 
+-				       <img src='img/pessoal/joaopaulo.png' alt='joaopaulo'> 
++				       <img loading="lazy" src='img/pessoal/joaopaulo.png' alt='joaopaulo' width="160" height="160"> 
+ 				     </div> 
+ 				   </a> 
+ 				   <div class='personnel_info' id='prof_info_joaopaulo'> 
+@@ -1118,7 +1118,7 @@
+     <!-- 
+       # CONTATO
+     -->    
+-    <section id='contact'>
++    <footer id='contact'>
+       <div class='container'>
+         <div class='row'>
+           <div class='col-lg-12 col-md-12 col-sm-12'>
+@@ -1178,7 +1178,7 @@
+         <p>&nbsp;</p>
+         <iframe id='map' src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984.5463010505493!2d-35.19713768750664!3d-5.842571623623653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b2ff75c59049ff%3A0x7b804d5bb22efbcb!2sDepartamento+de+Engenharia+de+Computa%C3%A7%C3%A3o+e+Automa%C3%A7%C3%A3o+-+Lagoa+Nova%2C+Natal+-+RN!5e0!3m2!1spt-BR!2sbr!4v1476313977615' style='width:100%;height:380px;pointer-events:auto;border:0;display:block;vertical-align:bottom;'></iframe>
+       </div>
+-    </section>
++    </footer>
+ 
+     <!-- 
+       # FOOTER / RODAPE

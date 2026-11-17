@@ -1,0 +1,1246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portal de Cooperação</title>
+
+    <meta name="language" content="Portuguese">
+    <meta name="description" content="Portal de Cooperação da STI/UFRN - Redes IFES e Ciclo">
+    <meta name="keywords" content="portal de cooperacao, cooperacao sti, cooperacao sinfo, redes ifes e ciclo, cooperacao ufrn, cooperacao, sti, sinfo, ufrn">
+    <meta name="reply-to" content="cooperacao@sti.ufrn.br">
+    <meta name="copyright" content="https://portalcooperacao.info.ufrn.br/">
+    <meta name="category" content="Portal">
+    <meta name="Robots" content="Index,Follow">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+
+    <meta name="designer" content="Equipe FERA - STI/UFRN">
+    <link rev=made href="mailto:cooperacao@sti.ufrn.br">
+    
+    <link rel="shortcut icon" href="images/icons/favicon.png?v=2.2.1">
+    
+    <!-- Reset e estilo geral -->
+    <link rel="stylesheet" href="css/geral.css?v=2.2.1">
+    
+    <!-- Estilo Rede IFES e CICLO -->
+    <link rel="stylesheet" href="css/redes.css?v=2.2.1">
+    
+    <!-- Estilo Popover -->
+    <link rel="stylesheet" href="css/popover.css?v=2.2.1">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="fonts/fontawesome-free/css/all.min.css">
+    
+    <!-- Estilo inicial -->
+    <link rel="stylesheet" href="css/style.css?v=2.2.1" type="text/css" media="screen" /></head>
+
+<body >
+
+    
+    <!-- Google Analytics -->
+	<script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-4564254-11', 'ufrn.br');
+      ga('send', 'pageview');
+    
+    </script><div id="barra-brasil">
+    <ul id="menu-barra-temp" style="list-style: none">
+        <li style="display:inline; float:left;padding-right:10px; margin-right:10px; border-right:1px solid #EDEDED; font-weight: bold; line-height: 32px; font-size: 13px;">
+            <a href="http://brasil.gov.br" target="_blank" style="font-family:sans,sans-serif; text-decoration:none; color:white;">Portal do Governo Brasileiro</a>
+        </li>
+    </ul>
+</div><script type="text/javascript" src="https://arquivos.info.ufrn.br/arquivos/2023032242cfad1243936953c7d717b89d/STICookieConsent.js"></script>
+
+    <header>
+		<section class="centraliza_top">
+			<!--Logomarca-->
+			<a href="index.php" title="Página inicial do Portal de Cooperação"><img class="logo" src="images/logo-ufrn-sti-cooperacao.svg?v=2.2.1" width="225" height="43"></a><br>
+            <img class="imgtopo_estrutura" src="images/estrutura_topo.png?v=2.2.1">
+
+            <div class="redes-busca">
+
+                <!-- busca geral -->
+                <form action="busca.php" method="get" id="form_busca">
+                    <input type="text" name="s" id="chave" value="">
+                    <button title="Buscar" type="submit" onClick="verifBusca()"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </form>
+                <div id="acessoRestrito">
+                    <a href="javascript:void(0)" data-root="root-menu">Acesso restrito <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <ol>
+                        <li class="menu-itens">Ferramentas
+                            <ul>
+                                <li><a href="https://oraculo.ufrn.br" target="_blank">Oráculo</a></li>
+                                <li><a href="https://gas.ufrn.br" target="_blank">GAS</a></li>
+                                <li><a href="https://docs.info.ufrn.br" target="_blank">Docs</a></li>
+                                <li><a href="https://docs.info.ufrn.br/doku.php?id=cooperacao:tutoriais:mergebd" target="_blank">Merge DB</a></li>
+                            </ul>
+                        </li>
+                        <div class="linha_menu"></div>
+                        <li class="menu-itens">Documentação
+                            <ul>
+                                <li><a href="https://docs.info.ufrn.br/doku.php?id=cooperacao:material_apoio#arquitetura_dos_sistemas" target="_blank">Arquitetura</a></li>
+                                <li><a href="https://docs.info.ufrn.br/doku.php?id=cooperacao:tutoriais:documentacao_bancodedados" target="_blank">Banco de dados</a></li>
+                                <li><a href="https://docs.info.ufrn.br/doku.php?id=cooperacao:material_apoio" target="_blank">Material de apoio</a></li>
+                            </ul>
+                        </li>
+                        <div class="linha_menu"></div>
+                        <li class="menu-itens">Configuração de ambiente
+                            <ul>
+                                <li><a href="https://docs.google.com/document/d/1HbuKSL3Zvu3W4B-g6Xy9_5xDnvF3zthCTuwzsdjKqto/edit?usp=sharin" target="_blank">Iniciação/Imersão</a></li>
+                                <li><a href="https://docs.info.ufrn.br/doku.php?id=cooperacao:tutoriais:montagem_ambiente_desenvolvimento_cooperacao_jboss_5" target="_blank">Desenvolvimento</a></li>
+                                <li><a href="https://docs.info.ufrn.br/doku.php?id=cooperacao:tutoriais:montagem_ambiente_producao_novo" target="_blank">Produção</a></li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+		</section>
+	</header>
+    <script type="text/javascript"> 
+        generateCookieConsentModal(
+                "site do Portal de Cooperação" , 
+                {
+                    fontSize: '16px',
+                },
+                { 
+                    margin: 'auto',
+                    lineHeight: '1.33'
+                },
+                true
+            );
+    </script>
+
+	
+	<nav>
+		<ul class="centraliza_top">
+			<li id="cooperacao"><a  href="javascript:void(0)" data-root="root-menu">Cooperação <i class="fa fa-angle-down"></i></a>
+				<ol>
+					<li><a href="pagina.php?a=sobre">Sobre</a></li>
+					<li><a href="pagina.php?a=servicos">Serviços</a></li>
+					<li><a href="pagina.php?a=parceiros">Instituições Parceiras</a></li>
+					<li><a href="pagina.php?a=resp_ufrn">Responsabilidades da UFRN</a></li>
+					<li><a href="pagina.php?a=resp_parceira">Responsabilidades da Parceira</a></li>
+					<li><a href="https://agir.ufrn.br/documentos" target="_blank">Termos realizados</a></li>
+				</ol>
+			</li>
+
+			<li style="display: none;"><a href="pagina.php?a=participantes">Participantes</a></li>
+
+			<li id="fluxosDeAtendimento"><a href="javascript:void(0)" data-root="root-menu">Fluxos de atendimento <i class="fa fa-angle-down"></i></a>
+				<ol>
+					<li><a href="pagina.php?a=cadastro_usuario">Cadastro de usuário</a></li>
+					<li><a href="pagina.php?a=erro">Erro</a></li>
+					<li><a href="pagina.php?a=apoio_tecnico">Apoio Técnico</a></li>
+					<li><a href="pagina.php?a=aprimoramento">Aprimoramento</a></li>
+					<li><a href="pagina.php?a=duvida">Dúvida</a></li>
+					<li><a href="pagina.php?a=reuniao">Reunião</a></li>
+					<li><a href="pagina.php?a=fluxo_colaborativo">Fluxo colaborativo</a></li>
+				</ol>
+
+			</li>
+
+			<li><a href="noticias.php">Notícias</a></li>
+
+			<li><a href="implantacao.php">Implantação por módulos</a>
+
+			</li>
+
+			<li id="licenciadas"><a href="javascript:void(0)" data-root="root-menu">Licenciadas <i class="fa fa-angle-down"></i></a>
+				<ol>
+					<li><a href="pagina.php?a=empresas">Empresas atualmente licenciadas</a></li>
+					<li><a href="pagina.php?a=licenciamento">Contrato de Licenciamento</a></li>
+					<li><a href="arearestrita.php">Área restrita</a></li>
+				</ol>
+			</li>
+
+			<li id="documentacao"><a href="javascript:void(0)" data-root="root-menu">Documentação <i class="fa fa-angle-down"></i></a>
+				<ol>
+					<li><a href="https://docs.info.ufrn.br" target="_blank">Manuais</a></li>
+					<li><a href="https://docs.info.ufrn.br/doku.php?id=producao_cientifica:treinamentos_consultorias" target="_blank">Treinamentos e Consultorias</a></li>
+					<li><a href="https://info.ufrn.br/o-que-fazemos/transparencia/artigos-publicados/130" target="_blank">Produção científica</a></li>
+				</ol>
+			</li>
+
+			<li><a href="contato.php">Contato</a></li>
+		</ul>
+	</nav>
+	<content class="sem_aside">
+		<main class="centraliza">            <!-- Bloco chamada parceria com novas instituições -->
+            <div class="chamada-parceria-outerContainer">
+                <a class="chamada-parceria-link" href="pagina.php?a=sobre" title="Acesse as informações sobre a cooperação técnica">    
+                    <div class="chamada-parceria-container">
+                    </div>
+                    <span class="chamada-parceria-txt">
+                        Deseja ser uma instituição parceira? <strong>Clique aqui</strong> e saiba mais como fazer parte da Cooperação dos Sistemas SIG-UFRN.
+                    </span>
+                </a>
+            </div>
+
+            <!-- Bloco Notícias -->
+            <div class="news">
+                <div id="topNews">
+                    <h1>Últimas notícias</h1>
+                    <a class="link" href="noticias.php">mais notícias</a>
+                </div>
+                <div id="news-recentes">
+                    <ul>
+                        <li>
+                            <a href="noticia.php?id=73257360">
+                            	<img src="https://arquivos.info.ufrn.br/arquivos/2026245108d5bf19432842a3803dfdddbe/T_RELEASE_-_outubro_2026_-_noticia.png" width="850" height="551"/>                                <div class="antetitulo">COOPSIG</div>
+                                <strong>T! Release Outubro 2026 - Rede CoopSIG</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="noticia.php?id=73245279">
+                            	                                <div class="antetitulo">CHRONUS</div>
+                                <strong>Sistema CHRONUS recebe atualização com melhorias na integração com o SIGRH na versão 1.1.1</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="noticia.php?id=73142769">
+                            	                                <div class="antetitulo">SIGAA</div>
+                                <strong>SIGAA recebe atualizações nas versões 4.20.11 e 4.20.10 para as instituições cooperadas</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="noticia.php?id=72905306">
+                            	                                <div class="antetitulo">SIGAA</div>
+                                <strong>SIGAA recebe atualizações na versão 4.20.9 para as instituições cooperadas</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div><!-- div id=news-recentes -->
+            </div>
+            <!-- Fim bloco notícias -->
+
+            <!-- area topicos do forum -->
+            <div class="topicos">
+                <h1>
+                    <i class="ico-oraculo"><img loading="lazy" src="images/icons/ico-oraculo.svg?v=2.2.1" width="24" height="23"></i>
+                    Oráculo
+                </h1>
+                <ul>
+                    <li>
+                        <a href="https://oraculo.ufrn.br/tag/sigaa" target="_blank">
+                            <i class="fas fa-graduation-cap"></i>
+                            <p>SIGAA</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://oraculo.ufrn.br/tag/sigrh" target="_blank">
+                            <i class="fas fa-users"></i>
+                            <p>SIGRH</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://oraculo.ufrn.br/tag/sipac" target="_blank">
+                            <i class="fas fa-calculator"></i>
+                            <p>SIPAC</p>
+                        </a>
+                    </li>
+                    <li id="sistemas"><a>
+                            <p>Demais sistemas</p>
+                        </a>
+                        <ol class="lista-demais-sistemas">
+                                                            <li><a  href="https://oraculo.ufrn.br/tag/sigadmin" target="_blank">sigadmin</a></li>
+                                                            <li><a  href="https://oraculo.ufrn.br/tag/sigpp" target="_blank">sigpp</a></li>
+                                                            <li><a  href="https://oraculo.ufrn.br/tag/sigeleicao" target="_blank">sigeleicao</a></li>
+                                                            <li><a  href="https://oraculo.ufrn.br/tag/siged" target="_blank">siged</a></li>
+                                                    </ol>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- area consultas -->
+            <div class="consultas">
+                <h2>Acesso rápido</h2>
+                <div>
+                    <a href="https://arquivos.info.ufrn.br/arquivos/202102203500c584721146aee3f4f7d8a/res0512020_disciplina_o_relacionamento_entre_a_UFRN_e_os_interessados_nos_sistem.pdf">
+                        <i class="fas fa-file-alt"></i>Resolução
+                    </a>
+                    <a href="pagina.php?a=empresas">
+                        <i class="ico-licenciada"></i>Empresas licenciadas
+                    </a>
+                    <a href="https://gas.ufrn.br/issues/new" target="_blank">
+                        <i class="fas fa-comments"></i>Apoio Técnico
+                    </a>
+                    <a href="pagina.php?a=duvida">
+                        <i class="fa fa-sitemap"></i>Fluxogramas
+                    </a>
+                    <a href="https://docs.info.ufrn.br/" target="_blank">
+                        <i class="far fa-copy"></i>Docs
+                    </a>
+                    <a href="https://gas.ufrn.br/" target="_blank">
+                        <i class="fas fa-edit"></i>GAS
+                    </a>
+                </div>
+            </div>
+
+            <div class="treinamentos">
+                <h1>
+                    Treinamentos<a href="https://www.youtube.com/user/sistemasufrn" target="_blank" class="ver_mais">Ir para o canal</a>
+                </h1>
+                <ul class="treinamentos-sistemas">
+                    <li class="treino-sistema-item">
+                        <a href="https://www.youtube.com/playlist?list=PL40pn0eg_dT4Vw6ZlJB4g6yk9Pd_rahew" target="_blank" title="Acesse os vídeos do SIGAA">
+                            <img loading="lazy" class="treino-sistema-foto-chamada" src="images/chamada_sigaa.png" width="434" height="200">
+                            <div class="pelicula-black"></div>
+                            <img loading="lazy" class="img-sistemas" src="images/logo-sigaa.svg?v=2.2.1" width="105" height="30">
+                        </a>
+                    </li>
+                    <li class="treino-sistema-item">
+                        <a href="https://www.youtube.com/playlist?list=PL40pn0eg_dT6oVyyvELZxke3VpMXk4L_s" target="_blank" title="Acesse os vídeos do SIGRH">
+                            <img loading="lazy" class="treino-sistema-foto-chamada" src="images/chamada_sigrh.png" width="434" height="200">
+                            <div class="pelicula-black"></div>
+                            <img loading="lazy" class="img-sistemas" src="images/logo-sigrh.svg?v=2.2.1" width="103" height="30">
+                        </a>
+                    </li>
+                    <li class="treino-sistema-item">
+                        <a href="https://www.youtube.com/playlist?list=PL40pn0eg_dT5HrhvUWPAyqIfSyB51N2Z8" target="_blank" title="Acesse os vídeos do SIPAC">
+                            <img loading="lazy" class="treino-sistema-foto-chamada" src="images/chamada_sipac.png" width="434" height="200">
+                            <div class="pelicula-black"></div>
+                            <img loading="lazy" class="img-sistemas" src="images/logo-sipac.svg?v=2.2.1" width="100" height="30">
+                        </a>
+                    </li>
+                    <li class="treino-sistema-item">
+                        <a href="https://www.youtube.com/playlist?list=PL40pn0eg_dT4AocG69SVf_PrhVy_I1tiT" target="_blank" title="Acesse os vídeos dos demais sistemas">
+                            <img loading="lazy" class="treino-sistema-foto-chamada" src="images/chamada_demais_sistemas.png" width="434" height="200">
+                            <div class="pelicula-black"></div>
+                            <h1 class="treino-sistema-titulo">Demais Sistemas</h1>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="videos">
+                <h1>
+                    Série de vídeos explora a experiência e as lições aprendidas pelas Cooperadas
+                </h1>
+                <ul>
+                    <li>
+                        <iframe width="275" height="155" src="https://www.youtube.com/embed/jVufVChVRcA"></iframe>
+                    </li>
+                    <li>
+                        <iframe width="275" height="155" src="https://www.youtube.com/embed/Fsd39Cy-YTo"></iframe>
+                    </li>
+                    <li>
+                        <iframe width="275" height="155" src="https://www.youtube.com/embed/PoIG3lPtbC4"></iframe>
+                    </li>
+                </ul>
+            </div>
+
+		</main>
+		<section class="centraliza">
+			<h1>Instituições parceiras</h1>
+			<div class=rede-ifes>
+				<h4 class="title-rede">Rede IFES</h4>
+				<ul>
+					<a href="#ufrn" id="pop_ufrn"><li class="brasoes ufrn"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/ufrn.png" width="139" height="160"/>
+						<h1>Universidade Federal do Rio Grande do Norte / UFRN</h1>
+							                        <div class="dados">
+                            <p class="tamanho_fonte">A Superintend&ecirc;ncia de Inform&aacute;tica da UFRN foi criada em 1999, que extinguiu duas outras unidades organizacionais: N&uacute;cleo de Processamento de Dados (NPD) e o N&uacute;cleo de Computa&ccedil;&atilde;o Cient&iacute;fica (NCC). Em 2001, a SINFO deu in&iacute;cio ao desenvolvimento do PontoA. Em 2004, iniciou-se o desenvolvimento do SIPAC, ...&nbsp;<a href="http://portalcooperacao.info.ufrn.br/pagina.php?a=ufrn">(Leia mais)</a></p>                        </div>
+					</div>
+					<a href="#unilab" id="pop_unilab"><li class="brasoes unilab"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/unilab.png" width="172" height="160"/>
+						<h1>Universidade da I. I. da Lusotonia Afro-Brasileira / UNILAB</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> IFES</p>
+                            <p><strong>Sistemas:</strong> SIGAA, SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> Ladislav Trupl - Coordenador</p>
+                            <p><strong>Site:</strong> <a href="http://www.unilab.edu.br/" target="_blank">www.unilab.edu.br</a></p> 
+							<p class="data"><strong>Data:</strong> Setembro/2009</p>                          
+                        </div>
+					</div>
+					<a href="#univasf" id="pop_univasf"><li class="brasoes univasf"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/univasf.png" width="140" height="140"/>
+						<h1>Universidade Federal do Vale do São Francisco / UNIVASF</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> IFES</p>
+                            <p><strong>Sistemas:</strong> SIGAA, SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> Antonio F. A. de Sá Novaes - Diretor do Dep. de Sistemas de Informações</p>
+                            <p><strong>Site:</strong> <a href="http://www.univasf.edu.br" target="_blank">www.univasf.edu.br</a></p> 
+							<p class="data"><strong>Data:</strong> Setembro/2014</p>                          
+                        </div>
+					</div>
+					<a href="#ufabc" id="pop_ufabc"><li class="brasoes ufabc"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/ufabc.png" width="139" height="137"/>
+						<h1>Universidade Federal do ABC / UFABC</h1>
+			            <div class="dados">
+			                  	<p><strong>Rede:</strong> IFES</p>
+	                            <p><strong>Sistemas:</strong> SIGAA, SIPAC e SIGRH</p>
+	                            <p><strong>Responsável:</strong> Ricardo Magnusson Mussini - Coordenadro Geral do NTI</p>
+	                            <p><strong>Site:</strong> <a href="https://www.ufabc.edu.br" target="_blank">www.ufabc.edu.br</a></p>  
+								<p class="data"><strong>Data:</strong> Novembro/2014</p>                          
+			            </div>
+					</div>
+					<a href="#ufal" id="pop_ufal"><li class="brasoes ufal"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/ufal.png" width="139" height="160"/>
+						<h1>Universidade Federal de Alagoas / UFAL</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> IFES</p>
+                            <p><strong>Sistemas:</strong> SIGAA, SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> Rodrigo de Barros Paes - Diretor Geral do NTI</p>
+                            <p><strong>Site:</strong> <a href="http://www.ufal.edu.br" target="_blank">www.ufal.edu.br</a></p>  
+							<p class="data"><strong>Data:</strong> Julho/2013</p>                         
+                        </div>
+					</div>
+					<a href="#ufba" id="pop_ufba"><li class="brasoes ufba"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/ufba.png" width="139" height="160"/>
+						<h1>Universidade Federal da Bahia / UFBA</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> IFES</p>
+                            <p><strong>Sistemas:</strong> SIPAC</p>
+                            <p><strong>Responsável:</strong> Maria Luiza de Carvalho Braga - Coordenadora de Sistemas</p>
+                            <p><strong>Site:</strong> <a href="https://www.ufba.br" target="_blank">www.ufba.br</a></p>
+							<p class="data"><strong>Data:</strong> Dezembro/2009</p>                        
+                        </div>
+					</div>
+					<a href="#ufc" id="pop_ufc"><li class="brasoes ufc"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/ufc.png" width="139" height="160"/>
+						<h1>Universidade Federal do Ceará / UFC</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> IFES</p>
+                            <p><strong>Sistemas:</strong> SIGAA, SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> Joaquim Bento - Diretor de TI</p>
+                            <p><strong>Site:</strong> <a href="http://www.ufc.br" target="_blank">www.ufc.br</a></p>   
+							<p class="data"><strong>Data:</strong> Setembro/2009</p>                        
+                        </div>
+					</div>
+					<a href="#ufca" id="pop_ufca"><li class="brasoes ufca"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/ufca.png" width="600" height="300"/>
+						<h1>Universidade Federal Cariri / UFCA</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> IFES</p>
+                            <p><strong>Sistemas:</strong> SIPAC</p>
+                            <p><strong>Responsável:</strong> Janio Lima - Coordenador do projeto</p>
+                            <p><strong>Site:</strong> <a href="https://www.ufca.edu.br" target="_blank">www.ufca.edu.br</a></p>   
+							<p class="data"><strong>Data:</strong> Outubro/2014</p>                        
+                        </div>
+					</div>
+					<a href="#ufersa" id="pop_ufersa"><li class="brasoes ufersa"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/ufersa.png" width="139" height="160"/>
+						<h1>Universidade Federal Rural do Semi-Árido / UFERSA</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> IFES</p>
+                            <p><strong>Sistemas:</strong> SIGAA, SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> Kleber Jacinto - Coordenador de TI</p>
+                            <p><strong>Site:</strong> <a href="https://www.ufersa.edu.br" target="_blank">www.ufersa.edu.br</a></p>
+							<p class="data"><strong>Data:</strong> Julho/2008</p>
+                        </div>
+					</div>
+					<a href="#ufg" id="pop_ufg"><li class="brasoes ufg"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/ufg.png" width="172" height="160"/>
+						<h1>Universidade Federal de Goiás / UFG</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> IFES</p>
+                            <p><strong>Sistemas:</strong> SIGAA, SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> Dannyel Cardoso da Fonseca - Coordenador de Implantação dos Sistemas</p>
+                            <p><strong>Site:</strong> <a href="https://www.ufg.br" target="_blank">www.ufg.br</a></p> 
+							<p class="data"><strong>Data:</strong> Setembro/2013</p>                          
+                        </div>
+					</div>
+					<a href="#ufgd" id="pop_ufgd"><li class="brasoes ufgd"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/ufgd.jpg" width="815" height="888"/>
+						<h1>Universidade Federal da Grande Dourados / UFGD</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> IFES</p>
+                            <p><strong>Sistemas:</strong> SIGAA, SIGRH e SIPAC</p>
+                            <p><strong>Responsável:</strong> Felipe José Carbone - Coordenador do Projeto</p>
+                            <p><strong>Site:</strong> <a href="https://www.ufgd.edu.br" target="_blank">www.ufgd.edu.br</a></p> 
+							<p class="data"><strong>Data:</strong> Julho/2014</p>                          
+                        </div>
+					</div>
+					<a href="#ufma" id="pop_ufma"><li class="brasoes ufma"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/ufma.png" width="139" height="160"/>
+						<h1>Universidade Federal do Maranhão / UFMA</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> IFES</p>
+                            <p><strong>Sistemas:</strong> SIGAA, SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> Osvaldo Silva de Souza Junior - Gerente de Desenvolvimento</p>
+                            <p><strong>Site:</strong> <a href="https://www.ufma.br" target="_blank">www.ufma.br</a></p> 
+							<p class="data"><strong>Data:</strong> Agosto/2009</p>                           
+                        </div>
+					</div>
+					<a href="#ufopa" id="pop_ufopa"><li class="brasoes ufopa"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/ufopa.png" width="139" height="160"/>
+						<h1>Universidade Federal do Oeste do Pará / UFOPA</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> IFES</p>
+                            <p><strong>Sistemas:</strong> SIGAA, SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> -</p>
+                            <p><strong>Site:</strong> <a href="https://www.ufopa.edu.br" target="_blank">www.ufopa.edu.br</a></p>  
+							<p class="data"><strong>Data:</strong> Novembro/2010</p>                         
+                        </div>
+					</div>
+					<a href="#ufpa" id="pop_ufpa"><li class="brasoes ufpa"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/ufpa.png" width="139" height="160"/>
+						<h1>Universidade Federal do Pará / UFPA</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> IFES</p>
+                            <p><strong>Sistemas:</strong> SIGAA, SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> Eloi Luiz Favero - Diretor de TI</p>
+                            <p><strong>Site:</strong> <a href="https://www.portal.ufpa.br" target="_blank">www.portal.ufpa.br</a></p> 
+							<p class="data"><strong>Data:</strong> Novembro/2010</p>                           
+                        </div>
+					</div>
+					<a href="#ufpb" id="pop_ufpb"><li class="brasoes ufpb"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/ufpb.png" width="139" height="160"/>
+						<h1>Universidade Federal da Paraíba / UFPB</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> IFES</p>
+                            <p><strong>Sistemas:</strong> SIGAA, SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> Pedro Jácome de Moura Junior - Diretor de TI</p>
+                            <p><strong>Site:</strong> <a href="https://www.ufpb.br/" target="_blank">www.ufpb.br</a></p>  
+							<p class="data"><strong>Data:</strong> Novembro/2010</p>                          
+                        </div>
+					</div>
+					<a href="#ufpe" id="pop_ufpe"><li class="brasoes ufpe"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/ufpe.png" width="139" height="160"/>
+						<h1>Universidade Federal de Pernambuco / UFPE</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> IFES</p>
+                            <p><strong>Sistemas:</strong> SIPAC</p>
+                            <p><strong>Responsável:</strong> Alesandre Vasconcelos - Diretor de TI</p>
+                            <p><strong>Site:</strong> <a href="http://www.ufpe.br/" target="_blank">www.ufpe.br</a></p>  
+							<p class="data"><strong>Data:</strong> Agosto/2013</p>                          
+                        </div>
+					</div>
+					<a href="#ufpi" id="pop_ufpi"><li class="brasoes ufpi"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/ufpi.png" width="139" height="160"/>
+						<h1>Universidade Federal do Piauí / UFPI</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> IFES</p>
+                            <p><strong>Sistemas:</strong> SIGAA, SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> Armando Soares Sousa - Coordenador de Sistemas</p>
+                            <p><strong>Site:</strong> <a href="https://www.ufpi.br/" target="_blank">www.ufpi.br</a></p>
+							<p class="data"><strong>Data:</strong> Novembro/2010</p>                           
+                        </div>
+					</div>
+					<a href="#ufra" id="pop_ufra"><li class="brasoes ufra"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/ufra.png" width="172" height="160"/>
+						<h1>Universidade Federal Rural da Amazônia / UFRA</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> IFES</p>
+                            <p><strong>Sistemas:</strong> SIGAA, SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> Ailson Vasconcelos - Superintendente de TI</p>
+                            <p><strong>Site:</strong> <a href="http://www.ufra.edu.br/" target="_blank">www.ufra.edu.br</a></p>
+							<p class="data"><strong>Data:</strong> Novembro/2009</p>                           
+                        </div>
+					</div>
+					<a href="#ufrb" id="pop_ufrb"><li class="brasoes ufrb"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/ufrb.png" width="172" height="160"/>
+						<h1>Universidade Federal do Recôncavo da Bahia / UFRB</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> IFES</p>
+                            <p><strong>Sistemas:</strong> SIGAA, SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> Anderson Lago Gomes - Coordenador de TI</p>
+                            <p><strong>Site:</strong> <a href="https://www.ufrb.edu.br/" target="_blank">www.ufrb.edu.br</a></p> 
+							<p class="data"><strong>Data:</strong> Outubor/2009</p>                          
+                        </div>
+					</div>
+					<a href="#ufrj" id="pop_ufrj"><li class="brasoes ufrj"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/ufrj.png" width="139" height="160"/>
+						<h1>Universidade Federal do Rio de Janeiro / UFRJ</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> IFES</p>
+                            <p><strong>Sistemas:</strong> SIPAC</p>
+                            <p><strong>Responsável:</strong> Lamech Schulte Machado - Diretor de Sistemas de Informação</p>
+                            <p><strong>Site:</strong> <a href="https://www.ufrj.br/" target="_blank">www.ufrj.br</a></p> 
+							<p class="data"><strong>Data:</strong> Janeiro/2013</p>                          
+                        </div>
+					</div>
+					<a href="#ufrr" id="pop_ufrr"><li class="brasoes ufrr"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/ufrr.png" width="145" height="160"/>
+						<h1>Universidade Federal de Roraima / UFRR</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> IFES</p>
+                            <p><strong>Sistemas:</strong> SIGAA, SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> Luciano da Silva Oliveira - Diretor de TI</p>
+                            <p><strong>Site:</strong> <a href="https://www.ufrr.br/" target="_blank">www.ufrr.br</a></p>
+							<p class="data"><strong>Data:</strong> Março/2013</p>
+                        </div>
+					</div>
+					<a href="#ufs" id="pop_ufs"><li class="brasoes ufs"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/ufs.png" width="139" height="160" />
+						<h1>Universidade Federal de Sergipe / UFS</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> IFES</p>
+                            <p><strong>Sistemas:</strong> SIGAA, SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> Estelamaris da Costa Pina - Coordenadora de Sistemas</p>
+                            <p><strong>Site:</strong> <a href="http://www.ufs.br" target="_blank">www.ufs.br</a></p> 
+							<p class="data"><strong>Data:</strong> Outubro/2009</p>                           
+                        </div>
+					</div>
+					<a href="#ufsb" id="pop_ufsb"><li class="brasoes ufsb"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/ufsb.png" width="375" height="537" />
+						<h1>Universidade Federal do Sul da Bahia / UFSB</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> IFES</p>
+                            <p><strong>Sistemas:</strong> SIGAA, SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> Sérgio Gorender - Diretoria de Sistemas</p>
+                            <p><strong>Site:</strong> <a href="https://www.ufsb.edu.br" target="_blank">www.ufsb.edu.br</a></p> 
+							<p class="data"><strong>Data:</strong> Outubro/2014</p>                           
+                        </div>
+					</div>
+					<a href="#ufsj" id="pop_ufsj"><li class="brasoes ufsj"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/ufsj.png" width="160" height="160"/>
+						<h1>Universidade Federal de São João Del-Rei / UFSJ</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> IFES</p>
+                            <p><strong>Sistemas:</strong> SIGAA, SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> Neyla Lourdes Bello - Coordenadora do Projeto</p>
+                            <p><strong>Site:</strong> <a href="https://www.ufsj.edu.br/" target="_blank">www.ufsj.edu.br</a></p>
+							<p class="data"><strong>Data:</strong> Setembro/2013</p>                           
+                        </div>
+					</div>
+					<a href="#unifei" id="pop_unifei"><li class="brasoes unifei"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/unifei.png" width="139" height="119"/>
+						<h1>Universidade Federal de Itajubá / UNIFEI</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> IFES</p>
+                            <p><strong>Sistemas:</strong> SIGAA, SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> Enzo Seraphim - Gerente de Projetos/Tecnólogo</p>
+                            <p><strong>Site:</strong> <a href="https://www.unifei.edu.br/" target="_blank">www.unifei.edu.br</a></p>
+							<p class="data"><strong>Data:</strong> Junho/2012</p>                           
+                        </div>
+					</div>
+					<a href="#unila" id="pop_unila"><li class="brasoes unila"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/unila.png" width="160" height="160"/>
+						<h1>Universidade Fed. da Integração Latino-Americana / UNILA</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> IFES</p>
+                            <p><strong>Sistemas:</strong> SIGAA, SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> Weber S. R. Takaki - Coordenador de TI</p>
+                            <p><strong>Site:</strong> <a href="https://www.unila.edu.br/" target="_blank">www.unila.edu.br</a></p>
+							<p class="data"><strong>Data:</strong> Fevereiro/2011</p>                          
+                        </div>
+					</div>
+					<a href="#unifesspa" id="pop_unifesspa"><li class="brasoes unifesspa"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/unifesspa.png" width="230" height="136"/>
+						<h1>Universidade Federal do Sul e Sudeste do Pará / UNIFESSPA</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> IFES</p>
+                            <p><strong>Sistemas:</strong> SIPAC</p>
+                            <p><strong>Responsável:</strong> Hugo Pereira Kuribayashi - Diretor de TI</p>
+                            <p><strong>Site:</strong> <a href="https://www.unifesspa.edu.br" target="_blank">www.unifesspa.edu.br</a></p>
+							<p class="data"><strong>Data:</strong> Novembro/2015</p>                          
+                        </div>
+					</div>
+					<a href="#cefetmg" id="pop_cefetmg"><li class="brasoes cefetmg"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/cefetmg.gif" width="487" height="400"/>
+						<h1>Centro Federal de Educação Tecnológica de Minas Gerais / CEFET-MG</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> IFES</p>
+                            <p><strong>Sistemas:</strong> SIGAA, SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> Ulisses Cotta Cavalca - Secretário de Governança da Informação</p>
+                            <p><strong>Site:</strong> <a href="https://www.cefetmg.br/" target="_blank">www.cefetmg.br</a></p>
+							<p class="data"><strong>Data:</strong> Março/2016</p>                          
+                        </div>
+					</div>
+					<a href="#if" id="pop_if"><li class="brasoes if"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/if.png" width="139" height="160">
+						<ul>
+							<li id="#IFAC">
+								<h1>Instituto Federal do Acre / IFAC</h1>
+		                        <div class="dados">
+		                            <p><strong>Rede:</strong> IFES</p>
+		                            <p><strong>Sistemas:</strong> SIGAA, SIPAC e SIGRH</p>
+		                            <p><strong>Responsável:</strong> Helson Ferreira - Coordenador de TI e Comunicação</p>
+		                            <p><strong>Site:</strong> <a href="https://www.ifac.edu.br" target="_blank">www.ifac.edu.br</a></p>   
+									<p class="data"><strong>Data:</strong> Junho/2013</p>                        
+		                        </div>
+							</li>
+							<li id="#IFB">
+								<h1>Instituto Federal Baiano / IF Baiano</h1>
+		                        <div class="dados">
+		                            <p><strong>Rede:</strong> IFES</p>
+		                            <p><strong>Sistemas:</strong> SIGAA</p>
+		                            <p><strong>Responsável:</strong> Saulo Leal dos Santos - Diretor de Gestão de TI</p>
+		                            <p><strong>Site:</strong> <a href="https://www.ifbaiano.edu.br" target="_blank">www.ifbaiano.edu.br</a></p>   
+									<p class="data"><strong>Data:</strong> Dezembro/2014</p>                        
+		                        </div>
+							</li>
+							<li id="#IFC">
+								<h1>Instituto Federal Catarinense / IFC</h1>
+		                        <div class="dados">
+		                            <p><strong>Rede:</strong> IFES</p>
+		                            <p><strong>Sistemas:</strong> SIGAA, SIPAC e SIGRH</p>
+		                            <p><strong>Responsável:</strong> Renato de Souza Muniz - Coordenador de Sistemas</p>
+		                            <p><strong>Site:</strong> <a href="https://www.ifc.edu.br" target="_blank">www.ifc.edu.br</a></p>   
+									<p class="data"><strong>Data:</strong> Abril/2014</p>                        
+		                        </div>
+							</li>
+							<li id="#IFES">
+								<h1>Instituto Federal do Espírito Santo/ IFES</h1>
+		                        <div class="dados">
+		                            <p><strong>Rede:</strong> IFES</p>
+		                            <p><strong>Sistemas:</strong> SIGAA, SIPAC e SIGRH</p>
+		                            <p><strong>Responsável:</strong> José Eduardo - Diretor de TI</p>
+		                            <p><strong>Site:</strong> <a href="https://www.ifes.edu.br" target="_blank">www.ifes.edu.br</a></p>
+									<p class="data"><strong>Data:</strong> Junho/2013</p>                           
+		                        </div>
+							</li>
+							<li id="#IFPA">
+								<h1>Instituto Federal do Pará / IFPA</h1>
+		                        <div class="dados">
+		                            <p><strong>Rede:</strong> IFES</p>
+		                            <p><strong>Sistemas:</strong> SIGAA, SIPAC, SIGRH</p>
+		                            <p><strong>Responsável:</strong> Paulo Henrique - Diretor de TI</p>
+		                            <p><strong>Site:</strong> <a href="https://www.ifpa.edu.br" target="_blank">www.ifpa.edu.br</a></p> 
+									<p class="data"><strong>Data:</strong> Dezembro/2010</p>                          
+		                        </div>
+							</li>
+							<li id="#IFPR">
+								<h1>Instituto Federal do Paraná / IFPR</h1>
+		                        <div class="dados">
+		                            <p><strong>Rede:</strong> IFES</p>
+		                            <p><strong>Sistemas:</strong> SIGAA, SIPAC e SIGRH</p>
+		                            <p><strong>Responsável:</strong> Eduardo Liquio Takao - Diretor de TI e Comunicação</p>
+		                            <p><strong>Site:</strong> <a href="http://www.ifpr.edu.br" target="_blank">www.ifpr.edu.br</a></p>
+									<p class="data"><strong>Data:</strong> Janeiro/2012</p>                            
+		                        </div>
+							</li>
+							<li id="#IFSC">
+								<h1>Instituto Federal de Santa Catarina / IFSC</h1>
+		                        <div class="dados">
+		                            <p><strong>Rede:</strong> IFES</p>
+		                            <p><strong>Sistemas:</strong> SIPAC e SIGRH</p>
+		                            <p><strong>Responsável:</strong> Emerson Ribeiro de Mello - Diretor de TI e Comunicação</p>
+		                            <p><strong>Site:</strong> <a href="https://www.ifsc.edu.br" target="_blank">www.ifsc.edu.br</a></p>
+									<p class="data"><strong>Data:</strong> Junho/2013</p>
+		                        </div>
+							</li>
+						</ul>
+					</div>
+					<a href="#ufrrj" id="pop_ufrrj"><li class="brasoes ufrrj"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/ufrrj.png" width="230" height="256"/>
+						<h1>Universidade Federal Rural do Rio de Janeiro / UFRRJ</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> IFES</p>
+                            <p><strong>Sistemas:</strong> SIGAA, SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> Fábio Cardozo - Pró-Reitor Adjunto de Planejamento, Avaliação e Desenvolvimento Institucional</p>
+                            <p><strong>Site:</strong> <a href="https://portal.ufrrj.br/" target="_blank">portal.ufrrj.br</a></p>
+							<p class="data"><strong>Data:</strong> Março/2015</p>
+						</div>
+					</div>
+					<a href="#uern" id="pop_uern"><li class="brasoes uern"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/uern.png" width="250" height="250"/>
+						<h1>Universidade do Estado do Rio Grande do Norte / UERN</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> IFES</p>
+                            <p><strong>Sistemas:</strong> SIGAA, SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> André Pedro Fernandes - Gerente de Projeto</p>
+                            <p><strong>Site:</strong> <a href="http://portal.uern.br/" target="_blank">portal.uern.br</a></p>
+							<p class="data"><strong>Data:</strong> Setembro/2016</p>
+						</div>
+					</div>
+					<a href="#unb" id="pop_unb"><li class="brasoes unb"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/unb.png" width="140" height="129"/>
+						<h1>Universidade de Brasília / UnB</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> IFES</p>
+                            <p><strong>Sistemas:</strong> SIPAC, SIGRH e SIGAA</p>
+                            <p><strong>Responsável:</strong> Consuelo Martins Galo - Gerente de Projeto</p>
+                            <p><strong>Site:</strong> <a href="https://www.unb.br/" target="_blank">www.unb.br</a></p>
+							<p class="data"><strong>Data:</strong> Julho/2017</p>
+						</div>
+					</div>
+				</ul>
+			</div>
+			
+			
+			<!-- REDE CICLO -->
+			<div class=rede-ciclo>
+				<h4 class="title-ciclo">Rede Ciclo</h4>
+				<ul>
+					<a href="#abi" id="pop_abi"><li class="brasoes-ciclo abi"></li></a>
+					<div class="webui-popover-content">
+				       <img loading="lazy" src="images/animacao/abi.png" width="139" height="142"/>
+						<h1>Agência Brasileira de Inteligência / ABIN</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> CICLO</p>
+                            <p><strong>Sistemas:</strong> SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> Antonio de Pádua Azevedo Silva - Coordenador do Projeto</p>
+                            <p><strong>Site:</strong> <a href="http://www.abin.gov.br/" target="_blank">www.abin.gov.br</a></p> 
+							<p class="data"><strong>Data:</strong> Novembro/2010</p>                          
+                        </div>
+				    </div>
+					<a href="#cade" id="pop_cade"><li class="brasoes-ciclo cade"></li></a>
+					<div class="webui-popover-content">
+				       	<img loading="lazy" src="images/animacao/cade-novo.png" width="840" height="420"/>
+						<h1>Conselho Administrativo de Defesa Econômica / CADE</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> CICLO</p>
+                            <p><strong>Sistemas:</strong> SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> Vinicius Eloy dos Reis - Coordenador-Geral de TI</p>
+                            <p><strong>Site:</strong> <a href="http://www.cade.gov.br" target="_blank">www.cade.gov.br</a></p>
+							<p class="data"><strong>Data:</strong> Julho/2014</p>                           
+                        </div>
+				    </div>
+					
+					<a href="#cgu" id="pop_cgu"><li class="brasoes-ciclo cgu"></li></a>
+					<div class="webui-popover-content">
+				       	<img loading="lazy" src="images/animacao/cgu.png" width="139" height="142"/>
+						<h1>Controladoria Geral da União / CGU</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> CICLO</p>
+                            <p><strong>Sistemas:</strong> SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> Jose Eduardo Aragão - Coordenação Geral de Tecnologia da Informação</p>
+                            <p><strong>Site:</strong> <a href="https://www.cgu.gov.br/" target="_blank">www.cgu.gov.br</a></p>
+							<p class="data"><strong>Data:</strong> Abril/2011</p>                           
+                        </div>
+				    </div>
+					<a href="#dpf" id="pop_dpf"><li class="brasoes-ciclo dpf"></li></a>
+					<div class="webui-popover-content">
+					  	<img loading="lazy" src="images/animacao/pf.png" width="125" height="170"/>
+						<h1>Departamento da Polícia Federal / DPF</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> CICLO</p>
+                            <p><strong>Sistemas:</strong> SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> Galileu Batista de Sousa - Coordenador</p>
+                            <p><strong>Site:</strong> <a href="http://www.dpf.gov.br/" target="_blank">www.dpf.gov.br</a></p>
+							<p class="data"><strong>Data:</strong> Novembro/2009</p>                          
+                        </div>
+				    </div>
+					<a href="#dprf" id="pop_dprf"><li class="brasoes-ciclo dprf"></li></a>
+					<div class="webui-popover-content">
+					<img loading="lazy" src="images/animacao/prf.png" width="119" height="156"/>
+						<h1>Polícia Rodoviária Federal / PRF</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> CICLO</p>
+                            <p><strong>Sistemas:</strong> SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> Bruno Chavier Ramos - Líder Negocial</p>
+                            <p><strong>Site:</strong> <a href="http://www.prf.gov.br/" target="_blank">www.prf.gov.br</a></p>
+							<p class="data"><strong>Data:</strong> Julho/2009</p>                           
+                        </div>
+                    </div>
+					<a href="#fnde" id="pop_fnde"><li class="brasoes-ciclo fnde"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/fnde.png" width="172" height="160"/>
+						<h1>Fundo Nacional de Desenvolvimento da Educação / FNDE</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> CICLO</p>
+                            <p><strong>Sistemas:</strong> SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> Andressa Maria Klosovski Rodrigues	- Coordenadora de Projetos</p>
+                            <p><strong>Site:</strong> <a href="https://www.fnde.gov.br/" target="_blank">www.fnde.gov.br</a></p>
+							<p class="data"><strong>Data:</strong> Março/2011</p>                           
+                        </div>
+					</div>
+					<a href="#ps" id="pop_ps"><li class="brasoes-ciclo ps"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/ps.png" width="139" height="142"/>
+						<h1>Instituto Nacional do Seguro Social / INSS</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> CICLO</p>
+                            <p><strong>Sistemas:</strong> SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> Joselias Amorim - Coordenador do Projeto</p>
+                            <p><strong>Site:</strong> <a href="http://www.previdencia.gov.br/" target="_blank">www.previdencia.gov.br</a></p>
+							<p class="data"><strong>Data:</strong> Outubor/2013</p>                           
+                        </div>
+					</div>
+					<a href="#minc" id="pop_minc"><li class="brasoes-ciclo minc"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/minc.png" width="145" height="160"/>
+						<h1>Ministério da Cultura / MinC</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> CICLO</p>
+                            <p><strong>Sistemas:</strong> SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> Antonio Henrique Flores Silveira - Coordenação TI</p>
+                            <p><strong>Site:</strong> <a href="http://www.cultura.gov.br" target="_blank">www.cultura.gov.br</a></p> 
+							<p class="data"><strong>Data:</strong> Novembro/2010</p>                           
+                        </div>
+					</div>
+					<a href="#sipam" id="pop_sipam"><li class="brasoes-ciclo sipam"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/sipam.jpeg" width="500" height="500"/>
+						<h1>Centro Gestor e Operacional do Sistema de Proteção da Amazônia / Censipam</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> CICLO</p>
+                            <p><strong>Sistemas:</strong> SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> Rafael Pinto Costa - Coordenador Geral de TIC</p>
+                            <p><strong>Site:</strong> <a href="http://www.sipam.gov.br/" target="_blank">www.sipam.gov.br</a></p>  
+							<p class="data"><strong>Data:</strong> Outubro/2014</p>                        
+                        </div>
+					</div>
+					<a href="#just" id="pop_just"><li class="brasoes-ciclo just"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/mj.png" width="139" height="152"/>
+						<h1>Ministério da Justiça / MJ</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> CICLO</p>
+                            <p><strong>Sistemas:</strong> SIPAC e SIGRH</p>
+                            <p><strong>Responsável:</strong> Domingos</p>
+                            <p><strong>Site:</strong> <a href="http://portal.mj.gov.br/" target="_blank">portal.mj.gov.br</a></p> 
+							<p class="data"><strong>Data:</strong> Agosto/2009</p>                          
+						</div>
+					</div>
+					<a href="#plan" id="pop_plan"><li class="brasoes-ciclo plan"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/mp.png" width="139" height="152"/>
+						<h1>Ministério do Planejamento / MPOG</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> CICLO</p>
+                            <p><strong>Sistemas:</strong> SIPAC</p>
+                            <p><strong>Responsável:</strong> Vinicius Tavares dos Santos - Coordenador Geral de Sistemas</p>
+                            <p><strong>Site:</strong> <a href="http://www.planejamento.gov.br/" target="_blank">www.planejamento.gov.br</a></p>  
+							<p class="data"><strong>Data:</strong> Agosto/2012</p>                        
+                        </div>
+					</div>
+					<a href="#anac" id="pop_anac"><li class="brasoes-ciclo anac"></li></a>
+					<div class="webui-popover-content">
+						<img loading="lazy" src="images/animacao/anac.png" width="312" height="121"/>
+						<h1>Agência Nacional de Aviação Civil / ANAC</h1>
+                        <div class="dados">
+                            <p><strong>Rede:</strong> CICLO</p>
+                            <p><strong>Sistemas:</strong> SIGRH</p>
+                            <p><strong>Responsável:</strong> Ana Lúcia Fernandes - Gerente do Projeto</p>
+                            <p><strong>Site:</strong> <a href="http://www.anac.gov.br/" target="_blank">www.anac.gov.br</a></p>  
+							<p class="data"><strong>Data:</strong> Outubro/2016</p>                        
+                        </div>
+					</div>
+				</ul>
+			</div>
+		</section>		</section>
+	</content>
+
+	<footer>
+		<section class="centraliza_top">
+			<span class="sinfo">
+				<p>
+					<a href="https://info.ufrn.br/" target="_blank" title="Superintendência de Tecnologia da Informação">
+						<span class="img-sinfo">
+					</a>
+				</p>
+			</span>
+
+			
+
+		    <div class="redes_sociais">
+				<a href="https://twitter.com/sistemasdaufrn" target="_blank" title="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
+				<a href="https://www.facebook.com/sistemasdaufrn" target="_blank" title="Facebook"><i class="fab fa-facebook-square fa-lg"></i></a>
+				<a href="https://sistemasdaufrn.blogspot.com.br/" target="_blank" title="Blog"><i class="fab fa-blogger fa-lg"></i></a>
+				<a href="https://www.instagram.com/sinfoufrn/" target="_blank" title="Instagram"><i class="fab fa-instagram fa-lg"></i>
+				<a href="https://www.youtube.com/sistemasdaufrn" target="_blank" title="Youtube"><i class="fab fa-youtube fa-lg"></i></a>
+		    </div>
+
+		    <div class="text">
+				<p>Portal de Cooperação &copy; Copyright 2014 / 2026 - Todos os direitos reservados</p>
+				<p><a href="https://ufrn.br/" target="_blank">UFRN - Universidade Federal do Rio Grande do Norte</a></p>
+		    </div>
+			
+		</section>
+	</footer>
+
+    
+	<script src="js/jquery.js?v=2.2.1" type="text/javascript"></script>
+	<script src="js/jquery.timelinr-0.9.3.js?v=2.2.1" type="text/javascript"></script>
+	
+	<!-- javascript da barra brasil -->
+    <script type="text/javascript" src="https://barra.brasil.gov.br/barra.js" defer="defer"></script>
+    <script type="text/javascript" src="js/barragoverno.hack.js?v=2.2.1"></script>
+
+    <!-- Js fonts -->
+    <script type="text/javascript" src="js/jquery.fontsize.js?v=2.2.1"></script>
+    
+    <!-- Validação -->
+    <script type="text/javascript" src="js/validacao.js?v=2.2.1"></script>
+    
+    <!-- Popover -->
+	<script type="text/javascript" src="js/jquery.webui-popover.js?v=2.2.1"></script>
+	
+	<!-- Main -->
+    <script type="text/javascript" src="js/main.js?v=2.2.1"></script>
+
+	<!-- lightbox -->    
+	<script src="js/lightbox-0.5.js?v=2.2.1" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="css/lightbox.css?v=2.2.1" media="screen" />
+	<script type="text/javascript">
+
+		//formata fonte
+		fontSize('.acess', '.tamanho_fonte', 12, 16, 22);
+		fontSize('.acess', '.tamanho_fonte p', 12, 16, 22);
+		fontSize('.acess', '.tamanho_fonte ul li a', 12, 16, 22);
+		fontSize('.acess', '.tamanho_fonte ol li a', 12, 16, 22);
+		fontSize('.acess', '.data_maisnoticia', 10, 14, 20);
+		fontSize('.acess', '.descricao_maisnoticias', 10, 14, 20);
+		fontSize('.acess', '.titulo_listnoticias', 10, 14, 20);
+		fontSize('.acess', '.descricao_listnoticias', 10, 14, 20);
+		fontSize('.acess', '.data_noticia', 10, 14, 20);
+
+		$(function(){
+			// animacao redes - inicial
+			$().timelinr();
+
+			// chama a funcao para ampliar imagem - lightBox
+			$('.aumenta a').lightBox();
+		});
+
+
+		//Popover
+		$(document).ready(function(){
+			// Animacao nav e acesso restrito
+			document.onclick = function(event){
+				// document.activeElement.blur();
+				var close = document.getElementsByClassName("open");
+				if(close.length > 0) {
+					for (var i of close) {
+						if(i !== event.target.parentElement &&
+						 i.id !== event.target.parentElement.parentElement.id &&
+						 i.id !== event.target.id &&
+						 i !== event.target.parentElement.parentElement) {
+							i.classList.remove("open");
+							if(i.id !== "sistemas") {
+								i.firstElementChild.lastElementChild.classList.remove("fa-angle-up");
+								i.firstElementChild.lastElementChild.classList.add("fa-angle-down");
+							}
+						}
+					}
+				}
+				if(event.target.getAttribute('data-root') === "root-menu"){
+					openSeta(event.target.parentElement);
+				}
+				else if (event.target.parentElement.getAttribute('data-root') === "root-menu") {
+					openSeta(event.target.parentElement.parentElement);
+				}
+				else if(event.target.parentElement.parentElement.id === "sistemas") {
+					openSeta(event.target.parentElement.parentElement);
+				}
+				else if(event.target.id === "sistemas") {
+					openSeta(event.target);
+				}
+			}
+
+	         $('#popover_test').webuiPopover({
+	                constrains: 'horizontal', 
+	                trigger:'click',
+	                multi: true,
+	                closeable:true,
+	                placement:'right-bottom',
+	                width:100,
+	                animation:'pop',
+	                content: 'content<br>dddd<br>dddd<br>dsfsdfsdf'
+	        });
+
+	         //console.log($('#popover_test').data('plugin_webuiPopover').getTriggerElement();
+	        
+
+	        $('#popover_test2').webuiPopover({
+	                constrains: 'horizontal', 
+	                trigger:'hover',
+	                multi: false,
+	                placement:'right-bottom',
+	                content: 'content<br>dddd<br>dddd<br>dsfsdfsdf<br>dddd<br>dddd<br>dsfsdfsdf'
+	        });
+
+
+	        var
+	            asyncSettings = { width:'auto',
+	                      height:'200',
+	                      closeable:true,
+	                      padding:false,
+	                      cache:false,
+	                      url:'https://api.github.com/',
+	                      type:'async',
+	                      content:function(data){
+	                        var html = '<ul class="list-group">';
+	                        for(var key in data){
+	                          html+='<li class="list-group-item"><a href="'+ data[key] +'" target="_blank">'
+	                          + '<i class="glyphicon glyphicon-leaf"></i> '+ key+'</a>'+'</li>';  
+	                        }
+	                        html+='</ul>';
+	                        return html;
+	                      }};
+
+	        $('#popover_test3').webuiPopover('destroy').webuiPopover($.extend({},asyncSettings));
+
+	        $('#popover_test2').on('click',function(e){
+	            e.preventDefault();
+	            alert(1);
+	        });
+
+	        $(document.body).on('click','.captcha-reload',function(e){
+	            e.preventDefault();
+	            alert(2);
+	        });
+
+	        $('.help-popover').webuiPopover({
+	              placement: 'auto-right',
+	              multi: false,
+	              cache:false,
+	              dismissible: false
+	        });
+
+	        $('.help-popover2').webuiPopover({
+	              placement: 'auto-right',
+	              multi: false,
+	              cache:false,
+	              dismissible: true
+	        });
+
+	      
+
+	         $('#inline_test').webuiPopover({
+	                constrains: 'horizontal', 
+	                trigger:'click',
+	                multi: true,
+	                placement:'auto',
+	                type:'async',
+	                url:'/demo/text.txt',
+	                cache:false,
+	                content: function(data){
+	                  return data;
+	                }
+	        });
+
+	        $('.img-hover').webuiPopover({
+	                          type: 'html',
+	                          content: function(data) {
+	                            var img = $("<img />").attr('src', $(this).attr('data-hover'))
+	                                  .load(function() {
+	                                      if (!this.complete || typeof this.naturalWidth == "undefined" || this.naturalWidth == 0) {
+	                                          alert('broken image!');
+	                                      } else {
+	                                          console.log('abc');
+	                                          return img;
+	                                      }
+	                                  });
+	                          },
+	                          placement: 'auto',
+	                          trigger: 'hover',
+	                          constrains: 'vertical',
+	                          delay: 1,
+	                          multi: false,
+	                          arrow: true,
+	                          closeable: false,
+	                          padding: true
+	        });
+
+
+	        $('#popoverWithInput').webuiPopover({
+	            content:'<form action=""><input type="text" id="in" /></form>'
+	        }).on('shown.webui.popover',function(){
+	          console.log($('#in'));
+	           $('#in').focus();
+	        });
+
+	        $('.editor').webuiPopover({multi:false});
+	        $('.editor').on('click',function(){
+	            $(this).webuiPopover('show');
+	        });
+
+	        $('.border-pos').webuiPopover({
+	            width:500,
+	           title:'',
+	           closeable:true,
+	           content:'dfdffff'
+	        });
+
+	        $('.link-in-pop').on('click',function(e){
+	            e.preventDefault();
+	            alert(1);
+	        });
+
+	        $('#popNext').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#popInline').webuiPopover({trigger:'click',animation:'pop'});
+
+	        //Popover - Chamada da rede IFES
+	        $('#pop_ufrn').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_unilab').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_univasf').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_ufabc').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_ufal').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_ufba').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_ufc').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_ufca').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_ufersa').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_ufg').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_ufgd').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_ufma').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_ufopa').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_ufpa').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_ufpb').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_ufpe').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_ufpi').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_ufra').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_ufrb').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_ufrj').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_ufrr').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_ufs').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_ufsb').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_ufsj').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_unifei').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_unila').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_unifesspa').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_cefetmg').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_if').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_ufrrj').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_uern').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_unb').webuiPopover({trigger:'click',animation:'pop'});
+	        
+	      //Popover - Chamada da rede CICLO
+	        $('#pop_abi').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_cade').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_cgu').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_dpf').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_dprf').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_fnde').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_ps').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_minc').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_sipam').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_just').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_plan').webuiPopover({trigger:'click',animation:'pop'});
+	        $('#pop_anac').webuiPopover({trigger:'click',animation:'pop'});
+
+	        $('#popById').webuiPopover({url:'#idContent',cache:false});
+
+	        $('#dynamic').on('change',function(e){
+	          alert(1);
+	        });
+
+	        $('#changeDynamic').on('click',function(e){
+	            $('#dynamic').html('aaaa');
+	        });
+	      
+	    }); 
+	</script>
+</body>
+</html>

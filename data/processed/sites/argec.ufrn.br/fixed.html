@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="/static/assets/images/mini-logo-color.png" type="image/jpg">
+<title>Argec - Grupo de Pesquisa</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="/static/assets/css/main.style.css">  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
+</head>
+
+<body>
+
+  
+<div class="base-background">
+  <div class="shadow-down"></div>
+  <img src="/static/assets/images/background-blur.jpg" alt="" width="1999" height="483">
+  <div class="shadow-up"></div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light navbar-principal ">
+
+  
+  <div class="container flex-column position-relative">
+    <!-- <nav class="d-flex flex-column flex-md-row justify-content-between w-100 py-4">
+      <div class="align-self-center">
+        <img src="/static/assets/images/logo-white.png" height="80">
+      </div>
+      <div class="d-flex align-self-center mt-4 mt-md-0">
+        <form class="form-inline flex-column flex-md-row">
+          <div class="form-inline">
+            <input class="bg-base-bt-white px-2" type="text" placeholder="Pesquisar">
+            <button class="btn bg-base-bt-white my-2 my-sm-0 rounded-0 mr-md-3" type="button">
+              <i class="material-icons">search</i>
+            </button>
+          </div>
+          <button class="btn bg-base-bt-white my-2 my-sm-0 rounded-0" type="button">LOGIN</button>
+        </form>
+      </div>
+    </nav> -->
+
+    <nav class="d-flex flex-column flex-lg-row justify-content-between w-100 py-4">
+      <div class="align-self-center">
+        <a href="/"><img src="/static/assets/images/teste.png" height="80" width="240"></a>
+      </div>
+      <div class="d-flex align-self-center mt-4 mt-md-0">
+        <form class="form-inline flex-column flex-md-row" action="/busca" method="POST">
+          <div class="form-inline">
+            <input class="bg-base-bt-white px-2" 
+              minlength="4" type="text" placeholder="Pesquisar" name="term" value="">
+            <button class="btn bg-base-bt-white my-2 my-sm-0 rounded-0 mr-md-3">
+              <i class="material-icons">search</i>
+            </button>
+          </div>
+          <div class="d-flex flex-column flex-md-row">
+                        <a href="/login" class="btn bg-base-bt-white my-2 my-lg-0 rounded-0 text-uppercase">
+              <i class="material-icons align-top">exit_to_app</i> LOGIN
+            </a>
+                      </div>
+        </form>
+      </div>
+    </nav>
+
+    <button class="mb-4 btn bg-base-bt-white rounded-0 d-lg-none" type="button" data-toggle="collapse" data-target="#menus-navbar-principal">
+      <i class="material-icons align-top">menu</i> MENU
+    </button>
+
+    <div class="collapse navbar-collapse w-100 bg-white text-center" id="menus-navbar-principal">
+      <ul class="navbar-nav w-100 d-flex justify-content-around">
+        <li class="nav-item">
+          <a class="nav-link active" href="/">INÍCIO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/publicacoes">PUBLICAÇÕES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/eventos">EVENTOS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/trabalhos">DISSERTAÇÕES/TESES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/projetos">PROJETOS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/reunioes">REUNIÕES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/noticias">NOTÍCIAS</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</nav>
+
+<header class="d-flex position-relative" style="height: 200px; font-size: 45px;">
+  <div class="container d-flex">
+    <p class="font-weight-lighter text-center w-100 mt-auto mb-auto text-white serif px-md-5" style="text-shadow: 5px 5px 15px black;">
+      Grupo de Estudo e Pesquisa em Argumentação no Ensino de Ciências
+    </p>
+  </div>
+</header>
+
+  <!--  -->
+
+  <div class="container mt-5 position-relative">
+    <div class="bg-white container pt-5 mb-0">
+
+      <!-- Sobre / Eventos -->
+
+      <div class="d-flex flex-column flex-md-row">
+        <div style="flex: 4;" class="pr-md-3">
+          <div class="d-flex justify-content-center base-header mb-4">
+            <div class="text-center">
+              <h5>Eventos</h5>
+              <h6>Notícias, Eventos e Oficinas</h6>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-around flex-wrap" id="ajax-cronograma">
+  
+                                    <a href="/eventos?evento=9#detalhes" class="w-100">
+                          <div class="card-evento d-flex flex-row w-100 hover-scale text-white">
+                <div class="px-3 py-2 text-center d-flex align-items-center">
+                  <p class="m-0">
+                    02
+                    <br>
+                                                            SET
+                                      </p>
+                </div>
+                <hr class="base-v-border" />
+                <div style="flex: 1;" class="px-3 py-2 d-flex align-items-center">
+                  <p class="m-0">[Evento] XII Congreso Internacional de Investigación en Enseñanza de las Ciencias</p>
+                </div>
+              </div>
+            </a>
+                                    <a href="/eventos?evento=8#detalhes" class="w-100">
+                          <div class="card-evento d-flex flex-row w-100 hover-scale text-white">
+                <div class="px-3 py-2 text-center d-flex align-items-center">
+                  <p class="m-0">
+                    04
+                    <br>
+                                                            AGO
+                                      </p>
+                </div>
+                <hr class="base-v-border" />
+                <div style="flex: 1;" class="px-3 py-2 d-flex align-items-center">
+                  <p class="m-0">[Evento] XV ENPEC</p>
+                </div>
+              </div>
+            </a>
+                                    <a href="/eventos?evento=10#detalhes" class="w-100">
+                          <div class="card-evento d-flex flex-row w-100 hover-scale text-white">
+                <div class="px-3 py-2 text-center d-flex align-items-center">
+                  <p class="m-0">
+                    26
+                    <br>
+                                                            JUN
+                                      </p>
+                </div>
+                <hr class="base-v-border" />
+                <div style="flex: 1;" class="px-3 py-2 d-flex align-items-center">
+                  <p class="m-0">[Evento] 10 anos PPGECM: Memórias, Conquistas e Resistência</p>
+                </div>
+              </div>
+            </a>
+                                    <a href="/eventos?evento=5#detalhes" class="w-100">
+                          <div class="card-evento d-flex flex-row w-100 hover-scale text-white">
+                <div class="px-3 py-2 text-center d-flex align-items-center">
+                  <p class="m-0">
+                    01
+                    <br>
+                                                            DEZ
+                                      </p>
+                </div>
+                <hr class="base-v-border" />
+                <div style="flex: 1;" class="px-3 py-2 d-flex align-items-center">
+                  <p class="m-0">Reuniões do ArgEC</p>
+                </div>
+              </div>
+            </a>
+              
+          </div>
+        </div>
+
+        <!--  -->
+        <hr class="base-v-border d-none d-md-block" />
+        <!--  -->
+
+        <div style="flex: 3;" class="pl-md-3">
+          <div class="d-flex justify-content-center base-header mb-4">
+            <div class="text-center">
+              <h5 title="Eventos e Reuniões">Cronograma</h5>
+              <h6>Reuniões</h6>
+            </div>
+          </div>
+
+                    <div class="card-evento d-flex flex-row w-100 hover-scale text-white" onclick="getMeetData(27)">
+            <div class="px-3 py-2 text-center d-flex align-items-center">
+              <p class="m-0">
+                02
+                <br>
+                                                FEV
+                              </p>
+            </div>
+            <hr class="base-v-border" />
+            <div style="flex: 1;" class="px-3 py-2 d-flex align-items-center">
+              <p class="m-0">Reunião ArgEC</p>
+            </div>
+          </div>
+                    <div class="card-evento d-flex flex-row w-100 hover-scale text-white" onclick="getMeetData(25)">
+            <div class="px-3 py-2 text-center d-flex align-items-center">
+              <p class="m-0">
+                24
+                <br>
+                                                MAI
+                              </p>
+            </div>
+            <hr class="base-v-border" />
+            <div style="flex: 1;" class="px-3 py-2 d-flex align-items-center">
+              <p class="m-0">Reunião Grupo de estudos</p>
+            </div>
+          </div>
+                    <div class="card-evento d-flex flex-row w-100 hover-scale text-white" onclick="getMeetData(24)">
+            <div class="px-3 py-2 text-center d-flex align-items-center">
+              <p class="m-0">
+                17
+                <br>
+                                                MAI
+                              </p>
+            </div>
+            <hr class="base-v-border" />
+            <div style="flex: 1;" class="px-3 py-2 d-flex align-items-center">
+              <p class="m-0">Reunião Grupo de estudos</p>
+            </div>
+          </div>
+                    <div class="card-evento d-flex flex-row w-100 hover-scale text-white" onclick="getMeetData(23)">
+            <div class="px-3 py-2 text-center d-flex align-items-center">
+              <p class="m-0">
+                03
+                <br>
+                                                MAI
+                              </p>
+            </div>
+            <hr class="base-v-border" />
+            <div style="flex: 1;" class="px-3 py-2 d-flex align-items-center">
+              <p class="m-0">Reunião Grupo de estudos</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- Notícias -->
+
+      <div class="row mt-5 justify-content-center">
+        <div class="col-md-12">
+          <div class="d-flex justify-content-center base-header mb-4">
+            <div class="text-center">
+              <h5>Sobre</h5>
+            </div>
+          </div>
+          <div class="mt-2 text-justify px-2">
+            <p>
+              &nbsp&nbsp&nbsp O grupo Argumentação no Ensino de Ciências – ArgEC, foi criado em 2015 com o objetivo de promover espaço de debate e socialização de nossas inquietações sobre a nossa própria formação acadêmico-profissional com vistas a contribuir com uma sociedade democrática e crítica.
+            </p>
+            <p>
+              &nbsp&nbsp&nbsp Somos docentes do ensino superior e da educação básica, pós-graduandos e pós-graduandas dos Programas de Pós-Graduação em Ensino de Ciências e do Mestrado Profissional em Ensino de Ciências Naturais e Matemática da UFRN, todos atuando no Nordeste Brasileiro. 
+            </p>
+            <p>
+              &nbsp&nbsp&nbsp Temos nos debruçado sobre investigações relativas aos processos e movimentos argumentativos no contexto da sala de aula de ciências e matemática tanto do ponto de vista teórico como prático.
+              Este espaço, construído por todos e todas que compõem o ArgEC, se baseia nos princípios democráticos e colaborativos em que são socializadas nossas pesquisas e materiais didáticos.
+            </p>
+            <p>
+              &nbsp&nbsp&nbsp Um ponto que ilustra bem o grupo é a nossa logomarca, construída coletivamente.
+            </p>
+            <p>
+              &nbsp&nbsp&nbsp A mão erguida representa nossa luta enquanto docentes e pós-graduandos e pós-graduandas, chamando a atenção para o nosso compromisso de lutar por uma educação pública de qualidade. As cores representam nossas lutas, alegrias e embates vividos no campo educacional. Os dedos em vermelho representam nossos campos de atuação profissional (ensino de física, educação química, ensino de biologia e educação matemática) e o polegar representa nosso campo de estudo, a argumentação, o pensar, o criticar, o refletir. As letras são do estilo de xilogravura, típico da literatura de cordel do nordeste brasileiro, chamada xilosa. 
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Participantes -->
+
+      <div class="mt-5">
+        <div class="d-flex justify-content-center base-header mb-4">
+          <div class="text-center">
+            <h5>Participantes</h5>
+          </div>
+        </div>
+
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <img src="/static/assets/images/grupo (1).jpeg" width="1086" height="724">
+          </div>
+          <div class="item">
+            <img loading="lazy" src="/static/assets/images/grupo (2).jpeg" width="960" height="719">
+          </div>
+          <div class="item">
+            <img loading="lazy" src="/static/assets/images/grupo (3).jpeg" width="960" height="720">
+          </div>
+          <div class="item">
+            <img loading="lazy" src="/static/assets/images/grupo (4).jpeg" width="960" height="540">
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center base-header my-4">
+          <div class="text-center">
+            <h6>Pesquisadores</h6>
+          </div>
+        </div>
+        <div class="d-flex justify-content-around flex-wrap" id="ajax-pesquisadores">
+                              <div class="pesquisador-card p-3 hover-scale">
+            <div class="position-relative">
+              <img loading="lazy" src="/static/uploads/adb6212e4fde8e4cb7a231c6.jpg" alt="" width="658" height="661">
+              <div class="pesquisador-links d-flex align-content-center flex-wrap">
+
+                                <div class="text-center w-100">
+                  <p class="email p-1 m-0"><a href="mailto:asoutodias@gmail.com" target="_blank">EMAIL</a></p>
+                </div>
+                
+                                <div class="text-center w-100">
+                  <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/9533565914701345" target="_blank">LATTES</a></p>
+                </div>
+                              </div>
+            </div>
+            <h5 class="my-2">Altamir Souto Dias</h5>
+            <h6 class="text-red">Doutor em Ensino de Ciências e Matemática</h6>
+          </div>
+                                        <div class="pesquisador-card p-3 hover-scale">
+            <div class="position-relative">
+              <img loading="lazy" src="/static/uploads/a88f21d658ec9f542583ad0d.jpg" alt="" width="811" height="1127">
+              <div class="pesquisador-links d-flex align-content-center flex-wrap">
+
+                                <div class="text-center w-100">
+                  <p class="email p-1 m-0"><a href="mailto:amandaglycia@gmail.com" target="_blank">EMAIL</a></p>
+                </div>
+                
+                                <div class="text-center w-100">
+                  <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/7517000059257404" target="_blank">LATTES</a></p>
+                </div>
+                              </div>
+            </div>
+            <h5 class="my-2">Amanda Glycia Silva Moreira da Costa</h5>
+            <h6 class="text-red">Doutora em Ensino de Ciências e Matemática</h6>
+          </div>
+                                                                                                    <div class="pesquisador-card p-3 hover-scale">
+            <div class="position-relative">
+              <img loading="lazy" src="/static/uploads/44d1219da0aabbbd5a461043.jpg" alt="" width="177" height="222">
+              <div class="pesquisador-links d-flex align-content-center flex-wrap">
+
+                                <div class="text-center w-100">
+                  <p class="email p-1 m-0"><a href="mailto:dayreeves@hotmail.com" target="_blank">EMAIL</a></p>
+                </div>
+                
+                                <div class="text-center w-100">
+                  <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/0830870182909216" target="_blank">LATTES</a></p>
+                </div>
+                              </div>
+            </div>
+            <h5 class="my-2">Dayana do Nascimento Ferreira</h5>
+            <h6 class="text-red">Doutora em Ensino de Ciências e Matemática</h6>
+          </div>
+                                                                                <div class="pesquisador-card p-3 hover-scale">
+            <div class="position-relative">
+              <img loading="lazy" src="/static/uploads/8aeae8bd2059038d41ad6cc4.png" alt="" width="1639" height="1859">
+              <div class="pesquisador-links d-flex align-content-center flex-wrap">
+
+                                <div class="text-center w-100">
+                  <p class="email p-1 m-0"><a href="mailto:geraldoalexandrejr@yahoo.com.br" target="_blank">EMAIL</a></p>
+                </div>
+                
+                                <div class="text-center w-100">
+                  <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/2807003033145983" target="_blank">LATTES</a></p>
+                </div>
+                              </div>
+            </div>
+            <h5 class="my-2">Geraldo Alexandre da Silva Júnior</h5>
+            <h6 class="text-red">Doutor em Ensino de Ciências e Matemática</h6>
+          </div>
+                                                                                                    <div class="pesquisador-card p-3 hover-scale">
+            <div class="position-relative">
+              <img loading="lazy" src="/static/uploads/4475d0f8d37edd95e68fb8c9.jpg" alt="" width="658" height="661">
+              <div class="pesquisador-links d-flex align-content-center flex-wrap">
+
+                                <div class="text-center w-100">
+                  <p class="email p-1 m-0"><a href="mailto:juliannegabrielle@gmail.com" target="_blank">EMAIL</a></p>
+                </div>
+                
+                                <div class="text-center w-100">
+                  <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/5011725175431176" target="_blank">LATTES</a></p>
+                </div>
+                              </div>
+            </div>
+            <h5 class="my-2">Julianne Gabrielle Tavares de Medeiros</h5>
+            <h6 class="text-red">Doutora em Ensino de Ciências e Matemática</h6>
+          </div>
+                                        <div class="pesquisador-card p-3 hover-scale">
+            <div class="position-relative">
+              <img loading="lazy" src="/static/uploads/fb25d6861db9f1677eea0c06.jpg" alt="" width="275" height="274">
+              <div class="pesquisador-links d-flex align-content-center flex-wrap">
+
+                                <div class="text-center w-100">
+                  <p class="email p-1 m-0"><a href="mailto:liviaquimili@hotmail.com" target="_blank">EMAIL</a></p>
+                </div>
+                
+                                <div class="text-center w-100">
+                  <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/2765989904820577" target="_blank">LATTES</a></p>
+                </div>
+                              </div>
+            </div>
+            <h5 class="my-2">Livia Cristina dos Santos Silva</h5>
+            <h6 class="text-red">Doutora em Ensino de Ciências e Matemática</h6>
+          </div>
+                                        <div class="pesquisador-card p-3 hover-scale">
+            <div class="position-relative">
+              <img loading="lazy" src="/static/uploads/6eaf45a26d3155addb4e83b2.jpg" alt="" width="658" height="824">
+              <div class="pesquisador-links d-flex align-content-center flex-wrap">
+
+                                <div class="text-center w-100">
+                  <p class="email p-1 m-0"><a href="mailto:marcela.silva@ifrn.edu.br" target="_blank">EMAIL</a></p>
+                </div>
+                
+                                <div class="text-center w-100">
+                  <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/8661592965534351" target="_blank">LATTES</a></p>
+                </div>
+                              </div>
+            </div>
+            <h5 class="my-2">Marcela Gomes da Silva</h5>
+            <h6 class="text-red">Doutora em Ensino de Ciências e Matemática</h6>
+          </div>
+                                        <div class="pesquisador-card p-3 hover-scale">
+            <div class="position-relative">
+              <img loading="lazy" src="/static/uploads/4faf108fc4a4a00a4212264a.jpg" alt="" width="701" height="710">
+              <div class="pesquisador-links d-flex align-content-center flex-wrap">
+
+                                <div class="text-center w-100">
+                  <p class="email p-1 m-0"><a href="mailto:marcia.gorette.silva@ufrn.br" target="_blank">EMAIL</a></p>
+                </div>
+                
+                                <div class="text-center w-100">
+                  <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/6965522706601294" target="_blank">LATTES</a></p>
+                </div>
+                              </div>
+            </div>
+            <h5 class="my-2">Márcia Gorette Lima da Silva</h5>
+            <h6 class="text-red">Doutora em Educação</h6>
+          </div>
+                                                            <div class="pesquisador-card p-3 hover-scale">
+            <div class="position-relative">
+              <img loading="lazy" src="/static/uploads/6ed0095c24952bc5f741a743.jpg" alt="" width="328" height="400">
+              <div class="pesquisador-links d-flex align-content-center flex-wrap">
+
+                                <div class="text-center w-100">
+                  <p class="email p-1 m-0"><a href="mailto:marcos.martins@ifrn.edu.br" target="_blank">EMAIL</a></p>
+                </div>
+                
+                                <div class="text-center w-100">
+                  <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/8506415921264694" target="_blank">LATTES</a></p>
+                </div>
+                              </div>
+            </div>
+            <h5 class="my-2">Marcos Leonardo Martins Silva</h5>
+            <h6 class="text-red">Doutor em Ensino de Ciências e Matemática</h6>
+          </div>
+                                                            <div class="pesquisador-card p-3 hover-scale">
+            <div class="position-relative">
+              <img loading="lazy" src="/static/uploads/c443fa450f0f08299d5d3e2c.jpg" alt="" width="659" height="662">
+              <div class="pesquisador-links d-flex align-content-center flex-wrap">
+
+                                <div class="text-center w-100">
+                  <p class="email p-1 m-0"><a href="mailto:midia.monteiro@ufersa.edu.br" target="_blank">EMAIL</a></p>
+                </div>
+                
+                                <div class="text-center w-100">
+                  <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/9636755132353839" target="_blank">LATTES</a></p>
+                </div>
+                              </div>
+            </div>
+            <h5 class="my-2">Midiã Medeiros Monteiro</h5>
+            <h6 class="text-red">Doutora em Ensino de Ciências e Matemática</h6>
+          </div>
+                                                                                                                                                                <div class="pesquisador-card p-3 hover-scale">
+            <div class="position-relative">
+              <img loading="lazy" src="/static/uploads/28cc7cc6ba7819118e3a106d.jpeg" alt="" width="554" height="621">
+              <div class="pesquisador-links d-flex align-content-center flex-wrap">
+
+                                <div class="text-center w-100">
+                  <p class="email p-1 m-0"><a href="mailto:bender.raphael@gmail.com" target="_blank">EMAIL</a></p>
+                </div>
+                
+                                <div class="text-center w-100">
+                  <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/9016449164468044" target="_blank">LATTES</a></p>
+                </div>
+                              </div>
+            </div>
+            <h5 class="my-2">Raphael Bender Chagas Leite</h5>
+            <h6 class="text-red">Pós-Doutorado</h6>
+          </div>
+                                                                                                    <div class="pesquisador-card p-3 hover-scale">
+            <div class="position-relative">
+              <img loading="lazy" src="/static/assets/images/person.png" alt="" width="256" height="256">
+              <div class="pesquisador-links d-flex align-content-center flex-wrap">
+
+                
+                                <div class="text-center w-100">
+                  <p class="lattes p-1 m-0"><a href="https://orcid.org/0000-0002-3766-2871" target="_blank">LATTES</a></p>
+                </div>
+                              </div>
+            </div>
+            <h5 class="my-2">Andrea Revel Fernanda Chion</h5>
+            <h6 class="text-red">Doctora en Didáctica de las Ciencias Experimentales</h6>
+          </div>
+                                                                                                                                                                                                        <div class="pesquisador-card p-3 hover-scale">
+            <div class="position-relative">
+              <img loading="lazy" src="/static/assets/images/person.png" alt="" width="256" height="256">
+              <div class="pesquisador-links d-flex align-content-center flex-wrap">
+
+                                <div class="text-center w-100">
+                  <p class="email p-1 m-0"><a href="mailto:silvania.nascimento@gmail.com" target="_blank">EMAIL</a></p>
+                </div>
+                
+                                <div class="text-center w-100">
+                  <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/8112771055918724" target="_blank">LATTES</a></p>
+                </div>
+                              </div>
+            </div>
+            <h5 class="my-2">Silvania Sousa do Nascimento</h5>
+            <h6 class="text-red">pesquisadora visitante</h6>
+          </div>
+                            </div>
+      </div>
+
+      <!-- Pós -->
+
+      <div class="mt-4">
+        <div class="d-flex justify-content-center base-header mb-4">
+          <div class="text-center">
+            <h6>Pós-graduando</h6>
+          </div>
+        </div>
+        <div class="d-flex justify-content-around flex-wrap">
+                                                                                                                            <div class="amigo-card px-3 py-2 h-auto d-flex flex-column hover-scale">
+                <div class="Xamigo-links d-flex mb-2">
+                  <img loading="lazy" src="/static/uploads/05ce35ccce9b6ad7e57a1892.jpg" alt="" width="561" height="751">
+                  <div class="pl-2 d-flex align-items-center flex-column align-self-center">
+                    <h5 class="">Dayana Miranda de Souza</h5>
+                    <h6 class="text-red">Doutoranda em Ensino de Ciências e Matemática</h6>
+                  </div>
+                </div>
+                <div class="amigo-links d-flex flex-row">
+                                    <div class="text-center w-100">
+                    <p class="email p-1 m-0"><a href="mailto:Daymirandasouza@gmail.com" target="_blank">EMAIL</a></p>
+                  </div>
+                                                      <div class="text-center w-100">
+                    <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/2776525420949178" target="_blank">LATTES</a></p>
+                  </div>
+                                  </div>
+              </div>
+                                                                                                                                                              <div class="amigo-card px-3 py-2 h-auto d-flex flex-column hover-scale">
+                <div class="Xamigo-links d-flex mb-2">
+                  <img loading="lazy" src="/static/uploads/bc8d61ce5a1580474d694a38.jpg" alt="" width="748" height="1127">
+                  <div class="pl-2 d-flex align-items-center flex-column align-self-center">
+                    <h5 class="">Jonathan Atkinson Freire da Silva</h5>
+                    <h6 class="text-red">Mestrando em Ensino de Ciências e Matemática</h6>
+                  </div>
+                </div>
+                <div class="amigo-links d-flex flex-row">
+                                    <div class="text-center w-100">
+                    <p class="email p-1 m-0"><a href="mailto:jonathan_atk@hotmail.com" target="_blank">EMAIL</a></p>
+                  </div>
+                                                      <div class="text-center w-100">
+                    <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/7739919408161753" target="_blank">LATTES</a></p>
+                  </div>
+                                  </div>
+              </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="amigo-card px-3 py-2 h-auto d-flex flex-column hover-scale">
+                <div class="Xamigo-links d-flex mb-2">
+                  <img loading="lazy" src="/static/assets/images/person.png" alt="" width="256" height="256">
+                  <div class="pl-2 d-flex align-items-center flex-column align-self-center">
+                    <h5 class="">Eline Costa de Lima</h5>
+                    <h6 class="text-red">Doutoranda em Ensino de Ciências e Matemática</h6>
+                  </div>
+                </div>
+                <div class="amigo-links d-flex flex-row">
+                                    <div class="text-center w-100">
+                    <p class="email p-1 m-0"><a href="mailto:elinecosta-lima@hotmail.com" target="_blank">EMAIL</a></p>
+                  </div>
+                                                      <div class="text-center w-100">
+                    <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/2305576490508563" target="_blank">LATTES</a></p>
+                  </div>
+                                  </div>
+              </div>
+                                                                      <div class="amigo-card px-3 py-2 h-auto d-flex flex-column hover-scale">
+                <div class="Xamigo-links d-flex mb-2">
+                  <img loading="lazy" src="/static/assets/images/person.png" alt="" width="256" height="256">
+                  <div class="pl-2 d-flex align-items-center flex-column align-self-center">
+                    <h5 class="">Brunno Inácio da Silva</h5>
+                    <h6 class="text-red">Doutorando em Ensino de Ciências e Matemática</h6>
+                  </div>
+                </div>
+                <div class="amigo-links d-flex flex-row">
+                                    <div class="text-center w-100">
+                    <p class="email p-1 m-0"><a href="mailto:brunnoinacio@hotmail.com" target="_blank">EMAIL</a></p>
+                  </div>
+                                                      <div class="text-center w-100">
+                    <p class="lattes p-1 m-0"><a href=" http://lattes.cnpq.br/3373567335312689" target="_blank">LATTES</a></p>
+                  </div>
+                                  </div>
+              </div>
+                                                <div class="amigo-card px-3 py-2 h-auto d-flex flex-column hover-scale">
+                <div class="Xamigo-links d-flex mb-2">
+                  <img loading="lazy" src="/static/assets/images/person.png" alt="" width="256" height="256">
+                  <div class="pl-2 d-flex align-items-center flex-column align-self-center">
+                    <h5 class="">Izabella Kelly Carneiro Alves</h5>
+                    <h6 class="text-red">Doutoranda em Ensino de Ciências e Matemática</h6>
+                  </div>
+                </div>
+                <div class="amigo-links d-flex flex-row">
+                                                      <div class="text-center w-100">
+                    <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/4718052228395970" target="_blank">LATTES</a></p>
+                  </div>
+                                  </div>
+              </div>
+                                                                      <div class="amigo-card px-3 py-2 h-auto d-flex flex-column hover-scale">
+                <div class="Xamigo-links d-flex mb-2">
+                  <img loading="lazy" src="/static/assets/images/person.png" alt="" width="256" height="256">
+                  <div class="pl-2 d-flex align-items-center flex-column align-self-center">
+                    <h5 class="">Márcia Danielly Nascimento Silva</h5>
+                    <h6 class="text-red">Mestranda em Ensino de Ciências e Matemática</h6>
+                  </div>
+                </div>
+                <div class="amigo-links d-flex flex-row">
+                                    <div class="text-center w-100">
+                    <p class="email p-1 m-0"><a href="mailto:marcia.dany27@outlook.com" target="_blank">EMAIL</a></p>
+                  </div>
+                                                      <div class="text-center w-100">
+                    <p class="lattes p-1 m-0"><a href="https://lattes.cnpq.br/0078224342661748" target="_blank">LATTES</a></p>
+                  </div>
+                                  </div>
+              </div>
+                                                <div class="amigo-card px-3 py-2 h-auto d-flex flex-column hover-scale">
+                <div class="Xamigo-links d-flex mb-2">
+                  <img loading="lazy" src="/static/assets/images/person.png" alt="" width="256" height="256">
+                  <div class="pl-2 d-flex align-items-center flex-column align-self-center">
+                    <h5 class="">Lucas de Araújo</h5>
+                    <h6 class="text-red">Mestrando em Ensino de Ciências e Matemática</h6>
+                  </div>
+                </div>
+                <div class="amigo-links d-flex flex-row">
+                                    <div class="text-center w-100">
+                    <p class="email p-1 m-0"><a href="mailto:educacional.lucas@gmail.com" target="_blank">EMAIL</a></p>
+                  </div>
+                                                      <div class="text-center w-100">
+                    <p class="lattes p-1 m-0"><a href="https://lattes.cnpq.br/4898769506336796" target="_blank">LATTES</a></p>
+                  </div>
+                                  </div>
+              </div>
+                                                <div class="amigo-card px-3 py-2 h-auto d-flex flex-column hover-scale">
+                <div class="Xamigo-links d-flex mb-2">
+                  <img loading="lazy" src="/static/assets/images/person.png" alt="" width="256" height="256">
+                  <div class="pl-2 d-flex align-items-center flex-column align-self-center">
+                    <h5 class="">Maria Eduarda Lacerda Cavalcanti Denes</h5>
+                    <h6 class="text-red">Mestranda em Ensino de Ciências e Matemática</h6>
+                  </div>
+                </div>
+                <div class="amigo-links d-flex flex-row">
+                                    <div class="text-center w-100">
+                    <p class="email p-1 m-0"><a href="mailto:eduarda.cavalcanti.703@ufrn.edu.br" target="_blank">EMAIL</a></p>
+                  </div>
+                                                      <div class="text-center w-100">
+                    <p class="lattes p-1 m-0"><a href=" http://lattes.cnpq.br/6849116586218050" target="_blank">LATTES</a></p>
+                  </div>
+                                  </div>
+              </div>
+                                                    </div>
+      </div>
+
+      <!-- Colab -->
+
+      <div class="mt-4">
+        <div class="d-flex justify-content-center base-header mb-4">
+          <div class="text-center">
+            <h6>Colaboradores</h6>
+          </div>
+        </div>
+        <div class="d-flex justify-content-around flex-wrap">
+                                                                                                                                                                                                                                                                                                                                                                                                    <div class="amigo-card px-3 py-2 h-auto d-flex flex-column hover-scale">
+                <div class="Xamigo-links d-flex mb-2">
+                  <img loading="lazy" src="/static/uploads/6c8c6a265df9aca9fe3b416e.jpg" alt="" width="116" height="146">
+                  <div class="pl-2 d-flex align-items-center flex-column align-self-center">
+                    <h5 class="">Marcondes Luiz da Silva Azevedo</h5>
+                    <h6 class="text-red">Mestre em Ensino de Ciências e Matemática</h6>
+                  </div>
+                </div>
+                <div class="amigo-links d-flex flex-row">
+                                                      <div class="text-center w-100">
+                    <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/3399211019701556" target="_blank">LATTES</a></p>
+                  </div>
+                                  </div>
+              </div>
+                                                                      <div class="amigo-card px-3 py-2 h-auto d-flex flex-column hover-scale">
+                <div class="Xamigo-links d-flex mb-2">
+                  <img loading="lazy" src="/static/uploads/249393ebf1fd968dd27cc146.jpg" alt="" width="306" height="463">
+                  <div class="pl-2 d-flex align-items-center flex-column align-self-center">
+                    <h5 class="">Maria da Guia da Silva Medeiros</h5>
+                    <h6 class="text-red">Mestre em Ensino de Ciências e Matemática</h6>
+                  </div>
+                </div>
+                <div class="amigo-links d-flex flex-row">
+                                    <div class="text-center w-100">
+                    <p class="email p-1 m-0"><a href="mailto:guia.silva@hotmail.com" target="_blank">EMAIL</a></p>
+                  </div>
+                                                      <div class="text-center w-100">
+                    <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/8448965491457967" target="_blank">LATTES</a></p>
+                  </div>
+                                  </div>
+              </div>
+                                                                                                                                                              <div class="amigo-card px-3 py-2 h-auto d-flex flex-column hover-scale">
+                <div class="Xamigo-links d-flex mb-2">
+                  <img loading="lazy" src="/static/uploads/cdf1f07008700bcd1175a6fa.jpeg" alt="" width="191" height="290">
+                  <div class="pl-2 d-flex align-items-center flex-column align-self-center">
+                    <h5 class="">Willianne Kelle Tavares Silva</h5>
+                    <h6 class="text-red">Mestre em Ensino de Ciências e Matemática</h6>
+                  </div>
+                </div>
+                <div class="amigo-links d-flex flex-row">
+                                    <div class="text-center w-100">
+                    <p class="email p-1 m-0"><a href="mailto:williannekelle@hotmail.com" target="_blank">EMAIL</a></p>
+                  </div>
+                                                      <div class="text-center w-100">
+                    <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/2609493909885103" target="_blank">LATTES</a></p>
+                  </div>
+                                  </div>
+              </div>
+                                                <div class="amigo-card px-3 py-2 h-auto d-flex flex-column hover-scale">
+                <div class="Xamigo-links d-flex mb-2">
+                  <img loading="lazy" src="/static/uploads/432a1d997444395472403bd5.jpeg" alt="" width="221" height="320">
+                  <div class="pl-2 d-flex align-items-center flex-column align-self-center">
+                    <h5 class="">Lívia Fernandes dos Santos</h5>
+                    <h6 class="text-red">Doutora em Ensino de Ciências e Matemática</h6>
+                  </div>
+                </div>
+                <div class="amigo-links d-flex flex-row">
+                                    <div class="text-center w-100">
+                    <p class="email p-1 m-0"><a href="mailto:livia.santos@ifac.edu.br" target="_blank">EMAIL</a></p>
+                  </div>
+                                                      <div class="text-center w-100">
+                    <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/2548450690237641" target="_blank">LATTES</a></p>
+                  </div>
+                                  </div>
+              </div>
+                                                                      <div class="amigo-card px-3 py-2 h-auto d-flex flex-column hover-scale">
+                <div class="Xamigo-links d-flex mb-2">
+                  <img loading="lazy" src="/static/uploads/2389044d042690a4d279d529.jpg" alt="" width="500" height="625">
+                  <div class="pl-2 d-flex align-items-center flex-column align-self-center">
+                    <h5 class="">Josivania Marisa Dantas</h5>
+                    <h6 class="text-red">Doutora em Ciências</h6>
+                  </div>
+                </div>
+                <div class="amigo-links d-flex flex-row">
+                                    <div class="text-center w-100">
+                    <p class="email p-1 m-0"><a href="mailto:josivaniamd@yahoo.com.br" target="_blank">EMAIL</a></p>
+                  </div>
+                                                      <div class="text-center w-100">
+                    <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/6685565063970044 " target="_blank">LATTES</a></p>
+                  </div>
+                                  </div>
+              </div>
+                                                <div class="amigo-card px-3 py-2 h-auto d-flex flex-column hover-scale">
+                <div class="Xamigo-links d-flex mb-2">
+                  <img loading="lazy" src="/static/uploads/fd434b48a207b09253323451.jpg" alt="" width="214" height="321">
+                  <div class="pl-2 d-flex align-items-center flex-column align-self-center">
+                    <h5 class="">Conxita Márquez Bargalló</h5>
+                    <h6 class="text-red">Professora agregada Universitat Autònoma de Barcelona </h6>
+                  </div>
+                </div>
+                <div class="amigo-links d-flex flex-row">
+                                    <div class="text-center w-100">
+                    <p class="email p-1 m-0"><a href="mailto:conxita.marquez@uab.cat" target="_blank">EMAIL</a></p>
+                  </div>
+                                                      <div class="text-center w-100">
+                    <p class="lattes p-1 m-0"><a href="https://grupliec.com/dt_team/conxita-marquez-bargallo/" target="_blank">LATTES</a></p>
+                  </div>
+                                  </div>
+              </div>
+                                                <div class="amigo-card px-3 py-2 h-auto d-flex flex-column hover-scale">
+                <div class="Xamigo-links d-flex mb-2">
+                  <img loading="lazy" src="/static/uploads/88040449b9f37296cd605fae.jpg" alt="" width="263" height="476">
+                  <div class="pl-2 d-flex align-items-center flex-column align-self-center">
+                    <h5 class="">Begoña Oliveras</h5>
+                    <h6 class="text-red">Professor associat a la UAB i Membre del ICE UAB</h6>
+                  </div>
+                </div>
+                <div class="amigo-links d-flex flex-row">
+                                    <div class="text-center w-100">
+                    <p class="email p-1 m-0"><a href="mailto:begona.oliveras@uab.cat" target="_blank">EMAIL</a></p>
+                  </div>
+                                                      <div class="text-center w-100">
+                    <p class="lattes p-1 m-0"><a href="https://grupliec.com/dt_team/begona-oliveras/" target="_blank">LATTES</a></p>
+                  </div>
+                                  </div>
+              </div>
+                                                                                            <div class="amigo-card px-3 py-2 h-auto d-flex flex-column hover-scale">
+                <div class="Xamigo-links d-flex mb-2">
+                  <img loading="lazy" src="/static/assets/images/person.png" alt="" width="256" height="256">
+                  <div class="pl-2 d-flex align-items-center flex-column align-self-center">
+                    <h5 class="">Nailma de Araújo Silva</h5>
+                    <h6 class="text-red">Mestre em Ensino de Ciências e Matemática</h6>
+                  </div>
+                </div>
+                <div class="amigo-links d-flex flex-row">
+                                    <div class="text-center w-100">
+                    <p class="email p-1 m-0"><a href="mailto:nailmaaraujo7@gmail.com" target="_blank">EMAIL</a></p>
+                  </div>
+                                                      <div class="text-center w-100">
+                    <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/4698054407214765" target="_blank">LATTES</a></p>
+                  </div>
+                                  </div>
+              </div>
+                                                                                            <div class="amigo-card px-3 py-2 h-auto d-flex flex-column hover-scale">
+                <div class="Xamigo-links d-flex mb-2">
+                  <img loading="lazy" src="/static/assets/images/person.png" alt="" width="256" height="256">
+                  <div class="pl-2 d-flex align-items-center flex-column align-self-center">
+                    <h5 class="">Heriberto Silva Nunes Bezerra</h5>
+                    <h6 class="text-red">Doutor em Ensino de Ciências e Matemática</h6>
+                  </div>
+                </div>
+                <div class="amigo-links d-flex flex-row">
+                                                    </div>
+              </div>
+                                                                                                                      </div>
+      </div>
+
+            <!-- Amigos do Grupo -->
+
+      <div class="mt-4">
+        <div class="d-flex justify-content-center base-header mb-4">
+          <div class="text-center">
+            <h6>Amigos do Grupo</h6>
+          </div>
+        </div>
+        <div class="d-flex justify-content-around flex-wrap">
+                                                                                <div class="amigo-card px-3 py-2 h-auto d-flex flex-column hover-scale">
+                <div class="Xamigo-links d-flex mb-2">
+                  <img loading="lazy" src="/static/uploads/0a634e66dd044efdda4d2ac2.jpg" alt="" width="257" height="258">
+                  <div class="pl-2 d-flex align-items-center flex-column align-self-center">
+                    <h5 class="">Analice de Almeida Lima</h5>
+                    <h6 class="text-red">Pós-Doutorado</h6>
+                  </div>
+                </div>
+                <div class="amigo-links d-flex flex-row">
+                                                      <div class="text-center w-100">
+                    <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/2273105974559580" target="_blank">LATTES</a></p>
+                  </div>
+                                  </div>
+              </div>
+                                                <div class="amigo-card px-3 py-2 h-auto d-flex flex-column hover-scale">
+                <div class="Xamigo-links d-flex mb-2">
+                  <img loading="lazy" src="/static/uploads/839a00f2cc71b997d0937051.jpg" alt="" width="607" height="856">
+                  <div class="pl-2 d-flex align-items-center flex-column align-self-center">
+                    <h5 class="">Angela Fernandes Campos</h5>
+                    <h6 class="text-red">Doutora em Química Inorgânica</h6>
+                  </div>
+                </div>
+                <div class="amigo-links d-flex flex-row">
+                                                      <div class="text-center w-100">
+                    <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/9400764965904535" target="_blank">LATTES</a></p>
+                  </div>
+                                  </div>
+              </div>
+                                                                                            <div class="amigo-card px-3 py-2 h-auto d-flex flex-column hover-scale">
+                <div class="Xamigo-links d-flex mb-2">
+                  <img loading="lazy" src="/static/uploads/b28a051f7e77aa03a49e157e.jpg" alt="" width="491" height="657">
+                  <div class="pl-2 d-flex align-items-center flex-column align-self-center">
+                    <h5 class="">Edilene Ferreira de Medeiros</h5>
+                    <h6 class="text-red">Mestre em Ensino de Ciências e Matemática</h6>
+                  </div>
+                </div>
+                <div class="amigo-links d-flex flex-row">
+                                                      <div class="text-center w-100">
+                    <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/3872374205995080" target="_blank">LATTES</a></p>
+                  </div>
+                                  </div>
+              </div>
+                                                <div class="amigo-card px-3 py-2 h-auto d-flex flex-column hover-scale">
+                <div class="Xamigo-links d-flex mb-2">
+                  <img loading="lazy" src="/static/uploads/0e40f7a3e93968f7ec35a29c.jpg" alt="" width="116" height="146">
+                  <div class="pl-2 d-flex align-items-center flex-column align-self-center">
+                    <h5 class="">Fernanda Marur Mazze</h5>
+                    <h6 class="text-red">Doutora em Química</h6>
+                  </div>
+                </div>
+                <div class="amigo-links d-flex flex-row">
+                                                      <div class="text-center w-100">
+                    <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/9097929538985483" target="_blank">LATTES</a></p>
+                  </div>
+                                  </div>
+              </div>
+                                                                      <div class="amigo-card px-3 py-2 h-auto d-flex flex-column hover-scale">
+                <div class="Xamigo-links d-flex mb-2">
+                  <img loading="lazy" src="/static/uploads/a3e6657404e22ef12186e161.jpg" alt="" width="116" height="117">
+                  <div class="pl-2 d-flex align-items-center flex-column align-self-center">
+                    <h5 class="">Gilvaneide Ferreira de Oliveira</h5>
+                    <h6 class="text-red">Pós-Doutorado</h6>
+                  </div>
+                </div>
+                <div class="amigo-links d-flex flex-row">
+                                                      <div class="text-center w-100">
+                    <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/1867136982092239" target="_blank">LATTES</a></p>
+                  </div>
+                                  </div>
+              </div>
+                                                                      <div class="amigo-card px-3 py-2 h-auto d-flex flex-column hover-scale">
+                <div class="Xamigo-links d-flex mb-2">
+                  <img loading="lazy" src="/static/uploads/aa6af1d7749aa88e611ac610.jpg" alt="" width="136" height="137">
+                  <div class="pl-2 d-flex align-items-center flex-column align-self-center">
+                    <h5 class="">José Wnilson Figueiredo</h5>
+                    <h6 class="text-red">Pós-Doutorado</h6>
+                  </div>
+                </div>
+                <div class="amigo-links d-flex flex-row">
+                                                      <div class="text-center w-100">
+                    <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/6739179901084253" target="_blank">LATTES</a></p>
+                  </div>
+                                  </div>
+              </div>
+                                                                                                                                                                                                                                <div class="amigo-card px-3 py-2 h-auto d-flex flex-column hover-scale">
+                <div class="Xamigo-links d-flex mb-2">
+                  <img loading="lazy" src="/static/uploads/073bce8f778ed06e4e739b26.jpg" alt="" width="658" height="828">
+                  <div class="pl-2 d-flex align-items-center flex-column align-self-center">
+                    <h5 class="">Pablo Jovellanos dos Santos Lima</h5>
+                    <h6 class="text-red">Doutor em Educação</h6>
+                  </div>
+                </div>
+                <div class="amigo-links d-flex flex-row">
+                                                      <div class="text-center w-100">
+                    <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/8581875592242307" target="_blank">LATTES</a></p>
+                  </div>
+                                  </div>
+              </div>
+                                                <div class="amigo-card px-3 py-2 h-auto d-flex flex-column hover-scale">
+                <div class="Xamigo-links d-flex mb-2">
+                  <img loading="lazy" src="/static/uploads/476a24a600b46802bd322e7e.jpg" alt="" width="786" height="1127">
+                  <div class="pl-2 d-flex align-items-center flex-column align-self-center">
+                    <h5 class="">Regina Coelly Mendes da Silva</h5>
+                    <h6 class="text-red">Mestre em Educação</h6>
+                  </div>
+                </div>
+                <div class="amigo-links d-flex flex-row">
+                                                      <div class="text-center w-100">
+                    <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/5755678011951574" target="_blank">LATTES</a></p>
+                  </div>
+                                  </div>
+              </div>
+                                                <div class="amigo-card px-3 py-2 h-auto d-flex flex-column hover-scale">
+                <div class="Xamigo-links d-flex mb-2">
+                  <img loading="lazy" src="/static/uploads/b64660bab2aa748c59c9b28b.jpg" alt="" width="244" height="258">
+                  <div class="pl-2 d-flex align-items-center flex-column align-self-center">
+                    <h5 class="">Verônica Tavares Santos Batinga</h5>
+                    <h6 class="text-red">Pós-Doutorado</h6>
+                  </div>
+                </div>
+                <div class="amigo-links d-flex flex-row">
+                                                      <div class="text-center w-100">
+                    <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/7759044153725982" target="_blank">LATTES</a></p>
+                  </div>
+                                  </div>
+              </div>
+                                                <div class="amigo-card px-3 py-2 h-auto d-flex flex-column hover-scale">
+                <div class="Xamigo-links d-flex mb-2">
+                  <img loading="lazy" src="/static/assets/images/person.png" alt="" width="256" height="256">
+                  <div class="pl-2 d-flex align-items-center flex-column align-self-center">
+                    <h5 class="">Wesley Costa de Oliveira</h5>
+                    <h6 class="text-red">Doutor em Ensino de Ciências e Matemática</h6>
+                  </div>
+                </div>
+                <div class="amigo-links d-flex flex-row">
+                                                      <div class="text-center w-100">
+                    <p class="lattes p-1 m-0"><a href="http://lattes.cnpq.br/1112064550281914" target="_blank">LATTES</a></p>
+                  </div>
+                                  </div>
+              </div>
+                                                                                                                                                                                                                                                                                                                                                                                              </div>
+      </div>
+      
+      <!-- Apoio -->
+
+      <div class="mt-5">
+        <div class="d-flex justify-content-center base-header mb-4">
+          <div class="text-center">
+            <h5>Apoio</h5>
+          </div>
+        </div>
+
+        <div class="row justify-content-around xflex-wrap">
+
+          <div class="axpoio my-2 col-md-4">
+            <a href="https://www.ufrn.br/" target="_blank"><img loading="lazy" class="w-100" src="/static/assets/images/logo-ufrn.jpg"></a>
+          </div>
+
+          <div class="axpoio my-2 col-md-4">
+            <a href="http://www.cnpq.br/" target="_blank"><img loading="lazy" class="w-100" src="/static/assets/images/logo-cnpq.jpg"></a>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Footer -->
+
+      <footer class="mt-5 py-4">
+  <hr class="base-v-border">
+  <div class="d-flex flex-column flex-lg-row">
+    <div class="text-center text-md-left" style="flex:1">
+      <p class="mt-4 mt-sm-0 mb-md-4"><b>Centro de Cîencias Exatas e da Terra</b></p>
+      <!-- <p class="mb-1">Email: lorem_ipsum_dolor@sit.amet</p> -->
+      <p class="mb-1">
+        <a href="https://www.instagram.com/argec.ufrn/" target="_blank" class="mr-2" data-instagram>
+          <svg class="svg-social" height="28pt" viewBox="0 0 512 512.00006" width="28pt" xmlns="http://www.w3.org/2000/svg"><path d="m261.039062 512c-1.695312 0-3.390624 0-5.097656-.007812-40.132812.097656-77.214844-.921876-113.277344-3.117188-33.0625-2.011719-63.242187-13.4375-87.28125-33.039062-23.195312-18.914063-39.035156-44.488282-47.078124-76.003907-7-27.4375-7.371094-54.371093-7.726563-80.421875-.257813-18.691406-.5234375-40.839844-.578125-63.363281.0546875-22.617187.320312-44.765625.578125-63.457031.355469-26.046875.726563-52.980469 7.726563-80.421875 8.042968-31.515625 23.882812-57.089844 47.078124-76.003907 24.039063-19.601562 54.21875-31.027343 87.285157-33.039062 36.0625-2.191406 73.152343-3.2148438 113.371093-3.1171875 40.144532-.0859375 77.214844.9257815 113.277344 3.1171875 33.0625 2.011719 63.242188 13.4375 87.28125 33.039062 23.199219 18.914063 39.035156 44.488282 47.078125 76.003907 7 27.4375 7.371094 54.375 7.726563 80.421875.257812 18.691406.527344 40.839844.578125 63.363281v.09375c-.050781 22.523437-.320313 44.671875-.578125 63.363281-.355469 26.046875-.722656 52.980469-7.726563 80.421875-8.042969 31.515625-23.878906 57.089844-47.078125 76.003907-24.039062 19.601562-54.21875 31.027343-87.28125 33.039062-34.535156 2.101562-70.011718 3.125-108.277344 3.125zm-5.097656-40.007812c39.480469.09375 75.730469-.902344 110.945313-3.042969 25-1.519531 46.675781-9.632813 64.433593-24.113281 16.414063-13.386719 27.71875-31.855469 33.597657-54.894532 5.828125-22.839844 6.164062-47.363281 6.488281-71.078125.253906-18.566406.519531-40.558593.574219-62.863281-.054688-22.308594-.320313-44.296875-.574219-62.863281-.324219-23.714844-.660156-48.238281-6.488281-71.082031-5.878907-23.039063-17.183594-41.507813-33.597657-54.894532-17.757812-14.476562-39.433593-22.589844-64.433593-24.109375-35.214844-2.144531-71.464844-3.132812-110.851563-3.046875-39.472656-.09375-75.726562.902344-110.941406 3.046875-25 1.519531-46.675781 9.632813-64.433594 24.109375-16.414062 13.386719-27.71875 31.855469-33.597656 54.894532-5.828125 22.84375-6.164062 47.363281-6.488281 71.082031-.253907 18.582031-.519531 40.585937-.574219 62.910156.054688 22.226563.320312 44.234375.574219 62.816406.324219 23.714844.660156 48.238281 6.488281 71.078125 5.878906 23.039063 17.183594 41.507813 33.597656 54.894532 17.757813 14.476562 39.433594 22.589843 64.433594 24.109374 35.214844 2.144532 71.476562 3.144532 110.847656 3.046876zm-.953125-90.992188c-68.921875 0-125-56.074219-125-125s56.078125-125 125-125c68.925781 0 125 56.074219 125 125s-56.074219 125-125 125zm0-210c-46.867187 0-85 38.132812-85 85s38.132813 85 85 85c46.871094 0 85-38.132812 85-85s-38.128906-85-85-85zm139-80c-16.566406 0-30 13.429688-30 30s13.433594 30 30 30c16.570313 0 30-13.429688 30-30s-13.429687-30-30-30zm0 0"/></svg>
+        </a>
+        <!-- <a href="#" target="_blank" class="mr-2" data-facebook>
+          <svg class="svg-social" height="28pt" viewBox="-21 -21 682.66669 682.66669" width="28pt" xmlns="http://www.w3.org/2000/svg"><path d="m604.671875 0h-569.375c-19.496094.0117188-35.30078125 15.824219-35.296875 35.328125v569.375c.0117188 19.496094 15.824219 35.300781 35.328125 35.296875h306.546875v-247.5h-83.125v-96.875h83.125v-71.292969c0-82.675781 50.472656-127.675781 124.222656-127.675781 35.324219 0 65.679688 2.632812 74.527344 3.808594v86.410156h-50.855469c-40.125 0-47.894531 19.066406-47.894531 47.050781v61.699219h95.9375l-12.5 96.875h-83.4375v247.5h162.796875c19.507813.003906 35.324219-15.804688 35.328125-35.3125 0-.003906 0-.007812 0-.015625v-569.375c-.007812-19.496094-15.824219-35.30078125-35.328125-35.296875zm0 0"/></svg>
+        </a> -->
+        <!-- <a href="#" target="_blank" data-youtube>
+          <svg class="svg-social" height="40pt" viewBox="-21 -117 682.66672 682" width="40pt" xmlns="http://www.w3.org/2000/svg"><path d="m626.8125 64.035156c-7.375-27.417968-28.992188-49.03125-56.40625-56.414062-50.082031-13.703125-250.414062-13.703125-250.414062-13.703125s-200.324219 0-250.40625 13.183593c-26.886719 7.375-49.03125 29.519532-56.40625 56.933594-13.179688 50.078125-13.179688 153.933594-13.179688 153.933594s0 104.378906 13.179688 153.933594c7.382812 27.414062 28.992187 49.027344 56.410156 56.410156 50.605468 13.707031 250.410156 13.707031 250.410156 13.707031s200.324219 0 250.40625-13.183593c27.417969-7.378907 49.03125-28.992188 56.414062-56.40625 13.175782-50.082032 13.175782-153.933594 13.175782-153.933594s.527344-104.382813-13.183594-154.460938zm-370.601562 249.878906v-191.890624l166.585937 95.945312zm0 0"/></svg>
+        </a> -->
+      </p>
+    </div>
+    <div class="text-center text-md-right" style="flex: 1;">
+      <p class="mt-5 mt-md-0 mb-md-4"><b>Desenvolvido por:</b></p>
+      <p class="mb-1">Cleyton - <a class="text-dark" href="mailto:cleyto0n@hotmail.com" target="_blank">cleyto0n@hotmail.com</a></p>
+      <p class="mb-1">Bruno - <a class="text-dark" href="https://github.com/Silvabrunu" target="_blank">github.com/Silvabrunu</a></p>
+      <p class="mb-1">Jackson - <a class="text-dark" href="https://juniordnts.github.io" target="_blank">juniordnts.github.io</a></p>
+    </div>
+  </div>
+  <div class="text-center mt-4">
+    <img loading="lazy" src="/static/assets/images/ufrn-ccet.png" alt="">
+  </div>
+</footer>
+
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalMeet" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button class="btn bg-base-bt-dark my-2 px-4 my-sm-0 rounded-0 text-uppercase" data-dismiss="modal">
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/assets/js/jquery.min.js"></script>
+<script src="/static/assets/js/bootstrap.bundle.min.js"></script>  <!-- <script src="/static/assets/js/Main.Inicio.js"></script> -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:0,
+      nav:false,
+      autoplay:true,
+      autoplayTimeout:2500,
+      autoplayHoverPause:false,
+      responsive:{
+        0:{
+          items:1
+        },
+      }
+    })
+  </script>
+
+  <script>
+    function getMeetData(id){
+      console.log(id);
+      $.get("/reuniao/detalhes", {id})
+      .done(res=>{
+        console.log(res);
+        if(res.success){
+          console.log("OK");
+          $(".modal-title").text(res.meet.title)
+          let [year,month,day] = res.meet.date.split("-");
+          $(".modal-body").html(res.meet.content || "")
+          $(".modal-body").append(`<p class="text-muted m-0 small">${day}/${month}/${year}</p>`)
+          $("#modalMeet").modal("show")
+        } else {
+          alert("Erro ao recuperar informações do cronograma");
+        }
+      })
+      .fail(()=>alert("Erro ao recuperar informações do cronograma"));
+    }
+  </script>
+
+</body>
+
+</html>

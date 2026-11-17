@@ -1,0 +1,2024 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T21:05:15.459Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12",
+      "diff": "9.0.0",
+      "@anthropic-ai/sdk": "1.8.0"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "id": "jormais.ufrn.br",
+  "url": "https://jormais.ufrn.br/",
+  "fonte": {
+    "html": "index.html",
+    "codificacao": "utf-8",
+    "bom": false,
+    "har": true,
+    "lighthouse": "lh2.json",
+    "lighthouseVersion": "13.5.0"
+  },
+  "regras": [
+    {
+      "id": "html-lang",
+      "dimensao": "semantica",
+      "descricao": "O elemento <html> declara o idioma da página (atributo lang)."
+    },
+    {
+      "id": "meta-viewport",
+      "dimensao": "performance",
+      "descricao": "A página declara <meta name=\"viewport\"> adequada a telas móveis, sem bloquear o zoom."
+    },
+    {
+      "id": "img-dimensions",
+      "dimensao": "performance",
+      "descricao": "Toda <img> declara width e height, para o navegador reservar o espaço antes do download."
+    },
+    {
+      "id": "img-lazy",
+      "dimensao": "performance",
+      "descricao": "<img> depois das 3 primeiras do documento usa loading=\"lazy\" (exceto a imagem LCP)."
+    },
+    {
+      "id": "obsolete-tags",
+      "dimensao": "semantica",
+      "descricao": "Sem elementos obsoletos do WHATWG (center, font, marquee…); <font> simples vira <span style>."
+    },
+    {
+      "id": "heading-skip",
+      "dimensao": "semantica",
+      "descricao": "Títulos não pulam níveis ao descer na hierarquia (h1 → h3, por exemplo)."
+    },
+    {
+      "id": "fake-button",
+      "dimensao": "semantica",
+      "descricao": "Elementos clicáveis são <button>/<a>, não div/span com onclick."
+    },
+    {
+      "id": "render-blocking-hint",
+      "dimensao": "performance",
+      "descricao": "Scripts e folhas de estilo que o Lighthouse aponta como bloqueantes são adiados quando não são críticos."
+    },
+    {
+      "id": "landmarks-llm",
+      "dimensao": "semantica",
+      "descricao": "Landmarks ausentes propostos por LLM sobre <div>, <section> ou <article> existentes (landmarks-v2, claude-haiku-5-5)."
+    }
+  ],
+  "llm": {
+    "prompt": "landmarks-v2",
+    "arquivo": "docs/prompts/landmarks-v2.md",
+    "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+    "modelo": "claude-haiku-5-5",
+    "effort": "low",
+    "maxTokens": 4000,
+    "execucao": {
+      "siteId": "jormais.ufrn.br",
+      "prompt": "landmarks-v2",
+      "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "modeloResposta": null,
+      "respostaId": null,
+      "chamada": false,
+      "motivo": "nenhum landmark ausente",
+      "ausentes": [],
+      "candidatos": 13,
+      "elegiveis": 13,
+      "stopReason": null,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "custoUsd": null,
+      "propostas": 0,
+      "validas": 0,
+      "rejeitadas": [],
+      "textoIgual": null,
+      "landmarksDepois": null,
+      "erro": null,
+      "duracaoMs": 2
+    }
+  },
+  "resumo": {
+    "total": 56,
+    "corrigidas": 44,
+    "porRegra": {
+      "html-lang": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "meta-viewport": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "img-dimensions": {
+        "total": 27,
+        "corrigidas": 21
+      },
+      "img-lazy": {
+        "total": 23,
+        "corrigidas": 23
+      },
+      "obsolete-tags": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "heading-skip": {
+        "total": 2,
+        "corrigidas": 0
+      },
+      "fake-button": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "render-blocking-hint": {
+        "total": 4,
+        "corrigidas": 0
+      },
+      "landmarks-llm": {
+        "total": 0,
+        "corrigidas": 0
+      }
+    },
+    "porDimensao": {
+      "performance": 54,
+      "semantica": 2
+    }
+  },
+  "guardaImagens": {
+    "imagens": [
+      {
+        "recomendacao": "img-dimensions-1",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 50,
+              "altura": 51,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 50,
+              "altura": 51,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 50,
+              "altura": 51,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 50,
+              "altura": 51,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-2",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 156,
+              "altura": 57,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 156,
+              "altura": 57,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 156,
+              "altura": 57,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 156,
+              "altura": 57,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-3",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 32,
+              "altura": 32,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 32,
+              "altura": 32,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-4",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 32,
+              "altura": 32,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 32,
+              "altura": 32,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-5",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 110,
+              "altura": 30,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 110,
+              "altura": 30,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-6",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-7",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 348,
+              "altura": 320,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 348,
+              "altura": 320,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 542,
+              "altura": 672,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 542,
+              "altura": 672,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-8",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 348,
+              "altura": 320,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 348,
+              "altura": 320,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 542,
+              "altura": 320,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 542,
+              "altura": 320,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-9",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 348,
+              "altura": 320,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 348,
+              "altura": 320,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 542,
+              "altura": 320,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 542,
+              "altura": 320,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-10",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 348,
+              "altura": 284,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 348,
+              "altura": 284,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 345,
+              "altura": 284,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 345,
+              "altura": 284,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-11",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 348,
+              "altura": 284,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 348,
+              "altura": 284,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 345,
+              "altura": 284,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 345,
+              "altura": 284,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-12",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 348,
+              "altura": 284,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 348,
+              "altura": 284,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 345,
+              "altura": 284,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 345,
+              "altura": 284,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-13",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 348,
+              "altura": 284,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 348,
+              "altura": 284,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 345,
+              "altura": 284,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 345,
+              "altura": 284,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-14",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 348,
+              "altura": 284,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 348,
+              "altura": 284,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 345,
+              "altura": 284,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 345,
+              "altura": 284,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-15",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 348,
+              "altura": 284,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 348,
+              "altura": 284,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 345,
+              "altura": 284,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 345,
+              "altura": 284,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-16",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "mudou"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 348,
+              "altura": 284,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 348,
+              "altura": 540,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 1116,
+              "altura": 448,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 1116,
+              "altura": 540,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-20",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "mudou"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 166,
+              "altura": 234,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 166,
+              "altura": 480,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 170,
+              "altura": 240,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 170,
+              "altura": 480,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-21",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "mudou"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 166,
+              "altura": 234,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 166,
+              "altura": 480,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 170,
+              "altura": 240,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 170,
+              "altura": 480,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-22",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 348,
+              "altura": 128,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 348,
+              "altura": 128,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 261,
+              "altura": 96,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 261,
+              "altura": 96,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-23",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 32,
+              "altura": 32,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 32,
+              "altura": 32,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 32,
+              "altura": 32,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 32,
+              "altura": 32,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-24",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 32,
+              "altura": 32,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 32,
+              "altura": 32,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 32,
+              "altura": 32,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 32,
+              "altura": 32,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-25",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 188,
+              "altura": 100,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 188,
+              "altura": 100,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 188,
+              "altura": 100,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 188,
+              "altura": 100,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-26",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 109,
+              "altura": 33,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 109,
+              "altura": 33,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 109,
+              "altura": 33,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 109,
+              "altura": 33,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-27",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 45,
+              "altura": 25,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 45,
+              "altura": 25,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 45,
+              "altura": 25,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 45,
+              "altura": 25,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      }
+    ],
+    "mantidas": 21,
+    "desfeitas": 3,
+    "erro": null
+  },
+  "recommendations": [
+    {
+      "id": "img-dimensions-1",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://jormais.ufrn.br/wp-content/themes/Jormais/dist/img/icons/menu.svg\" alt=\"\">",
+      "posicao": {
+        "linha": 29,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"50\" height=\"51\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 1346,
+          "fim": 1346,
+          "texto": " width=\"50\" height=\"51\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-2",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://jormais.ufrn.br/wp-content/themes/Jormais/dist/img/logo.png\" width=\"156\" alt=\"logo do site\">",
+      "posicao": {
+        "linha": 32,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado height=\"57\" (proporcional ao width=\"156\" e ao arquivo 2930×1078). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 1560,
+          "fim": 1560,
+          "texto": " height=\"57\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-3",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://jormais.ufrn.br/wp-content/themes/Jormais/dist/img/icons/twitter.svg\" alt=\"link do twitter\">",
+      "posicao": {
+        "linha": 38,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"32\" height=\"32\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 1957,
+          "fim": 1957,
+          "texto": " width=\"32\" height=\"32\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-4",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://jormais.ufrn.br/wp-content/themes/Jormais/dist/img/icons/instagram.svg\" alt=\"link do instagram\">",
+      "posicao": {
+        "linha": 41,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"32\" height=\"32\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 2196,
+          "fim": 2196,
+          "texto": " width=\"32\" height=\"32\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-5",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://jormais.ufrn.br/wp-content/themes/Jormais/dist/img/icons/logo-decom.svg\" alt=\"\">",
+      "posicao": {
+        "linha": 45,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"110\" height=\"30\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 2400,
+          "fim": 2400,
+          "texto": " width=\"110\" height=\"30\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-6",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://jormais.ufrn.br/wp-content/themes/Jormais/dist/img/logo.png\" width=\"156\" alt=\"logo do site\">",
+      "posicao": {
+        "linha": 57,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado height=\"57\" (proporcional ao width=\"156\" e ao arquivo 2930×1078). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 2922,
+          "fim": 2922,
+          "texto": " height=\"57\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-7",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"featured__post__image\" src=\"https://jormais.ufrn.br/wp-content/uploads/2022/12/Snapinsta.app_1080_317997056_842939307037734_5716751770427199171_n.jpg\" alt=\"\">",
+      "posicao": {
+        "linha": 89,
+        "coluna": 11
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1080\" height=\"810\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 6441,
+          "fim": 6441,
+          "texto": " width=\"1080\" height=\"810\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-8",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"featured__post__image\" src=\"https://jormais.ufrn.br/wp-content/uploads/2022/07/Fish-lab-divulgacao-cientifica.png\" alt=\"\">",
+      "posicao": {
+        "linha": 94,
+        "coluna": 11
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"858\" height=\"643\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 6874,
+          "fim": 6874,
+          "texto": " width=\"858\" height=\"643\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-9",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"featured__post__image\" src=\"https://jormais.ufrn.br/wp-content/uploads/2022/07/Capturar1.png\" alt=\"\">",
+      "posicao": {
+        "linha": 99,
+        "coluna": 11
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"779\" height=\"495\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 7312,
+          "fim": 7312,
+          "texto": " width=\"779\" height=\"495\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-10",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"top-posts__post__image\" src=\"https://jormais.ufrn.br/wp-content/uploads/2023/06/165fd9ec-bbc3-409b-ade0-373d02584828.jpg\" alt=\"\">",
+      "posicao": {
+        "linha": 117,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1078\" height=\"606\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 8050,
+          "fim": 8050,
+          "texto": " width=\"1078\" height=\"606\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-11",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"top-posts__post__image\" src=\"https://jormais.ufrn.br/wp-content/uploads/2023/06/WhatsApp-Image-2023-06-29-at-10.24.17.jpeg\" alt=\"\">",
+      "posicao": {
+        "linha": 130,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"984\" height=\"656\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 8898,
+          "fim": 8898,
+          "texto": " width=\"984\" height=\"656\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-12",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"top-posts__post__image\" src=\"https://jormais.ufrn.br/wp-content/uploads/2023/06/IMG_8049-1.jpg\" alt=\"\">",
+      "posicao": {
+        "linha": 143,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1266\" height=\"712\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 9746,
+          "fim": 9746,
+          "texto": " width=\"1266\" height=\"712\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-13",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"top-posts__post__image\" src=\"https://jormais.ufrn.br/wp-content/uploads/2023/06/Snapinsta.app_314873606_5826279647394056_3044766500391000472_n_1080-edited.jpg\" alt=\"\">",
+      "posicao": {
+        "linha": 156,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1080\" height=\"810\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 10682,
+          "fim": 10682,
+          "texto": " width=\"1080\" height=\"810\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-14",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"top-posts__post__image\" src=\"https://jormais.ufrn.br/wp-content/uploads/2023/06/MargemHub.png\" alt=\"\">",
+      "posicao": {
+        "linha": 169,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"701\" height=\"707\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 11515,
+          "fim": 11515,
+          "texto": " width=\"701\" height=\"707\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-15",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"top-posts__post__image\" src=\"https://jormais.ufrn.br/wp-content/uploads/2022/10/plano-diretor.jpeg\" alt=\"\">",
+      "posicao": {
+        "linha": 182,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"570\" height=\"380\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 12368,
+          "fim": 12368,
+          "texto": " width=\"570\" height=\"380\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-16",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"\" src=\"https://jormais.ufrn.br/wp-content/uploads/2022/07/Sempre-Entenderam-–-Mulher-e-Futebol_-A-resistencia-em-prorrogacao.png\" alt=\"\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 11
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1344\" height=\"540\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: mudou)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-17",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"web-story__image\" src=\"\" alt=\"\">",
+      "posicao": {
+        "linha": 299,
+        "coluna": 9
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Sem src: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-18",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"web-story__image\" src=\"\" alt=\"\">",
+      "posicao": {
+        "linha": 304,
+        "coluna": 9
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Sem src: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-19",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://img.youtube.com/vi/_HUUtaYyjC4/maxresdefault.jpg\" class=\"img-fluid\" alt=\"\">",
+      "posicao": {
+        "linha": 338,
+        "coluna": 9
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-20",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"magazine__image\" src=\"https://jormais.ufrn.br/wp-content/themes/Jormais/dist/img/magazine/revista_tabu_2020.jpg\" alt=\"\">",
+      "posicao": {
+        "linha": 415,
+        "coluna": 7
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"340\" height=\"480\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: mudou)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-21",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"magazine__image\" src=\"https://jormais.ufrn.br/wp-content/themes/Jormais/dist/img/magazine/revista_tabu_2019.jpg\" alt=\"\">",
+      "posicao": {
+        "linha": 419,
+        "coluna": 7
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"340\" height=\"480\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: mudou)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-22",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://jormais.ufrn.br/wp-content/themes/Jormais/dist/img/logo.png\" class=\"img-fluid w-100\" alt=\"Logo jormais\">",
+      "posicao": {
+        "linha": 439,
+        "coluna": 11
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"2930\" height=\"1078\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 21195,
+          "fim": 21195,
+          "texto": " width=\"2930\" height=\"1078\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-23",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://jormais.ufrn.br/wp-content/themes/Jormais/dist/img/icons/twitter-light.svg\" alt=\"link do twitter\">",
+      "posicao": {
+        "linha": 443,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"32\" height=\"32\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 21498,
+          "fim": 21498,
+          "texto": " width=\"32\" height=\"32\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-24",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://jormais.ufrn.br/wp-content/themes/Jormais/dist/img/icons/instagram-light.svg\" alt=\"link do instagram\">",
+      "posicao": {
+        "linha": 446,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"32\" height=\"32\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 21737,
+          "fim": 21737,
+          "texto": " width=\"32\" height=\"32\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-25",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://jormais.ufrn.br/wp-content/themes/Jormais/dist/img/ufrn-logo-light.png\" alt=\"Logo ufrn\">",
+      "posicao": {
+        "linha": 453,
+        "coluna": 11
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"188\" height=\"100\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 22155,
+          "fim": 22155,
+          "texto": " width=\"188\" height=\"100\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-26",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://jormais.ufrn.br/wp-content/themes/Jormais/dist/img/icons/logo-decom-light.svg\" alt=\"Logo decom\">",
+      "posicao": {
+        "linha": 456,
+        "coluna": 11
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"109\" height=\"33\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 22313,
+          "fim": 22313,
+          "texto": " width=\"109\" height=\"33\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-27",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://jormais.ufrn.br/wp-content/themes/Jormais/dist/img/icons/awe-logo.svg\" alt=\"\">",
+      "posicao": {
+        "linha": 471,
+        "coluna": 7
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"45\" height=\"25\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 23452,
+          "fim": 23452,
+          "texto": " width=\"45\" height=\"25\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-1",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://jormais.ufrn.br/wp-content/themes/Jormais/dist/img/icons/instagram.svg\" alt=\"link do instagram\">",
+      "posicao": {
+        "linha": 41,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "4ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 2087,
+          "fim": 2087,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-2",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://jormais.ufrn.br/wp-content/themes/Jormais/dist/img/icons/logo-decom.svg\" alt=\"\">",
+      "posicao": {
+        "linha": 45,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "5ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 2307,
+          "fim": 2307,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-3",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://jormais.ufrn.br/wp-content/themes/Jormais/dist/img/logo.png\" width=\"156\" alt=\"logo do site\">",
+      "posicao": {
+        "linha": 57,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "6ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 2817,
+          "fim": 2817,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-4",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"featured__post__image\" src=\"https://jormais.ufrn.br/wp-content/uploads/2022/07/Fish-lab-divulgacao-cientifica.png\" alt=\"\">",
+      "posicao": {
+        "linha": 94,
+        "coluna": 11
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "8ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 6745,
+          "fim": 6745,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-5",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"featured__post__image\" src=\"https://jormais.ufrn.br/wp-content/uploads/2022/07/Capturar1.png\" alt=\"\">",
+      "posicao": {
+        "linha": 99,
+        "coluna": 11
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "9ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 7204,
+          "fim": 7204,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-6",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"top-posts__post__image\" src=\"https://jormais.ufrn.br/wp-content/uploads/2023/06/165fd9ec-bbc3-409b-ade0-373d02584828.jpg\" alt=\"\">",
+      "posicao": {
+        "linha": 117,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "10ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 7914,
+          "fim": 7914,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-7",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"top-posts__post__image\" src=\"https://jormais.ufrn.br/wp-content/uploads/2023/06/WhatsApp-Image-2023-06-29-at-10.24.17.jpeg\" alt=\"\">",
+      "posicao": {
+        "linha": 130,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "11ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 8760,
+          "fim": 8760,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-8",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"top-posts__post__image\" src=\"https://jormais.ufrn.br/wp-content/uploads/2023/06/IMG_8049-1.jpg\" alt=\"\">",
+      "posicao": {
+        "linha": 143,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "12ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 9636,
+          "fim": 9636,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-9",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"top-posts__post__image\" src=\"https://jormais.ufrn.br/wp-content/uploads/2023/06/Snapinsta.app_314873606_5826279647394056_3044766500391000472_n_1080-edited.jpg\" alt=\"\">",
+      "posicao": {
+        "linha": 156,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "13ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 10508,
+          "fim": 10508,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-10",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"top-posts__post__image\" src=\"https://jormais.ufrn.br/wp-content/uploads/2023/06/MargemHub.png\" alt=\"\">",
+      "posicao": {
+        "linha": 169,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "14ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 11406,
+          "fim": 11406,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-11",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"top-posts__post__image\" src=\"https://jormais.ufrn.br/wp-content/uploads/2022/10/plano-diretor.jpeg\" alt=\"\">",
+      "posicao": {
+        "linha": 182,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "15ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 12254,
+          "fim": 12254,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-12",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"\" src=\"https://jormais.ufrn.br/wp-content/uploads/2022/07/Sempre-Entenderam-–-Mulher-e-Futebol_-A-resistencia-em-prorrogacao.png\" alt=\"\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 11
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "16ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 14914,
+          "fim": 14914,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-13",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"web-story__image\" src=\"\" alt=\"\">",
+      "posicao": {
+        "linha": 299,
+        "coluna": 9
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "17ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 16025,
+          "fim": 16025,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-14",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"web-story__image\" src=\"\" alt=\"\">",
+      "posicao": {
+        "linha": 304,
+        "coluna": 9
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "18ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 16284,
+          "fim": 16284,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-15",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://img.youtube.com/vi/_HUUtaYyjC4/maxresdefault.jpg\" class=\"img-fluid\" alt=\"\">",
+      "posicao": {
+        "linha": 338,
+        "coluna": 9
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "19ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 17200,
+          "fim": 17200,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-16",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"magazine__image\" src=\"https://jormais.ufrn.br/wp-content/themes/Jormais/dist/img/magazine/revista_tabu_2020.jpg\" alt=\"\">",
+      "posicao": {
+        "linha": 415,
+        "coluna": 7
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "20ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 20331,
+          "fim": 20331,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-17",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"magazine__image\" src=\"https://jormais.ufrn.br/wp-content/themes/Jormais/dist/img/magazine/revista_tabu_2019.jpg\" alt=\"\">",
+      "posicao": {
+        "linha": 419,
+        "coluna": 7
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "21ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 20569,
+          "fim": 20569,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-18",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://jormais.ufrn.br/wp-content/themes/Jormais/dist/img/logo.png\" class=\"img-fluid w-100\" alt=\"Logo jormais\">",
+      "posicao": {
+        "linha": 439,
+        "coluna": 11
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "22ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 21078,
+          "fim": 21078,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-19",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://jormais.ufrn.br/wp-content/themes/Jormais/dist/img/icons/twitter-light.svg\" alt=\"link do twitter\">",
+      "posicao": {
+        "linha": 443,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "23ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 21387,
+          "fim": 21387,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-20",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://jormais.ufrn.br/wp-content/themes/Jormais/dist/img/icons/instagram-light.svg\" alt=\"link do instagram\">",
+      "posicao": {
+        "linha": 446,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "24ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 21622,
+          "fim": 21622,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-21",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://jormais.ufrn.br/wp-content/themes/Jormais/dist/img/ufrn-logo-light.png\" alt=\"Logo ufrn\">",
+      "posicao": {
+        "linha": 453,
+        "coluna": 11
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "25ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 22054,
+          "fim": 22054,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-22",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://jormais.ufrn.br/wp-content/themes/Jormais/dist/img/icons/logo-decom-light.svg\" alt=\"Logo decom\">",
+      "posicao": {
+        "linha": 456,
+        "coluna": 11
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "26ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 22204,
+          "fim": 22204,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-23",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://jormais.ufrn.br/wp-content/themes/Jormais/dist/img/icons/awe-logo.svg\" alt=\"\">",
+      "posicao": {
+        "linha": 471,
+        "coluna": 7
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "27ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 23361,
+          "fim": 23361,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "heading-skip-1",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h4 class=\"web-story__title text-truncate\">",
+      "posicao": {
+        "linha": 300,
+        "coluna": 9
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 2 para o nível 4: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h3 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "heading-skip-2",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h4 class=\"best-posts__title fz-16 fw-bold mb-awe-8 lh-150\">",
+      "posicao": {
+        "linha": 365,
+        "coluna": 11
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 2 para o nível 4: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h3 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-1",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&family=Open+Sans:wght@700&display=swap\" rel=\"stylesheet\">",
+      "posicao": {
+        "linha": 14,
+        "coluna": 3
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (1055 ms de bloqueio, 0.7 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-2",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"https://jormais.ufrn.br/wp-content/themes/Jormais/dist/css/style.css\">",
+      "posicao": {
+        "linha": 17,
+        "coluna": 3
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (848 ms de bloqueio, 35.6 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-3",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"https://jormais.ufrn.br/wp-content/themes/Jormais/dist/css/style-update.css\">",
+      "posicao": {
+        "linha": 18,
+        "coluna": 3
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (639 ms de bloqueio, 4.7 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-4",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"https://jormais.ufrn.br/wp-content/themes/Jormais/dist/css/categories.css\">",
+      "posicao": {
+        "linha": 19,
+        "coluna": 3
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (639 ms de bloqueio, 3.5 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    }
+  ]
+}

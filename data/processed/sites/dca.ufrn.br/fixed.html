@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+
+<!-- PHP variables -->
+
+
+<html lang="pt-BR">
+  <head>
+
+    <!-- Metadata: language -->
+    <!--meta http-equiv='content-language' content='pt-br'-->
+    
+    <!-- Metadata: rendering compatibility -->
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    
+    <!-- Metadata: encoding -->
+    <!--meta http-equiv='Content-Type' content='text/html; charset=UTF-8' /--> <!-- HTML4 -->
+    <meta charset='UTF-8'> <!-- HTML5 -->
+    
+    <!-- Metadata: site definitions -->
+    <meta name='url' content='http://www.dca.ufrn.br'>
+    <meta name='copyright' content='© 2016-2018 DCA-UFRN: www.dca.ufrn.br <http://www.dca.ufrn.br>'>
+    <meta name='description' content='Página do Departamento de Engenharia de Computação e Automção (DCA) da Universidade Federal do Rio Grande do Norte (UFRN).'>
+    <meta name='author' content='Prof. Carlos M. D. Viegas'>
+    
+    <!-- Metadata: search bots -->
+    <meta name='Robots' content='Index,Follow'>
+    <meta name='rating' content='general'>
+    <meta name='keywords' content='dca, departamento de engenharia de computação e automação, ufrn, universidade federal do rio grande do norte, engenharia de computação, engenharia mecatrônica, automação, petróleo, robótica, controle de processos, sistemas distribuídos, sistemas inteligentes, sistemas de controle'>
+    
+    <!-- Metadata: mobile  -->
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+    <!-- Title -->
+    <title>
+    DCA :. Departamento de Engenharia de Computação e Automação - UFRN - Brasil 
+    </title>
+
+    <!-- Favicon -->
+    <link rel='shortcut icon' type='image/gif' href='img/DCAicon.gif'>
+
+    <!-- CSS: Bootstrap -->
+    <link rel='stylesheet' type='text/css' href='css/bootstrap-3.3.7.min.css'>
+    <!-- CSS: Font awesome / Icons -->
+    <link rel='stylesheet' type='text/css' href='css/font-awesome-4.7.min.css'>
+    <!-- CSS: Superslide -->
+    <link rel='stylesheet' type='text/css' href='css/superslides.css'>
+    <!-- CSS: Slick slider -->
+    <link rel='stylesheet' type='text/css' href='css/slick-1.3.15.css'>
+    <!-- CSS: Image gallery -->
+    <link rel='stylesheet' type='text/css' href='css/pgw-slider-2.3.css'>
+    <!-- CSS: Smooth animate -->
+    <link rel='stylesheet' type='text/css' href='css/animate.css'>    
+    <!-- CSS: Main structure -->
+    <link rel='stylesheet' type='text/css' href='css/style.css'>
+    <!-- CSS: Google fonts (local) -->
+    <link rel='stylesheet' type='text/css' href='css/fonts.css'>
+    
+    <!-- CSS: Google fonts ->
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Lato'>
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans'>
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Varela'>
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Montserrat'-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src='js/ie/html5shiv.min.js'></script>
+      <script src='je/ie/respond.min.js'></script>
+    <![endif]-->
+  </head>
+  
+  <body> 
+   
+    <!-- PRELOADER -->
+    <div id='preloader'>
+      <div id='status'>&nbsp;</div>
+    </div>
+
+    <!-- SCROLL TO TOP BUTTON -->
+    <a href='#' class='scrollToTop'><i class='fa fa-angle-up'></i></a>
+	
+    <!-- HEADER -->
+    <header id='header'>
+    
+      <!-- MENU -->
+      <div class='menu_area'>
+        <nav class='navbar navbar-default navbar-fixed-top'>
+          <div class='container'>
+            <div class='navbar-header'>
+
+              <!-- MOBILE VIEW COLLAPSED BUTTON -->
+              <button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#navbar' aria-expanded='false' aria-controls='navbar'>
+                <span class='sr-only'>Toggle navigation</span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+              </button>
+              
+              <!-- LANGUATE OPTIONS -->
+              <!--?php
+                if ($lang=="en") {
+                  echo "<a href='?lang=pt' class='lang'>&nbsp;&nbsp;<i class='fa fa-language'></i>&nbsp;PT&nbsp;&nbsp;</a>";
+                } else {
+                  echo "<a href='?lang=en' class='lang'>&nbsp;&nbsp;<i class='fa fa-language'></i>&nbsp;EN&nbsp;&nbsp;</a>";
+                }
+              ?-->
+
+              <!-- LOGO -->
+
+              <!-- TEXT BASED LOGO -->
+              <!--a class='navbar-brand homeToTop' href='#'>DCA<span>UFRN</span></a-->
+            
+              <!-- DCA LOGO -->
+              <a href='#' class='homeToTop'>
+                <div class='dca container_logo'>
+                  <article class='dca caption'>
+                    <div class='dca container_line'>
+                      <div class='dca line'></div>
+                      <div class='dca line'></div>
+                      <div class='dca line'></div>
+                      <div class='dca line'></div>
+                      <div class='dca line'></div>
+                      <div class='dca line'></div>
+                      <div class='dca line'></div>
+                    </div>
+                    <div class='dca overlay'>
+                      <h1>D<span>C</span>A</h1>
+                    </div>
+                  </article>
+                </div>
+              </a>
+            
+              <!-- IMG BASED LOGO  -->
+              <!--a class='homeToTop' href='#'>
+                <div class='logo-dca'>
+                  <img src='img/DCA-SITE-Transp2.png' alt='DCA'>
+                </div>
+              </a--> 
+            
+            </div> <!--/.navbar-header -->
+            <div id='navbar' class='navbar-collapse collapse'>
+            
+              <ul id='top-menu' class='nav navbar-nav navbar-right main_nav'>
+              
+                <!--li class='active home'><a href='#' class='homeToTop'><i class='fa fa-home'></i></a></li-->
+                
+                <li class='dropdown' id='dropdown-departamento'>
+                  <a class='dropdown-toggle' role='button'>O Departamento <span class='fa fa-angle-down'></span></a>
+                  <ul class='dropdown-menu' role='menu'>
+                    <li><a href='#about-dca'>Sobre o DCA</a></li>
+                    <li><a href='#infrastructure-dca'>Infraestrutura</a></li>
+                    <li><a href='#professors-dca'>Corpo Docente</a></li>
+                    <li><a href='#staff-dca'>Corpo Administrativo</a></li>
+                    <!--li><a href='#blog'>Notícias</a></li-->
+                    <!--li><a href='#contact'>Contato</a></li-->
+                  </ul>
+                </li>
+        
+                <li class='dropdown' id='dropdown-ensino'>
+                  <a class='dropdown-toggle' role='button'>Cursos <span class='fa fa-angle-down'></span></a>
+                  <ul class='dropdown-menu' role='menu'>
+                    <li><a href='http://www.graduacao.ufrn.br/engcomp' target='_blank'>Graduação em Engenharia de Computação</a></li>
+                    <li><a href='http://www.graduacao.ufrn.br/mecatronica' target='_blank'>Graduação em Engenharia Mecatrônica</a></li>
+                    <li><a href='http://www.posgraduacao.ufrn.br/ppgeec' target='_blank'>Pós-Graduação em Computação</a></li>
+                    <li><a href='http://www.posgraduacao.ufrn.br/pem' target='_blank'>Pós-Graduação em Mecatrônica</a></li>
+                  </ul>
+                </li>
+          
+                <li class='dropdown' id='dropdown-pesquisa'>
+                  <a class='dropdown-toggle' role='button'>Pesquisa & Extensão <span class='fa fa-angle-down'></span></a>
+                  <ul class='dropdown-menu' role='menu'>
+                    <li><a href='https://sigaa.ufrn.br/sigaa/public/departamento/pesquisa.jsf?id=56' target='_blank'>Projetos de Pesquisa</a></li>
+                    <li><a href='https://sigaa.ufrn.br/sigaa/public/departamento/extensao.jsf?id=56' target='_blank'>Ações de Extensão</a></li>
+                  </ul>
+                </li>
+          
+                <!--li class='inactive menusolo' id='item-blog'><a href='#blog' id='noticia'>Notícias</a></li-->
+                
+                <!--li class='inactive menusolo' id='item-contato'><a href='#contact'>Contato</a></li-->
+                
+                <li class='inactive menusolo' id='item-contato'><a href='#contact'>Contato</a></li>
+
+                <!--?php 
+                  // Script to check if IP is from DCA (internal) in order to show 'SUPORTE' menu entry
+                  for ($i=96;$i<=127;$i+=1) // 10.13.96.* - 10.13.127.*
+                    for ($j=0;$j<=255;$j+=1) { // * = 0 - 255
+                      $ip = "10.13." . $i . "." . $j;
+                      $array[$ip] = 1;
+                    }
+
+                  $clientIP = $_SERVER['REMOTE_ADDR'];
+                  if (array_key_exists($clientIP, $array))
+                    echo "<li class='inactive menusolo' id='item-suporte'><a href='http://atende.dca.ufrn.br' id='suporte' target='_blank'>Suporte</a></li> \r\n";
+                ?-->
+
+                <li class='dropdown' id='dropdown-links'>
+                  <a class='dropdown-toggle' role='button'>Links <span class='fa fa-angle-down'></span></a>
+                  <ul class='dropdown-menu' role='menu' id='last-dropdown-menu'>
+                  <li><a href='http://www.ufrn.br' target='_blank'>Página da UFRN</a></li><li><a href='http://www.departamento.ufrn.br/dca' target='_blank'>Página do DCA no SIG</a></li><li><a href='https://sigaa.ufrn.br/sigaa' target='_blank'>Sistemas SIG-UFRN</a></li><li><a href='http://webmail.dca.ufrn.br' target='_blank'>Webmail DCA</a></li><li><a href='https://pt-br.facebook.com/caecompufrn' target='_blank'>CA ECOMP</a></li><li><a href='https://www.dca.ufrn.br/secem' target='_blank'>SEMANA ENGENHARIA</a></li>                  </ul>
+                </li>
+                <li class='inactive menusolo' id='item-lang'><a href='?lang=en' id='lang'><i class='fa fa-language'></i> EN</a></li> 
+              </ul>     
+              
+            </div>
+          </div>     
+        </nav>  
+      </div>
+
+      <!-- SLIDER AREA -->
+      <div class='slider_area'>       
+        <div id='slides' class='footerholder'>
+          <ul class='slides-container'>
+          
+            <!-- SLIDE #1 -->
+            <li>
+              <div class='slider_overlay'></div>
+              <img src='img/1.jpg' alt='Slide Image 1' width="1920" height="1080">
+              <div class='slider_caption'>
+                <h2>BEM-VINDO AO <span>DCA</span></h2>
+                <p>Departamento de Engenharia de Computação e Automação</p>   
+                <p id='lower'>Universidade Federal do Rio Grande do Norte</p> 
+              </div>
+            </li>
+
+            <!-- SLIDE #2 -->
+            <li>
+              <div class='slider_overlay'></div>
+              <img src='img/2.jpg' alt='Slide Image 2' width="1920" height="1080">
+              <div class='slider_caption'>
+                <h2>BEM-VINDO AO <span>DCA</span></h2>
+                <p>Departamento de Engenharia de Computação e Automação</p>
+                <p id='lower'>Universidade Federal do Rio Grande do Norte</p>                 
+              </div>
+            </li>
+
+            <!-- SLIDE #3 -->
+            <li>
+              <div class='slider_overlay'></div> 
+              <img src='img/3.jpg' alt='Slide Image 3' width="1920" height="1080">
+              <div class='slider_caption'>
+                <h2>BEM-VINDO AO <span>DCA</span></h2>
+                <p>Departamento de Engenharia de Computação e Automação</p>
+                <p id='lower'>Universidade Federal do Rio Grande do Norte</p> 
+              </div>
+            </li>
+          </ul>
+          
+          <!-- SLIDES NAVIGATION BUTTONS -->
+          <nav class='slides-navigation'>
+            <a class='prev' href='/item1' id='prev'></a>
+            <a class='next' href='/item3' id='next'></a>
+          </nav>
+          
+          <!-- SLIDE DOWN -->
+          <nav class='slides-navdown'>
+            <a href='#about-dca' class='slider_btn'>
+              <div class='arrow-animated arrow-bounce'><i class='arrow down'></i></div>
+              <!--span>Contato</span-->
+            </a>  
+          </nav>  
+          
+        </div>
+      </div>
+    </header>
+    
+    
+
+    
+    
+    <!-- 
+      # SOBRE O DCA
+    --> 
+    <main id='about-dca'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-lg-12 col-md-12'>
+            <div class='content_area'>
+            
+              <div class='heading'>
+                <h2 class='wow fadeInLeftBig'>O Departamento</h2>
+                <p>
+                O Departamento de Engenharia de Computação e Automação (DCA) é uma sub-unidade integrante do Centro de Tecnologia da Universidade Federal do Rio Grande do Norte (UFRN) , criado por Resolução do Conselho Universitário (CONSUNI) de 27 de abril de 2001, publicado em 11 de maio do mesmo ano.                </p>
+              </div>
+
+              <div class='content'>
+                <div class='row'>
+                  <div class='col-lg-12 col-md-12'> 
+                    <div class='content_featured'>
+                      <div class='panel-group' id='accordion-dca'>
+
+                                    
+                        <!-- HISTORICO -->
+                        <div class='panel panel-default wow'>
+                          <div class='panel-heading'>
+                            <h3 class='panel-title'>
+                              <a data-toggle='collapse' data-parent='#accordion-dca' href='about-dca#collapseHistorico'>
+                                <span class='fa fa-book'></span>Histórico                              </a>
+                            </h3>
+                          </div>
+                          <div id='collapseHistorico' class='panel-collapse collapse in'>
+                            <div class='panel-body'>
+                              <p>
+                              A criação do Departamento de Engenharia de Computação e Automação (DCA) na <a href='http://www.ufrn.br' target='_blank'>Universidade Federal do Rio Grande do Norte (UFRN)</a> teve origem em maio de 1991 com a inauguração do Laboratório de Engenharia de Computação e Automação (LECA), na época uma unidade vinculada ao Departamento de Engenharia Elétrica (DEE) da UFRN. Em outubro de 2001, o DCA passou a constituir um departamento autônomo. Atualmente, além do LECA, integram o DCA o <a href='http://laut.dca.ufrn.br' target='_blank'>Laboratório de Automação em Petróleo (LAUT)</a> e o <a href='http://lamp.dca.ufrn.br' target='_blank'>Laboratório de Avaliação de Medição em Petróleo (LAMP)</a>.<a href='http://dca.ufrn.br/historico' style='color: blue; text-decoration: underline; font-size: small;' target='_blank'> Saiba mais.</a>                              </p> 
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!-- MISSAO -->
+                        <div class='panel panel-default wow'>
+                          <div class='panel-heading'>
+                            <h3 class='panel-title'>
+                              <a data-toggle='collapse' data-parent='#accordion-dca' href='about-dca#collapseMissao'>
+                                 <span class='fa fa-flag'></span>Missão                              </a>
+                            </h3>
+                          </div>
+                          <div id='collapseMissao' class='panel-collapse collapse'>
+                            <div class='panel-body'>
+                              <p>
+                               A missão do Departamento de Engenharia de Computação e Automação (DCA) é educar, produzir e disseminar o conhecimento tecnológico e científico de alta qualidade em computação e automação, fomentando a construção de um pensamento crítico comprometido com a ética, o desenvolvimento sustentável, a democracia e a justiça social.                              </p>
+                            </div>
+                          </div>
+                        </div>              
+
+                        <!-- ENSINO -->
+                        <div class='panel panel-default wow'>
+                          <div class='panel-heading'>
+                            <h3 class='panel-title'>
+                              <a data-toggle='collapse' data-parent='#accordion-dca' href='about-dca#collapseEnsino'>
+                                <span class='fa fa-graduation-cap'></span>Ensino                              </a>
+                            </h3>
+                          </div>
+                          <div id='collapseEnsino' class='panel-collapse collapse'>
+                            <div class='panel-body'>
+                              <p>
+                              O corpo docente efetivo do Departamento de Engenharia de Computação e Automação (DCA) é composto por 25 professores doutores, prestando suporte aos cursos de graduação em <a href='http://www.graduacao.ufrn.br/engcomp' target='_blank'>Engenharia de Computação</a>, <a href='http://www.graduacao.ufrn.br/mecatronica' target='_blank'>Engenharia Mecatrônica</a>, <a href='https://sigaa.ufrn.br/sigaa/public/curso/portal.jsf?id=2000030' target='_blank'>Engenharia Elétrica</a>, <a href='https://sigaa.ufrn.br/sigaa/public/curso/portal.jsf?id=10320810' target='_blank'>Ciências e Tecnologia</a> e aos Programas de Pós-Graduação em <a href='http://www.posgraduacao.ufrn.br/ppgeec' target='_blank'>Engenharia Elétrica e de Computação (PPgEEC)</a>, em <a href='http://www.posgraduacao.ufrn.br/pem' target='_blank'>Engenharia Mecatrônica (PEM)</a> e do <a href='http://www.posgraduacao.ufrn.br/mpee' target='_blank'>Mestrado Profissional em Energia Elétrica (MPEE)</a>.                              </p>
+                              <!--p>O corpo docente efetivo do DCA é composto por 23 professores doutores. O DCA tem atuado em pesquisas nas áreas de robótica, controle de processos, sistemas distribuídos, sistemas inteligentes, entre outros. Destacam-se as pesquisas aplicadas ao setor de petróleo e de energia elétrica nos últimos anos, com a aprovação de vários projetos.</p-->
+                            </div>
+                          </div>
+                        </div>                          
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <!-- 
+      # INFRAESTRUTURA
+    -->     
+    <section id='infrastructure-dca'>
+      <div class='infrastructure_area'>
+        <div class='row'>
+          <div class='col-lg-12 col-md-12'>
+            <div class='container'>
+              <div class='heading'>
+                <h2 class='wow fadeInLeftBig'>Infraestrutura</h2>
+                <p>&nbsp;</p>
+                <!--p>O DCA conta com uma infraestrutura de laboratórios ... (em atualização)</p-->
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class='col-lg-12 col-md-12'>
+          <div class='container'>
+          
+          
+            <ul class='infrastructure_slider'>
+              <li><img src='img/1.jpg' alt='DCA' data-description='Departamento de Engenharia de Computação e Automação'></li><li><img loading="lazy" src='img/2.jpg' alt='LAUT' data-description='Laboratório de Automação em Petróleo'></li><li><img loading="lazy" src='img/3.jpg' alt='LAMP' data-description='Laboratório de Avaliação de Medição em Petróleo'></li>            </ul>
+          
+          
+
+            </div>
+            
+
+				</div>
+
+      </div>          			
+    </section>
+
+    <!-- CORPO DOCENTE -->
+        
+    <!-- 
+      # CORPO DOCENTE
+    --> 
+    <section id='professors-dca'>   
+      <div class='container'>
+        <div class='row'>
+          <div class='col-lg-12 col-md-12'>
+
+            <div class='heading'>
+              <h2 class='wow fadeInLeftBig'>Corpo Docente</h2>  
+              <p>
+              O corpo docente efetivo do Departamento de Engenharia de Computação e Automação (DCA) é composto por 25 professores doutores, prestando suporte aos cursos de graduação em <a href='http://www.graduacao.ufrn.br/engcomp' target='_blank'>Engenharia de Computação</a>, <a href='http://www.graduacao.ufrn.br/mecatronica' target='_blank'>Engenharia Mecatrônica</a>, <a href='https://sigaa.ufrn.br/sigaa/public/curso/portal.jsf?id=2000030' target='_blank'>Engenharia Elétrica</a>, <a href='https://sigaa.ufrn.br/sigaa/public/curso/portal.jsf?id=10320810' target='_blank'>Ciências e Tecnologia</a> e aos Programas de Pós-Graduação em <a href='http://www.posgraduacao.ufrn.br/ppgeec' target='_blank'>Engenharia Elétrica e de Computação (PPgEEC)</a>, em <a href='http://www.posgraduacao.ufrn.br/pem' target='_blank'>Engenharia Mecatrônica (PEM)</a> e do <a href='http://www.posgraduacao.ufrn.br/mpee' target='_blank'>Mestrado Profissional em Energia Elétrica (MPEE)</a>.              </p> 
+              <br>
+            </div>
+            
+            <div class='personnel_area'>
+              <div class='personnel_slider'>  
+                <div class='col-lg-3 col-md-3 col-sm-4'> 
+				  <div class='single_personnel wow fadeInUp'> 
+				   <a class='personnel_click_info' id='adelardo' style='pointer-events:none;cursor:default;'> 
+				     <div class='personnel_img personnel_img_noshow' id='prof_img_adelardo'> 
+				       <img loading="lazy" src='img/pessoal/adelardo.png' alt='adelardo' width="160" height="160"> 
+				     </div> 
+				   </a> 
+				   <div class='personnel_info' id='prof_info_adelardo'> 
+				     <h5 class=''>ADELARDO A. DANTAS DE MEDEIROS</h5> 
+				     <span>professor efetivo</span> 
+				   <div class='personnel_pages'> 
+				     <a href='https://www.dca.ufrn.br/~adelardo' target='_blank'><i class='fa fa-home' title='Página Pessoal'></i></a> 
+				     <a href='https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=350751' target='_blank'><i class='fa fa-university' title='Página Institucional'></i></a> 
+<i id='mask88876258'>[javascript protected e-mail address]</i><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'2@KNF76AcRg-#Jdbr+ODy.WhLMt9slP8j_03HxYwQqIGafi1TuZEznUXpVe4vo$mC5SkB\';var b=a.split(\'\').sort().join(\'\');var c=\'Gi1UGviVFX1i1EvVobmTvpFav\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask88876258\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+\'<i class=\\\'fa fa-envelope\\\' title=\\\'E-mail\\\'></i>\'+\'</a>\'')/*]]>*/</script>
+				   </div> 
+				   </div> 
+				  </div> 
+				</div> 
+ 				<div class='col-lg-3 col-md-3 col-sm-4'> 
+				  <div class='single_personnel wow fadeInUp'> 
+				   <a class='personnel_click_info' id='adriao' style='pointer-events:none;cursor:default;'> 
+				     <div class='personnel_img personnel_img_noshow' id='prof_img_adriao'> 
+				       <img loading="lazy" src='img/pessoal/adriao.png' alt='adriao' width="160" height="160"> 
+				     </div> 
+				   </a> 
+				   <div class='personnel_info' id='prof_info_adriao'> 
+				     <h5 class=''>ADRIÃO DUARTE DÓRIA NETO</h5> 
+				     <span>professor efetivo</span> 
+				   <div class='personnel_pages'> 
+				     <a href='https://www.dca.ufrn.br/~adriao' target='_blank'><i class='fa fa-home' title='Página Pessoal'></i></a> 
+				     <a href='https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=347628' target='_blank'><i class='fa fa-university' title='Página Institucional'></i></a> 
+<i id='mask100321492'>[javascript protected e-mail address]</i><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'urCIKnH@2ZTlt79d.fk+EUpO_icsWyG6h5BxX81M#V$zw-JvajASbq40FNeoYRmgDQPL3\';var b=a.split(\'\').sort().join(\'\');var c=\'zJYSzNKJgzYmvdgaYFKwY\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask100321492\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+\'<i class=\\\'fa fa-envelope\\\' title=\\\'E-mail\\\'></i>\'+\'</a>\'')/*]]>*/</script>
+				   </div> 
+				   </div> 
+				  </div> 
+				</div> 
+ 				<div class='col-lg-3 col-md-3 col-sm-4'> 
+				  <div class='single_personnel wow fadeInUp'> 
+				   <a class='personnel_click_info' id='ambj' style='pointer-events:none;cursor:default;'> 
+				     <div class='personnel_img personnel_img_noshow' id='prof_img_ambj'> 
+				       <img loading="lazy" src='img/pessoal/ambj.png' alt='ambj' width="160" height="160"> 
+				     </div> 
+				   </a> 
+				   <div class='personnel_info' id='prof_info_ambj'> 
+				     <h5 class=''>AGOSTINHO DE MEDEIROS BRITO JR.</h5> 
+				     <span>professor efetivo</span> 
+				   <div class='personnel_pages'> 
+				     <a href='https://www.dca.ufrn.br/~ambj' target='_blank'><i class='fa fa-home' title='Página Pessoal'></i></a> 
+				     <a href='https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=1279464' target='_blank'><i class='fa fa-university' title='Página Institucional'></i></a> 
+<i id='mask310786985'>[javascript protected e-mail address]</i><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'W7sLwY+2fPr68NjStvAp@zIT9O$El5dXVibe4-q10goDGFJyK_UCnhc#BHx3QZukaMmR.\';var b=a.split(\'\').sort().join(\'\');var c=\'D_HZuCBUHwnkBCHQSkKQBwGQ\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask310786985\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+\'<i class=\\\'fa fa-envelope\\\' title=\\\'E-mail\\\'></i>\'+\'</a>\'')/*]]>*/</script>
+				   </div> 
+				   </div> 
+				  </div> 
+				</div> 
+ 				<div class='col-lg-3 col-md-3 col-sm-4'> 
+				  <div class='single_personnel wow fadeInUp'> 
+				   <a class='personnel_click_info' id='anderson' style='pointer-events:none;cursor:default;'> 
+				     <div class='personnel_img personnel_img_noshow' id='prof_img_anderson'> 
+				       <img loading="lazy" src='img/pessoal/anderson.png' alt='anderson' width="160" height="160"> 
+				     </div> 
+				   </a> 
+				   <div class='personnel_info' id='prof_info_anderson'> 
+				     <h5 class=''>ANDERSON LUIZ DE OLIVEIRA CAVALCANTI</h5> 
+				     <span>professor efetivo</span> 
+				   <div class='personnel_pages'> 
+				     <a href='https://www.dca.ufrn.br/~anderson' target='_blank'><i class='fa fa-home' title='Página Pessoal'></i></a> 
+				     <a href='https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=2453033' target='_blank'><i class='fa fa-university' title='Página Institucional'></i></a> 
+<i id='mask196953870'>[javascript protected e-mail address]</i><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'F$YXC.1wUTK@mrghVeQEo9ylOv2Jf_-5ztcn4IS83+p67xWAPMbak0RsdZuNLBHDi#qjG\';var b=a.split(\'\').sort().join(\'\');var c=\'6dWALBZdCx6i6Rx6dHahDPLdC7L\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask196953870\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+\'<i class=\\\'fa fa-envelope\\\' title=\\\'E-mail\\\'></i>\'+\'</a>\'')/*]]>*/</script>
+				   </div> 
+				   </div> 
+				  </div> 
+				</div> 
+ 				<div class='col-lg-3 col-md-3 col-sm-4'> 
+				  <div class='single_personnel wow fadeInUp'> 
+				   <a class='personnel_click_info' id='maitelli' style='pointer-events:none;cursor:default;'> 
+				     <div class='personnel_img personnel_img_noshow' id='prof_img_maitelli'> 
+				       <img loading="lazy" src='img/pessoal/maitelli.png' alt='maitelli' width="160" height="160"> 
+				     </div> 
+				   </a> 
+				   <div class='personnel_info' id='prof_info_maitelli'> 
+				     <h5 class=''>ANDRÉ LAURINDO MAITELLI</h5> 
+				     <span>professor efetivo</span> 
+				   <div class='personnel_pages'> 
+				     <a href='https://www.dca.ufrn.br/~maitelli' target='_blank'><i class='fa fa-home' title='Página Pessoal'></i></a> 
+				     <a href='https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=350693' target='_blank'><i class='fa fa-university' title='Página Institucional'></i></a> 
+<i id='mask463143933'>[javascript protected e-mail address]</i><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'vkD5xeufHdCi61N3Ja.Qo_4w8ROSLXK+UGbhlq0E@sPI7cAW-mZ2$TnFztypB#VY9gMjr\';var b=a.split(\'\').sort().join(\'\');var c=\'IzABWxFI2VWnn23Y-Bzx7B\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask463143933\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+\'<i class=\\\'fa fa-envelope\\\' title=\\\'E-mail\\\'></i>\'+\'</a>\'')/*]]>*/</script>
+				   </div> 
+				   </div> 
+				  </div> 
+				</div> 
+ 				<div class='col-lg-3 col-md-3 col-sm-4'> 
+				  <div class='single_personnel wow fadeInUp'> 
+				   <a class='personnel_click_info' id='andres' style='pointer-events:none;cursor:default;'> 
+				     <div class='personnel_img personnel_img_noshow' id='prof_img_andres'> 
+				       <img loading="lazy" src='img/pessoal/andres.png' alt='andres' width="160" height="160"> 
+				     </div> 
+				   </a> 
+				   <div class='personnel_info' id='prof_info_andres'> 
+				     <h5 class=''>ANDRÉS ORTIZ SALAZAR</h5> 
+				     <span>professor efetivo</span> 
+				   <div class='personnel_pages'> 
+				     <a href='https://www.dca.ufrn.br/~andres' target='_blank'><i class='fa fa-home' title='Página Pessoal'></i></a> 
+				     <a href='https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=1149567' target='_blank'><i class='fa fa-university' title='Página Institucional'></i></a> 
+<i id='mask139565669'>[javascript protected e-mail address]</i><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'zCV1kHX75iN@R_-9vwnEJr8+ols4ySLOtMadWq3uY2pZBbhKFDmx6T0$fGQjIP#eAcg.U\';var b=a.split(\'\').sort().join(\'\');var c=\'ZfhIKPkPZ0ZUZI9eFIfkBI\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask139565669\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+\'<i class=\\\'fa fa-envelope\\\' title=\\\'E-mail\\\'></i>\'+\'</a>\'')/*]]>*/</script>
+				   </div> 
+				   </div> 
+				  </div> 
+				</div> 
+ 				<div class='col-lg-3 col-md-3 col-sm-4'> 
+				  <div class='single_personnel wow fadeInUp'> 
+				   <a class='personnel_click_info' id='cetdorea' style='pointer-events:none;cursor:default;'> 
+				     <div class='personnel_img personnel_img_noshow' id='prof_img_cetdorea'> 
+				       <img loading="lazy" src='img/pessoal/cetdorea.png' alt='cetdorea' width="160" height="160"> 
+				     </div> 
+				   </a> 
+				   <div class='personnel_info' id='prof_info_cetdorea'> 
+				     <h5 class=''>CARLOS EDUARDO TRABUCO DÓREA</h5> 
+				     <span>professor efetivo</span> 
+				   <div class='personnel_pages'> 
+				     <a href='https://www.dca.ufrn.br/~cetdorea' target='_blank'><i class='fa fa-home' title='Página Pessoal'></i></a> 
+				     <a href='https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=1328152' target='_blank'><i class='fa fa-university' title='Página Institucional'></i></a> 
+<i id='mask902993905'>[javascript protected e-mail address]</i><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'oT$#O+j6EiwXG-QPBU0zfZbSYqdp21xgWm5_Dh.8nleKCRkM3u@LFI9srH4taVN7JycAv\';var b=a.split(\'\').sort().join(\'\');var c=\'RKa9HVOkHaMKP73arOCa\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask902993905\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+\'<i class=\\\'fa fa-envelope\\\' title=\\\'E-mail\\\'></i>\'+\'</a>\'')/*]]>*/</script>
+				   </div> 
+				   </div> 
+				  </div> 
+				</div> 
+ 				<div class='col-lg-3 col-md-3 col-sm-4'> 
+				  <div class='single_personnel wow fadeInUp'> 
+				   <a class='personnel_click_info' id='viegas' style='pointer-events:none;cursor:default;'> 
+				     <div class='personnel_img personnel_img_noshow' id='prof_img_viegas'> 
+				       <img loading="lazy" src='img/pessoal/viegas.png' alt='viegas' width="160" height="160"> 
+				     </div> 
+				   </a> 
+				   <div class='personnel_info' id='prof_info_viegas'> 
+				     <h5 class=''>CARLOS MANUEL DIAS VIEGAS</h5> 
+				     <span>professor efetivo</span> 
+				   <div class='personnel_pages'> 
+				     <a href='https://www.dca.ufrn.br/~viegas' target='_blank'><i class='fa fa-home' title='Página Pessoal'></i></a> 
+				     <a href='https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=2249146' target='_blank'><i class='fa fa-university' title='Página Institucional'></i></a> 
+<i id='mask983796218'>[javascript protected e-mail address]</i><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'guH1P3c_hws4dRpex9VB2G.#58AnvoLI67iZ@qDtN0$a+frkzlWSQOCTEjM-bYKmJUFyX\';var b=a.split(\'\').sort().join(\'\');var c=\'fabCjYPJSklaYemzbEP+b\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask983796218\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+\'<i class=\\\'fa fa-envelope\\\' title=\\\'E-mail\\\'></i>\'+\'</a>\'')/*]]>*/</script>
+				   </div> 
+				   </div> 
+				  </div> 
+				</div> 
+ 				<div class='col-lg-3 col-md-3 col-sm-4'> 
+				  <div class='single_personnel wow fadeInUp'> 
+				   <a class='personnel_click_info' id='diogo' style='pointer-events:none;cursor:default;'> 
+				     <div class='personnel_img personnel_img_noshow' id='prof_img_diogo'> 
+				       <img loading="lazy" src='img/pessoal/diogo.png' alt='diogo' width="160" height="160"> 
+				     </div> 
+				   </a> 
+				   <div class='personnel_info' id='prof_info_diogo'> 
+				     <h5 class=''>DIOGO PINHEIRO FERNANDES PEDROSA</h5> 
+				     <span>professor efetivo</span> 
+				   <div class='personnel_pages'> 
+				     <a href='https://www.dca.ufrn.br/~diogo' target='_blank'><i class='fa fa-home' title='Página Pessoal'></i></a> 
+				     <a href='https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=2452782' target='_blank'><i class='fa fa-university' title='Página Institucional'></i></a> 
+<i id='mask372509641'>[javascript protected e-mail address]</i><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'4yEFnqzAP3Z6fIxkjQcW-g+@JU97XhbN12ds.TM_$m0aC8t5SovGRYHrw#iBuVpOlLKeD\';var b=a.split(\'\').sort().join(\'\');var c=\'tG#o#ni5tu#VakOSuwnCu\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask372509641\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+\'<i class=\\\'fa fa-envelope\\\' title=\\\'E-mail\\\'></i>\'+\'</a>\'')/*]]>*/</script>
+				   </div> 
+				   </div> 
+				  </div> 
+				</div> 
+ 				<div class='col-lg-3 col-md-3 col-sm-4'> 
+				  <div class='single_personnel wow fadeInUp'> 
+				   <a class='personnel_click_info' id='eduardo' style='pointer-events:none;cursor:default;'> 
+				     <div class='personnel_img personnel_img_noshow' id='prof_img_eduardo'> 
+				       <img loading="lazy" src='img/pessoal/eduardo.png' alt='eduardo' width="160" height="160"> 
+				     </div> 
+				   </a> 
+				   <div class='personnel_info' id='prof_info_eduardo'> 
+				     <h5 class=''>EDUARDO DE LUCENA FALCAO</h5> 
+				     <span>professor efetivo</span> 
+				   <div class='personnel_pages'> 
+				     <a href='https://www.dca.ufrn.br/~eduardo' target='_blank'><i class='fa fa-home' title='Página Pessoal'></i></a> 
+				     <a href='https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=1227439' target='_blank'><i class='fa fa-university' title='Página Institucional'></i></a> 
+<i id='mask605949315'>[javascript protected e-mail address]</i><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'jASH.+V_mo0bFhxnY1lUNZQX2u7rcJ@54GEI-8fgMWsO3LpBy9tP6zi$veqwkdR#DTKCa\';var b=a.split(\'\').sort().join(\'\');var c=\'Bp#Okpe.yOiLOen#ykv.3k\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask605949315\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+\'<i class=\\\'fa fa-envelope\\\' title=\\\'E-mail\\\'></i>\'+\'</a>\'')/*]]>*/</script>
+				   </div> 
+				   </div> 
+				  </div> 
+				</div> 
+ 				<div class='col-lg-3 col-md-3 col-sm-4'> 
+				  <div class='single_personnel wow fadeInUp'> 
+				   <a class='personnel_click_info' id='meneghet' style='pointer-events:none;cursor:default;'> 
+				     <div class='personnel_img personnel_img_noshow' id='prof_img_meneghet'> 
+				       <img loading="lazy" src='img/pessoal/meneghet.png' alt='meneghet' width="160" height="160"> 
+				     </div> 
+				   </a> 
+				   <div class='personnel_info' id='prof_info_meneghet'> 
+				     <h5 class=''>FÁBIO MENEGHETTI UGULINO DE ARAÚJO</h5> 
+				     <span>professor efetivo</span> 
+				   <div class='personnel_pages'> 
+				     <a href='https://www.dca.ufrn.br/~meneghet' target='_blank'><i class='fa fa-home' title='Página Pessoal'></i></a> 
+				     <a href='https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=1451883' target='_blank'><i class='fa fa-university' title='Página Institucional'></i></a> 
+<i id='mask884962046'>[javascript protected e-mail address]</i><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'e0whtSUyIYPXmCosgaxpvZOVlE4Kuri-5kLb@68#GT_MdQB9D3c2JFA$N.1+RWzHqfjn7\';var b=a.split(\'\').sort().join(\'\');var c=\'DMd2.t$9N93c9zz2sHDRNtdR\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask884962046\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+\'<i class=\\\'fa fa-envelope\\\' title=\\\'E-mail\\\'></i>\'+\'</a>\'')/*]]>*/</script>
+				   </div> 
+				   </div> 
+				  </div> 
+				</div> 
+ 				<div class='col-lg-3 col-md-3 col-sm-4'> 
+				  <div class='single_personnel wow fadeInUp'> 
+				   <a class='personnel_click_info' id='mota' style='pointer-events:none;cursor:default;'> 
+				     <div class='personnel_img personnel_img_noshow' id='prof_img_mota'> 
+				       <img loading="lazy" src='img/pessoal/mota.png' alt='mota' width="160" height="160"> 
+				     </div> 
+				   </a> 
+				   <div class='personnel_info' id='prof_info_mota'> 
+				     <h5 class=''>FRANCISCO DAS CHAGAS MOTA</h5> 
+				     <span>professor efetivo</span> 
+				   <div class='personnel_pages'> 
+				     <a href='https://www.dca.ufrn.br/~mota' target='_blank'><i class='fa fa-home' title='Página Pessoal'></i></a> 
+				     <a href='https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=1149639' target='_blank'><i class='fa fa-university' title='Página Institucional'></i></a> 
+<i id='mask124981518'>[javascript protected e-mail address]</i><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'RiC-rGalL6Kb12ogkYUMP9E5OXTt4n#3Jj8xB_zfNq+.uFdSIsvQyc$D0h@VWHpw7eAmZ\';var b=a.split(\'\').sort().join(\'\');var c=\'IW.0FQHFhrDhp.gwIW0ruW\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask124981518\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+\'<i class=\\\'fa fa-envelope\\\' title=\\\'E-mail\\\'></i>\'+\'</a>\'')/*]]>*/</script>
+				   </div> 
+				   </div> 
+				  </div> 
+				</div> 
+ 				<div class='col-lg-3 col-md-3 col-sm-4'> 
+				  <div class='single_personnel wow fadeInUp'> 
+				   <a class='personnel_click_info' id='ivanovitch' style='pointer-events:none;cursor:default;'> 
+				     <div class='personnel_img personnel_img_noshow' id='prof_img_ivanovitch'> 
+				       <img loading="lazy" src='img/pessoal/ivanovitch.png' alt='ivanovitch' width="160" height="160"> 
+				     </div> 
+				   </a> 
+				   <div class='personnel_info' id='prof_info_ivanovitch'> 
+				     <h5 class=''>IVANOVITCH M. DANTAS DA SILVA</h5> 
+				     <span>professor efetivo</span> 
+				   <div class='personnel_pages'> 
+				     <a href='https://www.dca.ufrn.br/~ivanovitch' target='_blank'><i class='fa fa-home' title='Página Pessoal'></i></a> 
+				     <a href='https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=2885532' target='_blank'><i class='fa fa-university' title='Página Institucional'></i></a> 
+<i id='mask557708962'>[javascript protected e-mail address]</i><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'26OHlabkeBqg1i8y30#9oN-Yz@p57cZKtEWTsSn_IMX$4RhxPGvVACjUwuLdFJD.rQ+mf\';var b=a.split(\'\').sort().join(\'\');var c=\'Vr$wurVDRvlJVjr$y.PFwl4F\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask557708962\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+\'<i class=\\\'fa fa-envelope\\\' title=\\\'E-mail\\\'></i>\'+\'</a>\'')/*]]>*/</script>
+				   </div> 
+				   </div> 
+				  </div> 
+				</div> 
+ 				<div class='col-lg-3 col-md-3 col-sm-4'> 
+				  <div class='single_personnel wow fadeInUp'> 
+				   <a class='personnel_click_info' id='ivonildo' style='pointer-events:none;cursor:default;'> 
+				     <div class='personnel_img personnel_img_noshow' id='prof_img_ivonildo'> 
+				       <img loading="lazy" src='img/pessoal/ivonildo.png' alt='ivonildo' width="160" height="160"> 
+				     </div> 
+				   </a> 
+				   <div class='personnel_info' id='prof_info_ivonildo'> 
+				     <h5 class=''>JOSÉ IVONILDO DO REGO</h5> 
+				     <span>professor efetivo</span> 
+				   <div class='personnel_pages'> 
+				     <a href='https://www.dca.ufrn.br/~ivonildo' target='_blank'><i class='fa fa-home' title='Página Pessoal'></i></a> 
+				     <a href='https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=346139' target='_blank'><i class='fa fa-university' title='Página Institucional'></i></a> 
+<i id='mask950007407'>[javascript protected e-mail address]</i><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'GO1TY-WHojx5ZE067pf$.8#d_RNAbvC4Ur3neByqw+uiSVQg@hMcmzLl9FIDt2skKaJXP\';var b=a.split(\'\').sort().join(\'\');var c=\'6k@t9YSt\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask950007407\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+\'<i class=\\\'fa fa-envelope\\\' title=\\\'E-mail\\\'></i>\'+\'</a>\'')/*]]>*/</script>
+				   </div> 
+				   </div> 
+				  </div> 
+				</div> 
+ 				<div class='col-lg-3 col-md-3 col-sm-4'> 
+				  <div class='single_personnel wow fadeInUp'> 
+				   <a class='personnel_click_info' id='affonso' style='pointer-events:none;cursor:default;'> 
+				     <div class='personnel_img personnel_img_noshow' id='prof_img_affonso'> 
+				       <img loading="lazy" src='img/pessoal/affonso.png' alt='affonso' width="160" height="160"> 
+				     </div> 
+				   </a> 
+				   <div class='personnel_info' id='prof_info_affonso'> 
+				     <h5 class=''>LUIZ AFFONSO H. GUEDES DE OLIVEIRA</h5> 
+				     <span>professor efetivo</span> 
+				   <div class='personnel_pages'> 
+				     <a href='https://www.dca.ufrn.br/~affonso' target='_blank'><i class='fa fa-home' title='Página Pessoal'></i></a> 
+				     <a href='https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=1153006' target='_blank'><i class='fa fa-university' title='Página Institucional'></i></a> 
+<i id='mask963270793'>[javascript protected e-mail address]</i><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'6MGeTUyBbHEDmI24fYuAp51rF8XSdL.7qav+it#z$k3jWgPJw9RlncOhQs0C-VZ_@NoxK\';var b=a.split(\'\').sort().join(\'\');var c=\'O_lKTjwwsQVsT9_JPJV4_w-QTW-\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask963270793\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+\'<i class=\\\'fa fa-envelope\\\' title=\\\'E-mail\\\'></i>\'+\'</a>\'')/*]]>*/</script>
+				   </div> 
+				   </div> 
+				  </div> 
+				</div> 
+ 				<div class='col-lg-3 col-md-3 col-sm-4'> 
+				  <div class='single_personnel wow fadeInUp'> 
+				   <a class='personnel_click_info' id='lfelipe' style='pointer-events:none;cursor:default;'> 
+				     <div class='personnel_img personnel_img_noshow' id='prof_img_lfelipe'> 
+				       <img loading="lazy" src='img/pessoal/lfelipe.png' alt='lfelipe' width="160" height="160"> 
+				     </div> 
+				   </a> 
+				   <div class='personnel_info' id='prof_info_lfelipe'> 
+				     <h5 class=''>LUIZ FELIPE DE QUEIROZ SILVEIRA</h5> 
+				     <span>professor efetivo</span> 
+				   <div class='personnel_pages'> 
+				     <a href='https://www.dca.ufrn.br/~lfelipe' target='_blank'><i class='fa fa-home' title='Página Pessoal'></i></a> 
+				     <a href='https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=1543191' target='_blank'><i class='fa fa-university' title='Página Institucional'></i></a> 
+<i id='mask639819076'>[javascript protected e-mail address]</i><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'UG02g3FY8#fLOJPbHuC5v4z6B71-EcNsjehSldwni9qrXy@QDxm$kZ_pARoMTKaW.tI+V\';var b=a.split(\'\').sort().join(\'\');var c=\'DQ_$oQgK$_.Q$TrbWDTAgXT\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask639819076\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+\'<i class=\\\'fa fa-envelope\\\' title=\\\'E-mail\\\'></i>\'+\'</a>\'')/*]]>*/</script>
+				   </div> 
+				   </div> 
+				  </div> 
+				</div> 
+ 				<div class='col-lg-3 col-md-3 col-sm-4'> 
+				  <div class='single_personnel wow fadeInUp'> 
+				   <a class='personnel_click_info' id='lmarcos' style='pointer-events:none;cursor:default;'> 
+				     <div class='personnel_img personnel_img_noshow' id='prof_img_lmarcos'> 
+				       <img loading="lazy" src='img/pessoal/lmarcos.png' alt='lmarcos' width="160" height="160"> 
+				     </div> 
+				   </a> 
+				   <div class='personnel_info' id='prof_info_lmarcos'> 
+				     <h5 class=''>LUIZ MARCOS GARCIA GONÇALVES</h5> 
+				     <span>professor efetivo</span> 
+				   <div class='personnel_pages'> 
+				     <a href='https://www.dca.ufrn.br/~lmarcos' target='_blank'><i class='fa fa-home' title='Página Pessoal'></i></a> 
+				     <a href='https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=1345674' target='_blank'><i class='fa fa-university' title='Página Institucional'></i></a> 
+<i id='mask229484277'>[javascript protected e-mail address]</i><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'nX7D3qANtau1w-kPO59#RoYLmSgKyBQ+Jj6x$THzU8Zc2pM@.WFi_rbsGICfdheVv4E0l\';var b=a.split(\'\').sort().join(\'\');var c=\'bVil3WIGpcbv@hPV.dG32d\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask229484277\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+\'<i class=\\\'fa fa-envelope\\\' title=\\\'E-mail\\\'></i>\'+\'</a>\'')/*]]>*/</script>
+				   </div> 
+				   </div> 
+				  </div> 
+				</div> 
+ 				<div class='col-lg-3 col-md-3 col-sm-4'> 
+				  <div class='single_personnel wow fadeInUp'> 
+				   <a class='personnel_click_info' id='firmino' style='pointer-events:none;cursor:default;'> 
+				     <div class='personnel_img personnel_img_noshow' id='prof_img_firmino'> 
+				       <img loading="lazy" src='img/pessoal/nophoto.png' alt='firmino' width="160" height="160"> 
+				     </div> 
+				   </a> 
+				   <div class='personnel_info' id='prof_info_firmino'> 
+				     <h5 class=''>MANOEL FIRMINO DE MEDEIROS JÚNIOR</h5> 
+				     <span>professor efetivo</span> 
+				   <div class='personnel_pages'> 
+				     <a href='https://www.dca.ufrn.br/~firmino' target='_blank'><i class='fa fa-home' title='Página Pessoal'></i></a> 
+				     <a href='https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=346287' target='_blank'><i class='fa fa-university' title='Página Institucional'></i></a> 
+<i id='mask823831188'>[javascript protected e-mail address]</i><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'VNmeAOJhW4+r7q.lsQfGC@UzP38y#05gcTIp$a62xLdEXBkHYKDwZv91juF_tnoiRS-bM\';var b=a.split(\'\').sort().join(\'\');var c=\'Ywt1wjuA1HkHwtunliYtjAXt\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask823831188\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+\'<i class=\\\'fa fa-envelope\\\' title=\\\'E-mail\\\'></i>\'+\'</a>\'')/*]]>*/</script>
+				   </div> 
+				   </div> 
+				  </div> 
+				</div> 
+ 				<div class='col-lg-3 col-md-3 col-sm-4'> 
+				  <div class='single_personnel wow fadeInUp'> 
+				   <a class='personnel_click_info' id='mfernandes' style='pointer-events:none;cursor:default;'> 
+				     <div class='personnel_img personnel_img_noshow' id='prof_img_mfernandes'> 
+				       <img loading="lazy" src='img/pessoal/mfernandes.png' alt='mfernandes' width="160" height="160"> 
+				     </div> 
+				   </a> 
+				   <div class='personnel_info' id='prof_info_mfernandes'> 
+				     <h5 class=''>MARCELO AUGUSTO COSTA FERNANDES</h5> 
+				     <span>professor efetivo</span> 
+				   <div class='personnel_pages'> 
+				     <a href='https://www.dca.ufrn.br/~mfernandes' target='_blank'><i class='fa fa-home' title='Página Pessoal'></i></a> 
+				     <a href='https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=1837240' target='_blank'><i class='fa fa-university' title='Página Institucional'></i></a> 
+<i id='mask396933210'>[javascript protected e-mail address]</i><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'VWzn4+6XBv7HUN2TLOZj85$lrc.yF@mtI9eQbC3_wfY0SgE1spMxi-koPAJdhq#uKaRGD\';var b=a.split(\'\').sort().join(\'\');var c=\'o0hg1kA4s1hP0PE1qTushP4Sh\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask396933210\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+\'<i class=\\\'fa fa-envelope\\\' title=\\\'E-mail\\\'></i>\'+\'</a>\'')/*]]>*/</script>
+				   </div> 
+				   </div> 
+				  </div> 
+				</div> 
+ 				<div class='col-lg-3 col-md-3 col-sm-4'> 
+				  <div class='single_personnel wow fadeInUp'> 
+				   <a class='personnel_click_info' id='pablo' style='pointer-events:none;cursor:default;'> 
+				     <div class='personnel_img personnel_img_noshow' id='prof_img_pablo'> 
+				       <img loading="lazy" src='img/pessoal/pablo.png' alt='pablo' width="160" height="160"> 
+				     </div> 
+				   </a> 
+				   <div class='personnel_info' id='prof_info_pablo'> 
+				     <h5 class=''>PABLO JAVIER ALSINA</h5> 
+				     <span>professor efetivo</span> 
+				   <div class='personnel_pages'> 
+				     <a href='https://www.dca.ufrn.br/~pablo' target='_blank'><i class='fa fa-home' title='Página Pessoal'></i></a> 
+				     <a href='https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=1242315' target='_blank'><i class='fa fa-university' title='Página Institucional'></i></a> 
+<i id='mask977033509'>[javascript protected e-mail address]</i><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'_0zf@gXoi5W6w$QF9ZcaS-7ljm3u2ARxIE1UpJTK.b4hP#8YOdeGH+BNkDVLMqytnsCvr\';var b=a.split(\'\').sort().join(\'\');var c=\'VhPBD@hBqGkhFtOMk@PM\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask977033509\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+\'<i class=\\\'fa fa-envelope\\\' title=\\\'E-mail\\\'></i>\'+\'</a>\'')/*]]>*/</script>
+				   </div> 
+				   </div> 
+				  </div> 
+				</div> 
+ 				<div class='col-lg-3 col-md-3 col-sm-4'> 
+				  <div class='single_personnel wow fadeInUp'> 
+				   <a class='personnel_click_info' id='pmotta' style='pointer-events:none;cursor:default;'> 
+				     <div class='personnel_img personnel_img_noshow' id='prof_img_pmotta'> 
+				       <img loading="lazy" src='img/pessoal/nophoto.png' alt='pmotta' width="160" height="160"> 
+				     </div> 
+				   </a> 
+				   <div class='personnel_info' id='prof_info_pmotta'> 
+				     <h5 class=''>PAULO SERGIO DA MOTTA PIRES</h5> 
+				     <span>professor efetivo</span> 
+				   <div class='personnel_pages'> 
+				     <a href='https://www.dca.ufrn.br/~pmotta' target='_blank'><i class='fa fa-home' title='Página Pessoal'></i></a> 
+				     <a href='https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=347052' target='_blank'><i class='fa fa-university' title='Página Institucional'></i></a> 
+<i id='mask241865446'>[javascript protected e-mail address]</i><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'esjBZ2JyD@+z1.9V6WEalMGUbigFHQrKxn7YfN0ckqpd-PA_I8C34TXSvLwmut#oROh5$\';var b=a.split(\'\').sort().join(\'\');var c=\'wdoXLZSL##dVoIuvZ-u\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask241865446\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+\'<i class=\\\'fa fa-envelope\\\' title=\\\'E-mail\\\'></i>\'+\'</a>\'')/*]]>*/</script>
+				   </div> 
+				   </div> 
+				  </div> 
+				</div> 
+ 				<div class='col-lg-3 col-md-3 col-sm-4'> 
+				  <div class='single_personnel wow fadeInUp'> 
+				   <a class='personnel_click_info' id='ricardo' style='pointer-events:none;cursor:default;'> 
+				     <div class='personnel_img personnel_img_noshow' id='prof_img_ricardo'> 
+				       <img loading="lazy" src='img/pessoal/ricardo.png' alt='ricardo' width="160" height="160"> 
+				     </div> 
+				   </a> 
+				   <div class='personnel_info' id='prof_info_ricardo'> 
+				     <h5 class=''>RICARDO FERREIRA PINHEIRO</h5> 
+				     <span>professor efetivo</span> 
+				   <div class='personnel_pages'> 
+				     <a href='https://www.dca.ufrn.br/~ricardo' target='_blank'><i class='fa fa-home' title='Página Pessoal'></i></a> 
+				     <a href='https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=347427' target='_blank'><i class='fa fa-university' title='Página Institucional'></i></a> 
+<i id='mask581878947'>[javascript protected e-mail address]</i><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'4P+HBKJ_gcaQmR.XxMjObieqV1Wp0nDCE6Go$Yr5fk2@AIS8luT#sLh37N9ZvdzFUtyw-\';var b=a.split(\'\').sort().join(\'\');var c=\'v#I@vSNB9#7T8#vNXFlv7BAv\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask581878947\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+\'<i class=\\\'fa fa-envelope\\\' title=\\\'E-mail\\\'></i>\'+\'</a>\'')/*]]>*/</script>
+				   </div> 
+				   </div> 
+				  </div> 
+				</div> 
+ 				<div class='col-lg-3 col-md-3 col-sm-4'> 
+				  <div class='single_personnel wow fadeInUp'> 
+				   <a class='personnel_click_info' id='samuel' style='pointer-events:none;cursor:default;'> 
+				     <div class='personnel_img personnel_img_noshow' id='prof_img_samuel'> 
+				       <img loading="lazy" src='img/pessoal/samuel.png' alt='samuel' width="160" height="160"> 
+				     </div> 
+				   </a> 
+				   <div class='personnel_info' id='prof_info_samuel'> 
+				     <h5 class=''>SAMUEL XAVIER DE SOUZA</h5> 
+				     <span>professor efetivo</span> 
+				   <div class='personnel_pages'> 
+				     <a href='https://www.dca.ufrn.br/~samuel' target='_blank'><i class='fa fa-home' title='Página Pessoal'></i></a> 
+				     <a href='https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=1673543' target='_blank'><i class='fa fa-university' title='Página Institucional'></i></a> 
+<i id='mask859927954'>[javascript protected e-mail address]</i><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'AUL#qn@bx7aue36rNWEsVl_-5vM4hPz+j$KXfdY0H9DSoRtciQGCJ.ZTkgyO8BwpI2mF1\';var b=a.split(\'\').sort().join(\'\');var c=\'BSTpcZqmSICc8rpi8kqo8\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask859927954\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+\'<i class=\\\'fa fa-envelope\\\' title=\\\'E-mail\\\'></i>\'+\'</a>\'')/*]]>*/</script>
+				   </div> 
+				   </div> 
+				  </div> 
+				</div> 
+ 				<div class='col-lg-3 col-md-3 col-sm-4'> 
+				  <div class='single_personnel wow fadeInUp'> 
+				   <a class='personnel_click_info' id='catunda' style='pointer-events:none;cursor:default;'> 
+				     <div class='personnel_img personnel_img_noshow' id='prof_img_catunda'> 
+				       <img loading="lazy" src='img/pessoal/catunda.png' alt='catunda' width="160" height="160"> 
+				     </div> 
+				   </a> 
+				   <div class='personnel_info' id='prof_info_catunda'> 
+				     <h5 class=''>SEBASTIAN YURI CAVALCANTI CATUNDA</h5> 
+				     <span>professor efetivo</span> 
+				   <div class='personnel_pages'> 
+				     <a href='https://www.dca.ufrn.br/~catunda' target='_blank'><i class='fa fa-home' title='Página Pessoal'></i></a> 
+				     <a href='https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=1284113' target='_blank'><i class='fa fa-university' title='Página Institucional'></i></a> 
+<i id='mask783758350'>[javascript protected e-mail address]</i><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'ZL2x@jsi69MoFlTA$yEXgnYIcrhwdvH7f5eKGp-CNVU#Db_.B+qJkSO3uQWmR4tP180za\';var b=a.split(\'\').sort().join(\'\');var c=\'zPRJ@b#tPu_#APBRu@DR\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask783758350\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+\'<i class=\\\'fa fa-envelope\\\' title=\\\'E-mail\\\'></i>\'+\'</a>\'')/*]]>*/</script>
+				   </div> 
+				   </div> 
+				  </div> 
+				</div> 
+ 				<div class='col-lg-3 col-md-3 col-sm-4'> 
+				  <div class='single_personnel wow fadeInUp'> 
+				   <a class='personnel_click_info' id='tbarros' style='pointer-events:none;cursor:default;'> 
+				     <div class='personnel_img personnel_img_noshow' id='prof_img_tbarros'> 
+				       <img loading="lazy" src='img/pessoal/tbarros.png' alt='tbarros' width="160" height="160"> 
+				     </div> 
+				   </a> 
+				   <div class='personnel_info' id='prof_info_tbarros'> 
+				     <h5 class=''>TIAGO TAVARES LEITE BARROS</h5> 
+				     <span>professor efetivo</span> 
+				   <div class='personnel_pages'> 
+				     <a href='https://www.dca.ufrn.br/~tbarros' target='_blank'><i class='fa fa-home' title='Página Pessoal'></i></a> 
+				     <a href='https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=3216921' target='_blank'><i class='fa fa-university' title='Página Institucional'></i></a> 
+<i id='mask974906920'>[javascript protected e-mail address]</i><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'g-N8lGTcjFYdqVDB.4X7xK+Q0w2eEzbZMriyPvtUhA3p_CSkm6JL1Hf$5uWas9onOI#R@\';var b=a.split(\'\').sort().join(\'\');var c=\'oLp6ul_pssu9Bnms5l_s\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask974906920\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+\'<i class=\\\'fa fa-envelope\\\' title=\\\'E-mail\\\'></i>\'+\'</a>\'')/*]]>*/</script>
+				   </div> 
+				   </div> 
+				  </div> 
+				</div> 
+ 				
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+      # CORPO ADMINISTRATIVO
+    --> 
+    <section id='staff-dca'>
+
+      <div class='container'>
+        <div class='row'>
+          <div class='col-lg-12 col-md-12'>
+
+            <div class='heading'>
+              <h2 class='wow fadeInLeftBig'>Corpo Administrativo</h2>  
+              <p>&nbsp;</p>              
+                <!--p>O Departamento de Engenharia de Computação e Automação conta com 9 colaboradores em seu corpo administrativo e técnico.</p-->
+            </div>
+            
+            <div class='personnel_area'>             
+              <div class='personnel_slider'>  
+                             
+                <div class='col-lg-3 col-md-3 col-sm-4'> 
+				  <div class='single_personnel wow fadeInUp'> 
+				   <a class='personnel_click_info' id='flavio' style='pointer-events:none;cursor:default;'> 
+				     <div class='personnel_img personnel_img_noshow' id='prof_img_flavio'> 
+				       <img loading="lazy" src='img/pessoal/flavio.png' alt='flavio' width="160" height="160"> 
+				     </div> 
+				   </a> 
+				   <div class='personnel_info' id='prof_info_flavio'> 
+				     <h5 class=''>FLÁVIO HILDEMBERG DA SILVA GAMELEIRA</h5> 
+				     <span>assistente administrativo</span> 
+				   <div class='personnel_pages'> 
+				     <a href='https://www.dca.ufrn.br/~flavio' target='_blank'><i class='fa fa-home' title='Página Pessoal'></i></a> 
+<i id='mask738878392'>[javascript protected e-mail address]</i><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'wylbQpD5YJAnCE4hsoGRV@+1N#S.jWvg-cftquUk2FTIK9XH7x8Oadr_eL6$iPZBM0mz3\';var b=a.split(\'\').sort().join(\'\');var c=\'7rIMOLQxI_HrHOiIhB7ieQKi\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask738878392\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+\'<i class=\\\'fa fa-envelope\\\' title=\\\'E-mail\\\'></i>\'+\'</a>\'')/*]]>*/</script>
+				   </div> 
+				   </div> 
+				  </div> 
+				</div> 
+ 				<div class='col-lg-3 col-md-3 col-sm-4'> 
+				  <div class='single_personnel wow fadeInUp'> 
+				   <a class='personnel_click_info' id='andrepires' style='pointer-events:none;cursor:default;'> 
+				     <div class='personnel_img personnel_img_noshow' id='prof_img_andrepires'> 
+				       <img loading="lazy" src='img/pessoal/andrepires.png' alt='andrepires' width="160" height="160"> 
+				     </div> 
+				   </a> 
+				   <div class='personnel_info' id='prof_info_andrepires'> 
+				     <h5 class=''>ANDRE HENRIQUE MATIAS PIRES</h5> 
+				     <span>engenheiro</span> 
+				   <div class='personnel_pages'> 
+				     <a href='https://www.dca.ufrn.br/~andrepires' target='_blank'><i class='fa fa-home' title='Página Pessoal'></i></a> 
+<i id='mask934614744'>[javascript protected e-mail address]</i><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'u@iPwaTdlM+_c21ASLzsnkWjbfB-7mx4q8hO9p.0GQD$t3#EKZXCNYFVv5eHoJyIRU6rg\';var b=a.split(\'\').sort().join(\'\');var c=\'$v#oEweCoEJAIKovwto\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask934614744\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+\'<i class=\\\'fa fa-envelope\\\' title=\\\'E-mail\\\'></i>\'+\'</a>\'')/*]]>*/</script>
+				   </div> 
+				   </div> 
+				  </div> 
+				</div> 
+ 				<div class='col-lg-3 col-md-3 col-sm-4'> 
+				  <div class='single_personnel wow fadeInUp'> 
+				   <a class='personnel_click_info' id='diegomoura' style='pointer-events:none;cursor:default;'> 
+				     <div class='personnel_img personnel_img_noshow' id='prof_img_diegomoura'> 
+				       <img loading="lazy" src='img/pessoal/diegomoura.png' alt='diegomoura' width="160" height="160"> 
+				     </div> 
+				   </a> 
+				   <div class='personnel_info' id='prof_info_diegomoura'> 
+				     <h5 class=''>DIEGO ANTONIO DE MOURA FONSECA</h5> 
+				     <span>engenheiro</span> 
+				   <div class='personnel_pages'> 
+				     <a href='https://www.dca.ufrn.br/~diegomoura' target='_blank'><i class='fa fa-home' title='Página Pessoal'></i></a> 
+<i id='mask967348527'>[javascript protected e-mail address]</i><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'vKB6j7or@5Eq9pZwsfST1ilU#08PnxGhQI-yYHzW$X_uDFe.a24CJ+ct3bgNkAMLRdmVO\';var b=a.split(\'\').sort().join(\'\');var c=\'eC.2bjtbLkuwLak3jDk\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask967348527\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+\'<i class=\\\'fa fa-envelope\\\' title=\\\'E-mail\\\'></i>\'+\'</a>\'')/*]]>*/</script>
+				   </div> 
+				   </div> 
+				  </div> 
+				</div> 
+ 				<div class='col-lg-3 col-md-3 col-sm-4'> 
+				  <div class='single_personnel wow fadeInUp'> 
+				   <a class='personnel_click_info' id='fabricio' style='pointer-events:none;cursor:default;'> 
+				     <div class='personnel_img personnel_img_noshow' id='prof_img_fabricio'> 
+				       <img loading="lazy" src='img/pessoal/nophoto.png' alt='fabricio' width="160" height="160"> 
+				     </div> 
+				   </a> 
+				   <div class='personnel_info' id='prof_info_fabricio'> 
+				     <h5 class=''>FABRICIO ROOSEVELT MELO DA SILVA</h5> 
+				     <span>técnico em eletrônica</span> 
+				   <div class='personnel_pages'> 
+				     <a href='https://www.dca.ufrn.br/~fabricio' target='_blank'><i class='fa fa-home' title='Página Pessoal'></i></a> 
+<i id='mask630478682'>[javascript protected e-mail address]</i><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'e-min6jYH21rAqBzapZbQsl@_NuP#MvdGXT4oIgwD0cJ8KyCVUfEhtx7O953$WRFSL+k.\';var b=a.split(\'\').sort().join(\'\');var c=\'VJ8$EKE9n$99WCSCxRnWExSJzFV$On8$\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask630478682\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+\'<i class=\\\'fa fa-envelope\\\' title=\\\'E-mail\\\'></i>\'+\'</a>\'')/*]]>*/</script>
+				   </div> 
+				   </div> 
+				  </div> 
+				</div> 
+ 				<div class='col-lg-3 col-md-3 col-sm-4'> 
+				  <div class='single_personnel wow fadeInUp'> 
+				   <a class='personnel_click_info' id='joaopaulo' style='pointer-events:none;cursor:default;'> 
+				     <div class='personnel_img personnel_img_noshow' id='prof_img_joaopaulo'> 
+				       <img loading="lazy" src='img/pessoal/joaopaulo.png' alt='joaopaulo' width="160" height="160"> 
+				     </div> 
+				   </a> 
+				   <div class='personnel_info' id='prof_info_joaopaulo'> 
+				     <h5 class=''>JOÃO PAULO FERREIRA CÂNDIDO</h5> 
+				     <span>técnico em eletrônica</span> 
+				   <div class='personnel_pages'> 
+				     <a href='https://www.dca.ufrn.br/~joaopaulo' target='_blank'><i class='fa fa-home' title='Página Pessoal'></i></a> 
+<i id='mask332980398'>[javascript protected e-mail address]</i><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'aE@bcTKyWzBvlpqx+4-H5Is7S8e9hjVg#LU2AYJf1ktCoMX_Nn$0GdP3QRw6rOuiFDZ.m\';var b=a.split(\'\').sort().join(\'\');var c=\'GRCRcwCiPRcN_rr_0rCxiNrQcor\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask332980398\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+\'<i class=\\\'fa fa-envelope\\\' title=\\\'E-mail\\\'></i>\'+\'</a>\'')/*]]>*/</script>
+				   </div> 
+				   </div> 
+				  </div> 
+				</div> 
+ 				              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      
+    <!-- 
+      # NOTICIAS
+    -->    
+    <section id='blog' style='display:none;'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-lg-12 col-md-12'>
+            <!-- CABECALHO -->
+            <div class='heading'>
+              <h2 class='wow fadeInLeftBig'>Notícias</h2>
+              <p>&nbsp;</p>
+              <!--p>Notícias relevantes a respeito do Departamento de Engenharia de Computação e Automação. </p-->
+            </div>
+          </div>
+          
+          <div class='col-lg-12 col-md-12'>
+
+   
+            <div class='content_area'>
+              <div class='blog_slider'>
+              
+                <!-- NOTICIA 1 -->
+                <div class='col-lg-4 col-md-4 col-sm-4'>
+                  <div class='single_post wow fadeInUp'>
+                    <div class='blog_img'>
+                      <!--img src='img/blog/dca.jpg' alt='Notícia Imagem 1'-->
+                    </div>
+                    <h3>Nova página do Departamento de Engenharia de Computação e Automação!</h3>
+                    <div class='post_commentbox'>
+                      <span><i class='fa fa-calendar'></i>30/05/2017</span>
+                      <a href='#'><i class='fa fa-user'></i>Carlos Viegas</a>
+                      <!--a href='#'><i class='fa fa-tags'></i>Teste</a-->
+                    </div>
+                    <p>O Departamento de Engenharia de Computação e Automação conta com uma nova página web. Mais dinâmica e atual, apresenta as informações sobre o departamento.</p>
+                    <!--a href='#' class='read_more' target='_blank'>Leia mais <i class='fa fa-angle-double-right'>  </i></a-->                   
+                  </div>
+                </div>
+
+                <!-- NOTICIA 2 ->
+                <div class='col-lg-4 col-md-4 col-sm-4'>
+                  <div class='single_post wow fadeInUp'>
+                    <div class='blog_img'>
+                      <img src='img/blog_img1.jpg' alt='img'>
+                    </div>
+                    <h3>Sed ut perspiciatis unde omnis</h3>
+                    <div class='post_commentbox'>
+                      <span><i class='fa fa-calendar'></i>6:49 AM</span>
+                      <a href='#'><i class='fa fa-user'></i>Teste</a>
+                    </div>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
+                    <a href='#' class='read_more' target='_blank'>Leia mais <i class='fa fa-angle-double-right'>  </i></a>                   
+                  </div>
+                </div-->
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <!-- 
+      # SECTION: EVENTOS
+    --> 
+    <section id='events' style='display:none;'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-lg-12 col-md-12'>
+            <div class='content_area'>
+            
+              <div class='heading'>
+                <h2 class='wow fadeInLeftBig'>Eventos</h2>
+                <p>&nbsp;</p>
+                <!--p>Eventos relacionados ao Departamento de Engenharia de Computação e Automação.</p-->
+              </div>
+
+              <div class='content'>
+                <div class='row'>
+                  <div class='col-lg-12 col-md-12'> 
+                    <div class='content_featured'>
+                      <div class='panel-group' id='accordion-events'>
+
+                        <!-- #2017 -->
+                        <div class='panel panel-default wow'>
+                          <div class='panel-heading'>
+                            <h4 class='panel-title'>
+                              <a data-toggle='collapse' data-parent='#accordion-events' href='eventos#collapse2017'>
+                                 <span class='fa fa-calendar'></span>2017
+                              </a>
+                            </h4>
+                          </div>
+                          <div id='collapse2017' class='panel-collapse collapse in'>
+                            <div class='panel-body'>
+                             <p>Nenhum evento cadastrado</p>
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <!-- #2016 -->
+                        <div class='panel panel-default wow'>
+                          <div class='panel-heading'>
+                            <h4 class='panel-title'>
+                              <a data-toggle='collapse' data-parent='#accordion-events' href='eventos#collapse2016'>
+                                 <span class='fa fa-calendar'></span>2016
+                              </a>
+                            </h4>
+                          </div>
+                          <div id='collapse2016' class='panel-collapse collapse'>
+                            <div class='panel-body'>
+                             <p>15 a 19 de novembro - <a href='https://www.facebook.com/events/932642630173509/' target='_blank'>I Semana de Engenharia de Computação e Engenharia Mecatrônica (SECEM 2016)</a></p>
+                             <p>22 a 25 de maio - <a href='http://2016.sbse.org.br' target='_blank'>IV Simpósio Brasileiro de Sistemas Elétricos (SBSE 2016)</a></p>
+                            </div>
+                          </div>
+                        </div>
+            
+            
+                        <!-- #2015 -->
+                        <div class='panel panel-default wow'>
+                          <div class='panel-heading'>
+                            <h4 class='panel-title'>
+                              <a data-toggle='collapse' data-parent='#accordion-events' href='eventos#collapse2015'>
+                                 <span class='fa fa-calendar'></span>2015
+                              </a>
+                            </h4>
+                          </div>
+                          <div id='collapse2015' class='panel-collapse collapse'>
+                            <div class='panel-body'>
+                              <p>25 a 28 de outubro - <a href='http://www.sbai2015.dca.ufrn.br' target='_blank'>XII Simpósio Brasileiro de Automação Inteligente (SBAI 2015)</a></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </section> 
+    
+    <!-- 
+      # CONTATO
+    -->    
+    <footer id='contact'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-lg-12 col-md-12 col-sm-12'>
+            <div class='heading'>
+              <h2 class='wow fadeInLeftBig'>Contato</h2>
+              <!--p>Caso deseje entrar em contato com o DCA, pode fazê-lo através dos meios abaixo.</p-->
+            </div>
+          </div>
+        </div>      
+
+        <p>&nbsp;</p>
+        
+        <div class='row'>
+          <div class='contact_feature'>
+            <div class='col-lg-4 col-md-4 col-sm-4'>
+              <div class='single_contact_featured wow fadeInDown'>
+                <i class='fa fa-phone'></i>
+                <h4>Telefone</h4>
+                <p>+55 (84) 3342-2231 <br> (ext 200 ou 220)</p>            
+              </div>
+            </div>
+            
+            <div class='col-lg-4 col-md-4 col-sm-4'>
+              <div class='single_contact_featured wow fadeInDown'>
+                <i class='fa fa-envelope-o'></i>
+                <h4>E-mail</h4>
+                <p><span id='mask57681351'>[javascript protected e-mail address]</span><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'zMPq1OQd-JrS3Z$9xRWnai0V5CHmDc8b4jUIyTwostAXY_lv2L6p.h+K@7gFGkEeBuf#N\';var b=a.split(\'\').sort().join(\'\');var c=\'kv_GvEXGpX9l_X1e2G@1YG\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask57681351\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+d+\'</a>\'')/*]]>*/</script>
+</p>
+              </div>
+            </div>
+            
+            <div class='col-lg-4 col-md-4 col-sm-4'>
+              <div class='single_contact_featured wow fadeInDown'>
+                <i class='fa fa-clock-o'></i>
+                <h4>Horário</h4>
+                <p>Segunda a Sexta-feira <br> 8h às 12h / 14h às 17h</p>
+              </div>
+            </div>
+            
+            <p>&nbsp;</p>
+            
+            <div class='col-lg-12 col-md-12 col-sm-12'>
+              <div class='single_contact_featured wow fadeInUp'>
+                <i class='fa fa-map-marker'></i>
+                <h4>Endereço</h4>
+                <p>Departamento de Engenharia de Computação e Automação<br>
+                Universidade Federal do Rio Grande do Norte - Centro de Tecnologia<br>
+                UFRN Campus Universitário Lagoa Nova - 59078-970 - Natal/RN - BRASIL</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+
+      <!-- GOOGLE MAPS --> 
+      <div class='contact_map wow fadeInLeftBig' id='map-overlay'>    
+        <p>&nbsp;</p>
+        <iframe id='map' src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984.5463010505493!2d-35.19713768750664!3d-5.842571623623653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b2ff75c59049ff%3A0x7b804d5bb22efbcb!2sDepartamento+de+Engenharia+de+Computa%C3%A7%C3%A3o+e+Automa%C3%A7%C3%A3o+-+Lagoa+Nova%2C+Natal+-+RN!5e0!3m2!1spt-BR!2sbr!4v1476313977615' style='width:100%;height:380px;pointer-events:auto;border:0;display:block;vertical-align:bottom;'></iframe>
+      </div>
+    </footer>
+
+    <!-- 
+      # FOOTER / RODAPE
+    -->  
+    <!--footer id='footer'>
+      <div class='container wow fadeInLeftBig'>
+        <div class='row'>
+          <div class='col-lg-2 col-md-2 col-sm-2'>
+            <div class='logo'>
+              <a href=http://www.ufrn.br target='_blank'><img src='img/brasao-ufrn.png' alt='UFRN Logo'></a>
+            </div>
+          </div>
+          <div class='col-lg-10 col-md-10 col-sm-10'>
+            <div class='institution'>
+              <p><span>Departamento de Engenharia de Computação e Automação</span><br>
+              Universidade Federal do Rio Grande do Norte - Centro de Tecnologia</p>
+              <address class='contact-info'>
+                <p><span class='fa fa-map-marker'></span>UFRN Campus Universitário Lagoa Nova - 59078-970 - Natal/RN - BRASIL</p>
+                <p><span class='fa fa-phone'></span>+55 (84) 3342-2231 (ext 200 ou 220)</p>
+                <p><span class='fa fa-envelope-o'></span><span id='mask100698466'>[javascript protected e-mail address]</span><script type='text/javascript'>/*<![CDATA[*/eval('var a=\'bg05yh8H_Y@Ru4.+lQXdFotVGAITkqNBU63Sxpn$OD-KeEPmfcZz2M7sCvrLajW#9iwJ1\';var b=a.split(\'\').sort().join(\'\');var c=\'jmEamWKazK+PEKy#faCyea\';var d=\'\';for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));document.getElementById(\'mask100698466\').innerHTML=\'<a href=\\\'mailto:\'+d+\'\\\' target=\\\'_blank\\\'>\'+d+\'</a>\'')/*]]>*/</script>
+</p>
+              </address>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer-->
+    
+    <!-- 
+      # SCRIPT FILES 
+    -->
+    <!-- jQuery Library -->
+    <script src='js/jquery-1.11.1.min.js'></script>
+    <!-- Smooth animations js -->
+    <script src='js/wow-1.1.3.min.js' type='text/javascript'></script> 
+    <!-- Bootstrap js -->
+    <script src='js/bootstrap-3.3.7.min.js' type='text/javascript'></script>
+    <!-- Superslides slider js -->
+    <script src='js/superslides.min.js' type='text/javascript'></script>
+    <!-- Slick slider js -->
+    <script src='js/slick-1.3.15.min.js' type='text/javascript'></script>  
+    <!-- PGW Image gallery js -->
+    <script src='js/pgw-slider-2.3.js' type='text/javascript'></script>  
+    <!-- Custom js -->
+    <script src='js/custom.js' type='text/javascript'></script>
+    <!-- Detect mobile browser -->
+    <script src='js/detectmobilebrowser.js' type='text/javascript'></script>
+
+  </body>
+</html>

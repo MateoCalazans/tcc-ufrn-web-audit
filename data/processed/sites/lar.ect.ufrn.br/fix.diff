@@ -1,0 +1,77 @@
+--- a/index.html
++++ b/fixed.html
+@@ -1,5 +1,5 @@
+ <!DOCTYPE html>
+-<html>
++<html lang="pt-BR">
+   <head>
+     <meta charset="utf-8" />
+     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+@@ -11,9 +11,9 @@
+   </head>
+ 
+   <body>
+-    <div class="main">
++    <main class="main">
+       <div class="logo">
+-        <img src="images/logo.svg" alt="Logo do Projeto Educacional URA" />
++        <img src="images/logo.svg" alt="Logo do Projeto Educacional URA" width="163" height="119" />
+       </div>
+       <div>
+         <h1>
+@@ -29,7 +29,7 @@
+               <img
+                 src="images/upbutton.svg"
+                 alt="Sinais Controles"
+-                class="icons-image"
++                class="icons-image" width="153" height="153"
+               />
+             </button>
+           </div>
+@@ -38,30 +38,30 @@
+               <img
+                 src="images/leftbutton.svg"
+                 alt="Sinais Controles"
+-                class="icons-image"
++                class="icons-image" width="152" height="153"
+               />
+             </button>
+             <button class="btns-stopb" onclick="move('PAR');">
+-              <img
++              <img loading="lazy"
+                 src="images/stopbutton.svg"
+                 alt="Sinais Controles"
+-                class="icons-image"
++                class="icons-image" width="16" height="16"
+               />
+             </button>
+             <button class="btns-rightb" onclick="move('DIR');">
+-              <img
++              <img loading="lazy"
+                 src="images/rightbutton.svg"
+                 alt="Sinais Controles"
+-                class="icons-image"
++                class="icons-image" width="153" height="153"
+               />
+             </button>
+           </div>
+           <div class="icons-botton">
+             <button class="btns-backb" onclick="move('TRS');">
+-              <img
++              <img loading="lazy"
+                 src="images/downbutton.svg"
+                 alt="Sinais Controles"
+-                class="icons-image"
++                class="icons-image" width="153" height="153"
+               />
+             </button>
+           </div>
+@@ -75,7 +75,7 @@
+           <button type="submit" class="custom-button">Enviar</button>
+         </form>
+       </div>
+-    </div>
++    </main>
+   </body>
+   <script src="main.js"></script>
+ </html>

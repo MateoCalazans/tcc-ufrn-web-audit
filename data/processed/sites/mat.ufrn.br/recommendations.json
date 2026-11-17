@@ -1,0 +1,758 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T19:53:06.795Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12",
+      "diff": "9.0.0",
+      "@anthropic-ai/sdk": "1.8.0"
+    },
+    "gitCommit": "35192446fa4c70dad6b3eb15bfdec2bff375c62c",
+    "gitDirty": true
+  },
+  "id": "mat.ufrn.br",
+  "url": "https://mat.ufrn.br/",
+  "fonte": {
+    "html": "index.html",
+    "codificacao": "utf-8",
+    "bom": false,
+    "har": true,
+    "lighthouse": "lh1.json",
+    "lighthouseVersion": "13.5.0"
+  },
+  "regras": [
+    {
+      "id": "html-lang",
+      "dimensao": "semantica",
+      "descricao": "O elemento <html> declara o idioma da página (atributo lang)."
+    },
+    {
+      "id": "meta-viewport",
+      "dimensao": "performance",
+      "descricao": "A página declara <meta name=\"viewport\"> adequada a telas móveis, sem bloquear o zoom."
+    },
+    {
+      "id": "img-dimensions",
+      "dimensao": "performance",
+      "descricao": "Toda <img> declara width e height, para o navegador reservar o espaço antes do download."
+    },
+    {
+      "id": "img-lazy",
+      "dimensao": "performance",
+      "descricao": "<img> depois das 3 primeiras do documento usa loading=\"lazy\" (exceto a imagem LCP)."
+    },
+    {
+      "id": "obsolete-tags",
+      "dimensao": "semantica",
+      "descricao": "Sem elementos obsoletos do WHATWG (center, font, marquee…); <font> simples vira <span style>."
+    },
+    {
+      "id": "heading-skip",
+      "dimensao": "semantica",
+      "descricao": "Títulos não pulam níveis ao descer na hierarquia (h1 → h3, por exemplo)."
+    },
+    {
+      "id": "fake-button",
+      "dimensao": "semantica",
+      "descricao": "Elementos clicáveis são <button>/<a>, não div/span com onclick."
+    },
+    {
+      "id": "render-blocking-hint",
+      "dimensao": "performance",
+      "descricao": "Scripts e folhas de estilo que o Lighthouse aponta como bloqueantes são adiados quando não são críticos."
+    },
+    {
+      "id": "landmarks-llm",
+      "dimensao": "semantica",
+      "descricao": "Landmarks ausentes propostos por LLM sobre <div>, <section> ou <article> existentes (landmarks-v2, claude-haiku-5-5)."
+    }
+  ],
+  "llm": {
+    "prompt": "landmarks-v2",
+    "arquivo": "docs/prompts/landmarks-v2.md",
+    "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+    "modelo": "claude-haiku-5-5",
+    "effort": "low",
+    "maxTokens": 4000,
+    "execucao": {
+      "siteId": "mat.ufrn.br",
+      "prompt": "landmarks-v2",
+      "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "modeloResposta": "claude-haiku-5-5",
+      "respostaId": "msg_011Ch7CAotQuNQ8R2rrWoy2v",
+      "chamada": true,
+      "motivo": null,
+      "ausentes": [
+        "nav",
+        "main"
+      ],
+      "candidatos": 13,
+      "elegiveis": 13,
+      "stopReason": "end_turn",
+      "inputTokens": 2551,
+      "outputTokens": 941,
+      "custoUsd": 0.0007256000000000001,
+      "propostas": 1,
+      "validas": 1,
+      "rejeitadas": [],
+      "textoIgual": true,
+      "landmarksDepois": {
+        "banner": 1,
+        "navigation": 0,
+        "main": 1,
+        "contentinfo": 1
+      },
+      "erro": "CSS depende da tag: div",
+      "duracaoMs": 7302
+    }
+  },
+  "resumo": {
+    "total": 27,
+    "corrigidas": 7,
+    "porRegra": {
+      "html-lang": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "meta-viewport": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "img-dimensions": {
+        "total": 5,
+        "corrigidas": 4
+      },
+      "img-lazy": {
+        "total": 3,
+        "corrigidas": 3
+      },
+      "obsolete-tags": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "heading-skip": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "fake-button": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "render-blocking-hint": {
+        "total": 18,
+        "corrigidas": 0
+      },
+      "landmarks-llm": {
+        "total": 1,
+        "corrigidas": 0
+      }
+    },
+    "porDimensao": {
+      "performance": 26,
+      "semantica": 1
+    }
+  },
+  "guardaImagens": {
+    "imagens": [
+      {
+        "recomendacao": "img-dimensions-1",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "mudou"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 104,
+              "altura": 40,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 214,
+              "altura": 40,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 130,
+              "altura": 50,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 214,
+              "altura": 50,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-2",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 392,
+              "altura": 120,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 392,
+              "altura": 120,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 950,
+              "altura": 292,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 950,
+              "altura": 292,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-3",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 392,
+              "altura": 120,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 392,
+              "altura": 120,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 950,
+              "altura": 292,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 950,
+              "altura": 292,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-4",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 392,
+              "altura": 120,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 392,
+              "altura": 120,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 950,
+              "altura": 292,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 950,
+              "altura": 292,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-5",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 392,
+              "altura": 120,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 392,
+              "altura": 120,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 950,
+              "altura": 292,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 950,
+              "altura": 292,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      }
+    ],
+    "mantidas": 4,
+    "desfeitas": 1,
+    "erro": null
+  },
+  "recommendations": [
+    {
+      "id": "img-dimensions-1",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://mat.ufrn.br/wp-content/uploads/2014/10/10723281_628640617255144_238270438_n.jpg\" alt=\"Logo\">",
+      "posicao": {
+        "linha": 94,
+        "coluna": 46
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"214\" height=\"82\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: mudou)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-2",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://mat.ufrn.br/wp-content/themes/minamaze/images/transparent.png\" style=\"background: url(https://mat.ufrn.br/wp-content/uploads/2014/10/UFRN1.png) no-repeat center; background-size: co…",
+      "posicao": {
+        "linha": 229,
+        "coluna": 123
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1\" height=\"1\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 24286,
+          "fim": 24286,
+          "texto": " width=\"1\" height=\"1\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-3",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://mat.ufrn.br/wp-content/themes/minamaze/images/transparent.png\" style=\"background: url(https://mat.ufrn.br/wp-content/uploads/2016/06/ccet-08.jpg) no-repeat center; background-size: …",
+      "posicao": {
+        "linha": 229,
+        "coluna": 481
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1\" height=\"1\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 24646,
+          "fim": 24646,
+          "texto": " width=\"1\" height=\"1\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-4",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://mat.ufrn.br/wp-content/themes/minamaze/images/transparent.png\" style=\"background: url(https://mat.ufrn.br/wp-content/uploads/2016/06/reitoria.jpg) no-repeat center; background-size:…",
+      "posicao": {
+        "linha": 229,
+        "coluna": 841
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1\" height=\"1\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 25007,
+          "fim": 25007,
+          "texto": " width=\"1\" height=\"1\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-5",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://mat.ufrn.br/wp-content/themes/minamaze/images/transparent.png\" style=\"background: url(https://mat.ufrn.br/wp-content/uploads/2016/06/8682798_orig.jpg) no-repeat center; background-s…",
+      "posicao": {
+        "linha": 229,
+        "coluna": 1202
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1\" height=\"1\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 25372,
+          "fim": 25372,
+          "texto": " width=\"1\" height=\"1\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-1",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"159\" height=\"144\" src=\"https://mat.ufrn.br/wp-content/uploads/2020/06/PET.png\" class=\"attachment-column2-3/4 size-column2-3/4 wp-post-image\" alt=\"PET\" />",
+      "posicao": {
+        "linha": 259,
+        "coluna": 70
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "6ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 26200,
+          "fim": 26200,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-2",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"214\" height=\"82\" src=\"https://mat.ufrn.br/wp-content/uploads/2014/10/10723281_628640617255144_238270438_n.jpg\" class=\"attachment-column2-3/4 size-column2-3/4 wp-post-image\" alt=\"10723281_…",
+      "posicao": {
+        "linha": 281,
+        "coluna": 70
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "7ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 27622,
+          "fim": 27622,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-3",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"480\" height=\"360\" src=\"https://mat.ufrn.br/wp-content/uploads/2019/02/logo3-480x360.png\" class=\"attachment-column2-3/4 size-column2-3/4 wp-post-image\" alt=\"logo3\" srcset=\"https://mat.ufrn…",
+      "posicao": {
+        "linha": 305,
+        "coluna": 69
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "8ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 29104,
+          "fim": 29104,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "render-blocking-hint-1",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='glt-toolbar-styles-css' href='https://mat.ufrn.br/wp-content/plugins/google-language-translator/css/toolbar.css?ver=4.6.29' type='text/css' media='all' />",
+      "posicao": {
+        "linha": 38,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (313 ms de bloqueio, 6.1 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-2",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='google-language-translator-css' href='https://mat.ufrn.br/wp-content/plugins/google-language-translator/css/style.css?ver=4.6.29' type='text/css' media='all' />",
+      "posicao": {
+        "linha": 39,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (3258 ms de bloqueio, 80.4 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-3",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='contact-form-7-css' href='https://mat.ufrn.br/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.5' type='text/css' media='all' />",
+      "posicao": {
+        "linha": 40,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (468 ms de bloqueio, 1.4 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-4",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='thinkup-google-fonts-css' href='//fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C600%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />",
+      "posicao": {
+        "linha": 41,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (906 ms de bloqueio, 0.6 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-5",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='font-awesome-min-css' href='https://mat.ufrn.br/wp-content/themes/minamaze/lib/extentions/font-awesome/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />",
+      "posicao": {
+        "linha": 42,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (1243 ms de bloqueio, 22.2 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-6",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='font-awesome-cdn-css' href='https://mat.ufrn.br/wp-content/themes/minamaze/lib/extentions/font-awesome-4.2.0/css/font-awesome.min.css?ver=4.2.0' type='text/css' media='all'…",
+      "posicao": {
+        "linha": 43,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (1243 ms de bloqueio, 21.7 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-7",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='dashicons-css-css' href='https://mat.ufrn.br/wp-content/themes/minamaze/lib/extentions/dashicons/css/dashicons.css?ver=2.0' type='text/css' media='all' />",
+      "posicao": {
+        "linha": 44,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (1708 ms de bloqueio, 36.2 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-8",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='bootstrap-css' href='https://mat.ufrn.br/wp-content/themes/minamaze/lib/extentions/bootstrap/css/bootstrap.min.css?ver=2.3.2' type='text/css' media='all' />",
+      "posicao": {
+        "linha": 45,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (2483 ms de bloqueio, 68.1 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-9",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='prettyPhoto-css' href='https://mat.ufrn.br/wp-content/themes/minamaze/lib/extentions/prettyPhoto/css/prettyPhoto.css?ver=3.1.5' type='text/css' media='all' />",
+      "posicao": {
+        "linha": 46,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (778 ms de bloqueio, 19.8 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-10",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='style-css' href='https://mat.ufrn.br/wp-content/themes/minamaze/style.css?ver=1.1.7' type='text/css' media='all' />",
+      "posicao": {
+        "linha": 47,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (2173 ms de bloqueio, 62.6 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-11",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='shortcodes-css' href='https://mat.ufrn.br/wp-content/themes/minamaze/styles/style-shortcodes.css?ver=1.1' type='text/css' media='all' />",
+      "posicao": {
+        "linha": 48,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (1398 ms de bloqueio, 36.9 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-12",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='tablepress-default-css' href='https://mat.ufrn.br/wp-content/tablepress-combined.min.css?ver=13' type='text/css' media='all' />",
+      "posicao": {
+        "linha": 49,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (313 ms de bloqueio, 6.0 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-13",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='responsive-css' href='https://mat.ufrn.br/wp-content/themes/minamaze/styles/style-responsive.css?ver=1.1' type='text/css' media='all' />",
+      "posicao": {
+        "linha": 50,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (313 ms de bloqueio, 7.7 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-14",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script type='text/javascript' src='https://mat.ufrn.br/wp-includes/js/jquery/jquery.js?ver=1.12.4'>",
+      "posicao": {
+        "linha": 51,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (2173 ms de bloqueio, 94.9 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-15",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script type='text/javascript' src='https://mat.ufrn.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'>",
+      "posicao": {
+        "linha": 52,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (468 ms de bloqueio, 10.1 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-16",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script type='text/javascript' src='https://mat.ufrn.br/wp-content/plugins/google-language-translator/js/flags.js?ver=4.6.29'>",
+      "posicao": {
+        "linha": 53,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (158 ms de bloqueio, 1.7 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-17",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script type='text/javascript' src='https://mat.ufrn.br/wp-content/plugins/google-language-translator/js/toolbar.js?ver=4.6.29'>",
+      "posicao": {
+        "linha": 54,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (468 ms de bloqueio, 8.9 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-18",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script type='text/javascript' src='https://mat.ufrn.br/wp-content/plugins/google-language-translator/js/load-toolbar.js?ver=4.6.29'>",
+      "posicao": {
+        "linha": 55,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (158 ms de bloqueio, 1.2 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "landmarks-llm-1",
+      "regra": "landmarks-llm",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<div id=\"content-core\">",
+      "posicao": {
+        "linha": 234,
+        "coluna": 2
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Landmark main ausente: trocar este <div> por <main>. Justificativa do modelo: \"Div id=\\\"content-core\\\" é o único filho de conteúdo de c1 (ao lado do footer), contém o boletim, os títulos e as imagens da página, sem o rodapé, e é o elemento mais externo com esse papel.\". Proposta gerada por LLM (landmarks-v2, claude-haiku-5-5, candidato c3); conferir CSS e scripts que selecionem \"div\" neste elemento. Sem correção automática: o CSS da página seleciona pela tag (div); ajustar os seletores antes de trocar.",
+      "edicoes": []
+    }
+  ]
+}

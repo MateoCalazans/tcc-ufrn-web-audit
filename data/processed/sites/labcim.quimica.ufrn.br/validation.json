@@ -1,0 +1,689 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T22:26:30.463Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "siteId": "labcim.quimica.ufrn.br",
+  "contexto": {
+    "grupo": "estatico",
+    "tecnologia": "estatico",
+    "tipo": "laboratorio"
+  },
+  "recomendacoes": {
+    "total": 3,
+    "corrigidas": 1,
+    "corrigidasLlm": 0,
+    "llm": {
+      "prompt": "landmarks-v2",
+      "arquivo": "docs/prompts/landmarks-v2.md",
+      "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "effort": "low",
+      "maxTokens": 4000,
+      "execucao": {
+        "siteId": "labcim.quimica.ufrn.br",
+        "prompt": "landmarks-v2",
+        "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+        "modelo": "claude-haiku-5-5",
+        "modeloResposta": null,
+        "respostaId": null,
+        "chamada": false,
+        "motivo": "nenhum landmark ausente",
+        "ausentes": [],
+        "candidatos": 0,
+        "elegiveis": 0,
+        "stopReason": null,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "custoUsd": null,
+        "propostas": 0,
+        "validas": 0,
+        "rejeitadas": [],
+        "textoIgual": null,
+        "landmarksDepois": null,
+        "erro": null,
+        "duracaoMs": 0
+      }
+    }
+  },
+  "parametros": {
+    "execucoesPorVariante": 3,
+    "formFactor": "mobile",
+    "throttlingMethod": "simulate",
+    "chromeFlagsExtras": [
+      "--host-resolver-rules=MAP * ~NOTFOUND, EXCLUDE 127.0.0.1"
+    ],
+    "userAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+    "relogioSemantica": "2026-11-09T21:21:56.254Z",
+    "relogioLighthouse": "real"
+  },
+  "ordem": [
+    {
+      "variante": "corrigido",
+      "n": 1
+    },
+    {
+      "variante": "original",
+      "n": 1
+    },
+    {
+      "variante": "corrigido",
+      "n": 2
+    },
+    {
+      "variante": "original",
+      "n": 2
+    },
+    {
+      "variante": "corrigido",
+      "n": 3
+    },
+    {
+      "variante": "original",
+      "n": 3
+    }
+  ],
+  "variantes": {
+    "original": {
+      "urlLocal": "http://127.0.0.1:50245/",
+      "execucoes": [
+        {
+          "n": 1,
+          "startedAt": "2026-11-16T23:24:07.579Z",
+          "durationMs": 7825,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 75,
+            "accessibility": 100,
+            "best-practices": 96,
+            "seo": 83
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:50245/",
+          "mainDocumentUrl": "http://127.0.0.1:50245/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2899,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 75,
+              "accessibility": 100,
+              "best-practices": 96,
+              "seo": 83
+            },
+            "fcpMs": 901.1855,
+            "lcpMs": 13651.1855,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 901.1855,
+            "pesoTotalBytes": 2515825,
+            "requisicoes": 6,
+            "jsNaoUsadoBytes": 0,
+            "cssNaoUsadoBytes": 0
+          }
+        },
+        {
+          "n": 2,
+          "startedAt": "2026-11-16T23:24:23.183Z",
+          "durationMs": 8108,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 75,
+            "accessibility": 100,
+            "best-practices": 96,
+            "seo": 83
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:50245/",
+          "mainDocumentUrl": "http://127.0.0.1:50245/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2285,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 75,
+              "accessibility": 100,
+              "best-practices": 96,
+              "seo": 83
+            },
+            "fcpMs": 901.7556999999999,
+            "lcpMs": 13651.7557,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 901.7556999999999,
+            "pesoTotalBytes": 2515825,
+            "requisicoes": 6,
+            "jsNaoUsadoBytes": 0,
+            "cssNaoUsadoBytes": 0
+          }
+        },
+        {
+          "n": 3,
+          "startedAt": "2026-11-16T23:24:39.154Z",
+          "durationMs": 8197,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 75,
+            "accessibility": 100,
+            "best-practices": 96,
+            "seo": 83
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:50245/",
+          "mainDocumentUrl": "http://127.0.0.1:50245/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2651,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 75,
+              "accessibility": 100,
+              "best-practices": 96,
+              "seo": 83
+            },
+            "fcpMs": 901.3856000000001,
+            "lcpMs": 13651.3856,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 901.3856000000001,
+            "pesoTotalBytes": 2515825,
+            "requisicoes": 6,
+            "jsNaoUsadoBytes": 0,
+            "cssNaoUsadoBytes": 0
+          }
+        }
+      ],
+      "mediana": {
+        "criterio": "nota-performance",
+        "n": 2
+      },
+      "metricas": {
+        "notas": {
+          "performance": 75,
+          "accessibility": 100,
+          "best-practices": 96,
+          "seo": 83
+        },
+        "fcpMs": 901.7556999999999,
+        "lcpMs": 13651.7557,
+        "tbtMs": 0,
+        "cls": 0,
+        "speedIndexMs": 901.7556999999999,
+        "pesoTotalBytes": 2515825,
+        "requisicoes": 6,
+        "jsNaoUsadoBytes": 0,
+        "cssNaoUsadoBytes": 0
+      },
+      "variacaoPerformance": {
+        "n": 3,
+        "min": 75,
+        "max": 75,
+        "amplitude": 0,
+        "media": 75,
+        "desvioPadrao": 0
+      },
+      "semantica": {
+        "status": "ok",
+        "indicadores": {
+          "divSpan": {
+            "div": 43,
+            "span": 31,
+            "total": 274,
+            "proporcao": 0.27007299270072993
+          },
+          "landmarks": {
+            "banner": 1,
+            "navigation": 5,
+            "main": 1,
+            "contentinfo": 1
+          },
+          "titulos": {
+            "total": 17,
+            "h1": 1,
+            "porNivel": [
+              1,
+              10,
+              6,
+              0,
+              0,
+              0
+            ],
+            "saltos": 0,
+            "maiorSalto": 0,
+            "primeiroNivel": 1
+          },
+          "estrutura": {
+            "article": 0,
+            "section": 10,
+            "aside": 0,
+            "figure": 2,
+            "ul": 9,
+            "ol": 2
+          },
+          "interativosFalsos": {
+            "comOnclick": 0,
+            "falsos": 0
+          },
+          "metadados": {
+            "lang": "pt",
+            "temTitle": true,
+            "titleComprimento": 39,
+            "temViewport": true,
+            "temDescription": true
+          },
+          "imagens": {
+            "total": 5,
+            "semAlt": 0,
+            "altVazio": 2,
+            "semAltComAlternativa": 0
+          },
+          "campos": {
+            "total": 0,
+            "semLabel": 0,
+            "semLabelComPlaceholderOuTitle": 0
+          },
+          "obsoletas": {
+            "roteiro": 0,
+            "whatwg": 0,
+            "porTag": {}
+          },
+          "tabelas": {
+            "total": 0,
+            "layoutDeclarada": 0,
+            "layoutHeuristica": 0,
+            "dados": 0,
+            "indeterminada": 0
+          }
+        },
+        "indice": {
+          "subnotas": {
+            "landmarks": 100,
+            "titulos": 100,
+            "imagens": 100,
+            "campos": null,
+            "divSpan": 72.99270072992701,
+            "metadados": 100,
+            "interativos": null,
+            "obsoletos": 100
+          },
+          "indice": 96.62408759124088,
+          "indicePesosIguais": 95.49878345498784
+        },
+        "networkidleTimeout": false
+      },
+      "faltasNoServidor": [
+        "/icons/favicon-labcim.png",
+        "/media/labcim-infrastructure-instrumentation-desktop-1448x1086.png",
+        "/media/labcim-collaboration-landscape-1672x941.png",
+        "/robots.txt"
+      ]
+    },
+    "corrigido": {
+      "urlLocal": "http://127.0.0.1:50246/",
+      "execucoes": [
+        {
+          "n": 1,
+          "startedAt": "2026-11-16T23:23:59.584Z",
+          "durationMs": 7995,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 75,
+            "accessibility": 100,
+            "best-practices": 96,
+            "seo": 83
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:50246/",
+          "mainDocumentUrl": "http://127.0.0.1:50246/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2767,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 75,
+              "accessibility": 100,
+              "best-practices": 96,
+              "seo": 83
+            },
+            "fcpMs": 901.2846999999999,
+            "lcpMs": 13651.2847,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 901.2846999999999,
+            "pesoTotalBytes": 2515832,
+            "requisicoes": 6,
+            "jsNaoUsadoBytes": 0,
+            "cssNaoUsadoBytes": 0
+          }
+        },
+        {
+          "n": 2,
+          "startedAt": "2026-11-16T23:24:15.406Z",
+          "durationMs": 7777,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 75,
+            "accessibility": 100,
+            "best-practices": 96,
+            "seo": 83
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:50246/",
+          "mainDocumentUrl": "http://127.0.0.1:50246/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 3074.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 75,
+              "accessibility": 100,
+              "best-practices": 96,
+              "seo": 83
+            },
+            "fcpMs": 902.4516000000001,
+            "lcpMs": 13652.4516,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 902.4516000000001,
+            "pesoTotalBytes": 2515832,
+            "requisicoes": 6,
+            "jsNaoUsadoBytes": 0,
+            "cssNaoUsadoBytes": 0
+          }
+        },
+        {
+          "n": 3,
+          "startedAt": "2026-11-16T23:24:31.291Z",
+          "durationMs": 7863,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 75,
+            "accessibility": 100,
+            "best-practices": 96,
+            "seo": 83
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:50246/",
+          "mainDocumentUrl": "http://127.0.0.1:50246/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 3126,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 75,
+              "accessibility": 100,
+              "best-practices": 96,
+              "seo": 83
+            },
+            "fcpMs": 900.653,
+            "lcpMs": 13650.653,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 900.653,
+            "pesoTotalBytes": 2515832,
+            "requisicoes": 6,
+            "jsNaoUsadoBytes": 0,
+            "cssNaoUsadoBytes": 0
+          }
+        }
+      ],
+      "mediana": {
+        "criterio": "nota-performance",
+        "n": 2
+      },
+      "metricas": {
+        "notas": {
+          "performance": 75,
+          "accessibility": 100,
+          "best-practices": 96,
+          "seo": 83
+        },
+        "fcpMs": 902.4516000000001,
+        "lcpMs": 13652.4516,
+        "tbtMs": 0,
+        "cls": 0,
+        "speedIndexMs": 902.4516000000001,
+        "pesoTotalBytes": 2515832,
+        "requisicoes": 6,
+        "jsNaoUsadoBytes": 0,
+        "cssNaoUsadoBytes": 0
+      },
+      "variacaoPerformance": {
+        "n": 3,
+        "min": 75,
+        "max": 75,
+        "amplitude": 0,
+        "media": 75,
+        "desvioPadrao": 0
+      },
+      "semantica": {
+        "status": "ok",
+        "indicadores": {
+          "divSpan": {
+            "div": 43,
+            "span": 31,
+            "total": 274,
+            "proporcao": 0.27007299270072993
+          },
+          "landmarks": {
+            "banner": 1,
+            "navigation": 5,
+            "main": 1,
+            "contentinfo": 1
+          },
+          "titulos": {
+            "total": 17,
+            "h1": 1,
+            "porNivel": [
+              1,
+              10,
+              6,
+              0,
+              0,
+              0
+            ],
+            "saltos": 0,
+            "maiorSalto": 0,
+            "primeiroNivel": 1
+          },
+          "estrutura": {
+            "article": 0,
+            "section": 10,
+            "aside": 0,
+            "figure": 2,
+            "ul": 9,
+            "ol": 2
+          },
+          "interativosFalsos": {
+            "comOnclick": 0,
+            "falsos": 0
+          },
+          "metadados": {
+            "lang": "pt",
+            "temTitle": true,
+            "titleComprimento": 39,
+            "temViewport": true,
+            "temDescription": true
+          },
+          "imagens": {
+            "total": 5,
+            "semAlt": 0,
+            "altVazio": 2,
+            "semAltComAlternativa": 0
+          },
+          "campos": {
+            "total": 0,
+            "semLabel": 0,
+            "semLabelComPlaceholderOuTitle": 0
+          },
+          "obsoletas": {
+            "roteiro": 0,
+            "whatwg": 0,
+            "porTag": {}
+          },
+          "tabelas": {
+            "total": 0,
+            "layoutDeclarada": 0,
+            "layoutHeuristica": 0,
+            "dados": 0,
+            "indeterminada": 0
+          }
+        },
+        "indice": {
+          "subnotas": {
+            "landmarks": 100,
+            "titulos": 100,
+            "imagens": 100,
+            "campos": null,
+            "divSpan": 72.99270072992701,
+            "metadados": 100,
+            "interativos": null,
+            "obsoletos": 100
+          },
+          "indice": 96.62408759124088,
+          "indicePesosIguais": 95.49878345498784
+        },
+        "networkidleTimeout": false
+      },
+      "faltasNoServidor": [
+        "/icons/favicon-labcim.png",
+        "/media/labcim-infrastructure-instrumentation-desktop-1448x1086.png",
+        "/media/labcim-collaboration-landscape-1672x941.png",
+        "/robots.txt"
+      ]
+    }
+  },
+  "deltas": {
+    "nota_performance": {
+      "original": 75,
+      "corrigido": 75,
+      "delta": 0
+    },
+    "nota_accessibility": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    },
+    "nota_best_practices": {
+      "original": 96,
+      "corrigido": 96,
+      "delta": 0
+    },
+    "nota_seo": {
+      "original": 83,
+      "corrigido": 83,
+      "delta": 0
+    },
+    "fcp_ms": {
+      "original": 901.7556999999999,
+      "corrigido": 902.4516000000001,
+      "delta": 0.6959000000001652
+    },
+    "lcp_ms": {
+      "original": 13651.7557,
+      "corrigido": 13652.4516,
+      "delta": 0.6959000000006199
+    },
+    "tbt_ms": {
+      "original": 0,
+      "corrigido": 0,
+      "delta": 0
+    },
+    "cls": {
+      "original": 0,
+      "corrigido": 0,
+      "delta": 0
+    },
+    "speed_index_ms": {
+      "original": 901.7556999999999,
+      "corrigido": 902.4516000000001,
+      "delta": 0.6959000000001652
+    },
+    "peso_total_bytes": {
+      "original": 2515825,
+      "corrigido": 2515832,
+      "delta": 7
+    },
+    "requisicoes": {
+      "original": 6,
+      "corrigido": 6,
+      "delta": 0
+    },
+    "indice_semantica": {
+      "original": 96.62408759124088,
+      "corrigido": 96.62408759124088,
+      "delta": 0
+    },
+    "indice_semantica_pesos_iguais": {
+      "original": 95.49878345498784,
+      "corrigido": 95.49878345498784,
+      "delta": 0
+    },
+    "sub_landmarks": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    },
+    "sub_titulos": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    },
+    "sub_imagens": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    },
+    "sub_campos": {
+      "original": null,
+      "corrigido": null,
+      "delta": null
+    },
+    "sub_divSpan": {
+      "original": 72.99270072992701,
+      "corrigido": 72.99270072992701,
+      "delta": 0
+    },
+    "sub_metadados": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    },
+    "sub_interativos": {
+      "original": null,
+      "corrigido": null,
+      "delta": null
+    },
+    "sub_obsoletos": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    }
+  }
+}

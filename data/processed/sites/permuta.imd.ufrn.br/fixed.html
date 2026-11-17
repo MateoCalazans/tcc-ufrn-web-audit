@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+    
+    <title>Portal da Permuta</title>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="Permuta" name="description">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- App css -->
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/permuta/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="/permuta/css/app.min.css" type="text/css" />
+    <link rel="stylesheet" href="/permuta/css/app-extended.min.css" type="text/css" />
+    <style>
+      body {
+        font-size: 1rem; /* app.min.css põe 16px, impedindo a funcionalidade da barra de acessibilidade de alterar tamanho da letra */
+      }
+    </style>
+
+    <!-- Web -->
+    <link rel="icon" sizes="16x16" href="/permuta/images/favicons/favicon-Web-16.png" type="image/png" />
+    <link rel="icon" sizes="32x32" href="/permuta/images/favicons/favicon-Web-32.png" type="image/png" />
+    <link rel="icon" sizes="96x96" href="/permuta/images/favicons/favicon-Web-96.png" type="image/png" />
+    <link rel="icon" sizes="128x128" href="/permuta/images/favicons/favicon-Web-128.png" type="image/png" />
+    <link rel="icon" sizes="192x192" href="/permuta/images/favicons/favicon-Web-192.png" type="image/png" />
+
+    <!-- iOS -->
+    <link rel="apple-touch-icon" sizes="120x120" href="/permuta/images/favicons/favicon-iOS-120.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/permuta/images/favicons/favicon-iOS-152.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="/permuta/images/favicons/favicon-iOS-167.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/permuta/images/favicons/favicon-iOS-180.png" />
+
+    <!-- Android -->
+    <link rel="shortcut icon" sizes="196x196" href="/permuta/favicons/favicon-Android-196.png" />
+    
+    <link rel="stylesheet" href="/permuta/js/libs/animate-css/animate.css" type="text/css" />
+  </head>
+
+  <body class="login">
+    
+    
+    
+    
+    
+
+    
+		<header id="barra-acessibilidade">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="d-none d-sm-flex align-items-center">
+							<a class="mr-2" href="//ufrn.br" target="_blank" title="UFRN">
+								<div class="instituicao ufrn"></div>
+							</a>
+							<a class="instituicao metropole d-none d-sm-block border-left pl-2" href="//imd.ufrn.br"
+								target="_blank" title="Instituto Metrópole Digital">
+								Metrópole Digital
+							</a>
+						</div>
+						<div class="instituicao dropdown d-flex d-sm-none">
+							<a class="instituicao dropdown-toggle" href="#" id="navbarDropdownMenuMais"
+								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<div class="instituicao ufrn"></div>
+							</a>
+							<div class="dropdown-menu bg-white" aria-labelledby="navbarDropdownMenuMais">
+								<a class="dropdown-item text-dark-blue-focusable" href="//ufrn.br" target="_blank">UFRN</a>
+								<a class="dropdown-item text-dark-blue-focusable" href="//imd.ufrn.br" target="_blank">Metrópole Digital</a>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="controles d-flex justify-content-end align-items-center h-100">
+							<a href="#menu" class="sr-only sr-only-focusable" accesskey="m">
+								Pular para menu (Alt + m)
+							</a>
+							<a href="#conteudo" class="sr-only sr-only-focusable" accesskey="c">
+								Pular para conteúdo (Alt + c)
+							</a>
+							<button href="#" class="btn btn-sm ajustar-alto-contraste bg-transparent"
+								accesskey="a" onclick="window.toggleContrast()"
+								title="Ajustar alto contraste (Alt + a)">
+								<div class="alto-contraste-icon"></div>
+								<span class="sr-only">Ajustar alto contraste (Alt + a)</span>
+							</button>
+							<button href="#" class="btn btn-sm text-nowrap ajustar-letra aumentar-letra bg-transparent"
+								accesskey="+" onclick="window.increaseFontSize()"
+								title="Aumentar tamanho da letra (Alt + '+')">
+								+A<span class="sr-only">Aumentar tamanho da letra (Alt + "+")</span>
+							</button>
+							<button href="#" class="btn btn-sm text-nowrap ajustar-letra normalizar-letra bg-transparent"
+								accesskey="0" onclick="window.resetFontSize()"
+								title="Resetar tamanho da letra (Alt + 0)">
+								A<span class="sr-only">Resetar tamanho da letra (Alt + 0)</span>
+							</button>
+							<button href="#" class="btn btn-sm text-nowrap ajustar-letra diminuir-letra bg-transparent"
+								accesskey="-" onclick="window.decreaseFontSize()"
+								title="Diminuir tamanho da letra (Alt + '-')">
+								-A<span class="sr-only">Diminuir tamanho da letra (Alt + "-")</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+	
+
+    <!-- html -->
+    <main role="main">
+      
+		<nav id="menu" class="navbar justify-content-between px-lg-5">
+			<a class="navbar-brand" href="/permuta/">
+				<img src="images/logo-ufrn-progesp.png" alt="UFRN / PROGESP">
+			</a>
+			
+			<a class="btn btn-primary btn-login"
+				href="https://autenticacao.ufrn.br/authz-server/oauth/authorize?client_id=permuta-ufrn-id&amp;response_type=code&amp;redirect_uri=https://permuta.imd.ufrn.br/permuta/processar-login">
+					Entrar
+			</a>
+
+			
+		</nav>
+
+		<section id="conteudo" class="hero">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-md-6 hero-left d-flex flex-column">
+						<div class="logo-img wow fadeInLeft">
+							<img src="images/logo-portal-permuta.png" class="w-100" alt="Portal da Permuta" width="225" height="122">
+						</div>
+	
+						<p class="subtext pr-xl-5 wow fadeInLeft text-justify" data-wow-delay=".2s">
+						O Portal da Permuta foi desenvolvido para os servidores Técnico-Administrativos em
+						Educação (TAE) da UFRN interessados em mudar de unidade de lotação por meio do
+						processo de remoção por permuta.
+						</p>
+	
+						<a class="btn btn-primary btn-login wow fadeInLeft" data-wow-delay=".4s"
+						href="https://autenticacao.ufrn.br/authz-server/oauth/authorize?client_id=permuta-ufrn-id&amp;response_type=code&amp;redirect_uri=https://permuta.imd.ufrn.br/permuta/processar-login">
+							Entrar
+						</a>
+					</div>
+	
+					<div class="col-12 col-md-6 hero-right position-static p-0">
+						<div class="hero-right-img wow fadeIn"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="main-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="container">
+							<div class="row justify-content-center wow fadeInUp" data-wow-delay=".2s">
+								<div class="col-12 col-sm-8 col-md-12">
+									<h2 class="text-center mb-4">O que é o Portal da Permuta</h2>
+									<p class="text-justify">O Portal da Permuta foi desenvolvido para os servidores Técnicos-Administrativos em Educação (TAE) da UFRN interessados em mudar de unidade de lotação por meio do processo de remoção por permuta. A permuta pressupõe a existência de dois servidores dispostos a realizar a troca da unidade em que desempenham suas atividades. Neste portal, os servidores poderão filtrar as oportunidades de permuta e realizar o contato inicial com outros interessados. Vale lembrar que este canal é apenas um facilitador para o processo de movimentação entre os servidores TAE da Instituição. Assim, a remoção por permuta deve ser solicitada pelo Sistema Integrado de Gestão de Recursos Humanos (SIGRH) e atender aos critérios estabelecidos na Resolução nº 56/2018 – CONSAD.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+				<div class="row wow fadeInLeft" data-wow-delay=".2s">
+					<div class="col-12 col-sm-4 text-center mb-4 mb-md-0">
+						<img src="images/undraw_Events_copy-1.svg" class="w-75" alt="">
+					</div>
+					<div class="col-12 col-sm-8">
+						<h3>
+							<span class="step-order mr-2">1</span>
+							Encontre a oportunidade de permuta que corresponda com as suas preferências.
+						</h3>
+					</div>
+				</div>
+	
+				<div class="row wow fadeInRight" data-wow-delay=".2s">
+					<div class="col-12 col-sm-4 text-center mb-4 mb-md-0">
+						<img loading="lazy" src="images/undraw_Browsing_online_copy-1.svg" class="w-75" alt="">
+					</div>
+					<div class="col-12 col-sm-8">
+						<h3>
+							<span class="step-order mr-2">2</span>
+							Sinalize para o seu colega servidor seu interesse em realizar a permuta.
+						</h3>
+					</div>
+				</div>
+	
+				<div class="row wow fadeInLeft" data-wow-delay=".2s">
+					<div class="col-12 col-sm-4 text-center mb-4 mb-md-0">
+						<img loading="lazy" src="images/undraw_Detailed_analysis_copy-1.svg" class="w-75" alt="">
+					</div>
+					<div class="col-12 col-sm-8">
+						<h4>
+							<span class="step-order mr-2">3</span>
+							Realize sua solicitação de remoção por permuta no SIGRH
+							<br>
+							<span class="small">(SIGRH > Menu Servidor >
+							Solicitações > Remoção > Solicitar > A pedido do servidor, a critério da Administração >
+							Continuar > Preencher todos os campos com contatos atualizados e informar no
+							campo "Observação", o nome completo e cargo da pessoa com quem deseja
+							permutar). Obs: ambos os interessados deverão realizar esse procedimento.</span>
+						</h4>
+					</div>
+				</div>
+				
+				<div class="row wow fadeInRight" data-wow-delay=".2s">
+					<div class="col-12 col-sm-4 text-center mb-4 mb-md-0">
+						<img loading="lazy" src="images/undraw_texting_re_l11n.svg" class="w-75" alt="">
+					</div>
+					<div class="col-12 col-sm-8">
+						<h3>
+							<span class="step-order mr-2">4</span>
+							Fique atento aos meios de comunicação informados na solicitação
+							<br>
+							<span class="small">A Divisão de
+							Planejamento de Gestão de Pessoas entrará em contato para dar continuidade as
+							etapas do processo.</span>
+						</h3>
+					</div>
+				</div>
+				
+			</div>
+		</section>
+	
+    </main>
+
+    <footer class="footer bg-dark bg-dark-blue p-3 mt-auto">
+  <div class="container-fluid">
+    <div class="col">
+      <div class="row align-items-center flex-column flex-sm-row justify-content-between py-3">
+        <div class="ufrn-assinatura">
+          <a href="//ufrn.br">
+            <img loading="lazy" src="/permuta/images/logo-ufrn-barra.svg" alt="">
+          </a>
+          <a href="//progesp.ufrn.br/">
+            <span class="text-assinatura text-white-focusable">PROGESP</span>
+          </a>
+        </div>
+    
+        <div class="creditos text-center mt-5 mb-4 my-sm-0">   
+          <div class="text-wrapper text-white mt-3">
+            <span>Desenvolvido por</span>
+            <br>
+            <span>
+              <a href="//dti.imd.ufrn.br" class="text-decoration-none font-weight-bold text-white-focusable" target="_blank">DTI</a>
+               | 
+              <a href="//imd.ufrn.br" class="text-decoration-none font-weight-bold text-white-focusable" target="_blank">Metrópole Digital</a>
+               e
+              <a href="//sedis.ufrn.br" class="text-decoration-none font-weight-bold text-white-focusable" target="_blank">SEDIS</a>
+            </span>
+          </div>
+        </div>
+      </div>
+  
+      <p class="copyright-text text-white mb-0">© 2021 Metrópole Digital</p>
+    </div>
+  </div>
+
+  <button id="totop" onclick="topFunction()" style="bottom: 64px;" title="Ir para o topo">
+    <img loading="lazy" alt="" src="/permuta/images/icone-ir-topo.png" width="16" height="16">
+    Subir
+  </button>
+</footer>
+
+    <!-- Modal de confirmação -->
+    <span data-target="#confirmacao" data-toggle="modal" id="btnConfirmar" style="display: none;"></span>
+
+    <div aria-labelledby="myModalLabel" class="modal fade" id="confirmacao" role="dialog" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+              <span aria-hidden="true">x</span>
+            </button>
+
+            <h4 class="modal-title" id="myModalLabel">
+              <span class="glyphicon glyphicon-question-sign"></span>
+            </h4>
+          </div>
+
+          <div class="modal-body">
+            <h3 class="txt-confirmacao">Deseja realmente remover esse registro?</h3>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-primary ok-confirmacao" type="button">Continuar</button>
+            <button class="btn btn-default" data-dismiss="modal" type="button">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script> 
+
+
+
+    <!-- Vendor js -->
+    <script src="/permuta/js/vendor.js"></script>
+
+    <!-- App js -->
+    <script src="/permuta/js/app.min.js"></script>
+    <script src="/permuta/js/libs/form-cadastro/form.js"></script>
+
+    <!-- scripts -->
+    <script src="/permuta/js/sweetalert2@8.js"></script>
+    <script src="/permuta/js/validacao.js"></script>
+    <script src="/permuta/vendor/jquery/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/js/i18n/pt-BR.js"></script>
+    
+		<script type="text/javascript">
+			// Ajustar alto contraste
+			(function () {
+				var Contrast = {
+					storage: 'contrastState',
+					cssClass: 'high-contrast',
+					currentState: null,
+					check: checkContrast,
+					getState: getContrastState,
+					setState: setContrastState,
+					toogle: toogleContrast,
+					updateView: updateViewContrast
+				};
+
+				window.toggleContrast = function () { Contrast.toogle(); };
+
+				Contrast.check();
+
+				function checkContrast() {
+					this.updateView();
+				}
+
+				function getContrastState() {
+					return localStorage.getItem(this.storage) === 'true';
+				}
+
+				function setContrastState(state) {
+					localStorage.setItem(this.storage, '' + state);
+					this.currentState = state;
+					this.updateView();
+				}
+
+				function updateViewContrast() {
+					var body = document.body;
+
+					if (this.currentState === null)
+						this.currentState = this.getState();
+
+					if (this.currentState)
+						body.classList.add(this.cssClass);
+					else
+						body.classList.remove(this.cssClass);
+				}
+
+				function toogleContrast() {
+					this.setState(!this.currentState);
+				}
+			})();
+
+			// Ajustar tamanho da letra
+			(function () {
+				var FontSize = {
+					storage: 'FontSizeState',
+					check: checkFontSize,
+					getState: getFontSizeState,
+					setState: setFontSizeState,
+					updateView: updateViewFontSize,
+					
+					reset: resetSize,
+					increase: increaseFontSize,
+					decrease: decreaseFontSize
+				};
+
+				window.resetFontSize = function () { FontSize.reset(); };
+				window.increaseFontSize = function () { FontSize.increase(); };
+				window.decreaseFontSize = function () { FontSize.decrease(); };
+
+				FontSize.check();
+
+				function checkFontSize() {
+					this.updateView();
+				}
+
+				function getFontSizeState() {
+					if(localStorage.getItem(this.storage) === null)
+						this.setState(100);
+					
+					return parseInt(localStorage.getItem(this.storage));
+				}
+
+				function setFontSizeState(state) {
+					localStorage.setItem(this.storage, '' + state);
+					this.updateView();
+				}
+
+				function updateViewFontSize() {
+					var html = document.querySelector("html");
+					html.style.fontSize = this.getState()+"%";
+
+					var letraControles = document.querySelectorAll(".ajustar-letra");
+					letraControles.forEach(function(e){console.log(e.classList.remove("active"))});
+
+					if (this.getState() > 100) {
+						var btnAumentarLetra = document.querySelector(".aumentar-letra");
+						btnAumentarLetra.classList.add("active");
+					} else if (this.getState() < 100) {
+						var btnDiminuirLetra = document.querySelector(".diminuir-letra");
+						btnDiminuirLetra.classList.add("active");
+					}
+				}
+				
+				function resetSize() {
+					this.setState(100);
+				}
+				
+				function increaseFontSize() {
+					if(this.getState() < 190)
+						this.setState(this.getState()+10);
+				}
+				
+				function decreaseFontSize() {
+					if(this.getState() > 75)
+						this.setState(this.getState()-10);
+				}
+			})();
+		</script>
+	
+    <script type="text/javascript">
+      (function () {
+        $(document).ready(function () {
+          $("#alterar-papel").change(function (event) {
+            if ($("#alterar-papel").val() === "o") {
+              window.location.href = "/permuta/area_admin/evento/listar";
+            }
+            if ($("#alterar-papel").val() === "p") {
+              window.location.href = "/permuta/area_participante";
+            }
+          });
+
+          $("#select-evento").change(function (event) {
+            window.location.href = "/permuta/area_admin/evento/" + $(this).val();
+          });
+        });
+      })();
+
+      $('.msg-error').each(function () {
+        Swal.fire("", $(this).val(), "error");
+      });
+
+      $('.msg-warning').each(function () {
+        Swal.fire("", $(this).val(), "warning");
+      });
+
+      $('.msg-info').each(function () {
+        Swal.fire("", $(this).val(), "info");
+      });
+
+      $('.msg-success').each(function () {
+        Swal.fire("", $(this).val(), "success");
+      });
+      $('.msg-danger').each(function () {
+        Swal.fire("", $(this).val(), "error");
+      });
+    </script>
+    
+    
+		<script src="/permuta/js/libs/wow/wow.min.js"></script>
+		<script type="text/javascript">
+			new WOW().init();
+
+			// Fixa menu no topo da janela ao rolar página
+			let nav = document.getElementById('menu');
+			window.addEventListener('scroll', toggleFixedNav);
+
+			function toggleFixedNav() {
+				if (window.scrollY > 150 && $('#menu').hasClass('fixed-nav') === false) {
+					$('#menu').addClass('fixed-nav-hidden');
+				} else if (window.scrollY <= 150) {
+					$('#menu').removeClass('fixed-nav-hidden');
+				}
+
+				if (window.scrollY > 700) {
+					$('#menu').addClass('fixed-nav');
+				} else {
+					$('#menu').removeClass('fixed-nav');
+				}
+			}
+		</script>
+	
+  </body>
+</html>

@@ -1,0 +1,751 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T19:54:45.097Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12"
+    },
+    "gitCommit": "35192446fa4c70dad6b3eb15bfdec2bff375c62c",
+    "gitDirty": true
+  },
+  "siteId": "profletras.ufrn.br",
+  "contexto": {
+    "grupo": "wordpress",
+    "tecnologia": "wordpress",
+    "tipo": "pos-graduacao"
+  },
+  "recomendacoes": {
+    "total": 93,
+    "corrigidas": 57,
+    "corrigidasLlm": 0,
+    "llm": {
+      "prompt": "landmarks-v2",
+      "arquivo": "docs/prompts/landmarks-v2.md",
+      "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "effort": "low",
+      "maxTokens": 4000,
+      "execucao": {
+        "siteId": "profletras.ufrn.br",
+        "prompt": "landmarks-v2",
+        "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+        "modelo": "claude-haiku-5-5",
+        "modeloResposta": "claude-haiku-5-5",
+        "respostaId": "msg_011Ch7C9xsdTnCr6JCpdRRwW",
+        "chamada": true,
+        "motivo": null,
+        "ausentes": [
+          "main"
+        ],
+        "candidatos": 12,
+        "elegiveis": 12,
+        "stopReason": "end_turn",
+        "inputTokens": 2256,
+        "outputTokens": 383,
+        "custoUsd": 0.0004171,
+        "propostas": 0,
+        "validas": 0,
+        "rejeitadas": [],
+        "textoIgual": null,
+        "landmarksDepois": null,
+        "erro": null,
+        "duracaoMs": 4430
+      }
+    }
+  },
+  "parametros": {
+    "execucoesPorVariante": 3,
+    "formFactor": "mobile",
+    "throttlingMethod": "simulate",
+    "chromeFlagsExtras": [
+      "--host-resolver-rules=MAP * ~NOTFOUND, EXCLUDE 127.0.0.1"
+    ],
+    "userAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+    "relogioSemantica": "2026-11-09T18:50:56.687Z",
+    "relogioLighthouse": "real"
+  },
+  "ordem": [
+    {
+      "variante": "corrigido",
+      "n": 1
+    },
+    {
+      "variante": "original",
+      "n": 1
+    },
+    {
+      "variante": "corrigido",
+      "n": 2
+    },
+    {
+      "variante": "original",
+      "n": 2
+    },
+    {
+      "variante": "corrigido",
+      "n": 3
+    },
+    {
+      "variante": "original",
+      "n": 3
+    }
+  ],
+  "variantes": {
+    "original": {
+      "urlLocal": "http://127.0.0.1:49950/",
+      "execucoes": [
+        {
+          "n": 1,
+          "startedAt": "2026-11-16T20:03:06.888Z",
+          "durationMs": 13676,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 46,
+            "accessibility": 88,
+            "best-practices": 92,
+            "seo": 92
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:49950/",
+          "mainDocumentUrl": "http://127.0.0.1:49950/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2721.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 46,
+              "accessibility": 88,
+              "best-practices": 92,
+              "seo": 92
+            },
+            "fcpMs": 8631.53355,
+            "lcpMs": 25397.29305,
+            "tbtMs": 438,
+            "cls": 0.001245612280573177,
+            "speedIndexMs": 8631.53355,
+            "pesoTotalBytes": 5319725,
+            "requisicoes": 78,
+            "jsNaoUsadoBytes": 244316,
+            "cssNaoUsadoBytes": 68438
+          }
+        },
+        {
+          "n": 2,
+          "startedAt": "2026-11-16T20:03:34.132Z",
+          "durationMs": 13295,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 50,
+            "accessibility": 88,
+            "best-practices": 92,
+            "seo": 92
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:49950/",
+          "mainDocumentUrl": "http://127.0.0.1:49950/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2695.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 50,
+              "accessibility": 88,
+              "best-practices": 92,
+              "seo": 92
+            },
+            "fcpMs": 8628.575925000001,
+            "lcpMs": 25402.330449999994,
+            "tbtMs": 321.01337500000045,
+            "cls": 0.001245612280573177,
+            "speedIndexMs": 8628.575925000001,
+            "pesoTotalBytes": 5319725,
+            "requisicoes": 79,
+            "jsNaoUsadoBytes": 244316,
+            "cssNaoUsadoBytes": 68438
+          }
+        },
+        {
+          "n": 3,
+          "startedAt": "2026-11-16T20:04:01.507Z",
+          "durationMs": 13634,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 51,
+            "accessibility": 88,
+            "best-practices": 92,
+            "seo": 92
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:49950/",
+          "mainDocumentUrl": "http://127.0.0.1:49950/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2548,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 51,
+              "accessibility": 88,
+              "best-practices": 92,
+              "seo": 92
+            },
+            "fcpMs": 8627.574675,
+            "lcpMs": 25471.0772,
+            "tbtMs": 287.2835500000001,
+            "cls": 0.001245612280573177,
+            "speedIndexMs": 8627.574675,
+            "pesoTotalBytes": 5319725,
+            "requisicoes": 78,
+            "jsNaoUsadoBytes": 244348,
+            "cssNaoUsadoBytes": 68438
+          }
+        }
+      ],
+      "mediana": {
+        "criterio": "nota-performance",
+        "n": 2
+      },
+      "metricas": {
+        "notas": {
+          "performance": 50,
+          "accessibility": 88,
+          "best-practices": 92,
+          "seo": 92
+        },
+        "fcpMs": 8628.575925000001,
+        "lcpMs": 25402.330449999994,
+        "tbtMs": 321.01337500000045,
+        "cls": 0.001245612280573177,
+        "speedIndexMs": 8628.575925000001,
+        "pesoTotalBytes": 5319725,
+        "requisicoes": 79,
+        "jsNaoUsadoBytes": 244316,
+        "cssNaoUsadoBytes": 68438
+      },
+      "variacaoPerformance": {
+        "n": 3,
+        "min": 46,
+        "max": 51,
+        "amplitude": 5,
+        "media": 49,
+        "desvioPadrao": 2.65
+      },
+      "semantica": {
+        "status": "ok",
+        "indicadores": {
+          "divSpan": {
+            "div": 195,
+            "span": 71,
+            "total": 760,
+            "proporcao": 0.35
+          },
+          "landmarks": {
+            "banner": 1,
+            "navigation": 1,
+            "main": 0,
+            "contentinfo": 1
+          },
+          "titulos": {
+            "total": 28,
+            "h1": 6,
+            "porNivel": [
+              6,
+              11,
+              2,
+              9,
+              0,
+              0
+            ],
+            "saltos": 2,
+            "maiorSalto": 2,
+            "primeiroNivel": 1
+          },
+          "estrutura": {
+            "article": 0,
+            "section": 11,
+            "aside": 0,
+            "figure": 0,
+            "ul": 16,
+            "ol": 0
+          },
+          "interativosFalsos": {
+            "comOnclick": 0,
+            "falsos": 0
+          },
+          "metadados": {
+            "lang": "pt-BR",
+            "temTitle": true,
+            "titleComprimento": 44,
+            "temViewport": true,
+            "temDescription": true
+          },
+          "imagens": {
+            "total": 74,
+            "semAlt": 0,
+            "altVazio": 49,
+            "semAltComAlternativa": 0
+          },
+          "campos": {
+            "total": 9,
+            "semLabel": 9,
+            "semLabelComPlaceholderOuTitle": 4
+          },
+          "obsoletas": {
+            "roteiro": 0,
+            "whatwg": 0,
+            "porTag": {}
+          },
+          "tabelas": {
+            "total": 0,
+            "layoutDeclarada": 0,
+            "layoutHeuristica": 0,
+            "dados": 0,
+            "indeterminada": 0
+          }
+        },
+        "indice": {
+          "subnotas": {
+            "landmarks": 75,
+            "titulos": 46.2962962962963,
+            "imagens": 100,
+            "campos": 0,
+            "divSpan": 65,
+            "metadados": 100,
+            "interativos": null,
+            "obsoletos": 100
+          },
+          "indice": 63.95711500974659,
+          "indicePesosIguais": 69.47089947089947
+        },
+        "networkidleTimeout": false
+      },
+      "faltasNoServidor": [
+        "/_ext/kit.fontawesome.com/a86158e74e.js",
+        "/_ext/www.google.com/g/collect?v=2&tid=G-D5PQJ9RJMX&gtm=45je6b50v9209081781za20czd9209081781xf4&_p=1794250256687&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=964932520.1794250257&frm=0&ngs=1&pscdl=noapi&rcb=19&sr=412x823&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4%7CHeadlessChrome%3B156.0.8078.4&uam=&uamb=1&uap=Windows&uapv=&uaw=0&ul=pt-br&_s=1&tag_exp=115616985~115938465~115938469~118897920~118897930~120213116~120385422~120412528~120420416~120469145~120469153~121246026~121246034~123329125~123814185&sid=1794250256&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2F&dt=PROFLETRAS%20-%20Mestrado%20Profissional%20em%20Letras&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&gap.plf=5&tfd=388&gaf=1",
+        "/wp-content/themes/profletras-site/frontend-portal/dist/img/favicons/manifest.json",
+        "/_ext/www.google.com/g/collect?v=2&tid=G-D5PQJ9RJMX&gtm=45je6b50v9209081781za20czd9209081781xf4&_p=1794859389055&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1711164470.1794859389&frm=0&ngs=1&pscdl=noapi&rcb=12&sr=412x823&uaa=&uab=&uafvl=&uam=moto%20g%20power%20(2022)&uamb=1&uap=Android&uapv=11.0&uaw=0&ul=pt-br&_s=1&tag_exp=115938465~115938468~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034~123814185&sid=1794859389&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2F&dt=PROFLETRAS%20-%20Mestrado%20Profissional%20em%20Letras&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=411&gaf=1",
+        "/wp-content/themes/profletras-site/frontend-portal/dist/img/favicons/favicon-32x32.png",
+        "/wp-content/themes/profletras-site/frontend-portal/dist/img/favicons/favicon-16x16.png",
+        "/wp-content/themes/profletras-site/frontend-portal/dist/img/favicons/favicon-96x96.png",
+        "/wp-content/themes/profletras-site/frontend-portal/dist/img/favicons/android-icon-192x192.png",
+        "/wp-content/uploads/2025/02/type-term-01.png",
+        "/wp-content/uploads/2025/02/operation-icon-01.png",
+        "/wp-content/uploads/2026/05/Gemini_Generated_Image_ylf6hylf6hylf6hy-768x419.png",
+        "/wp-content/uploads/2025/02/memory-icon-01.png",
+        "/wp-content/uploads/2025/03/happy-black-teacher-schoolgirl-using-digital-tablet-classroom-768x512.jpg",
+        "/wp-content/uploads/2025/02/news-icon-01.png",
+        "/wp-content/uploads/2025/02/partners-icon-01.png",
+        "/wp-content/uploads/2025/03/Design-sem-nome-12.png",
+        "/wp-content/uploads/2025/03/Design-sem-nome-13.png",
+        "/wp-content/uploads/2025/02/Design-sem-nome-6.png",
+        "/wp-content/uploads/2025/03/Design-sem-nome-8.png",
+        "/wp-content/uploads/2025/03/Design-sem-nome-11.png",
+        "/wp-content/uploads/2025/03/Design-sem-nome-14.png",
+        "/wp-content/uploads/2025/03/Design-sem-nome-15.png",
+        "/wp-content/uploads/2025/03/Design-sem-nome-17.png",
+        "/wp-content/uploads/2025/03/Design-sem-nome-18.png",
+        "/wp-content/uploads/2025/03/Design-sem-nome-7.png",
+        "/wp-content/uploads/2025/02/contact-icon-01.png",
+        "/wp-content/uploads/2025/02/contact-icon-02.png",
+        "/wp-content/themes/profletras-site/frontend-portal/dist/img/footer/logo-footer.png",
+        "/_ext/www.gstatic.com/images/branding/product/2x/translate_24dp.png",
+        "/robots.txt",
+        "/_ext/www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7938.2437340854485!2d-35.207722811585576!3d-5.838441703354947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b2ff9d85b49171%3A0xed4c8ae1b3078f2!2sUniversidade%20Federal%20do%20Rio%20Grande%20do%20Norte!5e0!3m2!1spt-BR!2sbr!4v1740253213182!5m2!1spt-BR!2sbr",
+        "/_ext/translate.googleapis.com/element/log?hasfast=true&authuser=0&format=json",
+        "/_ext/www.google.com/g/collect?v=2&tid=G-D5PQJ9RJMX&gtm=45je6b50v9209081781za20czd9209081781xf4&_p=1794859416246&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1571197652.1794859417&frm=0&ngs=1&pscdl=noapi&rcb=10&sr=412x823&uaa=&uab=&uafvl=&uam=moto%20g%20power%20(2022)&uamb=1&uap=Android&uapv=11.0&uaw=0&ul=pt-br&_s=1&tag_exp=115938465~115938469~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034~123814183&sid=1794859416&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2F&dt=PROFLETRAS%20-%20Mestrado%20Profissional%20em%20Letras&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=390&gaf=1",
+        "/_ext/www.google.com/g/collect?v=2&tid=G-D5PQJ9RJMX&gtm=45je6b50v9209081781za20czd9209081781xf4&_p=1794859443652&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=69673792.1794859444&frm=0&ngs=1&pscdl=noapi&rcb=0&sr=412x823&uaa=&uab=&uafvl=&uam=moto%20g%20power%20(2022)&uamb=1&uap=Android&uapv=11.0&uaw=0&ul=pt-br&_s=1&tag_exp=115938466~115938469~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121246026~121246034~123814185&sid=1794859443&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2F&dt=PROFLETRAS%20-%20Mestrado%20Profissional%20em%20Letras&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=423&gaf=1"
+      ]
+    },
+    "corrigido": {
+      "urlLocal": "http://127.0.0.1:49951/",
+      "execucoes": [
+        {
+          "n": 1,
+          "startedAt": "2026-11-16T20:02:53.143Z",
+          "durationMs": 13745,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 50,
+            "accessibility": 88,
+            "best-practices": 92,
+            "seo": 92
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:49951/",
+          "mainDocumentUrl": "http://127.0.0.1:49951/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2339.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 50,
+              "accessibility": 88,
+              "best-practices": 92,
+              "seo": 92
+            },
+            "fcpMs": 8629.7385,
+            "lcpMs": 24357.03,
+            "tbtMs": 314.8675000000003,
+            "cls": 0.009338938655487251,
+            "speedIndexMs": 8629.7385,
+            "pesoTotalBytes": 5303530,
+            "requisicoes": 75,
+            "jsNaoUsadoBytes": 244316,
+            "cssNaoUsadoBytes": 68438
+          }
+        },
+        {
+          "n": 2,
+          "startedAt": "2026-11-16T20:03:20.564Z",
+          "durationMs": 13568,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 52,
+            "accessibility": 88,
+            "best-practices": 92,
+            "seo": 92
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:49951/",
+          "mainDocumentUrl": "http://127.0.0.1:49951/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2481,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 52,
+              "accessibility": 88,
+              "best-practices": 92,
+              "seo": 92
+            },
+            "fcpMs": 8629.9068,
+            "lcpMs": 25752.404000000002,
+            "tbtMs": 264,
+            "cls": 0.009338938655487251,
+            "speedIndexMs": 8629.9068,
+            "pesoTotalBytes": 5303530,
+            "requisicoes": 76,
+            "jsNaoUsadoBytes": 244348,
+            "cssNaoUsadoBytes": 68438
+          }
+        },
+        {
+          "n": 3,
+          "startedAt": "2026-11-16T20:03:47.427Z",
+          "durationMs": 14080,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 50,
+            "accessibility": 88,
+            "best-practices": 92,
+            "seo": 92
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:49951/",
+          "mainDocumentUrl": "http://127.0.0.1:49951/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2762.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 50,
+              "accessibility": 88,
+              "best-practices": 92,
+              "seo": 92
+            },
+            "fcpMs": 8629.079249999999,
+            "lcpMs": 24418.564999999995,
+            "tbtMs": 304.73375000000306,
+            "cls": 0.009338938655487251,
+            "speedIndexMs": 8629.079249999999,
+            "pesoTotalBytes": 5303530,
+            "requisicoes": 76,
+            "jsNaoUsadoBytes": 244348,
+            "cssNaoUsadoBytes": 68438
+          }
+        }
+      ],
+      "mediana": {
+        "criterio": "nota-performance",
+        "n": 3
+      },
+      "metricas": {
+        "notas": {
+          "performance": 50,
+          "accessibility": 88,
+          "best-practices": 92,
+          "seo": 92
+        },
+        "fcpMs": 8629.079249999999,
+        "lcpMs": 24418.564999999995,
+        "tbtMs": 304.73375000000306,
+        "cls": 0.009338938655487251,
+        "speedIndexMs": 8629.079249999999,
+        "pesoTotalBytes": 5303530,
+        "requisicoes": 76,
+        "jsNaoUsadoBytes": 244348,
+        "cssNaoUsadoBytes": 68438
+      },
+      "variacaoPerformance": {
+        "n": 3,
+        "min": 50,
+        "max": 52,
+        "amplitude": 2,
+        "media": 50.67,
+        "desvioPadrao": 1.15
+      },
+      "semantica": {
+        "status": "ok",
+        "indicadores": {
+          "divSpan": {
+            "div": 199,
+            "span": 71,
+            "total": 764,
+            "proporcao": 0.35340314136125656
+          },
+          "landmarks": {
+            "banner": 1,
+            "navigation": 1,
+            "main": 0,
+            "contentinfo": 1
+          },
+          "titulos": {
+            "total": 28,
+            "h1": 6,
+            "porNivel": [
+              6,
+              11,
+              2,
+              9,
+              0,
+              0
+            ],
+            "saltos": 2,
+            "maiorSalto": 2,
+            "primeiroNivel": 1
+          },
+          "estrutura": {
+            "article": 0,
+            "section": 11,
+            "aside": 0,
+            "figure": 0,
+            "ul": 16,
+            "ol": 0
+          },
+          "interativosFalsos": {
+            "comOnclick": 0,
+            "falsos": 0
+          },
+          "metadados": {
+            "lang": "pt-BR",
+            "temTitle": true,
+            "titleComprimento": 44,
+            "temViewport": true,
+            "temDescription": true
+          },
+          "imagens": {
+            "total": 74,
+            "semAlt": 0,
+            "altVazio": 49,
+            "semAltComAlternativa": 0
+          },
+          "campos": {
+            "total": 9,
+            "semLabel": 9,
+            "semLabelComPlaceholderOuTitle": 4
+          },
+          "obsoletas": {
+            "roteiro": 0,
+            "whatwg": 0,
+            "porTag": {}
+          },
+          "tabelas": {
+            "total": 0,
+            "layoutDeclarada": 0,
+            "layoutHeuristica": 0,
+            "dados": 0,
+            "indeterminada": 0
+          }
+        },
+        "indice": {
+          "subnotas": {
+            "landmarks": 75,
+            "titulos": 46.2962962962963,
+            "imagens": 100,
+            "campos": 0,
+            "divSpan": 64.65968586387434,
+            "metadados": 100,
+            "interativos": null,
+            "obsoletos": 100
+          },
+          "indice": 63.921292469101786,
+          "indicePesosIguais": 69.42228316573866
+        },
+        "networkidleTimeout": false
+      },
+      "faltasNoServidor": [
+        "/_ext/kit.fontawesome.com/a86158e74e.js",
+        "/_ext/www.google.com/g/collect?v=2&tid=G-D5PQJ9RJMX&gtm=45je6b50v9209081781za20czd9209081781xf4&_p=1794250256687&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1439644281.1794250257&frm=0&ngs=1&pscdl=noapi&rcb=3&sr=412x823&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4%7CHeadlessChrome%3B156.0.8078.4&uam=&uamb=1&uap=Windows&uapv=&uaw=0&ul=pt-br&_s=1&tag_exp=115938466~115938468~118897920~118897930~120213116~120385422~120412526~120420414~120469145~120469153~121246026~121246034~123329123~123814183&sid=1794250256&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2F&dt=PROFLETRAS%20-%20Mestrado%20Profissional%20em%20Letras&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=374&gaf=1",
+        "/wp-content/themes/profletras-site/frontend-portal/dist/img/favicons/manifest.json",
+        "/_ext/www.google.com/g/collect?v=2&tid=G-D5PQJ9RJMX&gtm=45je6b50v9209081781za20czd9209081781xf4&_p=1794859375383&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=381263174.1794859376&frm=0&ngs=1&pscdl=noapi&rcb=6&sr=412x823&uaa=&uab=&uafvl=&uam=moto%20g%20power%20(2022)&uamb=1&uap=Android&uapv=11.0&uaw=0&ul=pt-br&_s=1&tag_exp=115938465~115938469~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121246026~121246034~123814185&sid=1794859375&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2F&dt=PROFLETRAS%20-%20Mestrado%20Profissional%20em%20Letras&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=387&gaf=1",
+        "/wp-content/themes/profletras-site/frontend-portal/dist/img/favicons/favicon-32x32.png",
+        "/wp-content/themes/profletras-site/frontend-portal/dist/img/favicons/favicon-16x16.png",
+        "/wp-content/themes/profletras-site/frontend-portal/dist/img/favicons/favicon-96x96.png",
+        "/wp-content/themes/profletras-site/frontend-portal/dist/img/favicons/android-icon-192x192.png",
+        "/wp-content/uploads/2025/02/type-term-01.png",
+        "/wp-content/uploads/2025/02/operation-icon-01.png",
+        "/wp-content/uploads/2026/05/Gemini_Generated_Image_ylf6hylf6hylf6hy-768x419.png",
+        "/wp-content/uploads/2025/02/memory-icon-01.png",
+        "/wp-content/uploads/2025/03/happy-black-teacher-schoolgirl-using-digital-tablet-classroom-768x512.jpg",
+        "/wp-content/uploads/2025/02/news-icon-01.png",
+        "/wp-content/uploads/2025/02/partners-icon-01.png",
+        "/wp-content/uploads/2025/03/Design-sem-nome-12.png",
+        "/wp-content/uploads/2025/03/Design-sem-nome-13.png",
+        "/wp-content/uploads/2025/02/Design-sem-nome-6.png",
+        "/wp-content/uploads/2025/03/Design-sem-nome-8.png",
+        "/wp-content/uploads/2025/03/Design-sem-nome-11.png",
+        "/wp-content/uploads/2025/03/Design-sem-nome-14.png",
+        "/wp-content/uploads/2025/03/Design-sem-nome-15.png",
+        "/wp-content/uploads/2025/03/Design-sem-nome-17.png",
+        "/wp-content/uploads/2025/03/Design-sem-nome-18.png",
+        "/wp-content/uploads/2025/03/Design-sem-nome-7.png",
+        "/wp-content/uploads/2025/02/contact-icon-01.png",
+        "/wp-content/uploads/2025/02/contact-icon-02.png",
+        "/wp-content/themes/profletras-site/frontend-portal/dist/img/footer/logo-footer.png",
+        "/_ext/www.gstatic.com/images/branding/product/2x/translate_24dp.png",
+        "/robots.txt",
+        "/_ext/www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7938.2437340854485!2d-35.207722811585576!3d-5.838441703354947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b2ff9d85b49171%3A0xed4c8ae1b3078f2!2sUniversidade%20Federal%20do%20Rio%20Grande%20do%20Norte!5e0!3m2!1spt-BR!2sbr!4v1740253213182!5m2!1spt-BR!2sbr",
+        "/_ext/translate.googleapis.com/element/log?hasfast=true&authuser=0&format=json",
+        "/_ext/www.google.com/g/collect?v=2&tid=G-D5PQJ9RJMX&gtm=45je6b50v9209081781za20czd9209081781xf4&_p=1794859402663&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1549372429.1794859403&frm=0&ngs=1&pscdl=noapi&rcb=19&sr=412x823&uaa=&uab=&uafvl=&uam=moto%20g%20power%20(2022)&uamb=1&uap=Android&uapv=11.0&uaw=0&ul=pt-br&_s=1&tag_exp=115616986~115938465~115938469~118897920~118897930~120213116~120385422~120412528~120420416~120469145~120469153~121246026~121246034~123329124~123814183&sid=1794859403&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2F&dt=PROFLETRAS%20-%20Mestrado%20Profissional%20em%20Letras&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=425&gaf=1",
+        "/_ext/www.google.com/g/collect?v=2&tid=G-D5PQJ9RJMX&gtm=45je6b50v9209081781za20czd9209081781xf4&_p=1794859429566&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=891990176.1794859430&frm=0&ngs=1&pscdl=noapi&rcb=0&sr=412x823&uaa=&uab=&uafvl=&uam=moto%20g%20power%20(2022)&uamb=1&uap=Android&uapv=11.0&uaw=0&ul=pt-br&_s=1&tag_exp=115616986~115938466~115938469~118897920~118897930~119793973~119863601~120213116~120385422~120412528~120420416~120469145~120469153~121246026~121246034~123814183&sid=1794859429&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2F&dt=PROFLETRAS%20-%20Mestrado%20Profissional%20em%20Letras&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=390&gaf=1"
+      ]
+    }
+  },
+  "deltas": {
+    "nota_performance": {
+      "original": 50,
+      "corrigido": 50,
+      "delta": 0
+    },
+    "nota_accessibility": {
+      "original": 88,
+      "corrigido": 88,
+      "delta": 0
+    },
+    "nota_best_practices": {
+      "original": 92,
+      "corrigido": 92,
+      "delta": 0
+    },
+    "nota_seo": {
+      "original": 92,
+      "corrigido": 92,
+      "delta": 0
+    },
+    "fcp_ms": {
+      "original": 8628.575925000001,
+      "corrigido": 8629.079249999999,
+      "delta": 0.503324999997858
+    },
+    "lcp_ms": {
+      "original": 25402.330449999994,
+      "corrigido": 24418.564999999995,
+      "delta": -983.765449999999
+    },
+    "tbt_ms": {
+      "original": 321.01337500000045,
+      "corrigido": 304.73375000000306,
+      "delta": -16.279624999997395
+    },
+    "cls": {
+      "original": 0.001245612280573177,
+      "corrigido": 0.009338938655487251,
+      "delta": 0.008093326374914073
+    },
+    "speed_index_ms": {
+      "original": 8628.575925000001,
+      "corrigido": 8629.079249999999,
+      "delta": 0.503324999997858
+    },
+    "peso_total_bytes": {
+      "original": 5319725,
+      "corrigido": 5303530,
+      "delta": -16195
+    },
+    "requisicoes": {
+      "original": 79,
+      "corrigido": 76,
+      "delta": -3
+    },
+    "indice_semantica": {
+      "original": 63.95711500974659,
+      "corrigido": 63.921292469101786,
+      "delta": -0.03582254064480139
+    },
+    "indice_semantica_pesos_iguais": {
+      "original": 69.47089947089947,
+      "corrigido": 69.42228316573866,
+      "delta": -0.04861630516080595
+    },
+    "sub_landmarks": {
+      "original": 75,
+      "corrigido": 75,
+      "delta": 0
+    },
+    "sub_titulos": {
+      "original": 46.2962962962963,
+      "corrigido": 46.2962962962963,
+      "delta": 0
+    },
+    "sub_imagens": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    },
+    "sub_campos": {
+      "original": 0,
+      "corrigido": 0,
+      "delta": 0
+    },
+    "sub_divSpan": {
+      "original": 65,
+      "corrigido": 64.65968586387434,
+      "delta": -0.34031413612565586
+    },
+    "sub_metadados": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    },
+    "sub_interativos": {
+      "original": null,
+      "corrigido": null,
+      "delta": null
+    },
+    "sub_obsoletos": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    }
+  }
+}

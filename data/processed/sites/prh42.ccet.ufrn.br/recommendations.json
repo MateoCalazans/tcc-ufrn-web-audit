@@ -1,0 +1,1382 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T21:05:15.459Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12",
+      "diff": "9.0.0",
+      "@anthropic-ai/sdk": "1.8.0"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "id": "prh42.ccet.ufrn.br",
+  "url": "https://prh42.ccet.ufrn.br/",
+  "fonte": {
+    "html": "index.html",
+    "codificacao": "utf-8",
+    "bom": false,
+    "har": true,
+    "lighthouse": "lh1.json",
+    "lighthouseVersion": "13.5.0"
+  },
+  "regras": [
+    {
+      "id": "html-lang",
+      "dimensao": "semantica",
+      "descricao": "O elemento <html> declara o idioma da página (atributo lang)."
+    },
+    {
+      "id": "meta-viewport",
+      "dimensao": "performance",
+      "descricao": "A página declara <meta name=\"viewport\"> adequada a telas móveis, sem bloquear o zoom."
+    },
+    {
+      "id": "img-dimensions",
+      "dimensao": "performance",
+      "descricao": "Toda <img> declara width e height, para o navegador reservar o espaço antes do download."
+    },
+    {
+      "id": "img-lazy",
+      "dimensao": "performance",
+      "descricao": "<img> depois das 3 primeiras do documento usa loading=\"lazy\" (exceto a imagem LCP)."
+    },
+    {
+      "id": "obsolete-tags",
+      "dimensao": "semantica",
+      "descricao": "Sem elementos obsoletos do WHATWG (center, font, marquee…); <font> simples vira <span style>."
+    },
+    {
+      "id": "heading-skip",
+      "dimensao": "semantica",
+      "descricao": "Títulos não pulam níveis ao descer na hierarquia (h1 → h3, por exemplo)."
+    },
+    {
+      "id": "fake-button",
+      "dimensao": "semantica",
+      "descricao": "Elementos clicáveis são <button>/<a>, não div/span com onclick."
+    },
+    {
+      "id": "render-blocking-hint",
+      "dimensao": "performance",
+      "descricao": "Scripts e folhas de estilo que o Lighthouse aponta como bloqueantes são adiados quando não são críticos."
+    },
+    {
+      "id": "landmarks-llm",
+      "dimensao": "semantica",
+      "descricao": "Landmarks ausentes propostos por LLM sobre <div>, <section> ou <article> existentes (landmarks-v2, claude-haiku-5-5)."
+    }
+  ],
+  "llm": {
+    "prompt": "landmarks-v2",
+    "arquivo": "docs/prompts/landmarks-v2.md",
+    "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+    "modelo": "claude-haiku-5-5",
+    "effort": "low",
+    "maxTokens": 4000,
+    "execucao": {
+      "siteId": "prh42.ccet.ufrn.br",
+      "prompt": "landmarks-v2",
+      "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "modeloResposta": "claude-haiku-5-5",
+      "respostaId": "msg_011Ch7JQT5c99hYDmYNAEJSQ",
+      "chamada": true,
+      "motivo": null,
+      "ausentes": [
+        "main"
+      ],
+      "candidatos": 7,
+      "elegiveis": 7,
+      "stopReason": "end_turn",
+      "inputTokens": 1853,
+      "outputTokens": 362,
+      "custoUsd": 0.0003663,
+      "propostas": 0,
+      "validas": 0,
+      "rejeitadas": [],
+      "textoIgual": null,
+      "landmarksDepois": null,
+      "erro": null,
+      "duracaoMs": 2747
+    }
+  },
+  "resumo": {
+    "total": 34,
+    "corrigidas": 22,
+    "porRegra": {
+      "html-lang": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "meta-viewport": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "img-dimensions": {
+        "total": 22,
+        "corrigidas": 16
+      },
+      "img-lazy": {
+        "total": 6,
+        "corrigidas": 6
+      },
+      "obsolete-tags": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "heading-skip": {
+        "total": 1,
+        "corrigidas": 0
+      },
+      "fake-button": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "render-blocking-hint": {
+        "total": 5,
+        "corrigidas": 0
+      },
+      "landmarks-llm": {
+        "total": 0,
+        "corrigidas": 0
+      }
+    },
+    "porDimensao": {
+      "performance": 33,
+      "semantica": 1
+    }
+  },
+  "guardaImagens": {
+    "imagens": [
+      {
+        "recomendacao": "img-dimensions-1",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "mudou"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 161,
+              "altura": 55,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 301,
+              "altura": 55,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 278,
+              "altura": 95,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 301,
+              "altura": 95,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-2",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 388,
+              "altura": 64,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 388,
+              "altura": 105,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 637,
+              "altura": 105,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 637,
+              "altura": 105,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-3",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 227,
+              "altura": 107,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 227,
+              "altura": 107,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 227,
+              "altura": 107,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 227,
+              "altura": 107,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-4",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 30,
+              "altura": 40,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 30,
+              "altura": 40,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 30,
+              "altura": 40,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 30,
+              "altura": 40,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-5",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 30,
+              "altura": 40,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 30,
+              "altura": 40,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 30,
+              "altura": 40,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 30,
+              "altura": 40,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-6",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 30,
+              "altura": 40,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 30,
+              "altura": 40,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 30,
+              "altura": 40,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 30,
+              "altura": 40,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-7",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 227,
+              "altura": 107,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 227,
+              "altura": 107,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 227,
+              "altura": 107,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 227,
+              "altura": 107,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-8",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-9",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-10",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-11",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-12",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-13",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-14",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-15",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 30,
+              "altura": 30,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-16",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 227,
+              "altura": 107,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 227,
+              "altura": 107,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 227,
+              "altura": 107,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 227,
+              "altura": 107,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-17",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 142,
+              "altura": 108,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 142,
+              "altura": 108,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 142,
+              "altura": 108,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 142,
+              "altura": 108,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-22",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 80,
+              "altura": 26,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 80,
+              "altura": 26,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 80,
+              "altura": 26,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 80,
+              "altura": 26,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      }
+    ],
+    "mantidas": 16,
+    "desfeitas": 2,
+    "erro": null
+  },
+  "recommendations": [
+    {
+      "id": "img-dimensions-1",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://prh42.ccet.ufrn.br/wp-content/themes/prh-anp-42-site/frontend-portal/dist/img/header/logo.png\" alt=\"logo\">",
+      "posicao": {
+        "linha": 124,
+        "coluna": 9
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"301\" height=\"103\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: mudou)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-2",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://prh42.ccet.ufrn.br/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-25-at-08.16.03-e1756143687280.jpeg\" title=\"Quem Somos\" alt=\"\" loading=\"lazy\" />",
+      "posicao": {
+        "linha": 177,
+        "coluna": 31
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"637\" height=\"105\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: igual)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-3",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://prh42.ccet.ufrn.br/wp-content/themes/prh-anp-42-site/frontend-portal/dist/img/backgrounds/card-bg-detail.png\" alt=\"imagem de fundo\">",
+      "posicao": {
+        "linha": 228,
+        "coluna": 3
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"227\" height=\"107\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 30359,
+          "fim": 30359,
+          "texto": " width=\"227\" height=\"107\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-4",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://prh42.ccet.ufrn.br/wp-content/themes/prh-anp-42-site/frontend-portal/dist/img/file.png\" alt=\"ícone de um arquivo\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 273,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"27\" height=\"36\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 32845,
+          "fim": 32845,
+          "texto": " width=\"27\" height=\"36\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-5",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://prh42.ccet.ufrn.br/wp-content/themes/prh-anp-42-site/frontend-portal/dist/img/file.png\" alt=\"ícone de um arquivo\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 284,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"27\" height=\"36\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 33563,
+          "fim": 33563,
+          "texto": " width=\"27\" height=\"36\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-6",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://prh42.ccet.ufrn.br/wp-content/themes/prh-anp-42-site/frontend-portal/dist/img/file.png\" alt=\"ícone de um arquivo\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 295,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"27\" height=\"36\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 34280,
+          "fim": 34280,
+          "texto": " width=\"27\" height=\"36\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-7",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://prh42.ccet.ufrn.br/wp-content/themes/prh-anp-42-site/frontend-portal/dist/img/backgrounds/card-bg-detail.png\" alt=\"imagem de fundo\">",
+      "posicao": {
+        "linha": 315,
+        "coluna": 3
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"227\" height=\"107\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 35074,
+          "fim": 35074,
+          "texto": " width=\"227\" height=\"107\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-8",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://prh42.ccet.ufrn.br/wp-content/themes/prh-anp-42-site/frontend-portal/dist/img/researchs.png\" alt=\"ícone de uma lupa\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 332,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"30\" height=\"30\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 36110,
+          "fim": 36110,
+          "texto": " width=\"30\" height=\"30\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-9",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://prh42.ccet.ufrn.br/wp-content/themes/prh-anp-42-site/frontend-portal/dist/img/researchs.png\" alt=\"ícone de uma lupa\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 343,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"30\" height=\"30\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 36988,
+          "fim": 36988,
+          "texto": " width=\"30\" height=\"30\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-10",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://prh42.ccet.ufrn.br/wp-content/themes/prh-anp-42-site/frontend-portal/dist/img/researchs.png\" alt=\"ícone de uma lupa\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 354,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"30\" height=\"30\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 37846,
+          "fim": 37846,
+          "texto": " width=\"30\" height=\"30\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-11",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://prh42.ccet.ufrn.br/wp-content/themes/prh-anp-42-site/frontend-portal/dist/img/researchs.png\" alt=\"ícone de uma lupa\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 365,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"30\" height=\"30\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 38585,
+          "fim": 38585,
+          "texto": " width=\"30\" height=\"30\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-12",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://prh42.ccet.ufrn.br/wp-content/themes/prh-anp-42-site/frontend-portal/dist/img/researchs.png\" alt=\"ícone de uma lupa\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 376,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"30\" height=\"30\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 39388,
+          "fim": 39388,
+          "texto": " width=\"30\" height=\"30\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-13",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://prh42.ccet.ufrn.br/wp-content/themes/prh-anp-42-site/frontend-portal/dist/img/researchs.png\" alt=\"ícone de uma lupa\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 387,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"30\" height=\"30\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 40241,
+          "fim": 40241,
+          "texto": " width=\"30\" height=\"30\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-14",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://prh42.ccet.ufrn.br/wp-content/themes/prh-anp-42-site/frontend-portal/dist/img/researchs.png\" alt=\"ícone de uma lupa\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 398,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"30\" height=\"30\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 41161,
+          "fim": 41161,
+          "texto": " width=\"30\" height=\"30\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-15",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://prh42.ccet.ufrn.br/wp-content/themes/prh-anp-42-site/frontend-portal/dist/img/researchs.png\" alt=\"ícone de uma lupa\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 409,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"30\" height=\"30\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 42000,
+          "fim": 42000,
+          "texto": " width=\"30\" height=\"30\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-16",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://prh42.ccet.ufrn.br/wp-content/themes/prh-anp-42-site/frontend-portal/dist/img/backgrounds/card-bg-detail.png\" alt=\"imagem de fundo\">",
+      "posicao": {
+        "linha": 578,
+        "coluna": 3
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"227\" height=\"107\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 62450,
+          "fim": 62450,
+          "texto": " width=\"227\" height=\"107\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-17",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://prh42.ccet.ufrn.br/wp-content/themes/prh-anp-42-site/frontend-portal/dist/img/documents.png\" alt=\"pasta\">",
+      "posicao": {
+        "linha": 590,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"142\" height=\"108\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 62910,
+          "fim": 62910,
+          "texto": " width=\"142\" height=\"108\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-18",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://prh42.ccet.ufrn.br/wp-content/themes/prh-anp-42-site/frontend-portal/dist/img/footer/logo-footer.png\" alt=\"logo\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 608,
+        "coluna": 13
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-19",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://prh42.ccet.ufrn.br/wp-content/themes/prh-anp-42-site/frontend-portal/dist/img/footer/img-footer-01.png\" alt=\"logo prh\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 629,
+        "coluna": 11
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-20",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://prh42.ccet.ufrn.br/wp-content/themes/prh-anp-42-site/frontend-portal/dist/img/footer/img-footer-02.png\" alt=\"logo ufrn\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 630,
+        "coluna": 11
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-21",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://prh42.ccet.ufrn.br/wp-content/themes/prh-anp-42-site/frontend-portal/dist/img/footer/img-footer-03.png\" alt=\"logo anp\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 631,
+        "coluna": 11
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-22",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://prh42.ccet.ufrn.br/wp-content/themes/prh-anp-42-site/frontend-portal/dist/img/footer/interativa.png\" alt=\"Site desenvolvido pela Interativa Digital\" title=\"Interativa Digital - Desd…",
+      "posicao": {
+        "linha": 642,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"80\" height=\"26\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 66076,
+          "fim": 66076,
+          "texto": " width=\"80\" height=\"26\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-1",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img width=\"549\" height=\"445\" src=\"https://prh42.ccet.ufrn.br/wp-content/uploads/2021/01/PRH-UFRN-Processos-Seletivos-2.jpg\" class=\"section-banner__thumbnail wp-post-image\" alt=\"Banner &#8211; Proces…",
+      "posicao": {
+        "linha": 206,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "4ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 28869,
+          "fim": 28869,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-2",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://prh42.ccet.ufrn.br/wp-content/themes/prh-anp-42-site/frontend-portal/dist/img/backgrounds/card-bg-detail.png\" alt=\"imagem de fundo\">",
+      "posicao": {
+        "linha": 228,
+        "coluna": 3
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "5ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 30214,
+          "fim": 30214,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-3",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://prh42.ccet.ufrn.br/wp-content/themes/prh-anp-42-site/frontend-portal/dist/img/backgrounds/card-bg-detail.png\" alt=\"imagem de fundo\">",
+      "posicao": {
+        "linha": 315,
+        "coluna": 3
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "9ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 34929,
+          "fim": 34929,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-4",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://prh42.ccet.ufrn.br/wp-content/themes/prh-anp-42-site/frontend-portal/dist/img/backgrounds/card-bg-detail.png\" alt=\"imagem de fundo\">",
+      "posicao": {
+        "linha": 578,
+        "coluna": 3
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "32ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 62305,
+          "fim": 62305,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-5",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://prh42.ccet.ufrn.br/wp-content/themes/prh-anp-42-site/frontend-portal/dist/img/documents.png\" alt=\"pasta\">",
+      "posicao": {
+        "linha": 590,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "33ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 62792,
+          "fim": 62792,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-6",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://prh42.ccet.ufrn.br/wp-content/themes/prh-anp-42-site/frontend-portal/dist/img/footer/interativa.png\" alt=\"Site desenvolvido pela Interativa Digital\" title=\"Interativa Digital - Desd…",
+      "posicao": {
+        "linha": 642,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "38ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 65824,
+          "fim": 65824,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "heading-skip-1",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h5>",
+      "posicao": {
+        "linha": 612,
+        "coluna": 23
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 2 para o nível 5: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h3 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-1",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link href=\"https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ita…",
+      "posicao": {
+        "linha": 8,
+        "coluna": 3
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (1054 ms de bloqueio, 1.2 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-2",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='styles-theme-css' href='https://prh42.ccet.ufrn.br/wp-content/themes/prh-anp-42-site/frontend-portal/dist/css/style.min.css?ver=7.1.4' media='all' />",
+      "posicao": {
+        "linha": 31,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (1480 ms de bloqueio, 62.1 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-3",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='contact-form-7-css' href='https://prh42.ccet.ufrn.br/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.2.4.1' media='all' />",
+      "posicao": {
+        "linha": 63,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (640 ms de bloqueio, 4.3 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-4",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script id=\"jquery-core-js\" src=\"https://prh42.ccet.ufrn.br/wp-includes/js/jquery/jquery.min.js?ver=3.7.1\">",
+      "posicao": {
+        "linha": 64,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (1270 ms de bloqueio, 33.0 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-5",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script id=\"jquery-migrate-js\" src=\"https://prh42.ccet.ufrn.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1\">",
+      "posicao": {
+        "linha": 65,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (640 ms de bloqueio, 8.0 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    }
+  ]
+}

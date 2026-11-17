@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panorama — auditoria dos sites da UFRN</title>
+<style>body{font-family:system-ui,sans-serif;max-width:60rem;margin:1rem auto;padding:0 1rem;color:#111;background:#fff;line-height:1.4}
+table{border-collapse:collapse;margin:.5rem 0 1.5rem;font-size:.9rem}
+th,td{border:1px solid #ccc;padding:.25rem .5rem;text-align:left;vertical-align:top}
+th{background:#f2f2f2}
+td.n{text-align:right}
+.aviso{background:#fff4d6;border:1px solid #e0c060;padding:.5rem}
+footer{margin-top:2rem;font-size:.8rem;color:#555}</style>
+</head>
+<body>
+<main>
+<h1>Panorama — sites públicos da UFRN</h1>
+<p>Descritivas do corpus. Os testes estatísticos estão no notebook <code>analysis/diagnostico.ipynb</code> (ADR 013).</p>
+<h2>Resumo</h2>
+<table>
+<thead><tr><th>Medida</th><th>Valor</th></tr></thead>
+<tbody>
+<tr><td>Sites no dataset</td><td><span class="n">242</span></td></tr>
+<tr><td>Conjunto principal (performance completa, sem exclusão)</td><td><span class="n">217</span></td></tr>
+<tr><td>Recorte semântico (principal com índice)</td><td><span class="n">213</span> (9 com stub de meta refresh)</td></tr>
+<tr><td>Sem main</td><td>119 (55,9%)</td></tr>
+<tr><td>Sem main nem nav</td><td>46 (21,6%)</td></tr>
+<tr><td>Proporção div+span: média / mediana</td><td>0,404 / 0,405</td></tr>
+<tr><td>Mediana da nota de performance</td><td><span class="n">61</span></td></tr>
+<tr><td>Mediana da nota de acessibilidade</td><td><span class="n">85</span></td></tr>
+<tr><td>Mediana do índice de semântica</td><td><span class="n">65,3</span></td></tr>
+</tbody>
+</table>
+<h2>10 auditorias que mais falham (conjunto principal, n = 217)</h2>
+<table>
+<thead><tr><th>#</th><th>Auditoria</th><th>Categoria</th><th>Sites</th><th>%</th></tr></thead>
+<tbody>
+<tr><td><span class="n">1</span></td><td><code>network-dependency-tree-insight</code><br>Network dependency tree</td><td>performance</td><td><span class="n">186</span></td><td>85,7%</td></tr>
+<tr><td><span class="n">2</span></td><td><code>render-blocking-insight</code><br>Render-blocking requests</td><td>performance</td><td><span class="n">181</span></td><td>83,4%</td></tr>
+<tr><td><span class="n">3</span></td><td><code>cache-insight</code><br>Use efficient cache lifetimes</td><td>performance</td><td><span class="n">174</span></td><td>80,2%</td></tr>
+<tr><td><span class="n">4</span></td><td><code>image-delivery-insight</code><br>Improve image delivery</td><td>performance</td><td><span class="n">174</span></td><td>80,2%</td></tr>
+<tr><td><span class="n">5</span></td><td><code>unused-javascript</code><br>Reduce unused JavaScript</td><td>performance</td><td><span class="n">170</span></td><td>78,3%</td></tr>
+<tr><td><span class="n">6</span></td><td><code>unused-css-rules</code><br>Reduce unused CSS</td><td>performance</td><td><span class="n">159</span></td><td>73,3%</td></tr>
+<tr><td><span class="n">7</span></td><td><code>unsized-images</code><br>Image elements do not have explicit `width` and `height`</td><td>performance</td><td><span class="n">158</span></td><td>72,8%</td></tr>
+<tr><td><span class="n">8</span></td><td><code>color-contrast</code><br>Background and foreground colors do not have a sufficient contrast ratio.</td><td>accessibility</td><td><span class="n">154</span></td><td>71,0%</td></tr>
+<tr><td><span class="n">9</span></td><td><code>font-display-insight</code><br>Font display</td><td>performance</td><td><span class="n">133</span></td><td>61,3%</td></tr>
+<tr><td><span class="n">10</span></td><td><code>link-name</code><br>Links do not have a discernible name</td><td>accessibility</td><td><span class="n">126</span></td><td>58,1%</td></tr>
+</tbody>
+</table>
+<h2>Sites (242)</h2>
+<table>
+<thead><tr><th>Site</th><th>Tecnologia</th><th>Conjunto principal</th><th>Performance</th><th>Acessibilidade</th><th>Índice</th></tr></thead>
+<tbody>
+<tr><td><a href="sites/2enappe.ce.ufrn.br.html">2enappe.ce.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">43</span></td><td><span class="n">73</span></td><td><span class="n">61,1</span></td></tr>
+<tr><td><a href="sites/3cnienssup.ufrn.br.html">3cnienssup.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">48</span></td><td><span class="n">91</span></td><td><span class="n">60,4</span></td></tr>
+<tr><td><a href="sites/4cnienssup.ufrn.br.html">4cnienssup.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">66</span></td><td><span class="n">95</span></td><td><span class="n">61,8</span></td></tr>
+<tr><td><a href="sites/60anos.musica.ufrn.br.html">60anos.musica.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">55</span></td><td><span class="n">91</span></td><td><span class="n">77,7</span></td></tr>
+<tr><td><a href="sites/acervus.ufrn.br.html">acervus.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">51</span></td><td><span class="n">82</span></td><td><span class="n">56,9</span></td></tr>
+<tr><td><a href="sites/acessoainformacao.ufrn.br.html">acessoainformacao.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">39</span></td><td><span class="n">92</span></td><td><span class="n">72,6</span></td></tr>
+<tr><td><a href="sites/agenda.ect.ufrn.br.html">agenda.ect.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">55</span></td><td><span class="n">87</span></td><td><span class="n">60,2</span></td></tr>
+<tr><td><a href="sites/agir.ufrn.br.html">agir.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">46</span></td><td><span class="n">68</span></td><td><span class="n">49,6</span></td></tr>
+<tr><td><a href="sites/aguazul.nupprar.ufrn.br.html">aguazul.nupprar.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">85</span></td><td><span class="n">100</span></td><td><span class="n">81,2</span></td></tr>
+<tr><td><a href="sites/argec.ufrn.br.html">argec.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">74</span></td><td><span class="n">76</span></td><td><span class="n">52,2</span></td></tr>
+<tr><td><a href="sites/artefatos.imd.ufrn.br.html">artefatos.imd.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">25</span></td><td><span class="n">80</span></td><td><span class="n">21,9</span></td></tr>
+<tr><td><a href="sites/auditoria.ufrn.br.html">auditoria.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">41</span></td><td><span class="n">93</span></td><td><span class="n">73,1</span></td></tr>
+<tr><td><a href="sites/autonomiamulheres.ufrn.br.html">autonomiamulheres.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">62</span></td><td><span class="n">73</span></td><td><span class="n">56,2</span></td></tr>
+<tr><td><a href="sites/avaliacao.ufrn.br.html">avaliacao.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">93</span></td><td><span class="n">73</span></td><td><span class="n">47,5</span></td></tr>
+<tr><td><a href="sites/backend.baobah.ceres.ufrn.br.html">backend.baobah.ceres.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">54</span></td><td><span class="n">81</span></td><td><span class="n">53,5</span></td></tr>
+<tr><td><a href="sites/baobah.ceres.ufrn.br.html">baobah.ceres.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">31</span></td><td><span class="n">87</span></td><td><span class="n">68,0</span></td></tr>
+<tr><td><a href="sites/bibliotecadigital.sedis.ufrn.br.html">bibliotecadigital.sedis.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">72</span></td><td><span class="n">90</span></td><td><span class="n">61,7</span></td></tr>
+<tr><td><a href="sites/boletim.ufrn.br.html">boletim.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">55</span></td><td><span class="n">89</span></td><td><span class="n">76,1</span></td></tr>
+<tr><td><a href="sites/caatinga.ufrn.br.html">caatinga.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">28</span></td><td><span class="n">95</span></td><td><span class="n">77,9</span></td></tr>
+<tr><td><a href="sites/caecomp.ct.ufrn.br.html">caecomp.ct.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">64</span></td><td><span class="n">81</span></td><td><span class="n">77,1</span></td></tr>
+<tr><td><a href="sites/caene.ufrn.br.html">caene.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">52</span></td><td><span class="n">88</span></td><td><span class="n">88,7</span></td></tr>
+<tr><td><a href="sites/caus.ufrn.br.html">caus.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">55</span></td><td><span class="n">96</span></td><td><span class="n">89,0</span></td></tr>
+<tr><td><a href="sites/cb.ufrn.br.html">cb.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">55</span></td><td><span class="n">74</span></td><td><span class="n">52,3</span></td></tr>
+<tr><td><a href="sites/cchla.ufrn.br.html">cchla.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">64</span></td><td><span class="n">93</span></td><td><span class="n">87,1</span></td></tr>
+<tr><td><a href="sites/ccs.ufrn.br.html">ccs.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">48</span></td><td><span class="n">88</span></td><td><span class="n">68,6</span></td></tr>
+<tr><td><a href="sites/ce.ufrn.br.html">ce.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">41</span></td><td><span class="n">65</span></td><td><span class="n">59,0</span></td></tr>
+<tr><td><a href="sites/cecane.ccs.ufrn.br.html">cecane.ccs.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">71</span></td><td><span class="n">86</span></td><td><span class="n">71,0</span></td></tr>
+<tr><td><a href="sites/cep.propesq.ufrn.br.html">cep.propesq.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">90</span></td><td><span class="n">77</span></td><td><span class="n">50,1</span></td></tr>
+<tr><td><a href="sites/cetel.ct.ufrn.br.html">cetel.ct.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">58</span></td><td><span class="n">91</span></td><td><span class="n">76,9</span></td></tr>
+<tr><td><a href="sites/ceua.propesq.ufrn.br.html">ceua.propesq.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">64</span></td><td><span class="n">71</span></td><td><span class="n">42,9</span></td></tr>
+<tr><td><a href="sites/chico.ufrn.br.html">chico.ufrn.br</a></td><td>estatico</td><td>não</td><td><span class="n">—</span></td><td><span class="n">—</span></td><td><span class="n">61,5</span></td></tr>
+<tr><td><a href="sites/cibio.propesq.ufrn.br.html">cibio.propesq.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">89</span></td><td><span class="n">77</span></td><td><span class="n">71,9</span></td></tr>
+<tr><td><a href="sites/ciscpet.fisica.ufrn.br.html">ciscpet.fisica.ufrn.br</a></td><td>joomla</td><td>sim</td><td><span class="n">92</span></td><td><span class="n">95</span></td><td><span class="n">91,7</span></td></tr>
+<tr><td><a href="sites/comissaodaverdade.ufrn.br.html">comissaodaverdade.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">90</span></td><td><span class="n">68</span></td><td><span class="n">49,8</span></td></tr>
+<tr><td><a href="sites/comissaodeetica.ufrn.br.html">comissaodeetica.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">81</span></td><td><span class="n">61</span></td><td><span class="n">76,8</span></td></tr>
+<tr><td><a href="sites/comperve.ufrn.br.html">comperve.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">81</span></td><td><span class="n">66</span></td><td><span class="n">60,2</span></td></tr>
+<tr><td><a href="sites/comunica.ufrn.br.html">comunica.ufrn.br</a></td><td>estatico</td><td>não</td><td><span class="n">—</span></td><td><span class="n">—</span></td><td><span class="n">23,1</span></td></tr>
+<tr><td><a href="sites/connectrn.imd.ufrn.br.html">connectrn.imd.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">55</span></td><td><span class="n">88</span></td><td><span class="n">68,3</span></td></tr>
+<tr><td><a href="sites/controleura.lar.ect.ufrn.br.html">controleura.lar.ect.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">96</span></td><td><span class="n">80</span></td><td><span class="n">53,3</span></td></tr>
+<tr><td><a href="sites/cosmos.fisica.ufrn.br.html">cosmos.fisica.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">85</span></td><td><span class="n">92</span></td><td><span class="n">75,4</span></td></tr>
+<tr><td><a href="sites/covid19.imd.ufrn.br.html">covid19.imd.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">52</span></td><td><span class="n">63</span></td><td><span class="n">63,8</span></td></tr>
+<tr><td><a href="sites/creation.ufrn.br.html">creation.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">62</span></td><td><span class="n">86</span></td><td><span class="n">85,9</span></td></tr>
+<tr><td><a href="sites/dados.ufrn.br.html">dados.ufrn.br</a></td><td>outro-cms</td><td>sim</td><td><span class="n">72</span></td><td><span class="n">67</span></td><td><span class="n">69,9</span></td></tr>
+<tr><td><a href="sites/dca.ufrn.br.html">dca.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">50</span></td><td><span class="n">84</span></td><td><span class="n">75,3</span></td></tr>
+<tr><td><a href="sites/dep.ct.ufrn.br.html">dep.ct.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">63</span></td><td><span class="n">78</span></td><td><span class="n">53,5</span></td></tr>
+<tr><td><a href="sites/dermatologia.pntd.telessaude.ufrn.br.html">dermatologia.pntd.telessaude.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">56</span></td><td><span class="n">74</span></td><td><span class="n">34,4</span></td></tr>
+<tr><td><a href="sites/dimap.ufrn.br.html">dimap.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">39</span></td><td><span class="n">83</span></td><td><span class="n">57,4</span></td></tr>
+<tr><td><a href="sites/direitoacidade.ct.ufrn.br.html">direitoacidade.ct.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">58</span></td><td><span class="n">91</span></td><td><span class="n">58,0</span></td></tr>
+<tr><td><a href="sites/direitoslocais2024.lehs.ufrn.br.html">direitoslocais2024.lehs.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">64</span></td><td><span class="n">86</span></td><td><span class="n">66,8</span></td></tr>
+<tr><td><a href="sites/docente.ufrn.br.html">docente.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">56</span></td><td><span class="n">55</span></td><td><span class="n">30,7</span></td></tr>
+<tr><td><a href="sites/eaj.ufrn.br.html">eaj.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">90</span></td><td><span class="n">54</span></td><td><span class="n">22,0</span></td></tr>
+<tr><td><a href="sites/eb.ct.ufrn.br.html">eb.ct.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">61</span></td><td><span class="n">70</span></td><td><span class="n">75,5</span></td></tr>
+<tr><td><a href="sites/ebs.ect.ufrn.br.html">ebs.ect.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">67</span></td><td><span class="n">75</span></td><td><span class="n">90,5</span></td></tr>
+<tr><td><a href="sites/ecaan1.ect.ufrn.br.html">ecaan1.ect.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">100</span></td><td><span class="n">85</span></td><td><span class="n">68,8</span></td></tr>
+<tr><td><a href="sites/editora.ufrn.br.html">editora.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">60</span></td><td><span class="n">66</span></td><td><span class="n">58,0</span></td></tr>
+<tr><td><a href="sites/eject.ect.ufrn.br.html">eject.ect.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">100</span></td><td><span class="n">93</span></td><td><span class="n">—</span></td></tr>
+<tr><td><a href="sites/emai.ufrn.br.html">emai.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">55</span></td><td><span class="n">85</span></td><td><span class="n">90,7</span></td></tr>
+<tr><td><a href="sites/emei.ufrn.br.html">emei.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">55</span></td><td><span class="n">85</span></td><td><span class="n">90,7</span></td></tr>
+<tr><td><a href="sites/emicrone.ect.ufrn.br.html">emicrone.ect.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">75</span></td><td><span class="n">86</span></td><td><span class="n">62,8</span></td></tr>
+<tr><td><a href="sites/enade.ufrn.br.html">enade.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">54</span></td><td><span class="n">79</span></td><td><span class="n">63,6</span></td></tr>
+<tr><td><a href="sites/enei.ce.ufrn.br.html">enei.ce.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">63</span></td><td><span class="n">98</span></td><td><span class="n">90,6</span></td></tr>
+<tr><td><a href="sites/entbl.ccsa.ufrn.br.html">entbl.ccsa.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">23</span></td><td><span class="n">76</span></td><td><span class="n">58,0</span></td></tr>
+<tr><td><a href="sites/entbl2020.ccsa.ufrn.br.html">entbl2020.ccsa.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">20</span></td><td><span class="n">77</span></td><td><span class="n">57,9</span></td></tr>
+<tr><td><a href="sites/enterpriseenrollment.ufrn.br.html">enterpriseenrollment.ufrn.br</a></td><td>estatico</td><td>não</td><td><span class="n">49</span></td><td><span class="n">96</span></td><td><span class="n">64,1</span></td></tr>
+<tr><td><a href="sites/epa.cchla.ufrn.br.html">epa.cchla.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">71</span></td><td><span class="n">100</span></td><td><span class="n">82,3</span></td></tr>
+<tr><td><a href="sites/erros.si.ufrn.br.html">erros.si.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">62</span></td><td><span class="n">91</span></td><td><span class="n">76,2</span></td></tr>
+<tr><td><a href="sites/escoladesaude.ufrn.br.html">escoladesaude.ufrn.br</a></td><td>estatico</td><td>não</td><td><span class="n">66</span></td><td><span class="n">82</span></td><td><span class="n">75,3</span></td></tr>
+<tr><td><a href="sites/espacos-denf.imd.ufrn.br.html">espacos-denf.imd.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">39</span></td><td><span class="n">70</span></td><td><span class="n">37,6</span></td></tr>
+<tr><td><a href="sites/estudio.musica.ufrn.br.html">estudio.musica.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">68</span></td><td><span class="n">91</span></td><td><span class="n">92,8</span></td></tr>
+<tr><td><a href="sites/eternos.ufrn.br.html">eternos.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">53</span></td><td><span class="n">94</span></td><td><span class="n">47,4</span></td></tr>
+<tr><td><a href="sites/facisa.ufrn.br.html">facisa.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">56</span></td><td><span class="n">79</span></td><td><span class="n">60,1</span></td></tr>
+<tr><td><a href="sites/farmacia.ccs.ufrn.br.html">farmacia.ccs.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">100</span></td><td><span class="n">93</span></td><td><span class="n">—</span></td></tr>
+<tr><td><a href="sites/fisica.ufrn.br.html">fisica.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">83</span></td><td><span class="n">96</span></td><td><span class="n">75,7</span></td></tr>
+<tr><td><a href="sites/fmu.ufrn.br.html">fmu.ufrn.br</a></td><td>estatico</td><td>não</td><td><span class="n">—</span></td><td><span class="n">—</span></td><td><span class="n">30,8</span></td></tr>
+<tr><td><a href="sites/forms.ufrn.br.html">forms.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">77</span></td><td><span class="n">93</span></td><td><span class="n">69,2</span></td></tr>
+<tr><td><a href="sites/georisco.ufrn.br.html">georisco.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">52</span></td><td><span class="n">87</span></td><td><span class="n">78,8</span></td></tr>
+<tr><td><a href="sites/gerifes.ufrn.br.html">gerifes.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">89</span></td><td><span class="n">93</span></td><td><span class="n">60,7</span></td></tr>
+<tr><td><a href="sites/getsem.eaj.ufrn.br.html">getsem.eaj.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">61</span></td><td><span class="n">70</span></td><td><span class="n">65,1</span></td></tr>
+<tr><td><a href="sites/gmag.fisica.ufrn.br.html">gmag.fisica.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">100</span></td><td><span class="n">93</span></td><td><span class="n">—</span></td></tr>
+<tr><td><a href="sites/gnms.fisica.ufrn.br.html">gnms.fisica.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">41</span></td><td><span class="n">87</span></td><td><span class="n">39,6</span></td></tr>
+<tr><td><a href="sites/governanca.ufrn.br.html">governanca.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">52</span></td><td><span class="n">89</span></td><td><span class="n">71,5</span></td></tr>
+<tr><td><a href="sites/gow12.dca.ufrn.br.html">gow12.dca.ufrn.br</a></td><td>estatico</td><td>não</td><td><span class="n">—</span></td><td><span class="n">—</span></td><td><span class="n">23,1</span></td></tr>
+<tr><td><a href="sites/gpc.ect.ufrn.br.html">gpc.ect.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">97</span></td><td><span class="n">67</span></td><td><span class="n">59,7</span></td></tr>
+<tr><td><a href="sites/gppcom.ct.ufrn.br.html">gppcom.ct.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">59</span></td><td><span class="n">87</span></td><td><span class="n">78,0</span></td></tr>
+<tr><td><a href="sites/grafica.cchla.ufrn.br.html">grafica.cchla.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">57</span></td><td><span class="n">86</span></td><td><span class="n">72,9</span></td></tr>
+<tr><td><a href="sites/grecom.ce.ufrn.br.html">grecom.ce.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">96</span></td><td><span class="n">64</span></td><td><span class="n">38,7</span></td></tr>
+<tr><td><a href="sites/grupocontar.ce.ufrn.br.html">grupocontar.ce.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">47</span></td><td><span class="n">91</span></td><td><span class="n">72,7</span></td></tr>
+<tr><td><a href="sites/grupoprojetar.ct.ufrn.br.html">grupoprojetar.ct.ufrn.br</a></td><td>joomla</td><td>sim</td><td><span class="n">69</span></td><td><span class="n">84</span></td><td><span class="n">80,2</span></td></tr>
+<tr><td><a href="sites/hackfest.imd.ufrn.br.html">hackfest.imd.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">60</span></td><td><span class="n">79</span></td><td><span class="n">68,2</span></td></tr>
+<tr><td><a href="sites/hcurb.ct.ufrn.br.html">hcurb.ct.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">47</span></td><td><span class="n">73</span></td><td><span class="n">75,9</span></td></tr>
+<tr><td><a href="sites/histed.ce.ufrn.br.html">histed.ce.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">100</span></td><td><span class="n">93</span></td><td><span class="n">—</span></td></tr>
+<tr><td><a href="sites/humanitas.ufrn.br.html">humanitas.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">69</span></td><td><span class="n">94</span></td><td><span class="n">85,4</span></td></tr>
+<tr><td><a href="sites/iip.ufrn.br.html">iip.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">56</span></td><td><span class="n">73</span></td><td><span class="n">65,3</span></td></tr>
+<tr><td><a href="sites/imias.ufrn.br.html">imias.ufrn.br</a></td><td>estatico</td><td>não</td><td><span class="n">—</span></td><td><span class="n">—</span></td><td><span class="n">74,6</span></td></tr>
+<tr><td><a href="sites/includeengenharia.ct.ufrn.br.html">includeengenharia.ct.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">35</span></td><td><span class="n">70</span></td><td><span class="n">72,5</span></td></tr>
+<tr><td><a href="sites/industria40.imd.ufrn.br.html">industria40.imd.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">60</span></td><td><span class="n">58</span></td><td><span class="n">64,6</span></td></tr>
+<tr><td><a href="sites/inpacta.ect.ufrn.br.html">inpacta.ect.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">65</span></td><td><span class="n">93</span></td><td><span class="n">94,3</span></td></tr>
+<tr><td><a href="sites/intellectus.ufrn.br.html">intellectus.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">55</span></td><td><span class="n">85</span></td><td><span class="n">90,7</span></td></tr>
+<tr><td><a href="sites/ism.ccsa.ufrn.br.html">ism.ccsa.ufrn.br</a></td><td>estatico</td><td>não</td><td><span class="n">68</span></td><td><span class="n">83</span></td><td><span class="n">80,9</span></td></tr>
+<tr><td><a href="sites/istb.ect.ufrn.br.html">istb.ect.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">62</span></td><td><span class="n">96</span></td><td><span class="n">95,5</span></td></tr>
+<tr><td><a href="sites/jafon.ccs.ufrn.br.html">jafon.ccs.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">82</span></td><td><span class="n">96</span></td><td><span class="n">74,8</span></td></tr>
+<tr><td><a href="sites/jormais.ufrn.br.html">jormais.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">72</span></td><td><span class="n">71</span></td><td><span class="n">81,6</span></td></tr>
+<tr><td><a href="sites/kaningaselos.musica.ufrn.br.html">kaningaselos.musica.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">71</span></td><td><span class="n">91</span></td><td><span class="n">74,0</span></td></tr>
+<tr><td><a href="sites/kasan.imd.ufrn.br.html">kasan.imd.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">100</span></td><td><span class="n">77</span></td><td><span class="n">61,5</span></td></tr>
+<tr><td><a href="sites/labcim.quimica.ufrn.br.html">labcim.quimica.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">73</span></td><td><span class="n">100</span></td><td><span class="n">96,6</span></td></tr>
+<tr><td><a href="sites/labmas.ufrn.br.html">labmas.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">67</span></td><td><span class="n">91</span></td><td><span class="n">54,9</span></td></tr>
+<tr><td><a href="sites/labplasma.ct.ufrn.br.html">labplasma.ct.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">71</span></td><td><span class="n">96</span></td><td><span class="n">95,1</span></td></tr>
+<tr><td><a href="sites/labsis.ufrn.br.html">labsis.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">72</span></td><td><span class="n">87</span></td><td><span class="n">77,4</span></td></tr>
+<tr><td><a href="sites/lacid.ccet.ufrn.br.html">lacid.ccet.ufrn.br</a></td><td>outro-cms</td><td>sim</td><td><span class="n">72</span></td><td><span class="n">96</span></td><td><span class="n">80,2</span></td></tr>
+<tr><td><a href="sites/ladelin.ccs.ufrn.br.html">ladelin.ccs.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">61</span></td><td><span class="n">82</span></td><td><span class="n">75,3</span></td></tr>
+<tr><td><a href="sites/lahmed.ce.ufrn.br.html">lahmed.ce.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">36</span></td><td><span class="n">89</span></td><td><span class="n">74,6</span></td></tr>
+<tr><td><a href="sites/laire.ufrn.br.html">laire.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">62</span></td><td><span class="n">82</span></td><td><span class="n">65,9</span></td></tr>
+<tr><td><a href="sites/lance.ufrn.br.html">lance.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">69</span></td><td><span class="n">93</span></td><td><span class="n">83,2</span></td></tr>
+<tr><td><a href="sites/lar.ect.ufrn.br.html">lar.ect.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">96</span></td><td><span class="n">80</span></td><td><span class="n">53,3</span></td></tr>
+<tr><td><a href="sites/laut.dca.ufrn.br.html">laut.dca.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">68</span></td><td><span class="n">38</span></td><td><span class="n">57,5</span></td></tr>
+<tr><td><a href="sites/lbmg.cb.ufrn.br.html">lbmg.cb.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">53</span></td><td><span class="n">87</span></td><td><span class="n">72,1</span></td></tr>
+<tr><td><a href="sites/leaa.ccet.ufrn.br.html">leaa.ccet.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">62</span></td><td><span class="n">92</span></td><td><span class="n">79,8</span></td></tr>
+<tr><td><a href="sites/lehs.ufrn.br.html">lehs.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">70</span></td><td><span class="n">78</span></td><td><span class="n">53,1</span></td></tr>
+<tr><td><a href="sites/leia.ccs.ufrn.br.html">leia.ccs.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">50</span></td><td><span class="n">90</span></td><td><span class="n">86,5</span></td></tr>
+<tr><td><a href="sites/leier.ct.ufrn.br.html">leier.ct.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">65</span></td><td><span class="n">72</span></td><td><span class="n">54,8</span></td></tr>
+<tr><td><a href="sites/lii.dca.ufrn.br.html">lii.dca.ufrn.br</a></td><td>framework-js</td><td>não</td><td><span class="n">62</span></td><td><span class="n">100</span></td><td><span class="n">94,0</span></td></tr>
+<tr><td><a href="sites/linguaportuguesa.ufrn.br.html">linguaportuguesa.ufrn.br</a></td><td>estatico</td><td>não</td><td><span class="n">—</span></td><td><span class="n">—</span></td><td><span class="n">49,9</span></td></tr>
+<tr><td><a href="sites/lisp.ufrn.br.html">lisp.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">61</span></td><td><span class="n">73</span></td><td><span class="n">90,0</span></td></tr>
+<tr><td><a href="sites/lynx.ufrn.br.html">lynx.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">70</span></td><td><span class="n">86</span></td><td><span class="n">48,3</span></td></tr>
+<tr><td><a href="sites/maap.nac.ufrn.br.html">maap.nac.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">29</span></td><td><span class="n">80</span></td><td><span class="n">69,6</span></td></tr>
+<tr><td><a href="sites/mat.ufrn.br.html">mat.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">49</span></td><td><span class="n">74</span></td><td><span class="n">60,7</span></td></tr>
+<tr><td><a href="sites/materialpublic.imd.ufrn.br.html">materialpublic.imd.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">51</span></td><td><span class="n">72</span></td><td><span class="n">37,4</span></td></tr>
+<tr><td><a href="sites/mediotec.imd.ufrn.br.html">mediotec.imd.ufrn.br</a></td><td>estatico</td><td>não</td><td><span class="n">—</span></td><td><span class="n">—</span></td><td><span class="n">22,9</span></td></tr>
+<tr><td><a href="sites/meioambiente.ufrn.br.html">meioambiente.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">55</span></td><td><span class="n">55</span></td><td><span class="n">71,6</span></td></tr>
+<tr><td><a href="sites/memo.ufrn.br.html">memo.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">55</span></td><td><span class="n">85</span></td><td><span class="n">90,7</span></td></tr>
+<tr><td><a href="sites/metropoleparque.imd.ufrn.br.html">metropoleparque.imd.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">29</span></td><td><span class="n">81</span></td><td><span class="n">67,7</span></td></tr>
+<tr><td><a href="sites/morpheus.ufrn.br.html">morpheus.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">55</span></td><td><span class="n">85</span></td><td><span class="n">90,7</span></td></tr>
+<tr><td><a href="sites/mostradeprofissoes.prograd.ufrn.br.html">mostradeprofissoes.prograd.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">73</span></td><td><span class="n">79</span></td><td><span class="n">39,5</span></td></tr>
+<tr><td><a href="sites/museutronco.cchla.ufrn.br.html">museutronco.cchla.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">56</span></td><td><span class="n">90</span></td><td><span class="n">73,3</span></td></tr>
+<tr><td><a href="sites/musica.ufrn.br.html">musica.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">56</span></td><td><span class="n">91</span></td><td><span class="n">77,1</span></td></tr>
+<tr><td><a href="sites/negtec.ect.ufrn.br.html">negtec.ect.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">88</span></td><td><span class="n">53</span></td><td><span class="n">21,5</span></td></tr>
+<tr><td><a href="sites/nei.ufrn.br.html">nei.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">53</span></td><td><span class="n">74</span></td><td><span class="n">59,7</span></td></tr>
+<tr><td><a href="sites/nesc.ufrn.br.html">nesc.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">58</span></td><td><span class="n">84</span></td><td><span class="n">40,2</span></td></tr>
+<tr><td><a href="sites/normativas.ccs.ufrn.br.html">normativas.ccs.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">68</span></td><td><span class="n">54</span></td><td><span class="n">62,7</span></td></tr>
+<tr><td><a href="sites/nossofuturocomum.ufrn.br.html">nossofuturocomum.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">76</span></td><td><span class="n">93</span></td><td><span class="n">62,7</span></td></tr>
+<tr><td><a href="sites/npad.imd.ufrn.br.html">npad.imd.ufrn.br</a></td><td>estatico</td><td>não</td><td><span class="n">—</span></td><td><span class="n">—</span></td><td><span class="n">54,3</span></td></tr>
+<tr><td><a href="sites/nuplamhomolog.imd.ufrn.br.html">nuplamhomolog.imd.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">55</span></td><td><span class="n">81</span></td><td><span class="n">45,2</span></td></tr>
+<tr><td><a href="sites/nupprar.ufrn.br.html">nupprar.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">57</span></td><td><span class="n">79</span></td><td><span class="n">60,7</span></td></tr>
+<tr><td><a href="sites/obsam.ufrn.br.html">obsam.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">82</span></td><td><span class="n">80</span></td><td><span class="n">92,8</span></td></tr>
+<tr><td><a href="sites/observatoriodasdesigualdades.ccsa.ufrn.br.html">observatoriodasdesigualdades.ccsa.ufrn.br</a></td><td>outro-cms</td><td>sim</td><td><span class="n">58</span></td><td><span class="n">97</span></td><td><span class="n">73,4</span></td></tr>
+<tr><td><a href="sites/ojs.ccsa.ufrn.br.html">ojs.ccsa.ufrn.br</a></td><td>outro-cms</td><td>sim</td><td><span class="n">91</span></td><td><span class="n">91</span></td><td><span class="n">87,6</span></td></tr>
+<tr><td><a href="sites/ojs.musica.ufrn.br.html">ojs.musica.ufrn.br</a></td><td>outro-cms</td><td>sim</td><td><span class="n">67</span></td><td><span class="n">94</span></td><td><span class="n">90,3</span></td></tr>
+<tr><td><a href="sites/opa.ufrn.br.html">opa.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">55</span></td><td><span class="n">87</span></td><td><span class="n">69,4</span></td></tr>
+<tr><td><a href="sites/ouvidoria.ufrn.br.html">ouvidoria.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">33</span></td><td><span class="n">92</span></td><td><span class="n">77,4</span></td></tr>
+<tr><td><a href="sites/paje.ufrn.br.html">paje.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">64</span></td><td><span class="n">87</span></td><td><span class="n">55,4</span></td></tr>
+<tr><td><a href="sites/pensar.musica.ufrn.br.html">pensar.musica.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">61</span></td><td><span class="n">85</span></td><td><span class="n">81,1</span></td></tr>
+<tr><td><a href="sites/periodicos.ufrn.br.html">periodicos.ufrn.br</a></td><td>outro-cms</td><td>sim</td><td><span class="n">74</span></td><td><span class="n">80</span></td><td><span class="n">60,4</span></td></tr>
+<tr><td><a href="sites/permuta.imd.ufrn.br.html">permuta.imd.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">62</span></td><td><span class="n">96</span></td><td><span class="n">73,9</span></td></tr>
+<tr><td><a href="sites/pes.imd.ufrn.br.html">pes.imd.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">73</span></td><td><span class="n">69</span></td><td><span class="n">48,2</span></td></tr>
+<tr><td><a href="sites/pingifes.ufrn.br.html">pingifes.ufrn.br</a></td><td>estatico</td><td>não</td><td><span class="n">79</span></td><td><span class="n">98</span></td><td><span class="n">70,7</span></td></tr>
+<tr><td><a href="sites/planosdesaneamento.ufrn.br.html">planosdesaneamento.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">63</span></td><td><span class="n">80</span></td><td><span class="n">67,0</span></td></tr>
+<tr><td><a href="sites/plataformasilb.cchla.ufrn.br.html">plataformasilb.cchla.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">54</span></td><td><span class="n">77</span></td><td><span class="n">55,4</span></td></tr>
+<tr><td><a href="sites/ple.ect.ufrn.br.html">ple.ect.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">75</span></td><td><span class="n">75</span></td><td><span class="n">22,9</span></td></tr>
+<tr><td><a href="sites/polare.ufrn.br.html">polare.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">34</span></td><td><span class="n">88</span></td><td><span class="n">74,9</span></td></tr>
+<tr><td><a href="sites/portalcooperacao.info.ufrn.br.html">portalcooperacao.info.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">57</span></td><td><span class="n">55</span></td><td><span class="n">45,7</span></td></tr>
+<tr><td><a href="sites/portalproad.ufrn.br.html">portalproad.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">54</span></td><td><span class="n">87</span></td><td><span class="n">47,0</span></td></tr>
+<tr><td><a href="sites/posgraduacao.ufrn.br.html">posgraduacao.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">65</span></td><td><span class="n">90</span></td><td><span class="n">68,3</span></td></tr>
+<tr><td><a href="sites/ppgcti.ect.ufrn.br.html">ppgcti.ect.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">96</span></td><td><span class="n">87</span></td><td><span class="n">71,1</span></td></tr>
+<tr><td><a href="sites/ppgd.ccsa.ufrn.br.html">ppgd.ccsa.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">28</span></td><td><span class="n">90</span></td><td><span class="n">40,4</span></td></tr>
+<tr><td><a href="sites/ppged.ufrn.br.html">ppged.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">46</span></td><td><span class="n">84</span></td><td><span class="n">52,2</span></td></tr>
+<tr><td><a href="sites/ppget.ufrn.br.html">ppget.ufrn.br</a></td><td>estatico</td><td>não</td><td><span class="n">—</span></td><td><span class="n">—</span></td><td><span class="n">—</span></td></tr>
+<tr><td><a href="sites/ppghc.ceres.ufrn.br.html">ppghc.ceres.ufrn.br</a></td><td>estatico</td><td>não</td><td><span class="n">—</span></td><td><span class="n">—</span></td><td><span class="n">73,3</span></td></tr>
+<tr><td><a href="sites/prh42.ccet.ufrn.br.html">prh42.ccet.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">37</span></td><td><span class="n">93</span></td><td><span class="n">74,9</span></td></tr>
+<tr><td><a href="sites/print.ufrn.br.html">print.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">42</span></td><td><span class="n">92</span></td><td><span class="n">74,7</span></td></tr>
+<tr><td><a href="sites/proae.ufrn.br.html">proae.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">69</span></td><td><span class="n">72</span></td><td><span class="n">60,8</span></td></tr>
+<tr><td><a href="sites/proeva-caderneta.ccs.ufrn.br.html">proeva-caderneta.ccs.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">92</span></td><td><span class="n">96</span></td><td><span class="n">23,8</span></td></tr>
+<tr><td><a href="sites/proeva.ccs.ufrn.br.html">proeva.ccs.ufrn.br</a></td><td>estatico</td><td>não</td><td><span class="n">—</span></td><td><span class="n">—</span></td><td><span class="n">63,4</span></td></tr>
+<tr><td><a href="sites/proex.ufrn.br.html">proex.ufrn.br</a></td><td>framework-js</td><td>não</td><td><span class="n">48</span></td><td><span class="n">88</span></td><td><span class="n">75,7</span></td></tr>
+<tr><td><a href="sites/profletras.ufrn.br.html">profletras.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">35</span></td><td><span class="n">88</span></td><td><span class="n">63,9</span></td></tr>
+<tr><td><a href="sites/prograd.ufrn.br.html">prograd.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">74</span></td><td><span class="n">74</span></td><td><span class="n">38,8</span></td></tr>
+<tr><td><a href="sites/programaaguaazul.ct.ufrn.br.html">programaaguaazul.ct.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">86</span></td><td><span class="n">77</span></td><td><span class="n">81,5</span></td></tr>
+<tr><td><a href="sites/pronatec.ufrn.br.html">pronatec.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">53</span></td><td><span class="n">83</span></td><td><span class="n">82,7</span></td></tr>
+<tr><td><a href="sites/propesq.ufrn.br.html">propesq.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">64</span></td><td><span class="n">80</span></td><td><span class="n">41,4</span></td></tr>
+<tr><td><a href="sites/proplan.ufrn.br.html">proplan.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">64</span></td><td><span class="n">76</span></td><td><span class="n">68,7</span></td></tr>
+<tr><td><a href="sites/quimica.ufrn.br.html">quimica.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">73</span></td><td><span class="n">97</span></td><td><span class="n">45,7</span></td></tr>
+<tr><td><a href="sites/radiojamboo.cchla.ufrn.br.html">radiojamboo.cchla.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">89</span></td><td><span class="n">88</span></td><td><span class="n">62,1</span></td></tr>
+<tr><td><a href="sites/rap-sign-producao.info.ufrn.br.html">rap-sign-producao.info.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">57</span></td><td><span class="n">83</span></td><td><span class="n">47,0</span></td></tr>
+<tr><td><a href="sites/redmine-corregedoria.ufrn.br.html">redmine-corregedoria.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">82</span></td><td><span class="n">71</span></td><td><span class="n">62,0</span></td></tr>
+<tr><td><a href="sites/redmine-sgp.ufrn.br.html">redmine-sgp.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">63</span></td><td><span class="n">71</span></td><td><span class="n">62,2</span></td></tr>
+<tr><td><a href="sites/repositorio.ufrn.br.html">repositorio.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">5</span></td><td><span class="n">84</span></td><td><span class="n">79,5</span></td></tr>
+<tr><td><a href="sites/reservas.cchla.ufrn.br.html">reservas.cchla.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">91</span></td><td><span class="n">90</span></td><td><span class="n">48,7</span></td></tr>
+<tr><td><a href="sites/reuse.ufrn.br.html">reuse.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">55</span></td><td><span class="n">85</span></td><td><span class="n">90,7</span></td></tr>
+<tr><td><a href="sites/revistaeduquestao.educ.ufrn.br.html">revistaeduquestao.educ.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">82</span></td><td><span class="n">38</span></td><td><span class="n">21,3</span></td></tr>
+<tr><td><a href="sites/ria.ufrn.br.html">ria.ufrn.br</a></td><td>outro-cms</td><td>sim</td><td><span class="n">60</span></td><td><span class="n">78</span></td><td><span class="n">61,7</span></td></tr>
+<tr><td><a href="sites/sapiencia.ufrn.br.html">sapiencia.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">55</span></td><td><span class="n">90</span></td><td><span class="n">40,4</span></td></tr>
+<tr><td><a href="sites/sbai2015.dca.ufrn.br.html">sbai2015.dca.ufrn.br</a></td><td>framework-js</td><td>não</td><td><span class="n">63</span></td><td><span class="n">100</span></td><td><span class="n">94,0</span></td></tr>
+<tr><td><a href="sites/sbpo2013.ect.ufrn.br.html">sbpo2013.ect.ufrn.br</a></td><td>estatico</td><td>não</td><td><span class="n">—</span></td><td><span class="n">—</span></td><td><span class="n">20,5</span></td></tr>
+<tr><td><a href="sites/scet.ect.ufrn.br.html">scet.ect.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">31</span></td><td><span class="n">97</span></td><td><span class="n">86,1</span></td></tr>
+<tr><td><a href="sites/secacademica.ect.ufrn.br.html">secacademica.ect.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">55</span></td><td><span class="n">79</span></td><td><span class="n">31,3</span></td></tr>
+<tr><td><a href="sites/sedis.ufrn.br.html">sedis.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">63</span></td><td><span class="n">82</span></td><td><span class="n">64,1</span></td></tr>
+<tr><td><a href="sites/semanadeturismo.ccsa.ufrn.br.html">semanadeturismo.ccsa.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">23</span></td><td><span class="n">80</span></td><td><span class="n">46,6</span></td></tr>
+<tr><td><a href="sites/semapa.ufrn.br.html">semapa.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">98</span></td><td><span class="n">78</span></td><td><span class="n">63,8</span></td></tr>
+<tr><td><a href="sites/seminario.ccsa.ufrn.br.html">seminario.ccsa.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">93</span></td><td><span class="n">100</span></td><td><span class="n">62,5</span></td></tr>
+<tr><td><a href="sites/seminario2010.ccsa.ufrn.br.html">seminario2010.ccsa.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">58</span></td><td><span class="n">92</span></td><td><span class="n">63,0</span></td></tr>
+<tr><td><a href="sites/seminario2013.ccsa.ufrn.br.html">seminario2013.ccsa.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">57</span></td><td><span class="n">87</span></td><td><span class="n">53,1</span></td></tr>
+<tr><td><a href="sites/seminario2014.ccsa.ufrn.br.html">seminario2014.ccsa.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">59</span></td><td><span class="n">87</span></td><td><span class="n">53,1</span></td></tr>
+<tr><td><a href="sites/seminario2015.ccsa.ufrn.br.html">seminario2015.ccsa.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">98</span></td><td><span class="n">76</span></td><td><span class="n">44,7</span></td></tr>
+<tr><td><a href="sites/seminario2017.ccsa.ufrn.br.html">seminario2017.ccsa.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">52</span></td><td><span class="n">70</span></td><td><span class="n">57,3</span></td></tr>
+<tr><td><a href="sites/seminario2018.ccsa.ufrn.br.html">seminario2018.ccsa.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">21</span></td><td><span class="n">80</span></td><td><span class="n">59,4</span></td></tr>
+<tr><td><a href="sites/seminario2019.ccsa.ufrn.br.html">seminario2019.ccsa.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">18</span></td><td><span class="n">80</span></td><td><span class="n">58,4</span></td></tr>
+<tr><td><a href="sites/seminario2023.ccsa.ufrn.br.html">seminario2023.ccsa.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">86</span></td><td><span class="n">94</span></td><td><span class="n">71,9</span></td></tr>
+<tr><td><a href="sites/shaula.ufrn.br.html">shaula.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">66</span></td><td><span class="n">93</span></td><td><span class="n">89,0</span></td></tr>
+<tr><td><a href="sites/shiny.estatistica.ccet.ufrn.br.html">shiny.estatistica.ccet.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">60</span></td><td><span class="n">59</span></td><td><span class="n">73,5</span></td></tr>
+<tr><td><a href="sites/sia.ufrn.br.html">sia.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">39</span></td><td><span class="n">88</span></td><td><span class="n">88,7</span></td></tr>
+<tr><td><a href="sites/sida.ufrn.br.html">sida.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">54</span></td><td><span class="n">85</span></td><td><span class="n">90,7</span></td></tr>
+<tr><td><a href="sites/siedi.ufrn.br.html">siedi.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">54</span></td><td><span class="n">78</span></td><td><span class="n">77,0</span></td></tr>
+<tr><td><a href="sites/sigeventos.ufrn.br.html">sigeventos.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">84</span></td><td><span class="n">71</span></td><td><span class="n">32,5</span></td></tr>
+<tr><td><a href="sites/sigprh.ufrn.br.html">sigprh.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">42</span></td><td><span class="n">87</span></td><td><span class="n">63,0</span></td></tr>
+<tr><td><a href="sites/sigps.ufrn.br.html">sigps.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">67</span></td><td><span class="n">73</span></td><td><span class="n">48,3</span></td></tr>
+<tr><td><a href="sites/sigsaude.ufrn.br.html">sigsaude.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">73</span></td><td><span class="n">80</span></td><td><span class="n">63,5</span></td></tr>
+<tr><td><a href="sites/sigsmartcampus.imd.ufrn.br.html">sigsmartcampus.imd.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">45</span></td><td><span class="n">66</span></td><td><span class="n">51,4</span></td></tr>
+<tr><td><a href="sites/silagem.eaj.ufrn.br.html">silagem.eaj.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">77</span></td><td><span class="n">87</span></td><td><span class="n">90,8</span></td></tr>
+<tr><td><a href="sites/sire.ufrn.br.html">sire.ufrn.br</a></td><td>estatico</td><td>não</td><td><span class="n">—</span></td><td><span class="n">—</span></td><td><span class="n">—</span></td></tr>
+<tr><td><a href="sites/sisbi.ufrn.br.html">sisbi.ufrn.br</a></td><td>framework-js</td><td>não</td><td><span class="n">—</span></td><td><span class="n">—</span></td><td><span class="n">57,7</span></td></tr>
+<tr><td><a href="sites/sisman.infra.ufrn.br.html">sisman.infra.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">88</span></td><td><span class="n">95</span></td><td><span class="n">58,7</span></td></tr>
+<tr><td><a href="sites/sistemas.ufrn.br.html">sistemas.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">47</span></td><td><span class="n">87</span></td><td><span class="n">84,1</span></td></tr>
+<tr><td><a href="sites/sisu.ufrn.br.html">sisu.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">31</span></td><td><span class="n">77</span></td><td><span class="n">71,5</span></td></tr>
+<tr><td><a href="sites/site.multiprova.ufrn.br.html">site.multiprova.ufrn.br</a></td><td>outro-cms</td><td>sim</td><td><span class="n">69</span></td><td><span class="n">92</span></td><td><span class="n">90,2</span></td></tr>
+<tr><td><a href="sites/socrates.ct.ufrn.br.html">socrates.ct.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">33</span></td><td><span class="n">73</span></td><td><span class="n">19,9</span></td></tr>
+<tr><td><a href="sites/solcello.musica.ufrn.br.html">solcello.musica.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">76</span></td><td><span class="n">95</span></td><td><span class="n">94,2</span></td></tr>
+<tr><td><a href="sites/tapioca.eaj.ufrn.br.html">tapioca.eaj.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">57</span></td><td><span class="n">81</span></td><td><span class="n">80,4</span></td></tr>
+<tr><td><a href="sites/teatroinfantojuvenil.ufrn.br.html">teatroinfantojuvenil.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">60</span></td><td><span class="n">80</span></td><td><span class="n">57,7</span></td></tr>
+<tr><td><a href="sites/tecnatus.ct.ufrn.br.html">tecnatus.ct.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">60</span></td><td><span class="n">63</span></td><td><span class="n">61,0</span></td></tr>
+<tr><td><a href="sites/thevideogame.ufrn.br.html">thevideogame.ufrn.br</a></td><td>estatico</td><td>não</td><td><span class="n">—</span></td><td><span class="n">—</span></td><td><span class="n">17,9</span></td></tr>
+<tr><td><a href="sites/titan.ect.ufrn.br.html">titan.ect.ufrn.br</a></td><td>estatico</td><td>não</td><td><span class="n">70</span></td><td><span class="n">80</span></td><td><span class="n">90,4</span></td></tr>
+<tr><td><a href="sites/transportes.ufrn.br.html">transportes.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">55</span></td><td><span class="n">90</span></td><td><span class="n">59,4</span></td></tr>
+<tr><td><a href="sites/trilhas.ufrn.br.html">trilhas.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">73</span></td><td><span class="n">73</span></td><td><span class="n">64,1</span></td></tr>
+<tr><td><a href="sites/trilhaspotiguares.ufrn.br.html">trilhaspotiguares.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">70</span></td><td><span class="n">73</span></td><td><span class="n">64,1</span></td></tr>
+<tr><td><a href="sites/tronco.cchla.ufrn.br.html">tronco.cchla.ufrn.br</a></td><td>estatico</td><td>não</td><td><span class="n">—</span></td><td><span class="n">—</span></td><td><span class="n">39,2</span></td></tr>
+<tr><td><a href="sites/ura.ect.ufrn.br.html">ura.ect.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">71</span></td><td><span class="n">96</span></td><td><span class="n">77,1</span></td></tr>
+<tr><td><a href="sites/vernaculo.ufrn.br.html">vernaculo.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">58</span></td><td><span class="n">86</span></td><td><span class="n">86,7</span></td></tr>
+<tr><td><a href="sites/vetorial.design.ufrn.br.html">vetorial.design.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">80</span></td><td><span class="n">100</span></td><td><span class="n">98,2</span></td></tr>
+<tr><td><a href="sites/vforumdorevisor.ufrn.br.html">vforumdorevisor.ufrn.br</a></td><td>wordpress</td><td>sim</td><td><span class="n">55</span></td><td><span class="n">69</span></td><td><span class="n">59,0</span></td></tr>
+<tr><td><a href="sites/vixe.ufrn.br.html">vixe.ufrn.br</a></td><td>estatico</td><td>sim</td><td><span class="n">88</span></td><td><span class="n">87</span></td><td><span class="n">81,9</span></td></tr>
+<tr><td><a href="sites/www2.ccet.ufrn.br.html">www2.ccet.ufrn.br</a></td><td>estatico</td><td>não</td><td><span class="n">—</span></td><td><span class="n">—</span></td><td><span class="n">28,6</span></td></tr>
+<tr><td><a href="sites/www2.comperve.ufrn.br.html">www2.comperve.ufrn.br</a></td><td>framework-js</td><td>sim</td><td><span class="n">67</span></td><td><span class="n">97</span></td><td><span class="n">74,0</span></td></tr>
+<tr><td><a href="sites/xifncis.ufrn.br.html">xifncis.ufrn.br</a></td><td>outro-cms</td><td>sim</td><td><span class="n">92</span></td><td><span class="n">95</span></td><td><span class="n">55,2</span></td></tr>
+</tbody>
+</table>
+</main>
+<footer>
+Gerado em 2026-11-17T15:39:09.672Z · commit ba3eaa0c11d656a89402fadb66d9b61af4b43033 · node 24.19.0 · lighthouse 13.5.0 · playwright 1.64.1 · cheerio 1.2.0 · vnu-jar 26.10.12
+</footer>
+</body>
+</html>

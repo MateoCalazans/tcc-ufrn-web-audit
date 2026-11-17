@@ -1,0 +1,2252 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T21:05:15.459Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12",
+      "diff": "9.0.0",
+      "@anthropic-ai/sdk": "1.8.0"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "id": "enei.ce.ufrn.br",
+  "url": "https://enei.ce.ufrn.br/",
+  "fonte": {
+    "html": "index.html",
+    "codificacao": "utf-8",
+    "bom": false,
+    "har": true,
+    "lighthouse": "lh3.json",
+    "lighthouseVersion": "13.5.0"
+  },
+  "regras": [
+    {
+      "id": "html-lang",
+      "dimensao": "semantica",
+      "descricao": "O elemento <html> declara o idioma da página (atributo lang)."
+    },
+    {
+      "id": "meta-viewport",
+      "dimensao": "performance",
+      "descricao": "A página declara <meta name=\"viewport\"> adequada a telas móveis, sem bloquear o zoom."
+    },
+    {
+      "id": "img-dimensions",
+      "dimensao": "performance",
+      "descricao": "Toda <img> declara width e height, para o navegador reservar o espaço antes do download."
+    },
+    {
+      "id": "img-lazy",
+      "dimensao": "performance",
+      "descricao": "<img> depois das 3 primeiras do documento usa loading=\"lazy\" (exceto a imagem LCP)."
+    },
+    {
+      "id": "obsolete-tags",
+      "dimensao": "semantica",
+      "descricao": "Sem elementos obsoletos do WHATWG (center, font, marquee…); <font> simples vira <span style>."
+    },
+    {
+      "id": "heading-skip",
+      "dimensao": "semantica",
+      "descricao": "Títulos não pulam níveis ao descer na hierarquia (h1 → h3, por exemplo)."
+    },
+    {
+      "id": "fake-button",
+      "dimensao": "semantica",
+      "descricao": "Elementos clicáveis são <button>/<a>, não div/span com onclick."
+    },
+    {
+      "id": "render-blocking-hint",
+      "dimensao": "performance",
+      "descricao": "Scripts e folhas de estilo que o Lighthouse aponta como bloqueantes são adiados quando não são críticos."
+    },
+    {
+      "id": "landmarks-llm",
+      "dimensao": "semantica",
+      "descricao": "Landmarks ausentes propostos por LLM sobre <div>, <section> ou <article> existentes (landmarks-v2, claude-haiku-5-5)."
+    }
+  ],
+  "llm": {
+    "prompt": "landmarks-v2",
+    "arquivo": "docs/prompts/landmarks-v2.md",
+    "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+    "modelo": "claude-haiku-5-5",
+    "effort": "low",
+    "maxTokens": 4000,
+    "execucao": {
+      "siteId": "enei.ce.ufrn.br",
+      "prompt": "landmarks-v2",
+      "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "modeloResposta": null,
+      "respostaId": null,
+      "chamada": false,
+      "motivo": "nenhum landmark ausente",
+      "ausentes": [],
+      "candidatos": 0,
+      "elegiveis": 0,
+      "stopReason": null,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "custoUsd": null,
+      "propostas": 0,
+      "validas": 0,
+      "rejeitadas": [],
+      "textoIgual": null,
+      "landmarksDepois": null,
+      "erro": null,
+      "duracaoMs": 1
+    }
+  },
+  "resumo": {
+    "total": 62,
+    "corrigidas": 51,
+    "porRegra": {
+      "html-lang": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "meta-viewport": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "img-dimensions": {
+        "total": 27,
+        "corrigidas": 27
+      },
+      "img-lazy": {
+        "total": 24,
+        "corrigidas": 24
+      },
+      "obsolete-tags": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "heading-skip": {
+        "total": 2,
+        "corrigidas": 0
+      },
+      "fake-button": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "render-blocking-hint": {
+        "total": 9,
+        "corrigidas": 0
+      },
+      "landmarks-llm": {
+        "total": 0,
+        "corrigidas": 0
+      }
+    },
+    "porDimensao": {
+      "performance": 60,
+      "semantica": 2
+    }
+  },
+  "guardaImagens": {
+    "imagens": [
+      {
+        "recomendacao": "img-dimensions-1",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 1350,
+              "altura": 215,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 1350,
+              "altura": 215,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-2",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 122,
+              "altura": 98,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 122,
+              "altura": 98,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-3",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 412,
+              "altura": 412,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 412,
+              "altura": 412,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 1150,
+              "altura": 531,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 1150,
+              "altura": 531,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-4",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-5",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-6",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-7",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-8",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-9",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-10",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 150,
+              "altura": 150,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-11",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 102,
+              "altura": 102,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 102,
+              "altura": 102,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-12",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 102,
+              "altura": 102,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 102,
+              "altura": 102,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-13",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 102,
+              "altura": 102,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 102,
+              "altura": 102,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-14",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 102,
+              "altura": 102,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 102,
+              "altura": 102,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-15",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 102,
+              "altura": 102,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 102,
+              "altura": 102,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-16",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 102,
+              "altura": 102,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 102,
+              "altura": 102,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-17",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 102,
+              "altura": 102,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 102,
+              "altura": 102,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-18",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 102,
+              "altura": 102,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 102,
+              "altura": 102,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-19",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 103,
+              "altura": 103,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 103,
+              "altura": 103,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-20",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 103,
+              "altura": 103,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 103,
+              "altura": 103,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-21",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 103,
+              "altura": 103,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 103,
+              "altura": 103,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-22",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 103,
+              "altura": 103,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 103,
+              "altura": 103,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-23",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 103,
+              "altura": 103,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 103,
+              "altura": 103,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-24",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 103,
+              "altura": 103,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 103,
+              "altura": 103,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-25",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 103,
+              "altura": 103,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 103,
+              "altura": 103,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-26",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 103,
+              "altura": 103,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 103,
+              "altura": 103,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-27",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 113,
+              "altura": 113,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 103,
+              "altura": 103,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 103,
+              "altura": 103,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      }
+    ],
+    "mantidas": 27,
+    "desfeitas": 0,
+    "erro": null
+  },
+  "recommendations": [
+    {
+      "id": "img-dimensions-1",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/top/top-1.jpg\" class=\"img-fluid\" alt=\"\" style=\"width: 100%; height: auto;\">",
+      "posicao": {
+        "linha": 65,
+        "coluna": 7
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1280\" height=\"204\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 3391,
+          "fim": 3391,
+          "texto": " width=\"1280\" height=\"204\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-2",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"img-fluid\" src=\"https://enei.ce.ufrn.br/assets/images/desenho_crianca_2025.png\" alt=\"Logo2025\">",
+      "posicao": {
+        "linha": 77,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"287\" height=\"231\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 3960,
+          "fim": 3960,
+          "texto": " width=\"287\" height=\"231\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-3",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"https://enei.ce.ufrn.br/assets/images/slides/01_banner.png\" data-type=\"png\" class=\"img-fluid\">",
+      "posicao": {
+        "linha": 204,
+        "coluna": 34
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1150\" height=\"531\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 11158,
+          "fim": 11158,
+          "texto": " width=\"1150\" height=\"531\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-4",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"https://enei.ce.ufrn.br/assets/images/slides/02_banner_2025.png\" data-type=\"png\" class=\"img-fluid\">",
+      "posicao": {
+        "linha": 232,
+        "coluna": 34
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1150\" height=\"531\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 12861,
+          "fim": 12861,
+          "texto": " width=\"1150\" height=\"531\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-5",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/palestrantes/natalia-fernandes.png\" class=\"img-fluid rounded-start\" alt=\"Natália Fernandes\">",
+      "posicao": {
+        "linha": 354,
+        "coluna": 16
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"150\" height=\"150\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 18109,
+          "fim": 18109,
+          "texto": " width=\"150\" height=\"150\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-6",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/palestrantes/nilda-alves.png\" class=\"img-fluid rounded-start\" alt=\"Nilda Alves\">",
+      "posicao": {
+        "linha": 371,
+        "coluna": 16
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"150\" height=\"150\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 19379,
+          "fim": 19379,
+          "texto": " width=\"150\" height=\"150\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-7",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/palestrantes/walter-omar-kohan.png\" class=\"img-fluid rounded-start\" alt=\"Walter Omar Kohan\">",
+      "posicao": {
+        "linha": 388,
+        "coluna": 16
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"150\" height=\"150\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 20771,
+          "fim": 20771,
+          "texto": " width=\"150\" height=\"150\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-8",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/palestrantes/natalia-fernandes.png\" class=\"img-fluid rounded-start\" alt=\"Natália Fernandes\">",
+      "posicao": {
+        "linha": 415,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"150\" height=\"150\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 22572,
+          "fim": 22572,
+          "texto": " width=\"150\" height=\"150\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-9",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/palestrantes/nilda-alves.png\" class=\"img-fluid rounded-start\" alt=\"Nilda Alves\">",
+      "posicao": {
+        "linha": 440,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"150\" height=\"150\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 24135,
+          "fim": 24135,
+          "texto": " width=\"150\" height=\"150\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-10",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/palestrantes/walter-omar-kohan.png\" class=\"img-fluid rounded-start\" alt=\"Walter Omar Kohan\">",
+      "posicao": {
+        "linha": 465,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"150\" height=\"150\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 25820,
+          "fim": 25820,
+          "texto": " width=\"150\" height=\"150\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-11",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/nei.jpg\" class=\"img-fluid\" alt=\"NEI\">",
+      "posicao": {
+        "linha": 497,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"225\" height=\"225\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 27625,
+          "fim": 27625,
+          "texto": " width=\"225\" height=\"225\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-12",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/centro-educacao.jpg\" class=\"img-fluid\" alt=\"Centro de Educação\">",
+      "posicao": {
+        "linha": 500,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"225\" height=\"225\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 27958,
+          "fim": 27958,
+          "texto": " width=\"225\" height=\"225\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-13",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/ufrn.jpg\" class=\"img-fluid\" alt=\"UFRN\">",
+      "posicao": {
+        "linha": 503,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"225\" height=\"225\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 28233,
+          "fim": 28233,
+          "texto": " width=\"225\" height=\"225\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-14",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/sinfo.jpg\" class=\"img-fluid\" alt=\"SINFO\">",
+      "posicao": {
+        "linha": 515,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"225\" height=\"225\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 29209,
+          "fim": 29209,
+          "texto": " width=\"225\" height=\"225\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-15",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/sia.jpg\" class=\"img-fluid\" alt=\"UFRN SIA\">",
+      "posicao": {
+        "linha": 518,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"225\" height=\"225\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 29520,
+          "fim": 29520,
+          "texto": " width=\"225\" height=\"225\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-16",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/logo_capes.jpg\" class=\"img-fluid\" alt=\"Capes\">",
+      "posicao": {
+        "linha": 521,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"225\" height=\"225\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 29802,
+          "fim": 29802,
+          "texto": " width=\"225\" height=\"225\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-17",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/logo_ppged.jpg\" class=\"img-fluid\" alt=\"Progesp\">",
+      "posicao": {
+        "linha": 524,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"225\" height=\"225\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 30053,
+          "fim": 30053,
+          "texto": " width=\"225\" height=\"225\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-18",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/logo_ppgeesp.jpg\" class=\"img-fluid\" alt=\"Propesq\">",
+      "posicao": {
+        "linha": 527,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"225\" height=\"225\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 30306,
+          "fim": 30306,
+          "texto": " width=\"225\" height=\"225\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-19",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/propesq.jpg\" class=\"img-fluid\" alt=\"PROPESQ\">",
+      "posicao": {
+        "linha": 539,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"225\" height=\"225\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 31216,
+          "fim": 31216,
+          "texto": " width=\"225\" height=\"225\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-20",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/logo_capes.jpg\" class=\"img-fluid\" alt=\"Capes\">",
+      "posicao": {
+        "linha": 542,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"225\" height=\"225\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 31663,
+          "fim": 31663,
+          "texto": " width=\"225\" height=\"225\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-21",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/logo_identfix.jpg\" class=\"img-fluid\" alt=\"IdentFix\">",
+      "posicao": {
+        "linha": 545,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"225\" height=\"225\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 31918,
+          "fim": 31918,
+          "texto": " width=\"225\" height=\"225\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-22",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/logo-alecrim-colchoes.png\" class=\"img-fluid\" alt=\"Alecrim Colchões\">",
+      "posicao": {
+        "linha": 548,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"225\" height=\"225\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 32189,
+          "fim": 32189,
+          "texto": " width=\"225\" height=\"225\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-23",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/logo-quintal.jpg\" class=\"img-fluid\" alt=\"Brincar no quintal\">",
+      "posicao": {
+        "linha": 551,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"225\" height=\"225\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 32453,
+          "fim": 32453,
+          "texto": " width=\"225\" height=\"225\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-24",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/paladar-sertanejo.jpg\" class=\"img-fluid\" alt=\"Paladar sertanejo\">",
+      "posicao": {
+        "linha": 554,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"225\" height=\"225\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 32721,
+          "fim": 32721,
+          "texto": " width=\"225\" height=\"225\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-25",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/livraria-cooperativa-cultural.jpg\" class=\"img-fluid\" alt=\"Livraria Cooperativa Cultural\">",
+      "posicao": {
+        "linha": 557,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"225\" height=\"225\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 33013,
+          "fim": 33013,
+          "texto": " width=\"225\" height=\"225\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-26",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/adurn.jpg\" class=\"img-fluid\" alt=\"ADURN\">",
+      "posicao": {
+        "linha": 560,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"225\" height=\"225\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 33257,
+          "fim": 33257,
+          "texto": " width=\"225\" height=\"225\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-27",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/fabula.png\" class=\"img-fluid\" alt=\"Fábula Brinquedos Educativos\">",
+      "posicao": {
+        "linha": 563,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"225\" height=\"225\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 33525,
+          "fim": 33525,
+          "texto": " width=\"225\" height=\"225\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-1",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img alt=\"\" src=\"https://enei.ce.ufrn.br/assets/images/slides/02_banner_2025.png\" data-type=\"png\" class=\"img-fluid\">",
+      "posicao": {
+        "linha": 232,
+        "coluna": 34
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "4ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 12750,
+          "fim": 12750,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-2",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/palestrantes/natalia-fernandes.png\" class=\"img-fluid rounded-start\" alt=\"Natália Fernandes\">",
+      "posicao": {
+        "linha": 354,
+        "coluna": 16
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "5ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 17974,
+          "fim": 17974,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-3",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/palestrantes/nilda-alves.png\" class=\"img-fluid rounded-start\" alt=\"Nilda Alves\">",
+      "posicao": {
+        "linha": 371,
+        "coluna": 16
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "6ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 19256,
+          "fim": 19256,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-4",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/palestrantes/walter-omar-kohan.png\" class=\"img-fluid rounded-start\" alt=\"Walter Omar Kohan\">",
+      "posicao": {
+        "linha": 388,
+        "coluna": 16
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "7ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 20636,
+          "fim": 20636,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-5",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/palestrantes/natalia-fernandes.png\" class=\"img-fluid rounded-start\" alt=\"Natália Fernandes\">",
+      "posicao": {
+        "linha": 415,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "8ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 22437,
+          "fim": 22437,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-6",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/palestrantes/nilda-alves.png\" class=\"img-fluid rounded-start\" alt=\"Nilda Alves\">",
+      "posicao": {
+        "linha": 440,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "9ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 24012,
+          "fim": 24012,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-7",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/palestrantes/walter-omar-kohan.png\" class=\"img-fluid rounded-start\" alt=\"Walter Omar Kohan\">",
+      "posicao": {
+        "linha": 465,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "10ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 25685,
+          "fim": 25685,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-8",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/nei.jpg\" class=\"img-fluid\" alt=\"NEI\">",
+      "posicao": {
+        "linha": 497,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "11ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 27538,
+          "fim": 27538,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-9",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/centro-educacao.jpg\" class=\"img-fluid\" alt=\"Centro de Educação\">",
+      "posicao": {
+        "linha": 500,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "12ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 27844,
+          "fim": 27844,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-10",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/ufrn.jpg\" class=\"img-fluid\" alt=\"UFRN\">",
+      "posicao": {
+        "linha": 503,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "13ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 28144,
+          "fim": 28144,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-11",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/sinfo.jpg\" class=\"img-fluid\" alt=\"SINFO\">",
+      "posicao": {
+        "linha": 515,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "14ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 29118,
+          "fim": 29118,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-12",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/sia.jpg\" class=\"img-fluid\" alt=\"UFRN SIA\">",
+      "posicao": {
+        "linha": 518,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "15ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 29428,
+          "fim": 29428,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-13",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/logo_capes.jpg\" class=\"img-fluid\" alt=\"Capes\">",
+      "posicao": {
+        "linha": 521,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "16ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 29706,
+          "fim": 29706,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-14",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/logo_ppged.jpg\" class=\"img-fluid\" alt=\"Progesp\">",
+      "posicao": {
+        "linha": 524,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "17ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 29955,
+          "fim": 29955,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-15",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/logo_ppgeesp.jpg\" class=\"img-fluid\" alt=\"Propesq\">",
+      "posicao": {
+        "linha": 527,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "18ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 30206,
+          "fim": 30206,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-16",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/propesq.jpg\" class=\"img-fluid\" alt=\"PROPESQ\">",
+      "posicao": {
+        "linha": 539,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "19ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 31121,
+          "fim": 31121,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-17",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/logo_capes.jpg\" class=\"img-fluid\" alt=\"Capes\">",
+      "posicao": {
+        "linha": 542,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "20ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 31567,
+          "fim": 31567,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-18",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/logo_identfix.jpg\" class=\"img-fluid\" alt=\"IdentFix\">",
+      "posicao": {
+        "linha": 545,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "21ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 31816,
+          "fim": 31816,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-19",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/logo-alecrim-colchoes.png\" class=\"img-fluid\" alt=\"Alecrim Colchões\">",
+      "posicao": {
+        "linha": 548,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "22ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 32071,
+          "fim": 32071,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-20",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/logo-quintal.jpg\" class=\"img-fluid\" alt=\"Brincar no quintal\">",
+      "posicao": {
+        "linha": 551,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "23ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 32342,
+          "fim": 32342,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-21",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/paladar-sertanejo.jpg\" class=\"img-fluid\" alt=\"Paladar sertanejo\">",
+      "posicao": {
+        "linha": 554,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "24ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 32606,
+          "fim": 32606,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-22",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/livraria-cooperativa-cultural.jpg\" class=\"img-fluid\" alt=\"Livraria Cooperativa Cultural\">",
+      "posicao": {
+        "linha": 557,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "25ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 32874,
+          "fim": 32874,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-23",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/adurn.jpg\" class=\"img-fluid\" alt=\"ADURN\">",
+      "posicao": {
+        "linha": 560,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "26ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 33166,
+          "fim": 33166,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-24",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://enei.ce.ufrn.br/assets/images/rodape/fabula.png\" class=\"img-fluid\" alt=\"Fábula Brinquedos Educativos\">",
+      "posicao": {
+        "linha": 563,
+        "coluna": 25
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "27ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 33410,
+          "fim": 33410,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "heading-skip-1",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h5 class=\"card-title\">",
+      "posicao": {
+        "linha": 361,
+        "coluna": 22
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 2 para o nível 5: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h3 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "heading-skip-2",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h5 class=\"card-title\">",
+      "posicao": {
+        "linha": 422,
+        "coluna": 28
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 2 para o nível 5: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h3 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-1",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x\" crossorigin=\"…",
+      "posicao": {
+        "linha": 11,
+        "coluna": 4
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (1380 ms de bloqueio, 16.8 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-2",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css\" integrity=\"sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35V…",
+      "posicao": {
+        "linha": 13,
+        "coluna": 4
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (1300 ms de bloqueio, 10.9 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-3",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script src=\"https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js\">",
+      "posicao": {
+        "linha": 24,
+        "coluna": 4
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (300 ms de bloqueio, 35.8 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-4",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css\" />",
+      "posicao": {
+        "linha": 25,
+        "coluna": 4
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (150 ms de bloqueio, 4.6 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-5",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"https://enei.ce.ufrn.br/assets/css/style_site.css?v=2\">",
+      "posicao": {
+        "linha": 27,
+        "coluna": 4
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (316 ms de bloqueio, 5.0 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-6",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link href=\"https://vjs.zencdn.net/7.11.4/video-js.css\" rel=\"stylesheet\">",
+      "posicao": {
+        "linha": 28,
+        "coluna": 4
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (1210 ms de bloqueio, 10.7 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-7",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js\">",
+      "posicao": {
+        "linha": 31,
+        "coluna": 4
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Script bloqueia a renderização segundo o Lighthouse (1235 ms de bloqueio, 8.8 KiB). Se não for necessário para o primeiro conteúdo, acrescentar defer (mantém a ordem entre scripts) ou async (independente). Sem correção automática: conferir scripts inline que dependam dele e document.write.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-8",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css\">",
+      "posicao": {
+        "linha": 32,
+        "coluna": 4
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (906 ms de bloqueio, 2.7 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-9",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css\">",
+      "posicao": {
+        "linha": 34,
+        "coluna": 4
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (300 ms de bloqueio, 13.0 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    }
+  ]
+}

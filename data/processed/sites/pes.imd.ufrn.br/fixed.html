@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+
+<head>
+	
+	<title>PES - IMD</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+  <link rel="shortcut icon" href="/pes/imagens/favicon-pes.png" type="image/x-icon" />
+	<link rel="stylesheet" href="/pes/css/bootstrap.css">
+	<link rel="stylesheet" href="/pes/css/accessibility.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link rel="stylesheet" href="/pes/css/style.css">
+
+  <style>
+		.nav-link {
+			color: white;
+    }
+    
+		.bg-primary {
+			background-color: #0094DA!important
+    }
+
+    /* Sticky footer styles
+-------------------------------------------------- */
+    html {
+      position: relative;
+      min-height: 100%;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+		#subirTopo {
+			text-decoration: none;
+			background: rgba(30,156,161,.9);
+			bottom: 45px;
+			right: 45px;
+			color: #fff;
+			text-align: center;
+			cursor: pointer;
+			padding: 15px;
+			font-size: 20px;
+			font-weight: bold;
+			text-transform: uppercase;
+			position: fixed;
+			font-family: sans-serif;
+			opacity: .5;
+		}
+
+		#subirTopo:hover {
+			opacity:1;
+		}
+
+		.border-left {
+    	border-left: 1px solid #dee2e6!important;
+		}
+
+		.btn-areaRestrita {
+			border-radius: 20px 20px 20px 20px;
+		}
+	</style>
+  <meta charset="UTF-8">
+  
+  <style>
+		.bg-info {
+			background-color: #eff4f4!important
+		}
+		
+		.box-shadow {
+    	box-shadow: 0 0 8px #000000c4;
+		}
+
+		h1, h2 {
+			color: #164193!important
+		}
+
+		.icon-campo {
+			transition-duration: 0.5s;
+		}
+
+		@media (max-width: 768px) {
+    	.icon-campo {
+        width: 100px;
+    	}
+		}
+
+		@media (min-width: 768px) {
+    	.icon-campo {
+        width: 120px;
+    	}
+		}
+
+		@media (max-width: 575px) {
+    	.icon-campo {
+        width: 80px;
+			}
+			
+			#campo h6 {
+				font-size: 0.8rem;
+			}
+		}
+
+		.icon-campo:hover {
+	    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15)!important;
+		}
+		
+		.title-size {
+			font-size: 3rem!important;
+		}
+
+		p {
+			color: #000!important;
+		}
+
+	</style>
+  <script>
+		function buscarAluno(){
+		  $.ajax({
+		    url: '/pes/aluno/processar-login/' + $("#matric").val(),
+		    type: 'GET',
+		    context : document.body,
+				contentType : "application/json",
+		    success: function(data){	    
+		    	document.getElementById("nome").value = data.pessoa.nome;
+		    	document.getElementById("cpf").value = data.pessoa.cpf;
+		    	document.getElementById("mat").value = data.matricula;
+		    },
+		    error : function(data) {
+				}
+		  });   
+		}
+	</script>
+</head>
+
+<body>
+	
+	
+
+	<header id="menu">
+
+		<!-- ### Accessibility ### -->
+
+		<div id="accessibility" > 
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="float-left justify-content-start align-items-stretch flex-nowrap  d-none d-lg-flex">
+							<a class="instituicao" href="http://www.ufrn.br" title="UFRN"><img src="/pes/imagens/ufrn_cinza.png" width="52" height="19"/></a>
+							<a class="instituicao d-none d-lg-block border-left" href="http://imd.ufrn.br" title="Instituto Metrópole Digital">Metrópole Digital</a>							
+						</div>
+						<div class="instituicao  dropdown d-lg-none">
+							<a class="instituicao dropdown-toggle" href="#" id="navbarDropdownMenuMais" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+								<img src="/pes/imagens/ufrn_cinza.png" width="52" height="19"/>
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuMais">
+								<a class="dropdown-item" href="http://www.ufrn.br" >UFRN</a>
+								<a class="dropdown-item" href="http://imd.ufrn.br" >Metrópole Digital</a>								
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="d-flex justify-content-end align-items-center h-100">
+							<a href="#main" class="sr-only sr-only-focusable" accesskey="1" >Ir para o conteÃºdo principal (Alt + 1) [Alt + 1]</a>
+							<a href="#menu" class="sr-only sr-only-focusable" accesskey="2">Ir para inÃ­cio do Menu [Alt + 2] [Alt + 2]</a>
+							<a href="#" class="btn btn-light btn-onlyicon btn-sm" accesskey="3" onclick="window.increaseFontSize()" onkeydown="window.increaseFontSize()" title="Aumentar tamanho da letra [Alt + 3]" >+A<span class="sr-only">Aumentar tamanho da letra [Alt + 3] [Alt + 3]</span></a>
+							<a href="#" class="btn btn-light btn-onlyicon btn-sm" accesskey="4" onclick="window.resetFontSize()" onkeydown="window.resetFontSize()" title="Tamanho da letra normal [Alt + 4]">A<span class="sr-only">Tamanho da letra normal [Alt + 4] [Alt + 4]</span></a>
+							<a href="#" class="btn btn-light btn-onlyicon btn-sm" accesskey="5" onclick="window.decreaseFontSize()" onkeydown="window.decreaseFontSize()" title="Reduzir tamanho da letra [Alt + 5]">-A<span class="sr-only">Reduzir tamanho da letra [Alt + 5] [Alt + 5]</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+
+		<!-- ### End Accessibility ### -->
+
+		<!-- ### Navbar ### -->
+		
+		<nav class="navbar navbar-expand-md navbar-dark bg-primary box-shadow">
+			<div class="container-fluid justify-content-between">
+        <a class="navbar-brand" href="#"><img class="img-fluid" src="/pes/imagens/PES-Logotipo.png" width="134" height="54"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+					<ul class="navbar-nav text-center  py-2">
+						<li class="nav-item">
+							<a href="#pes" class="nav-link text-uppercase text-light">O que é o PES/IMD</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" id="certificados-link" class="nav-link text-uppercase text-light">Certificados</a>
+						</li>
+						<li class="nav-item">
+							<a href="#campo" class="nav-link text-uppercase text-light">Campos do saber</a>
+						</li>						
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+		
+
+	  <!-- ### End Navbar ### -->
+		
+	</header>
+
+	<main id="conteudo-pb">		  
+				      
+							
+		<section id="certificados" class="container-fluid row align-items-center px-0 mx-0">
+			<div class="col-12 col-lg-8 px-0">
+				<div class="row justify-content-center mx-0 mb-5">
+					<div class="col-12 text-center">
+						<h1 class="font-weight-bold">Olá aluno,</h1>
+						<h2>identifique-se informando sua matrícula!</h2>
+					</div>
+				</div>
+				<div class="row justify-content-center mx-0 mb-4">
+					<form method="POST" class="col-8 col-md-6 col-lg-7 col-xl-5" action="/pes/aluno/processar-login"><input type="hidden" name="_csrf" value="03lwvw-yoG7Q3sN-bzIyBi0_aL7PhPZpH-pTqW0588qOEGTG6htBhz2Hwgj97vpNXR8GY0lcRYf_4ZNEedNgmAkIkPnrIlyk"/>						
+
+						<div class="input-group shadow rounded-pill px-0">
+							<input type="text" id="matric" data-mask="0000000000000" class="form-control input-search-index" name="matricula" placeholder="Digite sua matrícula">
+																			
+							<div class="input-group-append">
+								<button class="btn btn-searh btn-search-index" id="submit" type="submit"><i class="fas fa-search"></i></button>							
+							</div>
+						</div>											
+						
+					</form>
+				</div>
+				<div class="row justify-content-center mx-0">
+					<small>
+						<a href="aluno/validar" class="text-decoration-none text-uppercase text-info ">Validação de certificados <i class="fas fa-arrow-right"></i></a>
+					</small>
+				</div>
+			</div>
+		</section>
+
+		<section id="pes" class="bg-info row align-items-center px-0 mx-0">
+			<div class="container">
+				<div class="row justify-content-center py-5">
+					<div class="col-12 col-md-11 col-lg-9 col-xl-8">
+						<h2 class="pt-5 mb-4">O que é o PES/IMD</h2>
+						<p class="mb-5">
+						O Programa de Estudos Secundários do Instituto Metrópole Digital (PES/IMD) é um programa de 
+						formação complementar que tem por objetivo fornecer uma oportunidade para estudantes e 
+						profissionais explorarem áreas de conhecimento relacionadas a sua formação. 
+						Baseado em experiências bem-sucedidas, como os "minors" americanos, o 
+						programa busca certificar pessoas em campos do saber da Tecnologia da Informação. 												
+						</p>
+					</div>
+				</div>
+			</div>   	
+		</section>
+		
+		<section id="campo"class="row align-items-center px-0 mx-0">
+			<div class="container">
+				<div class="row justify-content-center align-items-center">
+					<h2 class="py-3 mb-3">Campos do Saber</h2>
+				</div>
+				<div class="row justify-content-center text-center ">
+					<div class="col-lg-2 col-md-3 col-4  mb-5"><a class="text-decoration-none text-secondary" href="#pes-bioinformatica" data-toggle="modal"><img loading="lazy" class="px-3 py-3 rounded-circle shadow-sm icon-campo" src="/pes/imagens/Bioinformatica.png"/>
+						<h6 class="mt-4">Bioinformática</h6></a></div>
+					<div class="col-lg-2 col-md-3 col-4  mb-5"><a class="text-decoration-none text-secondary" href="#pes-cienciadedados" data-toggle="modal"><img loading="lazy" class="px-3 py-3 rounded-circle shadow-sm icon-campo" src="/pes/imagens/Cienciadedados.png"/>
+						<h6 class="mt-4">Ciência de Dados</h6></a></div>
+					<div class="col-lg-2 col-md-3 col-4" ><a class="text-decoration-none text-secondary" href="#pes-educacional" data-toggle="modal"><img loading="lazy" class="px-3 py-3 rounded-circle shadow-sm icon-campo" src="/pes/imagens/Infoeducacional.png"/>
+						<h6 class="mt-4">Informática Educacional</h6></a></div>
+					<div class="col-lg-2 col-md-3 col-4" ><a class="text-decoration-none text-secondary" href="#pes-inovacao" data-toggle="modal"><img loading="lazy" class="px-3 py-3 rounded-circle shadow-sm icon-campo" src="/pes/imagens/Inovacao.png"/>
+						<h6 class="mt-4">Inovação e Empreendedorismo</h6></a></div>
+					<div class="col-lg-2 col-md-3 col-4" ><a class="text-decoration-none text-secondary" href="#pes-inteligencia" data-toggle="modal"><img loading="lazy" class="px-3 py-3 rounded-circle shadow-sm icon-campo" src="/pes/imagens/Inteligenciacomputacional.png"/>
+						<h6 class="mt-4">Inteligência Artificial</h6></a></div>
+					<div class="col-lg-2 col-md-3 col-4" ><a class="text-decoration-none text-secondary" href="#pes-internet" data-toggle="modal"><img loading="lazy" class="px-3 py-3 rounded-circle shadow-sm icon-campo" src="/pes/imagens/Internetdascoisas_novo.png"/>
+						<h6 class="mt-4">Internet das Coisas</h6></a></div>
+					<div class="col-lg-2 col-md-3 col-4" ><a class="text-decoration-none text-secondary" href="#pes-jogos" data-toggle="modal"><img loading="lazy" class="px-3 py-3 rounded-circle shadow-sm icon-campo" src="/pes/imagens/Jogosdigitais.png"/>
+						<h6 class="mt-4">Jogos Digitais</h6></a></div>
+					<div class="col-lg-2 col-md-3 col-4" ><a class="text-decoration-none text-secondary" href="#pes-gerenciais" data-toggle="modal"><img loading="lazy" class="px-3 py-3 rounded-circle shadow-sm icon-campo" src="/pes/imagens/Sistemasgerenciais.png"/>
+						<h6 class="mt-4">Sistemas de Informações Gerenciais</h6></a></div>
+				</div>
+			</div>	
+		</section>
+
+		<section class="modals">
+			<div class="modal fade" id="pes-bioinformatica" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-scrollable" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title text-uppercase">Bioinformática</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<p><b>Descrição:</b>
+							<br>A bioinformática é hoje um dos principais pilares das ciências da vida e possui um
+							mercado cujo tamanho atinge centenas de bilhões de dólares. O desenvolvimento das
+							tecnologias em larga-escala, incluindo as novas tecnologias de sequenciamento (NGS) do
+							DNA, tem levado a bioinformática a um patamar cada vez mais relevante dentro dos cenários
+							acadêmico e produtivo mundiais.</p>
+							
+							<p>Áreas como saúde, agricultura, pecuária, entre muitas outras,
+							têm sido diretamente influenciadas pela bioinformática. Neste sentido, investir em
+							bioinformática vem sendo considerado estratégico tanto em nível governamental como
+							institucional. Apesar de tamanha importância, existe uma carência de profissionais na área
+							devido principalmente à sua natureza multidisciplinar e à competição do mercado de tecnologia
+							da informação.</p>
+
+							<p>A carência de recursos humanos faz-se sentir em duas frentes. Na academia a
+							escassez de bioinformatas traz sérios prejuízos ao desenvolvimento das outras áreas das
+							ciências da vida, entre elas a medicina. A segunda frente representa o setor industrial onde a
+							presença de profissionais de bioinformática faz-se cada vez mais necessária.</p>
+							
+							<p>Diante desse cenário, os componentes da área de bioinformática irão possibilitar ao aluno ingressar no
+							mercado de trabalho emergente da bioinformática bem como a prosseguir na sua formação
+							acadêmica em programas de pós-graduação.</p>	
+
+							<p>
+							<b>Carga horária mínima para obtenção do certificado: 420h</b>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="modal fade" id="pes-cienciadedados" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-scrollable" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title text-uppercase">Ciência de Dados</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<p>
+							<b>Descrição:</b>
+							<br>
+							Aplicações orientadas a dados têm recentemente ganhando o protagonismo no que se refere ao aumento da 
+							eficiência na tomada de decisão, criação de indicadores de desempenho, descoberta de conhecimento, 
+							estimação de cenários de investimento, entre outros. Assim, estimula-se o desenvolvimento de novas 
+							oportunidades de inovação, desenvolvimento científico e tecnológico em várias temáticas, como, por exemplo, 
+							Medicina, Biologia, Economia, Indústria, Direito, Esporte, Jornalismo etc. Essa realidade deve-se, 
+							principalmente, à evolução dos equipamentos e dispositivos eletrônicos, ao aumento na capacidade 
+							de processamento e armazenamento dos computadores, aliados ao surgimento de novas tecnologias 
+							para captação e coleta de dados. O universo de possibilidades da atual demanda por conhecimento 
+							no desenvolvimento de aplicações orientadas a dados não permite mais oferecer simples 
+							interpretações de dados e números. Diante disso, surge o termo Ciência de dados, 
+							que passa a representar uma área interdisciplinar que alia matemática e computação 
+							às técnicas da estatística e conhecimentos específicos de áreas de atuação que 
+							gerem os dados a serem analisados. Essa ciência atua no processo de captura, 
+							transformação, geração e análise dos dados, respondendo também pelas diferentes formas 
+							de se apresentar e visualizar os resultados concebidos de modo efetivo. O profissional da 
+							área deve ser capaz de se tornar um agente multidisciplinar que conheça as técnicas 
+							relacionadas ao processo de transformação dos dados em informações ou produtos 
+							relevantes dentro de uma instituição.
+							</p>							
+							
+							<p>
+							O Campo do Saber em CIÊNCIA DOS DADOS possui uma carga horária mínima de 360h formada por componentes 
+							curriculares obrigatórios e optativos. No primeiro grupo, destacam-se os conteúdos balizadores na 
+							formação de um cientista de dados, compreendendo questões relacionadas com 
+							Princípios Éticos dos Dados, Probabilidade e Inferência Estatística, assim como uma 
+							visão geral e metodologias para Coleta, Limpeza e Pré-Processamento, Análise 
+							Exploratória de Dados e Técnicas de Visualização. Os componentes curriculares 
+							optativos são orientados ao aprofundamento dos conteúdos obrigatórios no que 
+							tange desde infraestruturas computacionais para coleta, armazenamento, estruturas 
+							de dados avançadas, modelos de aprendizado de máquina e até o desenvolvimento de 
+							aplicações em diversas temáticas.
+							</p>	
+
+							<p>
+							<b>Carga horária mínima para obtenção do certificado: 360h</b>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="modal fade" id="pes-educacional" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-scrollable" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title text-uppercase">Informática Educacional</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<p><b>Descrição:</b>
+							<br>Componentes curriculares desta área visam preparar os alunos para que possam compreender e utilizar Tecnologias Digitais de Informação e Comunicação (TDIC) aplicadas em contextos de ensino e aprendizagem nos diversos níveis, etapas e modalidades da Educação.</p>
+							
+							<p>Esta área tem um caráter específico que agrega saberes de diferentes campos do conhecimento com vistas a contribuir tanto para a área de Informática quanto para a Educação, por meio de iniciativas que permitam a integração das TDIC nos processos de ensino e de aprendizagem. Programas de formação continuada para essa integração são ofertados sucessivamente ao longo dos anos.</p>
+
+							<p>Muitos professores ganham a oportunidade de reconhecer as potencialidades pedagógicas das TDIC e incorporá-las à sua prática. Em todo o processo é imprescindível a presença de profissionais de Tecnologias da Informação (TI) habilitados para compreender e auxiliar nas dinâmicas necessárias para a condução de um ambiente propício à aprendizagem.</p>
+							
+							<p>Além disso, soluções computacionais, recursos educativos digitais e práticas pedagógicas inovadoras com TDIC são desenvolvidos com o objetivo de contribuir com os processos de ensino e de aprendizagem. A formação em Informática Educacional oportuniza ao discente compreender aspectos pedagógicos inerentes ao desenvolvimento e ao uso de diferentes TDIC.</p>	
+
+							<p>Nessa perspectiva, o aluno pode atuar tanto em processos de desenvolvimento de sistemas computacionais educativos, elaboração de projetos e políticas de informatização de ambientes escolares e acadêmicos, realizar formações de professores para o uso pedagógico de TDIC e, inclusive, atuar em cursos extracurriculares sobre o ensino de programação e pensamento computacional.</p>	
+
+							<p>Vale salientar que a inserção deste profissional no mercado de trabalho é amplo e contempla experiências formais e não formais de educação, em suas diversas níveis e modalidades como é o caso da Educação a Distância (EaD).</p>
+							
+							<p><b>Carga horária mínima para obtenção do certificado: 360h</b></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="modal fade" id="pes-inovacao" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-scrollable" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title text-uppercase">Inovação e Empreendedorismo</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<p>
+							<b>Descrição:</b>
+							<br>
+							O empreendedorismo é um fenômeno socioeconômico que desempenha uma importante 
+							função no desenvolvimento de uma nação. Notadamente, esse fenômeno está associado 
+							à criação de novos empreendimentos, bem como às ações desenvolvidas pelo seu 
+							agente promotor, o empreendedor. Com a economia digital e a nova fase que está 
+							sendo percebida após a revolução digital (pós-digital), existe a implicação de 
+							modelos de negócios em que camadas de tecnologias substituem atividades tanto 
+							mecânicas quanto inteligentes e a comunidade de colaboradores externos e até os 
+							clientes da própria empresa passam a constituir o ecossistema que a fazem operar. 
+							Essa tendência promove o crescimento da quantidade de empresas no formato 
+							plataforma cada vez mais conectadas, multidisciplinares e com processos de 
+							trabalho não lineares. Por consequência, essas também serão características 
+							cada vez mais demandadas aos profissionais e aos gestores dessas empresas pós-digitais. 
+							Nesse sentido, este programa objetiva preparar o profissional, de qualquer área do 
+							conhecimento, para essa nova ordem mundial do trabalho com competências e habilidades 
+							empreendedoras, de forma a serem capazes de se conscientizar sobre a importância do 
+							empreendedorismo, de buscar desenvolver a sua criatividade, de ser inovador na 
+							resolução de problemas, de buscar oportunidades de criar e desenvolver um novo negócio, 
+							fazer previsões, assumir riscos calculados, saber lidar com conflitos, tomar decisões, 
+							trabalhar em equipe, conhecer o ecossistema empreendedor em que está inserido, além de 
+							buscar uma rede de apoio e de contatos em prol do desenvolvimento do seu negócio.
+							</p>														
+							<p><b>Carga horária mínima para obtenção do certificado: 300h</b></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="modal fade" id="pes-inteligencia" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-scrollable" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title text-uppercase">Inteligência Computacional</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<p>
+							<b>Descrição:</b>
+							<br>							
+							A Inteligência Artificial ("IA") é uma área do conhecimento plurifacetada com propósitos diversos e 
+							potencial para melhorar e transformar o bem-estar social e humano. Suas contribuições têm impacto 
+							direto em diversos setores da economia global, principalmente no fomento do aumento da produtividade, 
+							desempenho e sustentabilidade, além de ajudar a humanidade a solucionar seus maiores desafios e problemas 
+							globais. As técnicas de Inteligência Artificial vêm sendo desenvolvidas ao longo do último século e 
+							mais recentemente suas contribuições têm ganhado bastante notoriedade devido ao crescimento exponencial 
+							das tecnologias de computação de alto desempenho, abundância de dados e algoritmos de otimização mais 
+							eficientes. De fato, um dos maiores desafios dessa área de conhecimento é a diversidade das técnicas 
+							adotadas, assim como as áreas de aplicação que a demandam, tornando os desafios multidisciplinares. 
+							Os componentes dessa área de conhecimento constituem o estudo dos fundamentos básicos necessários 
+							para a compreensão da IA, aliado à exploração dos algoritmos e técnicas computacionais e dos domínios 
+							de aplicação. Dentre as técnicas computacionais, um conjunto de disciplinas obrigatórias ajuda a entender 
+							de forma panorâmica as principais ferramentas à disposição de um profissional da área. Adicionalmente, 
+							um conjunto complementar de disciplinas permite que o aluno se aprofunde em técnicas específicas. 
+							Quanto aos domínios de aplicação, disciplinas optativas são ofertadas em dois grupos. O primeiro está 
+							organizado em função das características comuns a problemas de aplicação dessa área; o segundo, em 
+							função das áreas da sociedade e seus problemas mais relevantes. A formação em inteligência computacional 
+							pode ser feita seguindo diferentes trilhas. Um aluno interessado apenas nas técnicas pode complementar 
+							os componentes curriculares obrigatórios com componentes de aprofundamento em técnicas. Por sua vez, um 
+							aluno interessado em domínios de aplicação pode seguir diretamente dos componentes obrigatórios para os 
+							componentes das áreas que lhe interessam, eventualmente complementando-as com as técnicas mais relevantes 
+							para os problemas das áreas em questão. Em ambos os casos, os discentes irão possuir o conhecimento 
+							base para tratar os dados e compreender problemas passíveis de serem solucionados por meio da IA, bem 
+							como saber quais técnicas podem ser aplicadas em diferentes domínios de aplicação.
+							</p>
+
+							<p><b>Carga horária mínima para obtenção do certificado: 360h</b></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="pes-internet" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-scrollable" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title text-uppercase">Internet das Coisas</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<p><b>Descrição:</b>
+							<br>Com a tendência de se espalhar por praticamente todos os setores da economia, a Internet das Coisas (Internet of Things (IoT), em inglês) é posicionada como uma das maiores tendências tecnológicas da área de Tecnologia da Informação. O número de dispositivos conectados à internet irá saltar de cerca de 10 bilhões em 2015 para 34 bilhões até 2020, quando a população no planeta será de 7,6 bilhões – resultando em uma média superior a 4 dispositivos por pessoa.</p>
+							
+							<p>O mesmo cenário é percebido em outras frentes, como o setor industrial, onde a realidade da "instrumentação em todo lugar" já é uma realidade nos dias atuais. Diante desta nova perspectiva, os componentes da área de Internet das Coisas visam capacitar o discente em habilidades relacionadas ao projeto e desenvolvimento de soluções computacionais em diversos nichos de aplicação.</p>
+
+							<p>O discente poderá desenvolver conhecimentos que o permitem conceber e utilizar tecnologias embarcadas, protocolos de comunicação diversos, middlewares, arquiteturas de desenvolvimento e análise de dados, e a criação de aplicações com o potencial de interagir direta ou indiretamente nos diversos setores produtivos (urbano, rural, industrial e áreas correlacionadas).</p>
+							
+							<p>A formação em Internet das Coisas permite o discente percorrer diferentes caminhos de aprendizagem para o respectivo campo do saber. Disciplinas obrigatórios são planejadas com o intuito de fornecer os conhecimentos básicos da área, nomeadamente:</p>	
+
+							<ul class="list-unstyled">
+								<li>a) uma visão sobre os dispositivos de
+							hardware necessários para coletar, comissionar e processar dados, sensores e informações
+							dos diferentes ambientes que compõem um típica aplicação de Internet das Coisas;
+								</li>
+								<li>b) tecnologias de comunicação de dados necessárias para transportar os diferentes dados
+								coletados até a infraestrutura computacional de armazenamento e processamento; e
+								</li>
+								<li> c) técnicas para análise dos dados e geração de insights e valor.
+								</li>
+							</ul>
+
+							<p>Caso o discente almeje se especializar em uma determinada subárea da Internet das Coisas foi planejado a oferta de disciplinas optativas com os seguintes temas: desenvolvimento de aplicações, segurança, plataformas para armazenamento e processamento de dados e hardware.</p>	
+
+							<p><b>Carga horária mínima para obtenção do certificado: 300h</b></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="pes-jogos" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-scrollable" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title text-uppercase">Jogos Digitais</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<p><b>Descrição:</b>
+							<br>Ao longo das últimas duas décadas, o mercado de jogos digitais passou de uma pequena indústria de nicho para uma área gigantesca da indústria do entretenimento.</p>
+							
+							<p>Os jogos	têm aberto novas perspectivas e aumentado bastante o seu nível de importância no mundo atual, tanto do ponto de vista econômico quanto do ponto de vista cultural, educativo, estratégico e tecnológico.</p>
+
+							<p>Com a popularização da internet, dos consoles de videogame, e dos dispositivos móveis, grandes são os esforços para torná-los cada vez mais úteis em diversas áreas de aplicação que eram inesperadas anteriormente, tais como o treinamento militar, o ensino médico, a gestão de emergências, a educação, o planejamento de cidades, a engenharia espacial, a produção de filmes, a publicidade, etc., permitindo que uma grande quantidade de usuários possam tirar proveito das potencialidades oferecidas por estas aplicações.</p>
+							
+							<p>Os componentes desta área de conhecimento se aprofundam no estudo e criação do game design e level design, roteiro e narrativas para jogos, edição de áudio e trilha sonora, desenho, modelagem, animação e automatização de personagens, projeto e construção de interfaces gráficas, programação da execução do gameplay, programação de modelos físicos, gerência de projetos de equipes multidisciplinares, programação com motores de jogos, entre outros assuntos correlacionados com a área.</p>
+
+							<p>Ele terá todo o embasamento teórico e prático para ser capaz de criar projetos do início ao fim, utilizando conteúdo multimídia criado por ele ou por outros profissionais de forma colaborativa.</p>	
+
+							<p><b>Carga horária mínima para obtenção do certificado: 360h</b></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="pes-gerenciais" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-scrollable" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title text-uppercase">Sistemas de Informações Gerenciais</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<p><b>Descrição:</b>
+							<br>Os sistemas Integrados de Gestão são amplos sistemas que cuidam do processo organizacional de empresas e governo automatizando processos e fornecendo aos gestores público e privado o gerenciamento, monitoramento e acesso rápido à informação. Esses sistemas normalmente possuem um escopo amplo, uma arquitetura bem definida e uma necessidade de distribuição e integração com outros sistemas existentes.</p>
+							
+							<p>Os componentes curriculares desta área visam desenvolver habilidades para compreender as necessidades de modernização de organizações e preparar o aluno para atuar no desenvolvimento de software para instituições públicas e privadas nos mais diversos tipos de plataformas (Web, Mobile, Desktop, etc.).</p>
+
+							<p>O discente desenvolverá competências para desenvolver sistemas integrados de gestão que representam sistemas críticos para o funcionamento do setor público ou de empresas privadas.</p>
+
+							<p><b>Carga horária mínima para obtenção do certificado: 360h</b></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+	
+		
+	</main>
+
+	<!-- ### Footer ### -->
+
+	<footer class="footer bg-dark">
+		<div class="container-fluid">
+			<div class="row d-flex justify-content-between align-items-center">
+				<div class="col-12 col-sm-4 mt-3 mt-sm-0 text-right text-sm-left">
+					<a href="https://autenticacao.ufrn.br/authz-server/oauth/authorize?client_id=pes-imd-id&amp;response_type=code&amp;redirect_uri=https://pes.imd.ufrn.br/pes/usuario/autenticar-usuario" 
+					class="btn btn-sm btn-outline-light mt-0 btn-areaRestrita ml-md-5"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Área administrativa</a>
+				</div>
+				<div class="text-center text-sm-right col-12 col-sm-8 py-3 pr-md-5">
+					<p class="my-0 font-weight-bold">
+						<a href="https://dti.imd.ufrn.br/" target="_blank" class="text-decoration-none text-light">  Diretoria de TI - </a>
+						<a href="https://portal.imd.ufrn.br/portal/" target="_blank" class="text-decoration-none text-light">Instituto Metrópole Digital<br></a>
+					</p>
+					<p class="my-0 text-light">Copyright &copy; 2015 - 2019</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- ### End Footer ### -->
+
+	<a id="subirTopo" class="px-4 rounded-circle"><i class="fas fa-angle-up"></i></a>
+
+	<!-- ### JS ### -->
+
+	<script src="/pes/js/jquery.js"></script>
+	<script src="/pes/js/jquery.mask.js"></script>
+	<script src="/pes/js/popper.js"></script>
+	<script src="/pes/js/bootstrap.js"></script>
+	<script src="/pes/js/accessibility.js"></script>
+
+	<script>
+		$('ul.navbar-nav > li').children().not('#certificados-link').on('click', function(event){
+			event.preventDefault();
+			$("html, body").animate({scrollTop:$(this.hash).offset().top}, 1200);
+		})
+	</script>
+
+	<script type="text/javascript">
+
+		jQuery(document).ready(function(){
+		
+			jQuery("#subirTopo").hide();
+			
+			jQuery('a#subirTopo').click(function () {
+				jQuery('body,html').animate({
+					scrollTop: 0
+				}, 800);
+				return false;
+			});
+			
+			jQuery(window).scroll(function () {
+				if (jQuery(this).scrollTop() > 200) {
+					jQuery('#subirTopo').fadeIn();
+					$(".title-size").removeClass("title-size");
+					$("#matric").blur(); 
+				} else {
+					jQuery('#subirTopo').fadeOut();
+				}
+			});
+		});
+
+	</script>
+	
+		<script>
+			$(document).ready(function(){
+    		$("#certificados-link").click(function(){
+       		$("#matric").focus();
+					$("h1").addClass("title-size");
+   			 });
+			});
+		</script>
+	
+
+</body>
+
+</html>

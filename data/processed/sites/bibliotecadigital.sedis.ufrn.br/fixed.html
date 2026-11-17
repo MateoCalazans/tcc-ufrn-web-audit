@@ -1,0 +1,1849 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <meta name='robots' content='max-image-preview:large' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://bibliotecadigital.sedis.ufrn.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbibliotecadigital.sedis.ufrn.br%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://bibliotecadigital.sedis.ufrn.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbibliotecadigital.sedis.ufrn.br%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--base: #ffffff;--wp--preset--color--contrast: #000000;--wp--preset--color--primary: #9DFF20;--wp--preset--color--secondary: #345C00;--wp--preset--color--tertiary: #F6F6F6;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: clamp(0.875rem, 0.875rem + ((1vw - 0.2rem) * 0.227), 1rem);--wp--preset--font-size--medium: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.227), 1.125rem);--wp--preset--font-size--large: clamp(1.75rem, 1.75rem + ((1vw - 0.2rem) * 0.227), 1.875rem);--wp--preset--font-size--x-large: 2.25rem;--wp--preset--font-size--xx-large: clamp(4rem, 4rem + ((1vw - 0.2rem) * 10.909), 10rem);--wp--preset--font-family--dm-sans: "DM Sans", sans-serif;--wp--preset--font-family--ibm-plex-mono: 'IBM Plex Mono', monospace;--wp--preset--font-family--inter: "Inter", sans-serif;--wp--preset--font-family--system-font: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;--wp--preset--font-family--source-serif-pro: "Source Serif Pro", serif;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: clamp(1.5rem, 5vw, 2rem);--wp--preset--spacing--40: clamp(1.8rem, 1.8rem + ((1vw - 0.48rem) * 2.885), 3rem);--wp--preset--spacing--50: clamp(2.5rem, 8vw, 4.5rem);--wp--preset--spacing--60: clamp(3.75rem, 10vw, 7rem);--wp--preset--spacing--70: clamp(5rem, 5.25rem + ((1vw - 0.48rem) * 9.096), 8rem);--wp--preset--spacing--80: clamp(7rem, 14vw, 11rem);--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:root { --wp--style--global--content-size: 650px;--wp--style--global--wide-size: 1200px; }:where(body) { margin: 0; }.wp-site-blocks { padding-top: var(--wp--style--root--padding-top); padding-bottom: var(--wp--style--root--padding-bottom); }.has-global-padding { padding-right: var(--wp--style--root--padding-right); padding-left: var(--wp--style--root--padding-left); }.has-global-padding > .alignfull { margin-right: calc(var(--wp--style--root--padding-right) * -1); margin-left: calc(var(--wp--style--root--padding-left) * -1); }.has-global-padding :where(:not(.alignfull.is-layout-flow) > .has-global-padding:not(.wp-block-block, .alignfull)) { padding-right: 0; padding-left: 0; }.has-global-padding :where(:not(.alignfull.is-layout-flow) > .has-global-padding:not(.wp-block-block, .alignfull)) > .alignfull { margin-left: 0; margin-right: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: 1.5rem; margin-block-end: 0; }:where(.wp-site-blocks) > :first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child { margin-block-end: 0; }:root { --wp--style--block-gap: 1.5rem; }:root :where(.is-layout-flow) > :first-child{margin-block-start: 0;}:root :where(.is-layout-flow) > :last-child{margin-block-end: 0;}:root :where(.is-layout-flow) > *{margin-block-start: 1.5rem;margin-block-end: 0;}:root :where(.is-layout-constrained) > :first-child{margin-block-start: 0;}:root :where(.is-layout-constrained) > :last-child{margin-block-end: 0;}:root :where(.is-layout-constrained) > *{margin-block-start: 1.5rem;margin-block-end: 0;}:root :where(.is-layout-flex){gap: 1.5rem;}:root :where(.is-layout-grid){gap: 1.5rem;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{background-color: var(--wp--preset--color--base);color: var(--wp--preset--color--contrast);font-family: var(--wp--preset--font-family--system-font);font-size: var(--wp--preset--font-size--medium);line-height: 1.6;--wp--style--root--padding-top: var(--wp--preset--spacing--40);--wp--style--root--padding-right: var(--wp--preset--spacing--30);--wp--style--root--padding-bottom: var(--wp--preset--spacing--40);--wp--style--root--padding-left: var(--wp--preset--spacing--30);}a:where(:not(.wp-element-button)){color: var(--wp--preset--color--contrast);text-decoration: underline;}:root :where(a:where(:not(.wp-element-button)):hover){text-decoration: none;}:root :where(a:where(:not(.wp-element-button)):focus){text-decoration: underline dashed;}:root :where(a:where(:not(.wp-element-button)):active){color: var(--wp--preset--color--secondary);text-decoration: none;}h1, h2, h3, h4, h5, h6{font-weight: 400;line-height: 1.4;}h1{font-size: clamp(2.032rem, 2.032rem + ((1vw - 0.2rem) * 2.896), 3.625rem);line-height: 1.2;}h2{font-size: clamp(2.625rem, calc(2.625rem + ((1vw - 0.48rem) * 8.4135)), 3.25rem);line-height: 1.2;}h3{font-size: var(--wp--preset--font-size--x-large);}h4{font-size: var(--wp--preset--font-size--large);}h5{font-size: var(--wp--preset--font-size--medium);font-weight: 700;text-transform: uppercase;}h6{font-size: var(--wp--preset--font-size--medium);text-transform: uppercase;}:root :where(.wp-element-button, .wp-block-button__link){background-color: var(--wp--preset--color--primary);border-radius: 0;border-width: 0;color: var(--wp--preset--color--contrast);font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}:root :where(.wp-element-button:visited, .wp-block-button__link:visited){color: var(--wp--preset--color--contrast);}:root :where(.wp-element-button:hover, .wp-block-button__link:hover){background-color: var(--wp--preset--color--contrast);color: var(--wp--preset--color--base);}:root :where(.wp-element-button:focus, .wp-block-button__link:focus){background-color: var(--wp--preset--color--contrast);color: var(--wp--preset--color--base);}:root :where(.wp-element-button:active, .wp-block-button__link:active){background-color: var(--wp--preset--color--secondary);color: var(--wp--preset--color--base);}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-base-color{color: var(--wp--preset--color--base) !important;}.has-contrast-color{color: var(--wp--preset--color--contrast) !important;}.has-primary-color{color: var(--wp--preset--color--primary) !important;}.has-secondary-color{color: var(--wp--preset--color--secondary) !important;}.has-tertiary-color{color: var(--wp--preset--color--tertiary) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-base-background-color{background-color: var(--wp--preset--color--base) !important;}.has-contrast-background-color{background-color: var(--wp--preset--color--contrast) !important;}.has-primary-background-color{background-color: var(--wp--preset--color--primary) !important;}.has-secondary-background-color{background-color: var(--wp--preset--color--secondary) !important;}.has-tertiary-background-color{background-color: var(--wp--preset--color--tertiary) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-base-border-color{border-color: var(--wp--preset--color--base) !important;}.has-contrast-border-color{border-color: var(--wp--preset--color--contrast) !important;}.has-primary-border-color{border-color: var(--wp--preset--color--primary) !important;}.has-secondary-border-color{border-color: var(--wp--preset--color--secondary) !important;}.has-tertiary-border-color{border-color: var(--wp--preset--color--tertiary) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-xx-large-font-size{font-size: var(--wp--preset--font-size--xx-large) !important;}.has-dm-sans-font-family{font-family: var(--wp--preset--font-family--dm-sans) !important;}.has-ibm-plex-mono-font-family{font-family: var(--wp--preset--font-family--ibm-plex-mono) !important;}.has-inter-font-family{font-family: var(--wp--preset--font-family--inter) !important;}.has-system-font-font-family{font-family: var(--wp--preset--font-family--system-font) !important;}.has-source-serif-pro-font-family{font-family: var(--wp--preset--font-family--source-serif-pro) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<link rel='stylesheet' id='bootstrap-css' href='https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/bootstrap/css/bootstrap.min.css?ver=7.1.4' media='all' />
+<link rel='stylesheet' id='core-css' href='https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/style.css?ver=7.1.4' media='all' />
+<script id="jquery-core-js" src="https://bibliotecadigital.sedis.ufrn.br/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://bibliotecadigital.sedis.ufrn.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script id="bootstrap-js" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/bootstrap/js/bootstrap.bundle.min.js?ver=7.1.4"></script>
+<script id="core-js" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/script.js?ver=7.1.4"></script>
+<link rel="https://api.w.org/" href="https://bibliotecadigital.sedis.ufrn.br/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://bibliotecadigital.sedis.ufrn.br/wp-json/wp/v2/pages/14" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://bibliotecadigital.sedis.ufrn.br/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.1.4" />
+<link rel="canonical" href="https://bibliotecadigital.sedis.ufrn.br/" />
+<link rel='shortlink' href='https://bibliotecadigital.sedis.ufrn.br/' />
+<style class="wpcode-css-snippet">.footer::after{
+	content: '';
+	position: relative;
+	width: 204px;
+	height: 70px;
+	background-color: #f4f4f4;
+	right: 200px;
+}</style><style class="wp-fonts-local">
+@font-face{font-family:"DM Sans";font-style:normal;font-weight:400;font-display:fallback;src:url('https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/assets/fonts/dm-sans/DMSans-Regular.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:"DM Sans";font-style:italic;font-weight:400;font-display:fallback;src:url('https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/assets/fonts/dm-sans/DMSans-Regular-Italic.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:"DM Sans";font-style:normal;font-weight:700;font-display:fallback;src:url('https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/assets/fonts/dm-sans/DMSans-Bold.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:"DM Sans";font-style:italic;font-weight:700;font-display:fallback;src:url('https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/assets/fonts/dm-sans/DMSans-Bold-Italic.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:300;font-display:block;src:url('https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/assets/fonts/ibm-plex-mono/IBMPlexMono-Light.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:400;font-display:block;src:url('https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/assets/fonts/ibm-plex-mono/IBMPlexMono-Regular.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:"IBM Plex Mono";font-style:italic;font-weight:400;font-display:block;src:url('https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/assets/fonts/ibm-plex-mono/IBMPlexMono-Italic.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:700;font-display:block;src:url('https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/assets/fonts/ibm-plex-mono/IBMPlexMono-Bold.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:Inter;font-style:normal;font-weight:200 900;font-display:fallback;src:url('https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/assets/fonts/inter/Inter-VariableFont_slnt,wght.ttf') format('truetype');font-stretch:normal;}
+@font-face{font-family:"Source Serif Pro";font-style:normal;font-weight:200 900;font-display:fallback;src:url('https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/assets/fonts/source-serif-pro/SourceSerif4Variable-Roman.ttf.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:"Source Serif Pro";font-style:italic;font-weight:200 900;font-display:fallback;src:url('https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/assets/fonts/source-serif-pro/SourceSerif4Variable-Italic.ttf.woff2') format('woff2');font-stretch:normal;}
+</style>
+</head>
+
+<body>
+    <nav class="navbar p-0 fixed-top bg-white">
+        <div class="container-fluid container">
+            <a class="navbar-brand my-3 m-sm-0" href="https://bibliotecadigital.sedis.ufrn.br">
+                <img src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/mingcute_book-5-line.svg" alt="" width="24" height="24">
+                <strong>Biblioteca Digital</strong>
+            </a>
+            <div class="nav nav-tabs d-none d-sm-flex" id="nav-tab" role="tablist">
+                <a href="#impressos" class="nav-link" id="nav-impressos-tab" data-bs-toggle="tab"
+                    data-bs-target="#nav-impressos" type="button" role="tab" aria-controls="nav-impressos"
+                    aria-selected="true">Impressos</a>
+                <a href="#interativos" class="nav-link active" id="nav-interativos-tab" data-bs-toggle="tab"
+                    data-bs-target="#nav-interativos" type="button" role="tab" aria-controls="nav-interativos"
+                    aria-selected="false">Interativos</a>
+                <a href="#videoaulas" class="nav-link" id="nav-videoaulas-tab" data-bs-toggle="tab"
+                    data-bs-target="#nav-videoaulas" type="button" role="tab" aria-controls="nav-videoaulas"
+                    aria-selected="false">Vídeoaulas</a>
+            </div>
+        </div>
+    </nav>
+<div class="modal fade" id="avisoModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="avisoModalCarousel" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col">
+                                    <h2 class="mb-3">
+                                        Ei, visitante!
+                                    </h2>
+                                    <p>
+                                        Em 31 de dezembro de 2020 o Adobe Flash (ferramenta onde alguns dos recursos
+                                        desta
+                                        página foram
+                                        elaborados) foi descontinuado. Com isso, alguns deles pode não funcionar da
+                                        forma
+                                        adequada. Mas, com
+                                        esses simples passos, você consegue acesso a eles!
+                                    </p>
+                                </div>
+                                <div class="col">
+                                    <img src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/images/41.png" alt="" width="225" height="225">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer border-0">
+                            <button type="button" class="btn btn-next btn-primary d-flex align-items-center"
+                                data-bs-target="#avisoModalCarousel" data-bs-slide="next">
+                                Seguinte
+                                <img src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/next.svg" alt="" width="25" height="24">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col">
+                                    <h2 class="mb-3">
+                                        Baixe o Flash player emulator
+                                    </h2>
+                                    <p>
+                                        Utilize o navegador Google Chrome
+                                        (disponível para <a target=”_blank”
+                                            href="https://www.google.com/chrome/">download aqui</a>)
+                                        e baixe o complemento "<a target=”_blank”
+                                            href="https://chrome.google.com/webstore/detail/flash-player-emulator-202/ecbnojockcgfohpopbphhgefkfbigcej/relate">Flash
+                                            Player Emulator</a>”.
+                                    </p>
+                                </div>
+                                <div class="col">
+                                    <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/images/chromeflash.png"
+                                        alt="" width="330" height="175">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer border-0">
+                            <button type="button" class="btn btn-prev btn-primary d-flex align-items-center me-auto"
+                                data-bs-target="#avisoModalCarousel" data-bs-slide="prev">
+                                <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/prev.svg" alt="" width="25" height="24">
+                                Voltar
+                            </button>
+                            <button type="button" class="btn btn-next btn-primary d-flex align-items-center"
+                                data-bs-target="#avisoModalCarousel" data-bs-slide="next">
+                                Seguinte
+                                <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/next.svg" alt="" width="25" height="24">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col">
+                                    <h2 class="mb-3">
+                                        Pronto :)
+                                    </h2>
+                                    <p>
+                                        Agora você já pode utilizar nossos recursos, bons estudos!
+                                    </p>
+                                </div>
+                                <div class="col">
+                                    <img loading="lazy" class="chromeflash"
+                                        src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/images/14.png" alt="" width="253" height="253">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer border-0">
+                            <button type="button" class="btn btn-prev btn-primary d-flex align-items-center me-auto"
+                                data-bs-target="#avisoModalCarousel" data-bs-slide="prev">
+                                <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/prev.svg" alt="" width="25" height="24">
+                                Voltar
+                            </button>
+                            <button type="button" class="btn btn-next btn-primary d-flex align-items-center"
+                                data-bs-dismiss="modal">
+                                Concluir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#avisoModalCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#avisoModalCarousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#avisoModalCarousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    jQuery(document).ready(function ($) {
+        $(window).on('load', function () {
+            console.log($(this));
+            $('#avisoModal').modal('show');
+        });
+    })
+</script>
+
+<main class="main container">
+    <div class="tab-content my-4" id="nav-tabContent">
+        <div class="tab-pane fade" id="nav-impressos" role="tabpanel" aria-labelledby="nav-impressos-tab" tabindex="0">
+            
+<h3 class="mb-4">Livros impressos</h3>
+
+<h5 class="mb-4 categorias-titulo">
+    Categorias
+</h5>
+<button class="btn imp-voltar ps-0 mb-2">
+    <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/material-symbols_chevron-right-rounded.svg" alt="" width="24" height="24">
+    Voltar
+</button>
+<div class="row">
+    <div class="col-6 col-sm-3 mb-4">
+        <div class="w-100 btn-categoria categoria-1" data-color="#ff8a00" data-type="impressos"
+            data-category="biologia">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M8.75 6.75c0 1.25-.75 3-.75 3m.25-2.5s.75-2-1-3.5s-4.5-1-4.5-1s0 2 1.5 3.5s4 1 4 1zm.5-1s-.75-2 1-3.5s4.5-1 4.5-1s0 2-1.5 3.5s-4 1-4 1zm-4 3.5h6.5s.5 4.5-3.25 4.5s-3.25-4.5-3.25-4.5z" />
+            </svg>
+            <h4>
+                Biologia
+            </h4>
+        </div>
+    </div>
+    <div class="col-6 col-sm-3 mb-4">
+        <div class="w-100 btn-categoria categoria-2" data-type="impressos" data-category="geografia">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <title>earth</title>
+                <path
+                    d="M17.9,17.39C17.64,16.59 16.89,16 16,16H15V13A1,1 0 0,0 14,12H8V10H10A1,1 0 0,0 11,9V7H13A2,2 0 0,0 15,5V4.59C17.93,5.77 20,8.64 20,12C20,14.08 19.2,15.97 17.9,17.39M11,19.93C7.05,19.44 4,16.08 4,12C4,11.38 4.08,10.78 4.21,10.21L9,15V16A2,2 0 0,0 11,18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+            </svg>
+            <h4>
+                Geografia
+            </h4>
+        </div>
+    </div>
+    <div class="col-6 col-sm-3 mb-4">
+        <div class="w-100 btn-categoria categoria-3" data-type="impressos" data-category="matematica">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke="#000" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M16 13l4 4m0 -4l-4 4" />
+                <path d="M20 5h-7l-4 14l-3 -6h-2" />
+            </svg>
+            <h4>
+                Matemática
+            </h4>
+        </div>
+    </div>
+    <div class="col-6 col-sm-3 mb-4">
+        <div class="w-100 btn-categoria categoria-4" data-type="impressos" data-category="fisica">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <title>atom</title>
+                <path
+                    d="M12,11A1,1 0 0,1 13,12A1,1 0 0,1 12,13A1,1 0 0,1 11,12A1,1 0 0,1 12,11M4.22,4.22C5.65,2.79 8.75,3.43 12,5.56C15.25,3.43 18.35,2.79 19.78,4.22C21.21,5.65 20.57,8.75 18.44,12C20.57,15.25 21.21,18.35 19.78,19.78C18.35,21.21 15.25,20.57 12,18.44C8.75,20.57 5.65,21.21 4.22,19.78C2.79,18.35 3.43,15.25 5.56,12C3.43,8.75 2.79,5.65 4.22,4.22M15.54,8.46C16.15,9.08 16.71,9.71 17.23,10.34C18.61,8.21 19.11,6.38 18.36,5.64C17.62,4.89 15.79,5.39 13.66,6.77C14.29,7.29 14.92,7.85 15.54,8.46M8.46,15.54C7.85,14.92 7.29,14.29 6.77,13.66C5.39,15.79 4.89,17.62 5.64,18.36C6.38,19.11 8.21,18.61 10.34,17.23C9.71,16.71 9.08,16.15 8.46,15.54M5.64,5.64C4.89,6.38 5.39,8.21 6.77,10.34C7.29,9.71 7.85,9.08 8.46,8.46C9.08,7.85 9.71,7.29 10.34,6.77C8.21,5.39 6.38,4.89 5.64,5.64M9.88,14.12C10.58,14.82 11.3,15.46 12,16.03C12.7,15.46 13.42,14.82 14.12,14.12C14.82,13.42 15.46,12.7 16.03,12C15.46,11.3 14.82,10.58 14.12,9.88C13.42,9.18 12.7,8.54 12,7.97C11.3,8.54 10.58,9.18 9.88,9.88C9.18,10.58 8.54,11.3 7.97,12C8.54,12.7 9.18,13.42 9.88,14.12M18.36,18.36C19.11,17.62 18.61,15.79 17.23,13.66C16.71,14.29 16.15,14.92 15.54,15.54C14.92,16.15 14.29,16.71 13.66,17.23C15.79,18.61 17.62,19.11 18.36,18.36Z" />
+            </svg>
+            <h4>
+                Física
+            </h4>
+        </div>
+    </div>
+    <div class="col-6 col-sm-3 mb-4">
+        <div class="w-100 btn-categoria categoria-5" data-type="impressos" data-category="quimica">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                <path
+                    d="M8.6 42q-2.1 0-2.975-1.95T6.2 36.5l12.4-14V9H16q-.65 0-1.075-.425Q14.5 8.15 14.5 7.5q0-.65.425-1.075Q15.35 6 16 6h16q.65 0 1.075.425.425.425.425 1.075 0 .65-.425 1.075Q32.65 9 32 9h-2.6v13.5l12.4 14q1.45 1.6.575 3.55Q41.5 42 39.4 42ZM8 39h32L26.4 23.6V9h-4.8v14.6Zm15.9-15Z" />
+            </svg>
+            <h4>
+                Química
+            </h4>
+        </div>
+    </div>
+    <div class="col-6 col-sm-3 mb-4">
+        <div class="w-100 btn-categoria categoria-6" data-type="impressos" data-category="interdisciplinares">
+            <svg viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg'
+                xmlns:xlink='http://www.w3.org/1999/xlink'>
+                <title>book_5_line</title>
+                <g id='页面-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'>
+                    <g id='Education' transform='translate(-672.000000, 0.000000)'>
+                        <g id='book_5_line' transform='translate(672.000000, 0.000000)'>
+                            <path
+                                d='M24,0 L24,24 L0,24 L0,0 L24,0 Z M12.5934901,23.257841 L12.5819402,23.2595131 L12.5108777,23.2950439 L12.4918791,23.2987469 L12.4918791,23.2987469 L12.4767152,23.2950439 L12.4056548,23.2595131 C12.3958229,23.2563662 12.3870493,23.2590235 12.3821421,23.2649074 L12.3780323,23.275831 L12.360941,23.7031097 L12.3658947,23.7234994 L12.3769048,23.7357139 L12.4804777,23.8096931 L12.4953491,23.8136134 L12.4953491,23.8136134 L12.5071152,23.8096931 L12.6106902,23.7357139 L12.6232938,23.7196733 L12.6232938,23.7196733 L12.6266527,23.7031097 L12.609561,23.275831 C12.6075724,23.2657013 12.6010112,23.2592993 12.5934901,23.257841 L12.5934901,23.257841 Z M12.8583906,23.1452862 L12.8445485,23.1473072 L12.6598443,23.2396597 L12.6498822,23.2499052 L12.6498822,23.2499052 L12.6471943,23.2611114 L12.6650943,23.6906389 L12.6699349,23.7034178 L12.6699349,23.7034178 L12.678386,23.7104931 L12.8793402,23.8032389 C12.8914285,23.8068999 12.9022333,23.8029875 12.9078286,23.7952264 L12.9118235,23.7811639 L12.8776777,23.1665331 C12.8752882,23.1545897 12.8674102,23.1470016 12.8583906,23.1452862 L12.8583906,23.1452862 Z M12.1430473,23.1473072 C12.1332178,23.1423925 12.1221763,23.1452606 12.1156365,23.1525954 L12.1099173,23.1665331 L12.0757714,23.7811639 C12.0751323,23.7926639 12.0828099,23.8018602 12.0926481,23.8045676 L12.108256,23.8032389 L12.3092106,23.7104931 L12.3186497,23.7024347 L12.3186497,23.7024347 L12.3225043,23.6906389 L12.340401,23.2611114 L12.337245,23.2485176 L12.337245,23.2485176 L12.3277531,23.2396597 L12.1430473,23.1473072 Z'
+                                id='MingCute' fill-rule='nonzero'></path>
+                            <path
+                                d='M3,4 C3,2.89543 3.89543,2 5,2 L7,2 C7.36429,2 7.70583,2.09739 8,2.26757 C8.29418,2.09739 8.63571,2 9,2 L11,2 C11.7274,2 12.3642,2.38835 12.7142,2.96904 C12.9235,2.80144 13.1702,2.67346 13.4459,2.5996 L15.3777,2.08196 C16.4447,1.79607 17.5413,2.42924 17.8272,3.49617 L21.9683,18.951 C22.2542,20.0179 21.621,21.1146 20.5541,21.4005 L18.6223,21.9181 C17.5553,22.204 16.4587,21.5708 16.1728,20.5039 L13,8.66297 L13,20 C13,21.1046 12.1046,22 11,22 L9,22 C8.63571,22 8.29417,21.9026 8,21.7324 C7.70583,21.9026 7.36429,22 7,22 L5,22 C3.89543,22 3,21.1046 3,20 L3,4 Z M5,4 L7,4 L7,20 L5,20 L5,4 Z M11,20 L9,20 L9,4 L11,4 L11,20 Z M13.9635,4.53145 L15.8954,4.01381 L20.0365,19.4686 L18.1046,19.9863 L13.9635,4.53145 Z'
+                                id='形状' fill='#000000FF'></path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+            <h4>
+                Interdisciplinares
+            </h4>
+        </div>
+    </div>
+    <div class="col-6 col-sm-3 mb-4">
+        <div class="w-100 btn-categoria categoria-7" data-type="impressos" data-category="outros">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M10 31.5C9.33696 31.5 8.70107 31.7634 8.23223 32.2322C7.76339 32.7011 7.5 33.337 7.5 34C7.5 34.663 7.76339 35.2989 8.23223 35.7678C8.70107 36.2366 9.33696 36.5 10 36.5C10.663 36.5 11.2989 36.2366 11.7678 35.7678C12.2366 35.2989 12.5 34.663 12.5 34C12.5 33.337 12.2366 32.7011 11.7678 32.2322C11.2989 31.7634 10.663 31.5 10 31.5ZM17.5 34C17.5 33.337 17.7634 32.7011 18.2322 32.2322C18.7011 31.7634 19.337 31.5 20 31.5C20.663 31.5 21.2989 31.7634 21.7678 32.2322C22.2366 32.7011 22.5 33.337 22.5 34C22.5 34.663 22.2366 35.2989 21.7678 35.7678C21.2989 36.2366 20.663 36.5 20 36.5C19.337 36.5 18.7011 36.2366 18.2322 35.7678C17.7634 35.2989 17.5 34.663 17.5 34ZM27.5 34C27.5 33.337 27.7634 32.7011 28.2322 32.2322C28.7011 31.7634 29.337 31.5 30 31.5C30.663 31.5 31.2989 31.7634 31.7678 32.2322C32.2366 32.7011 32.5 33.337 32.5 34C32.5 34.663 32.2366 35.2989 31.7678 35.7678C31.2989 36.2366 30.663 36.5 30 36.5C29.337 36.5 28.7011 36.2366 28.2322 35.7678C27.7634 35.2989 27.5 34.663 27.5 34Z"
+                    fill="#5C6471" />
+            </svg>
+            <h4>
+                Outros Cursos
+            </h4>
+        </div>
+    </div>
+</div>
+<div class="row mb-4">
+    <div class="col-sm">
+        <h4 class="imp-quant">
+            18
+            de
+            39            livros
+        </h4>
+    </div>
+    <div class="col-sm">
+        <div class="search input-group w-auto ms-auto">
+            <div class="input-group-prepend">
+                <span class="input-group-text h-100" id="basic-addon1">
+                    <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/mingcute_search-line.svg" alt="" width="24" height="24">
+                </span>
+            </div>
+            <input class="imp-input" value="">
+            <input type="text" class="imp-busca form-control rounded-pill" placeholder="Busque o livro que procura"
+                aria-label="Username" aria-describedby="basic-addon1" value="">
+        </div>
+    </div>
+</div>
+<div id="carouselImpressos" class="carousel carousel-impressos">
+    <div class="carousel-inner">
+            <div class="carousel-item active">
+                        <div class="row row-cols-6 align-items-stretch">
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/NESC_U3_Z_WEB.pdf'"
+                            value="Nesc - Unidade 3"
+                            class="card h-100 card-outros text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 4V20H7C6.46957 20 5.96086 19.7893 5.58579 19.4142C5.21071 19.0391 5 18.5304 5 18V6C5 5.46957 5.21071 4.96086 5.58579 4.58579C5.96086 4.21071 6.46957 4 7 4H19Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M19 16H7C6.46957 16 5.96086 16.2107 5.58579 16.5858C5.21071 16.9609 5 17.4696 5 18M9 8H15" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                                                        <div class="card-title my-3">
+                                    Nesc - Unidade 3                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/NESC_U3_Z_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/NESC_U2_Z_WEB.pdf'"
+                            value="Nesc - Unidade 2"
+                            class="card h-100 card-outros text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 4V20H7C6.46957 20 5.96086 19.7893 5.58579 19.4142C5.21071 19.0391 5 18.5304 5 18V6C5 5.46957 5.21071 4.96086 5.58579 4.58579C5.96086 4.21071 6.46957 4 7 4H19Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M19 16H7C6.46957 16 5.96086 16.2107 5.58579 16.5858C5.21071 16.9609 5 17.4696 5 18M9 8H15" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                                                        <div class="card-title my-3">
+                                    Nesc - Unidade 2                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/NESC_U2_Z_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/NESC_U1_Z_WEB.pdf'"
+                            value="Nesc - Unidade 1"
+                            class="card h-100 card-outros text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 4V20H7C6.46957 20 5.96086 19.7893 5.58579 19.4142C5.21071 19.0391 5 18.5304 5 18V6C5 5.46957 5.21071 4.96086 5.58579 4.58579C5.96086 4.21071 6.46957 4 7 4H19Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M19 16H7C6.46957 16 5.96086 16.2107 5.58579 16.5858C5.21071 16.9609 5 17.4696 5 18M9 8H15" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                                                        <div class="card-title my-3">
+                                    Nesc - Unidade 1                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/NESC_U1_Z_WEB-222x300.jpg" alt="" width="222" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/NESC_Livro2012_WEB.pdf'"
+                            value="Nesc - Gestão do Trabalho e da Educação na Saúde"
+                            class="card h-100 card-outros text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 4V20H7C6.46957 20 5.96086 19.7893 5.58579 19.4142C5.21071 19.0391 5 18.5304 5 18V6C5 5.46957 5.21071 4.96086 5.58579 4.58579C5.96086 4.21071 6.46957 4 7 4H19Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M19 16H7C6.46957 16 5.96086 16.2107 5.58579 16.5858C5.21071 16.9609 5 17.4696 5 18M9 8H15" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                                                        <div class="card-title my-3">
+                                    Nesc - Gestão do Trabalho e da Educação na Saúde                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/NESC_Livro2012_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Livro_MOD2_LIBRAS_Z_WEB.pdf'"
+                            value="Libras - Módulo 2"
+                            class="card h-100 card-outros text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 4V20H7C6.46957 20 5.96086 19.7893 5.58579 19.4142C5.21071 19.0391 5 18.5304 5 18V6C5 5.46957 5.21071 4.96086 5.58579 4.58579C5.96086 4.21071 6.46957 4 7 4H19Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M19 16H7C6.46957 16 5.96086 16.2107 5.58579 16.5858C5.21071 16.9609 5 17.4696 5 18M9 8H15" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                                                        <div class="card-title my-3">
+                                    Libras - Módulo 2                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Livro_MOD2_LIBRAS_Z_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Livro_MOD1_LIBRAS_Z_WEB.pdf'"
+                            value="Libras - Módulo 1"
+                            class="card h-100 card-outros text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 4V20H7C6.46957 20 5.96086 19.7893 5.58579 19.4142C5.21071 19.0391 5 18.5304 5 18V6C5 5.46957 5.21071 4.96086 5.58579 4.58579C5.96086 4.21071 6.46957 4 7 4H19Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M19 16H7C6.46957 16 5.96086 16.2107 5.58579 16.5858C5.21071 16.9609 5 17.4696 5 18M9 8H15" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                                                        <div class="card-title my-3">
+                                    Libras - Módulo 1                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Livro_MOD1_LIBRAS_Z_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/QT_ECT_M_LIVRO_Z_WEB.pdf'"
+                            value="Química Tecnológica"
+                            class="card h-100 card-outros text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 4V20H7C6.46957 20 5.96086 19.7893 5.58579 19.4142C5.21071 19.0391 5 18.5304 5 18V6C5 5.46957 5.21071 4.96086 5.58579 4.58579C5.96086 4.21071 6.46957 4 7 4H19Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M19 16H7C6.46957 16 5.96086 16.2107 5.58579 16.5858C5.21071 16.9609 5 17.4696 5 18M9 8H15" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                                                        <div class="card-title my-3">
+                                    Química Tecnológica                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/QT_ECT_M_LIVRO_Z_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Alg_II_ECT_Livro_Z_WEB.pdf'"
+                            value="Álgebra Linear - Módulo 2"
+                            class="card h-100 card-outros text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 4V20H7C6.46957 20 5.96086 19.7893 5.58579 19.4142C5.21071 19.0391 5 18.5304 5 18V6C5 5.46957 5.21071 4.96086 5.58579 4.58579C5.96086 4.21071 6.46957 4 7 4H19Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M19 16H7C6.46957 16 5.96086 16.2107 5.58579 16.5858C5.21071 16.9609 5 17.4696 5 18M9 8H15" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                                                        <div class="card-title my-3">
+                                    Álgebra Linear - Módulo 2                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Alg_II_ECT_Livro_Z_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Alg_I_ECT_Livro_Z_WEB.pdf'"
+                            value="Álgebra Linear - Módulo 1"
+                            class="card h-100 card-outros text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 4V20H7C6.46957 20 5.96086 19.7893 5.58579 19.4142C5.21071 19.0391 5 18.5304 5 18V6C5 5.46957 5.21071 4.96086 5.58579 4.58579C5.96086 4.21071 6.46957 4 7 4H19Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M19 16H7C6.46957 16 5.96086 16.2107 5.58579 16.5858C5.21071 16.9609 5 17.4696 5 18M9 8H15" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                                                        <div class="card-title my-3">
+                                    Álgebra Linear - Módulo 1                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Alg_I_ECT_Livro_Z_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/CTS_LIVRO_Z_WEB.pdf'"
+                            value="Ciência, Tecnologia e Sociedade I"
+                            class="card h-100 card-outros text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 4V20H7C6.46957 20 5.96086 19.7893 5.58579 19.4142C5.21071 19.0391 5 18.5304 5 18V6C5 5.46957 5.21071 4.96086 5.58579 4.58579C5.96086 4.21071 6.46957 4 7 4H19Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M19 16H7C6.46957 16 5.96086 16.2107 5.58579 16.5858C5.21071 16.9609 5 17.4696 5 18M9 8H15" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                                                        <div class="card-title my-3">
+                                    Ciência, Tecnologia e Sociedade I                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/CTS_LIVRO_Z_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Ins_En_Geo_IV_Livro_WEB.pdf'"
+                            value="Instrumentação para o Ensino de Geografia IV"
+                            class="card h-100 card-geografia text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <title>earth</title>
+                                            <path d="M17.9,17.39C17.64,16.59 16.89,16 16,16H15V13A1,1 0 0,0 14,12H8V10H10A1,1 0 0,0 11,9V7H13A2,2 0 0,0 15,5V4.59C17.93,5.77 20,8.64 20,12C20,14.08 19.2,15.97 17.9,17.39M11,19.93C7.05,19.44 4,16.08 4,12C4,11.38 4.08,10.78 4.21,10.21L9,15V16A2,2 0 0,0 11,18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z">
+                                            </path>
+                                        </svg>                                <div class="card-title my-3">
+                                    Instrumentação para o Ensino de Geografia IV                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Ins_En_Geo_IV_Livro_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Ins_Ens_Geo_III_WEB.pdf'"
+                            value="Instrumentação para o Ensino de Geografia III"
+                            class="card h-100 card-geografia text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <title>earth</title>
+                                            <path d="M17.9,17.39C17.64,16.59 16.89,16 16,16H15V13A1,1 0 0,0 14,12H8V10H10A1,1 0 0,0 11,9V7H13A2,2 0 0,0 15,5V4.59C17.93,5.77 20,8.64 20,12C20,14.08 19.2,15.97 17.9,17.39M11,19.93C7.05,19.44 4,16.08 4,12C4,11.38 4.08,10.78 4.21,10.21L9,15V16A2,2 0 0,0 11,18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z">
+                                            </path>
+                                        </svg>                                <div class="card-title my-3">
+                                    Instrumentação para o Ensino de Geografia III                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Ins_Ens_Geo_III_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Ins_En_Geo_II_WEB.pdf'"
+                            value="Instrumentação para o Ensino de Geografia II"
+                            class="card h-100 card-geografia text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <title>earth</title>
+                                            <path d="M17.9,17.39C17.64,16.59 16.89,16 16,16H15V13A1,1 0 0,0 14,12H8V10H10A1,1 0 0,0 11,9V7H13A2,2 0 0,0 15,5V4.59C17.93,5.77 20,8.64 20,12C20,14.08 19.2,15.97 17.9,17.39M11,19.93C7.05,19.44 4,16.08 4,12C4,11.38 4.08,10.78 4.21,10.21L9,15V16A2,2 0 0,0 11,18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z">
+                                            </path>
+                                        </svg>                                <div class="card-title my-3">
+                                    Instrumentação para o Ensino de Geografia II                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Ins_En_Geo_II_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Ins_En_Geo_I_Livro_WEB.pdf'"
+                            value="Instrumentação para o Ensino de Geografia I"
+                            class="card h-100 card-geografia text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <title>earth</title>
+                                            <path d="M17.9,17.39C17.64,16.59 16.89,16 16,16H15V13A1,1 0 0,0 14,12H8V10H10A1,1 0 0,0 11,9V7H13A2,2 0 0,0 15,5V4.59C17.93,5.77 20,8.64 20,12C20,14.08 19.2,15.97 17.9,17.39M11,19.93C7.05,19.44 4,16.08 4,12C4,11.38 4.08,10.78 4.21,10.21L9,15V16A2,2 0 0,0 11,18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z">
+                                            </path>
+                                        </svg>                                <div class="card-title my-3">
+                                    Instrumentação para o Ensino de Geografia I                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Ins_En_Geo_I_Livro_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Geo_Reg_Mun_II_LIVRO_WEB.pdf'"
+                            value="Geografia Regional do Mundo II"
+                            class="card h-100 card-geografia text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <title>earth</title>
+                                            <path d="M17.9,17.39C17.64,16.59 16.89,16 16,16H15V13A1,1 0 0,0 14,12H8V10H10A1,1 0 0,0 11,9V7H13A2,2 0 0,0 15,5V4.59C17.93,5.77 20,8.64 20,12C20,14.08 19.2,15.97 17.9,17.39M11,19.93C7.05,19.44 4,16.08 4,12C4,11.38 4.08,10.78 4.21,10.21L9,15V16A2,2 0 0,0 11,18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z">
+                                            </path>
+                                        </svg>                                <div class="card-title my-3">
+                                    Geografia Regional do Mundo II                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Geo_Reg_Mun_II_LIVRO_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Geografia_Regional_Mundo_I_Livro_WEB.pdf'"
+                            value="Geografia Regional do Mundo I"
+                            class="card h-100 card-geografia text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <title>earth</title>
+                                            <path d="M17.9,17.39C17.64,16.59 16.89,16 16,16H15V13A1,1 0 0,0 14,12H8V10H10A1,1 0 0,0 11,9V7H13A2,2 0 0,0 15,5V4.59C17.93,5.77 20,8.64 20,12C20,14.08 19.2,15.97 17.9,17.39M11,19.93C7.05,19.44 4,16.08 4,12C4,11.38 4.08,10.78 4.21,10.21L9,15V16A2,2 0 0,0 11,18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z">
+                                            </path>
+                                        </svg>                                <div class="card-title my-3">
+                                    Geografia Regional do Mundo I                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Geografia_Regional_Mundo_I_Livro_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/geo_fis_III_Livro_Iva_WEB.pdf'"
+                            value="Geografia Física III"
+                            class="card h-100 card-geografia text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <title>earth</title>
+                                            <path d="M17.9,17.39C17.64,16.59 16.89,16 16,16H15V13A1,1 0 0,0 14,12H8V10H10A1,1 0 0,0 11,9V7H13A2,2 0 0,0 15,5V4.59C17.93,5.77 20,8.64 20,12C20,14.08 19.2,15.97 17.9,17.39M11,19.93C7.05,19.44 4,16.08 4,12C4,11.38 4.08,10.78 4.21,10.21L9,15V16A2,2 0 0,0 11,18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z">
+                                            </path>
+                                        </svg>                                <div class="card-title my-3">
+                                    Geografia Física III                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/geo_fis_III_Livro_Iva_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Geo_Fis_II_Livro_WEB.pdf'"
+                            value="Geografia Física II"
+                            class="card h-100 card-geografia text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <title>earth</title>
+                                            <path d="M17.9,17.39C17.64,16.59 16.89,16 16,16H15V13A1,1 0 0,0 14,12H8V10H10A1,1 0 0,0 11,9V7H13A2,2 0 0,0 15,5V4.59C17.93,5.77 20,8.64 20,12C20,14.08 19.2,15.97 17.9,17.39M11,19.93C7.05,19.44 4,16.08 4,12C4,11.38 4.08,10.78 4.21,10.21L9,15V16A2,2 0 0,0 11,18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z">
+                                            </path>
+                                        </svg>                                <div class="card-title my-3">
+                                    Geografia Física II                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Geo_Fis_II_Livro_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                            </div>
+        </div>
+            <div class="carousel-item ">
+                        <div class="row row-cols-6 align-items-stretch">
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Geo_Fis_I_Z_WEB.pdf'"
+                            value="Geografia Física I"
+                            class="card h-100 card-geografia text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <title>earth</title>
+                                            <path d="M17.9,17.39C17.64,16.59 16.89,16 16,16H15V13A1,1 0 0,0 14,12H8V10H10A1,1 0 0,0 11,9V7H13A2,2 0 0,0 15,5V4.59C17.93,5.77 20,8.64 20,12C20,14.08 19.2,15.97 17.9,17.39M11,19.93C7.05,19.44 4,16.08 4,12C4,11.38 4.08,10.78 4.21,10.21L9,15V16A2,2 0 0,0 11,18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z">
+                                            </path>
+                                        </svg>                                <div class="card-title my-3">
+                                    Geografia Física I                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Geo_Fis_I_Z_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Geo_Nord_LIVRO_WEB.pdf'"
+                            value="Geografia do Nordeste"
+                            class="card h-100 card-geografia text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <title>earth</title>
+                                            <path d="M17.9,17.39C17.64,16.59 16.89,16 16,16H15V13A1,1 0 0,0 14,12H8V10H10A1,1 0 0,0 11,9V7H13A2,2 0 0,0 15,5V4.59C17.93,5.77 20,8.64 20,12C20,14.08 19.2,15.97 17.9,17.39M11,19.93C7.05,19.44 4,16.08 4,12C4,11.38 4.08,10.78 4.21,10.21L9,15V16A2,2 0 0,0 11,18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z">
+                                            </path>
+                                        </svg>                                <div class="card-title my-3">
+                                    Geografia do Nordeste                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Geo_Nord_LIVRO_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/geo_pop_Livro_Iva_WEB.pdf'"
+                            value="Geografia da População"
+                            class="card h-100 card-geografia text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <title>earth</title>
+                                            <path d="M17.9,17.39C17.64,16.59 16.89,16 16,16H15V13A1,1 0 0,0 14,12H8V10H10A1,1 0 0,0 11,9V7H13A2,2 0 0,0 15,5V4.59C17.93,5.77 20,8.64 20,12C20,14.08 19.2,15.97 17.9,17.39M11,19.93C7.05,19.44 4,16.08 4,12C4,11.38 4.08,10.78 4.21,10.21L9,15V16A2,2 0 0,0 11,18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z">
+                                            </path>
+                                        </svg>                                <div class="card-title my-3">
+                                    Geografia da População                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/geo_pop_Livro_Iva_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Geo_Agra_WEB.pdf'"
+                            value="Geografia Agrária"
+                            class="card h-100 card-geografia text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <title>earth</title>
+                                            <path d="M17.9,17.39C17.64,16.59 16.89,16 16,16H15V13A1,1 0 0,0 14,12H8V10H10A1,1 0 0,0 11,9V7H13A2,2 0 0,0 15,5V4.59C17.93,5.77 20,8.64 20,12C20,14.08 19.2,15.97 17.9,17.39M11,19.93C7.05,19.44 4,16.08 4,12C4,11.38 4.08,10.78 4.21,10.21L9,15V16A2,2 0 0,0 11,18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z">
+                                            </path>
+                                        </svg>                                <div class="card-title my-3">
+                                    Geografia Agrária                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Geo_Agra_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Est_Sem_Livro_WEB.pdf'"
+                            value="Estudos de Seminário"
+                            class="card h-100 card-geografia text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <title>earth</title>
+                                            <path d="M17.9,17.39C17.64,16.59 16.89,16 16,16H15V13A1,1 0 0,0 14,12H8V10H10A1,1 0 0,0 11,9V7H13A2,2 0 0,0 15,5V4.59C17.93,5.77 20,8.64 20,12C20,14.08 19.2,15.97 17.9,17.39M11,19.93C7.05,19.44 4,16.08 4,12C4,11.38 4.08,10.78 4.21,10.21L9,15V16A2,2 0 0,0 11,18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z">
+                                            </path>
+                                        </svg>                                <div class="card-title my-3">
+                                    Estudos de Seminário                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Est_Sem_Livro_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Esp_Tec_Livro_WEB.pdf'"
+                            value="Espaço, Tecnologia e Globalização"
+                            class="card h-100 card-geografia text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <title>earth</title>
+                                            <path d="M17.9,17.39C17.64,16.59 16.89,16 16,16H15V13A1,1 0 0,0 14,12H8V10H10A1,1 0 0,0 11,9V7H13A2,2 0 0,0 15,5V4.59C17.93,5.77 20,8.64 20,12C20,14.08 19.2,15.97 17.9,17.39M11,19.93C7.05,19.44 4,16.08 4,12C4,11.38 4.08,10.78 4.21,10.21L9,15V16A2,2 0 0,0 11,18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z">
+                                            </path>
+                                        </svg>                                <div class="card-title my-3">
+                                    Espaço, Tecnologia e Globalização                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Esp_Tec_Livro_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Var_Her_Livro_WEB.pdf'"
+                            value="Variação e Herança"
+                            class="card h-100 card-biologia text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.75 6.75c0 1.25-.75 3-.75 3m.25-2.5s.75-2-1-3.5s-4.5-1-4.5-1s0 2 1.5 3.5s4 1 4 1zm.5-1s-.75-2 1-3.5s4.5-1 4.5-1s0 2-1.5 3.5s-4 1-4 1zm-4 3.5h6.5s.5 4.5-3.25 4.5s-3.25-4.5-3.25-4.5z"></path>
+                                        </svg>                                <div class="card-title my-3">
+                                    Variação e Herança                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Var_Her_Livro_WEB-222x300.jpg" alt="" width="222" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Sau_Pro_Doe_LIVRO_WEB.pdf'"
+                            value="Saúde, Proteção e Doença"
+                            class="card h-100 card-biologia text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.75 6.75c0 1.25-.75 3-.75 3m.25-2.5s.75-2-1-3.5s-4.5-1-4.5-1s0 2 1.5 3.5s4 1 4 1zm.5-1s-.75-2 1-3.5s4.5-1 4.5-1s0 2-1.5 3.5s-4 1-4 1zm-4 3.5h6.5s.5 4.5-3.25 4.5s-3.25-4.5-3.25-4.5z"></path>
+                                        </svg>                                <div class="card-title my-3">
+                                    Saúde, Proteção e Doença                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Sau_Pro_Doe_LIVRO_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/LIVRO_Rep_Vida_WEB.pdf'"
+                            value="Reprodução da Vida"
+                            class="card h-100 card-biologia text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.75 6.75c0 1.25-.75 3-.75 3m.25-2.5s.75-2-1-3.5s-4.5-1-4.5-1s0 2 1.5 3.5s4 1 4 1zm.5-1s-.75-2 1-3.5s4.5-1 4.5-1s0 2-1.5 3.5s-4 1-4 1zm-4 3.5h6.5s.5 4.5-3.25 4.5s-3.25-4.5-3.25-4.5z"></path>
+                                        </svg>                                <div class="card-title my-3">
+                                    Reprodução da Vida                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/LIVRO_Rep_Vida_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Rep_Hum_LIVRO_WEB.pdf'"
+                            value="Reprodução Humana"
+                            class="card h-100 card-biologia text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.75 6.75c0 1.25-.75 3-.75 3m.25-2.5s.75-2-1-3.5s-4.5-1-4.5-1s0 2 1.5 3.5s4 1 4 1zm.5-1s-.75-2 1-3.5s4.5-1 4.5-1s0 2-1.5 3.5s-4 1-4 1zm-4 3.5h6.5s.5 4.5-3.25 4.5s-3.25-4.5-3.25-4.5z"></path>
+                                        </svg>                                <div class="card-title my-3">
+                                    Reprodução Humana                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Rep_Hum_LIVRO_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Qui_En_Ci_Livro_WEB_220711.pdf'"
+                            value="Química para o Ensino de Ciências"
+                            class="card h-100 card-biologia text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.75 6.75c0 1.25-.75 3-.75 3m.25-2.5s.75-2-1-3.5s-4.5-1-4.5-1s0 2 1.5 3.5s4 1 4 1zm.5-1s-.75-2 1-3.5s4.5-1 4.5-1s0 2-1.5 3.5s-4 1-4 1zm-4 3.5h6.5s.5 4.5-3.25 4.5s-3.25-4.5-3.25-4.5z"></path>
+                                        </svg>                                <div class="card-title my-3">
+                                    Química para o Ensino de Ciências                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Qui_En_Ci_Livro_WEB_220711-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Per_Sen_Ser_Viv_LIVRO_WEB.pdf'"
+                            value="Percepcção e Sensibilidade dos Seres Vivos"
+                            class="card h-100 card-biologia text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.75 6.75c0 1.25-.75 3-.75 3m.25-2.5s.75-2-1-3.5s-4.5-1-4.5-1s0 2 1.5 3.5s4 1 4 1zm.5-1s-.75-2 1-3.5s4.5-1 4.5-1s0 2-1.5 3.5s-4 1-4 1zm-4 3.5h6.5s.5 4.5-3.25 4.5s-3.25-4.5-3.25-4.5z"></path>
+                                        </svg>                                <div class="card-title my-3">
+                                    Percepcção e Sensibilidade dos Seres Vivos                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Per_Sen_Ser_Viv_LIVRO_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Org_Di_Ce_Livro_WEB_210711.pdf'"
+                            value="Organização e Diferenciação Celular"
+                            class="card h-100 card-biologia text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.75 6.75c0 1.25-.75 3-.75 3m.25-2.5s.75-2-1-3.5s-4.5-1-4.5-1s0 2 1.5 3.5s4 1 4 1zm.5-1s-.75-2 1-3.5s4.5-1 4.5-1s0 2-1.5 3.5s-4 1-4 1zm-4 3.5h6.5s.5 4.5-3.25 4.5s-3.25-4.5-3.25-4.5z"></path>
+                                        </svg>                                <div class="card-title my-3">
+                                    Organização e Diferenciação Celular                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Org_Di_Ce_Livro_WEB_210711-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Nu_An_Ve_WEB_Z.pdf'"
+                            value="Nutrição Animal e Vegetal"
+                            class="card h-100 card-biologia text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.75 6.75c0 1.25-.75 3-.75 3m.25-2.5s.75-2-1-3.5s-4.5-1-4.5-1s0 2 1.5 3.5s4 1 4 1zm.5-1s-.75-2 1-3.5s4.5-1 4.5-1s0 2-1.5 3.5s-4 1-4 1zm-4 3.5h6.5s.5 4.5-3.25 4.5s-3.25-4.5-3.25-4.5z"></path>
+                                        </svg>                                <div class="card-title my-3">
+                                    Nutrição Animal e Vegetal                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Nu_An_Ve_WEB_Z-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Met_Vid_Mic_Livro_WEB.pdf'"
+                            value="Metabolismo da Vida Microscópica"
+                            class="card h-100 card-biologia text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.75 6.75c0 1.25-.75 3-.75 3m.25-2.5s.75-2-1-3.5s-4.5-1-4.5-1s0 2 1.5 3.5s4 1 4 1zm.5-1s-.75-2 1-3.5s4.5-1 4.5-1s0 2-1.5 3.5s-4 1-4 1zm-4 3.5h6.5s.5 4.5-3.25 4.5s-3.25-4.5-3.25-4.5z"></path>
+                                        </svg>                                <div class="card-title my-3">
+                                    Metabolismo da Vida Microscópica                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Met_Vid_Mic_Livro_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Ins_Ens_Bio_II_LIVRO_WEB.pdf'"
+                            value="Instrumentos para Ensino da Tecnologia II"
+                            class="card h-100 card-biologia text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.75 6.75c0 1.25-.75 3-.75 3m.25-2.5s.75-2-1-3.5s-4.5-1-4.5-1s0 2 1.5 3.5s4 1 4 1zm.5-1s-.75-2 1-3.5s4.5-1 4.5-1s0 2-1.5 3.5s-4 1-4 1zm-4 3.5h6.5s.5 4.5-3.25 4.5s-3.25-4.5-3.25-4.5z"></path>
+                                        </svg>                                <div class="card-title my-3">
+                                    Instrumentos para Ensino da Tecnologia II                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Ins_Ens_Bio_II_LIVRO_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Inst_En_Bio_I_LIVRO_WEB.pdf'"
+                            value="Instrumentos para Ensino da Tecnologia I"
+                            class="card h-100 card-biologia text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.75 6.75c0 1.25-.75 3-.75 3m.25-2.5s.75-2-1-3.5s-4.5-1-4.5-1s0 2 1.5 3.5s4 1 4 1zm.5-1s-.75-2 1-3.5s4.5-1 4.5-1s0 2-1.5 3.5s-4 1-4 1zm-4 3.5h6.5s.5 4.5-3.25 4.5s-3.25-4.5-3.25-4.5z"></path>
+                                        </svg>                                <div class="card-title my-3">
+                                    Instrumentos para Ensino da Tecnologia I                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Inst_En_Bio_I_LIVRO_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Coord_Vida_Livro_BM_WEB.pdf'"
+                            value="Coordenação da Vida"
+                            class="card h-100 card-biologia text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.75 6.75c0 1.25-.75 3-.75 3m.25-2.5s.75-2-1-3.5s-4.5-1-4.5-1s0 2 1.5 3.5s4 1 4 1zm.5-1s-.75-2 1-3.5s4.5-1 4.5-1s0 2-1.5 3.5s-4 1-4 1zm-4 3.5h6.5s.5 4.5-3.25 4.5s-3.25-4.5-3.25-4.5z"></path>
+                                        </svg>                                <div class="card-title my-3">
+                                    Coordenação da Vida                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Coord_Vida_Livro_BM_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                            </div>
+        </div>
+            <div class="carousel-item ">
+                        <div class="row row-cols-6 align-items-stretch">
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Biotecnologia_LIVRO_WEB.pdf'"
+                            value="Biotecnologia"
+                            class="card h-100 card-biologia text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.75 6.75c0 1.25-.75 3-.75 3m.25-2.5s.75-2-1-3.5s-4.5-1-4.5-1s0 2 1.5 3.5s4 1 4 1zm.5-1s-.75-2 1-3.5s4.5-1 4.5-1s0 2-1.5 3.5s-4 1-4 1zm-4 3.5h6.5s.5 4.5-3.25 4.5s-3.25-4.5-3.25-4.5z"></path>
+                                        </svg>                                <div class="card-title my-3">
+                                    Biotecnologia                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Biotecnologia_LIVRO_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Bioestatistica_LIVRO_WEB.pdf'"
+                            value="Bioestatistica"
+                            class="card h-100 card-biologia text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.75 6.75c0 1.25-.75 3-.75 3m.25-2.5s.75-2-1-3.5s-4.5-1-4.5-1s0 2 1.5 3.5s4 1 4 1zm.5-1s-.75-2 1-3.5s4.5-1 4.5-1s0 2-1.5 3.5s-4 1-4 1zm-4 3.5h6.5s.5 4.5-3.25 4.5s-3.25-4.5-3.25-4.5z"></path>
+                                        </svg>                                <div class="card-title my-3">
+                                    Bioestatistica                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Bioestatistica_LIVRO_WEB-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                                                        <div class="col-6 col-sm-2 mb-4 panel">
+                        <button
+                            onclick="location.href='https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Hist_Bio_LIVRO_IVA_WEB_071112.pdf'"
+                            value="História da Biologia"
+                            class="card h-100 card-biologia text-start" data-bs-toggle="modal">
+                            <div class="card-body d-flex flex-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.75 6.75c0 1.25-.75 3-.75 3m.25-2.5s.75-2-1-3.5s-4.5-1-4.5-1s0 2 1.5 3.5s4 1 4 1zm.5-1s-.75-2 1-3.5s4.5-1 4.5-1s0 2-1.5 3.5s-4 1-4 1zm-4 3.5h6.5s.5 4.5-3.25 4.5s-3.25-4.5-3.25-4.5z"></path>
+                                        </svg>                                <div class="card-title my-3">
+                                    História da Biologia                                </div>
+                                <img loading="lazy" class="card-img mt-auto img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Hist_Bio_LIVRO_IVA_WEB_071112-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+
+                    </div>
+                            </div>
+        </div>
+    </div>
+<div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselImpressos" data-bs-slide-to="0"
+            class="btn active" aria-current="true" >
+                1            </button>
+            <button type="button" data-bs-target="#carouselImpressos" data-bs-slide-to="1"
+            class="btn " >
+                2            </button>
+            <button type="button" data-bs-target="#carouselImpressos" data-bs-slide-to="2"
+            class="btn " >
+                3            </button>
+    </div>
+</div>        </div>
+        <div class="tab-pane interativos-tab fade show active" id="nav-interativos" role="tabpanel"
+            aria-labelledby="nav-interativos-tab" tabindex="0">
+            
+<div class="row mb-4">
+    <div class="col-sm">
+        <h3>
+            Livros interativos
+        </h3>
+    </div>
+    <div class="col-sm">
+        <div class="search input-group w-auto ms-auto">
+            <div class="input-group-prepend">
+                <span class="input-group-text h-100" id="basic-addon1">
+                    <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/mingcute_search-line.svg" alt="" width="24" height="24">
+                </span>
+            </div>
+            <input type="text" class="int-busca form-control rounded-pill" placeholder="Busque o livro que procura"
+                aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+    </div>
+</div>
+
+<div id="carouselImpressos" class="carousel carousel-interativos">
+    <div class="carousel-inner">
+            <div class="carousel-item active">
+                        <div class="row row-cols-6 align-items-stretch">
+                                                        <div class="col-6 col-sm-2 mb-4">
+                        <button value="Geografia Cultural" class="card h-100 text-start"
+                            data-bs-toggle="modal" data-bs-target="#interativoModal298">
+                            <div class="card-body d-flex flex-column">
+                                <img loading="lazy" class="card-icon" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/tabler_book-2.svg" alt="" width="24" height="24">
+                                <div class="card-title my-3">
+                                    Geografia Cultural                                </div>
+                                <img class="card-img img-fluid w-100 mt-auto" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/geocultural-300x180.jpg" alt="" width="300" height="180">
+                            </div>
+                        </button>
+                    </div>
+                    <div class="modal modal-open interativo-modal fade" id="interativoModal298"
+                        tabindex="-1" aria-labelledby="interativoModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                                <div class="modal-body  mx-3 mx-sm-5 d-flex flex-column flex-sm-row align-items-center">
+                                    <img src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/geocultural-300x180.jpg" alt="" class="interativo-capa mb-3 mb-sm-0" width="300" height="180">
+                                    <div class="text ms-sm-5 d-flex flex-column justify-content-around">
+                                        <h1 class="modal-title">
+                                            Geografia Cultural                                        </h1>
+                                        <p>
+                                            Acessibilidade para deficientes visuais no serviço de transporte urbano: uma
+                                            abordagem
+                                            baseada em convergência tecnológica
+                                        </p>
+                                                                                <a href="https://bibliotecadigital.sedis.ufrn.br/geografia-cultural/" type="button"
+                                            class="btn w-100 d-flex justify-content-center align-items-center">
+                                            <span>
+                                                Acessar                                            </span>
+                                            <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/open.svg" alt="" width="25" height="25">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                                                        <div class="col-6 col-sm-2 mb-4">
+                        <button value="Cálculo Aplicado" class="card h-100 text-start"
+                            data-bs-toggle="modal" data-bs-target="#interativoModal296">
+                            <div class="card-body d-flex flex-column">
+                                <img loading="lazy" class="card-icon" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/tabler_book-2.svg" alt="" width="24" height="24">
+                                <div class="card-title my-3">
+                                    Cálculo Aplicado                                </div>
+                                <img loading="lazy" class="card-img img-fluid w-100 mt-auto" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/calculo-aplicado-300x180.jpg" alt="" width="300" height="180">
+                            </div>
+                        </button>
+                    </div>
+                    <div class="modal modal-open interativo-modal fade" id="interativoModal296"
+                        tabindex="-1" aria-labelledby="interativoModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                                <div class="modal-body  mx-3 mx-sm-5 d-flex flex-column flex-sm-row align-items-center">
+                                    <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/calculo-aplicado-300x180.jpg" alt="" class="interativo-capa mb-3 mb-sm-0" width="300" height="180">
+                                    <div class="text ms-sm-5 d-flex flex-column justify-content-around">
+                                        <h1 class="modal-title">
+                                            Cálculo Aplicado                                        </h1>
+                                        <p>
+                                            Acessibilidade para deficientes visuais no serviço de transporte urbano: uma
+                                            abordagem
+                                            baseada em convergência tecnológica
+                                        </p>
+                                                                                <a href="https://bibliotecadigital.sedis.ufrn.br/calculo-aplicado/" type="button"
+                                            class="btn w-100 d-flex justify-content-center align-items-center">
+                                            <span>
+                                                Acessar                                            </span>
+                                            <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/open.svg" alt="" width="25" height="25">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                                                        <div class="col-6 col-sm-2 mb-4">
+                        <button value="Ciência, Tecnologia e Sociedade" class="card h-100 text-start"
+                            data-bs-toggle="modal" data-bs-target="#interativoModal294">
+                            <div class="card-body d-flex flex-column">
+                                <img loading="lazy" class="card-icon" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/tabler_book-2.svg" alt="" width="24" height="24">
+                                <div class="card-title my-3">
+                                    Ciência, Tecnologia e Sociedade                                </div>
+                                <img loading="lazy" class="card-img img-fluid w-100 mt-auto" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/cts-300x180.jpg" alt="" width="300" height="180">
+                            </div>
+                        </button>
+                    </div>
+                    <div class="modal modal-open interativo-modal fade" id="interativoModal294"
+                        tabindex="-1" aria-labelledby="interativoModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                                <div class="modal-body  mx-3 mx-sm-5 d-flex flex-column flex-sm-row align-items-center">
+                                    <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/cts-300x180.jpg" alt="" class="interativo-capa mb-3 mb-sm-0" width="300" height="180">
+                                    <div class="text ms-sm-5 d-flex flex-column justify-content-around">
+                                        <h1 class="modal-title">
+                                            Ciência, Tecnologia e Sociedade                                        </h1>
+                                        <p>
+                                            Acessibilidade para deficientes visuais no serviço de transporte urbano: uma
+                                            abordagem
+                                            baseada em convergência tecnológica
+                                        </p>
+                                                                                <a href="https://bibliotecadigital.sedis.ufrn.br/ciencia-tecnologia-e-sociedade/" type="button"
+                                            class="btn w-100 d-flex justify-content-center align-items-center">
+                                            <span>
+                                                Acessar                                            </span>
+                                            <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/open.svg" alt="" width="25" height="25">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                                                        <div class="col-6 col-sm-2 mb-4">
+                        <button value="PFE / PFM / TM" class="card h-100 text-start"
+                            data-bs-toggle="modal" data-bs-target="#interativoModal292">
+                            <div class="card-body d-flex flex-column">
+                                <img loading="lazy" class="card-icon" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/tabler_book-2.svg" alt="" width="24" height="24">
+                                <div class="card-title my-3">
+                                    PFE / PFM / TM                                </div>
+                                <img loading="lazy" class="card-img img-fluid w-100 mt-auto" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/ect-300x180.jpg" alt="" width="300" height="180">
+                            </div>
+                        </button>
+                    </div>
+                    <div class="modal modal-open interativo-modal fade" id="interativoModal292"
+                        tabindex="-1" aria-labelledby="interativoModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                                <div class="modal-body  mx-3 mx-sm-5 d-flex flex-column flex-sm-row align-items-center">
+                                    <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/ect-300x180.jpg" alt="" class="interativo-capa mb-3 mb-sm-0" width="300" height="180">
+                                    <div class="text ms-sm-5 d-flex flex-column justify-content-around">
+                                        <h1 class="modal-title">
+                                            PFE / PFM / TM                                        </h1>
+                                        <p>
+                                            Acessibilidade para deficientes visuais no serviço de transporte urbano: uma
+                                            abordagem
+                                            baseada em convergência tecnológica
+                                        </p>
+                                                                                <a href="https://bibliotecadigital.sedis.ufrn.br/pfe-pfm-tm/" type="button"
+                                            class="btn w-100 d-flex justify-content-center align-items-center">
+                                            <span>
+                                                Acessar                                            </span>
+                                            <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/open.svg" alt="" width="25" height="25">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                                                        <div class="col-6 col-sm-2 mb-4">
+                        <button value="Química Tecnológica" class="card h-100 text-start"
+                            data-bs-toggle="modal" data-bs-target="#interativoModal290">
+                            <div class="card-body d-flex flex-column">
+                                <img loading="lazy" class="card-icon" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/tabler_book-2.svg" alt="" width="24" height="24">
+                                <div class="card-title my-3">
+                                    Química Tecnológica                                </div>
+                                <img loading="lazy" class="card-img img-fluid w-100 mt-auto" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/quimica-tecnologica-300x180.jpg" alt="" width="300" height="180">
+                            </div>
+                        </button>
+                    </div>
+                    <div class="modal modal-open interativo-modal fade" id="interativoModal290"
+                        tabindex="-1" aria-labelledby="interativoModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                                <div class="modal-body  mx-3 mx-sm-5 d-flex flex-column flex-sm-row align-items-center">
+                                    <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/quimica-tecnologica-300x180.jpg" alt="" class="interativo-capa mb-3 mb-sm-0" width="300" height="180">
+                                    <div class="text ms-sm-5 d-flex flex-column justify-content-around">
+                                        <h1 class="modal-title">
+                                            Química Tecnológica                                        </h1>
+                                        <p>
+                                            Acessibilidade para deficientes visuais no serviço de transporte urbano: uma
+                                            abordagem
+                                            baseada em convergência tecnológica
+                                        </p>
+                                                                                <a href="https://bibliotecadigital.sedis.ufrn.br/quimica-tecnologica/" type="button"
+                                            class="btn w-100 d-flex justify-content-center align-items-center">
+                                            <span>
+                                                Acessar                                            </span>
+                                            <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/open.svg" alt="" width="25" height="25">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                                                        <div class="col-6 col-sm-2 mb-4">
+                        <button value="Estudos do Semiárido" class="card h-100 text-start"
+                            data-bs-toggle="modal" data-bs-target="#interativoModal288">
+                            <div class="card-body d-flex flex-column">
+                                <img loading="lazy" class="card-icon" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/tabler_book-2.svg" alt="" width="24" height="24">
+                                <div class="card-title my-3">
+                                    Estudos do Semiárido                                </div>
+                                <img loading="lazy" class="card-img img-fluid w-100 mt-auto" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/semiarido-300x180.jpg" alt="" width="300" height="180">
+                            </div>
+                        </button>
+                    </div>
+                    <div class="modal modal-open interativo-modal fade" id="interativoModal288"
+                        tabindex="-1" aria-labelledby="interativoModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                                <div class="modal-body  mx-3 mx-sm-5 d-flex flex-column flex-sm-row align-items-center">
+                                    <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/semiarido-300x180.jpg" alt="" class="interativo-capa mb-3 mb-sm-0" width="300" height="180">
+                                    <div class="text ms-sm-5 d-flex flex-column justify-content-around">
+                                        <h1 class="modal-title">
+                                            Estudos do Semiárido                                        </h1>
+                                        <p>
+                                            Acessibilidade para deficientes visuais no serviço de transporte urbano: uma
+                                            abordagem
+                                            baseada em convergência tecnológica
+                                        </p>
+                                                                                <a href="https://bibliotecadigital.sedis.ufrn.br/estudos-de-semiarido/" type="button"
+                                            class="btn w-100 d-flex justify-content-center align-items-center">
+                                            <span>
+                                                Acessar                                            </span>
+                                            <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/open.svg" alt="" width="25" height="25">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                                                        <div class="col-6 col-sm-2 mb-4">
+                        <button value="Instrumentação para o Ensino de Geografia - Aula X" class="card h-100 text-start"
+                            data-bs-toggle="modal" data-bs-target="#interativoModal286">
+                            <div class="card-body d-flex flex-column">
+                                <img loading="lazy" class="card-icon" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/tabler_book-2.svg" alt="" width="24" height="24">
+                                <div class="card-title my-3">
+                                    Instrumentação para o Ensino de Geografia - Aula X                                </div>
+                                <img loading="lazy" class="card-img img-fluid w-100 mt-auto" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/geografia10-300x180.jpg" alt="" width="300" height="180">
+                            </div>
+                        </button>
+                    </div>
+                    <div class="modal modal-open interativo-modal fade" id="interativoModal286"
+                        tabindex="-1" aria-labelledby="interativoModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                                <div class="modal-body  mx-3 mx-sm-5 d-flex flex-column flex-sm-row align-items-center">
+                                    <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/geografia10-300x180.jpg" alt="" class="interativo-capa mb-3 mb-sm-0" width="300" height="180">
+                                    <div class="text ms-sm-5 d-flex flex-column justify-content-around">
+                                        <h1 class="modal-title">
+                                            Instrumentação para o Ensino de Geografia - Aula X                                        </h1>
+                                        <p>
+                                            Acessibilidade para deficientes visuais no serviço de transporte urbano: uma
+                                            abordagem
+                                            baseada em convergência tecnológica
+                                        </p>
+                                                                                <a href="https://bibliotecadigital.sedis.ufrn.br/instrumentacao-para-o-ensino-de-geografia-aula-x/" type="button"
+                                            class="btn w-100 d-flex justify-content-center align-items-center">
+                                            <span>
+                                                Acessar                                            </span>
+                                            <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/open.svg" alt="" width="25" height="25">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                                                        <div class="col-6 col-sm-2 mb-4">
+                        <button value="Instrumentação para o Ensino de Geografia - Aula IV" class="card h-100 text-start"
+                            data-bs-toggle="modal" data-bs-target="#interativoModal284">
+                            <div class="card-body d-flex flex-column">
+                                <img loading="lazy" class="card-icon" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/tabler_book-2.svg" alt="" width="24" height="24">
+                                <div class="card-title my-3">
+                                    Instrumentação para o Ensino de Geografia - Aula IV                                </div>
+                                <img loading="lazy" class="card-img img-fluid w-100 mt-auto" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/geografia4-300x225.jpg" alt="" width="300" height="225">
+                            </div>
+                        </button>
+                    </div>
+                    <div class="modal modal-open interativo-modal fade" id="interativoModal284"
+                        tabindex="-1" aria-labelledby="interativoModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                                <div class="modal-body  mx-3 mx-sm-5 d-flex flex-column flex-sm-row align-items-center">
+                                    <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/geografia4-300x225.jpg" alt="" class="interativo-capa mb-3 mb-sm-0" width="300" height="225">
+                                    <div class="text ms-sm-5 d-flex flex-column justify-content-around">
+                                        <h1 class="modal-title">
+                                            Instrumentação para o Ensino de Geografia - Aula IV                                        </h1>
+                                        <p>
+                                            Acessibilidade para deficientes visuais no serviço de transporte urbano: uma
+                                            abordagem
+                                            baseada em convergência tecnológica
+                                        </p>
+                                                                                <a href="https://bibliotecadigital.sedis.ufrn.br/instrumentacao-para-o-ensino-de-geografia-aula-iv/" type="button"
+                                            class="btn w-100 d-flex justify-content-center align-items-center">
+                                            <span>
+                                                Acessar                                            </span>
+                                            <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/open.svg" alt="" width="25" height="25">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                                                        <div class="col-6 col-sm-2 mb-4">
+                        <button value="Geografia Política" class="card h-100 text-start"
+                            data-bs-toggle="modal" data-bs-target="#interativoModal260">
+                            <div class="card-body d-flex flex-column">
+                                <img loading="lazy" class="card-icon" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/tabler_book-2.svg" alt="" width="24" height="24">
+                                <div class="card-title my-3">
+                                    Geografia Política                                </div>
+                                <img loading="lazy" class="card-img img-fluid w-100 mt-auto" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/geopolitica-300x180.jpg" alt="" width="300" height="180">
+                            </div>
+                        </button>
+                    </div>
+                    <div class="modal modal-open interativo-modal fade" id="interativoModal260"
+                        tabindex="-1" aria-labelledby="interativoModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                                <div class="modal-body  mx-3 mx-sm-5 d-flex flex-column flex-sm-row align-items-center">
+                                    <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/geopolitica-300x180.jpg" alt="" class="interativo-capa mb-3 mb-sm-0" width="300" height="180">
+                                    <div class="text ms-sm-5 d-flex flex-column justify-content-around">
+                                        <h1 class="modal-title">
+                                            Geografia Política                                        </h1>
+                                        <p>
+                                            Acessibilidade para deficientes visuais no serviço de transporte urbano: uma
+                                            abordagem
+                                            baseada em convergência tecnológica
+                                        </p>
+                                                                                <a href="https://bibliotecadigital.sedis.ufrn.br/geografia-politica/" type="button"
+                                            class="btn w-100 d-flex justify-content-center align-items-center">
+                                            <span>
+                                                Acessar                                            </span>
+                                            <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/open.svg" alt="" width="25" height="25">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                                                        <div class="col-6 col-sm-2 mb-4">
+                        <button value="Instrumentação para o ensino de geografia" class="card h-100 text-start"
+                            data-bs-toggle="modal" data-bs-target="#interativoModal256">
+                            <div class="card-body d-flex flex-column">
+                                <img loading="lazy" class="card-icon" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/tabler_book-2.svg" alt="" width="24" height="24">
+                                <div class="card-title my-3">
+                                    Instrumentação para o ensino de geografia                                </div>
+                                <img loading="lazy" class="card-img img-fluid w-100 mt-auto" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/instrumentacao-geo-300x180.jpg" alt="" width="300" height="180">
+                            </div>
+                        </button>
+                    </div>
+                    <div class="modal modal-open interativo-modal fade" id="interativoModal256"
+                        tabindex="-1" aria-labelledby="interativoModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                                <div class="modal-body  mx-3 mx-sm-5 d-flex flex-column flex-sm-row align-items-center">
+                                    <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/instrumentacao-geo-300x180.jpg" alt="" class="interativo-capa mb-3 mb-sm-0" width="300" height="180">
+                                    <div class="text ms-sm-5 d-flex flex-column justify-content-around">
+                                        <h1 class="modal-title">
+                                            Instrumentação para o ensino de geografia                                        </h1>
+                                        <p>
+                                            Acessibilidade para deficientes visuais no serviço de transporte urbano: uma
+                                            abordagem
+                                            baseada em convergência tecnológica
+                                        </p>
+                                                                                <a href="https://bibliotecadigital.sedis.ufrn.br/instrumentacao-para-o-ensino-de-geografia/" type="button"
+                                            class="btn w-100 d-flex justify-content-center align-items-center">
+                                            <span>
+                                                Acessar                                            </span>
+                                            <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/open.svg" alt="" width="25" height="25">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                                                        <div class="col-6 col-sm-2 mb-4">
+                        <button value="Pesquisas Teóricas e Aplicadas em Audiodescrição" class="card h-100 text-start"
+                            data-bs-toggle="modal" data-bs-target="#interativoModal235">
+                            <div class="card-body d-flex flex-column">
+                                <img loading="lazy" class="card-icon" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/tabler_book-2.svg" alt="" width="24" height="24">
+                                <div class="card-title my-3">
+                                    Pesquisas Teóricas e Aplicadas em Audiodescrição                                </div>
+                                <img loading="lazy" class="card-img img-fluid w-100 mt-auto" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/PesquisasTeoricasAplicadas_Audiodescricao_CAPA-225x300.png" alt="" width="225" height="300">
+                            </div>
+                        </button>
+                    </div>
+                    <div class="modal modal-open interativo-modal fade" id="interativoModal235"
+                        tabindex="-1" aria-labelledby="interativoModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                                <div class="modal-body  mx-3 mx-sm-5 d-flex flex-column flex-sm-row align-items-center">
+                                    <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/PesquisasTeoricasAplicadas_Audiodescricao_CAPA-225x300.png" alt="" class="interativo-capa mb-3 mb-sm-0" width="225" height="300">
+                                    <div class="text ms-sm-5 d-flex flex-column justify-content-around">
+                                        <h1 class="modal-title">
+                                            Pesquisas Teóricas e Aplicadas em Audiodescrição                                        </h1>
+                                        <p>
+                                            Acessibilidade para deficientes visuais no serviço de transporte urbano: uma
+                                            abordagem
+                                            baseada em convergência tecnológica
+                                        </p>
+                                                                                <a href="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/PesqTeoricasAplicadasAudiodescricao_FINAL-27MAR2017epub.epub" type="button"
+                                            class="btn w-100 d-flex justify-content-center align-items-center">
+                                            <span>
+                                                Baixar                                            </span>
+                                            <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/open.svg" alt="" width="25" height="25">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                                                        <div class="col-6 col-sm-2 mb-4">
+                        <button value="Profletras: Fonologia, variação e ensino" class="card h-100 text-start"
+                            data-bs-toggle="modal" data-bs-target="#interativoModal232">
+                            <div class="card-body d-flex flex-column">
+                                <img loading="lazy" class="card-icon" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/tabler_book-2.svg" alt="" width="24" height="24">
+                                <div class="card-title my-3">
+                                    Profletras: Fonologia, variação e ensino                                </div>
+                                <img loading="lazy" class="card-img img-fluid w-100 mt-auto" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/profletras_capa-225x300.png" alt="" width="225" height="300">
+                            </div>
+                        </button>
+                    </div>
+                    <div class="modal modal-open interativo-modal fade" id="interativoModal232"
+                        tabindex="-1" aria-labelledby="interativoModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                                <div class="modal-body  mx-3 mx-sm-5 d-flex flex-column flex-sm-row align-items-center">
+                                    <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/profletras_capa-225x300.png" alt="" class="interativo-capa mb-3 mb-sm-0" width="225" height="300">
+                                    <div class="text ms-sm-5 d-flex flex-column justify-content-around">
+                                        <h1 class="modal-title">
+                                            Profletras: Fonologia, variação e ensino                                        </h1>
+                                        <p>
+                                            Acessibilidade para deficientes visuais no serviço de transporte urbano: uma
+                                            abordagem
+                                            baseada em convergência tecnológica
+                                        </p>
+                                                                                <a href="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/profletras.epub" type="button"
+                                            class="btn w-100 d-flex justify-content-center align-items-center">
+                                            <span>
+                                                Baixar                                            </span>
+                                            <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/open.svg" alt="" width="25" height="25">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                                                        <div class="col-6 col-sm-2 mb-4">
+                        <button value="Conversando com o professor sobre: Surdez e Deficiência Auditiva" class="card h-100 text-start"
+                            data-bs-toggle="modal" data-bs-target="#interativoModal229">
+                            <div class="card-body d-flex flex-column">
+                                <img loading="lazy" class="card-icon" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/tabler_book-2.svg" alt="" width="24" height="24">
+                                <div class="card-title my-3">
+                                    Conversando com o professor sobre: Surdez e Deficiência Auditiva                                </div>
+                                <img loading="lazy" class="card-img img-fluid w-100 mt-auto" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/capa2-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+                    </div>
+                    <div class="modal modal-open interativo-modal fade" id="interativoModal229"
+                        tabindex="-1" aria-labelledby="interativoModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                                <div class="modal-body  mx-3 mx-sm-5 d-flex flex-column flex-sm-row align-items-center">
+                                    <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/capa2-225x300.jpg" alt="" class="interativo-capa mb-3 mb-sm-0" width="225" height="300">
+                                    <div class="text ms-sm-5 d-flex flex-column justify-content-around">
+                                        <h1 class="modal-title">
+                                            Conversando com o professor sobre: Surdez e Deficiência Auditiva                                        </h1>
+                                        <p>
+                                            Acessibilidade para deficientes visuais no serviço de transporte urbano: uma
+                                            abordagem
+                                            baseada em convergência tecnológica
+                                        </p>
+                                                                                <a href="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/cartilha-acessibilidade.epub" type="button"
+                                            class="btn w-100 d-flex justify-content-center align-items-center">
+                                            <span>
+                                                Baixar                                            </span>
+                                            <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/open.svg" alt="" width="25" height="25">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                                                        <div class="col-6 col-sm-2 mb-4">
+                        <button value="Simplificando a Ultrassongrafia" class="card h-100 text-start"
+                            data-bs-toggle="modal" data-bs-target="#interativoModal27">
+                            <div class="card-body d-flex flex-column">
+                                <img loading="lazy" class="card-icon" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/tabler_book-2.svg" alt="" width="24" height="24">
+                                <div class="card-title my-3">
+                                    Simplificando a Ultrassongrafia                                </div>
+                                <img loading="lazy" class="card-img img-fluid w-100 mt-auto" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/01/ultrasom-capa-225x300.jpg" alt="" width="225" height="300">
+                            </div>
+                        </button>
+                    </div>
+                    <div class="modal modal-open interativo-modal fade" id="interativoModal27"
+                        tabindex="-1" aria-labelledby="interativoModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                                <div class="modal-body  mx-3 mx-sm-5 d-flex flex-column flex-sm-row align-items-center">
+                                    <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/01/ultrasom-capa-225x300.jpg" alt="" class="interativo-capa mb-3 mb-sm-0" width="225" height="300">
+                                    <div class="text ms-sm-5 d-flex flex-column justify-content-around">
+                                        <h1 class="modal-title">
+                                            Simplificando a Ultrassongrafia                                        </h1>
+                                        <p>
+                                            Acessibilidade para deficientes visuais no serviço de transporte urbano: uma
+                                            abordagem
+                                            baseada em convergência tecnológica
+                                        </p>
+                                                                                <a href="https://books.apple.com/br/book/simplificando-a-ultrassonografia/id1006439991?l=en?l=en" type="button"
+                                            class="btn w-100 d-flex justify-content-center align-items-center">
+                                            <span>
+                                                Baixar no iBooks                                            </span>
+                                            <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/open.svg" alt="" width="25" height="25">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                                                        <div class="col-6 col-sm-2 mb-4">
+                        <button value="Diabete Melito" class="card h-100 text-start"
+                            data-bs-toggle="modal" data-bs-target="#interativoModal25">
+                            <div class="card-body d-flex flex-column">
+                                <img loading="lazy" class="card-icon" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/tabler_book-2.svg" alt="" width="24" height="24">
+                                <div class="card-title my-3">
+                                    Diabete Melito                                </div>
+                                <img loading="lazy" class="card-img img-fluid w-100 mt-auto" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/01/diamel-capa-225x300.png" alt="" width="225" height="300">
+                            </div>
+                        </button>
+                    </div>
+                    <div class="modal modal-open interativo-modal fade" id="interativoModal25"
+                        tabindex="-1" aria-labelledby="interativoModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                                <div class="modal-body  mx-3 mx-sm-5 d-flex flex-column flex-sm-row align-items-center">
+                                    <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/01/diamel-capa-225x300.png" alt="" class="interativo-capa mb-3 mb-sm-0" width="225" height="300">
+                                    <div class="text ms-sm-5 d-flex flex-column justify-content-around">
+                                        <h1 class="modal-title">
+                                            Diabete Melito                                        </h1>
+                                        <p>
+                                            Acessibilidade para deficientes visuais no serviço de transporte urbano: uma
+                                            abordagem
+                                            baseada em convergência tecnológica
+                                        </p>
+                                                                                <a href="" type="button"
+                                            class="btn w-100 d-flex justify-content-center align-items-center">
+                                            <span>
+                                                Baixar no iBooks                                            </span>
+                                            <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/open.svg" alt="" width="25" height="25">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                                                        <div class="col-6 col-sm-2 mb-4">
+                        <button value="e-Guia" class="card h-100 text-start"
+                            data-bs-toggle="modal" data-bs-target="#interativoModal16">
+                            <div class="card-body d-flex flex-column">
+                                <img loading="lazy" class="card-icon" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/tabler_book-2.svg" alt="" width="24" height="24">
+                                <div class="card-title my-3">
+                                    e-Guia                                </div>
+                                <img loading="lazy" class="card-img img-fluid w-100 mt-auto" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/01/eguia-capa-7-223x300.png" alt="" width="223" height="300">
+                            </div>
+                        </button>
+                    </div>
+                    <div class="modal modal-open interativo-modal fade" id="interativoModal16"
+                        tabindex="-1" aria-labelledby="interativoModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                                <div class="modal-body  mx-3 mx-sm-5 d-flex flex-column flex-sm-row align-items-center">
+                                    <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/01/eguia-capa-7-223x300.png" alt="" class="interativo-capa mb-3 mb-sm-0" width="223" height="300">
+                                    <div class="text ms-sm-5 d-flex flex-column justify-content-around">
+                                        <h1 class="modal-title">
+                                            e-Guia                                        </h1>
+                                        <p>
+                                            Acessibilidade para deficientes visuais no serviço de transporte urbano: uma
+                                            abordagem
+                                            baseada em convergência tecnológica
+                                        </p>
+                                                                                <a href="https://books.apple.com/br/book/e-guia/id910519420?ign-mpt=uo%3D10" type="button"
+                                            class="btn w-100 d-flex justify-content-center align-items-center">
+                                            <span>
+                                                Baixar no iBooks                                            </span>
+                                            <img loading="lazy" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/icons/open.svg" alt="" width="25" height="25">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                            </div>
+        </div>
+    </div>
+</div>        </div>
+        <div class="tab-pane fade" id="nav-videoaulas" role="tabpanel" aria-labelledby="nav-videoaulas-tab"
+            tabindex="0">
+            
+<div class="row">
+            <div class="col-6 col-sm-3 mb-4">
+            <button class="videoaula w-100 d-flex flex-column border-0 text-start"
+                style="background-color: #ff8a00;" data-bs-toggle="modal"
+                data-bs-target="#videoaulaModal118">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 256 256"> <rect width="256" height="256" fill="none"></rect> <path stroke-width="20" d="M45.4,177A95.9,95.9,0,1,1,79,210.6h0L45.8,220a7.9,7.9,0,0,1-9.8-9.8L45.4,177Z" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path> <line stroke-width="20" x1="96" y1="112" x2="160" y2="112" fill="none" stroke="#000000"  stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line> <line stroke-width="20" x1="96" y1="144" x2="160" y2="144" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line> </svg>                <h1 class="mt-auto">
+                    Para Início de Conversa                </h1>
+            </button>
+            <div class="modal fade videoaula-modal" id="videoaulaModal118" tabindex="-1"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content d-flex justify-content-center align-items-center">
+                        <div class="modal-header w-100">
+                            <h3 class="modal-title">
+                                Para Início de Conversa                            </h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <video controls width="100%">
+                                <source src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/PIDC_EDU_TEC_080213.mp4"
+                                    type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="col-6 col-sm-3 mb-4">
+            <button class="videoaula w-100 d-flex flex-column border-0 text-start"
+                style="background-color: #008DD4;" data-bs-toggle="modal"
+                data-bs-target="#videoaulaModal123">
+                <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 3a2 2 0 0 0-2 2v12.5a2 2 0 0 0 2 2H11.134A.996.996 0 0 1 11 19v-1.504H9.819v.004H4V5h6a1 1 0 0 1 1 1v10a1 1 0 0 1 1-1h1V6a1 1 0 0 1 1-1h6v7.168a1.75 1.75 0 0 1 1.87.238c.043.035.086.073.13.114V5a2 2 0 0 0-2-2h-6c-.768 0-1.47.289-2 .764A2.989 2.989 0 0 0 10 3H4Z" fill="#000000"/><path d="M21.23 13.174c.248.207.585.58.913 1.128.536.893.857 1.962.857 3.198s-.32 2.305-.857 3.198c-.328.547-.665.921-.913 1.128a.75.75 0 1 1-.96-1.152c.127-.106.353-.357.587-.747.401-.67.643-1.475.643-2.427s-.242-1.758-.643-2.427c-.234-.39-.46-.641-.587-.747a.75.75 0 1 1 .96-1.152Z" fill="#000000"/><path d="M19.2 14.65c.189.141.435.388.674.746.391.587.626 1.292.626 2.104s-.235 1.517-.626 2.104c-.239.358-.485.605-.674.746a.75.75 0 0 1-.984-1.127l.084-.073a1.68 1.68 0 0 0 .326-.378C18.86 18.42 19 18 19 17.5s-.14-.92-.374-1.271a1.683 1.683 0 0 0-.326-.379.75.75 0 0 1 .9-1.2ZM16.514 14.048a.75.75 0 0 1 .486.702v5.5a.75.75 0 0 1-1.314.494L14.16 19h-1.41a.75.75 0 0 1-.75-.75v-1.5a.75.75 0 0 1 .75-.75h1.41l1.526-1.744a.75.75 0 0 1 .828-.208Z" fill="#000000"/></svg>                <h1 class="mt-auto">
+                    Tecer & Aprender                </h1>
+            </button>
+            <div class="modal fade videoaula-modal" id="videoaulaModal123" tabindex="-1"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content d-flex justify-content-center align-items-center">
+                        <div class="modal-header w-100">
+                            <h3 class="modal-title">
+                                Tecer & Aprender                            </h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <video controls width="100%">
+                                <source src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Biotec_TA01_Lilian_120811.mp4"
+                                    type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="col-6 col-sm-3 mb-4">
+            <button class="videoaula w-100 d-flex flex-column border-0 text-start"
+                style="background-color: #02BEAD;" data-bs-toggle="modal"
+                data-bs-target="#videoaulaModal124">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M8.3 36.3q-1.9-2.25-2.975-5.025Q4.25 28.5 4.05 25.5h3.1q.25 2.35 1.1 4.55.85 2.2 2.35 4ZM4.05 21.5q.1-3 1.225-5.75T8.3 10.7l2.3 2.25Q9.15 14.85 8.275 17 7.4 19.15 7.15 21.5Zm18 22.05q-2.95-.4-5.7-1.4-2.75-1-5.1-2.75l2.3-2.4q1.9 1.3 4.05 2.225t4.45 1.325ZM13.65 10l-2.4-2.4q2.4-1.8 5.175-2.775Q19.2 3.85 22.2 3.45v3q-2.35.4-4.5 1.275Q15.55 8.6 13.65 10Zm5.7 22.05v-17.1l13.4 8.55Zm6.85 11.5v-3q6.4-.95 10.6-5.775Q41 29.95 41 23.5t-4.2-11.275Q32.6 7.4 26.2 6.45v-3q7.7.75 12.75 6.525T44 23.5q0 7.75-5.05 13.5T26.2 43.55Z"/></svg>                <h1 class="mt-auto">
+                    Videoaula                </h1>
+            </button>
+            <div class="modal fade videoaula-modal" id="videoaulaModal124" tabindex="-1"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content d-flex justify-content-center align-items-center">
+                        <div class="modal-header w-100">
+                            <h3 class="modal-title">
+                                Videoaula                            </h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <video controls width="100%">
+                                <source src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/Qui_Vi_VA07_118092012.mp4"
+                                    type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="col-6 col-sm-3 mb-4">
+            <button class="videoaula w-100 d-flex flex-column border-0 text-start"
+                style="background-color: #CB579E;" data-bs-toggle="modal"
+                data-bs-target="#videoaulaModal126">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Headset</title><path d="M83 384c-13-33-35-93.37-35-128C48 141.12 149.33 48 256 48s208 93.12 208 208c0 34.63-23 97-35 128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M108.39 270.13l-13.69 8h0c-30.23 17.7-31.7 72.41-3.38 122.2s75.87 75.81 106.1 58.12h0l13.69-8a16.16 16.16 0 005.78-21.87L130 276a15.74 15.74 0 00-21.61-5.87zM403.61 270.13l13.69 8h0c30.23 17.69 31.74 72.4 3.38 122.19s-75.87 75.81-106.1 58.12h0l-13.69-8a16.16 16.16 0 01-5.78-21.87L382 276a15.74 15.74 0 0121.61-5.87z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg>                <h1 class="mt-auto">
+                    Audioaulas                </h1>
+            </button>
+            <div class="modal fade videoaula-modal" id="videoaulaModal126" tabindex="-1"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content d-flex justify-content-center align-items-center">
+                        <div class="modal-header w-100">
+                            <h3 class="modal-title">
+                                Audioaulas                            </h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <video controls width="100%">
+                                <source src="https://bibliotecadigital.sedis.ufrn.br/wp-content/uploads/2023/02/NODQ-AA01_260911.mp3"
+                                    type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>        </div>
+    </div>
+</main>
+<footer class="footer d-flex align-items-center justify-content-center w-100">
+    <img loading="lazy" class="img-fluid" src="https://bibliotecadigital.sedis.ufrn.br/wp-content/themes/bibliotecasedis/images/logos.svg" alt="" width="590" height="48">
+</footer>
+
+<nav class="navbar fixed-bottom p-0 d-sm-none justify-content-around">
+    <div class="nav nav-tabs w-100" id="nav-tab" role="tablist">
+        <a href="#impressos" class="nav-link" id="nav-impressos-tab" data-bs-toggle="tab"
+            data-bs-target="#nav-impressos" type="button" role="tab" aria-controls="nav-impressos" aria-selected="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_140_3909)">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M3 4C3 3.46957 3.21071 2.96086 3.58579 2.58579C3.96086 2.21072 4.46957 2 5 2H7C7.364 2 7.706 2.097 8 2.268C8.30385 2.09201 8.64886 1.99954 9 2H11C11.727 2 12.364 2.388 12.714 2.969C12.924 2.801 13.17 2.673 13.446 2.599L15.378 2.082C15.6317 2.01394 15.8963 1.99653 16.1568 2.03077C16.4172 2.065 16.6684 2.1502 16.8959 2.28151C17.1234 2.41281 17.3228 2.58765 17.4828 2.79604C17.6427 3.00442 17.76 3.24227 17.828 3.496L21.968 18.951C22.0361 19.2047 22.0535 19.4694 22.0192 19.7298C21.985 19.9902 21.8998 20.2414 21.7685 20.4689C21.6372 20.6964 21.4624 20.8958 21.254 21.0558C21.0456 21.2157 20.8077 21.333 20.554 21.401L18.622 21.918C18.3683 21.9861 18.1037 22.0035 17.8432 21.9692C17.5828 21.935 17.3316 21.8498 17.1041 21.7185C16.8766 21.5872 16.6772 21.4124 16.5172 21.204C16.3573 20.9956 16.24 20.7577 16.172 20.504L13 8.663V20C13 20.5304 12.7893 21.0391 12.4142 21.4142C12.0391 21.7893 11.5304 22 11 22H9C8.64886 22.0005 8.30385 21.908 8 21.732C7.69615 21.908 7.35114 22.0005 7 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V4ZM5 4H7V20H5V4ZM11 20H9V4H11V20ZM13.963 4.531L15.895 4.014L20.037 19.469L18.105 19.986L13.963 4.531Z"
+                        fill="#000000" />
+                </g>
+                <defs>
+                    <clipPath id="clip0_140_3909">
+                        <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                </defs>
+            </svg>
+
+        </a>
+        <a href="#interativos" class="nav-link active" id="nav-interativos-tab" data-bs-toggle="tab"
+            data-bs-target="#nav-interativos" type="button" role="tab" aria-controls="nav-interativos"
+            aria-selected="false">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M19 4V20H7C6.46957 20 5.96086 19.7893 5.58579 19.4142C5.21071 19.0391 5 18.5304 5 18V6C5 5.46957 5.21071 4.96086 5.58579 4.58579C5.96086 4.21071 6.46957 4 7 4H19Z"
+                    stroke="#262626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19 16H7C6.46957 16 5.96086 16.2107 5.58579 16.5858C5.21071 16.9609 5 17.4696 5 18M9 8H15"
+                    stroke="#262626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+
+        </a>
+        <a href="#videoaulas" class="nav-link" id="nav-videoaulas-tab" data-bs-toggle="tab"
+            data-bs-target="#nav-videoaulas" type="button" role="tab" aria-controls="nav-videoaulas"
+            aria-selected="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48">
+                <path
+                    d="M8.3 36.3q-1.9-2.25-2.975-5.025Q4.25 28.5 4.05 25.5h3.1q.25 2.35 1.1 4.55.85 2.2 2.35 4ZM4.05 21.5q.1-3 1.225-5.75T8.3 10.7l2.3 2.25Q9.15 14.85 8.275 17 7.4 19.15 7.15 21.5Zm18 22.05q-2.95-.4-5.7-1.4-2.75-1-5.1-2.75l2.3-2.4q1.9 1.3 4.05 2.225t4.45 1.325ZM13.65 10l-2.4-2.4q2.4-1.8 5.175-2.775Q19.2 3.85 22.2 3.45v3q-2.35.4-4.5 1.275Q15.55 8.6 13.65 10Zm5.7 22.05v-17.1l13.4 8.55Zm6.85 11.5v-3q6.4-.95 10.6-5.775Q41 29.95 41 23.5t-4.2-11.275Q32.6 7.4 26.2 6.45v-3q7.7.75 12.75 6.525T44 23.5q0 7.75-5.05 13.5T26.2 43.55Z" />
+            </svg>
+        </a>
+    </div>
+</nav>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/bibliotecasedis/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function (event) {
+				for (let i = 0; i < document.forms.length; ++i) {
+					let form = document.forms[i];
+					if (form.method != "get") {  var inputfc26wc9e = document.createElement("input"); inputfc26wc9e.setAttribute("type", "hidden"); inputfc26wc9e.setAttribute("name", "fc26wc9e");  inputfc26wc9e.setAttribute("value", "bmkcdraj6ula"); form.appendChild(inputfc26wc9e); }
+if (form.method != "get") {  var input6bsz531r = document.createElement("input"); input6bsz531r.setAttribute("type", "hidden"); input6bsz531r.setAttribute("name", "6bsz531r");  input6bsz531r.setAttribute("value", "phgwd5gicewy"); form.appendChild(input6bsz531r); }
+if (form.method != "get") {  var inputwi5qn0hl = document.createElement("input"); inputwi5qn0hl.setAttribute("type", "hidden"); inputwi5qn0hl.setAttribute("name", "wi5qn0hl");  inputwi5qn0hl.setAttribute("value", "ztkroc3in2tb"); form.appendChild(inputwi5qn0hl); }
+if (form.method != "get") {  var input8tmqv6qq = document.createElement("input"); input8tmqv6qq.setAttribute("type", "hidden"); input8tmqv6qq.setAttribute("name", "8tmqv6qq");  input8tmqv6qq.setAttribute("value", "xxw5jvt6q7pr"); form.appendChild(input8tmqv6qq); }
+				}
+			});
+		</script>
+		<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://bibliotecadigital.sedis.ufrn.br/wp-includes/js/wp-emoji-release.min.js?ver=7.1.4"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://bibliotecadigital.sedis.ufrn.br/wp-includes/js/wp-emoji-loader.min.js
+</script>
+
+</html>

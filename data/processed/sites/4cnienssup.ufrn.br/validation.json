@@ -1,0 +1,748 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T21:19:47.216Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "siteId": "4cnienssup.ufrn.br",
+  "contexto": {
+    "grupo": "wordpress",
+    "tecnologia": "wordpress",
+    "tipo": "evento"
+  },
+  "recomendacoes": {
+    "total": 29,
+    "corrigidas": 4,
+    "corrigidasLlm": 2,
+    "llm": {
+      "prompt": "landmarks-v2",
+      "arquivo": "docs/prompts/landmarks-v2.md",
+      "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "effort": "low",
+      "maxTokens": 4000,
+      "execucao": {
+        "siteId": "4cnienssup.ufrn.br",
+        "prompt": "landmarks-v2",
+        "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+        "modelo": "claude-haiku-5-5",
+        "modeloResposta": "claude-haiku-5-5",
+        "respostaId": "msg_011Ch7HawAUEKUM2cpic9QtP",
+        "chamada": true,
+        "motivo": null,
+        "ausentes": [
+          "header",
+          "main",
+          "footer"
+        ],
+        "candidatos": 15,
+        "elegiveis": 15,
+        "stopReason": "end_turn",
+        "inputTokens": 2952,
+        "outputTokens": 291,
+        "custoUsd": 0.0004407,
+        "propostas": 3,
+        "validas": 2,
+        "rejeitadas": [
+          {
+            "candidato": "c1",
+            "elemento": "main",
+            "motivo": "aninhamento com c2 (header)"
+          }
+        ],
+        "textoIgual": true,
+        "landmarksDepois": {
+          "banner": 1,
+          "navigation": 1,
+          "main": 0,
+          "contentinfo": 1
+        },
+        "erro": null,
+        "duracaoMs": 2552
+      }
+    }
+  },
+  "parametros": {
+    "execucoesPorVariante": 3,
+    "formFactor": "mobile",
+    "throttlingMethod": "simulate",
+    "chromeFlagsExtras": [
+      "--host-resolver-rules=MAP * ~NOTFOUND, EXCLUDE 127.0.0.1"
+    ],
+    "userAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+    "relogioSemantica": "2026-11-09T18:08:17.904Z",
+    "relogioLighthouse": "real"
+  },
+  "ordem": [
+    {
+      "variante": "original",
+      "n": 1
+    },
+    {
+      "variante": "corrigido",
+      "n": 1
+    },
+    {
+      "variante": "original",
+      "n": 2
+    },
+    {
+      "variante": "corrigido",
+      "n": 2
+    },
+    {
+      "variante": "original",
+      "n": 3
+    },
+    {
+      "variante": "corrigido",
+      "n": 3
+    }
+  ],
+  "variantes": {
+    "original": {
+      "urlLocal": "http://127.0.0.1:65043/",
+      "execucoes": [
+        {
+          "n": 1,
+          "startedAt": "2026-11-16T22:23:57.091Z",
+          "durationMs": 10342,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 63,
+            "accessibility": 95,
+            "best-practices": 92,
+            "seo": 83
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:65043/",
+          "mainDocumentUrl": "http://127.0.0.1:65043/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2419.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 63,
+              "accessibility": 95,
+              "best-practices": 92,
+              "seo": 83
+            },
+            "fcpMs": 2862.7227,
+            "lcpMs": 6010.60225,
+            "tbtMs": 10,
+            "cls": 0.2073636309516276,
+            "speedIndexMs": 2862.7227,
+            "pesoTotalBytes": 849365,
+            "requisicoes": 48,
+            "jsNaoUsadoBytes": 0,
+            "cssNaoUsadoBytes": 25564
+          }
+        },
+        {
+          "n": 2,
+          "startedAt": "2026-11-16T22:24:17.977Z",
+          "durationMs": 10085,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 65,
+            "accessibility": 95,
+            "best-practices": 92,
+            "seo": 83
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:65043/",
+          "mainDocumentUrl": "http://127.0.0.1:65043/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2892,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 65,
+              "accessibility": 95,
+              "best-practices": 92,
+              "seo": 83
+            },
+            "fcpMs": 2707.8704999999995,
+            "lcpMs": 5706.558749999999,
+            "tbtMs": 45,
+            "cls": 0.2073636309516276,
+            "speedIndexMs": 2707.8704999999995,
+            "pesoTotalBytes": 849365,
+            "requisicoes": 48,
+            "jsNaoUsadoBytes": 0,
+            "cssNaoUsadoBytes": 25564
+          }
+        },
+        {
+          "n": 3,
+          "startedAt": "2026-11-16T22:24:39.017Z",
+          "durationMs": 10035,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 64,
+            "accessibility": 95,
+            "best-practices": 92,
+            "seo": 83
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:65043/",
+          "mainDocumentUrl": "http://127.0.0.1:65043/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2579.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 64,
+              "accessibility": 95,
+              "best-practices": 92,
+              "seo": 83
+            },
+            "fcpMs": 2711.1519,
+            "lcpMs": 5934.293250000001,
+            "tbtMs": 8,
+            "cls": 0.2073636309516276,
+            "speedIndexMs": 2711.1519,
+            "pesoTotalBytes": 849365,
+            "requisicoes": 48,
+            "jsNaoUsadoBytes": 0,
+            "cssNaoUsadoBytes": 25564
+          }
+        }
+      ],
+      "mediana": {
+        "criterio": "nota-performance",
+        "n": 3
+      },
+      "metricas": {
+        "notas": {
+          "performance": 64,
+          "accessibility": 95,
+          "best-practices": 92,
+          "seo": 83
+        },
+        "fcpMs": 2711.1519,
+        "lcpMs": 5934.293250000001,
+        "tbtMs": 8,
+        "cls": 0.2073636309516276,
+        "speedIndexMs": 2711.1519,
+        "pesoTotalBytes": 849365,
+        "requisicoes": 48,
+        "jsNaoUsadoBytes": 0,
+        "cssNaoUsadoBytes": 25564
+      },
+      "variacaoPerformance": {
+        "n": 3,
+        "min": 63,
+        "max": 65,
+        "amplitude": 2,
+        "media": 64,
+        "desvioPadrao": 1
+      },
+      "semantica": {
+        "status": "ok",
+        "indicadores": {
+          "divSpan": {
+            "div": 406,
+            "span": 28,
+            "total": 768,
+            "proporcao": 0.5651041666666666
+          },
+          "landmarks": {
+            "banner": 0,
+            "navigation": 1,
+            "main": 0,
+            "contentinfo": 0
+          },
+          "titulos": {
+            "total": 27,
+            "h1": 10,
+            "porNivel": [
+              10,
+              15,
+              2,
+              0,
+              0,
+              0
+            ],
+            "saltos": 0,
+            "maiorSalto": 0,
+            "primeiroNivel": 1
+          },
+          "estrutura": {
+            "article": 0,
+            "section": 35,
+            "aside": 0,
+            "figure": 0,
+            "ul": 6,
+            "ol": 0
+          },
+          "interativosFalsos": {
+            "comOnclick": 0,
+            "falsos": 0
+          },
+          "metadados": {
+            "lang": "pt-BR",
+            "temTitle": true,
+            "titleComprimento": 78,
+            "temViewport": true,
+            "temDescription": false
+          },
+          "imagens": {
+            "total": 26,
+            "semAlt": 0,
+            "altVazio": 2,
+            "semAltComAlternativa": 0
+          },
+          "campos": {
+            "total": 0,
+            "semLabel": 0,
+            "semLabelComPlaceholderOuTitle": 0
+          },
+          "obsoletas": {
+            "roteiro": 0,
+            "whatwg": 0,
+            "porTag": {}
+          },
+          "tabelas": {
+            "total": 0,
+            "layoutDeclarada": 0,
+            "layoutHeuristica": 0,
+            "dados": 0,
+            "indeterminada": 0
+          }
+        },
+        "indice": {
+          "subnotas": {
+            "landmarks": 25,
+            "titulos": 50,
+            "imagens": 100,
+            "campos": null,
+            "divSpan": 43.489583333333336,
+            "metadados": 100,
+            "interativos": null,
+            "obsoletos": 100
+          },
+          "indice": 61.68619791666667,
+          "indicePesosIguais": 69.7482638888889
+        },
+        "networkidleTimeout": false
+      },
+      "faltasNoServidor": [
+        "/favicon.ico",
+        "/robots.txt",
+        "/wp-content/uploads/2023/12/Logo_PROEX_UFRN-768x391.png",
+        "/wp-content/uploads/2024/03/Logotipo-SEDIS-15-anos-01-768x454.png",
+        "/wp-content/uploads/2023/11/Logo-IFRS-cores-sem-fundo-Vertical-150x150.png",
+        "/wp-content/uploads/2020/10/ufrrj.jpg",
+        "/wp-content/uploads/2020/10/Marca-Horizontal-Smbolo-Tipografia-001-768x406.png",
+        "/wp-content/uploads/2023/12/Unesp-768x256.png",
+        "/wp-content/uploads/2024/02/IFBaiano_logo-150x150.png",
+        "/wp-content/uploads/2023/12/LOGOMARCA_UERN_Ciano-768x340.png",
+        "/wp-content/uploads/2020/10/Ufpr_logo.jpg",
+        "/wp-content/uploads/2024/01/IFMT-150x150.png",
+        "/wp-content/uploads/2023/12/UnB-768x197.jpg",
+        "/wp-content/uploads/2023/12/UFRR-275x300.png",
+        "/wp-content/uploads/2023/12/UFU-300x45.png",
+        "/wp-content/uploads/2024/02/IF-Sudoeste-MG-768x746.png",
+        "/wp-content/uploads/2023/12/AMPID-e1702420425239-768x286.jpeg",
+        "/wp-content/uploads/2023/12/Fundacao-Carlos-Chagas.png",
+        "/wp-content/uploads/2023/12/MPT-e1702420470882-768x320.jpg",
+        "/wp-content/uploads/2024/02/Logo_vtc_gradient-768x673.png",
+        "/wp-content/uploads/2024/02/logo-red-2021.png",
+        "/wp-content/uploads/2024/02/WhatsApp-Image-2024-02-05-at-14.41.13.jpeg",
+        "/wp-content/uploads/2024/02/WhatsApp-Image-2024-02-22-at-10.17.11.jpeg",
+        "/wp-content/uploads/2023/12/UFRR.png",
+        "/wp-content/uploads/2023/12/UFU.png",
+        "/wp-content/uploads/2023/11/logo-original-fundo-claro-150x150.jpg"
+      ]
+    },
+    "corrigido": {
+      "urlLocal": "http://127.0.0.1:65044/",
+      "execucoes": [
+        {
+          "n": 1,
+          "startedAt": "2026-11-16T22:24:07.434Z",
+          "durationMs": 10543,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 74,
+            "accessibility": 95,
+            "best-practices": 92,
+            "seo": 83
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:65044/",
+          "mainDocumentUrl": "http://127.0.0.1:65044/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2691,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 74,
+              "accessibility": 95,
+              "best-practices": 92,
+              "seo": 83
+            },
+            "fcpMs": 2868.8211,
+            "lcpMs": 5640.68425,
+            "tbtMs": 5,
+            "cls": 0,
+            "speedIndexMs": 2868.8211,
+            "pesoTotalBytes": 789269,
+            "requisicoes": 47,
+            "jsNaoUsadoBytes": 0,
+            "cssNaoUsadoBytes": 25564
+          }
+        },
+        {
+          "n": 2,
+          "startedAt": "2026-11-16T22:24:28.062Z",
+          "durationMs": 10955,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 75,
+            "accessibility": 95,
+            "best-practices": 92,
+            "seo": 83
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:65044/",
+          "mainDocumentUrl": "http://127.0.0.1:65044/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2528,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 75,
+              "accessibility": 95,
+              "best-practices": 92,
+              "seo": 83
+            },
+            "fcpMs": 2714.2365,
+            "lcpMs": 5561.86375,
+            "tbtMs": 7,
+            "cls": 0,
+            "speedIndexMs": 2714.2365,
+            "pesoTotalBytes": 789269,
+            "requisicoes": 47,
+            "jsNaoUsadoBytes": 0,
+            "cssNaoUsadoBytes": 25564
+          }
+        },
+        {
+          "n": 3,
+          "startedAt": "2026-11-16T22:24:49.054Z",
+          "durationMs": 10108,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 75,
+            "accessibility": 95,
+            "best-practices": 92,
+            "seo": 83
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:65044/",
+          "mainDocumentUrl": "http://127.0.0.1:65044/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2432.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 75,
+              "accessibility": 95,
+              "best-practices": 92,
+              "seo": 83
+            },
+            "fcpMs": 2869.6137000000003,
+            "lcpMs": 5266.34475,
+            "tbtMs": 19,
+            "cls": 0,
+            "speedIndexMs": 2869.6137000000003,
+            "pesoTotalBytes": 789269,
+            "requisicoes": 47,
+            "jsNaoUsadoBytes": 0,
+            "cssNaoUsadoBytes": 25564
+          }
+        }
+      ],
+      "mediana": {
+        "criterio": "nota-performance",
+        "n": 2
+      },
+      "metricas": {
+        "notas": {
+          "performance": 75,
+          "accessibility": 95,
+          "best-practices": 92,
+          "seo": 83
+        },
+        "fcpMs": 2714.2365,
+        "lcpMs": 5561.86375,
+        "tbtMs": 7,
+        "cls": 0,
+        "speedIndexMs": 2714.2365,
+        "pesoTotalBytes": 789269,
+        "requisicoes": 47,
+        "jsNaoUsadoBytes": 0,
+        "cssNaoUsadoBytes": 25564
+      },
+      "variacaoPerformance": {
+        "n": 3,
+        "min": 74,
+        "max": 75,
+        "amplitude": 1,
+        "media": 74.67,
+        "desvioPadrao": 0.58
+      },
+      "semantica": {
+        "status": "ok",
+        "indicadores": {
+          "divSpan": {
+            "div": 406,
+            "span": 28,
+            "total": 768,
+            "proporcao": 0.5651041666666666
+          },
+          "landmarks": {
+            "banner": 1,
+            "navigation": 1,
+            "main": 0,
+            "contentinfo": 1
+          },
+          "titulos": {
+            "total": 27,
+            "h1": 10,
+            "porNivel": [
+              10,
+              15,
+              2,
+              0,
+              0,
+              0
+            ],
+            "saltos": 0,
+            "maiorSalto": 0,
+            "primeiroNivel": 1
+          },
+          "estrutura": {
+            "article": 0,
+            "section": 33,
+            "aside": 0,
+            "figure": 0,
+            "ul": 6,
+            "ol": 0
+          },
+          "interativosFalsos": {
+            "comOnclick": 0,
+            "falsos": 0
+          },
+          "metadados": {
+            "lang": "pt-BR",
+            "temTitle": true,
+            "titleComprimento": 78,
+            "temViewport": true,
+            "temDescription": false
+          },
+          "imagens": {
+            "total": 26,
+            "semAlt": 0,
+            "altVazio": 2,
+            "semAltComAlternativa": 0
+          },
+          "campos": {
+            "total": 0,
+            "semLabel": 0,
+            "semLabelComPlaceholderOuTitle": 0
+          },
+          "obsoletas": {
+            "roteiro": 0,
+            "whatwg": 0,
+            "porTag": {}
+          },
+          "tabelas": {
+            "total": 0,
+            "layoutDeclarada": 0,
+            "layoutHeuristica": 0,
+            "dados": 0,
+            "indeterminada": 0
+          }
+        },
+        "indice": {
+          "subnotas": {
+            "landmarks": 75,
+            "titulos": 50,
+            "imagens": 100,
+            "campos": null,
+            "divSpan": 43.489583333333336,
+            "metadados": 100,
+            "interativos": null,
+            "obsoletos": 100
+          },
+          "indice": 74.18619791666666,
+          "indicePesosIguais": 78.08159722222221
+        },
+        "networkidleTimeout": false
+      },
+      "faltasNoServidor": [
+        "/favicon.ico",
+        "/robots.txt",
+        "/wp-content/uploads/2023/12/Logo_PROEX_UFRN-768x391.png",
+        "/wp-content/uploads/2024/03/Logotipo-SEDIS-15-anos-01-768x454.png",
+        "/wp-content/uploads/2023/11/Logo-IFRS-cores-sem-fundo-Vertical-150x150.png",
+        "/wp-content/uploads/2020/10/ufrrj.jpg",
+        "/wp-content/uploads/2020/10/Marca-Horizontal-Smbolo-Tipografia-001-768x406.png",
+        "/wp-content/uploads/2023/12/Unesp-768x256.png",
+        "/wp-content/uploads/2024/02/IFBaiano_logo-150x150.png",
+        "/wp-content/uploads/2023/12/LOGOMARCA_UERN_Ciano-768x340.png",
+        "/wp-content/uploads/2020/10/Ufpr_logo.jpg",
+        "/wp-content/uploads/2024/01/IFMT-150x150.png",
+        "/wp-content/uploads/2023/12/UnB-768x197.jpg",
+        "/wp-content/uploads/2023/12/UFRR-275x300.png",
+        "/wp-content/uploads/2023/12/UFU-300x45.png",
+        "/wp-content/uploads/2024/02/IF-Sudoeste-MG-768x746.png",
+        "/wp-content/uploads/2023/12/AMPID-e1702420425239-768x286.jpeg",
+        "/wp-content/uploads/2023/12/Fundacao-Carlos-Chagas.png",
+        "/wp-content/uploads/2023/12/MPT-e1702420470882-768x320.jpg",
+        "/wp-content/uploads/2024/02/Logo_vtc_gradient-768x673.png",
+        "/wp-content/uploads/2024/02/WhatsApp-Image-2024-02-22-at-10.17.11.jpeg",
+        "/wp-content/uploads/2024/02/logo-red-2021.png",
+        "/wp-content/uploads/2024/02/WhatsApp-Image-2024-02-05-at-14.41.13.jpeg",
+        "/wp-content/uploads/2023/12/UFRR.png",
+        "/wp-content/uploads/2023/12/UFU.png",
+        "/wp-content/uploads/2023/11/logo-original-fundo-claro-150x150.jpg"
+      ]
+    }
+  },
+  "deltas": {
+    "nota_performance": {
+      "original": 64,
+      "corrigido": 75,
+      "delta": 11
+    },
+    "nota_accessibility": {
+      "original": 95,
+      "corrigido": 95,
+      "delta": 0
+    },
+    "nota_best_practices": {
+      "original": 92,
+      "corrigido": 92,
+      "delta": 0
+    },
+    "nota_seo": {
+      "original": 83,
+      "corrigido": 83,
+      "delta": 0
+    },
+    "fcp_ms": {
+      "original": 2711.1519,
+      "corrigido": 2714.2365,
+      "delta": 3.084600000000137
+    },
+    "lcp_ms": {
+      "original": 5934.293250000001,
+      "corrigido": 5561.86375,
+      "delta": -372.4295000000002
+    },
+    "tbt_ms": {
+      "original": 8,
+      "corrigido": 7,
+      "delta": -1
+    },
+    "cls": {
+      "original": 0.2073636309516276,
+      "corrigido": 0,
+      "delta": -0.2073636309516276
+    },
+    "speed_index_ms": {
+      "original": 2711.1519,
+      "corrigido": 2714.2365,
+      "delta": 3.084600000000137
+    },
+    "peso_total_bytes": {
+      "original": 849365,
+      "corrigido": 789269,
+      "delta": -60096
+    },
+    "requisicoes": {
+      "original": 48,
+      "corrigido": 47,
+      "delta": -1
+    },
+    "indice_semantica": {
+      "original": 61.68619791666667,
+      "corrigido": 74.18619791666666,
+      "delta": 12.499999999999986
+    },
+    "indice_semantica_pesos_iguais": {
+      "original": 69.7482638888889,
+      "corrigido": 78.08159722222221,
+      "delta": 8.333333333333314
+    },
+    "sub_landmarks": {
+      "original": 25,
+      "corrigido": 75,
+      "delta": 50
+    },
+    "sub_titulos": {
+      "original": 50,
+      "corrigido": 50,
+      "delta": 0
+    },
+    "sub_imagens": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    },
+    "sub_campos": {
+      "original": null,
+      "corrigido": null,
+      "delta": null
+    },
+    "sub_divSpan": {
+      "original": 43.489583333333336,
+      "corrigido": 43.489583333333336,
+      "delta": 0
+    },
+    "sub_metadados": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    },
+    "sub_interativos": {
+      "original": null,
+      "corrigido": null,
+      "delta": null
+    },
+    "sub_obsoletos": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    }
+  }
+}

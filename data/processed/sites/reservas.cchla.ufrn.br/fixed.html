@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="/favicon.ico" sizes="any">
+  <title>Calendário de Reservas - CCHLA</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+
+  <style>
+    :root { --azul-marinho: #051638; --azul-royal: #1653A1; --fundo-pagina: #f4f7fb; --borda-suave: #cbd5e1; --texto-escuro: #334155; }
+    body { background-color: var(--fundo-pagina); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: var(--texto-escuro); margin: 0; padding: 20px; display: flex; flex-direction: column; min-height: 100vh; }
+    
+    .container { max-width: 1200px; margin: 0 auto; width: 100%; background-color: #ffffff; padding: 30px; border-radius: 12px; border: 1px solid var(--borda-suave); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); flex-grow: 1; box-sizing: border-box; display: flex; flex-direction: column; }
+    
+    /* Cabeçalho */
+    .header { display: flex; align-items: center; justify-content: space-between; border-bottom: 3px solid var(--azul-royal); padding-bottom: 15px; margin-bottom: 20px; flex-wrap: nowrap; gap: 15px; }
+    .header-logo-title { display: flex; align-items: center; gap: 15px; }
+    .header-logo-title img { max-height: 55px; object-fit: contain; }
+    .header-logo-title h2 { margin: 0; color: var(--azul-marinho); font-size: 21px; font-weight: 700; }
+    
+    /* Menu Dropdown de Solicitações */
+    .dropdown-container { position: relative; display: inline-block; padding-bottom: 8px; margin-bottom: -8px; }
+    .btn-solicitacoes { background-color: var(--azul-royal); color: white; padding: 8px 15px; border: none; border-radius: 6px; font-size: 13px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 6px; box-shadow: 0 3px 6px -1px rgba(0,0,0,0.15); transition: background-color 0.2s; white-space: nowrap; }
+    .btn-solicitacoes:hover { background-color: var(--azul-marinho); }
+    .dropdown-menu { display: none; position: absolute; right: 0; top: 100%; margin-top: 2px; background-color: #ffffff; min-width: 320px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.2); border-radius: 8px; border: 1px solid var(--borda-suave); z-index: 10000; overflow: hidden; }
+    .dropdown-container:hover .dropdown-menu,
+    .dropdown-menu.show { display: flex; flex-direction: column; }
+    .dropdown-item { padding: 12px 16px; color: var(--texto-escuro); text-decoration: none; font-size: 13px; font-weight: 600; border-bottom: 1px solid #f1f5f9; transition: background-color 0.2s; }
+    .dropdown-item:last-child { border-bottom: none; }
+    .dropdown-item:hover { background-color: #f8fafc; color: var(--azul-royal); }
+
+    /* Barra de Navegação Superior */
+    .barra-navegacao-custom { display: flex; justify-content: space-between; align-items: center; background-color: #f8fafc; border: 1px solid var(--borda-suave); padding: 15px; border-radius: 8px; margin-bottom: 20px; flex-wrap: wrap; gap: 15px; }
+    .nav-esquerda { flex: 1; display: flex; justify-content: flex-start; }
+    .nav-centro { flex: 2; display: flex; align-items: center; justify-content: center; gap: 15px; }
+    .nav-direita { flex: 1; display: flex; justify-content: flex-end; }
+    .nav-centro span { font-size: 16px; font-weight: 700; color: var(--azul-marinho); white-space: nowrap; cursor: pointer; transition: color 0.2s; }
+    .nav-centro span:hover { color: var(--azul-royal); text-decoration: underline; }
+    .btn-nav-custom { background-color: #ffffff; border: 1px solid var(--borda-suave); padding: 8px 16px; border-radius: 6px; font-size: 12px; font-weight: 700; color: var(--texto-escuro); cursor: pointer; transition: 0.2s; }
+    .btn-nav-custom:hover { background-color: #f1f5f9; border-color: var(--azul-royal); color: var(--azul-royal); }
+    .select-meses-custom { padding: 8px 12px; border-radius: 6px; border: 1px solid var(--borda-suave); font-size: 14px; color: var(--texto-escuro); font-weight: 600; background-color: #ffffff; cursor: pointer; min-width: 180px; }
+    .select-meses-custom:focus { outline: none; border-color: var(--azul-royal); }
+    .btn-group-views { display: flex; border-radius: 6px; overflow: hidden; border: 1px solid #2c3e50; }
+    .btn-view { background-color: #2c3e50; color: #fff; border: none; padding: 8px 15px; font-size: 14px; font-weight: 500; cursor: pointer; transition: background 0.2s; border-right: 1px solid #1a252f; }
+    .btn-view:last-child { border-right: none; }
+    .btn-view:hover { background-color: #1a252f; }
+    .btn-view.active { background-color: #1a252f; box-shadow: inset 0 3px 5px rgba(0,0,0,0.125); }
+
+    #calendar { max-width: 100%; background: #fff; padding: 0 10px 10px 10px; border-radius: 8px; flex-grow: 1; margin-top: 10px; }
+    .fc-event { cursor: pointer !important; font-size: 11.5px; }
+    .fc-daygrid-event { background: transparent !important; border: none !important; margin-bottom: 4px !important; padding: 0 !important; cursor: pointer !important; }
+    .fc-daygrid-event-dot { display: none !important; }
+
+    .evento-especial:hover { opacity: 0.85 !important; }
+    .evento-normal-inner { transition: background-color 0.2s ease, border-radius 0.2s ease; }
+    .evento-normal:hover .evento-normal-inner { background-color: #eef2f6 !important; border-top-right-radius: 4px; border-bottom-right-radius: 4px; }
+
+    .calendario-legenda { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px; margin-top: 20px; padding: 15px; background: #e2e8f0; border-radius: 8px; border: 1px solid var(--borda-suave); }
+    .legenda-item { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; cursor: pointer; padding: 6px 14px; border-radius: 20px; transition: all 0.2s; color: var(--texto-escuro); border: 2px solid transparent; }
+    .legenda-item:hover { background-color: #cbd5e1; transform: translateY(-1px); }
+    .legenda-item.ativo { background-color: #ffffff; border-color: var(--texto-escuro); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    .legenda-cor { width: 16px; height: 16px; display: inline-block; }
+
+    #tooltipDetalhes { display: none; position: absolute; background: #ffffff; padding: 15px; border-radius: 8px; width: 280px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.15); border: 1px solid var(--borda-suave); z-index: 9999; pointer-events: none; transition: top 0.05s ease, left 0.05s ease; }
+    .tooltip-titulo { color: var(--azul-marinho); margin: 0 0 8px 0; border-bottom: 1px solid var(--borda-suave); padding-bottom: 6px; font-size: 15px; font-weight: 700; }
+    .tooltip-dado { margin-bottom: 6px; font-size: 12px; line-height: 1.4; }
+    .tooltip-dado strong { color: var(--azul-marinho); }
+
+    #modalDetalhes { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 10000; justify-content: center; align-items: center; }
+    .modal-content { background: #fff; padding: 25px; border-radius: 12px; width: 90%; max-width: 450px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.2); position: relative; }
+    .fechar-modal { position: absolute; top: 15px; right: 15px; background: #e2e8f0; border: none; font-size: 16px; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; display: flex; justify-content: center; align-items: center; font-weight: bold; }
+    .fechar-modal:hover { background: #cbd5e1; }
+    .modal-titulo { color: var(--azul-marinho); margin: 0 0 15px 0; border-bottom: 1px solid var(--borda-suave); padding-bottom: 10px; font-size: 18px; font-weight: 700; }
+    .modal-dado { margin-bottom: 10px; font-size: 14px; line-height: 1.5; }
+    .modal-dado strong { color: var(--azul-marinho); }
+
+    .footer { text-align: center; padding: 25px 20px 10px 20px; color: #64748b; font-size: 13px; margin-top: 20px; border-top: 1px solid var(--borda-suave); }
+
+    @media (max-width: 768px) {
+      .header { flex-wrap: wrap; justify-content: center; text-align: center; gap: 20px; }
+      .header-logo-title { flex-direction: column; }
+      .nav-esquerda, .nav-centro, .nav-direita { justify-content: center; flex: 100%; }
+      .btn-group-views { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <header class="header">
+      <div class="header-logo-title">
+        <img src="cchla-logo.jpg" alt="Logo CCHLA">
+        <h2>Calendário de Ocupação dos Auditórios</h2>
+      </div>
+      
+      <nav class="dropdown-container" id="meuDropdownContainer">
+        <button class="btn-solicitacoes" id="btnToggleDropdown">
+          Solicitações de Reservas ▼
+        </button>
+        <div class="dropdown-menu" id="menuDropdownOpcoes">
+          <a href="/formulario" target="_blank" class="dropdown-item">Solicite uma Reserva de Auditório</a>
+          <a href="/acompanhamento" target="_blank" class="dropdown-item">Acompanhe a sua Solicitação</a>
+          <a href="/admin" target="_blank" class="dropdown-item">Gestão das Solicitações - Secretaria do CCHLA</a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="barra-navegacao-custom no-print">
+      <div class="nav-esquerda">
+        <select id="selectMesesDropdown" class="select-meses-custom"></select>
+      </div>
+      
+      <div class="nav-centro">
+        <button id="btnMesAnterior" class="btn-nav-custom">← Anterior</button>
+        <span id="txtIdentificadorCalendario" title="Clique aqui para retornar ao dia de Hoje">Carregando período...</span>
+        <button id="btnMesSeguinte" class="btn-nav-custom">Seguinte →</button>
+      </div>
+
+      <div class="nav-direita">
+        <div class="btn-group-views">
+          <button id="btnViewMes" class="btn-view active">Mês</button>
+          <button id="btnViewSemana" class="btn-view">Semana</button>
+          <button id="btnViewDia" class="btn-view">Dia</button>
+          <button id="btnViewLista" class="btn-view">Lista</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="calendar"></div>
+
+    <div class="calendario-legenda no-print">
+      <div class="legenda-item" id="leg-A" onclick="filtrarCalendario('Auditorio A', 'A')">
+        <span class="legenda-cor" style="background:#ff0000;"></span>Auditório 'A'
+      </div>
+      <div class="legenda-item" id="leg-B" onclick="filtrarCalendario('Auditorio B', 'B')">
+        <span class="legenda-cor" style="background:#000080;"></span>Auditório 'B'
+      </div>
+      <div class="legenda-item" id="leg-C" onclick="filtrarCalendario('Auditorio C', 'C')">
+        <span class="legenda-cor" style="background:#ffff00; border: 1px solid #ccc;"></span>Auditório 'C'
+      </div>
+      <div class="legenda-item" id="leg-D" onclick="filtrarCalendario('Auditorio D', 'D')">
+        <span class="legenda-cor" style="background:#008000;"></span>Auditório 'D'
+      </div>
+      <div class="legenda-item" id="leg-E" onclick="filtrarCalendario('Auditorio E', 'E')">
+        <span class="legenda-cor" style="background:#4682B4;"></span>Auditório 'E'
+      </div>
+      <div class="legenda-item" id="leg-Feriado" onclick="filtrarCalendario('FERIADO', 'Feriado')">
+        <span class="legenda-cor" style="background:#FF8C00;"></span>Feriado / Manutenção
+      </div>
+      <div class="legenda-item ativo" id="leg-TODOS" onclick="filtrarCalendario('TODOS', 'TODOS')">
+        <span class="legenda-cor" style="background:#cbd5e1;"></span>Todas Categorias ...
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    Gerência de Redes do CCHLA/UFRN - (84) 3342-2243 R112 ou (84) 99484-6847 (WhatsApp) | Copyright © 2026 - UFRN
+  </footer>
+
+  <div id="tooltipDetalhes">
+    <h3 class="tooltip-titulo" id="t-atividade">Atividade</h3>
+    <div class="tooltip-dado"><strong>Auditório:</strong> <span id="t-auditorio"></span></div>
+    <div class="tooltip-dado"><strong>Início:</strong> <span id="t-inicio"></span></div>
+    <div class="tooltip-dado"><strong>Fim:</strong> <span id="t-fim"></span></div>
+    <div class="tooltip-dado"><strong>Solicitante:</strong> <span id="t-solicitante"></span></div>
+    <div class="tooltip-dado"><strong>Departamento:</strong> <span id="t-depto"></span></div>
+  </div>
+
+  <div id="modalDetalhes">
+    <div class="modal-content">
+      <button class="fechar-modal" onclick="fecharModal()">✕</button>
+      <h3 class="modal-titulo" id="m-atividade">Atividade</h3>
+      <div class="modal-dado"><strong>Auditório:</strong> <span id="m-auditorio"></span></div>
+      <div class="modal-dado"><strong>Início:</strong> <span id="m-inicio"></span></div>
+      <div class="modal-dado"><strong>Fim:</strong> <span id="m-fim"></span></div>
+      <div class="modal-dado"><strong>Solicitante:</strong> <span id="m-solicitante"></span></div>
+      <div class="modal-dado"><strong>Departamento:</strong> <span id="m-depto"></span></div>
+    </div>
+  </div>
+  <script>
+    let calendarInstance = null;
+    let todosEventosGlobais = []; 
+
+    // CORREÇÃO 1: Função blindada contra Fuso Horário (Não usa new Date para parse)
+    function formatarDataCustom(isoStr) {
+      if(!isoStr) return '-';
+      let partes = isoStr.split('T');
+      let dataFormatada = partes[0].split('-').reverse().join('/');
+      
+      // Se for um evento com horário específico (diferente de 00:00 e 23:59) exibe a hora
+      if (partes.length > 1) {
+          let hora = partes[1].substring(0, 5);
+          if (hora !== "00:00" && hora !== "23:59") {
+              return `${dataFormatada} às ${hora}`;
+          }
+      }
+      // Se for feriado ou dia todo, exibe só a data limpa
+      return dataFormatada;
+    }
+
+    function getCorAuditorio(nomeAuditorio, nomeAtividade) {
+      let n = (nomeAuditorio || "").toUpperCase();
+      let ativ = (nomeAtividade || "").toUpperCase();
+      
+      if(n.includes("FERIADO") || ativ.includes("FERIADO") || ativ.includes("FACULTATIVO") || n.includes("FACULTATIVO")) {
+        return { bg: "#FF8C00", text: "#ffffff", especial: true };
+      }
+      if(n.includes("MANUTENÇÃO") || n.includes("MANUTENCAO") || ativ.includes("MANUTENÇÃO") || ativ.includes("MANUTENCAO")) {
+        return { bg: "#991b1b", text: "#ffffff", especial: true }; 
+      }
+
+      if(n === "AUDITORIO A" || n === "AUDITÓRIO A") return { bg: "#ff0000", text: "#000000", especial: false };
+      if(n === "AUDITORIO B" || n === "AUDITÓRIO B") return { bg: "#000080", text: "#000000", especial: false };
+      if(n === "AUDITORIO C" || n === "AUDITÓRIO C") return { bg: "#ffff00", text: "#000000", especial: false };
+      if(n === "AUDITORIO D" || n === "AUDITÓRIO D") return { bg: "#008000", text: "#000000", especial: false };
+      if(n === "AUDITORIO E" || n === "AUDITÓRIO E") return { bg: "#4682B4", text: "#000000", especial: false };
+      
+      return { bg: "#cbd5e1", text: "#000000", especial: false };
+    }
+
+    function popularDropdownMeses() {
+      const select = document.getElementById('selectMesesDropdown');
+      const hoje = new Date();
+      
+      for (let i = -6; i <= 6; i++) {
+        let d = new Date(hoje.getFullYear(), hoje.getMonth() + i, 1);
+        let opt = document.createElement('option');
+        
+        opt.value = `${d.getFullYear()}-${(d.getMonth() + 1).toString().padStart(2, '0')}-01`;
+        
+        let nomeMes = d.toLocaleString('pt-BR', { month: 'long' });
+        opt.innerText = `${nomeMes.charAt(0).toUpperCase() + nomeMes.slice(1).toLowerCase()} ${d.getFullYear()}`;
+        
+        if (i === 0) opt.selected = true;
+        select.appendChild(opt);
+      }
+
+      select.addEventListener('change', function() {
+        if(calendarInstance) calendarInstance.gotoDate(this.value);
+      });
+    }
+
+    async function carregarEventos() {
+      try {
+        // =========================================================================
+        // ATENÇÃO: MANTENHA A SUA URL DA FUNÇÃO obterEventosCalendario AQUI!
+        // =========================================================================
+        const urlAPI = '/api/obterEventosCalendario';
+        
+        document.getElementById('txtIdentificadorCalendario').innerText = 'Baixando eventos do servidor...';
+
+        const resposta = await fetch(urlAPI);
+        if (!resposta.ok) throw new Error("Falha na comunicação com o servidor");
+        
+        const dadosBanco = await resposta.json();
+        const eventos = [];
+
+        dadosBanco.forEach((d) => {
+            let corInfo = getCorAuditorio(d.Auditório, d.Atividade);
+
+            // CORREÇÃO 2: Separa rigorosamente Feriado (allDay) de Manutenção (com hora)
+            let isDiaInteiro = (d.Auditório === "FERIADO") || (d.Início && d.Início.includes("T00:00"));
+
+            eventos.push({
+              title: d.Atividade, 
+              start: d.Início,
+              end: d.Fim,
+              allDay: isDiaInteiro, 
+              backgroundColor: corInfo.bg,
+              borderColor: corInfo.bg,
+              textColor: corInfo.text,
+              classNames: corInfo.especial ? ['evento-especial'] : ['evento-normal'],
+              extendedProps: {
+                corFundo: corInfo.bg,
+                corTexto: corInfo.text,
+                especial: corInfo.especial,
+                auditorio: d.Auditório,
+                atividade: d.Atividade,
+                solicitante: d.Solicitante,
+                departamento: d.Departamento,
+                // Salvamos a string original exata que veio do banco de dados
+                inicioOriginal: d.Início,
+                fimOriginal: d.Fim
+              }
+            });
+        });
+
+        todosEventosGlobais = eventos;
+        inicializarCalendario(todosEventosGlobais);
+
+      } catch (error) {
+        console.error("Erro ao carregar reservas:", error);
+        document.getElementById('txtIdentificadorCalendario').innerText = 'Erro ao carregar';
+        alert("Erro ao conectar com a API para buscar as reservas aprovadas.");
+      }
+    }
+
+    function inicializarCalendario(eventosMapeados) {
+      const calendarEl = document.getElementById('calendar');
+      const tooltip = document.getElementById('tooltipDetalhes');
+      
+      calendarInstance = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        locale: 'pt-br',
+        headerToolbar: false,
+        displayEventTime: true, 
+        displayEventEnd: false, 
+        eventTimeFormat: {
+          hour: '2-digit',
+          minute: '2-digit',
+          hour12: false
+        },
+        events: eventosMapeados,
+        
+        eventContent: function(arg) {
+          let p = arg.event.extendedProps;
+          let timeText = '';
+          
+          // Desenha a hora no bloquinho do calendário apenas se não for dia inteiro
+          if (!arg.event.allDay && arg.event.start) {
+             let h = String(arg.event.start.getHours()).padStart(2, '0');
+             let m = String(arg.event.start.getMinutes()).padStart(2, '0');
+             // Ajusta a cor da hora baseada no tipo de evento para dar contraste
+             let corHora = p.especial ? p.corTexto : '#051638';
+             timeText = `<b style="color: ${corHora}; margin-right: 4px;">${h}:${m}</b>`;
+          }
+          
+          if (p.especial) {
+             return {
+                html: `<div style="cursor: pointer; background-color: ${p.corFundo}; color: ${p.corTexto}; padding: 3px 5px; border-radius: 3px; font-size: 11.5px; font-weight: 600; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; line-height: 1.3;">
+                         ${timeText}${arg.event.title}
+                       </div>`
+             };
+          } else {
+             return {
+                html: `<div class="evento-normal-inner" style="cursor: pointer; border-left: 5px solid ${p.corFundo}; padding: 3px 5px 3px 6px; font-size: 11.5px; color: #334155; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; line-height: 1.3;">
+                         ${timeText}<span style="font-weight: 600;">${arg.event.title}</span>
+                       </div>`
+             };
+          }
+        },
+
+        eventClick: function(info) {
+          const p = info.event.extendedProps;
+          tooltip.style.display = 'none';
+
+          document.getElementById('m-atividade').innerText = p.atividade || '-';
+          document.getElementById('m-auditorio').innerText = p.auditorio || '-';
+          // Usa a nova função que lê a string original para montar o modal
+          document.getElementById('m-inicio').innerText = formatarDataCustom(p.inicioOriginal);
+          document.getElementById('m-fim').innerText = formatarDataCustom(p.fimOriginal);
+          document.getElementById('m-solicitante').innerText = p.solicitante || '-';
+          document.getElementById('m-depto').innerText = p.departamento || '-';
+
+          document.getElementById('modalDetalhes').style.display = 'flex';
+        },
+        
+        eventMouseEnter: function(info) {
+          const p = info.event.extendedProps;
+          
+          document.getElementById('t-atividade').innerText = p.atividade || '-';
+          document.getElementById('t-auditorio').innerText = p.auditorio || '-';
+          // Usa a nova função que lê a string original para montar o tooltip
+          document.getElementById('t-inicio').innerText = formatarDataCustom(p.inicioOriginal);
+          document.getElementById('t-fim').innerText = formatarDataCustom(p.fimOriginal);
+          document.getElementById('t-solicitante').innerText = p.solicitante || '-';
+          document.getElementById('t-depto').innerText = p.departamento || '-';
+
+          tooltip.style.display = 'block';
+
+          info.el.onmousemove = function(e) {
+            let tooltipHeight = tooltip.offsetHeight;
+            let tooltipWidth = tooltip.offsetWidth;
+
+            let top = e.pageY - tooltipHeight - 15;
+            let left = e.pageX - (tooltipWidth / 2);
+
+            if (top < window.scrollY + 10) top = e.pageY + 20; 
+            if (left < 10) left = 10;
+            if (left + tooltipWidth > window.innerWidth - 10) left = window.innerWidth - tooltipWidth - 10;
+
+            tooltip.style.top = top + 'px';
+            tooltip.style.left = left + 'px';
+          }
+        },
+        
+        eventMouseLeave: function(info) {
+          tooltip.style.display = 'none';
+          info.el.onmousemove = null;
+        },
+
+        datesSet: function(info) {
+          const dataFoco = info.view.currentStart;
+          const ano = dataFoco.getFullYear();
+          const mes = dataFoco.getMonth();
+
+          const dPrev = new Date(ano, mes - 1, 1);
+          const dNext = new Date(ano, mes + 1, 1);
+
+          let stringMesAtual = dataFoco.toLocaleString('pt-BR', { month: 'long' });
+          stringMesAtual = stringMesAtual.charAt(0).toUpperCase() + stringMesAtual.slice(1).toLowerCase();
+
+          let stringMesPrev = dPrev.toLocaleString('pt-BR', { month: 'long' });
+          stringMesPrev = stringMesPrev.charAt(0).toUpperCase() + stringMesPrev.slice(1).toLowerCase();
+
+          let stringMesNext = dNext.toLocaleString('pt-BR', { month: 'long' });
+          stringMesNext = stringMesNext.charAt(0).toUpperCase() + stringMesNext.slice(1).toLowerCase();
+
+          const hoje = new Date();
+          const diaHoje = String(hoje.getDate()).padStart(2, '0');
+          let mesNomeHoje = hoje.toLocaleString('pt-BR', { month: 'long' });
+          mesNomeHoje = mesNomeHoje.charAt(0).toUpperCase() + mesNomeHoje.slice(1).toLowerCase();
+          const anoHoje = hoje.getFullYear();
+          
+          if (mes === hoje.getMonth() && ano === anoHoje) {
+            document.getElementById('txtIdentificadorCalendario').innerText = `${diaHoje} de ${mesNomeHoje} ${anoHoje}`;
+          } else {
+            document.getElementById('txtIdentificadorCalendario').innerText = `${stringMesAtual} ${ano}`;
+          }
+
+          document.getElementById('btnMesAnterior').innerText = `← ${stringMesPrev}`;
+          document.getElementById('btnMesSeguinte').innerText = `${stringMesNext} →`;
+
+          const formatoBusca = `${ano}-${(mes + 1).toString().padStart(2, '0')}-01`;
+          document.getElementById('selectMesesDropdown').value = formatoBusca;
+        }
+      });
+
+      calendarInstance.render();
+
+      document.getElementById('txtIdentificadorCalendario').onclick = () => calendarInstance.today();
+      document.getElementById('btnMesAnterior').onclick = () => calendarInstance.prev();
+      document.getElementById('btnMesSeguinte').onclick = () => calendarInstance.next();
+
+      function alterarVisualizacao(nomeView, idBotao) {
+        calendarInstance.changeView(nomeView);
+        document.querySelectorAll('.btn-view').forEach(b => b.classList.remove('active'));
+        document.getElementById(idBotao).classList.add('active');
+      }
+
+      document.getElementById('btnViewMes').onclick = () => alterarVisualizacao('dayGridMonth', 'btnViewMes');
+      document.getElementById('btnViewSemana').onclick = () => alterarVisualizacao('timeGridWeek', 'btnViewSemana');
+      document.getElementById('btnViewDia').onclick = () => alterarVisualizacao('timeGridDay', 'btnViewDia');
+      document.getElementById('btnViewLista').onclick = () => alterarVisualizacao('listWeek', 'btnViewLista');
+    }
+
+    window.filtrarCalendario = function(categoriaBusca, idBotaoLegenda) {
+      document.querySelectorAll('.legenda-item').forEach(el => el.classList.remove('ativo'));
+      document.getElementById('leg-' + idBotaoLegenda).classList.add('ativo');
+
+      let eventosFiltrados = [];
+
+      if (categoriaBusca === 'TODOS') {
+        eventosFiltrados = todosEventosGlobais; 
+      } else if (categoriaBusca === 'FERIADO') {
+        eventosFiltrados = todosEventosGlobais.filter(e => e.extendedProps.especial === true);
+      } else {
+        eventosFiltrados = todosEventosGlobais.filter(e => {
+          let aud = e.extendedProps.auditorio || "";
+          return aud.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase() === categoriaBusca.toUpperCase();
+        });
+      }
+
+      if (calendarInstance) {
+        calendarInstance.removeAllEventSources();
+        calendarInstance.addEventSource(eventosFiltrados);
+      }
+    };
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const btnToggle = document.getElementById('btnToggleDropdown');
+        const menuOpcoes = document.getElementById('menuDropdownOpcoes');
+        
+        btnToggle.addEventListener('click', function(e) {
+          e.stopPropagation();
+          menuOpcoes.classList.toggle('show');
+        });
+        
+        window.addEventListener('click', function(e) {
+          if (!document.getElementById('meuDropdownContainer').contains(e.target)) {
+            menuOpcoes.classList.remove('show');
+          }
+        });
+
+        popularDropdownMeses();
+        carregarEventos(); 
+    });
+
+    window.fecharModal = () => document.getElementById('modalDetalhes').style.display = 'none';
+    window.onclick = (e) => {
+      const modal = document.getElementById('modalDetalhes');
+      if (e.target === modal) modal.style.display = 'none';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>PROAE [Pró-Reitoria de Assuntos Estudantis] UFRN</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="PROAE - Pró-Reitoria de Assuntos Estudantis da UFRN">
+<meta name="keywords" content="proae, pro-reitoria de assuntos estudantis ufrn, proae ufrn, assuntos estudantis ufrn, pro-reitoria ufrn, pro-reitoria, assuntos estudantis, ufrn, universidade federal do rio grande do norte, universidade do rio grande do norte, universidade rn">
+<meta name="copyright" content="UFRN">
+<meta name="Robots" content="Index,Follow">
+<link rel="author" href="https://info.ufrn.br/">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Icone do site -->
+<link rel="shortcut icon" href="img/favicon-ufrn.png?v=2.0.0">
+<link rel="icon" href="img/favicon-ufrn.png?v=2.0.0" type="image/x-icon">
+<!-- Estilo geral -->
+<link rel="stylesheet" type="text/css" href="css/main.css?v=2.0.0" />
+<!-- Font awesome -->
+<link rel="stylesheet" href="fonts/fontawesome-free/css/all.min.css?v=2.0.0">
+<!-- parser de conteudo - common -->
+<script type="text/javascript" src="js/script_parse_common.js?v=2.0.0"></script>
+<script type="text/javascript" src="https://arquivos.info.ufrn.br/arquivos/2023032242cfad1243936953c7d717b89d/STICookieConsent.js"></script>
+<!-- parser de texto xml - index -->
+<script type="text/javascript" src="js/script_parse_xml-index.js?v=2.0.0"></script>
+</head>
+<body>
+<div id="barra-brasil">
+  <ul id="menu-barra-temp" style="list-style: none">
+    <li style="display:inline; float:left;padding-right:10px; margin-right:10px; border-right:1px solid #EDEDED">
+      <a href="http://brasil.gov.br" target="_blank" rel="noopener noreferrer" style="font-family:sans,sans-serif; text-decoration:none; color:white;">Portal do Governo Brasileiro</a>
+    </li>
+  </ul>
+</div>
+  <header>
+    <div class="centraliza_header">
+      <div class="header-row header-principal">
+        <a href="index.php" title="Página inicial do Site da PROAE">
+  <img class="logo_principal" src="img/logo-proae-extenso.svg?v=2.0.0" width="440" height="58">
+</a>
+        <div class="header-direita">
+          <div class="redes_sociais">
+  <a href="https://www.facebook.com/UFRN.Proae" target="_blank" rel="noopener noreferrer" title="Adicione nosso perfil no Facebook!" class="rede_social link">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://www.instagram.com/servicosocialproaeufrn/" target="_blank" rel="noopener noreferrer" title="Siga-nos no Instagram!" class="rede_social link">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <!-- <a href="https://www.youtube.com/channel/UCfbFUodp0XZCyBYnVlpZIyw" target="_blank" rel="noopener noreferrer" title="Curta nosso canal no youtube!" class="rede_social link">
+    <i class="fab fa-youtube"></i>
+  </a> -->
+  <!-- <a href="https://twitter.com/..." target="_blank" rel="noopener noreferrer" title="Siga-nos no Twitter" class="rede_social link">
+    <i class="fab fa-twitter"></i>
+  </a> -->
+</div>
+<form action="busca.php" method="get" id="form_busca">
+  <input type="text" value="" name="s" id="chave">
+  <button title="Buscar" type="submit" class="link">
+    <i class="fa fa-search" aria-hidden="true"></i>
+  </button>
+</form>
+        </div>
+      </div>
+      <div class="header-row header-secundario">
+        <a href="https://ufrn.br" title="Acesso ao Portal da UFRN" target="_blank" rel="noopener noreferrer" class="link">
+          Acessar Portal da UFRN <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+<nav id="container-menu">
+  <ul id="menu">
+    <li>
+      <a href="javascript:void(0)" data-root="root-menu" title="Sobre a PROAE">
+        Sobre <i class="fa fa-angle-down"></i>
+      </a>
+      <ul>
+        <li><a href="pagina.php?a=s_apresentacao" title="Apresentação sobre a PROAE">Apresentação</a></li>
+        <li><a href="https://calendar.google.com/calendar/embed?src=c_0qph1k0jpek17vfkh6lob6apgo%40group.calendar.google.com&ctz=America%2FRecife" target="_blank" title="Agenda Administrativa da PROAE" rel="noopener noreferrer">Agenda Administrativa</a></li>
+        <li><a href="pagina.php?a=s_diretorias" title="Diretorias da PROAE">Diretorias</a></li>
+        <li><a href="pagina.php?a=s_coordenadorias" title="Coordenadorias da PROAE">Coordenadorias</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="javascript:void(0)" data-root="root-menu" title="Assistência Estudantil">
+        Assistência estudantil <i class="fa fa-angle-down"></i>
+      </a>
+      <ul>
+        <li><a href="pagina.php?a=a_programa_ass" title="Programas de Assistência Estudantil da PROAE">Programas de Assistência</a></li>
+        <li><a href="pagina.php?a=a_quem_direito" title="Informações sobre quem tem direito à Assistência Estudantil da PROAE">Quem tem direito?</a></li>
+        <li><a href="documento.php?id=175992611" title="Departamento de Atenção à Saúde do Estudante">DASE</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="http://ru.ufrn.br/" data-root="root-menu" title="Site do RU (Restaurante Universitário)" target="_blank" rel="noopener noreferrer">
+        RU
+      </a>
+    </li>
+    <li>
+      <a href="javascript:void(0)" data-root="root-menu" title="Esportes">
+        Esportes <i class="fa fa-angle-down"></i>
+      </a>
+      <ul>
+        <li><a href="pagina.php?a=e_historico" title="Histórico dos esportes na UFRN">Histórico</a></li>
+        <li><a href="pagina.php?a=e_modalidades" title="Modalidades esportivas na UFRN">Modalidades</a></li>
+        <li><a href="pagina.php?a=e_campeonatos" title="Campeonatos esportivos na UFRN">Campeonatos</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="javascript:void(0)" data-root="root-menu" title="Residentes na UFRN">
+        Residente <i class="fa fa-angle-down"></i>
+      </a>
+      <ul>
+        <li><a href="pagina.php?a=p_historia_res" title="Informações sobre as Residências Universitárias">Informações Residências</a></li>
+        <li><a href="galeria.php?id=15289010" title="Fotos das Residências Universitárias da UFRN">Fotos das Residências</a></li>
+        <li><a href="eventos.php" title="Informações sobre eventos para residentes">Eventos</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="javascript:void(0)" data-root="root-menu" title="Documentos sobre a atuação da PROAE">
+        Documentos <i class="fa fa-angle-down"></i>
+      </a>
+      <ul>
+        <li><a href="documento.php?id=126227109" title="Regimentos">Regimentos</a></li>
+        <li><a href="documento.php?id=126227104" title="Resoluções">Resoluções</a></li>
+        <li><a href="documento.php?id=135820898" title="Editais">Editais</a></li>
+        <li><a href="documentos.php" title="Todos os documentos disponíveis">Todos os documentos</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="javascript:void(0)" data-root="root-menu" title="Acompanhe as novidades da PROAE">
+        Acompanhe <i class="fa fa-angle-down"></i>
+      </a>
+      <ul>
+        <li><a href="noticias.php" title="Notícias da PROAE">Notícias</a></li>
+        <li><a href="eventos.php" title="Eventos da PROAE">Eventos</a></li>
+        <li><a href="galerias.php" title="Galerias de fotos da PROAE">Galerias de Fotos</a></li>
+        <li><a href="https://www.youtube.com/channel/UCfbFUodp0XZCyBYnVlpZIyw" title="Galeria de vídeos da PROAE" target="_blank" rel="noopener noreferrer">Galeria de Vídeos</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="javascript:void(0)" data-root="root-menu" title="Contato com a PROAE">
+        Contato <i class="fa fa-angle-down"></i>
+      </a>
+      <ul>
+        <li><a href="contato.php" title="Contatos da PROAE">Contatos</a></li>
+        <li><a href="pagina.php?a=localizacao" title="Localização da PROAE">Nossa localização</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<main id="estrutura_index" class="estrutura">
+  <section id="secao_noticias" class="gp-blocos">
+<div class="bloco bloco-noticias">
+  <div class="bloco-titulo">
+    <h1 class="head">
+      Destaques
+    </h1>
+  </div>
+  <!-- fim bloco-titulo -->
+      <div class="wrapper-slider-noticias">
+      <ul id="slider-noticias-list">
+                <li class="noticia-item">
+                    <div class="prevent-cycle-height">
+            <div class="destaque-area-txt">
+              <h2 class="destaque-titulo">
+                <a href="noticia.php?id=73178560">
+                  RESULTADO PARCIAL  RESIDÊNCIA/AUXÍLIO MORADIA (Campi central/Natal, EAJ/Macaíba, CERES/Caicó e FACISA/Santa Cruz) - EDITAL No 15/2026  PROAE/UFRN                </a>
+              </h2>
+              <p class="txt-padrao">
+                A Pr&oacute;-Reitoria de Assuntos Estudantis (PROAE) por meio da Divis&atilde;o de Assist&ecirc;ncia Social e A&ccedil;&otilde;es de Perman&ecirc;ncia (DASAP/PROAE) torna p&uacute;blico o RESULTADO PARCIAL &ndash; RESID&Ecirc;NCIA/AUX&Iacute;LIO MORADIA (Campi...              </p>
+            </div>
+            <!-- destaque-area-txt fim -->
+            <a href="noticia.php?id=73178560" class="link-noticia-completa link">
+              Leia mais <i class="fas fa-angle-right"></i>
+            </a>
+          </div>
+          <!-- prevent-cycle-height - fim -->
+        </li>
+                <li class="noticia-item">
+                    <div class="prevent-cycle-height">
+            <div class="destaque-area-txt">
+              <h2 class="destaque-titulo">
+                <a href="noticia.php?id=73178526">
+                  RESULTADO PARCIAL - EDITAL No 11/2026  PROMISAES/SRI/ PROAE                  </a>
+              </h2>
+              <p class="txt-padrao">
+                A Pr&oacute;-Reitoria de Assuntos Estudantis (PROAE) por meio da Divis&atilde;o de Assist&ecirc;ncia Social e A&ccedil;&otilde;es de Perman&ecirc;ncia (DASAP/PROAE) torna p&uacute;blico o RESULTADO PARCIAL - EDITAL No 11/2026 &ndash; PROMISAES/SRI/ PROAE .Conf...              </p>
+            </div>
+            <!-- destaque-area-txt fim -->
+            <a href="noticia.php?id=73178526" class="link-noticia-completa link">
+              Leia mais <i class="fas fa-angle-right"></i>
+            </a>
+          </div>
+          <!-- prevent-cycle-height - fim -->
+        </li>
+                <li class="noticia-item">
+                    <div class="prevent-cycle-height">
+            <div class="destaque-area-txt">
+              <h2 class="destaque-titulo">
+                <a href="noticia.php?id=73091832">
+                  RESULTADO FINAL DO EDITAL Nº 16/2026 - AUXÍLIOS ÓCULOS, CRECHE E BOLSA ATLETA (Todos os Campi)                </a>
+              </h2>
+              <p class="txt-padrao">
+                A Pr&oacute;-Reitoria de Assuntos Estudantis (PROAE) por meio da Divis&atilde;o de Assist&ecirc;ncia Social e A&ccedil;&otilde;es de Perman&ecirc;ncia (DASAP/PROAE) torna p&uacute;blico o Resultado FINAL do&nbsp;EDITAL N&ordm; 16/2026 - AUX&Iacute;LIOS &Oacute...              </p>
+            </div>
+            <!-- destaque-area-txt fim -->
+            <a href="noticia.php?id=73091832" class="link-noticia-completa link">
+              Leia mais <i class="fas fa-angle-right"></i>
+            </a>
+          </div>
+          <!-- prevent-cycle-height - fim -->
+        </li>
+                <li class="noticia-item">
+                    <div class="prevent-cycle-height">
+            <div class="destaque-area-txt">
+              <h2 class="destaque-titulo">
+                <a href="noticia.php?id=73063323">
+                  RESULTADO PARCIAL DO EDITAL No 15/2026.2 RESIDÊNCIA UNIVERSITÁRIA/AUXÍLIO MORADIA  (FELCS-CURRAIS NOVOS/RN)                </a>
+              </h2>
+              <p class="txt-padrao">
+                A Pr&oacute;-Reitoria de Assuntos Estudantis (PROAE) por meio da Divis&atilde;o de Assist&ecirc;ncia Social e A&ccedil;&otilde;es de Perman&ecirc;ncia (DASAP/PROAE) torna p&uacute;blico o RESULTADO PARCIAL DO EDITAL No 15/2026.2&ndash; RESID&Ecirc;NCIA UNIVERS...              </p>
+            </div>
+            <!-- destaque-area-txt fim -->
+            <a href="noticia.php?id=73063323" class="link-noticia-completa link">
+              Leia mais <i class="fas fa-angle-right"></i>
+            </a>
+          </div>
+          <!-- prevent-cycle-height - fim -->
+        </li>
+                <li class="noticia-item">
+                    <div class="prevent-cycle-height">
+            <div class="destaque-area-txt">
+              <h2 class="destaque-titulo">
+                <a href="noticia.php?id=72980169">
+                  RESULTADO PARCIAL  BOLSA ATLETA (Todos os Campi) - EDITAL No 16/2026  PROAE/UFRN.                </a>
+              </h2>
+              <p class="txt-padrao">
+                A Pr&oacute;-Reitoria de Assuntos Estudantis (PROAE) por meio da Divis&atilde;o de Assist&ecirc;ncia Social e A&ccedil;&otilde;es de Perman&ecirc;ncia (DASAP/PROAE) torna p&uacute;blico o RESULTADO PARCIAL &ndash; BOLSA ATLETA (Todos os Campi) -&nbsp;EDITAL No...              </p>
+            </div>
+            <!-- destaque-area-txt fim -->
+            <a href="noticia.php?id=72980169" class="link-noticia-completa link">
+              Leia mais <i class="fas fa-angle-right"></i>
+            </a>
+          </div>
+          <!-- prevent-cycle-height - fim -->
+        </li>
+              </ul>
+      <!-- slider-noticias-list fim -->
+    </div>
+  <!-- wrapper-slider-noticias fim -->
+</div>
+<!-- bloco-noticias fim -->
+<div class="bloco bloco-noticias">
+  <div class="bloco-titulo">
+    <h1 class="head">
+      Outras notícias
+    </h1>
+    <a href="noticias.php" title="Acessar lista completa de notícias" class="head-link link">
+      Ver mais
+    </a>
+  </div>
+  <!-- fim bloco-titulo -->
+  <div class="wrapper-outras-noticias">
+          <ul class="lista-linkada">
+                  <li class="item">
+            <p class="item-date">
+              09/10/2026            </p>
+            <a href="noticia.php?id=72979875" class="item-titulo link">
+              EDITAL No 011/2026 PROMISAES/SRI/PROAE  PROCESSO SELETIVO DA BOLSA PROMISAES  PROJETO MILTON SANTOS DE  ACESSO AO ENSINO SUPERIOR            </a>
+          </li>
+                  <li class="item">
+            <p class="item-date">
+              07/10/2026            </p>
+            <a href="noticia.php?id=72943274" class="item-titulo link">
+              RETIFICAÇÃO DO RESULTADO FINAL DO EDITAL Nº 10/2026  AUXÍLIO ALIMENTAÇÃO DA PÓS-GRADUAÇAO (Todos os Campi)              </a>
+          </li>
+                  <li class="item">
+            <p class="item-date">
+              07/10/2026            </p>
+            <a href="noticia.php?id=72943212" class="item-titulo link">
+              RETIFICAÇÃO DO RESULTADO FINAL DO EDITAL Nº 11/2026  AUXÍLIO MORADIA  Pós Graduação (Todos os Campi)             </a>
+          </li>
+              </ul>
+      <!-- fim lista-linkada -->
+      </div>
+  <!-- fim wrapper-outras-noticias -->
+</div>
+<!-- fim 2o bloco-noticias -->
+</section>
+<section id="secao_informes" class="gp-blocos">
+<div class="bloco bloco-informes">
+	<div class="bloco-titulo">
+		<h1 class="head">
+			Eventos
+		</h1>
+		<a href="eventos.php" title="Acessar lista completa de eventos" class="head-link link">
+			Ver mais
+		</a>
+	</div>
+	<!-- fim bloco-titulo -->
+	<div class="wrapper-informes">
+          <p class="txt-padrao">
+        Nenhum evento foi encontrado no momento.
+      </p>
+    	</div>
+	<!-- fim wrapper-informes -->
+</div>
+<!-- fim 1o bloco-informes -->
+<div class="bloco bloco-informes">
+      <div class="bloco-titulo">
+      <h1 class="head">
+        Restaurante Universitário      </h1>
+    </div>
+    <!-- fim bloco-titulo -->
+    <div class="wrapper-informes">
+      <!-- parser string_ru - início -->
+      <!-- raw_string_ru inicio -->
+      <script id="raw_string_ru">const ru_stringFromXml = `<p class="tamanho_fonte">O Resturante Universit&aacute;rio da UFRN agora conta com seu pr&oacute;prio site, para consultar o card&aacute;pio e demais informa&ccedil;&otilde;es clique abaixo.&nbsp;</p>`;</script>
+      <!-- raw_string_ru fim -->
+      <p id="string_ru_parsed" class="txt-padrao"></p>
+      <script type="text/javascript">recursiveParserTxtFromXml(ru_stringFromXml, "#raw_string_ru", "#string_ru_parsed");</script>
+      <!-- parser string_ru - fim -->
+      <a href="http://ru.ufrn.br/" title="Acesso ao site do RU" target="_blank" rel="noopener noreferrer" class="link">
+        Acessar site <i class="fas fa-external-link-alt"></i>
+      </a>
+    </div>
+    <!-- fim wrapper-informes -->
+  </div>
+<!-- fim 2o bloco-informes -->
+<div class="bloco bloco-informes">
+      <div class="bloco-titulo">
+      <h1 class="head">
+        Residência Universitária      </h1>
+    </div>
+    <!-- fim bloco-titulo -->
+    <div class="wrapper-informes">
+      <!-- parser string_resid - início -->
+      <!-- raw_txt_resid inicio -->
+      <script id="raw_string_resid">const resid_stringFromXml = `<p class="tamanho_fonte">&nbsp;</p>
+<p class="tamanho_fonte"><img src="http://www.sistemas.ufrn.br/shared/verImagem?salvar=false&amp;idArquivo=2428387&amp;key=a486d3849e5a09f50f0edbb34c2d47e0" alt="Resid&ecirc;ncia Universit&aacute;ria Margarida Gurgel - Campus III" width="103" height="77" />As resid&ecirc;ncias s&atilde;o moradias tempor&aacute;rias em im&oacute;veis de responsabilidade da UFRN.</p>
+<p class="tamanho_fonte">Suas vagas s&atilde;o destinadas aos alunos em situa&ccedil;&atilde;o de vulnerabilidade socioecon&ocirc;mica.</p>`;</script>
+      <!-- raw_txt_resid fim -->
+      <p id="string_resid_parsed" class="txt-padrao"></p>
+      <script type="text/javascript">recursiveParserTxtFromXml(resid_stringFromXml, "#raw_string_resid", "#string_resid_parsed");</script>
+      <!-- parser string_resid - fim -->
+      <a href="pagina.php?a=p_historia_res" class="link" title="Informações sobre as Residências Universitárias">
+        Saiba mais
+      </a>
+    </div>
+    <!-- fim wrapper-informes -->
+  </div>
+<!-- fim 3o bloco-informes -->
+</section>
+<section id="secao_mapa" class="gp-blocos">
+<div class="bloco bloco-mapa">
+  <div class="bloco-titulo">
+    <h1 class="head">
+      Nossa localização
+    </h1>
+  </div>
+  <!-- fim bloco-titulo -->
+  <div class="wrapper-mapa">
+    <p class="txt-padrao">
+      Campus Universitário Lagoa Nova, CEP 59078-970 - Caixa Postal 1524 | Natal/RN - Brasil
+    </p>
+    <!-- localização no google maps - início -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.1099805601552!2d-35.20283188582552!3d-5.840119495768419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b2ff9d991b6fb3%3A0x325634eb57ca4a84!2sPROAE%20-%20Pr%C3%B3-reitoria%20de%20Assuntos%20Estudantis%20-%20Rel%C3%B3gio%20do%20Sol!5e0!3m2!1sen!2sbr!4v1592648592074!5m2!1sen!2sbr" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0" class="mapa"></iframe>    <!-- localização no google maps - fim -->
+  </div>
+  <!-- fim wrapper-mapa -->
+</div>
+<!-- fim único bloco de mapa -->
+</section>
+</main>
+<footer id="rodape">
+  <div class="centraliza_footer">
+    <div class="container-esquerda">
+      <div class="ufrn-logo">
+        <img src="img/ufrn.svg?v=2.0.0" alt="Brasão da UFRN - Universidade Federal do Rio Grande do Norte" />
+      </div>
+      <div class="infos">
+        <address>
+          <p class="contato">
+            Informações:
+            <span class="telefone">
+              (84) 3215.3310
+            </span>
+            |
+            <span class="email">
+              <a href="mailto:secretaria.proae@ufrn.br">
+                secretaria.proae@ufrn.br              </a>
+            </span>
+          </p>
+        </address>
+        <div class="institucional">
+          <p class="copyright-notice">
+            Copyright &copy; <time datetime="2015">2015</time>-<time datetime="2026">2026</time>, PROAE.
+            Todos os direitos reservados.
+          </p>
+          <p>
+            <a href="https://ufrn.br" target="_blank" title="Acessar o portal da UFRN" rel="noopener noreferrer">
+              UFRN - Universidade Federal do Rio Grande do Norte
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container-direita">
+      <div class="icon-area">
+        <a href="sitemap.php" title="Acesse o mapa do site">
+          <i class="fas fa-sitemap"></i>
+        </a>
+      </div>
+      <p class="developed">
+        Desenvolvimento pela
+        <a href="https://info.ufrn.br" target="_blank" rel="noopener noreferrer" title="Acessar o site da Superintendência de Tecnologia da Informação">
+          STI
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
+<!-- jQuery -->
+<script type="text/javascript" src="js/deps/jquery.js?v=2.0.0"></script>
+
+<!-- Barra do governo -->
+<script type="text/javascript" src="https://barra.brasil.gov.br/barra.js" defer="defer"></script>
+<!-- Barra de governo - ajuste do atributo 'target' e 'rel' -->
+<script type="text/javascript" src="js/barragoverno.hack.js?v=2.0.0"></script>
+
+<!-- script de validação de busca -->
+<script type="text/javascript" src="js/script_validacao_busca.js?v=2.0.0"></script>
+<!-- script do menu superior -->
+<script type="text/javascript" src="js/script_menu.js?v=2.0.0"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    generateCookieConsentModal(
+				"site da PROAE" ,
+				{
+					fontSize: '16px',
+				},
+				{
+					margin: 'auto',
+          width: '980px',
+					lineHeight: '1.33'
+				},
+				false
+			);
+  })
+  </script>
+<!-- jQuery Plugin - Cycle (slider) -->
+<script type="text/javascript" src="js/deps/jquery.cycle.all.js?v=2.0.0"></script>
+<!-- jQuery Plugin - Cycle (slider) - config -->
+<script type="text/javascript" src="js/config_jquery-cycle.js?v=2.0.0"></script>
+<!-- jQuery Plugin - Cycle (slider) - equalização de alturas -->
+<script type="text/javascript" src="js/script_equaliza_cycle.js?v=2.0.0"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-4564254-32', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

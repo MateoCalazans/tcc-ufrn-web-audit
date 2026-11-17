@@ -1,0 +1,1035 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T22:26:30.463Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "siteId": "pronatec.ufrn.br",
+  "contexto": {
+    "grupo": "estatico",
+    "tecnologia": "estatico",
+    "tipo": "outro"
+  },
+  "recomendacoes": {
+    "total": 28,
+    "corrigidas": 26,
+    "corrigidasLlm": 0,
+    "llm": {
+      "prompt": "landmarks-v2",
+      "arquivo": "docs/prompts/landmarks-v2.md",
+      "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "effort": "low",
+      "maxTokens": 4000,
+      "execucao": {
+        "siteId": "pronatec.ufrn.br",
+        "prompt": "landmarks-v2",
+        "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+        "modelo": "claude-haiku-5-5",
+        "modeloResposta": "claude-haiku-5-5",
+        "respostaId": "msg_011Ch7JSd1DEy82KyCnKqTSu",
+        "chamada": true,
+        "motivo": null,
+        "ausentes": [
+          "footer"
+        ],
+        "candidatos": 1,
+        "elegiveis": 1,
+        "stopReason": "end_turn",
+        "inputTokens": 1307,
+        "outputTokens": 82,
+        "custoUsd": 0.00017170000000000003,
+        "propostas": 0,
+        "validas": 0,
+        "rejeitadas": [],
+        "textoIgual": null,
+        "landmarksDepois": null,
+        "erro": null,
+        "duracaoMs": 1293
+      }
+    }
+  },
+  "parametros": {
+    "execucoesPorVariante": 3,
+    "formFactor": "mobile",
+    "throttlingMethod": "simulate",
+    "chromeFlagsExtras": [
+      "--host-resolver-rules=MAP * ~NOTFOUND, EXCLUDE 127.0.0.1"
+    ],
+    "userAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+    "relogioSemantica": "2026-11-09T18:52:17.493Z",
+    "relogioLighthouse": "real"
+  },
+  "ordem": [
+    {
+      "variante": "corrigido",
+      "n": 1
+    },
+    {
+      "variante": "original",
+      "n": 1
+    },
+    {
+      "variante": "corrigido",
+      "n": 2
+    },
+    {
+      "variante": "original",
+      "n": 2
+    },
+    {
+      "variante": "corrigido",
+      "n": 3
+    },
+    {
+      "variante": "original",
+      "n": 3
+    }
+  ],
+  "variantes": {
+    "original": {
+      "urlLocal": "http://127.0.0.1:64110/",
+      "execucoes": [
+        {
+          "n": 1,
+          "startedAt": "2026-11-16T22:26:44.488Z",
+          "durationMs": 10525,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 57,
+            "accessibility": 86,
+            "best-practices": 77,
+            "seo": 75
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:64110/",
+          "mainDocumentUrl": "http://127.0.0.1:64110/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2937,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 57,
+              "accessibility": 86,
+              "best-practices": 77,
+              "seo": 75
+            },
+            "fcpMs": 7210.095449999988,
+            "lcpMs": 15913.64249999998,
+            "tbtMs": 131,
+            "cls": 0.01727288484499373,
+            "speedIndexMs": 7210.095449999988,
+            "pesoTotalBytes": 2173644,
+            "requisicoes": 268,
+            "jsNaoUsadoBytes": 277180,
+            "cssNaoUsadoBytes": 92000
+          }
+        },
+        {
+          "n": 2,
+          "startedAt": "2026-11-16T22:27:05.433Z",
+          "durationMs": 10542,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 57,
+            "accessibility": 86,
+            "best-practices": 77,
+            "seo": 75
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:64110/",
+          "mainDocumentUrl": "http://127.0.0.1:64110/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2872.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 57,
+              "accessibility": 86,
+              "best-practices": 77,
+              "seo": 75
+            },
+            "fcpMs": 7430.031400000009,
+            "lcpMs": 16059.148000000043,
+            "tbtMs": 126.5,
+            "cls": 0.01727288484499373,
+            "speedIndexMs": 7430.031400000009,
+            "pesoTotalBytes": 2173644,
+            "requisicoes": 268,
+            "jsNaoUsadoBytes": 277223,
+            "cssNaoUsadoBytes": 92000
+          }
+        },
+        {
+          "n": 3,
+          "startedAt": "2026-11-16T22:27:26.322Z",
+          "durationMs": 10467,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 53,
+            "accessibility": 86,
+            "best-practices": 77,
+            "seo": 75
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:64110/",
+          "mainDocumentUrl": "http://127.0.0.1:64110/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2445,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 53,
+              "accessibility": 86,
+              "best-practices": 77,
+              "seo": 75
+            },
+            "fcpMs": 7380.119624999999,
+            "lcpMs": 15994.239250000017,
+            "tbtMs": 247,
+            "cls": 0.01727288484499373,
+            "speedIndexMs": 7380.119624999999,
+            "pesoTotalBytes": 2173644,
+            "requisicoes": 268,
+            "jsNaoUsadoBytes": 277219,
+            "cssNaoUsadoBytes": 92000
+          }
+        }
+      ],
+      "mediana": {
+        "criterio": "nota-performance",
+        "n": 1
+      },
+      "metricas": {
+        "notas": {
+          "performance": 57,
+          "accessibility": 86,
+          "best-practices": 77,
+          "seo": 75
+        },
+        "fcpMs": 7210.095449999988,
+        "lcpMs": 15913.64249999998,
+        "tbtMs": 131,
+        "cls": 0.01727288484499373,
+        "speedIndexMs": 7210.095449999988,
+        "pesoTotalBytes": 2173644,
+        "requisicoes": 268,
+        "jsNaoUsadoBytes": 277180,
+        "cssNaoUsadoBytes": 92000
+      },
+      "variacaoPerformance": {
+        "n": 3,
+        "min": 53,
+        "max": 57,
+        "amplitude": 4,
+        "media": 55.67,
+        "desvioPadrao": 2.31
+      },
+      "semantica": {
+        "status": "ok",
+        "indicadores": {
+          "divSpan": {
+            "div": 133,
+            "span": 60,
+            "total": 501,
+            "proporcao": 0.3852295409181637
+          },
+          "landmarks": {
+            "banner": 1,
+            "navigation": 1,
+            "main": 1,
+            "contentinfo": 0
+          },
+          "titulos": {
+            "total": 51,
+            "h1": 1,
+            "porNivel": [
+              1,
+              6,
+              43,
+              0,
+              1,
+              0
+            ],
+            "saltos": 0,
+            "maiorSalto": 0,
+            "primeiroNivel": 5
+          },
+          "estrutura": {
+            "article": 38,
+            "section": 7,
+            "aside": 0,
+            "figure": 0,
+            "ul": 2,
+            "ol": 0
+          },
+          "interativosFalsos": {
+            "comOnclick": 0,
+            "falsos": 0
+          },
+          "metadados": {
+            "lang": null,
+            "temTitle": true,
+            "titleComprimento": 17,
+            "temViewport": true,
+            "temDescription": false
+          },
+          "imagens": {
+            "total": 14,
+            "semAlt": 0,
+            "altVazio": 13,
+            "semAltComAlternativa": 0
+          },
+          "campos": {
+            "total": 0,
+            "semLabel": 0,
+            "semLabelComPlaceholderOuTitle": 0
+          },
+          "obsoletas": {
+            "roteiro": 0,
+            "whatwg": 0,
+            "porTag": {}
+          },
+          "tabelas": {
+            "total": 0,
+            "layoutDeclarada": 0,
+            "layoutHeuristica": 0,
+            "dados": 0,
+            "indeterminada": 0
+          }
+        },
+        "indice": {
+          "subnotas": {
+            "landmarks": 75,
+            "titulos": 100,
+            "imagens": 100,
+            "campos": null,
+            "divSpan": 61.477045908183634,
+            "metadados": 50,
+            "interativos": null,
+            "obsoletos": 100
+          },
+          "indice": 82.68463073852296,
+          "indicePesosIguais": 81.07950765136394
+        },
+        "networkidleTimeout": false
+      },
+      "faltasNoServidor": [
+        "/favicon.ico",
+        "/robots.txt",
+        "/assets/es-module-shims.js-c69f1a5dd068dfc08a4cedc0ad77b792985bf256e162852bd03cdf764b666c4a.map",
+        "/assets/turbo.min.js-24086855a1740f1ed123d14c033071ab88963d4eb7c9875ea45441d48d8a79d2.map",
+        "/_ext/ga.jspm.io/npm:@hotwired/stimulus@3.2.2/dist/stimulus.js.map",
+        "/_ext/ga.jspm.io/npm:chart.js@4.2.0/dist/chart.js.map",
+        "/_ext/ga.jspm.io/npm:chart.js@4.2.0/_/c1719c72.js.map",
+        "/_ext/ga.jspm.io/npm:@kurkle/color@0.3.2/dist/color.esm.js.map",
+        "/_ext/ga.jspm.io/npm:@rails/ujs@6.0.5/lib/assets/compiled/rails-ujs.js.map",
+        "/_ext/ga.jspm.io/npm:bootstrap@5.3.8/dist/js/bootstrap.esm.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/enums.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/modifiers/applyStyles.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/getNodeName.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/instanceOf.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/getWindow.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/modifiers/arrow.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/_/2d19854a.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/getLayoutRect.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/_/7a91f8b9.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/_/7742d4ca.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/_/b8df2d1e.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/_/a9ca29ce.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/getOffsetParent.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/getComputedStyle.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/getParentNode.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/getDocumentElement.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/utils/getMainAxisFromPlacement.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/_/6a201025.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/_/1ba79728.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/modifiers/computeStyles.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/_/c7d11060.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/modifiers/eventListeners.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/modifiers/flip.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/utils/getOppositePlacement.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/utils/getOppositeVariationPlacement.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/utils/detectOverflow.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/_/084d303b.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/getViewportRect.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/getWindowScrollBarX.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/getWindowScroll.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/getDocumentRect.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/listScrollParents.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/getScrollParent.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/isScrollParent.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/_/bb24ce41.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/utils/computeAutoPlacement.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/modifiers/hide.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/modifiers/offset.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/modifiers/popperOffsets.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/modifiers/preventOverflow.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/_/a0ba12d2.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/getCompositeRect.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/getNodeScroll.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/getHTMLElementScroll.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/popper.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/popper-lite.js.map",
+        "/_ext/ga.jspm.io/npm:simplebar@5.3.8/dist/simplebar.esm.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/modules/es.object.to-string.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/1cbbaaa2.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/f9bf403b.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/18113b65.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/0b534bd1.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/b0c0fc6c.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/1433b6d4.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/e8f46e61.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/e58a5476.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/aa36ff0f.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/fa7e81eb.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/cddf2842.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/9db63353.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/9dc6fdde.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/internals/is-object.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/14934d40.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/internals/an-object.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/2afabe3e.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/7191db8e.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/0f7bb5f9.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/92d87c8a.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/5be4ef72.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/internals/create-property-descriptor.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/d092c6fc.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/4af5a57c.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/modules/web.dom-collections.for-each.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/internals/dom-iterables.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/3b7d2a5c.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/internals/array-for-each.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/074ed1e3.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/5fc59684.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/21a576d0.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/7c467d7c.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/4fce5ca7.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/caf4186b.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/ba7552df.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/8b10fdd5.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/00e69b15.js.map",
+        "/_ext/ga.jspm.io/npm:can-use-dom@0.1.0/index.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/modules/es.parse-int.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/1b84eafd.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/a16133c2.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/6b0f5915.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/b6932b95.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/054a823c.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/ea3837e5.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/94c1297a.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/internals/is-forced.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/7d2c4cf2.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/934740ef.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/f78408fb.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/modules/es.object.assign.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/3f5ea8d5.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/f4d8b484.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/modules/es.array.filter.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/b1821f63.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/modules/es.array.iterator.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/4bd3f43b.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/12d55699.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/058d6d27.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/ee37c7c6.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/7bcb031c.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/24da49fa.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/a12c5ef4.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/73c88a14.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/5e7ccbf3.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/139f38b0.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/eb400ca3.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/modules/es.string.iterator.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/ec280b59.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/modules/es.weak-map.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/7f16b70c.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/3ff00ead.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/4b8861e8.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/6dfb2231.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/ede62cc3.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/77052d48.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/ef02af45.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/b2a0b105.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/b6374c85.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/52d0c077.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/7318253d.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/4836e223.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/7273107f.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/9055cf8c.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/a09eec8a.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/36443f9c.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/81417434.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/9c471d8e.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/modules/web.dom-collections.iterator.js.map",
+        "/_ext/ga.jspm.io/npm:lodash.throttle@4.1.1/index.js.map",
+        "/_ext/ga.jspm.io/npm:lodash.debounce@4.0.8/index.js.map",
+        "/_ext/ga.jspm.io/npm:lodash.memoize@4.1.2/index.js.map",
+        "/_ext/ga.jspm.io/npm:@juggle/resize-observer@3.3.1/lib/exports/resize-observer.umd.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/modules/es.array.reduce.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/8f2981bb.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/2f297f78.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/modules/es.regexp.exec.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/a9f12cce.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/69f1b1f4.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/internals/regexp-sticky-helpers.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/610eaf73.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/25b65cac.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/modules/es.string.match.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/aa4cce1e.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/013484c3.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/2b2a8a5d.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/modules/es.function.name.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/modules/es.string.replace.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/734490be.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/ae9c8da7.js.map",
+        "/_ext/ga.jspm.io/npm:jquery@3.6.0/dist/jquery.js.map",
+        "/_ext/ga.jspm.io/npm:sweetalert2@11.7.3/dist/sweetalert2.all.js.map",
+        "/_ext/ga.jspm.io/npm:slim-select@2.4.4/dist/slimselect.es.js.map",
+        "/_ext/ga.jspm.io/npm:flatpickr@4.6.13/dist/esm/index.js.map",
+        "/_ext/ga.jspm.io/npm:debounce@1.2.1/index.js.map",
+        "/_ext/ga.jspm.io/npm:stimulus-use@0.52.2/dist/index.js.map",
+        "/_ext/ga.jspm.io/npm:@stimulus-components/password-visibility@3.0.0/dist/stimulus-password-visibility.mjs.map",
+        "/_ext/ga.jspm.io/npm:stimulus-rails-nested-form@4.1.0/dist/stimulus-rails-nested-form.mjs.map"
+      ]
+    },
+    "corrigido": {
+      "urlLocal": "http://127.0.0.1:64111/",
+      "execucoes": [
+        {
+          "n": 1,
+          "startedAt": "2026-11-16T22:26:33.285Z",
+          "durationMs": 11202,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 58,
+            "accessibility": 91,
+            "best-practices": 77,
+            "seo": 83
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:64111/",
+          "mainDocumentUrl": "http://127.0.0.1:64111/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 3029.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 58,
+              "accessibility": 91,
+              "best-practices": 77,
+              "seo": 83
+            },
+            "fcpMs": 6611.933900000004,
+            "lcpMs": 11758.188599999972,
+            "tbtMs": 121.5,
+            "cls": 0.01727288484499373,
+            "speedIndexMs": 6611.933900000004,
+            "pesoTotalBytes": 1400061,
+            "requisicoes": 246,
+            "jsNaoUsadoBytes": 277214,
+            "cssNaoUsadoBytes": 92000
+          }
+        },
+        {
+          "n": 2,
+          "startedAt": "2026-11-16T22:26:55.014Z",
+          "durationMs": 10418,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 51,
+            "accessibility": 91,
+            "best-practices": 77,
+            "seo": 83
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:64111/",
+          "mainDocumentUrl": "http://127.0.0.1:64111/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 3000,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 51,
+              "accessibility": 91,
+              "best-practices": 77,
+              "seo": 83
+            },
+            "fcpMs": 7964.894775000005,
+            "lcpMs": 13217.573649999998,
+            "tbtMs": 290,
+            "cls": 0.01727288484499373,
+            "speedIndexMs": 7964.894775000005,
+            "pesoTotalBytes": 1400061,
+            "requisicoes": 246,
+            "jsNaoUsadoBytes": 277180,
+            "cssNaoUsadoBytes": 92000
+          }
+        },
+        {
+          "n": 3,
+          "startedAt": "2026-11-16T22:27:15.975Z",
+          "durationMs": 10346,
+          "valida": true,
+          "erro": null,
+          "runtimeError": null,
+          "notas": {
+            "performance": 52,
+            "accessibility": 91,
+            "best-practices": 77,
+            "seo": 83
+          },
+          "finalDisplayedUrl": "http://127.0.0.1:64111/",
+          "mainDocumentUrl": "http://127.0.0.1:64111/",
+          "lighthouseVersion": "13.5.0",
+          "hostUserAgent": "TCC-EAJ-UFRN-Audit/0.1.0 (+maateodtc@gmail.com)",
+          "browserVersion": "156.0.8078.4",
+          "benchmarkIndex": 2631.5,
+          "runWarnings": [],
+          "metricas": {
+            "notas": {
+              "performance": 52,
+              "accessibility": 91,
+              "best-practices": 77,
+              "seo": 83
+            },
+            "fcpMs": 7434.331874999987,
+            "lcpMs": 13140.87579999998,
+            "tbtMs": 270,
+            "cls": 0.01727288484499373,
+            "speedIndexMs": 7434.331874999987,
+            "pesoTotalBytes": 1400061,
+            "requisicoes": 246,
+            "jsNaoUsadoBytes": 277214,
+            "cssNaoUsadoBytes": 92000
+          }
+        }
+      ],
+      "mediana": {
+        "criterio": "nota-performance",
+        "n": 3
+      },
+      "metricas": {
+        "notas": {
+          "performance": 52,
+          "accessibility": 91,
+          "best-practices": 77,
+          "seo": 83
+        },
+        "fcpMs": 7434.331874999987,
+        "lcpMs": 13140.87579999998,
+        "tbtMs": 270,
+        "cls": 0.01727288484499373,
+        "speedIndexMs": 7434.331874999987,
+        "pesoTotalBytes": 1400061,
+        "requisicoes": 246,
+        "jsNaoUsadoBytes": 277214,
+        "cssNaoUsadoBytes": 92000
+      },
+      "variacaoPerformance": {
+        "n": 3,
+        "min": 51,
+        "max": 58,
+        "amplitude": 7,
+        "media": 53.67,
+        "desvioPadrao": 3.79
+      },
+      "semantica": {
+        "status": "ok",
+        "indicadores": {
+          "divSpan": {
+            "div": 133,
+            "span": 60,
+            "total": 501,
+            "proporcao": 0.3852295409181637
+          },
+          "landmarks": {
+            "banner": 1,
+            "navigation": 1,
+            "main": 1,
+            "contentinfo": 0
+          },
+          "titulos": {
+            "total": 51,
+            "h1": 1,
+            "porNivel": [
+              1,
+              6,
+              43,
+              0,
+              1,
+              0
+            ],
+            "saltos": 0,
+            "maiorSalto": 0,
+            "primeiroNivel": 5
+          },
+          "estrutura": {
+            "article": 38,
+            "section": 7,
+            "aside": 0,
+            "figure": 0,
+            "ul": 2,
+            "ol": 0
+          },
+          "interativosFalsos": {
+            "comOnclick": 0,
+            "falsos": 0
+          },
+          "metadados": {
+            "lang": "pt-BR",
+            "temTitle": true,
+            "titleComprimento": 17,
+            "temViewport": true,
+            "temDescription": false
+          },
+          "imagens": {
+            "total": 14,
+            "semAlt": 0,
+            "altVazio": 13,
+            "semAltComAlternativa": 0
+          },
+          "campos": {
+            "total": 0,
+            "semLabel": 0,
+            "semLabelComPlaceholderOuTitle": 0
+          },
+          "obsoletas": {
+            "roteiro": 0,
+            "whatwg": 0,
+            "porTag": {}
+          },
+          "tabelas": {
+            "total": 0,
+            "layoutDeclarada": 0,
+            "layoutHeuristica": 0,
+            "dados": 0,
+            "indeterminada": 0
+          }
+        },
+        "indice": {
+          "subnotas": {
+            "landmarks": 75,
+            "titulos": 100,
+            "imagens": 100,
+            "campos": null,
+            "divSpan": 61.477045908183634,
+            "metadados": 100,
+            "interativos": null,
+            "obsoletos": 100
+          },
+          "indice": 88.93463073852296,
+          "indicePesosIguais": 89.41284098469727
+        },
+        "networkidleTimeout": false
+      },
+      "faltasNoServidor": [
+        "/favicon.ico",
+        "/robots.txt",
+        "/assets/es-module-shims.js-c69f1a5dd068dfc08a4cedc0ad77b792985bf256e162852bd03cdf764b666c4a.map",
+        "/assets/turbo.min.js-24086855a1740f1ed123d14c033071ab88963d4eb7c9875ea45441d48d8a79d2.map",
+        "/_ext/ga.jspm.io/npm:@hotwired/stimulus@3.2.2/dist/stimulus.js.map",
+        "/_ext/ga.jspm.io/npm:chart.js@4.2.0/dist/chart.js.map",
+        "/_ext/ga.jspm.io/npm:chart.js@4.2.0/_/c1719c72.js.map",
+        "/_ext/ga.jspm.io/npm:@kurkle/color@0.3.2/dist/color.esm.js.map",
+        "/_ext/ga.jspm.io/npm:@rails/ujs@6.0.5/lib/assets/compiled/rails-ujs.js.map",
+        "/_ext/ga.jspm.io/npm:bootstrap@5.3.8/dist/js/bootstrap.esm.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/enums.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/modifiers/applyStyles.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/getNodeName.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/instanceOf.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/getWindow.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/modifiers/arrow.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/_/2d19854a.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/getLayoutRect.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/_/7a91f8b9.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/_/7742d4ca.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/_/b8df2d1e.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/_/a9ca29ce.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/getOffsetParent.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/getComputedStyle.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/getParentNode.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/getDocumentElement.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/utils/getMainAxisFromPlacement.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/_/6a201025.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/_/1ba79728.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/modifiers/computeStyles.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/_/c7d11060.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/modifiers/eventListeners.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/modifiers/flip.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/utils/getOppositePlacement.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/utils/getOppositeVariationPlacement.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/utils/detectOverflow.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/_/084d303b.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/getViewportRect.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/getWindowScrollBarX.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/getWindowScroll.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/getDocumentRect.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/listScrollParents.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/getScrollParent.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/isScrollParent.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/_/bb24ce41.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/utils/computeAutoPlacement.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/modifiers/hide.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/modifiers/offset.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/modifiers/popperOffsets.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/modifiers/preventOverflow.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/_/a0ba12d2.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/getCompositeRect.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/getNodeScroll.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/dom-utils/getHTMLElementScroll.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/popper.js.map",
+        "/_ext/ga.jspm.io/npm:@popperjs/core@2.11.8/lib/popper-lite.js.map",
+        "/_ext/ga.jspm.io/npm:simplebar@5.3.8/dist/simplebar.esm.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/modules/es.object.to-string.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/1cbbaaa2.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/f9bf403b.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/18113b65.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/0b534bd1.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/b0c0fc6c.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/1433b6d4.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/e8f46e61.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/e58a5476.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/aa36ff0f.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/fa7e81eb.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/cddf2842.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/9db63353.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/9dc6fdde.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/internals/is-object.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/14934d40.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/internals/an-object.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/2afabe3e.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/7191db8e.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/0f7bb5f9.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/92d87c8a.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/5be4ef72.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/internals/create-property-descriptor.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/d092c6fc.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/4af5a57c.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/modules/web.dom-collections.for-each.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/internals/dom-iterables.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/3b7d2a5c.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/internals/array-for-each.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/074ed1e3.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/5fc59684.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/21a576d0.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/7c467d7c.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/4fce5ca7.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/caf4186b.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/ba7552df.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/8b10fdd5.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/00e69b15.js.map",
+        "/_ext/ga.jspm.io/npm:can-use-dom@0.1.0/index.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/modules/es.parse-int.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/1b84eafd.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/a16133c2.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/6b0f5915.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/b6932b95.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/054a823c.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/ea3837e5.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/94c1297a.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/internals/is-forced.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/7d2c4cf2.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/934740ef.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/f78408fb.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/modules/es.object.assign.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/3f5ea8d5.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/f4d8b484.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/modules/es.array.filter.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/b1821f63.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/modules/es.array.iterator.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/4bd3f43b.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/12d55699.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/058d6d27.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/ee37c7c6.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/7bcb031c.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/24da49fa.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/a12c5ef4.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/73c88a14.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/5e7ccbf3.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/139f38b0.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/eb400ca3.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/modules/es.string.iterator.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/ec280b59.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/modules/es.weak-map.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/7f16b70c.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/3ff00ead.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/4b8861e8.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/6dfb2231.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/ede62cc3.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/77052d48.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/ef02af45.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/b2a0b105.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/b6374c85.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/52d0c077.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/7318253d.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/4836e223.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/7273107f.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/9055cf8c.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/a09eec8a.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/36443f9c.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/81417434.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/9c471d8e.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/modules/web.dom-collections.iterator.js.map",
+        "/_ext/ga.jspm.io/npm:lodash.throttle@4.1.1/index.js.map",
+        "/_ext/ga.jspm.io/npm:lodash.debounce@4.0.8/index.js.map",
+        "/_ext/ga.jspm.io/npm:lodash.memoize@4.1.2/index.js.map",
+        "/_ext/ga.jspm.io/npm:@juggle/resize-observer@3.3.1/lib/exports/resize-observer.umd.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/modules/es.array.reduce.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/8f2981bb.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/2f297f78.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/modules/es.regexp.exec.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/a9f12cce.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/69f1b1f4.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/internals/regexp-sticky-helpers.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/610eaf73.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/25b65cac.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/modules/es.string.match.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/aa4cce1e.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/013484c3.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/2b2a8a5d.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/modules/es.function.name.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/modules/es.string.replace.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/734490be.js.map",
+        "/_ext/ga.jspm.io/npm:core-js@3.23.4/_/ae9c8da7.js.map",
+        "/_ext/ga.jspm.io/npm:jquery@3.6.0/dist/jquery.js.map",
+        "/_ext/ga.jspm.io/npm:flatpickr@4.6.13/dist/esm/index.js.map",
+        "/_ext/ga.jspm.io/npm:debounce@1.2.1/index.js.map",
+        "/_ext/ga.jspm.io/npm:slim-select@2.4.4/dist/slimselect.es.js.map",
+        "/_ext/ga.jspm.io/npm:sweetalert2@11.7.3/dist/sweetalert2.all.js.map",
+        "/_ext/ga.jspm.io/npm:stimulus-use@0.52.2/dist/index.js.map",
+        "/_ext/ga.jspm.io/npm:@stimulus-components/password-visibility@3.0.0/dist/stimulus-password-visibility.mjs.map",
+        "/_ext/ga.jspm.io/npm:stimulus-rails-nested-form@4.1.0/dist/stimulus-rails-nested-form.mjs.map"
+      ]
+    }
+  },
+  "deltas": {
+    "nota_performance": {
+      "original": 57,
+      "corrigido": 52,
+      "delta": -5
+    },
+    "nota_accessibility": {
+      "original": 86,
+      "corrigido": 91,
+      "delta": 5
+    },
+    "nota_best_practices": {
+      "original": 77,
+      "corrigido": 77,
+      "delta": 0
+    },
+    "nota_seo": {
+      "original": 75,
+      "corrigido": 83,
+      "delta": 8
+    },
+    "fcp_ms": {
+      "original": 7210.095449999988,
+      "corrigido": 7434.331874999987,
+      "delta": 224.23642499999914
+    },
+    "lcp_ms": {
+      "original": 15913.64249999998,
+      "corrigido": 13140.87579999998,
+      "delta": -2772.7667
+    },
+    "tbt_ms": {
+      "original": 131,
+      "corrigido": 270,
+      "delta": 139
+    },
+    "cls": {
+      "original": 0.01727288484499373,
+      "corrigido": 0.01727288484499373,
+      "delta": 0
+    },
+    "speed_index_ms": {
+      "original": 7210.095449999988,
+      "corrigido": 7434.331874999987,
+      "delta": 224.23642499999914
+    },
+    "peso_total_bytes": {
+      "original": 2173644,
+      "corrigido": 1400061,
+      "delta": -773583
+    },
+    "requisicoes": {
+      "original": 268,
+      "corrigido": 246,
+      "delta": -22
+    },
+    "indice_semantica": {
+      "original": 82.68463073852296,
+      "corrigido": 88.93463073852296,
+      "delta": 6.25
+    },
+    "indice_semantica_pesos_iguais": {
+      "original": 81.07950765136394,
+      "corrigido": 89.41284098469727,
+      "delta": 8.333333333333329
+    },
+    "sub_landmarks": {
+      "original": 75,
+      "corrigido": 75,
+      "delta": 0
+    },
+    "sub_titulos": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    },
+    "sub_imagens": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    },
+    "sub_campos": {
+      "original": null,
+      "corrigido": null,
+      "delta": null
+    },
+    "sub_divSpan": {
+      "original": 61.477045908183634,
+      "corrigido": 61.477045908183634,
+      "delta": 0
+    },
+    "sub_metadados": {
+      "original": 50,
+      "corrigido": 100,
+      "delta": 50
+    },
+    "sub_interativos": {
+      "original": null,
+      "corrigido": null,
+      "delta": null
+    },
+    "sub_obsoletos": {
+      "original": 100,
+      "corrigido": 100,
+      "delta": 0
+    }
+  }
+}

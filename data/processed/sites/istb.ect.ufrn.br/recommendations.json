@@ -1,0 +1,2100 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T21:05:15.459Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12",
+      "diff": "9.0.0",
+      "@anthropic-ai/sdk": "1.8.0"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "id": "istb.ect.ufrn.br",
+  "url": "https://istb.ect.ufrn.br/2024/",
+  "fonte": {
+    "html": "index.html",
+    "codificacao": "utf-8",
+    "bom": false,
+    "har": true,
+    "lighthouse": "lh2.json",
+    "lighthouseVersion": "13.5.0"
+  },
+  "regras": [
+    {
+      "id": "html-lang",
+      "dimensao": "semantica",
+      "descricao": "O elemento <html> declara o idioma da página (atributo lang)."
+    },
+    {
+      "id": "meta-viewport",
+      "dimensao": "performance",
+      "descricao": "A página declara <meta name=\"viewport\"> adequada a telas móveis, sem bloquear o zoom."
+    },
+    {
+      "id": "img-dimensions",
+      "dimensao": "performance",
+      "descricao": "Toda <img> declara width e height, para o navegador reservar o espaço antes do download."
+    },
+    {
+      "id": "img-lazy",
+      "dimensao": "performance",
+      "descricao": "<img> depois das 3 primeiras do documento usa loading=\"lazy\" (exceto a imagem LCP)."
+    },
+    {
+      "id": "obsolete-tags",
+      "dimensao": "semantica",
+      "descricao": "Sem elementos obsoletos do WHATWG (center, font, marquee…); <font> simples vira <span style>."
+    },
+    {
+      "id": "heading-skip",
+      "dimensao": "semantica",
+      "descricao": "Títulos não pulam níveis ao descer na hierarquia (h1 → h3, por exemplo)."
+    },
+    {
+      "id": "fake-button",
+      "dimensao": "semantica",
+      "descricao": "Elementos clicáveis são <button>/<a>, não div/span com onclick."
+    },
+    {
+      "id": "render-blocking-hint",
+      "dimensao": "performance",
+      "descricao": "Scripts e folhas de estilo que o Lighthouse aponta como bloqueantes são adiados quando não são críticos."
+    },
+    {
+      "id": "landmarks-llm",
+      "dimensao": "semantica",
+      "descricao": "Landmarks ausentes propostos por LLM sobre <div>, <section> ou <article> existentes (landmarks-v2, claude-haiku-5-5)."
+    }
+  ],
+  "llm": {
+    "prompt": "landmarks-v2",
+    "arquivo": "docs/prompts/landmarks-v2.md",
+    "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+    "modelo": "claude-haiku-5-5",
+    "effort": "low",
+    "maxTokens": 4000,
+    "execucao": {
+      "siteId": "istb.ect.ufrn.br",
+      "prompt": "landmarks-v2",
+      "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "modeloResposta": null,
+      "respostaId": null,
+      "chamada": false,
+      "motivo": "nenhum landmark ausente",
+      "ausentes": [],
+      "candidatos": 0,
+      "elegiveis": 0,
+      "stopReason": null,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "custoUsd": null,
+      "propostas": 0,
+      "validas": 0,
+      "rejeitadas": [],
+      "textoIgual": null,
+      "landmarksDepois": null,
+      "erro": null,
+      "duracaoMs": 1
+    }
+  },
+  "resumo": {
+    "total": 54,
+    "corrigidas": 50,
+    "porRegra": {
+      "html-lang": {
+        "total": 1,
+        "corrigidas": 0
+      },
+      "meta-viewport": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "img-dimensions": {
+        "total": 27,
+        "corrigidas": 26
+      },
+      "img-lazy": {
+        "total": 24,
+        "corrigidas": 24
+      },
+      "obsolete-tags": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "heading-skip": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "fake-button": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "render-blocking-hint": {
+        "total": 2,
+        "corrigidas": 0
+      },
+      "landmarks-llm": {
+        "total": 0,
+        "corrigidas": 0
+      }
+    },
+    "porDimensao": {
+      "performance": 53,
+      "semantica": 1
+    }
+  },
+  "guardaImagens": {
+    "imagens": [
+      {
+        "recomendacao": "img-dimensions-1",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 75,
+              "altura": 58,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 75,
+              "altura": 58,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 75,
+              "altura": 58,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 75,
+              "altura": 58,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-2",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 24,
+              "altura": 19,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 24,
+              "altura": 19,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 24,
+              "altura": 19,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 24,
+              "altura": 19,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-3",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 18,
+              "altura": 18,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 18,
+              "altura": 18,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-4",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 20,
+              "altura": 24,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 20,
+              "altura": 24,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 20,
+              "altura": 24,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 20,
+              "altura": 24,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-5",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 30,
+              "altura": 31,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 30,
+              "altura": 31,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 30,
+              "altura": 31,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 30,
+              "altura": 31,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-6",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 64,
+              "altura": 64,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 64,
+              "altura": 64,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 64,
+              "altura": 64,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 64,
+              "altura": 64,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-7",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 64,
+              "altura": 69,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 64,
+              "altura": 69,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 64,
+              "altura": 69,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 64,
+              "altura": 69,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-8",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 64,
+              "altura": 64,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 64,
+              "altura": 64,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 64,
+              "altura": 64,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 64,
+              "altura": 64,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-9",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 64,
+              "altura": 64,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 64,
+              "altura": 64,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 64,
+              "altura": 64,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 64,
+              "altura": 64,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-10",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 64,
+              "altura": 64,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 64,
+              "altura": 64,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 64,
+              "altura": 64,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 64,
+              "altura": 64,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-11",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 64,
+              "altura": 64,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 64,
+              "altura": 64,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 64,
+              "altura": 64,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 64,
+              "altura": 64,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-12",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 64,
+              "altura": 69,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 64,
+              "altura": 69,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 64,
+              "altura": 69,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 64,
+              "altura": 69,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-13",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 64,
+              "altura": 64,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 64,
+              "altura": 64,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 64,
+              "altura": 64,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 64,
+              "altura": 64,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-14",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 64,
+              "altura": 64,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 64,
+              "altura": 64,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 64,
+              "altura": 64,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 64,
+              "altura": 64,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-15",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 100,
+              "altura": 100,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 100,
+              "altura": 100,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 170,
+              "altura": 170,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 170,
+              "altura": 170,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-16",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 100,
+              "altura": 100,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 100,
+              "altura": 100,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 170,
+              "altura": 170,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 170,
+              "altura": 170,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-17",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 100,
+              "altura": 100,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 100,
+              "altura": 100,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 170,
+              "altura": 170,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 170,
+              "altura": 170,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-19",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 100,
+              "altura": 100,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 100,
+              "altura": 100,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 170,
+              "altura": 170,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 170,
+              "altura": 170,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-20",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 100,
+              "altura": 100,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 100,
+              "altura": 100,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 170,
+              "altura": 170,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 170,
+              "altura": 170,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-21",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 100,
+              "altura": 100,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 100,
+              "altura": 100,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 170,
+              "altura": 170,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 170,
+              "altura": 170,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-22",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 100,
+              "altura": 100,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 100,
+              "altura": 100,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 170,
+              "altura": 170,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 170,
+              "altura": 170,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-23",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 100,
+              "altura": 100,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 100,
+              "altura": 100,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 170,
+              "altura": 170,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 170,
+              "altura": 170,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-24",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 100,
+              "altura": 100,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 100,
+              "altura": 100,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 170,
+              "altura": 170,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 170,
+              "altura": 170,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-25",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 100,
+              "altura": 100,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 100,
+              "altura": 100,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 170,
+              "altura": 170,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 170,
+              "altura": 170,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-26",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 100,
+              "altura": 100,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 100,
+              "altura": 100,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 170,
+              "altura": 170,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 170,
+              "altura": 170,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-27",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 100,
+              "altura": 100,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 100,
+              "altura": 100,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 170,
+              "altura": 170,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 170,
+              "altura": 170,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      }
+    ],
+    "mantidas": 26,
+    "desfeitas": 0,
+    "erro": null
+  },
+  "recommendations": [
+    {
+      "id": "html-lang-1",
+      "regra": "html-lang",
+      "severidade": "info",
+      "dimensao": "semantica",
+      "evidencia": "<html lang=\"en\">",
+      "posicao": {
+        "linha": 2,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "lang=\"en\" declara um idioma diferente do português: conferir se é o idioma principal da página.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-1",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/logo.webp\" alt=\"Logo ISTB\">",
+      "posicao": {
+        "linha": 15,
+        "coluna": 7
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"75\" height=\"58\" (dimensões do arquivo, webp). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 622,
+          "fim": 622,
+          "texto": " width=\"75\" height=\"58\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-2",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/icons/world.svg\" alt=\"Translate\">",
+      "posicao": {
+        "linha": 35,
+        "coluna": 11
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"24\" height=\"19\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 1252,
+          "fim": 1252,
+          "texto": " width=\"24\" height=\"19\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-3",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/icons/nav_btn.svg\" alt=\"Botao navbar\">",
+      "posicao": {
+        "linha": 38,
+        "coluna": 11
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"18\" height=\"18\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 1386,
+          "fim": 1386,
+          "texto": " width=\"18\" height=\"18\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-4",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/icons/local.svg\" alt=\"Local\">",
+      "posicao": {
+        "linha": 52,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"20\" height=\"24\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 1793,
+          "fim": 1793,
+          "texto": " width=\"20\" height=\"24\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-5",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/icons/calendar.svg\" alt=\"calendario\">",
+      "posicao": {
+        "linha": 56,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"30\" height=\"31\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 1986,
+          "fim": 1986,
+          "texto": " width=\"30\" height=\"31\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-6",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/icons/steam.svg\" alt=\"Engrenagem\">",
+      "posicao": {
+        "linha": 86,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"64\" height=\"64\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 3591,
+          "fim": 3591,
+          "texto": " width=\"64\" height=\"64\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-7",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/icons/search.svg\" alt=\"Lupa\">",
+      "posicao": {
+        "linha": 99,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"64\" height=\"69\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 4257,
+          "fim": 4257,
+          "texto": " width=\"64\" height=\"69\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-8",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/icons/user.svg\" alt=\"Engrenagem\">",
+      "posicao": {
+        "linha": 108,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"64\" height=\"64\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 4741,
+          "fim": 4741,
+          "texto": " width=\"64\" height=\"64\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-9",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/icons/steam.svg\" alt=\"Engrenagem\">",
+      "posicao": {
+        "linha": 120,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"64\" height=\"64\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 5471,
+          "fim": 5471,
+          "texto": " width=\"64\" height=\"64\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-10",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/icons/user.svg\" alt=\"user\">",
+      "posicao": {
+        "linha": 130,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"64\" height=\"64\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 6064,
+          "fim": 6064,
+          "texto": " width=\"64\" height=\"64\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-11",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/icons/steam.svg\" alt=\"Engrenagem\">",
+      "posicao": {
+        "linha": 138,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"64\" height=\"64\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 6463,
+          "fim": 6463,
+          "texto": " width=\"64\" height=\"64\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-12",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/icons/search.svg\" alt=\"lupa\">",
+      "posicao": {
+        "linha": 152,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"64\" height=\"69\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 7095,
+          "fim": 7095,
+          "texto": " width=\"64\" height=\"69\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-13",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/icons/user.svg\" alt=\"User\">",
+      "posicao": {
+        "linha": 163,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"64\" height=\"64\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 7697,
+          "fim": 7697,
+          "texto": " width=\"64\" height=\"64\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-14",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/icons/steam.svg\" alt=\"Engrenagem\">",
+      "posicao": {
+        "linha": 173,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"64\" height=\"64\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 8181,
+          "fim": 8181,
+          "texto": " width=\"64\" height=\"64\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-15",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/palestrantes/herculana.jpg\" alt=\"Foto palestrante\" id=\"card2\">",
+      "posicao": {
+        "linha": 197,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"100\" height=\"125\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 9294,
+          "fim": 9294,
+          "texto": " width=\"100\" height=\"125\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-16",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/palestrantes/Felipe Galvão_.webp\" alt=\"Foto palestrante\">",
+      "posicao": {
+        "linha": 210,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"264\" height=\"311\" (dimensões do arquivo, webp). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 10001,
+          "fim": 10001,
+          "texto": " width=\"264\" height=\"311\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-17",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/palestrantes/Bruna Vasconcelos.webp\" alt=\"Foto palestrante\">",
+      "posicao": {
+        "linha": 224,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1079\" height=\"1064\" (dimensões do arquivo, webp). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 10668,
+          "fim": 10668,
+          "texto": " width=\"1079\" height=\"1064\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-18",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"\" alt=\"Foto palestrante\" id=\"card7\" style=\"object-position: top;\">",
+      "posicao": {
+        "linha": 237,
+        "coluna": 19
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Sem src: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-19",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/palestrantes/Pollianna.webp\" alt=\"Foto palestrante\">",
+      "posicao": {
+        "linha": 250,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"290\" height=\"435\" (dimensões do arquivo, webp). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 11991,
+          "fim": 11991,
+          "texto": " width=\"290\" height=\"435\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-20",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/palestrantes/Luciana.jpg\" alt=\"Foto palestrante\" id=\"card11\">",
+      "posicao": {
+        "linha": 263,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"724\" height=\"1074\" (dimensões do arquivo, jpeg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 12597,
+          "fim": 12597,
+          "texto": " width=\"724\" height=\"1074\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-21",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/palestrantes/Gláucio_.webp\" alt=\"Foto palestrante\">",
+      "posicao": {
+        "linha": 278,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"729\" height=\"754\" (dimensões do arquivo, webp). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 13310,
+          "fim": 13310,
+          "texto": " width=\"729\" height=\"754\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-22",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/palestrantes/inpacta.webp\" alt=\"Foto palestrante\">",
+      "posicao": {
+        "linha": 294,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"174\" height=\"183\" (dimensões do arquivo, webp). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 14050,
+          "fim": 14050,
+          "texto": " width=\"174\" height=\"183\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-23",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/palestrantes/Bruno Motta.webp\" alt=\"Foto palestrante\">",
+      "posicao": {
+        "linha": 309,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"630\" height=\"750\" (dimensões do arquivo, webp). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 14701,
+          "fim": 14701,
+          "texto": " width=\"630\" height=\"750\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-24",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/palestrantes/Karolyne.webp\" alt=\"Foto palestrante\">",
+      "posicao": {
+        "linha": 326,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"665\" height=\"1155\" (dimensões do arquivo, webp). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 15381,
+          "fim": 15381,
+          "texto": " width=\"665\" height=\"1155\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-25",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/palestrantes/Isaías_.webp\" alt=\"Foto palestrante\" id=\"card16\">",
+      "posicao": {
+        "linha": 342,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"904\" height=\"1284\" (dimensões do arquivo, webp). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 16039,
+          "fim": 16039,
+          "texto": " width=\"904\" height=\"1284\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-26",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/palestrantes/Mayara e Yara.webp\" alt=\"Foto palestrante\">",
+      "posicao": {
+        "linha": 360,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"764\" height=\"824\" (dimensões do arquivo, webp). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 16762,
+          "fim": 16762,
+          "texto": " width=\"764\" height=\"824\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-27",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/palestrantes/Rodrigo Leão.webp \" alt=\"Foto palestrante\">",
+      "posicao": {
+        "linha": 377,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"207\" height=\"217\" (dimensões do arquivo, webp). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 17482,
+          "fim": 17482,
+          "texto": " width=\"207\" height=\"217\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-1",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/icons/local.svg\" alt=\"Local\">",
+      "posicao": {
+        "linha": 52,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "4ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 1745,
+          "fim": 1745,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-2",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/icons/calendar.svg\" alt=\"calendario\">",
+      "posicao": {
+        "linha": 56,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "5ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 1930,
+          "fim": 1930,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-3",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/icons/steam.svg\" alt=\"Engrenagem\">",
+      "posicao": {
+        "linha": 86,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "6ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 3538,
+          "fim": 3538,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-4",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/icons/search.svg\" alt=\"Lupa\">",
+      "posicao": {
+        "linha": 99,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "7ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 4209,
+          "fim": 4209,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-5",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/icons/user.svg\" alt=\"Engrenagem\">",
+      "posicao": {
+        "linha": 108,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "8ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 4689,
+          "fim": 4689,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-6",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/icons/steam.svg\" alt=\"Engrenagem\">",
+      "posicao": {
+        "linha": 120,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "9ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 5418,
+          "fim": 5418,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-7",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/icons/user.svg\" alt=\"user\">",
+      "posicao": {
+        "linha": 130,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "10ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 6018,
+          "fim": 6018,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-8",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/icons/steam.svg\" alt=\"Engrenagem\">",
+      "posicao": {
+        "linha": 138,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "11ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 6410,
+          "fim": 6410,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-9",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/icons/search.svg\" alt=\"lupa\">",
+      "posicao": {
+        "linha": 152,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "12ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 7047,
+          "fim": 7047,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-10",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/icons/user.svg\" alt=\"User\">",
+      "posicao": {
+        "linha": 163,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "13ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 7651,
+          "fim": 7651,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-11",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/icons/steam.svg\" alt=\"Engrenagem\">",
+      "posicao": {
+        "linha": 173,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "14ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 8128,
+          "fim": 8128,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-12",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/palestrantes/herculana.jpg\" alt=\"Foto palestrante\" id=\"card2\">",
+      "posicao": {
+        "linha": 197,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "15ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 9213,
+          "fim": 9213,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-13",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/palestrantes/Felipe Galvão_.webp\" alt=\"Foto palestrante\">",
+      "posicao": {
+        "linha": 210,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "16ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 9925,
+          "fim": 9925,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-14",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/palestrantes/Bruna Vasconcelos.webp\" alt=\"Foto palestrante\">",
+      "posicao": {
+        "linha": 224,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "17ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 10589,
+          "fim": 10589,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-15",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"\" alt=\"Foto palestrante\" id=\"card7\" style=\"object-position: top;\">",
+      "posicao": {
+        "linha": 237,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "18ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 11261,
+          "fim": 11261,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-16",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/palestrantes/Pollianna.webp\" alt=\"Foto palestrante\">",
+      "posicao": {
+        "linha": 250,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "19ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 11920,
+          "fim": 11920,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-17",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/palestrantes/Luciana.jpg\" alt=\"Foto palestrante\" id=\"card11\">",
+      "posicao": {
+        "linha": 263,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "20ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 12517,
+          "fim": 12517,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-18",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/palestrantes/Gláucio_.webp\" alt=\"Foto palestrante\">",
+      "posicao": {
+        "linha": 278,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "21ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 13240,
+          "fim": 13240,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-19",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/palestrantes/inpacta.webp\" alt=\"Foto palestrante\">",
+      "posicao": {
+        "linha": 294,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "22ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 13981,
+          "fim": 13981,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-20",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/palestrantes/Bruno Motta.webp\" alt=\"Foto palestrante\">",
+      "posicao": {
+        "linha": 309,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "23ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 14628,
+          "fim": 14628,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-21",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/palestrantes/Karolyne.webp\" alt=\"Foto palestrante\">",
+      "posicao": {
+        "linha": 326,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "24ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 15311,
+          "fim": 15311,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-22",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/palestrantes/Isaías_.webp\" alt=\"Foto palestrante\" id=\"card16\">",
+      "posicao": {
+        "linha": 342,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "25ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 15958,
+          "fim": 15958,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-23",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/palestrantes/Mayara e Yara.webp\" alt=\"Foto palestrante\">",
+      "posicao": {
+        "linha": 360,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "26ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 16687,
+          "fim": 16687,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-24",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"assets/images/palestrantes/Rodrigo Leão.webp \" alt=\"Foto palestrante\">",
+      "posicao": {
+        "linha": 377,
+        "coluna": 19
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "27ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 17406,
+          "fim": 17406,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "render-blocking-hint-1",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"assets/styles/main.css\">",
+      "posicao": {
+        "linha": 6,
+        "coluna": 3
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (199 ms de bloqueio, 0.7 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-2",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css\"/>",
+      "posicao": {
+        "linha": 7,
+        "coluna": 3
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (753 ms de bloqueio, 4.5 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    }
+  ]
+}

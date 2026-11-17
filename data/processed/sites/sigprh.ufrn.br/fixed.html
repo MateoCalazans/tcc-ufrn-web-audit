@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="pt-BR" paleta="social">
+    <head>
+    
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FDPQ79S0MC"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-FDPQ79S0MC');
+        </script>
+    
+
+    <meta name="context-path" content="/publico/" />
+
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+    <meta content="ie=edge" http-equiv="x-ua-compatible" />
+    <meta content="STI / UFRN" name="author" />
+
+    <meta content="Sistema Integrado de Recursos Humanos" name="description" />
+
+    <link rel="icon" href="/publico/cosmos/img/favicon.png" />
+
+    <title>Portal Público SIGRH</title>
+
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css' rel='stylesheet' type="text/css">
+    <link rel="stylesheet" href="/publico/css/main.css" />
+    <link href='https://static.info.ufrn.br/release/vendors/swiper/swiper-bundle.min.css' rel='stylesheet' type="text/css">
+    <link rel="stylesheet" href="/publico/cosmos/css/base.css" />
+    <link rel="stylesheet" href="/publico/cosmos/css/alto_contraste.css" />
+    <link rel="stylesheet" href="/publico/cosmos/vendors/autoComplete/autoComplete.css" />
+    <link rel="stylesheet" href="/publico/cosmos/vendors/datepicker/bootstrap-datepicker3.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://static.info.ufrn.br/release/vendors/bootstrap-select/bootstrap-select.min.css" />
+
+    
+</head>
+
+    <body class="custom-scroll">
+        
+        <div id="barra-brasil">
+            <ul id="menu-barra-temp" style="list-style: none">
+                <li style="display: inline; float: left; padding-right: 10px; margin-right: 10px; border-right: 1px solid #ededed">
+                    <a href="http://brasil.gov.br" rel="noopener"
+                       style="font-family: sans, sans-serif; text-decoration: none; color: white" target="_blank">
+                        Portal do Governo Brasileiro
+                    </a>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="container-principal">
+            
+        <header class="header">
+            <div class="header__left">
+                <button class="icon toggle-menu-libras">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="header__logo">
+                    <a href="/publico/">
+                        <svg class="logo_social logo_desktop" xmlns="http://www.w3.org/2000/svg" width="103" height="33" viewBox="0 0 103 33">
+                            <desc>Logotipo SIGRH</desc>
+                            <defs>
+                                <style type="text/css">
+                                    /*<![CDATA[*/
+                                    .logo-sigla {
+                                      fill: #848fa0;
+                                      font: 700 21px Arial-BoldMT, Arial;
+                                    }
+                                    /*]]>*/
+                                </style>
+                            </defs>
+                            <g transform="translate(-41.068 -28.3)">
+                                <g transform="translate(1 -1)">
+                                    <path class="logo-icone"
+                                          d="M52.3,29.3A12.316,12.316,0,0,0,50,53.7a12.24,12.24,0,0,0,10.6-2.9,2.5,2.5,0,0,0-.1-3.5,2.582,2.582,0,0,0-3.4,0,7.315,7.315,0,1,1-4.7-12.9A2.361,2.361,0,0,0,54.8,32a2.636,2.636,0,0,0-2.5-2.7Z">
+                                    </path>
+                                    <path class="logo-icone"
+                                          d="M56.5,61.4a12.328,12.328,0,0,0,8.5-23,12.5,12.5,0,0,0-11,0,2.517,2.517,0,0,0-.8,3.4,2.609,2.609,0,0,0,3.3.9,7.315,7.315,0,1,1,1.1,13.7,2.556,2.556,0,0,0-3,1.6,3.088,3.088,0,0,0,1.9,3.4Z">
+                                    </path>
+                                </g><text class="logo-sigla" transform="translate(77.497 52.792)">
+                                <tspan x="0" y="0">SIGRH</tspan>
+                            </text>
+                            </g>
+                        </svg>
+                        <svg class="logo_social logo_mobile" width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="logo-icone" d="M11.1432 0C9.33047 0.0111012 7.54745 0.468476 5.94694 1.33301C4.34643 2.19754 2.97618 3.44343 1.95367 4.96381C0.931162 6.48419 0.286895 8.23374 0.0760747 10.0625C-0.134746 11.8913 0.0941827 13.7446 0.743232 15.4638C1.39228 17.183 2.44208 18.7167 3.80266 19.9334C5.16325 21.1501 6.79401 22.0136 8.55518 22.4497C10.3163 22.8859 12.1554 22.8817 13.9146 22.4376C15.6739 21.9935 17.3009 21.1228 18.6561 19.9C19.061 19.4498 19.2782 18.8577 19.2621 18.2482C19.2459 17.6387 18.9976 17.0593 18.5695 16.632C18.1457 16.2481 17.5994 16.0332 17.0316 16.0269C16.4638 16.0207 15.9129 16.2235 15.481 16.598C14.6569 17.2935 13.68 17.7774 12.633 18.0089C11.586 18.2403 10.4995 18.2124 9.46529 17.9275C8.4311 17.6426 7.47959 17.1092 6.69111 16.3722C5.90262 15.6352 5.3003 14.7163 4.93504 13.6931C4.56979 12.6699 4.45231 11.5724 4.59253 10.4934C4.73274 9.41438 5.12654 8.38544 5.74065 7.49353C6.35476 6.60162 7.17114 5.87293 8.12088 5.36896C9.07062 4.86498 10.1258 4.60054 11.1974 4.59796C11.4844 4.60486 11.77 4.55394 12.0376 4.44806C12.3051 4.34218 12.5494 4.18342 12.7562 3.98108C12.963 3.77874 13.1283 3.53678 13.2424 3.26917C13.3566 3.00155 13.4175 2.71363 13.4214 2.422C13.4198 1.79868 13.1825 1.1998 12.7585 0.749207C12.3345 0.298609 11.7562 0.0297531 11.1432 0Z" fill="#85CC3D"/>
+                            <path class="logo-icone" d="M14.9681 29.6379C16.7216 30.1013 18.5595 30.1259 20.3245 29.7098C22.0895 29.2938 23.7288 28.4494 25.1022 27.2489C26.4755 26.0485 27.5419 24.5278 28.2101 22.8171C28.8782 21.1064 29.128 19.2568 28.9383 17.4265C28.7486 15.5963 28.125 13.84 27.1208 12.3082C26.1165 10.7763 24.7617 9.51455 23.1724 8.63093C21.583 7.74731 19.8064 7.26818 17.9949 7.23457C16.1833 7.20096 14.3907 7.61386 12.7706 8.43793C12.2656 8.76819 11.906 9.284 11.7669 9.87745C11.6278 10.4709 11.72 11.096 12.0243 11.622C12.3383 12.1015 12.8115 12.4505 13.3577 12.605C13.904 12.7596 14.4867 12.7095 14.9995 12.4639C15.9726 12.008 17.0395 11.7966 18.1099 11.8477C19.1804 11.8987 20.223 12.2108 21.1497 12.7574C22.0764 13.304 22.86 14.0692 23.4342 14.9882C24.0084 15.9073 24.3564 16.9532 24.4488 18.0376C24.5412 19.122 24.3752 20.2131 23.9649 21.2186C23.5547 22.2242 22.9122 23.1147 22.0917 23.8148C21.2712 24.515 20.2968 25.0043 19.2509 25.2414C18.205 25.4785 17.1183 25.4564 16.0825 25.1769C15.8077 25.0952 15.5196 25.0696 15.235 25.1018C14.9503 25.1339 14.6747 25.223 14.4242 25.364C14.1737 25.505 13.9532 25.6951 13.7755 25.9232C13.5978 26.1513 13.4664 26.4129 13.3889 26.6929C13.2302 27.296 13.3058 27.9379 13.5999 28.486C13.8939 29.0341 14.3831 29.4465 14.9681 29.6379Z" fill="#85CC3D"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class='header__title'>
+                    <h1>Sistema Integrado de Gestão de Recursos Humanos</h1>
+                </div>
+
+            </div>
+
+            <div class="header__right">
+                <a class="btn-tertiary m-0 header-mob-out text-nowrap" id="registrar-frequencia" role="button"
+                   title="Registrar frequência" href="https://cronus.ufrn.br/cronus/">
+                    Registrar frequência
+                    <i class="fa-solid fa-user mobile-icon-menu registrar-frequencia d-none"></i>
+                    <svg class="logo__chronus ml-2" width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_792_10)">
+                            <path d="M10.1954 14.6C9.93545 14.6 9.67872 14.4611 9.52502 14.2033C9.2503 13.747 6.83838 9.67665 6.83838 7.60091C6.83838 5.64239 9.0737 1.76141 9.52174 1.00397C9.76375 0.592791 10.2625 0.477372 10.6353 0.746082C11.0081 1.01299 11.1128 1.56303 10.8708 1.97422C9.86514 3.67665 8.44905 6.54951 8.44905 7.60271C8.44905 8.76953 9.93218 11.6712 10.8675 13.2258C11.1128 13.6334 11.0114 14.1852 10.6419 14.4557C10.5045 14.5549 10.3508 14.6036 10.1987 14.6036L10.1954 14.6Z" fill="#55993A"/>
+                            <path d="M0.804606 14.6001C0.652532 14.6001 0.497188 14.5514 0.361466 14.4523C-0.00808949 14.1817 -0.109472 13.6317 0.135808 13.2223C1.07114 11.666 2.55427 8.76424 2.55427 7.59923C2.55427 6.54603 1.13819 3.67317 0.132538 1.97073C-0.111107 1.56136 -0.00645429 1.01131 0.364736 0.744404C0.737562 0.475694 1.2363 0.592917 1.47831 1.00229C1.92635 1.75973 4.16167 5.64251 4.16167 7.59923C4.16167 9.67678 1.74975 13.7453 1.47504 14.2016C1.31969 14.4595 1.0646 14.5983 0.804606 14.5983V14.6001Z" fill="#55993A"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_792_10">
+                                <rect width="11" height="14" fill="white" transform="translate(0 0.600098)"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+
+                <button class="icon"
+                        data-loading="false"
+                        id="headerLibra"
+                        role="switch"
+                        aria-checked="false"
+                        aria-label="Ativar modo Libras"
+                        title="Ativar modo Libras"
+                >
+                    <i aria-hidden="true" class="fa-solid fa-fw fa-hands" data-icon="true"></i>
+                </button>
+
+                <ds-contrast-theme-picker></ds-contrast-theme-picker>
+                <button class="icon icon header-mob-out" title="Pesquisar" aria-label="Pesquisar"
+                        id="search-button" data-toggle="modal" data-target="#search-modal">
+                    <i class="fa-solid fa-search"></i>
+                </button>
+                <div class="modal fade search-modal" id="search-modal" tabindex="1" role="dialog" aria-labelledby="search-button"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="modal-title">O que você procura?</h2>
+                                <button class="close" type="button" data-dismiss="modal"
+                                        aria-label="Fechar"><i class="fas fa-times"></i></button>
+                            </div>
+                            <div class="modal-body">
+                                <form class="form border-0 p-0" action="/publico/busca" method="get"
+                                      novalidate autocomplete="off">
+                                    <div class="form-group">
+                                        <i class="fas fa-search"></i>
+                                        <input class="form-control" type="text" name="busca" placeholder="Pesquisar">
+                                    </div>
+                                    <button class="btn-primary" type="submit">Buscar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="btn-primary m-0 header-mob-out text-nowrap" id="login-sigrh" role="button"
+                   title="Entrar no sistema" href="https://sigrh.ufrn.br/sigrh/">
+                    <i class="fa-solid fa-user login-url"></i>
+                    Entrar no sistema
+                </a>
+
+                <button class="icon header-mob-in" id="toggle-header-mobile" title="Acessar ações gerais do sistema"><i class="fas fa-ellipsis-v"></i></button>
+            </div>
+        </header>
+    
+            
+        <main class="container-conteudo">
+            <div class='container-conteudo__overlay overlay-nav'></div>
+            <div class='container-conteudo__nav'>
+                
+            <div class="sidebar" tabindex="-1">
+                <nav class="menu bg-secondary-lightest" aria-label="Menu de navegação sem libras"
+                     id="menu-libras-with-toggle"
+                     data-libras="false"
+                     data-libras-default="/publico/videos/libras/inicio.mp4">
+                    <div class="menu__content custom-scroll">
+                        <div class="menu__video">
+                            <video width="100%" height="100%" muted="muted">
+                                <source src="/publico/videos/libras/inicio.mp4" type="video/mp4" />
+                                Seu navegador não suporta a tag video.
+                            </video>
+                        </div>
+                        <ul class="menu__list" id="main-menu" role="menu">
+                            <li class="menu__item" role="none">
+                                <a class="menu__link"
+                                   role="menuitem"
+                                   data-src="/publico/videos/libras/inicio.mp4"
+                                   href="/publico/home"
+                                   data-autoactive="start">
+                                    <i class="fas fa-home"></i> <span>Início</span>
+                                </a>
+                            </li>
+                            <li class="menu__item" role="none">
+                                <a class="menu__link"
+                                   role="menuitem"
+                                   data-src="/publico/videos/libras/concursos.mp4"
+                                   href="/publico/concursos"
+                                   data-autoactive="start">
+                                    <i class="fa-solid fa-pen-ruler"></i> <span>Concursos</span>
+                                </a>
+                            </li>
+                            <li class="menu__item" role="none">
+                                <a class="menu__link"
+                                   role="menuitem"
+                                   data-src="/publico/videos/libras/consultas.mp4"
+                                   href="/publico/consultas"
+                                   data-autoactive="start">
+                                    <i class="fas fa-book-open"></i> <span>Consultas</span>
+                                </a>
+                            </li>
+                            <li class="menu__item" role="none">
+                                <a class="menu__link"
+                                   role="menuitem"
+                                   data-src="/publico/videos/libras/colegiados-superiores.mp4"
+                                   href="/publico/colegiados-superiores"
+                                   data-autoactive="start">
+                                    <i class="fas fa-file-signature"></i> <span>Colegiados Superiores</span>
+                                </a>
+                            </li>
+                            <li class="menu__item" role="none">
+                                <a class="menu__link"
+                                   role="menuitem"
+                                   data-src="/publico/videos/libras/governanca.mp4"
+                                   href="/publico/governanca"
+                                   data-autoactive="start">
+                                    <i class="fas fa-sitemap"></i> <span>Governança</span>
+                                </a>
+                            </li>
+                            <li class="menu__item" role="none">
+                                <a class="menu__link"
+                                   role="menuitem"
+                                   target="_blank"
+                                   data-src="/publico/videos/libras/comissoes.mp4"
+                                   href="https://sigrh.ufrn.br/sigrh/public/comissoes/form_login_membro_comissao.jsf"
+                                   data-autoactive="start">
+                                    <i class="fa-solid fa-stapler"></i> <span>Comissões</span>
+                                </a>
+                            </li>
+                            <li class="menu__item" role="none">
+                                <a class="menu__link"
+                                   role="menuitem"
+                                   data-src="/publico/videos/libras/documentos.mp4"
+                                   href="/publico/documentos"
+                                   data-autoactive="start">
+                                    <i class="fas fa-folder-open"></i> <span>Documentos</span>
+                                </a>
+                            </li>
+                            <li class="menu__item" role="none">
+                                <a class="menu__link"
+                                   role="menuitem"
+                                   data-src="/publico/videos/libras/formularios.mp4"
+                                   href="/publico/formularios"
+                                   data-autoactive="start">
+                                    <i class="fa-solid fa-paragraph"></i> <span>Formulários</span>
+                                </a>
+                            </li>
+                            <li class="menu__item" role="none">
+                                <a class="menu__link"
+                                   role="menuitem"
+                                   data-src="/publico/videos/libras/recadastramentos.mp4"
+                                   href="/publico/recadastramentos"
+                                   data-autoactive="start">
+                                    <i class="fa-solid fa-i-cursor"></i> <span>Recadastramentos</span>
+                                </a>
+                            </li>
+                            <li class="menu__item" role="none">
+                                <a class="menu__link"
+                                   role="menuitem"
+                                   data-src="/publico/videos/libras/relatorios-estatisticos.mp4"
+                                   href="/publico/relatorios"
+                                   data-autoactive="start">
+                                    <i class="fa-solid fa-chart-line"></i> <span>Relatórios Estatísticos</span>
+                                </a>
+                            </li>
+                            <li class="menu__item" role="none">
+                                <a class="menu__link"
+                                   role="menuitem"
+                                   data-src="/publico/videos/libras/servicos.mp4"
+                                   href="/publico/servicos"
+                                   data-autoactive="start">
+                                    <i class="fa-solid fa-bell-concierge"></i> <span>Serviços</span>
+                                </a>
+                            </li>
+                            <!--                        <li class="menu__item" role="none">-->
+                            <!--                            <a aria-expanded="false" class="menu__link" th:href="@{/ajuda}" data-autoactive="false"><i class="fas fa-circle-question"></i> <span>Ajuda</span></a>-->
+                            <!--                        </li>-->
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        
+            </div>
+            <div class='container-conteudo__overlay overlay-header'></div>
+            <div class='container-conteudo__nav_right d-none'>
+                <nav class='bg-secondary-lightest header-mobile'>
+                    <div class='header-mobile__content custom-scroll'>
+                        <ul aria-expanded='false' class='nav flex-column header-mobile__item'></ul>
+                    </div>
+                </nav>
+            </div>
+            <div class='container-conteudo__content'>
+                
+                
+                
+
+                <section id="main-content">
+    <div class="container-principal">
+        <article class="conteudo-principal">
+            <div class="gradiente bg-image"></div>
+            <div class="conteudo-principal__content">
+                <div class="row">
+                    <div class="col-md-6 col-12 d-flex flex-column mb-3">
+                        <p class="mb-0">O SIGRH (Sistema Integrado de Gestão de Recursos Humanos) é uma plataforma que automatiza e centraliza os procedimentos de gestão de
+                            pessoas, otimizando diversas operações de Recursos Humanos. Entre suas principais funcionalidades, estão a marcação e alteração de férias,
+                            cálculos de aposentadoria, avaliação funcional e de desempenho, dimensionamento e alocação da força de trabalho, controle de frequência
+                            e ponto eletrônico.</p>
+
+                        <p class="mb-0">O sistema também oferece suporte a processos de concursos públicos, gestão de capacitações e treinamentos, filas de atendimentos presenciais
+                            no setor de RH, além de serviços e requerimentos administrativos, como pedidos de licenças e abonos.</p>
+                    </div>
+                    <ul class="col-md-6 d-flex flex-column gap-4 mb-3">
+                        
+            <div class="card card-sigrh-home flex-row align-items-center min-height-auto" role="listitem">
+                <a class="card-body flex-row" role="button" href="/publico/consultas">
+                    <i aria-hidden="true" class="card-icon d-inline-flex justify-content-center fas fa-book-open"></i>
+                    <h3 class="card-title">Consultas</h3>
+                </a>
+            </div>
+        
+                        
+            <div class="card card-sigrh-home flex-row align-items-center min-height-auto" role="listitem">
+                <a class="card-body flex-row" role="button" href="/publico/documentos">
+                    <i aria-hidden="true" class="card-icon d-inline-flex justify-content-center fas fa-folder-open"></i>
+                    <h3 class="card-title">Documentos</h3>
+                </a>
+            </div>
+        
+                        
+            <div class="card card-sigrh-home flex-row align-items-center min-height-auto" role="listitem">
+                <a class="card-body flex-row" role="button" href="/publico/colegiados-superiores">
+                    <i aria-hidden="true" class="card-icon d-inline-flex justify-content-center fas fa-solid fa-file-signature"></i>
+                    <h3 class="card-title">Resoluções</h3>
+                </a>
+            </div>
+        
+                    </ul>
+                    
+                </div>
+            </div>
+        </article>
+
+        <article class="conteudo-principal">
+            <div class="conteudo-principal__header justify-content-between align-items-center flex-wrap">
+                <div class="conteudo-principal__header__titulo mb-0">
+                    <h1 class="m-0">Notícias e comunicados</h1>
+                </div>
+                <div class="conteudo-principal__header__botao mb-0">
+                    <button class="btn-tertiary-icon m-0" type="button" data-toggle="collapse"
+                            data-target="#cardContent" aria-expanded="true" aria-controls="cardContent"
+                            aria-label="Mostrar/Ocultar notícias e comunicados">
+                        <i class="fa-solid fa-chevron-down rotate-arrow" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="collapse show" id="cardContent">
+                <div class="conteudo-principal__content">
+                    
+                    <div class="d-flex flex-column gap-4">
+                        
+                                <div class="accordion w-100" id="accordion-73113119">
+                                    <div class="card">
+                                        <div class="card-header" id="accordion-73113119-header">
+                                            <button
+                                                    class="btn collapsed btn-link"
+                                                    type="button"
+                                                    data-toggle="collapse"
+                                                    data-target="#accordion-73113119-content"
+                                                    aria-expanded="false"
+                                                    aria-controls="collapse"
+                                                    onclick="openAccordion(this)">
+                                                <div class="accordion-tag">
+                                                    <div class="accordion-tag-menu">
+                                                        <h3>Palestra:  Legislação Previdenciária Aplicada ao Serviço Público</h3>
+                                                        <p>23/10/2026</p>
+                                                    </div>
+                                                </div>
+                                                <i class="fas fa-chevron-down rotate-arrow"></i>
+                                            </button>
+                                        </div>
+                                        <div class="collapse custom-scroll" id="accordion-73113119-content" aria-labelledby="accordion-73113119-header">
+                                            <div class="card-body">
+                                                <div><p><img src="https://i.imgur.com/mBionwj.png" alt="some text" width="506" height="715" /></p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <div class="accordion w-100" id="accordion-72902246">
+                                    <div class="card">
+                                        <div class="card-header" id="accordion-72902246-header">
+                                            <button
+                                                    class="btn collapsed btn-link"
+                                                    type="button"
+                                                    data-toggle="collapse"
+                                                    data-target="#accordion-72902246-content"
+                                                    aria-expanded="false"
+                                                    aria-controls="collapse"
+                                                    onclick="openAccordion(this)">
+                                                <div class="accordion-tag">
+                                                    <div class="accordion-tag-menu">
+                                                        <h3>FUNCIONAMENTO DO RESTAURANTE UNIVERSITÁRIO - DOMINGO - 04/10/2026 - ELEIÇÕES 2026</h3>
+                                                        <p>02/10/2026</p>
+                                                    </div>
+                                                </div>
+                                                <i class="fas fa-chevron-down rotate-arrow"></i>
+                                            </button>
+                                        </div>
+                                        <div class="collapse custom-scroll" id="accordion-72902246-content" aria-labelledby="accordion-72902246-header">
+                                            <div class="card-body">
+                                                <div><p>ATEN&Ccedil;&Atilde;O USU&Aacute;RIOS</p>
+<p>&nbsp;</p>
+<p>EM VIRTUDE DO PROCESSO ELEITORAL DE 2026, NESTE DOMINGO O RESTAURANTE UNIVERSIT&Aacute;RIO FUNCIONAR&Aacute; AT&Eacute; AS 13H, COM FORNECIMENTO DE QUENTINHAS PARA O JANTAR DOS USU&Aacute;RIOS QUE DET&Ecirc;M ESSE DIREITO.&nbsp;</p>
+<p>AGRADECEMOS A COMPREENS&Atilde;O DE TODOS.</p>
+<p>&nbsp;</p>
+<p>RU/PROAE/UFRN</p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <div class="accordion w-100" id="accordion-72425994">
+                                    <div class="card">
+                                        <div class="card-header" id="accordion-72425994-header">
+                                            <button
+                                                    class="btn collapsed btn-link"
+                                                    type="button"
+                                                    data-toggle="collapse"
+                                                    data-target="#accordion-72425994-content"
+                                                    aria-expanded="false"
+                                                    aria-controls="collapse"
+                                                    onclick="openAccordion(this)">
+                                                <div class="accordion-tag">
+                                                    <div class="accordion-tag-menu">
+                                                        <h3>Funcionamento do Restaurante Universitário - Sábado - 29/08/2026</h3>
+                                                        <p>28/08/2026</p>
+                                                    </div>
+                                                </div>
+                                                <i class="fas fa-chevron-down rotate-arrow"></i>
+                                            </button>
+                                        </div>
+                                        <div class="collapse custom-scroll" id="accordion-72425994-content" aria-labelledby="accordion-72425994-header">
+                                            <div class="card-body">
+                                                <div><p>Aten&ccedil;&atilde;o Usu&aacute;rios,</p>
+<p>Em virtude da necessidade de realiza&ccedil;&atilde;o da desinsetiza&ccedil;&atilde;o mensal de suas unidades, informamos que neste pr&oacute;ximo s&aacute;bado (29/08/2026) o RU funcionar&aacute; at&eacute; as 13H, fornecendo o almo&ccedil;o com a libera&ccedil;&atilde;o da quentinha para o jantar dos usu&aacute;rios que det&eacute;m este direito.&nbsp;</p>
+<p>Agradecemos a compreens&atilde;o de todos.</p>
+<p>&nbsp;</p>
+<p>RU/PROAE</p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <div class="accordion w-100" id="accordion-70875092">
+                                    <div class="card">
+                                        <div class="card-header" id="accordion-70875092-header">
+                                            <button
+                                                    class="btn collapsed btn-link"
+                                                    type="button"
+                                                    data-toggle="collapse"
+                                                    data-target="#accordion-70875092-content"
+                                                    aria-expanded="false"
+                                                    aria-controls="collapse"
+                                                    onclick="openAccordion(this)">
+                                                <div class="accordion-tag">
+                                                    <div class="accordion-tag-menu">
+                                                        <h3>Pesquisa da STI/UFRN avalia experiência dos usuários com sistemas e serviços de TI</h3>
+                                                        <p>09/06/2026</p>
+                                                    </div>
+                                                </div>
+                                                <i class="fas fa-chevron-down rotate-arrow"></i>
+                                            </button>
+                                        </div>
+                                        <div class="collapse custom-scroll" id="accordion-70875092-content" aria-labelledby="accordion-70875092-header">
+                                            <div class="card-body">
+                                                <div><p><span style="font-size: small;">A Superintend&ecirc;ncia de Tecnologia da Informa&ccedil;&atilde;o da UFRN (STI/UFRN) est&aacute; realizando uma pesquisa para avaliar a experi&ecirc;ncia da comunidade acad&ecirc;mica com os sistemas institucionais e servi&ccedil;os de Tecnologia da Informa&ccedil;&atilde;o oferecidos para a Universidade.</span><br /><span style="font-size: small;">A iniciativa busca compreender a percep&ccedil;&atilde;o dos usu&aacute;rios sobre os servi&ccedil;os disponibilizados, identificar oportunidades de melhoria, aperfei&ccedil;oar processos e fortalecer a qualidade das solu&ccedil;&otilde;es tecnol&oacute;gicas utilizadas no dia a dia da institui&ccedil;&atilde;o.</span><br /><span style="font-size: small;">A pesquisa j&aacute; est&aacute; dispon&iacute;vel e pode ser respondida ap&oacute;s o login em qualquer um dos sistemas SIG da UFRN. A participa&ccedil;&atilde;o da comunidade acad&ecirc;mica &eacute; essencial para contribuir com a evolu&ccedil;&atilde;o cont&iacute;nua dos servi&ccedil;os e sistemas institucionais.</span><br /><span style="font-size: x-small;">Texto: Judson Alves</span></p>
+<p><img src="https://i.imgur.com/8KQxSGW.jpeg" alt="some text" width="600" height="400" /></p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <div class="accordion w-100" id="accordion-70548781">
+                                    <div class="card">
+                                        <div class="card-header" id="accordion-70548781-header">
+                                            <button
+                                                    class="btn collapsed btn-link"
+                                                    type="button"
+                                                    data-toggle="collapse"
+                                                    data-target="#accordion-70548781-content"
+                                                    aria-expanded="false"
+                                                    aria-controls="collapse"
+                                                    onclick="openAccordion(this)">
+                                                <div class="accordion-tag">
+                                                    <div class="accordion-tag-menu">
+                                                        <h3>Plantão Psicológico oferecido pelo SEPA</h3>
+                                                        <p>15/05/2026</p>
+                                                    </div>
+                                                </div>
+                                                <i class="fas fa-chevron-down rotate-arrow"></i>
+                                            </button>
+                                        </div>
+                                        <div class="collapse custom-scroll" id="accordion-70548781-content" aria-labelledby="accordion-70548781-header">
+                                            <div class="card-body">
+                                                <div><div>&nbsp;</div>
+<p><span style="font-size: small;">O Servi&ccedil;o de Psicologia Aplicada (SEPA/UFRN) oferece Plant&atilde;o Psicol&oacute;gico &agrave; comunidade universit&aacute;ria e popula&ccedil;&atilde;o em geral</span><br /><span style="font-size: small;">A nova modalidade de aten&ccedil;&atilde;o psicol&oacute;gica ser&aacute; oferecida &agrave; comunidade universit&aacute;ria e &agrave; popula&ccedil;&atilde;o em geral at&eacute; o m&ecirc;s de junho.</span><br /><span style="font-size: small;">O Plant&atilde;o Psicol&oacute;gico &eacute; um atendimento pontual, sem agendamento pr&eacute;vio, voltado para acolher quem est&aacute; com algo incomodando ou angustiando e sente que precisa conversar com algu&eacute;m naquele instante. N&atilde;o exige compromisso de continuidade e pode ocorrer em um &uacute;nico encontro. &Eacute; importante destacar que o servi&ccedil;o n&atilde;o &eacute; psicoterapia, n&atilde;o realiza avalia&ccedil;&atilde;o neuropsicol&oacute;gica, n&atilde;o emite diagn&oacute;sticos ou laudos e n&atilde;o garante encaminhamento para outros servi&ccedil;os ou lista de espera.</span><br /><span style="font-size: small;">Em situa&ccedil;&otilde;es de crise com risco &agrave; integridade f&iacute;sica, os servi&ccedil;os indicados s&atilde;o o SAMU (192) ou a UPA mais pr&oacute;xima.</span><br /><span style="font-size: small;">Para atendimentos envolvendo crian&ccedil;as ou adolescentes, o primeiro encontro &eacute; realizado com o(s) respons&aacute;vel(is) e n&atilde;o &eacute; necess&aacute;rio trazer a crian&ccedil;a ou adolescente nesse momento.</span><br /><span style="font-size: small;">P&uacute;blico: Comunidade universit&aacute;ria e popula&ccedil;&atilde;o em geral, incluindo crian&ccedil;as (a partir de 4 anos), adolescentes (at&eacute; 17 anos), adultos e idosos</span><br /><span style="font-size: small;">Documentos Necess&aacute;rios: documento de identifica&ccedil;&atilde;o com CPF, comprovante de resid&ecirc;ncia e cart&atilde;o SUS.</span><br /><span style="font-size: small;">Vagas por turno: 4 vagas comuns, 1 vaga para a comunidade surda e 2 vagas para grupos priorit&aacute;rios (mediante apresenta&ccedil;&atilde;o de documenta&ccedil;&atilde;o comprobat&oacute;ria)</span><br /><span style="font-size: small;">Dias e Hor&aacute;rios para distribui&ccedil;&atilde;o das vagas</span><br /><span style="font-size: small;">Ter&ccedil;as-feiras: distribui&ccedil;&atilde;o das vagas &agrave;s 12h</span><br /><span style="font-size: small;">Atendimentos: 13h, 14h, 15h</span><br /><span style="font-size: small;">Quintas-feiras: distribui&ccedil;&atilde;o das vagas &agrave;s 7h15</span><br /><span style="font-size: small;">Atendimentos: 8h, 9h, 10h</span><br /><span style="font-size: small;">Nossos contatos</span><br /><span style="font-size: small;">Local: SEPA, Rua da Biblioteca Central Zila Mamede (BCZM), Campus Central</span><br /><span style="font-size: small;">E-mail: atendimentosepanatal@gmail.com</span><br /><span style="font-size: small;">Telefone: (84) 3342-2234</span><br /><span style="font-size: small;">Atendimento presencial para informa&ccedil;&otilde;es: Segunda a sexta, das 8h &agrave;s 18h</span><br /><span style="font-size: small;">Acompanhe o Instagram do SEPA (@sepanatalufrn) para novidades.</span></p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+            </div>
+        </main>
+    
+            
+        
+    <footer class="footer">
+        <div class="footer__logo">
+            <a href='https://info.ufrn.br/'
+               rel='noopener noreferrer'
+               target='_blank'
+               title="Ir para a página da STI">
+                <svg data-name='Assinatura STI/UFRN' height='30' viewBox='0 0 125 30' width='125' xmlns='http://www.w3.org/2000/svg'>
+    <desc>Logotipo STI/UFRN</desc>
+    <g data-name='Grupo 1126' id='Grupo1126' transform='translate(0.029 0.028)'>
+        <g data-name='Grupo 1125' id='Grupo1125' transform='translate(-0.029 4.245)'>
+            <path class='assinatura-icone'
+                  d='M20.865,38.341c-.328,2.831-1.252,4.924-2.749,6.258C16.31,46.2,13.478,47,9.6,47c-3.919,0-6.607-.718-8.043-2.175q-2-2-1.477-6.463L1.27,28.041H7.179L5.989,38.362a5.116,5.116,0,0,0,.739,3.755,3.546,3.546,0,0,0,3.037,1.354,4.892,4.892,0,0,0,3.3-1.17,5.907,5.907,0,0,0,1.888-3.96l1.19-10.321h6.032L20.865,38.341ZM79.341,28.021,77.186,46.528H69.164L62.208,33.991,60.751,46.528H48.933l.164-5.335a2.559,2.559,0,0,0-.349-1.005,3.016,3.016,0,0,0-.841-.739.292.292,0,0,0-.123-.041q-.893,0-2.893-.062-2.093-.062-2.216-.062l-.841,7.222H35.986L38.284,28H50.328a7.853,7.853,0,0,1,4.329,1.17,3.718,3.718,0,0,1,1.908,3.755,4.378,4.378,0,0,1-1.518,2.811,7.317,7.317,0,0,1-3.057,1.559l-.021.226a5.522,5.522,0,0,1,1.4.328c1.436.533,1.765,1.436,1.908,2.975l.041,5.253,2.093-18.056h8.412L72.426,40.27l1.416-12.249h5.5ZM49.487,32.083a3.289,3.289,0,0,0-1.99-.636h-3.96l-.513,4.493h4a3.9,3.9,0,0,0,2.216-.616A2.317,2.317,0,0,0,50.267,33.6,1.571,1.571,0,0,0,49.487,32.083Z'
+                  data-name='Assinatura Ícone' transform='translate(0.029 -26.423)'></path>
+            <path class='assinatura-icone'
+                  d='M102.4,33.644l-.821,7.161H95.769L95.4,43.821h16.066L114.3,20.8H98.231l-.185,1.5h16.066l-.472,3.714H103.3l-.451,3.878h9.274l-.431,3.755Z'
+                  data-name='Assinatura Ícone' transform='translate(-75.820 -20.800)'></path>
+        </g>
+        <rect class='assinatura-barra' data-name='Assinatura Barra' height='0.616'
+              transform='translate(86.708 31.927) rotate(-84.001)' width='30.12'></rect>
+        <text class='assinatura-sigla' data-name='Assinatura Sigla' transform='translate(96.730 22.246)'>
+            <tspan x='0' y='0'>STI</tspan>
+        </text>
+    </g>
+</svg>
+            </a>
+        </div>
+        <div class="footer__content">
+            <div class="footer__info">
+                <p class="footer__contentText">
+                    <span>Superintendência de Tecnologia da Informação</span>
+                </p>
+                <div>
+                    <p>Copyright <span aria-hidden="true">©</span> 2022 - <span class="copyrightCurrentYear"></span></p>
+                    <a class='link-normal'
+                       href='https://ufrn.br'
+                       rel='noopener noreferrer'
+                       target='_blank'
+                       title="Ir para o portal da UFRN"
+                    >UFRN</a>
+                </div>
+            </div>
+            <div class="footer__appinfo">
+                <p class="footer__instancia">
+                    <span>| sigrh-publico-dfcddfc84-7q9ph</span>
+                </p>
+                <p class="footer__version">v1.0.0</p>
+            </div>
+        </div>
+    </footer>
+
+    
+        </div>
+        
+
+        <script type="text/javascript">
+            const CTX = '/publico/';
+            window.Cosmos = {}
+            window.Cosmos.urlBase = `${CTX}cosmos/`
+        </script>
+
+        <script type='text/javascript' src="/publico/cosmos/vendors/jquery/jquery.min.js?version=1.0.0"></script>
+        <script src="/publico/cosmos/vendors/popper/popper.min.js?version=1.0.0"></script>
+        <script src="/publico/cosmos/vendors/bootstrap/bootstrap.min.js?version=1.0.0"></script>
+        <script src="/publico/cosmos/vendors/autoComplete/autoComplete.min.js?version=1.0.0"></script>
+        <script src="/publico/cosmos/vendors/grapheme/index.js?version=1.0.0"></script>
+        <script src='/publico/cosmos/vendors/datepicker/bootstrap-datepicker.min.js?version=1.0.0'
+                type="text/javascript"></script>
+        <script src='/publico/cosmos/vendors/datepicker/bootstrap-datepicker.pt-BR.min.js?version=1.0.0'
+                type="text/javascript"></script>
+        <script src='/publico/cosmos/vendors/jquery-mask/jquery.mask.min.js?version=1.0.0'
+                type="text/javascript"></script>
+        <script src="/publico/cosmos/js/scripts.js?version=1.0.0"></script>
+        <!-- Script dos web componentes -->
+        <script src="/publico/cosmos/js/web-components.js?version=1.0.0"></script>
+        <script src="https://static.info.ufrn.br/release/vendors/bootstrap-select/bootstrap-select.min.js"></script>
+        <script src="/publico/js/scripts.js?version=1.0.0"></script>
+        <script src="/publico/js/utils/libras.js?version=1.0.0"></script>
+        <!-- START CUSTOM PAGE JS -->
+        
+        <!-- END CUSTOM PAGE JS -->
+    
+    </body>
+</html>

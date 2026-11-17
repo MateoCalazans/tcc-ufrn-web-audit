@@ -1,0 +1,1188 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T21:05:15.459Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12",
+      "diff": "9.0.0",
+      "@anthropic-ai/sdk": "1.8.0"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "id": "scet.ect.ufrn.br",
+  "url": "https://scet.ect.ufrn.br/",
+  "fonte": {
+    "html": "index.html",
+    "codificacao": "utf-8",
+    "bom": false,
+    "har": true,
+    "lighthouse": "lh1.json",
+    "lighthouseVersion": "13.5.0"
+  },
+  "regras": [
+    {
+      "id": "html-lang",
+      "dimensao": "semantica",
+      "descricao": "O elemento <html> declara o idioma da página (atributo lang)."
+    },
+    {
+      "id": "meta-viewport",
+      "dimensao": "performance",
+      "descricao": "A página declara <meta name=\"viewport\"> adequada a telas móveis, sem bloquear o zoom."
+    },
+    {
+      "id": "img-dimensions",
+      "dimensao": "performance",
+      "descricao": "Toda <img> declara width e height, para o navegador reservar o espaço antes do download."
+    },
+    {
+      "id": "img-lazy",
+      "dimensao": "performance",
+      "descricao": "<img> depois das 3 primeiras do documento usa loading=\"lazy\" (exceto a imagem LCP)."
+    },
+    {
+      "id": "obsolete-tags",
+      "dimensao": "semantica",
+      "descricao": "Sem elementos obsoletos do WHATWG (center, font, marquee…); <font> simples vira <span style>."
+    },
+    {
+      "id": "heading-skip",
+      "dimensao": "semantica",
+      "descricao": "Títulos não pulam níveis ao descer na hierarquia (h1 → h3, por exemplo)."
+    },
+    {
+      "id": "fake-button",
+      "dimensao": "semantica",
+      "descricao": "Elementos clicáveis são <button>/<a>, não div/span com onclick."
+    },
+    {
+      "id": "render-blocking-hint",
+      "dimensao": "performance",
+      "descricao": "Scripts e folhas de estilo que o Lighthouse aponta como bloqueantes são adiados quando não são críticos."
+    },
+    {
+      "id": "landmarks-llm",
+      "dimensao": "semantica",
+      "descricao": "Landmarks ausentes propostos por LLM sobre <div>, <section> ou <article> existentes (landmarks-v2, claude-haiku-5-5)."
+    }
+  ],
+  "llm": {
+    "prompt": "landmarks-v2",
+    "arquivo": "docs/prompts/landmarks-v2.md",
+    "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+    "modelo": "claude-haiku-5-5",
+    "effort": "low",
+    "maxTokens": 4000,
+    "execucao": {
+      "siteId": "scet.ect.ufrn.br",
+      "prompt": "landmarks-v2",
+      "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "modeloResposta": null,
+      "respostaId": null,
+      "chamada": false,
+      "motivo": "nenhum landmark ausente",
+      "ausentes": [],
+      "candidatos": 0,
+      "elegiveis": 0,
+      "stopReason": null,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "custoUsd": null,
+      "propostas": 0,
+      "validas": 0,
+      "rejeitadas": [],
+      "textoIgual": null,
+      "landmarksDepois": null,
+      "erro": null,
+      "duracaoMs": 1
+    }
+  },
+  "resumo": {
+    "total": 55,
+    "corrigidas": 9,
+    "porRegra": {
+      "html-lang": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "meta-viewport": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "img-dimensions": {
+        "total": 48,
+        "corrigidas": 5
+      },
+      "img-lazy": {
+        "total": 4,
+        "corrigidas": 4
+      },
+      "obsolete-tags": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "heading-skip": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "fake-button": {
+        "total": 1,
+        "corrigidas": 0
+      },
+      "render-blocking-hint": {
+        "total": 2,
+        "corrigidas": 0
+      },
+      "landmarks-llm": {
+        "total": 0,
+        "corrigidas": 0
+      }
+    },
+    "porDimensao": {
+      "performance": 54,
+      "semantica": 1
+    }
+  },
+  "guardaImagens": {
+    "imagens": [
+      {
+        "recomendacao": "img-dimensions-1",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 126,
+              "altura": 50,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 126,
+              "altura": 50,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 126,
+              "altura": 50,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 126,
+              "altura": 50,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-2",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 348,
+              "altura": 435,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 348,
+              "altura": 435,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 380,
+              "altura": 475,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 380,
+              "altura": 475,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-45",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-46",
+        "vereditos": {
+          "mobile": "mudou",
+          "desktop": "mudou"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 113,
+              "altura": 45,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 348,
+              "altura": 45,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 113,
+              "altura": 45,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 378,
+              "altura": 45,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-47",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 103,
+              "altura": 35,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 103,
+              "altura": 35,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 103,
+              "altura": 35,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 103,
+              "altura": 35,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-48",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 85,
+              "altura": 35,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 85,
+              "altura": 35,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 85,
+              "altura": 35,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 85,
+              "altura": 35,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      }
+    ],
+    "mantidas": 5,
+    "desfeitas": 1,
+    "erro": null
+  },
+  "recommendations": [
+    {
+      "id": "img-dimensions-1",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://scet.ect.ufrn.br/wp-content/themes/ect-ufrn-oceano/assets/images/logo_horizontal_fundo_branco.png\" alt=\"IX Semana de Ciências e Tecnologia\" class=\"logo-main\">",
+      "posicao": {
+        "linha": 64,
+        "coluna": 37
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1782\" height=\"707\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 17510,
+          "fim": 17510,
+          "texto": " width=\"1782\" height=\"707\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-2",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://scet.ect.ufrn.br/wp-content/themes/ect-ufrn-oceano/assets/images/Semana%20de%20C&#038;T%20-%20Poster.png\" alt=\"Poster IX Semana de Ciências e Tecnologia ECT/UFRN\">",
+      "posicao": {
+        "linha": 144,
+        "coluna": 13
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"3277\" height=\"4096\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 23515,
+          "fim": 23515,
+          "texto": " width=\"3277\" height=\"4096\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-3",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/08/breno-300dpi-BRENO-SANTOS-1024x1024.png\" alt=\"Dr. Breno Santana Santos\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 146
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-4",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/08/allany-Allany-Beatriz-Pereira-de-Souza--934x1024.jpeg\" alt=\"Allany Beatriz Pereira de Souza\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 566
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-5",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/08/elton-avatar-ELTON-CARVALHO.png\" alt=\"Prof. Dr. Elton José Figueiredo de Carvalho\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 1040
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-6",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/08/fabiana-Fabiana-Fabiana-Santana-765x1024.jpg\" alt=\"Profa. Dra. Fabiana Tristão de Santana\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 1498
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-7",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/08/fagner-Foto-profissional-Preto-cortada-FAGNER-FRANCA-826x1024.jpg\" alt=\"Prof. Dr. Fagner Alexandre Nunes de França\" load…",
+      "posicao": {
+        "linha": 266,
+        "coluna": 1989
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-8",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/08/alana-IMG_8092-ALANA-DRIZIE-768x1024.jpeg\" alt=\"Profa. Dra. Alana Driziê Gonzatti dos Santos\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 2482
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-9",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/08/julie-ju-JULIE-MACEDO.png\" alt=\"Dra. Julie Idália Araujo Macêdo\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 2943
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-10",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/08/leo-Leo-climb-LEO-MEDEIROS-1024x576.jpg\" alt=\"Prof. Dr. Léo Gouvêa Medeiros\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 3358
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-11",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/08/lucio-LUCIO-ORIGINAL-SEM-FUNDO-Lucio-Marassi-768x1024.png\" alt=\"Prof. Dr. Lucio Marassi de Souza Almeida\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 3796
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-12",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/08/sergio-sergio-foto-SERGIO-MEDEIROS.png\" alt=\"Prof. Dr. Sérgio Queiroz de Medeiros\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 4271
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-13",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/08/ada-siga-ADA-SOUSA-769x1024.jpg\" alt=\"Profa. Dra. Ada Lima Ferreira de Sousa\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 4718
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-14",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/09/ProfaMarciaRejane-768x1024.jpeg\" alt=\"Profa. Dra. Márcia Rejane de Oliveira\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 5195
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-15",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/09/Ronai3x4-RONAI-LISBOA.png\" alt=\"Prof. Dr. Ronai Machado Lisboa\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 5654
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-16",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/09/joao_rodrigo_leao-JOAO-LEAO-768x1024.jpeg\" alt=\"Prof. Dr. João Rodrigo Souza Leão\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 6099
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-17",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/09/FB_IMG_16548942154153-CLARICE-SAFO.jpg\" alt=\"Profa. Dra. Clarice da Conceição Monteiro de Lima Safo\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 6610
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-18",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/09/jazielli-JAZIELLI-SA-768x1024.jpg\" alt=\"Profa. Dra. Jazielli Carvalho Sá\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 7116
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-19",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/09/IMG_8194-CAMILA-ARAUJO-768x1024.jpeg\" alt=\"Profa. Dra. Camila Pacelly Brandão de Araújo\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 7597
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-20",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/08/breno-300dpi-BRENO-SANTOS-1024x1024.png\" alt=\"Dr. Breno Santana Santos\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 8073
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-21",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/08/allany-Allany-Beatriz-Pereira-de-Souza--934x1024.jpeg\" alt=\"Allany Beatriz Pereira de Souza\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 8493
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-22",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/08/elton-avatar-ELTON-CARVALHO.png\" alt=\"Prof. Dr. Elton José Figueiredo de Carvalho\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 8967
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-23",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/08/fabiana-Fabiana-Fabiana-Santana-765x1024.jpg\" alt=\"Profa. Dra. Fabiana Tristão de Santana\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 9425
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-24",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/08/fagner-Foto-profissional-Preto-cortada-FAGNER-FRANCA-826x1024.jpg\" alt=\"Prof. Dr. Fagner Alexandre Nunes de França\" load…",
+      "posicao": {
+        "linha": 266,
+        "coluna": 9916
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-25",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/08/alana-IMG_8092-ALANA-DRIZIE-768x1024.jpeg\" alt=\"Profa. Dra. Alana Driziê Gonzatti dos Santos\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 10409
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-26",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/08/julie-ju-JULIE-MACEDO.png\" alt=\"Dra. Julie Idália Araujo Macêdo\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 10870
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-27",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/08/leo-Leo-climb-LEO-MEDEIROS-1024x576.jpg\" alt=\"Prof. Dr. Léo Gouvêa Medeiros\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 11285
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-28",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/08/lucio-LUCIO-ORIGINAL-SEM-FUNDO-Lucio-Marassi-768x1024.png\" alt=\"Prof. Dr. Lucio Marassi de Souza Almeida\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 11723
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-29",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/08/sergio-sergio-foto-SERGIO-MEDEIROS.png\" alt=\"Prof. Dr. Sérgio Queiroz de Medeiros\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 12198
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-30",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/08/ada-siga-ADA-SOUSA-769x1024.jpg\" alt=\"Profa. Dra. Ada Lima Ferreira de Sousa\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 12645
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-31",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/09/ProfaMarciaRejane-768x1024.jpeg\" alt=\"Profa. Dra. Márcia Rejane de Oliveira\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 13122
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-32",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/09/Ronai3x4-RONAI-LISBOA.png\" alt=\"Prof. Dr. Ronai Machado Lisboa\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 13581
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-33",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/09/joao_rodrigo_leao-JOAO-LEAO-768x1024.jpeg\" alt=\"Prof. Dr. João Rodrigo Souza Leão\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 14026
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-34",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/09/FB_IMG_16548942154153-CLARICE-SAFO.jpg\" alt=\"Profa. Dra. Clarice da Conceição Monteiro de Lima Safo\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 14537
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-35",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/09/jazielli-JAZIELLI-SA-768x1024.jpg\" alt=\"Profa. Dra. Jazielli Carvalho Sá\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 15043
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-36",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"pcard-bg\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/09/IMG_8194-CAMILA-ARAUJO-768x1024.jpeg\" alt=\"Profa. Dra. Camila Pacelly Brandão de Araújo\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 266,
+        "coluna": 15524
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-37",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"apoiador-logo\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/11/logo_04-300x145.png\" alt=\"Arko Química\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 509,
+        "coluna": 148
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-38",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"apoiador-logo\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/11/SAMANAU-1-300x212.png\" alt=\"Cachaça Samanaú\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 509,
+        "coluna": 472
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-39",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"apoiador-logo\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/11/Logo-MSF-1-262x300.png\" alt=\"Massas São Francisco\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 509,
+        "coluna": 813
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-40",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"apoiador-logo\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/11/IMG_0731-300x110.jpg\" alt=\"Paladar Sertanejo\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 509,
+        "coluna": 1161
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-41",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"apoiador-logo\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/11/logo_04-300x145.png\" alt=\"Arko Química\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 511,
+        "coluna": 162
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-42",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"apoiador-logo\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/11/SAMANAU-1-300x212.png\" alt=\"Cachaça Samanaú\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 511,
+        "coluna": 500
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-43",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"apoiador-logo\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/11/Logo-MSF-1-262x300.png\" alt=\"Massas São Francisco\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 511,
+        "coluna": 855
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-44",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"apoiador-logo\" src=\"https://scet.ect.ufrn.br/wp-content/uploads/2026/11/IMG_0731-300x110.jpg\" alt=\"Paladar Sertanejo\" loading=\"lazy\">",
+      "posicao": {
+        "linha": 511,
+        "coluna": 1217
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). O arquivo não está no HAR da coleta: declarar as dimensões à mão.",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-45",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://scet.ect.ufrn.br/wp-content/themes/ect-ufrn-oceano/assets/images/Semana%20de%20C&#038;T%20-%20Poster.png\" alt=\"Poster IX Semana de Ciências e Tecnologia ECT/UFRN\">",
+      "posicao": {
+        "linha": 605,
+        "coluna": 9
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"3277\" height=\"4096\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 86616,
+          "fim": 86616,
+          "texto": " width=\"3277\" height=\"4096\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-46",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://scet.ect.ufrn.br/wp-content/themes/ect-ufrn-oceano/assets/images/logo_horizontal_fundo_branco.png\" alt=\"IX Semana de Ciências e Tecnologia\">",
+      "posicao": {
+        "linha": 618,
+        "coluna": 21
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1782\" height=\"707\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: mudou, desktop: mudou)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-47",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://scet.ect.ufrn.br/wp-content/themes/ect-ufrn-oceano/assets/images/logo_ufrn_white_sem_fundo.png\" alt=\"UFRN\" class=\"footer-institution-logo ufrn-logo\">",
+      "posicao": {
+        "linha": 658,
+        "coluna": 21
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"1024\" height=\"348\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 89269,
+          "fim": 89269,
+          "texto": " width=\"1024\" height=\"348\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-48",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://scet.ect.ufrn.br/wp-content/themes/ect-ufrn-oceano/assets/images/logo_ect_white_sem_fundo.png\" alt=\"Escola de Ciências e Tecnologia — UFRN\" class=\"footer-institution-logo ect-logo\">",
+      "posicao": {
+        "linha": 663,
+        "coluna": 21
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"776\" height=\"319\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 89636,
+          "fim": 89636,
+          "texto": " width=\"776\" height=\"319\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-1",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://scet.ect.ufrn.br/wp-content/themes/ect-ufrn-oceano/assets/images/Semana%20de%20C&#038;T%20-%20Poster.png\" alt=\"Poster IX Semana de Ciências e Tecnologia ECT/UFRN\">",
+      "posicao": {
+        "linha": 605,
+        "coluna": 9
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "45ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 86427,
+          "fim": 86427,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-2",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://scet.ect.ufrn.br/wp-content/themes/ect-ufrn-oceano/assets/images/logo_horizontal_fundo_branco.png\" alt=\"IX Semana de Ciências e Tecnologia\">",
+      "posicao": {
+        "linha": 618,
+        "coluna": 21
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "46ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 86944,
+          "fim": 86944,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-3",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://scet.ect.ufrn.br/wp-content/themes/ect-ufrn-oceano/assets/images/logo_ufrn_white_sem_fundo.png\" alt=\"UFRN\" class=\"footer-institution-logo ufrn-logo\">",
+      "posicao": {
+        "linha": 658,
+        "coluna": 21
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "47ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 89059,
+          "fim": 89059,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-4",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img src=\"https://scet.ect.ufrn.br/wp-content/themes/ect-ufrn-oceano/assets/images/logo_ect_white_sem_fundo.png\" alt=\"Escola de Ciências e Tecnologia — UFRN\" class=\"footer-institution-logo ect-logo\">",
+      "posicao": {
+        "linha": 663,
+        "coluna": 21
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "48ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 89394,
+          "fim": 89394,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "fake-button-1",
+      "regra": "fake-button",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<div class=\"scroll-rocket\" id=\"scroll-rocket\" title=\"Voltar ao topo\" onclick=\"window.scrollTo({top:0,behavior:'smooth'})\">",
+      "posicao": {
+        "linha": 575,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<div> com onclick não recebe foco pelo teclado nem é anunciado como botão. Usar <button type=\"button\"> (ou <a href> se a ação navega) e ajustar o CSS. Se não puder trocar: role=\"button\", tabindex=\"0\" e tratar Enter e Espaço. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-1",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='ect-style-css' href='https://scet.ect.ufrn.br/wp-content/themes/ect-ufrn-oceano/style.css?ver=1.3.0' media='all' />",
+      "posicao": {
+        "linha": 49,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (312 ms de bloqueio, 16.4 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-2",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel='stylesheet' id='ect-fonts-css' href='https://scet.ect.ufrn.br/wp-content/themes/ect-ufrn-oceano/assets/css/fonts.css?ver=1.3.0' media='all' />",
+      "posicao": {
+        "linha": 50,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (467 ms de bloqueio, 0.8 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    }
+  ]
+}

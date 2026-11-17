@@ -1,0 +1,1142 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16T21:05:15.459Z",
+    "toolVersions": {
+      "node": "24.19.0",
+      "lighthouse": "13.5.0",
+      "playwright": "1.64.1",
+      "cheerio": "1.2.0",
+      "vnu-jar": "26.10.12",
+      "diff": "9.0.0",
+      "@anthropic-ai/sdk": "1.8.0"
+    },
+    "gitCommit": "1b072fddeed1953cdd999d862b36f7b731a4e26e",
+    "gitDirty": true
+  },
+  "id": "vforumdorevisor.ufrn.br",
+  "url": "https://vforumdorevisor.ufrn.br/",
+  "fonte": {
+    "html": "index.html",
+    "codificacao": "utf-8",
+    "bom": false,
+    "har": true,
+    "lighthouse": "lh3.json",
+    "lighthouseVersion": "13.5.0"
+  },
+  "regras": [
+    {
+      "id": "html-lang",
+      "dimensao": "semantica",
+      "descricao": "O elemento <html> declara o idioma da página (atributo lang)."
+    },
+    {
+      "id": "meta-viewport",
+      "dimensao": "performance",
+      "descricao": "A página declara <meta name=\"viewport\"> adequada a telas móveis, sem bloquear o zoom."
+    },
+    {
+      "id": "img-dimensions",
+      "dimensao": "performance",
+      "descricao": "Toda <img> declara width e height, para o navegador reservar o espaço antes do download."
+    },
+    {
+      "id": "img-lazy",
+      "dimensao": "performance",
+      "descricao": "<img> depois das 3 primeiras do documento usa loading=\"lazy\" (exceto a imagem LCP)."
+    },
+    {
+      "id": "obsolete-tags",
+      "dimensao": "semantica",
+      "descricao": "Sem elementos obsoletos do WHATWG (center, font, marquee…); <font> simples vira <span style>."
+    },
+    {
+      "id": "heading-skip",
+      "dimensao": "semantica",
+      "descricao": "Títulos não pulam níveis ao descer na hierarquia (h1 → h3, por exemplo)."
+    },
+    {
+      "id": "fake-button",
+      "dimensao": "semantica",
+      "descricao": "Elementos clicáveis são <button>/<a>, não div/span com onclick."
+    },
+    {
+      "id": "render-blocking-hint",
+      "dimensao": "performance",
+      "descricao": "Scripts e folhas de estilo que o Lighthouse aponta como bloqueantes são adiados quando não são críticos."
+    },
+    {
+      "id": "landmarks-llm",
+      "dimensao": "semantica",
+      "descricao": "Landmarks ausentes propostos por LLM sobre <div>, <section> ou <article> existentes (landmarks-v2, claude-haiku-5-5)."
+    }
+  ],
+  "llm": {
+    "prompt": "landmarks-v2",
+    "arquivo": "docs/prompts/landmarks-v2.md",
+    "sha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+    "modelo": "claude-haiku-5-5",
+    "effort": "low",
+    "maxTokens": 4000,
+    "execucao": {
+      "siteId": "vforumdorevisor.ufrn.br",
+      "prompt": "landmarks-v2",
+      "promptSha256": "a48dbb386bdeba72ff874d6a001cc607757aff17b804a5a2d62f10b977ca09bf",
+      "modelo": "claude-haiku-5-5",
+      "modeloResposta": "claude-haiku-5-5",
+      "respostaId": "msg_011Ch7JgDXUcDoR9rFdTtgoV",
+      "chamada": true,
+      "motivo": null,
+      "ausentes": [
+        "nav",
+        "main",
+        "footer"
+      ],
+      "candidatos": 5,
+      "elegiveis": 5,
+      "stopReason": "end_turn",
+      "inputTokens": 1670,
+      "outputTokens": 411,
+      "custoUsd": 0.0003725,
+      "propostas": 1,
+      "validas": 1,
+      "rejeitadas": [],
+      "textoIgual": true,
+      "landmarksDepois": {
+        "banner": 1,
+        "navigation": 0,
+        "main": 0,
+        "contentinfo": 1
+      },
+      "erro": null,
+      "duracaoMs": 2997
+    }
+  },
+  "resumo": {
+    "total": 23,
+    "corrigidas": 17,
+    "porRegra": {
+      "html-lang": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "meta-viewport": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "img-dimensions": {
+        "total": 16,
+        "corrigidas": 15
+      },
+      "img-lazy": {
+        "total": 1,
+        "corrigidas": 1
+      },
+      "obsolete-tags": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "heading-skip": {
+        "total": 2,
+        "corrigidas": 0
+      },
+      "fake-button": {
+        "total": 0,
+        "corrigidas": 0
+      },
+      "render-blocking-hint": {
+        "total": 3,
+        "corrigidas": 0
+      },
+      "landmarks-llm": {
+        "total": 1,
+        "corrigidas": 1
+      }
+    },
+    "porDimensao": {
+      "performance": 20,
+      "semantica": 3
+    }
+  },
+  "guardaImagens": {
+    "imagens": [
+      {
+        "recomendacao": "img-dimensions-1",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 350,
+              "altura": 426,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 350,
+              "altura": 426,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-2",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 300,
+              "altura": 307,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 300,
+              "altura": 307,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-3",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 0,
+              "altura": 0,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 348,
+              "altura": 239,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 348,
+              "altura": 239,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-4",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "mudou"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 388,
+              "altura": 351,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 388,
+              "altura": 351,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 651,
+              "altura": 589,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 526,
+              "altura": 476,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": false
+      },
+      {
+        "recomendacao": "img-dimensions-5",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 3295,
+              "altura": 413,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 3295,
+              "altura": 413,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 3295,
+              "altura": 413,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 3295,
+              "altura": 413,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-6",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 3338,
+              "altura": 411,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 3338,
+              "altura": 411,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 3338,
+              "altura": 411,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 3338,
+              "altura": 411,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-7",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 3385,
+              "altura": 432,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 3385,
+              "altura": 432,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 3385,
+              "altura": 432,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 3385,
+              "altura": 432,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-8",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 3429,
+              "altura": 412,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 3429,
+              "altura": 412,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 3429,
+              "altura": 412,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 3429,
+              "altura": 412,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-9",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 3648,
+              "altura": 356,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 3648,
+              "altura": 356,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 3648,
+              "altura": 356,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 3648,
+              "altura": 356,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-10",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 3700,
+              "altura": 268,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 3700,
+              "altura": 268,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 3700,
+              "altura": 268,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 3700,
+              "altura": 268,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-11",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 3840,
+              "altura": 248,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 3840,
+              "altura": 248,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 3840,
+              "altura": 248,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 3840,
+              "altura": 248,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-12",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 3840,
+              "altura": 248,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 3840,
+              "altura": 248,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 3840,
+              "altura": 248,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 3840,
+              "altura": 248,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-13",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 3840,
+              "altura": 258,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 3840,
+              "altura": 258,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 3840,
+              "altura": 258,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 3840,
+              "altura": 258,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-14",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 3840,
+              "altura": 248,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 3840,
+              "altura": 248,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 3840,
+              "altura": 248,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 3840,
+              "altura": 248,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-15",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 3840,
+              "altura": 228,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 3840,
+              "altura": 228,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 3840,
+              "altura": 228,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 3840,
+              "altura": 228,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      },
+      {
+        "recomendacao": "img-dimensions-16",
+        "vereditos": {
+          "mobile": "igual",
+          "desktop": "igual"
+        },
+        "medidas": {
+          "mobile": {
+            "original": {
+              "largura": 3840,
+              "altura": 198,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 3840,
+              "altura": 198,
+              "carregada": true
+            }
+          },
+          "desktop": {
+            "original": {
+              "largura": 3840,
+              "altura": 198,
+              "carregada": true
+            },
+            "corrigido": {
+              "largura": 3840,
+              "altura": 198,
+              "carregada": true
+            }
+          }
+        },
+        "mantida": true
+      }
+    ],
+    "mantidas": 15,
+    "desfeitas": 1,
+    "erro": null
+  },
+  "recommendations": [
+    {
+      "id": "img-dimensions-1",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"img-fluid passaro-1 d-none d-lg-block\" src=\"https://vforumdorevisor.ufrn.br/wp-content/themes/vforum_wordpress_theme-master/img/vforum-asset-1.svg\" />",
+      "posicao": {
+        "linha": 19,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"445\" height=\"542\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 966,
+          "fim": 966,
+          "texto": " width=\"445\" height=\"542\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-2",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"img-fluid passaro-2 d-none d-lg-block\" src=\"https://vforumdorevisor.ufrn.br/wp-content/themes/vforum_wordpress_theme-master/img/vforum-asset-2.svg\" />",
+      "posicao": {
+        "linha": 20,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"352\" height=\"360\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 1144,
+          "fim": 1144,
+          "texto": " width=\"352\" height=\"360\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-3",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"img-fluid passaro-3 d-none d-lg-block\" src=\"https://vforumdorevisor.ufrn.br/wp-content/themes/vforum_wordpress_theme-master/img/vforum-asset-3.svg\" />",
+      "posicao": {
+        "linha": 21,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"348\" height=\"239\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 1322,
+          "fim": 1322,
+          "texto": " width=\"348\" height=\"239\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-4",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"img-fluid\" src=\"https://vforumdorevisor.ufrn.br/wp-content/uploads/2022/06/logo-vforum.svg\" />",
+      "posicao": {
+        "linha": 24,
+        "coluna": 15
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"526\" height=\"476\" (dimensões do arquivo, svg). Garantir height: auto no CSS para não distorcer. (correção não aplicada: a guarda de renderização não comprovou que o tamanho exibido da imagem fica igual; mobile: igual, desktop: mudou)",
+      "edicoes": []
+    },
+    {
+      "id": "img-dimensions-5",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"onda1\" src=\"https://vforumdorevisor.ufrn.br/wp-content/themes/vforum_wordpress_theme-master/img/ondas1/onda1.png\" alt=\"\">",
+      "posicao": {
+        "linha": 27,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"3295\" height=\"413\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 1778,
+          "fim": 1778,
+          "texto": " width=\"3295\" height=\"413\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-6",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"onda2\" src=\"https://vforumdorevisor.ufrn.br/wp-content/themes/vforum_wordpress_theme-master/img/ondas1/onda2.png\" alt=\"\">",
+      "posicao": {
+        "linha": 28,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"3338\" height=\"411\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 1927,
+          "fim": 1927,
+          "texto": " width=\"3338\" height=\"411\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-7",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"onda3\" src=\"https://vforumdorevisor.ufrn.br/wp-content/themes/vforum_wordpress_theme-master/img/ondas1/onda3.png\" alt=\"\">",
+      "posicao": {
+        "linha": 29,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"3385\" height=\"432\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 2076,
+          "fim": 2076,
+          "texto": " width=\"3385\" height=\"432\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-8",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"onda4\" src=\"https://vforumdorevisor.ufrn.br/wp-content/themes/vforum_wordpress_theme-master/img/ondas1/onda4.png\" alt=\"\">",
+      "posicao": {
+        "linha": 30,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"3429\" height=\"412\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 2225,
+          "fim": 2225,
+          "texto": " width=\"3429\" height=\"412\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-9",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"onda5\" src=\"https://vforumdorevisor.ufrn.br/wp-content/themes/vforum_wordpress_theme-master/img/ondas1/onda5.png\" alt=\"\">",
+      "posicao": {
+        "linha": 31,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"3648\" height=\"356\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 2374,
+          "fim": 2374,
+          "texto": " width=\"3648\" height=\"356\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-10",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"onda6\" src=\"https://vforumdorevisor.ufrn.br/wp-content/themes/vforum_wordpress_theme-master/img/ondas1/onda6.png\" alt=\"\">",
+      "posicao": {
+        "linha": 32,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"3700\" height=\"268\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 2523,
+          "fim": 2523,
+          "texto": " width=\"3700\" height=\"268\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-11",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"onda6\" src=\"https://vforumdorevisor.ufrn.br/wp-content/themes/vforum_wordpress_theme-master/img/ondas3/onda6.png\" alt=\"\">",
+      "posicao": {
+        "linha": 128,
+        "coluna": 3
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"3840\" height=\"248\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 7150,
+          "fim": 7150,
+          "texto": " width=\"3840\" height=\"248\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-12",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"onda5\" src=\"https://vforumdorevisor.ufrn.br/wp-content/themes/vforum_wordpress_theme-master/img/ondas3/onda5.png\" alt=\"\">",
+      "posicao": {
+        "linha": 129,
+        "coluna": 3
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"3840\" height=\"248\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 7287,
+          "fim": 7287,
+          "texto": " width=\"3840\" height=\"248\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-13",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"onda4\" src=\"https://vforumdorevisor.ufrn.br/wp-content/themes/vforum_wordpress_theme-master/img/ondas3/onda4.png\" alt=\"\">",
+      "posicao": {
+        "linha": 130,
+        "coluna": 3
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"3840\" height=\"258\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 7424,
+          "fim": 7424,
+          "texto": " width=\"3840\" height=\"258\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-14",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"onda3\" src=\"https://vforumdorevisor.ufrn.br/wp-content/themes/vforum_wordpress_theme-master/img/ondas3/onda3.png\" alt=\"\">",
+      "posicao": {
+        "linha": 131,
+        "coluna": 3
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"3840\" height=\"248\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 7561,
+          "fim": 7561,
+          "texto": " width=\"3840\" height=\"248\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-15",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"onda2\" src=\"https://vforumdorevisor.ufrn.br/wp-content/themes/vforum_wordpress_theme-master/img/ondas3/onda2.png\" alt=\"\">",
+      "posicao": {
+        "linha": 132,
+        "coluna": 3
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"3840\" height=\"228\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 7698,
+          "fim": 7698,
+          "texto": " width=\"3840\" height=\"228\""
+        }
+      ]
+    },
+    {
+      "id": "img-dimensions-16",
+      "regra": "img-dimensions",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"onda1\" src=\"https://vforumdorevisor.ufrn.br/wp-content/themes/vforum_wordpress_theme-master/img/ondas3/onda1.png\" alt=\"\">",
+      "posicao": {
+        "linha": 133,
+        "coluna": 3
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "<img> sem width e height: a página se desloca quando a imagem carrega (CLS). Acrescentado width=\"3840\" height=\"198\" (dimensões do arquivo, png). Garantir height: auto no CSS para não distorcer.",
+      "edicoes": [
+        {
+          "inicio": 7835,
+          "fim": 7835,
+          "texto": " width=\"3840\" height=\"198\""
+        }
+      ]
+    },
+    {
+      "id": "img-lazy-1",
+      "regra": "img-lazy",
+      "severidade": "baixa",
+      "dimensao": "performance",
+      "evidencia": "<img class=\"img-fluid\" src=\"https://vforumdorevisor.ufrn.br/wp-content/uploads/2022/06/logo-vforum.svg\" />",
+      "posicao": {
+        "linha": 24,
+        "coluna": 15
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "4ª <img> do documento, provavelmente fora da primeira dobra: acrescentado loading=\"lazy\" para adiar o download. Se a imagem aparecer na primeira tela, remover o atributo.",
+      "edicoes": [
+        {
+          "inicio": 1461,
+          "fim": 1461,
+          "texto": " loading=\"lazy\""
+        }
+      ]
+    },
+    {
+      "id": "heading-skip-1",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h4>",
+      "posicao": {
+        "linha": 53,
+        "coluna": 21
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 2 para o nível 4: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h3 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "heading-skip-2",
+      "regra": "heading-skip",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<h4 class=\"mb-4\">",
+      "posicao": {
+        "linha": 200,
+        "coluna": 1
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Título salta do nível 2 para o nível 4: leitores de tela navegam pelos títulos e o salto sugere uma seção que falta. Usar h3 (e ajustar o tamanho no CSS) ou inserir o nível intermediário. Sem correção automática.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-1",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"https://vforumdorevisor.ufrn.br/wp-content/themes/vforum_wordpress_theme-master/vendors/bootstrap/css/bootstrap.css\">",
+      "posicao": {
+        "linha": 8,
+        "coluna": 3
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (611 ms de bloqueio, 28.0 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-2",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"https://vforumdorevisor.ufrn.br/wp-content/themes/vforum_wordpress_theme-master/css/style.css\">",
+      "posicao": {
+        "linha": 9,
+        "coluna": 3
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (611 ms de bloqueio, 5.4 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "render-blocking-hint-3",
+      "regra": "render-blocking-hint",
+      "severidade": "media",
+      "dimensao": "performance",
+      "evidencia": "<link rel=\"stylesheet\" href=\"https://vforumdorevisor.ufrn.br/wp-content/themes/vforum_wordpress_theme-master/css/style2.css\">",
+      "posicao": {
+        "linha": 10,
+        "coluna": 3
+      },
+      "correcaoAutomatica": false,
+      "mensagem": "Folha de estilo bloqueia a renderização segundo o Lighthouse (611 ms de bloqueio, 3.8 KiB). Levar para dentro do HTML (<style>) só o CSS da primeira tela e carregar o restante sem bloquear; folha que não é para tela usa o atributo media (ex.: media=\"print\"); folha de outra página ou componente não usado aqui pode sair. Sem correção automática: exige saber qual CSS é crítico.",
+      "edicoes": []
+    },
+    {
+      "id": "landmarks-llm-1",
+      "regra": "landmarks-llm",
+      "severidade": "media",
+      "dimensao": "semantica",
+      "evidencia": "<section class=\"d-flex align-items-center section-info\">",
+      "posicao": {
+        "linha": 191,
+        "coluna": 5
+      },
+      "correcaoAutomatica": true,
+      "mensagem": "Landmark contentinfo ausente: trocar este <section> por <footer>. Justificativa do modelo: \"Último elemento da página (profundidade 0), com a seção 'INFORMAÇÕES GERAIS' e o bloco 'Contato' com dados de contato e um link, típico de rodapé institucional.\". Proposta gerada por LLM (landmarks-v2, claude-haiku-5-5, candidato c5); conferir CSS e scripts que selecionem \"section\" neste elemento.",
+      "edicoes": [
+        {
+          "inicio": 10208,
+          "fim": 10215,
+          "texto": "footer"
+        },
+        {
+          "inicio": 13198,
+          "fim": 13205,
+          "texto": "footer"
+        }
+      ]
+    }
+  ]
+}
