@@ -26,6 +26,34 @@ A pergunta tem duas partes, e o texto pode seguir a mesma divisão:
 
 ---
 
+## Mapa do texto (o que escrever em cada parte)
+
+Ordem sugerida para um texto simples. Para cada parte: o que dizer, onde está o material
+neste guia e o que mostrar (tabela ou figura). Os arquivos de figura estão em
+`docs/resultados/figuras/` e as tabelas em `docs/resultados/tabelas/`.
+
+| # | Parte do texto | O que dizer (em poucas linhas) | Material neste guia | Mostrar |
+|---|---|---|---|---|
+| 1 | **Introdução** | Sites públicos precisam ser rápidos e acessíveis, e a lei e o eMAG exigem acessibilidade. Ninguém mediu isso nos sites da UFRN. Pergunta de pesquisa e o que o trabalho entrega: diagnóstico, sistema e teste das correções. | seção 1 | — |
+| 2 | **Conceitos** | O que é performance, o Lighthouse e as medidas LCP, CLS e TBT. O que é semântica HTML e landmarks. O que é uma LLM e por que ela só "sugere". | seção 2 | — |
+| 3 | **Como o trabalho foi feito (método)** | As etapas, da lista de endereços aos sites analisados. Cuidados éticos na coleta. Medição no celular, 3 vezes por site. O índice de semântica. Antes/depois em cópias locais, nunca no site no ar. | seções 3 e 4 | tabela do funil (seção 5) |
+| 4 | **O sistema** | Os 5 módulos como uma linha de montagem: cada um lê arquivos e grava o resultado. As 9 regras e o papel da LLM. A interface para ver os resultados. | seções 3, 4 ("Correções automáticas") e tabela de regras (seção 5) | tabela dos módulos; `docs/artigo/catalogo-regras.md` |
+| 5 | **Resultados: como estão os sites** | Performance fraca (só 10,6% "bons"), carregamento lento, páginas pesadas. Semântica mediana (índice 65). Os problemas mais comuns. A tecnologia faz diferença, e semântica não tem relação com velocidade. | seção 5 | `distribuicoes.png`, `auditorias_top10.png`, `boxplot_tecnologia.png`, `dispersao_indice.png` |
+| 6 | **Resultados: o que o sistema recomendou** | 4.422 recomendações em 207 sites, 56% corrigidas sozinhas, US$ 0,07 de LLM. | seção 5, "O que o sistema recomendou" | tabela de regras |
+| 7 | **Resultados: antes e depois** | Três rodadas: v1.0 (12 piores, nada confirmado), S18b (regras revistas) e censo (134 sites, melhora confirmada em performance, LCP e semântica). Contar melhorou/piorou/igual e explicar a faixa de ruído. | seção 6 | `validacao-antes-depois.png`, `validacao-antes-depois-censo.png` |
+| 8 | **Por que algumas correções pioraram** | Separar o que é variação da medição do que é piora real, e explicar cada piora real com exemplo. | **seção 6, "Por que algumas correções pioraram"** | exemplos por site |
+| 9 | **Discussão** | O sistema diagnostica bem. As correções ajudam de forma mensurável, mas modesta. Correção automática precisa de revisão humana. O que a UFRN (STI) pode fazer com isso. | seções 5 a 7 | — |
+| 10 | **Limitações** | Só a página inicial, variação do Lighthouse, pesos do índice, amostra pequena, cópia local ≠ site real, LLM sem avaliação humana. | seção 7 | — |
+| 11 | **Conclusão e trabalhos futuros** | Resposta curta às duas perguntas. Trabalhos futuros: corrigir as regras que pioraram páginas, analisar páginas internas, rodar o sistema de forma contínua. | seção 6 ("Por que algumas correções pioraram") e seção 7 | — |
+| — | **Uso de IA e disponibilidade dos dados** | O que foi feito com apoio de IA. Onde estão o código e os dados. | seção 8 | `docs/artigo/declaracao-uso-ia.md` |
+
+**Uma frase de conclusão possível:** "Os sites da UFRN são lentos e têm marcação HTML
+só razoável. Correções automáticas melhoram performance e semântica de forma mensurável,
+mas modesta, e como às vezes pioram a página, devem ser revisadas por uma pessoa antes de
+ir para o ar."
+
+---
+
 ## 2. Conceitos para explicar ao leitor (em palavras simples)
 
 | Termo | Explicação curta |
@@ -387,6 +415,60 @@ da resposta. No `profletras`, a queda foi de 0,04 ponto, desprezível.
 12 sites. Uma forma simples de escrever: "na amostra pequena, nenhuma diferença foi
 confirmada; ampliando para todos os sites elegíveis, a melhora em performance, LCP e
 semântica ficou clara".
+
+### Por que algumas correções pioraram
+
+Este é um ponto que a banca vai perguntar. A resposta tem duas partes: **a maioria das
+"pioras" não é piora**, e as pioras reais têm causa conhecida.
+
+**1. "Piora" que é só variação da medição (a maioria dos casos)**
+- O Lighthouse nunca dá o mesmo número duas vezes para a mesma página. A rede e o
+  processador são simulados, e pequenas diferenças no computador mudam a conta.
+- Por isso cada versão foi medida 3 vezes. A diferença entre a maior e a menor nota é
+  a "variação natural" do site.
+- **Exemplos:**
+  - `agir.ufrn.br`: +1 ponto na v1.0 e −1 ponto na S18b, com praticamente as mesmas
+    correções. Só a cópia original, sem nenhuma correção, variou entre 50 e 57.
+  - `ce.ufrn.br`: −6 pontos na v1.0, mas a cópia original variou de 29 a 48 (19 pontos).
+    Na S18b, o mesmo site deu +2.
+- No censo, **111 de 134 sites** ficaram dentro da variação natural. Para esses, o
+  correto é dizer "sem diferença perceptível", e não "piorou".
+- Frase para o texto: "Diferenças menores que a variação natural do próprio site não
+  indicam piora nem melhora. Por isso o resultado é lido no conjunto dos sites, com um
+  teste estatístico, e não site a site."
+
+**2. Pioras reais, causadas pelas correções**
+
+| Caso | O que aconteceu | Por quê, em palavras simples | Quantos sites | O que foi feito |
+|---|---|---|---|---|
+| Imagens distorcidas (v1.0) | A regra pôs largura e altura reais nas imagens | O CSS da página fixava só uma das medidas, e a imagem ficou esticada ou achatada | 4 de 12; boas práticas caiu de 3 a 4 pontos | Criada uma proteção que desfaz a correção se o tamanho da imagem mudar (S18b). No censo, nenhum site teve boas práticas pior. |
+| Carregamento tardio sem tamanho (censo) | Imagens marcadas para carregar depois (`lazy`) ficaram sem largura e altura | Quando a proteção desfaz a correção de tamanho, o `lazy` continua. A imagem chega depois e, sem espaço reservado, empurra o conteúdo (CLS sobe) | 4 sites: `transportes`, `covid19`, `direitoacidade`, `negtec` | Relatado; correção fica como trabalho futuro |
+| Ajuste ao celular (censo) | A regra inseriu a `meta viewport` em páginas que não a tinham | A página passa a usar o layout de celular, que se rearranja enquanto carrega (CLS sobe) | 3 sites: `nesc` (−13 na nota), `dep.ct` (−9), `negtec` (−21) | Relatado; correção fica como trabalho futuro |
+| Erro da LLM (censo) | A LLM marcou como conteúdo principal um bloco que inclui o cabeçalho e o rodapé | Dentro do `<main>`, cabeçalho e rodapé deixam de contar como tal. O próprio modelo escreveu que a proposta "não é válida", mas a enviou, e a checagem do código não olhava isso | 1 site: `grafica.cchla` (−25 na nota de landmarks) | Relatado; checagem extra fica como trabalho futuro |
+
+No total, o CLS subiu mais de 0,05 em 8 dos 134 sites. Mesmo assim, no conjunto, as
+melhoras foram muito mais frequentes que as pioras: na nota de performance, 52 contra
+20, e no índice de semântica, 63 contra 2.
+
+**Por que as regras não foram corrigidas antes de publicar o resultado:** o plano de
+análise foi fixado antes de medir. Mudar as regras depois de ver o resultado e medir de
+novo seria "ajustar até dar certo". Na S18b isso foi feito uma vez, declarado como
+análise posterior. No censo, a decisão foi relatar as pioras e deixar a correção como
+trabalho futuro (decisão do autor, 2026-11-16).
+
+**A lição, para a Discussão:**
+- Cada regra é segura sozinha, mas regras combinadas podem se atrapalhar.
+- Uma correção que ignora o CSS da página pode piorar o resultado.
+- Uma LLM pode errar mesmo quando "sabe" que está errando.
+
+Por isso, a conclusão é que o sistema deve **sugerir** correções para uma pessoa revisar,
+e não publicá-las sozinho.
+
+**Trabalhos futuros que saem daqui:**
+- só aplicar `lazy` em imagens com largura e altura declaradas;
+- avaliar o efeito da `meta viewport` antes de inserir, ou deixá-la como recomendação;
+- barrar trocas para `<main>` que contenham o cabeçalho ou o rodapé;
+- medir de novo os sites afetados.
 
 ---
 
